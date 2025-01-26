@@ -1,5 +1,5 @@
 ---
-title: "Study 4"
+title: "Study 3"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document: 
@@ -127,7 +127,7 @@ d0 <- qual_data |>
   ) |> 
   mutate(across(starts_with("choice") & !ends_with("7"), 
                        ~ifelse(.x %in% women_set, 1, 0))) |> 
-  select(female_pick:gender_feedback, founder_comp:male_pool, `choice-1`:`choice-7`, race, gender, age, gender_code, race_code) |> 
+  dplyr::select(female_pick:gender_feedback, founder_comp:male_pool, `choice-1`:`choice-7`, race, gender, age, gender_code, race_code) |> 
   slice(1:1000) # pre-registered sample size
 
 
@@ -139,10 +139,10 @@ d0_female_pool <- d0 |>
 
 # Write the API-pulled data into a CSV file
 
-write.csv(d0, 'Study4.csv', row.names = FALSE, quote = TRUE) 
+write.csv(d0, 'Study3.csv', row.names = FALSE, quote = TRUE) 
 
 ###########################################################################################
-# when reading the csv, use the following command: read.csv('Study4.csv', check.names = F)
+# when reading the csv, use the following command: read.csv('Study3.csv', check.names = F)
 ###########################################################################################
 ```
 
@@ -225,7 +225,7 @@ print(race_df)
 ## Age
 
 age_summary <- d0 |> 
-  select(age) |> 
+  dplyr::select(age) |> 
   summarize(mean_age = mean(age, na.rm = T), sd_age = sd(age, na.rm = T))
 
 age_summary
@@ -347,7 +347,7 @@ summary(r8)
 ## Man pool
 dman_plot <- d0 |> 
   filter(male_pool == 1) |> 
-  select(gender_feedback, female_pick) |> 
+  dplyr::select(gender_feedback, female_pick) |> 
   group_by(gender_feedback) |> 
   dplyr::summarise(
     n = n(),  
@@ -362,7 +362,7 @@ dman_plot <- d0 |>
 ## Women Pool
 dwoman_plot <- d0 |> 
   filter(male_pool == 0) |> 
-  select(gender_feedback, female_pick) |> 
+  dplyr::select(gender_feedback, female_pick) |> 
   group_by(gender_feedback) |> 
   dplyr::summarise(
     n = n(),  
@@ -404,7 +404,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
                 aes(x = 1.5, xend = 1.5, y = freq*100 + se + 10, yend = freq*100 + se + 10, label = "***"), 
                 inherit.aes = FALSE, vjust = 0, family = "Times New Roman", size = 7) +
   theme_bw() +
-  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No gender feedback provided", "Gender feedback provided"), "") +
+  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No gender feedback provided", "Gender feedback provided"), "") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "", y = "% of Final Panelists Selected who Were Women") +
@@ -431,6 +431,6 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
 
 
 # Save the plot with Times New Roman font
-ggsave("Figure-4.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+# ggsave("../Manuscript_Figures/Figure-4.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
 
 ```

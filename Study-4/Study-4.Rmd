@@ -1,5 +1,5 @@
 ---
-title: "Study 5: Field Experiment"
+title: "Study 4"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document: 
@@ -154,10 +154,10 @@ d0 <- d0 |>
 
 # Write the API-pulled data into a CSV file
 
-write.csv(d0, 'Study5.csv', row.names = FALSE, quote = TRUE) 
+write.csv(d0, 'Study4.csv', row.names = FALSE, quote = TRUE) 
 
 ###########################################################################################
-# when reading the csv, use the following command: read.csv('Study5.csv', check.names = F)
+# when reading the csv, use the following command: read.csv('Study4.csv', check.names = F)
 ###########################################################################################
 ```
 
@@ -403,7 +403,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         panel.border = element_rect(fill= NA, color = "white"),
         plot.background = element_rect(fill = "white"),
         panel.background = element_rect(fill = "white"),
-        axis.title.x = element_text(face="bold", size = 16, vjust = 21, family = "Times New Roman"),
+        axis.title.x = element_text(face="bold", size = 16, vjust = 19, family = "Times New Roman"),
         plot.title = element_blank(),
         axis.title.y = element_text(size = 16, color = "black", family = "Times New Roman"),
         axis.text.x = element_blank(),
@@ -414,7 +414,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
 
 
 # Save the plot with Times New Roman font
-ggsave("Figure-6.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("../Manuscript_Figures/Figure-6.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
 
 ```
 
