@@ -1,0 +1,528 @@
+---
+title: "Study 1A"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  pdf_document: 
+    toc: yes
+    toc_depth: 2
+    fig_caption: true
+header-includes:
+  \renewcommand{\contentsname}{Items}
+   \usepackage{fvextra}
+   \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+---
+
+```{r setup, include=FALSE}
+rm(list=ls())
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE,
+	results = "hide"
+)
+library(dplyr)
+library(lmtest)
+library(sandwich)
+library(systemfit)
+library(car)
+library(broom)
+library(qualtRics)
+library(knitr)
+library(rmarkdown)
+library(ggplot2)
+library(grid)
+library(extrafont)
+```
+
+```{r include=FALSE}
+if ( (!is.null(knitr::current_input()))) {
+  if (("pdf_document" ==
+                rmarkdown::all_output_formats(knitr::current_input())[1])) {
+      stargazer_type <- "latex"
+  }
+} else {
+  stargazer_type <- "text"
+}
+
+robust_summary <- function(model) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting original model summary
+    model_summary <- summary(model)
+
+    # Updating standard errors, t-values, and p-values in the coefficients table
+    model_summary$coefficients[, "Std. Error"] <- robust_se
+    model_summary$coefficients[, "t value"] <- model_summary$coefficients[, "Estimate"] / robust_se
+    model_summary$coefficients[, "Pr(>|t|)"] <- 2 * pt(-abs(model_summary$coefficients[, "t value"]), df = model_summary$df[2], lower.tail = TRUE)
+
+    return(model_summary)
+}
+robust_confint <- function(model, level = 0.95) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting the coefficients
+    est <- coef(model)
+
+    # Calculating the critical value for the t-distribution
+    alpha <- 1 - level
+    t_crit <- qt(1 - alpha / 2, df = df.residual(model))
+
+    # Calculating the confidence intervals
+    lower <- est - t_crit * robust_se
+    upper <- est + t_crit * robust_se
+
+    # Combining into a matrix
+    confint <- cbind(lower, upper)
+    rownames(confint) <- names(est)
+    colnames(confint) <- c("2.5 %", "97.5 %")
+
+    return(confint)
+}
+
+```
+
+\newpage
+
+## Read Data
+
+```{r echo=TRUE}
+
+## Pull directly from Qualtrics API
+qual_data <- fetch_survey(surveyID='SV_3y2GHRkJ8RpoNka',
+                   label = T,
+                   convert = F,
+                   start_date = "2023-10-31",
+                   force_request = T)
+
+
+```
+
+
+```{r echo=TRUE}
+women <- c('On The Basis of Sex', 'Marie Antoinette', 'The Iron Lady', 'Judy', 'Coco Before Chanel', 'Rooney')
+budget <- c('Oppenheimer', 'Moneyball', 'JFK', 'Braveheart', 'Lincoln', 'A Beautiful Mind', 'The Aviator', 'Marie Antoinette')
+year <- c('A Beautiful Day in the Neighborhood', 'Oppenheimer', 'Moneyball', 'The Imitation Game', 'Tolkien', 'Jobs', 'J. Edgar', 'Hitchcock', 'Lincoln', 'The Darkest Hour', 'Judy', 'The Iron Lady', 'On The Basis of Sex')
+poli <- c('JFK', 'Braveheart', 'J. Edgar', 'Nixon', 'Lincoln', 'W. A Life Misunderstood', 'The Darkest Hour', 'The Iron Lady', 'On The Basis of Sex', 'Marie Antoinette')
+
+
+# Specify the names of the individuals in each category
+d0 <- qual_data |> 
+    filter(!is.na(`choice-7`), !is.na(workerId), Finished==1) |> 
+    mutate(
+    gender_feedback = as.numeric(grepl("feature a female protagonist", feedbackItem1) |
+                  grepl("feature a female protagonist", feedbackItem2) |
+                  grepl("feature a female protagonist", feedbackItem3)),
+    budget_shown = as.numeric(grepl("had a big budget \\(>\\$40 million\\)", feedbackItem1) |
+                  grepl("had a big budget \\(>\\$40 million\\)", feedbackItem2) |
+                  grepl("had a big budget \\(>\\$40 million\\)", feedbackItem3)),
+    year_shown = as.numeric(grepl("were released after 2010", feedbackItem1) |
+                grepl("were released after 2010", feedbackItem2) |
+                grepl("were released after 2010", feedbackItem3)),
+    poli_shown = as.numeric(grepl("feature a political leader", feedbackItem1) |
+                 grepl("feature a political leader", feedbackItem2) |
+                 grepl("feature a political leader", feedbackItem3)),
+    female_pick = case_when(`choice-7` %in% women ~ 1,
+                           TRUE ~ 0),
+    budget_pick = case_when(`choice-7` %in% budget ~ 1,
+                           TRUE ~ 0),
+    year_pick = case_when(`choice-7` %in% year ~ 1,
+                           TRUE ~ 0),
+    poli_pick = case_when(`choice-7` %in% poli ~ 1,
+                           TRUE ~ 0),
+    gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
+    race_code = case_when(race=="White / Caucasian" ~ 1, TRUE ~ 0),
+    base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% women))) |> 
+  select(gender_feedback:poli_pick, gender, base_gender, `choice-1`:`choice-7`, race,age, gender_code, race_code) |> 
+  slice(1:1000) # pre-registered sample size
+
+
+# Write the API-pulled data into a CSV file
+
+write.csv(d0, 'Study1A.csv', row.names = FALSE, quote = TRUE) 
+
+###########################################################################################
+# when reading the csv, use the following command: read.csv('Study1A.csv', check.names = F)
+###########################################################################################
+```
+
+\newpage
+
+## Variable Names
+
+\begin{table}[!htbp] \centering 
+  \label{tab:variables} 
+\begin{tabular}{|l|p{10cm}|} 
+\hline 
+\textbf{Variable} & \textbf{Description} \\ 
+\hline 
+\texttt{gender\_feedback} & Binary indicator of whether a participant was randomly assigned to gender feedback condition. \\
+\hline
+\texttt{female\_pick} & Binary indicator of whether a participant selected a biopic with a female protagonist for their seventh selection. \\
+\hline
+\texttt{budget\_shown} & Binary indicator of whether a participant was randomly assigned to receive budget feedback. \\
+\hline
+\texttt{budget\_pick} & Binary indicator of whether a participant selected a film with a big budget for their seventh selection. \\
+\hline
+\texttt{year\_shown} & Binary indicator of whether a participant was randomly assigned to receive film year feedback. \\
+\hline
+\texttt{year\_pick} & Binary indicator of whether a participant selected a film released after $2010$ for their seventh selection. \\
+\hline
+\texttt{poli\_shown} & Binary indicator of whether a participant was randomly assigned to receive political leader feedback \\
+\hline
+\texttt{poli\_pick} & Binary indicator of whether a participant selected a film with a political protagonist for their seventh selection. \\
+\hline
+\texttt{base\_gender} & Count of the number of films with female protagonists selected in the initial six films. \\
+\hline
+\texttt{choice-1 to choice-7} & The selected films \\
+\hline
+\texttt{gender} & Self-selected gender. \\
+\hline
+\texttt{race} & Self-selected race. \\
+\hline
+\texttt{age} & Self-entered age. \\
+\hline
+\texttt{gender\_code} & Dummy code for gender (male = 1). \\
+\hline
+\texttt{race\_code} & Dummy code for race (white = 1). \\
+\hline
+\end{tabular} 
+\end{table} 
+
+\newpage
+
+## Demographics
+
+```{r results='markup'}
+## Excluded participants
+
+cat('Excluded Participants:', nrow(qual_data) - nrow(d0), '\n')
+
+## Gender
+
+gender_percentages <- round(prop.table(table(d0$gender)) * 100, 2)
+
+gender_df <- data.frame(
+  Percentage = gender_percentages,
+  gender = names(gender_percentages)
+)[1:2]
+
+colnames(gender_df) <- c("Percentage", "gender")
+
+print(gender_df)
+
+
+## Race
+
+race_percentages <- round(prop.table(table(d0$race)) * 100, 2)
+
+race_df <- data.frame(
+  Percentage = race_percentages,
+  Race = names(race_percentages)
+)[1:2]
+
+colnames(race_df) <- c("Percentage", "Race")
+
+print(race_df)
+
+## Age
+
+cat('Mean (age): ', round(mean(d0$age), 2))
+cat('SD (age): ',round(sd(d0$age), 2))
+
+```
+
+\newpage
+
+## Primary Analysis
+
+```{r echo=TRUE, results='markup'}
+# primary model
+r1 <- lm(female_pick ~ gender_feedback, data=d0)
+
+# robust standard errors
+robust_summary(r1)
+robust_confint(r1)
+
+```
+
+\newpage
+
+## Robustness
+
+```{r echo=TRUE, results='markup'}
+
+## which feedback was shown with gender, remove constant due to ollinearity
+r2 <- lm(female_pick ~ gender_feedback + budget_shown + year_shown + poli_shown - 1, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r2)
+robust_confint(r2)
+
+## robust to demographic controls
+
+r3 <- lm(female_pick ~ gender_feedback + gender_code + race_code + age, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r3)
+robust_confint(r3)
+
+## logistic regression
+# Fit the logistic regression model
+r4 <- glm(female_pick ~ gender_feedback, family = binomial, data=d0)
+
+# Odds ratio
+tidy_r4 <- tidy(r4, exponentiate = TRUE, conf.int = T)
+print(tidy_r4)
+summary(r4)
+```
+
+\newpage
+
+## Secondary Analysis
+
+
+```{r echo=TRUE, results='markup'}
+## budget feedback
+r_budget <- lm(budget_pick ~ budget_shown, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r_budget)
+robust_confint(r_budget)
+
+
+## year feedback
+r_year <- lm(year_pick ~ year_shown, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r_year)
+robust_confint(r_year)
+
+
+## poli feedback
+r_poli <- lm(poli_pick ~ poli_shown, data=d0)
+
+
+# Display the robust_summary with robust standard errors
+robust_summary(r_poli)
+robust_confint(r_poli)
+
+## interaction of base gender
+# primary model
+r_interaction <- lm(female_pick ~ gender_feedback*base_gender, data=d0)
+
+
+# Display the summary with robust standard errors
+robust_summary(r_interaction)
+
+```
+
+## Figure 2A Code
+
+```{r echo=TRUE}
+##### female
+
+dfemale_plot <- d0 |> 
+  select(gender_feedback, female_pick) |> 
+  group_by(gender_feedback) |> 
+  dplyr::summarise(
+    n = n(),  
+    freq = mean(female_pick),  
+    sd = sd(female_pick) * 100, 
+    se = (sd(female_pick) / sqrt(n())) * 100  
+  ) |> 
+  mutate(gender_feedback = case_when(gender_feedback==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = gender_feedback)
+
+##### budget
+
+
+dbudget_plot <- d0 |> 
+  select(budget_shown, budget_pick) |> 
+  group_by(budget_shown) |> 
+  dplyr::summarise(
+    n = n(),  
+    freq = mean(budget_pick),  
+    sd = sd(budget_pick) * 100, 
+    se = (sd(budget_pick) / sqrt(n())) * 100  
+  ) |> 
+  mutate(budget_shown = case_when(budget_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = budget_shown)
+
+
+##### year
+
+dyear_plot <- d0 |> 
+  select(year_shown, year_pick) |> 
+  group_by(year_shown) |> 
+  dplyr::summarise(
+    n = n(),  
+    freq = mean(year_pick),  
+    sd = sd(year_pick) * 100, 
+    se = (sd(year_pick) / sqrt(n())) * 100  
+  ) |> 
+  mutate(year_shown = case_when(year_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = year_shown)
+
+
+#### political leader
+
+
+dpoli_plot <- d0 |> 
+  select(poli_shown, poli_pick) |> 
+  group_by(poli_shown) |> 
+  dplyr::summarise(
+    n = n(),  
+    freq = mean(poli_pick),  
+    sd = sd(poli_pick) * 100, 
+    se = (sd(poli_pick) / sqrt(n())) * 100  
+  ) |> 
+  mutate(poli_shown = case_when(poli_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = poli_shown)
+
+## Combine plots
+
+# Load the Times New Roman font
+loadfonts(device = "pdf")
+
+# Your data-binding code
+df_combined <- bind_rows(
+  dbudget_plot %>% mutate(Category = "\nAbove a\n$40M Budget"),
+  dyear_plot %>% mutate(Category = "\nReleased After\n2010"),
+  dpoli_plot %>% mutate(Category = "\nAbout a\nPolitical leader"),
+  dfemale_plot %>% mutate(Category = "\nAbout a \nWoman Protagonist")
+, .id = "id") %>%
+  mutate(Category = factor(Category, levels = c('\nAbove a\n$40M Budget', '\nReleased After\n2010', '\nAbout a\nPolitical leader', '\nAbout a \nWoman Protagonist')))
+
+# Create the plot
+p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq * 100, fill = Condition)) +
+  geom_bar(stat = "identity", width = 0.85, position = position_dodge(width = 0.7)) +
+  geom_text(aes(label = paste0(sprintf("%.1f", freq * 100), "%")), 
+            position = position_dodge(width = 0.7), vjust = 5, size = 7, color = "white") +
+  geom_errorbar(aes(ymin = freq * 100 - se, ymax = freq * 100 + se), width = .1, position = position_dodge(width = 0.7)) +
+  facet_wrap(~factor(Category, c('\nAbove a\n$40M Budget', '\nReleased After\n2010', '\nAbout a\nPolitical leader', '\nAbout a \nWoman Protagonist')), nrow = 1, strip.position = "bottom") +
+  geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""),
+               aes(x = 1, xend = 2, y = freq * 100 + se + 7, yend = freq * 100 + se + 7),
+               inherit.aes = FALSE) +
+  geom_text(data = df_combined %>% filter(Category %in% c('\nAbove a\n$40M Budget', '\nReleased After\n2010', '\nAbout a\nPolitical leader') & Condition == "\"Treatment\""),
+            aes(x = 1.5, y = freq * 100 + se + 9, label = "n.s."),
+            inherit.aes = FALSE, vjust = 0, size = 7, family = "Times New Roman") +
+  geom_text(data = df_combined %>% filter(Category == '\nAbout a \nWoman Protagonist' & Condition == "\"Treatment\""),
+            aes(x = 1.5, y = freq * 100 + se + 9, label = "***"),
+            inherit.aes = FALSE, vjust = 0, size = 7, family = "Times New Roman") +
+  theme_bw() +
+  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_y_continuous(labels = function(x) paste0(x, "%"), limits = c(0, 100)) +
+  scale_x_discrete(labels = c("Control" = "Not\nShown", "Treatment" = "Shown")) +
+  labs(x = "Feedback on % of films that were...", y = "% of Final Films Selected with the Target Attribute", 
+       title = "The Effect of Getting Feedback on Your Biopic Selections") +
+  theme(plot.caption = element_text(face = "italic", family = "Times New Roman"),
+        legend.position = c(0.5, 0.85),
+        legend.title = element_blank(),
+        legend.direction = "horizontal",
+        legend.text = element_text(size = 20, family = "Times New Roman"),
+        legend.key.size = unit(7, 'mm'),
+        legend.background = element_rect(fill = "white"),
+        panel.grid.minor = element_blank(),
+        panel.grid = element_blank(),
+        panel.border = element_rect(fill= NA, color = "white"),
+        plot.background = element_rect(fill = "white"),
+        panel.background = element_rect(fill = "white"),
+        axis.title.x = element_text(face="bold", size = 22, vjust = 17, family = "Times New Roman"),
+        plot.title = element_blank(),
+        axis.title.y = element_text(size = 20, color = "black", family = "Times New Roman"),
+        axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_text(size = 20, color = "black", family = "Times New Roman"),
+        strip.text = element_text(size = 20, color = "black", family = "Times New Roman"),
+        strip.background = element_rect(colour = "white", fill = "white"))
+#p_combined_A
+
+
+# Save the plot with Times New Roman font
+ggsave("Figure-2A.pdf", plot = p_combined_A, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+
+```
+
+\newpage
+
+## System of Equations
+
+```{r echo=FALSE, results='markup'}
+#SYSTEM OF SIMULTANEOUS
+
+# Budget
+summary(lm(as.numeric(female_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1, data=d0))
+budget.eqn <- list(
+  budgeteq = as.numeric(budget_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1,
+  femaleeq = as.numeric(female_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1
+)
+
+# Define restriction matrix
+restrict_budget <- "budgeteq_budget_shown - femaleeq_gender_feedback = 0"
+
+# Fit the system of equations with the restriction
+unrestricted_budget <- systemfit(budget.eqn, data=d0)
+#summary(unrestricted_budget)
+
+
+# Year
+
+year.eqn <- list(
+  yeareq = as.numeric(year_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1,
+  femaleeq = as.numeric(female_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1
+)
+
+# Define restriction matrix
+restrict_year <- "yeareq_year_shown - femaleeq_gender_feedback = 0"
+
+# Fit the system of equations with the restriction
+unrestricted_year <- systemfit(year.eqn, data=d0)
+#summary(unrestricted_year)
+
+# Poli
+
+poli.eqn <- list(
+  polieq = as.numeric(poli_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1,
+  femaleeq = as.numeric(female_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1
+)
+
+# Define restriction matrix
+restrict_poli <- "polieq_poli_shown - femaleeq_gender_feedback = 0"
+
+# Fit the system of equations with the restriction
+unrestricted_poli <- systemfit(poli.eqn, data=d0)
+#summary(unrestricted_poli)
+
+
+# wald tests
+# Run linear hypothesis tests
+lh_result_budget = linearHypothesis(unrestricted_budget, restrict_budget)
+lh_result_year = linearHypothesis(unrestricted_year, restrict_year)
+lh_result_poli = linearHypothesis(unrestricted_poli, restrict_poli)
+
+
+# Collecting coefficient values and standard errors for the new variables
+budget_coef <- lh_result_budget$F[2]
+year_coef <- lh_result_year$F[2]
+poli_coef <- lh_result_poli$F[2]
+
+# Extracting p-values for the new variables
+p_value_budget = lh_result_budget$`Pr(>F)`[2]
+p_value_year = lh_result_year$`Pr(>F)`[2]
+p_value_poli = lh_result_poli$`Pr(>F)`[2]
+
+# Include p-values in the summary table for the new variables
+data.frame(
+  `Test` = c("Female Feedback - Budget", "Female Feedback - Year", "Female Feedback - Political"),
+  `Wald Coefficient` = c(budget_coef, year_coef, poli_coef),
+  P_Value = c(p_value_budget, p_value_year, p_value_poli),
+  row.names = NULL  # Set row.names to NULL to remove the index
+)
+
+```

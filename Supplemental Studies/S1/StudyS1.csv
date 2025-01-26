@@ -1,0 +1,1001 @@
+"list_two","gender_feedback","female","ceo","ceo_pick","founder","founder_pick","tech","tech_pick","base_gender","gender","race","age","gender_code","race_code"
+NA,1,0,1,0,0,1,1,1,3,"Man","White / Caucasian",31,1,1
+NA,1,1,1,0,0,0,1,0,0,"Man","White / Caucasian",28,1,1
+1,0,0,0,0,1,0,1,0,0,"Woman","White / Caucasian",33,0,1
+NA,1,1,1,1,0,0,1,0,2,"Man","White / Caucasian",27,1,1
+0,0,1,1,0,1,0,1,0,1,"Woman","Hispanic / Latinx",24,0,0
+1,0,0,1,0,1,1,0,1,0,"Man","White / Caucasian",24,1,1
+NA,1,0,0,1,1,0,1,0,2,"Woman","White / Caucasian",30,0,1
+NA,1,1,0,1,1,0,1,0,0,"Man","White / Caucasian",27,1,1
+NA,1,1,1,0,0,0,1,0,2,"Man","White / Caucasian",34,1,1
+0,0,0,1,0,1,1,1,1,1,"Man","Asian / Pacific Islander",39,1,0
+0,0,0,1,0,1,0,1,0,1,"Man","White / Caucasian",33,1,1
+NA,1,1,0,0,1,0,1,0,1,"Man","White / Caucasian",36,1,1
+NA,1,1,1,0,1,0,0,0,0,"Man","White / Caucasian",62,1,1
+NA,1,0,1,0,0,0,1,0,3,"Woman","White / Caucasian",47,0,1
+0,0,0,1,1,1,0,1,1,2,"Woman","White / Caucasian",48,0,1
+1,0,1,1,1,0,0,1,0,1,"Man","Hispanic / Latinx",35,1,0
+1,0,0,1,0,0,1,1,0,1,"Non-binary","White / Caucasian",25,0,1
+1,0,0,1,0,1,0,0,0,3,"Man","White / Caucasian",32,1,1
+NA,1,1,1,1,0,0,1,0,2,"Woman","Asian / Pacific Islander",29,0,0
+NA,1,1,0,0,1,0,1,0,2,"Woman","White / Caucasian",33,0,1
+NA,1,1,0,1,1,0,1,0,2,"Woman","White / Caucasian",29,0,1
+1,0,0,1,1,0,0,1,1,2,"Woman","White / Caucasian",32,0,1
+NA,1,1,1,1,1,0,0,0,2,"Woman","White / Caucasian",40,0,1
+NA,1,0,0,0,1,0,1,0,1,"Man","White / Caucasian",36,1,1
+NA,1,0,1,0,0,1,1,0,2,"Woman","White / Caucasian",35,0,1
+1,0,0,0,1,1,0,1,1,1,"Man","White / Caucasian",27,1,1
+0,0,0,1,0,1,0,1,0,1,"Man","White / Caucasian",33,1,1
+NA,1,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",28,0,1
+NA,1,0,1,1,0,0,1,1,1,"Woman","White / Caucasian",25,0,1
+NA,1,0,0,0,1,1,1,1,0,"Man","White / Caucasian",33,1,1
+1,0,0,1,0,0,0,1,0,2,"Woman","White / Caucasian",39,0,1
+1,0,1,1,1,1,0,0,0,1,"Man","White / Caucasian",27,1,1
+1,0,1,1,1,0,0,1,0,0,"Man","Asian / Pacific Islander",28,1,0
+1,0,0,1,0,1,1,0,1,1,"Woman","Black or African American",45,0,0
+1,0,0,1,0,0,0,1,0,0,"Woman","Asian / Pacific Islander",29,0,0
+NA,1,1,0,1,1,0,1,0,4,"Woman","White / Caucasian",52,0,1
+NA,1,0,1,0,1,1,0,1,1,"Man","White / Caucasian",47,1,1
+1,0,0,1,0,0,0,1,0,1,"Man","White / Caucasian",39,1,1
+NA,1,1,0,0,1,0,1,0,0,"Man","White / Caucasian",33,1,1
+NA,1,0,1,0,0,0,1,0,0,"Woman","White / Caucasian",39,0,1
+1,0,0,1,0,1,1,0,0,1,"Man","White / Caucasian",37,1,1
+0,0,1,1,1,1,0,1,0,1,"Man","White / Caucasian",31,1,1
+1,0,0,1,0,1,1,0,0,3,"Woman","White / Caucasian",53,0,1
+0,0,1,1,1,1,0,1,0,1,"Woman","Black or African American",37,0,0
+0,0,0,1,0,1,1,1,0,2,"Woman","White / Caucasian",61,0,1
+0,0,0,1,1,1,0,1,1,0,"Woman","Black or African American",21,0,0
+NA,1,1,1,1,0,0,1,0,2,"Woman","White / Caucasian",42,0,1
+NA,1,0,0,0,1,1,1,1,2,"Woman","White / Caucasian",35,0,1
+0,0,0,1,0,1,0,1,0,0,"Man","White / Caucasian",50,1,1
+NA,1,1,1,0,1,0,0,0,1,"Man","White / Caucasian",41,1,1
+1,0,0,1,1,1,0,0,1,1,"Man","White / Caucasian",40,1,1
+1,0,0,1,1,1,0,0,1,2,"Man","White / Caucasian",34,1,1
+0,0,1,1,1,1,0,1,0,2,"Woman","White / Caucasian",33,0,1
+0,0,1,1,0,1,0,1,0,1,"Man","White / Caucasian",26,1,1
+0,0,1,1,1,1,0,1,0,1,"Woman","White / Caucasian",57,0,1
+0,0,0,1,0,1,0,1,0,1,"Woman","Hispanic / Latinx",45,0,0
+1,0,0,1,0,0,1,1,1,1,"Woman","White / Caucasian",44,0,1
+NA,1,0,0,0,1,1,1,1,2,"Woman","Asian / Pacific Islander",39,0,0
+NA,1,0,0,0,1,1,1,1,4,"Woman","White / Caucasian",34,0,1
+NA,1,1,0,1,1,0,1,0,0,"Woman","White / Caucasian",37,0,1
+NA,1,0,1,0,1,1,0,1,2,"Man","White / Caucasian",52,1,1
+NA,1,1,1,1,1,0,0,0,0,"Woman","White / Caucasian",33,0,1
+1,0,0,1,0,0,0,1,0,1,"Man","White / Caucasian",35,1,1
+1,0,0,1,0,0,0,1,0,1,"Woman","White / Caucasian",52,0,1
+NA,1,0,1,0,1,1,0,1,2,"Woman","White / Caucasian",43,0,1
+1,0,1,1,1,0,0,1,0,0,"Woman","White / Caucasian",57,0,1
+NA,1,1,0,0,1,0,1,0,4,"Man","White / Caucasian",44,1,1
+0,0,0,1,1,1,0,1,1,0,"Man","White / Caucasian",28,1,1
+NA,1,1,1,1,0,0,1,0,2,"Man","White / Caucasian",64,1,1
+1,0,0,1,0,0,1,1,0,1,"Man","Hispanic / Latinx",36,1,0
+1,0,0,0,1,1,0,1,1,0,"Man","Asian / Pacific Islander",29,1,0
+NA,1,1,0,1,1,0,1,0,2,"Woman","Black or African American",30,0,0
+1,0,0,1,1,0,0,1,1,2,"Man","Asian / Pacific Islander",51,1,0
+0,0,0,1,1,1,0,1,1,2,"Man","White / Caucasian",24,1,1
+NA,1,1,1,1,0,0,1,0,0,"Woman","White / Caucasian",31,0,1
+NA,1,0,1,1,1,0,0,0,0,"Man","White / Caucasian",32,1,1
+NA,1,1,1,1,0,0,1,0,2,"Woman","White / Caucasian",34,0,1
+0,0,1,1,0,1,0,1,0,1,"Man","White / Caucasian",33,1,1
+0,0,0,1,1,1,0,1,1,1,"Man","Black or African American",23,1,0
+0,0,0,1,0,1,0,1,0,1,"Woman","American Indian or Alaskan Native",27,0,0
+NA,1,1,1,1,1,0,0,0,1,"Woman","Asian / Pacific Islander",32,0,0
+NA,1,0,1,0,0,0,1,0,1,"Man","Black or African American",30,1,0
+NA,1,1,1,1,0,0,1,0,1,"Man","White / Caucasian",58,1,1
+0,0,0,1,0,1,0,1,0,1,"Man","White / Caucasian",52,1,1
+0,0,0,1,0,1,1,1,0,2,"Man","White / Caucasian",34,1,1
+NA,1,0,0,1,1,0,1,0,0,"Man","White / Caucasian",31,1,1
+NA,1,0,0,1,1,0,1,0,2,"Woman","White / Caucasian",40,0,1
+0,0,1,1,1,1,0,1,0,1,"Woman","White / Caucasian",49,0,1
+1,0,0,1,1,0,0,1,1,4,"Woman","White / Caucasian",64,0,1
+NA,1,1,1,1,0,0,1,0,0,"Woman","White / Caucasian",30,0,1
+NA,1,1,1,1,1,0,0,0,1,"Man","White / Caucasian",35,1,1
+1,0,0,0,1,1,0,1,1,1,"Woman","Asian / Pacific Islander",51,0,0
+NA,1,0,0,1,1,0,1,0,0,"Woman","White / Caucasian",28,0,1
+1,0,0,1,0,0,1,1,1,1,"Woman","Hispanic / Latinx",31,0,0
+NA,1,0,1,0,0,1,1,1,0,"Man","Hispanic / Latinx",25,1,0
+NA,1,0,1,0,1,1,0,1,0,"Man","White / Caucasian",24,1,1
+NA,1,1,0,0,1,0,1,0,1,"Man","White / Caucasian",28,1,1
+NA,1,0,1,1,1,0,0,1,3,"Non-binary","Asian / Pacific Islander",36,0,0
+NA,1,0,1,1,0,0,1,1,1,"Man","White / Caucasian",54,1,1
+1,0,0,0,0,1,1,1,1,0,"Woman","White / Caucasian",47,0,1
+NA,1,1,0,1,1,0,1,0,1,"Man","Asian / Pacific Islander",45,1,0
+1,0,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",30,0,1
+1,0,0,1,1,1,0,0,1,1,"Man","White / Caucasian",27,1,1
+NA,1,1,1,1,0,0,1,0,2,"Woman","White / Caucasian",42,0,1
+NA,1,1,1,0,1,0,0,0,1,"Woman","White / Caucasian",24,0,1
+1,0,0,0,0,1,1,1,0,3,"Man","White / Caucasian",29,1,1
+NA,1,1,0,0,1,0,1,0,1,"Man","Asian / Pacific Islander",30,1,0
+0,0,0,1,1,1,0,1,1,2,"Man","White / Caucasian",41,1,1
+NA,1,1,1,1,1,0,0,0,1,"Woman","White / Caucasian",35,0,1
+1,0,0,1,0,1,1,0,1,0,"Man","Black or African American",53,1,0
+NA,1,0,1,0,0,1,1,0,3,"Woman","White / Caucasian",51,0,1
+1,0,0,1,1,1,0,0,1,1,"Woman","White / Caucasian",62,0,1
+0,0,1,1,0,1,0,1,0,2,"Man","Hispanic / Latinx",24,1,0
+NA,1,0,0,1,1,0,1,1,0,"Man","White / Caucasian",38,1,1
+NA,1,0,1,0,1,1,0,1,1,"Man","White / Caucasian",29,1,1
+0,0,0,1,0,1,0,1,0,2,"Woman","White / Caucasian",38,0,1
+0,0,0,1,0,1,1,1,1,1,"Man","Asian / Pacific Islander",40,1,0
+1,0,1,1,1,1,0,0,0,0,"Woman","White / Caucasian",60,0,1
+NA,1,1,1,0,0,0,1,0,2,"Man","Black or African American",33,1,0
+0,0,0,1,1,1,0,1,1,3,"Woman","White / Caucasian",39,0,1
+NA,1,0,0,0,1,0,1,0,1,"Woman","White / Caucasian",45,0,1
+1,0,0,0,1,1,0,1,1,0,"Woman","White / Caucasian",34,0,1
+NA,1,1,1,1,1,0,0,0,1,"Woman","White / Caucasian",44,0,1
+NA,1,1,0,1,1,0,1,0,2,"Man","White / Caucasian",36,1,1
+0,0,0,1,0,1,1,1,0,1,"Man","White / Caucasian",22,1,1
+1,0,0,1,0,0,0,1,0,2,"Woman","White / Caucasian",27,0,1
+0,0,1,1,0,1,0,1,0,0,"Woman","White / Caucasian",37,0,1
+NA,1,0,1,0,0,1,1,0,2,"Man","White / Caucasian",42,1,1
+0,0,1,1,1,1,0,1,0,2,"Man","White / Caucasian",22,1,1
+1,0,1,0,0,1,0,1,0,0,"Man","White / Caucasian",34,1,1
+1,0,0,0,0,1,1,1,0,3,"Woman","White / Caucasian",55,0,1
+NA,1,0,0,0,1,0,1,0,3,"Woman","Hispanic / Latinx",43,0,0
+0,0,0,1,1,1,0,1,1,0,"Man","White / Caucasian",50,1,1
+0,0,0,1,1,1,0,1,1,0,"Man","White / Caucasian",41,1,1
+1,0,0,1,0,1,1,0,1,0,"Man","White / Caucasian",34,1,1
+0,0,0,1,0,1,1,1,0,0,"Man","White / Caucasian",56,1,1
+NA,1,1,1,1,1,0,0,0,3,"Man","Black or African American",27,1,0
+0,0,0,1,0,1,1,1,1,0,"Man","Asian / Pacific Islander",30,1,0
+1,0,0,1,1,0,0,1,0,0,"Man","White / Caucasian",42,1,1
+NA,1,1,0,0,1,0,1,0,2,"Man","White / Caucasian",66,1,1
+0,0,1,1,1,1,0,1,0,0,"Man","White / Caucasian",38,1,1
+0,0,0,1,0,1,1,1,1,0,"Woman","White / Caucasian",56,0,1
+0,0,0,1,0,1,0,1,0,0,"Woman","Hispanic / Latinx",62,0,0
+0,0,0,1,0,1,0,1,0,2,"Man","White / Caucasian",28,1,1
+0,0,0,1,0,1,1,1,1,4,"Woman","White / Caucasian",36,0,1
+1,0,0,1,1,1,0,0,1,1,"Man","Asian / Pacific Islander",47,1,0
+NA,1,1,0,0,1,0,1,0,0,"Woman","White / Caucasian",44,0,1
+NA,1,1,0,1,1,0,1,0,2,"Woman","White / Caucasian",37,0,1
+1,0,1,1,0,1,0,0,0,2,"Woman","Asian / Pacific Islander",29,0,0
+0,0,1,1,1,1,0,1,0,0,"Woman","White / Caucasian",38,0,1
+NA,1,0,0,0,1,0,1,0,2,"Woman","White / Caucasian",57,0,1
+NA,1,0,1,0,0,1,1,1,1,"Woman","White / Caucasian",33,0,1
+NA,1,0,1,1,1,0,0,1,4,"Woman","White / Caucasian",34,0,1
+NA,1,1,1,0,1,0,0,0,0,"Woman","White / Caucasian",45,0,1
+NA,1,1,1,1,1,0,0,0,0,"Man","White / Caucasian",36,1,1
+NA,1,1,1,1,0,0,1,0,2,"Man","White / Caucasian",37,1,1
+NA,1,0,1,0,1,1,0,1,3,"Woman","White / Caucasian",39,0,1
+NA,1,1,1,1,0,0,1,0,0,"Man","White / Caucasian",37,1,1
+1,0,0,1,1,0,0,1,1,0,"Man","White / Caucasian",57,1,1
+NA,1,0,1,1,1,0,0,0,3,"Woman","White / Caucasian",25,0,1
+NA,1,1,1,0,1,0,0,0,1,"Woman","White / Caucasian",38,0,1
+NA,1,1,0,1,1,0,1,0,1,"Man","White / Caucasian",29,1,1
+NA,1,1,1,1,1,0,0,0,0,"Woman","White / Caucasian",24,0,1
+NA,1,0,0,1,1,0,1,1,0,"Woman","White / Caucasian",54,0,1
+NA,1,1,1,0,0,0,1,0,2,"Woman","White / Caucasian",38,0,1
+1,0,0,1,0,0,0,1,0,0,"Man","Hispanic / Latinx",30,1,0
+NA,1,1,0,1,1,0,1,0,0,"Man","White / Caucasian",45,1,1
+NA,1,1,1,0,0,0,1,0,0,"Man","American Indian or Alaskan Native",30,1,0
+0,0,0,1,0,1,0,1,0,2,"Woman","White / Caucasian",38,0,1
+NA,1,1,1,1,0,0,1,0,0,"Man","White / Caucasian",71,1,1
+NA,1,1,1,1,0,0,1,0,1,"Man","White / Caucasian",24,1,1
+NA,1,1,0,1,1,0,1,0,3,"Woman","White / Caucasian",44,0,1
+0,0,1,1,0,1,0,1,0,2,"Woman","White / Caucasian",68,0,1
+1,0,0,0,1,1,0,1,1,0,"Woman","White / Caucasian",63,0,1
+1,0,0,0,0,1,1,1,0,3,"Woman","White / Caucasian",70,0,1
+NA,1,0,0,0,1,1,1,0,2,"Woman","White / Caucasian",57,0,1
+1,0,0,0,0,1,0,1,0,1,"Man","White / Caucasian",34,1,1
+NA,1,1,1,1,1,0,0,0,1,"Man","White / Caucasian",32,1,1
+0,0,1,1,1,1,0,1,0,2,"Woman","White / Caucasian",60,0,1
+NA,1,0,1,1,0,0,1,0,0,"Man","White / Caucasian",33,1,1
+NA,1,0,1,0,1,1,0,1,1,"Man","Asian / Pacific Islander",35,1,0
+0,0,0,1,0,1,1,1,1,5,"Woman","White / Caucasian",34,0,1
+NA,1,0,0,0,1,1,1,1,1,"Woman","White / Caucasian",36,0,1
+0,0,0,1,0,1,0,1,0,2,"Woman","White / Caucasian",55,0,1
+NA,1,1,1,1,1,0,0,0,0,"Man","White / Caucasian",28,1,1
+1,0,0,0,1,1,0,1,1,0,"Man","Black or African American",52,1,0
+0,0,1,1,1,1,0,1,0,1,"Woman","White / Caucasian",57,0,1
+1,0,1,1,0,0,0,1,0,0,"Man","White / Caucasian",31,1,1
+NA,1,1,1,1,1,0,0,0,1,"Woman","White / Caucasian",44,0,1
+NA,1,1,0,1,1,0,1,0,0,"Woman","Asian / Pacific Islander",39,0,0
+NA,1,1,1,1,0,0,1,0,0,"Man","White / Caucasian",42,1,1
+NA,1,0,1,1,1,0,0,0,2,"Woman","White / Caucasian",57,0,1
+NA,1,1,0,0,1,0,1,0,1,"Woman","Black or African American",23,0,0
+NA,1,1,1,0,0,0,1,0,1,"Woman","White / Caucasian",27,0,1
+1,0,0,0,0,1,1,1,1,2,"Woman","White / Caucasian",58,0,1
+NA,1,1,0,1,1,0,1,0,1,"Man","Black or African American",37,1,0
+1,0,0,0,1,1,0,1,1,1,"Woman","White / Caucasian",43,0,1
+1,0,0,1,0,1,0,0,0,1,"Man","White / Caucasian",37,1,1
+NA,1,0,0,1,1,0,1,1,1,"Woman","White / Caucasian",36,0,1
+NA,1,0,1,0,1,1,0,0,1,"Man","White / Caucasian",34,1,1
+1,0,0,1,1,1,0,0,1,1,"Man","White / Caucasian",34,1,1
+NA,1,1,1,1,0,0,1,0,1,"Man","White / Caucasian",40,1,1
+1,0,0,0,0,1,1,1,0,1,"Woman","White / Caucasian",33,0,1
+NA,1,0,1,0,1,1,0,1,2,"Man","Asian / Pacific Islander",47,1,0
+NA,1,0,1,0,0,1,1,1,3,"Woman","White / Caucasian",47,0,1
+NA,1,0,1,0,1,1,0,0,1,"Man","White / Caucasian",37,1,1
+0,0,0,1,0,1,1,1,1,0,"Woman","Asian / Pacific Islander",36,0,0
+0,0,0,1,1,1,0,1,1,1,"Woman","White / Caucasian",57,0,1
+NA,1,0,0,1,1,0,1,1,0,"Man","White / Caucasian",34,1,1
+0,0,0,1,0,1,1,1,1,0,"Man","White / Caucasian",54,1,1
+NA,1,1,1,0,1,0,0,0,1,"Man","White / Caucasian",51,1,1
+NA,1,0,0,0,1,1,1,0,2,"Woman","White / Caucasian",45,0,1
+NA,1,1,1,1,0,0,1,0,0,"Woman","White / Caucasian",49,0,1
+NA,1,1,1,1,1,0,0,0,2,"Man","White / Caucasian",58,1,1
+0,0,1,1,0,1,0,1,0,2,"Woman","White / Caucasian",43,0,1
+NA,1,1,1,1,1,0,0,0,1,"Woman","Asian / Pacific Islander",39,0,0
+NA,1,0,0,1,1,0,1,0,0,"Man","White / Caucasian",66,1,1
+NA,1,0,0,0,1,0,1,0,1,"Non-binary","Black or African American",28,0,0
+1,0,0,0,1,1,0,1,1,0,"Woman","White / Caucasian",40,0,1
+0,0,1,1,1,1,0,1,0,1,"Man","White / Caucasian",39,1,1
+1,0,1,1,1,1,0,0,0,2,"Man","White / Caucasian",45,1,1
+NA,1,1,1,1,1,0,0,0,1,"Man","White / Caucasian",34,1,1
+0,0,1,1,1,1,0,1,0,2,"Woman","Asian / Pacific Islander",42,0,0
+1,0,0,0,1,1,0,1,0,1,"Man","White / Caucasian",41,1,1
+0,0,1,1,1,1,0,1,0,2,"Woman","White / Caucasian",31,0,1
+1,0,0,0,0,1,1,1,0,2,"Woman","White / Caucasian",56,0,1
+NA,1,0,1,0,0,0,1,0,2,"Man","White / Caucasian",49,1,1
+1,0,0,0,0,1,1,1,0,1,"Woman","White / Caucasian",52,0,1
+NA,1,1,1,1,0,0,1,0,2,"Woman","White / Caucasian",25,0,1
+NA,1,0,1,0,0,0,1,0,0,"Man","White / Caucasian",46,1,1
+0,0,0,1,0,1,1,1,1,2,"Woman","White / Caucasian",33,0,1
+0,0,1,1,1,1,0,1,0,0,"Man","White / Caucasian",37,1,1
+1,0,0,1,1,1,0,0,0,0,"Man","Asian / Pacific Islander",30,1,0
+NA,1,0,1,1,0,0,1,0,3,"Woman","White / Caucasian",52,0,1
+1,0,0,1,0,1,0,0,0,2,"Woman","White / Caucasian",42,0,1
+NA,1,0,1,0,1,1,0,0,0,"Woman","White / Caucasian",35,0,1
+0,0,1,1,1,1,0,1,0,0,"Woman","White / Caucasian",61,0,1
+0,0,0,1,1,1,0,1,1,2,"Woman","White / Caucasian",39,0,1
+NA,1,0,1,0,1,1,0,1,1,"Man","White / Caucasian",32,1,1
+NA,1,0,1,0,0,0,1,0,0,"Man","White / Caucasian",58,1,1
+NA,1,1,1,1,1,0,0,0,0,"Man","White / Caucasian",27,1,1
+1,0,0,1,1,1,0,0,1,1,"Woman","Asian / Pacific Islander",38,0,0
+NA,1,1,1,0,1,0,0,0,2,"Woman","Asian / Pacific Islander",39,0,0
+NA,1,0,1,1,1,0,0,1,4,"Woman","White / Caucasian",34,0,1
+NA,1,1,1,1,1,0,0,0,0,"Man","White / Caucasian",29,1,1
+0,0,0,1,1,1,0,1,0,0,"Man","White / Caucasian",53,1,1
+NA,1,0,0,0,1,1,1,0,1,"Man","White / Caucasian",67,1,1
+0,0,0,1,0,1,0,1,0,2,"Woman","Asian / Pacific Islander",54,0,0
+NA,1,0,0,1,1,0,1,0,0,"Woman","White / Caucasian",29,0,1
+NA,1,0,1,1,0,0,1,1,0,"Man","White / Caucasian",40,1,1
+NA,1,0,0,0,1,1,1,0,1,"Woman","Hispanic / Latinx",41,0,0
+NA,1,0,1,1,1,0,0,1,0,"Man","White / Caucasian",41,1,1
+1,0,1,1,1,0,0,1,0,2,"Man","White / Caucasian",31,1,1
+1,0,0,1,0,1,1,0,0,1,"Man","White / Caucasian",30,1,1
+NA,1,1,1,1,1,0,0,0,0,"Man","White / Caucasian",33,1,1
+1,0,0,1,0,0,1,1,0,0,"Man","White / Caucasian",34,1,1
+1,0,0,1,0,0,1,1,0,3,"Woman","Asian / Pacific Islander",27,0,0
+1,0,0,1,0,1,1,0,0,2,"Woman","Black or African American",44,0,0
+0,0,0,1,0,1,1,1,0,0,"Man","White / Caucasian",62,1,1
+NA,1,0,1,0,0,0,1,0,1,"Man","White / Caucasian",41,1,1
+1,0,1,0,1,1,0,1,0,0,"Man","Black or African American",41,1,0
+NA,1,0,1,0,0,1,1,1,1,"Woman","Black or African American",36,0,0
+1,0,1,0,1,1,0,1,0,1,"Woman","Black or African American",36,0,0
+0,0,0,1,1,1,0,1,1,2,"Woman","White / Caucasian",45,0,1
+NA,1,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",39,0,1
+NA,1,1,1,0,1,0,0,0,1,"Man","White / Caucasian",44,1,1
+NA,1,0,1,1,0,0,1,1,2,"Man","White / Caucasian",33,1,1
+0,0,1,1,1,1,0,1,0,2,"Man","White / Caucasian",39,1,1
+0,0,1,1,0,1,0,1,0,1,"Man","White / Caucasian",55,1,1
+1,0,0,0,0,1,1,1,1,3,"Man","White / Caucasian",36,1,1
+0,0,0,1,0,1,1,1,0,2,"Woman","White / Caucasian",40,0,1
+0,0,1,1,0,1,0,1,0,0,"Man","Asian / Pacific Islander",43,1,0
+0,0,0,1,0,1,1,1,1,1,"Woman","White / Caucasian",52,0,1
+0,0,0,1,0,1,1,1,1,3,"Man","White / Caucasian",35,1,1
+NA,1,0,1,0,1,1,0,1,2,"Woman","White / Caucasian",70,0,1
+1,0,0,0,0,1,1,1,0,0,"Man","White / Caucasian",41,1,1
+NA,1,1,1,1,0,0,1,0,0,"Man","Asian / Pacific Islander",31,1,0
+1,0,0,1,1,0,0,1,1,0,"Man","White / Caucasian",64,1,1
+1,0,0,1,1,0,0,1,0,4,"Woman","White / Caucasian",45,0,1
+1,0,1,1,1,0,0,1,0,0,"Man","White / Caucasian",38,1,1
+0,0,0,1,1,1,0,1,1,1,"Woman","White / Caucasian",38,0,1
+NA,1,0,1,1,1,0,0,1,1,"Man","White / Caucasian",29,1,1
+NA,1,1,1,1,0,0,1,0,3,"Woman","White / Caucasian",52,0,1
+NA,1,1,0,1,1,0,1,0,1,"Man","White / Caucasian",53,1,1
+1,0,0,0,1,1,0,1,0,0,"Man","Black or African American",24,1,0
+NA,1,1,1,1,0,0,1,0,3,"Man","White / Caucasian",52,1,1
+0,0,0,1,1,1,0,1,0,2,"Woman","Black or African American",22,0,0
+NA,1,1,1,0,0,0,1,0,1,"Man","Hispanic / Latinx",25,1,0
+0,0,0,1,0,1,0,1,0,0,"Man","White / Caucasian",44,1,1
+1,0,1,0,1,1,0,1,0,0,"Woman","Hispanic / Latinx",27,0,0
+NA,1,0,1,0,0,1,1,1,1,"Man","Black or African American",29,1,0
+NA,1,0,1,0,1,1,0,1,0,"Man","White / Caucasian",40,1,1
+1,0,0,0,0,1,0,1,0,3,"Woman","White / Caucasian",48,0,1
+1,0,0,1,0,1,0,0,0,0,"Man","White / Caucasian",61,1,1
+0,0,0,1,0,1,1,1,1,3,"Man","White / Caucasian",55,1,1
+1,0,0,0,1,1,0,1,1,3,"Man","White / Caucasian",38,1,1
+NA,1,0,0,0,1,1,1,1,0,"Man","White / Caucasian",31,1,1
+0,0,0,1,1,1,0,1,0,4,"Man","White / Caucasian",33,1,1
+NA,1,1,0,1,1,0,1,0,1,"Man","Black or African American",25,1,0
+1,0,1,0,1,1,0,1,0,0,"Man","White / Caucasian",48,1,1
+1,0,0,0,0,1,0,1,0,1,"Man","White / Caucasian",44,1,1
+0,0,0,1,0,1,0,1,0,2,"Man","Black or African American",30,1,0
+NA,1,0,1,0,1,1,0,1,2,"Woman","White / Caucasian",64,0,1
+1,0,0,1,0,1,1,0,1,1,"Man","Black or African American",52,1,0
+NA,1,0,1,1,1,0,0,0,1,"Man","White / Caucasian",58,1,1
+1,0,1,1,1,1,0,0,0,1,"Man","Black or African American",34,1,0
+1,0,0,1,0,0,0,1,0,0,"Woman","White / Caucasian",42,0,1
+NA,1,0,1,1,0,0,1,0,1,"Woman","White / Caucasian",36,0,1
+1,0,1,0,1,1,0,1,0,1,"Woman","White / Caucasian",35,0,1
+NA,1,0,0,0,1,1,1,1,0,"Man","White / Caucasian",64,1,1
+NA,1,1,1,0,0,0,1,0,1,"Woman","White / Caucasian",33,0,1
+1,0,0,1,0,1,1,0,0,1,"Woman","White / Caucasian",45,0,1
+NA,1,0,0,0,1,1,1,0,1,"Man","White / Caucasian",32,1,1
+0,0,0,1,0,1,1,1,0,1,"Woman","White / Caucasian",48,0,1
+NA,1,0,1,0,1,1,0,1,1,"Woman","White / Caucasian",55,0,1
+NA,1,1,1,1,0,0,1,0,0,"Woman","White / Caucasian",58,0,1
+NA,1,0,0,0,1,1,1,1,2,"Woman","Black or African American",31,0,0
+NA,1,1,1,1,0,0,1,0,1,"Woman","Asian / Pacific Islander",44,0,0
+NA,1,1,1,1,1,0,0,0,2,"Man","White / Caucasian",37,1,1
+NA,1,1,1,1,1,0,0,0,1,"Man","White / Caucasian",67,1,1
+NA,1,1,0,1,1,0,1,0,0,"Woman","White / Caucasian",62,0,1
+NA,1,0,0,1,1,0,1,1,2,"Man","White / Caucasian",39,1,1
+NA,1,0,1,1,1,0,0,0,1,"Woman","White / Caucasian",57,0,1
+1,0,0,1,1,1,0,0,0,1,"Man","White / Caucasian",28,1,1
+NA,1,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",24,0,1
+1,0,1,1,1,0,0,1,0,1,"Woman","Hispanic / Latinx",32,0,0
+NA,1,1,1,1,1,0,0,0,0,"Man","White / Caucasian",32,1,1
+1,0,0,0,0,1,0,1,0,3,"Man","White / Caucasian",25,1,1
+NA,1,0,1,0,0,1,1,0,1,"Woman","White / Caucasian",33,0,1
+NA,1,1,0,1,1,0,1,0,2,"Woman","White / Caucasian",32,0,1
+NA,1,1,1,1,0,0,1,0,0,"Man","Asian / Pacific Islander",45,1,0
+0,0,0,1,1,1,0,1,1,0,"Woman","White / Caucasian",45,0,1
+NA,1,1,1,1,1,0,0,0,1,"Man","White / Caucasian",47,1,1
+0,0,0,1,0,1,1,1,0,0,"Man","White / Caucasian",34,1,1
+NA,1,0,0,0,1,0,1,0,1,"Man","White / Caucasian",75,1,1
+0,0,0,1,0,1,1,1,0,1,"Man","White / Caucasian",65,1,1
+NA,1,1,1,0,1,0,0,0,2,"Woman","White / Caucasian",45,0,1
+NA,1,0,0,0,1,1,1,1,1,"Woman","Hispanic / Latinx",30,0,0
+NA,1,1,0,0,1,0,1,0,2,"Woman","White / Caucasian",27,0,1
+1,0,1,0,0,1,0,1,0,2,"Woman","White / Caucasian",34,0,1
+NA,1,1,0,1,1,0,1,0,1,"Man","Asian / Pacific Islander",35,1,0
+0,0,0,1,0,1,1,1,1,2,"Woman","White / Caucasian",32,0,1
+NA,1,1,1,0,0,0,1,0,1,"Man","Hispanic / Latinx",22,1,0
+NA,1,0,0,0,1,1,1,1,2,"Woman","White / Caucasian",27,0,1
+0,0,0,1,0,1,1,1,0,0,"Man","Hispanic / Latinx",28,1,0
+NA,1,1,1,1,1,0,0,0,1,"Man","White / Caucasian",63,1,1
+0,0,1,1,1,1,0,1,0,1,"Man","Hispanic / Latinx",30,1,0
+NA,1,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",55,0,1
+NA,1,0,0,0,1,1,1,0,0,"Man","Asian / Pacific Islander",40,1,0
+NA,1,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",43,0,1
+0,0,1,1,1,1,0,1,0,0,"Woman","White / Caucasian",44,0,1
+1,0,1,1,1,0,0,1,0,0,"Man","White / Caucasian",31,1,1
+0,0,0,1,0,1,0,1,0,3,"Man","White / Caucasian",75,1,1
+NA,1,0,1,1,1,0,0,1,2,"Woman","White / Caucasian",36,0,1
+1,0,0,1,0,0,1,1,1,1,"Man","Asian / Pacific Islander",36,1,0
+NA,1,0,1,0,1,0,0,0,2,"Woman","White / Caucasian",39,0,1
+NA,1,0,1,0,0,1,1,1,1,"Man","White / Caucasian",25,1,1
+NA,1,0,1,0,1,1,0,1,1,"Man","White / Caucasian",51,1,1
+NA,1,1,1,0,1,0,0,0,1,"Woman","White / Caucasian",66,0,1
+0,0,1,1,0,1,0,1,0,0,"Woman","White / Caucasian",52,0,1
+NA,1,1,1,1,1,0,0,0,0,"Man","White / Caucasian",39,1,1
+1,0,0,0,0,1,1,1,0,0,"Woman","White / Caucasian",35,0,1
+1,0,1,1,1,0,0,1,0,2,"Woman","White / Caucasian",34,0,1
+NA,1,0,0,0,1,1,1,1,2,"Woman","White / Caucasian",63,0,1
+1,0,1,1,1,1,0,0,0,3,"Woman","Hispanic / Latinx",43,0,0
+1,0,0,1,0,1,1,0,1,2,"Woman","White / Caucasian",37,0,1
+0,0,0,1,1,1,0,1,0,0,"Man","Asian / Pacific Islander",37,1,0
+0,0,0,1,0,1,1,1,1,2,"Woman","White / Caucasian",36,0,1
+NA,1,1,1,0,1,0,0,0,2,"Man","White / Caucasian",31,1,1
+NA,1,0,0,0,1,1,1,0,2,"Woman","White / Caucasian",28,0,1
+1,0,0,0,1,1,0,1,0,0,"Man","White / Caucasian",52,1,1
+NA,1,0,1,0,1,1,0,0,1,"Woman","White / Caucasian",59,0,1
+0,0,0,1,0,1,1,1,1,2,"Woman","Asian / Pacific Islander",40,0,0
+0,0,0,1,0,1,1,1,1,2,"Woman","White / Caucasian",47,0,1
+NA,1,1,1,1,0,0,1,0,2,"Woman","White / Caucasian",50,0,1
+NA,1,0,0,1,1,0,1,1,1,"Woman","White / Caucasian",49,0,1
+NA,1,0,1,0,1,0,0,0,0,"Woman","White / Caucasian",44,0,1
+NA,1,1,0,1,1,0,1,0,0,"Man","White / Caucasian",32,1,1
+NA,1,1,1,1,0,0,1,0,0,"Man","White / Caucasian",56,1,1
+NA,1,0,1,0,0,0,1,0,0,"Man","White / Caucasian",34,1,1
+NA,1,1,0,1,1,0,1,0,2,"Man","Hispanic / Latinx",47,1,0
+1,0,1,0,0,1,0,1,0,1,"Man","White / Caucasian",46,1,1
+NA,1,0,1,1,1,0,0,0,1,"Man","White / Caucasian",23,1,1
+1,0,0,1,0,1,0,0,0,1,"Man","White / Caucasian",46,1,1
+NA,1,0,0,1,1,0,1,1,4,"Woman","White / Caucasian",48,0,1
+NA,1,0,1,0,1,1,0,0,1,"Woman","White / Caucasian",45,0,1
+0,0,0,1,0,1,1,1,0,1,"Woman","Hispanic / Latinx",39,0,0
+1,0,0,1,0,0,0,1,0,0,"Man","White / Caucasian",35,1,1
+0,0,0,1,0,1,1,1,1,2,"Woman","White / Caucasian",27,0,1
+1,0,0,1,0,0,1,1,1,1,"Woman","White / Caucasian",62,0,1
+NA,1,1,0,1,1,0,1,0,1,"Man","Asian / Pacific Islander",35,1,0
+NA,1,1,1,1,1,0,0,0,2,"Man","White / Caucasian",33,1,1
+NA,1,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",33,0,1
+NA,1,0,1,0,0,1,1,1,0,"Woman","White / Caucasian",30,0,1
+NA,1,0,1,0,0,1,1,1,0,"Man","White / Caucasian",52,1,1
+NA,1,0,0,0,1,1,1,0,3,"Woman","White / Caucasian",47,0,1
+0,0,1,1,1,1,0,1,0,3,"Man","White / Caucasian",42,1,1
+1,0,0,1,1,1,0,0,0,2,"Woman","White / Caucasian",35,0,1
+NA,1,1,1,0,0,0,1,0,0,"Woman","White / Caucasian",40,0,1
+0,0,0,1,1,1,0,1,1,0,"Man","Hispanic / Latinx",29,1,0
+NA,1,0,0,0,1,0,1,0,2,"Man","White / Caucasian",24,1,1
+NA,1,0,1,1,0,0,1,1,4,"Woman","White / Caucasian",45,0,1
+0,0,0,1,1,1,0,1,1,0,"Man","White / Caucasian",48,1,1
+0,0,1,1,0,1,0,1,0,1,"Woman","White / Caucasian",21,0,1
+0,0,1,1,0,1,0,1,0,2,"Man","White / Caucasian",54,1,1
+NA,1,0,1,1,1,0,0,0,0,"Woman","White / Caucasian",72,0,1
+0,0,0,1,1,1,0,1,1,1,"Man","White / Caucasian",26,1,1
+0,0,0,1,0,1,1,1,0,2,"Woman","White / Caucasian",49,0,1
+1,0,0,1,1,1,0,0,1,2,"Woman","White / Caucasian",47,0,1
+NA,1,0,1,0,0,1,1,0,2,"Woman","White / Caucasian",57,0,1
+1,0,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",36,0,1
+0,0,0,1,0,1,1,1,0,1,"Man","White / Caucasian",40,1,1
+NA,1,1,1,1,0,0,1,0,1,"Man","White / Caucasian",46,1,1
+0,0,0,1,0,1,1,1,1,0,"Woman","Hispanic / Latinx",53,0,0
+1,0,1,1,0,1,0,0,0,1,"Man","White / Caucasian",37,1,1
+1,0,0,1,0,1,1,0,0,2,"Man","White / Caucasian",37,1,1
+1,0,0,1,0,0,1,1,1,2,"Woman","White / Caucasian",27,0,1
+0,0,1,1,1,1,0,1,0,2,"Man","Asian / Pacific Islander",35,1,0
+NA,1,0,1,1,0,0,1,1,1,"Man","White / Caucasian",54,1,1
+NA,1,0,1,0,0,1,1,1,0,"Woman","White / Caucasian",31,0,1
+NA,1,0,0,0,1,1,1,1,4,"Woman","White / Caucasian",22,0,1
+NA,1,0,1,0,1,0,0,0,2,"Man","White / Caucasian",32,1,1
+1,0,0,1,1,1,0,0,0,2,"Woman","White / Caucasian",36,0,1
+NA,1,0,1,0,1,1,0,0,2,"Man","White / Caucasian",24,1,1
+1,0,1,0,1,1,0,1,0,1,"Man","White / Caucasian",19,1,1
+NA,1,1,1,0,0,0,1,0,1,"Woman","Asian / Pacific Islander",48,0,0
+0,0,0,1,0,1,1,1,1,1,"Man","White / Caucasian",65,1,1
+NA,1,0,1,0,0,0,1,0,0,"Man","White / Caucasian",23,1,1
+NA,1,1,1,1,0,0,1,0,2,"Woman","Black or African American",37,0,0
+1,0,0,1,0,1,1,0,1,0,"Woman","White / Caucasian",31,0,1
+NA,1,0,1,0,0,1,1,0,3,"Woman","White / Caucasian",46,0,1
+0,0,0,1,0,1,1,1,1,4,"Woman","White / Caucasian",39,0,1
+1,0,0,0,0,1,0,1,0,2,"Man","White / Caucasian",28,1,1
+1,0,0,0,0,1,1,1,1,2,"Woman","White / Caucasian",45,0,1
+0,0,0,1,1,1,0,1,1,1,"Man","White / Caucasian",28,1,1
+NA,1,0,1,0,0,1,1,0,0,"Woman","White / Caucasian",62,0,1
+1,0,0,0,0,1,1,1,1,0,"Man","White / Caucasian",35,1,1
+0,0,0,1,1,1,0,1,1,0,"Woman","White / Caucasian",33,0,1
+0,0,0,1,0,1,1,1,1,3,"Woman","White / Caucasian",41,0,1
+NA,1,1,1,1,1,0,0,0,1,"Man","White / Caucasian",39,1,1
+0,0,0,1,1,1,0,1,1,0,"Woman","Black or African American",37,0,0
+NA,1,0,0,0,1,1,1,0,0,"Woman","White / Caucasian",46,0,1
+NA,1,1,1,0,1,0,0,0,1,"Woman","White / Caucasian",44,0,1
+NA,1,0,0,1,1,0,1,1,2,"Woman","Hispanic / Latinx",39,0,0
+0,0,1,1,0,1,0,1,0,1,"Man","White / Caucasian",30,1,1
+1,0,0,1,0,0,0,1,0,0,"Man","White / Caucasian",40,1,1
+1,0,0,0,0,1,0,1,0,2,"Man","Hispanic / Latinx",42,1,0
+NA,1,1,0,0,1,0,1,0,2,"Woman","White / Caucasian",34,0,1
+0,0,0,1,0,1,1,1,0,2,"Man","White / Caucasian",33,1,1
+NA,1,1,1,1,0,0,1,0,2,"Woman","White / Caucasian",55,0,1
+NA,1,1,0,1,1,0,1,0,2,"Man","White / Caucasian",27,1,1
+0,0,0,1,0,1,0,1,0,0,"Woman","White / Caucasian",27,0,1
+NA,1,0,1,0,1,1,0,0,3,"Woman","Black or African American",25,0,0
+0,0,0,1,1,1,0,1,0,2,"Woman","White / Caucasian",36,0,1
+1,0,1,1,1,0,0,1,0,0,"Woman","White / Caucasian",48,0,1
+1,0,1,1,0,0,0,1,0,3,"Woman","Black or African American",55,0,0
+1,0,1,1,0,0,0,1,0,2,"Non-binary","White / Caucasian",28,0,1
+0,0,0,1,0,1,1,1,1,3,"Woman","Black or African American",52,0,0
+NA,1,0,1,1,1,0,0,1,0,"Man","Black or African American",40,1,0
+1,0,1,0,1,1,0,1,0,2,"Woman","White / Caucasian",31,0,1
+NA,1,1,1,1,0,0,1,0,2,"Woman","Hispanic / Latinx",34,0,0
+NA,1,1,0,1,1,0,1,0,1,"Man","Hispanic / Latinx",24,1,0
+NA,1,1,0,1,1,0,1,0,2,"Woman","White / Caucasian",42,0,1
+0,0,0,1,0,1,1,1,1,2,"Man","White / Caucasian",27,1,1
+NA,1,1,1,1,1,0,0,0,1,"Man","White / Caucasian",38,1,1
+0,0,1,1,1,1,0,1,0,1,"Woman","White / Caucasian",33,0,1
+NA,1,1,1,1,1,0,0,0,1,"Woman","White / Caucasian",54,0,1
+0,0,0,1,0,1,1,1,0,2,"Woman","Black or African American",66,0,0
+NA,1,0,0,1,1,0,1,0,2,"Woman","White / Caucasian",69,0,1
+0,0,1,1,1,1,0,1,0,1,"Man","White / Caucasian",39,1,1
+1,0,1,1,1,0,0,1,0,2,"Woman","White / Caucasian",53,0,1
+NA,1,0,0,0,1,1,1,0,0,"Man","Hispanic / Latinx",36,1,0
+1,0,0,0,0,1,0,1,0,1,"Woman","White / Caucasian",48,0,1
+1,0,0,1,1,1,0,0,0,1,"Man","White / Caucasian",26,1,1
+NA,1,0,0,0,1,0,1,0,0,"Man","White / Caucasian",52,1,1
+1,0,0,1,1,1,0,0,0,1,"Woman","White / Caucasian",55,0,1
+NA,1,0,1,0,1,1,0,1,3,"Man","White / Caucasian",28,1,1
+NA,1,0,0,0,1,1,1,0,2,"Man","White / Caucasian",32,1,1
+0,0,0,1,0,1,1,1,0,0,"Man","White / Caucasian",43,1,1
+1,0,1,1,0,1,0,0,0,1,"Woman","White / Caucasian",33,0,1
+0,0,0,1,1,1,0,1,0,1,"Man","Asian / Pacific Islander",26,1,0
+NA,1,0,1,0,0,0,1,0,0,"Man","White / Caucasian",44,1,1
+NA,1,1,1,1,1,0,0,0,1,"Man","White / Caucasian",37,1,1
+0,0,0,1,1,1,0,1,1,2,"Man","White / Caucasian",53,1,1
+0,0,0,1,1,1,0,1,1,1,"Man","White / Caucasian",37,1,1
+1,0,0,1,0,1,1,0,1,2,"Man","White / Caucasian",76,1,1
+NA,1,0,1,0,1,1,0,1,0,"Man","White / Caucasian",39,1,1
+NA,1,1,0,0,1,0,1,0,0,"Woman","White / Caucasian",38,0,1
+NA,1,1,1,1,0,0,1,0,2,"Woman","White / Caucasian",24,0,1
+0,0,0,1,0,1,0,1,0,1,"Woman","White / Caucasian",43,0,1
+NA,1,1,0,1,1,0,1,0,0,"Woman","White / Caucasian",41,0,1
+0,0,1,1,1,1,0,1,0,2,"Woman","White / Caucasian",45,0,1
+NA,1,0,0,0,1,0,1,0,1,"Woman","Black or African American",31,0,0
+NA,1,0,1,0,1,1,0,1,2,"Man","White / Caucasian",41,1,1
+1,0,1,0,1,1,0,1,0,1,"Man","White / Caucasian",35,1,1
+0,0,0,1,0,1,1,1,1,5,"Woman","White / Caucasian",70,0,1
+NA,1,0,1,1,0,0,1,1,1,"Man","White / Caucasian",57,1,1
+0,0,0,1,0,1,1,1,0,0,"Woman","White / Caucasian",53,0,1
+NA,1,0,0,1,1,0,1,1,0,"Man","White / Caucasian",30,1,1
+0,0,0,1,0,1,1,1,1,1,"Man","Hispanic / Latinx",59,1,0
+0,0,1,1,1,1,0,1,0,0,"Man","White / Caucasian",62,1,1
+1,0,0,0,1,1,0,1,1,2,"Woman","White / Caucasian",41,0,1
+1,0,1,1,0,0,0,1,0,1,"Man","White / Caucasian",34,1,1
+NA,1,0,1,0,0,0,1,0,1,"Woman","Asian / Pacific Islander",40,0,0
+NA,1,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",29,0,1
+0,0,0,1,1,1,0,1,0,1,"Woman","White / Caucasian",46,0,1
+NA,1,1,0,1,1,0,1,0,1,"Woman","White / Caucasian",63,0,1
+1,0,0,1,0,0,0,1,0,2,"Woman","White / Caucasian",56,0,1
+1,0,0,0,0,1,1,1,1,0,"Woman","White / Caucasian",35,0,1
+1,0,0,0,0,1,1,1,1,2,"Woman","White / Caucasian",52,0,1
+NA,1,1,1,0,1,0,0,0,3,"Woman","White / Caucasian",36,0,1
+0,0,0,1,0,1,1,1,1,1,"Man","White / Caucasian",33,1,1
+NA,1,1,1,1,1,0,0,0,0,"Woman","White / Caucasian",43,0,1
+NA,1,0,0,0,1,1,1,1,1,"Man","White / Caucasian",45,1,1
+NA,1,1,0,1,1,0,1,0,1,"Woman","White / Caucasian",64,0,1
+NA,1,1,1,1,1,0,0,0,0,"Man","White / Caucasian",50,1,1
+NA,1,0,1,1,0,0,1,1,1,"Man","White / Caucasian",58,1,1
+NA,1,1,1,0,0,0,1,0,2,"Woman","White / Caucasian",29,0,1
+NA,1,1,1,1,0,0,1,0,2,"Woman","Asian / Pacific Islander",47,0,0
+1,0,0,1,1,0,0,1,1,1,"Woman","White / Caucasian",62,0,1
+0,0,1,1,1,1,0,1,0,2,"Woman","White / Caucasian",60,0,1
+0,0,0,1,1,1,0,1,1,4,"Woman","Asian / Pacific Islander",24,0,0
+NA,1,1,0,1,1,0,1,0,2,"Woman","White / Caucasian",57,0,1
+1,0,0,1,1,1,0,0,1,1,"Woman","White / Caucasian",28,0,1
+NA,1,0,1,1,1,0,0,1,0,"Woman","Black or African American",33,0,0
+0,0,1,1,1,1,0,1,0,0,"Man","White / Caucasian",49,1,1
+0,0,1,1,1,1,0,1,0,1,"Woman","White / Caucasian",40,0,1
+NA,1,0,1,1,1,0,0,1,0,"Woman","White / Caucasian",50,0,1
+0,0,0,1,0,1,0,1,0,2,"Man","Black or African American",31,1,0
+0,0,0,1,1,1,0,1,0,2,"Woman","White / Caucasian",39,0,1
+NA,1,0,0,0,1,1,1,1,2,"Woman","White / Caucasian",67,0,1
+0,0,1,1,0,1,0,1,0,2,"Woman","Black or African American",35,0,0
+1,0,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",41,0,1
+0,0,0,1,1,1,0,1,1,0,"Man","Black or African American",47,1,0
+1,0,1,0,1,1,0,1,0,0,"Man","White / Caucasian",60,1,1
+1,0,1,1,0,1,0,0,0,1,"Man","White / Caucasian",47,1,1
+NA,1,1,1,0,0,0,1,0,0,"Man","Black or African American",53,1,0
+NA,1,1,1,1,0,0,1,0,0,"Man","Asian / Pacific Islander",31,1,0
+0,0,0,1,0,1,1,1,1,0,"Man","White / Caucasian",43,1,1
+1,0,0,1,0,1,0,0,0,1,"Woman","White / Caucasian",69,0,1
+NA,1,0,0,1,1,0,1,1,0,"Woman","Hispanic / Latinx",34,0,0
+NA,1,0,0,1,1,0,1,1,1,"Man","White / Caucasian",67,1,1
+1,0,0,1,1,0,0,1,1,3,"Woman","Hispanic / Latinx",38,0,0
+1,0,0,0,0,1,1,1,0,2,"Woman","White / Caucasian",61,0,1
+NA,1,0,0,0,1,1,1,1,2,"Man","White / Caucasian",69,1,1
+NA,1,1,1,1,1,0,0,0,1,"Woman","Black or African American",23,0,0
+0,0,0,1,1,1,0,1,1,2,"Woman","White / Caucasian",46,0,1
+NA,1,1,0,0,1,0,1,0,2,"Woman","White / Caucasian",43,0,1
+0,0,0,1,0,1,0,1,0,2,"Man","Hispanic / Latinx",27,1,0
+0,0,0,1,0,1,1,1,0,1,"Man","Black or African American",35,1,0
+0,0,0,1,1,1,0,1,1,1,"Man","Hispanic / Latinx",29,1,0
+NA,1,0,0,0,1,0,1,0,2,"Man","White / Caucasian",56,1,1
+1,0,1,1,1,1,0,0,0,0,"Woman","White / Caucasian",41,0,1
+1,0,0,1,0,1,0,0,0,4,"Woman","Black or African American",33,0,0
+NA,1,0,1,1,1,0,0,1,0,"Man","Black or African American",25,1,0
+NA,1,0,0,0,1,0,1,0,2,"Woman","White / Caucasian",75,0,1
+0,0,0,1,0,1,1,1,1,2,"Woman","Black or African American",35,0,0
+1,0,0,0,1,1,0,1,0,2,"Man","White / Caucasian",52,1,1
+0,0,1,1,1,1,0,1,0,1,"Woman","Black or African American",25,0,0
+NA,1,0,1,1,0,0,1,1,1,"Woman","White / Caucasian",50,0,1
+NA,1,1,0,1,1,0,1,0,1,"Woman","Black or African American",32,0,0
+NA,1,1,0,1,1,0,1,0,2,"Woman","White / Caucasian",41,0,1
+NA,1,0,0,1,1,0,1,1,0,"Man","White / Caucasian",39,1,1
+1,0,0,1,1,1,0,0,1,1,"Man","White / Caucasian",52,1,1
+1,0,0,1,1,0,0,1,1,2,"Man","White / Caucasian",46,1,1
+0,0,1,1,0,1,0,1,0,2,"Woman","White / Caucasian",37,0,1
+NA,1,0,1,1,0,0,1,0,0,"Man","Hispanic / Latinx",37,1,0
+0,0,0,1,0,1,1,1,1,2,"Woman","White / Caucasian",29,0,1
+NA,1,1,1,1,0,0,1,0,1,"Man","White / Caucasian",69,1,1
+NA,1,0,1,0,0,1,1,1,3,"Woman","Asian / Pacific Islander",29,0,0
+NA,1,1,1,1,0,0,1,0,2,"Non-binary","Hispanic / Latinx",27,0,0
+NA,1,1,0,1,1,0,1,0,0,"Woman","White / Caucasian",37,0,1
+NA,1,1,1,1,1,0,0,0,2,"Woman","White / Caucasian",35,0,1
+NA,1,1,1,1,1,0,0,0,2,"Man","White / Caucasian",46,1,1
+1,0,1,0,0,1,0,1,0,2,"Woman","White / Caucasian",25,0,1
+NA,1,1,1,1,1,0,0,0,2,"Woman","White / Caucasian",69,0,1
+NA,1,1,0,1,1,0,1,0,1,"Man","White / Caucasian",44,1,1
+0,0,0,1,0,1,1,1,1,1,"Man","White / Caucasian",36,1,1
+NA,1,0,0,1,1,0,1,1,3,"Woman","White / Caucasian",49,0,1
+NA,1,0,1,0,1,1,0,1,0,"Man","White / Caucasian",33,1,1
+NA,1,1,1,1,0,0,1,0,2,"Man","Asian / Pacific Islander",32,1,0
+NA,1,0,0,0,1,1,1,1,0,"Man","White / Caucasian",48,1,1
+0,0,0,1,1,1,0,1,1,0,"Man","White / Caucasian",42,1,1
+0,0,0,1,0,1,1,1,0,1,"Man","White / Caucasian",27,1,1
+1,0,1,0,1,1,0,1,0,0,"Man","Black or African American",29,1,0
+NA,1,1,0,0,1,0,1,0,1,"Non-binary","White / Caucasian",54,0,1
+NA,1,0,0,1,1,0,1,0,1,"Woman","White / Caucasian",46,0,1
+NA,1,0,1,1,0,0,1,1,0,"Man","White / Caucasian",22,1,1
+0,0,1,1,0,1,0,1,0,0,"Man","White / Caucasian",32,1,1
+NA,1,1,1,0,1,0,0,0,2,"Woman","White / Caucasian",35,0,1
+0,0,0,1,0,1,1,1,0,0,"Man","Hispanic / Latinx",35,1,0
+1,0,0,0,1,1,0,1,0,0,"Woman","Asian / Pacific Islander",30,0,0
+1,0,0,1,1,1,0,0,0,3,"Woman","White / Caucasian",59,0,1
+0,0,0,1,0,1,0,1,0,2,"Woman","White / Caucasian",66,0,1
+NA,1,1,1,1,0,0,1,0,2,"Man","Asian / Pacific Islander",35,1,0
+NA,1,1,0,0,1,0,1,0,1,"Woman","Hispanic / Latinx",31,0,0
+NA,1,1,1,0,0,0,1,0,3,"Woman","White / Caucasian",53,0,1
+NA,1,0,1,0,0,1,1,0,1,"Man","Hispanic / Latinx",34,1,0
+NA,1,1,1,1,1,0,0,0,0,"Man","White / Caucasian",44,1,1
+0,0,0,1,0,1,0,1,0,1,"Man","White / Caucasian",38,1,1
+NA,1,1,1,0,0,0,1,0,3,"Woman","White / Caucasian",28,0,1
+0,0,1,1,1,1,0,1,0,1,"Woman","Black or African American",40,0,0
+NA,1,0,1,0,1,1,0,1,1,"Woman","Hispanic / Latinx",34,0,0
+NA,1,0,1,0,0,1,1,0,0,"Man","White / Caucasian",49,1,1
+NA,1,0,1,0,1,1,0,1,2,"Woman","Black or African American",32,0,0
+NA,1,0,1,0,0,1,1,1,2,"Woman","White / Caucasian",40,0,1
+0,0,0,1,1,1,0,1,1,1,"Woman","White / Caucasian",36,0,1
+0,0,1,1,1,1,0,1,0,0,"Woman","White / Caucasian",47,0,1
+0,0,0,1,1,1,0,1,0,1,"Man","White / Caucasian",47,1,1
+NA,1,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",35,0,1
+NA,1,1,0,0,1,0,1,0,0,"Non-binary","American Indian or Alaskan Native",30,0,0
+NA,1,0,1,0,1,1,0,0,3,"Woman","White / Caucasian",75,0,1
+1,0,0,1,0,1,0,0,0,1,"Woman","Hispanic / Latinx",38,0,0
+NA,1,0,1,0,0,0,1,0,2,"Man","White / Caucasian",60,1,1
+NA,1,1,1,1,0,0,1,0,1,"Man","Hispanic / Latinx",36,1,0
+1,0,1,1,1,0,0,1,0,2,"Man","White / Caucasian",32,1,1
+0,0,0,1,1,1,0,1,0,0,"Man","Hispanic / Latinx",31,1,0
+NA,1,1,1,1,0,0,1,0,1,"Man","White / Caucasian",69,1,1
+NA,1,0,1,0,0,1,1,0,3,"Man","White / Caucasian",64,1,1
+0,0,0,1,0,1,1,1,0,3,"Woman","White / Caucasian",64,0,1
+1,0,0,1,0,0,1,1,1,4,"Woman","White / Caucasian",39,0,1
+1,0,1,1,1,1,0,0,0,1,"Man","White / Caucasian",43,1,1
+NA,1,1,1,0,0,0,1,0,0,"Woman","White / Caucasian",36,0,1
+NA,1,0,1,0,0,0,1,0,3,"Man","White / Caucasian",69,1,1
+1,0,1,1,1,1,0,0,0,1,"Man","Black or African American",25,1,0
+NA,1,1,1,0,1,0,0,0,1,"Man","White / Caucasian",58,1,1
+NA,1,1,1,1,0,0,1,0,1,"Woman","Hispanic / Latinx",53,0,0
+NA,1,0,0,1,1,0,1,1,2,"Woman","Black or African American",35,0,0
+1,0,0,0,0,1,1,1,0,2,"Woman","White / Caucasian",58,0,1
+0,0,0,1,1,1,0,1,1,1,"Woman","Asian / Pacific Islander",58,0,0
+1,0,0,1,0,0,1,1,0,1,"Woman","White / Caucasian",62,0,1
+1,0,0,1,0,1,1,0,1,5,"Woman","White / Caucasian",63,0,1
+1,0,0,1,0,1,0,0,0,0,"Man","White / Caucasian",22,1,1
+0,0,0,1,1,1,0,1,1,0,"Man","Asian / Pacific Islander",31,1,0
+NA,1,0,0,0,1,1,1,1,0,"Man","White / Caucasian",38,1,1
+1,0,0,0,0,1,1,1,1,0,"Man","Asian / Pacific Islander",39,1,0
+NA,1,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",51,0,1
+NA,1,1,1,1,1,0,0,0,1,"Man","Black or African American",59,1,0
+NA,1,0,0,0,1,1,1,1,0,"Man","White / Caucasian",32,1,1
+0,0,1,1,1,1,0,1,0,0,"Man","White / Caucasian",35,1,1
+NA,1,0,0,0,1,1,1,1,0,"Man","White / Caucasian",47,1,1
+NA,1,0,1,0,0,1,1,0,2,"Man","Hispanic / Latinx",35,1,0
+1,0,0,1,1,0,0,1,1,2,"Woman","Black or African American",64,0,0
+NA,1,0,0,1,1,0,1,1,2,"Woman","White / Caucasian",71,0,1
+1,0,1,1,1,1,0,0,0,0,"Woman","White / Caucasian",58,0,1
+NA,1,0,1,1,0,0,1,1,0,"Man","White / Caucasian",35,1,1
+1,0,1,1,1,1,0,0,0,2,"Man","Hispanic / Latinx",39,1,0
+0,0,1,1,1,1,0,1,0,2,"Woman","White / Caucasian",64,0,1
+NA,1,0,0,1,1,0,1,0,1,"Woman","White / Caucasian",35,0,1
+0,0,1,1,1,1,0,1,0,1,"Woman","White / Caucasian",58,0,1
+1,0,1,1,1,1,0,0,0,1,"Man","White / Caucasian",51,1,1
+NA,1,1,0,1,1,0,1,0,1,"Woman","Asian / Pacific Islander",23,0,0
+1,0,1,1,1,0,0,1,0,1,"Man","White / Caucasian",29,1,1
+NA,1,1,1,0,0,0,1,0,0,"Man","Asian / Pacific Islander",31,1,0
+0,0,0,1,1,1,0,1,0,0,"Man","Hispanic / Latinx",33,1,0
+1,0,0,1,1,1,0,0,1,0,"Man","White / Caucasian",42,1,1
+NA,1,1,0,1,1,0,1,0,0,"Woman","White / Caucasian",30,0,1
+NA,1,0,0,0,1,1,1,0,3,"Woman","White / Caucasian",62,0,1
+1,0,0,1,0,1,1,0,1,0,"Man","White / Caucasian",37,1,1
+1,0,0,1,0,1,1,0,1,0,"Woman","White / Caucasian",52,0,1
+NA,1,1,1,1,1,0,0,0,0,"Man","White / Caucasian",40,1,1
+0,0,0,1,0,1,0,1,0,2,"Woman","White / Caucasian",27,0,1
+0,0,0,1,1,1,0,1,1,1,"Woman","Black or African American",26,0,0
+1,0,0,1,0,0,0,1,0,1,"Woman","White / Caucasian",42,0,1
+0,0,0,1,1,1,0,1,0,1,"Man","White / Caucasian",27,1,1
+NA,1,1,1,1,0,0,1,0,0,"Man","White / Caucasian",37,1,1
+NA,1,0,0,1,1,0,1,0,2,"Woman","White / Caucasian",34,0,1
+NA,1,1,1,0,0,0,1,0,1,"Man","White / Caucasian",43,1,1
+1,0,0,0,0,1,1,1,0,1,"Man","White / Caucasian",37,1,1
+NA,1,1,1,1,1,0,0,0,0,"Man","Asian / Pacific Islander",40,1,0
+NA,1,1,1,1,1,0,0,0,2,"Woman","White / Caucasian",49,0,1
+NA,1,1,1,1,1,0,0,0,1,"Woman","Black or African American",42,0,0
+1,0,1,0,1,1,0,1,0,0,"Woman","Hispanic / Latinx",35,0,0
+0,0,1,1,0,1,0,1,0,2,"Man","White / Caucasian",47,1,1
+NA,1,1,0,1,1,0,1,0,1,"Man","Asian / Pacific Islander",41,1,0
+0,0,0,1,0,1,1,1,1,1,"Man","White / Caucasian",41,1,1
+NA,1,0,0,1,1,0,1,1,2,"Woman","White / Caucasian",64,0,1
+0,0,0,1,1,1,0,1,1,0,"Man","White / Caucasian",64,1,1
+NA,1,0,1,1,0,0,1,0,2,"Man","White / Caucasian",32,1,1
+1,0,0,1,1,0,0,1,1,2,"Man","Asian / Pacific Islander",66,1,0
+0,0,0,1,1,1,0,1,1,3,"Woman","White / Caucasian",29,0,1
+NA,1,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",60,0,1
+0,0,0,1,1,1,0,1,1,3,"Woman","White / Caucasian",33,0,1
+1,0,0,1,0,1,0,0,0,1,"Man","Hispanic / Latinx",36,1,0
+0,0,1,1,0,1,0,1,0,1,"Woman","White / Caucasian",38,0,1
+0,0,0,1,0,1,0,1,0,3,"Woman","White / Caucasian",47,0,1
+0,0,0,1,1,1,0,1,1,1,"Man","White / Caucasian",58,1,1
+NA,1,0,1,0,0,1,1,0,2,"Man","White / Caucasian",35,1,1
+NA,1,0,0,0,1,0,1,0,1,"Man","White / Caucasian",40,1,1
+NA,1,1,1,1,0,0,1,0,1,"Woman","Hispanic / Latinx",32,0,0
+NA,1,1,1,1,0,0,1,0,1,"Man","White / Caucasian",70,1,1
+NA,1,0,1,1,1,0,0,0,3,"Man","White / Caucasian",59,1,1
+NA,1,1,0,1,1,0,1,0,0,"Man","Hispanic / Latinx",52,1,0
+0,0,0,1,1,1,0,1,0,1,"Woman","White / Caucasian",51,0,1
+1,0,0,0,1,1,0,1,1,1,"Woman","White / Caucasian",40,0,1
+NA,1,0,1,0,1,0,0,0,0,"Woman","White / Caucasian",41,0,1
+NA,1,0,1,0,0,1,1,1,1,"Woman","White / Caucasian",43,0,1
+0,0,0,1,0,1,1,1,1,2,"Man","Asian / Pacific Islander",32,1,0
+NA,1,0,0,0,1,1,1,0,0,"Man","White / Caucasian",32,1,1
+NA,1,0,1,0,0,1,1,0,0,"Man","White / Caucasian",31,1,1
+NA,1,1,0,1,1,0,1,0,1,"Man","White / Caucasian",21,1,1
+NA,1,0,0,0,1,1,1,0,2,"Another gender not listed here:","White / Caucasian",31,0,1
+NA,1,1,1,0,1,0,0,0,1,"Man","Black or African American",45,1,0
+1,0,0,1,1,0,0,1,0,1,"Man","White / Caucasian",37,1,1
+1,0,0,0,0,1,1,1,0,0,"Man","White / Caucasian",38,1,1
+NA,1,0,1,0,1,1,0,0,1,"Man","White / Caucasian",33,1,1
+0,0,0,1,0,1,1,1,1,1,"Man","White / Caucasian",28,1,1
+NA,1,0,1,1,1,0,0,1,2,"Woman","White / Caucasian",49,0,1
+0,0,1,1,1,1,0,1,0,1,"Woman","White / Caucasian",63,0,1
+NA,1,1,1,1,0,0,1,0,1,"Non-binary","White / Caucasian",32,0,1
+0,0,0,1,1,1,0,1,1,1,"Man","White / Caucasian",33,1,1
+1,0,0,1,0,1,1,0,0,0,"Man","White / Caucasian",37,1,1
+0,0,0,1,0,1,1,1,0,2,"Woman","White / Caucasian",63,0,1
+NA,1,1,1,1,0,0,1,0,0,"Woman","Hispanic / Latinx",31,0,0
+1,0,0,1,1,0,0,1,1,0,"Woman","White / Caucasian",40,0,1
+1,0,0,0,0,1,0,1,0,1,"Man","White / Caucasian",42,1,1
+0,0,0,1,0,1,1,1,1,0,"Man","White / Caucasian",47,1,1
+NA,1,0,1,0,0,1,1,1,1,"Woman","White / Caucasian",44,0,1
+1,0,1,1,1,1,0,0,0,1,"Woman","White / Caucasian",38,0,1
+0,0,1,1,1,1,0,1,0,1,"Man","White / Caucasian",79,1,1
+NA,1,0,1,0,0,1,1,0,0,"Man","White / Caucasian",56,1,1
+1,0,0,0,0,1,1,1,1,2,"Man","White / Caucasian",67,1,1
+NA,1,0,1,0,1,1,0,1,2,"Man","White / Caucasian",37,1,1
+1,0,0,1,1,1,0,0,0,2,"Woman","Black or African American",46,0,0
+NA,1,0,0,1,1,0,1,1,2,"Man","Black or African American",51,1,0
+NA,1,0,0,0,1,1,1,1,3,"Woman","White / Caucasian",53,0,1
+1,0,0,0,1,1,0,1,0,2,"Man","White / Caucasian",35,1,1
+NA,1,1,1,1,1,0,0,0,1,"Man","White / Caucasian",45,1,1
+NA,1,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",42,0,1
+NA,1,1,1,0,0,0,1,0,2,"Woman","White / Caucasian",33,0,1
+1,0,1,1,1,0,0,1,0,2,"Man","White / Caucasian",55,1,1
+NA,1,0,1,0,0,0,1,0,0,"Woman","White / Caucasian",49,0,1
+0,0,0,1,0,1,1,1,0,0,"Man","Hispanic / Latinx",32,1,0
+NA,1,1,1,1,1,0,0,0,0,"Man","White / Caucasian",43,1,1
+NA,1,1,1,0,1,0,0,0,1,"Woman","White / Caucasian",33,0,1
+0,0,0,1,1,1,0,1,1,0,"Man","White / Caucasian",35,1,1
+1,0,0,1,0,0,1,1,0,1,"Woman","White / Caucasian",42,0,1
+NA,1,0,1,1,1,0,0,1,0,"Man","White / Caucasian",41,1,1
+NA,1,1,0,1,1,0,1,0,1,"Man","White / Caucasian",47,1,1
+0,0,0,1,1,1,0,1,1,1,"Man","Black or African American",29,1,0
+0,0,1,1,1,1,0,1,0,0,"Woman","White / Caucasian",41,0,1
+0,0,0,1,1,1,0,1,0,1,"Woman","White / Caucasian",38,0,1
+NA,1,0,1,0,0,1,1,1,0,"Man","Asian / Pacific Islander",32,1,0
+NA,1,0,1,0,0,1,1,0,3,"Woman","White / Caucasian",67,0,1
+NA,1,0,1,0,1,1,0,1,0,"Man","White / Caucasian",35,1,1
+1,0,1,1,0,0,0,1,0,2,"Woman","White / Caucasian",45,0,1
+1,0,1,1,1,0,0,1,0,0,"Man","White / Caucasian",32,1,1
+1,0,0,1,1,0,0,1,1,1,"Woman","White / Caucasian",23,0,1
+NA,1,0,0,0,1,1,1,1,3,"Woman","White / Caucasian",43,0,1
+NA,1,1,1,0,1,0,0,0,2,"Woman","Hispanic / Latinx",39,0,0
+1,0,0,1,1,1,0,0,1,0,"Man","Hispanic / Latinx",32,1,0
+0,0,0,1,0,1,1,1,1,0,"Man","White / Caucasian",27,1,1
+0,0,0,1,0,1,1,1,0,2,"Woman","White / Caucasian",68,0,1
+NA,1,1,1,1,0,0,1,0,2,"Woman","White / Caucasian",50,0,1
+NA,1,1,1,0,0,0,1,0,1,"Woman","White / Caucasian",36,0,1
+NA,1,0,1,1,1,0,0,1,1,"Woman","White / Caucasian",59,0,1
+NA,1,0,1,1,1,0,0,0,0,"Man","Hispanic / Latinx",35,1,0
+NA,1,0,0,0,1,0,1,0,2,"Woman","White / Caucasian",67,0,1
+NA,1,1,0,0,1,0,1,0,1,"Woman","White / Caucasian",22,0,1
+1,0,0,1,1,1,0,0,0,0,"Man","White / Caucasian",51,1,1
+NA,1,1,1,1,0,0,1,0,0,"Man","White / Caucasian",25,1,1
+1,0,0,1,1,0,0,1,1,1,"Woman","White / Caucasian",23,0,1
+NA,1,0,1,1,1,0,0,1,0,"Man","White / Caucasian",28,1,1
+1,0,0,0,0,1,1,1,1,1,"Woman","White / Caucasian",49,0,1
+NA,1,1,1,1,1,0,0,0,1,"Man","White / Caucasian",34,1,1
+0,0,0,1,0,1,1,1,0,0,"Woman","White / Caucasian",54,0,1
+1,0,0,1,1,0,0,1,0,1,"Man","White / Caucasian",37,1,1
+1,0,0,0,1,1,0,1,0,2,"Woman","White / Caucasian",67,0,1
+1,0,1,1,0,1,0,0,0,1,"Man","Black or African American",35,1,0
+0,0,0,1,0,1,0,1,0,1,"Man","White / Caucasian",27,1,1
+NA,1,1,1,1,1,0,0,0,2,"Woman","Black or African American",43,0,0
+NA,1,1,1,0,1,0,0,0,1,"Woman","White / Caucasian",44,0,1
+1,0,0,1,0,0,1,1,0,0,"Woman","White / Caucasian",37,0,1
+0,0,1,1,0,1,0,1,0,1,"Woman","Black or African American",31,0,0
+NA,1,1,1,1,1,0,0,0,0,"Man","Asian / Pacific Islander",40,1,0
+0,0,1,1,0,1,0,1,0,2,"Woman","White / Caucasian",35,0,1
+NA,1,1,1,1,0,0,1,0,0,"Man","Asian / Pacific Islander",30,1,0
+0,0,0,1,0,1,1,1,1,2,"Man","White / Caucasian",44,1,1
+0,0,0,1,0,1,1,1,0,1,"Woman","White / Caucasian",37,0,1
+0,0,0,1,0,1,1,1,1,1,"Woman","White / Caucasian",46,0,1
+NA,1,1,0,1,1,0,1,0,1,"Woman","White / Caucasian",43,0,1
+0,0,1,1,1,1,0,1,0,0,"Man","Asian / Pacific Islander",31,1,0
+0,0,1,1,1,1,0,1,0,0,"Man","White / Caucasian",27,1,1
+1,0,0,1,0,0,1,1,1,1,"Woman","White / Caucasian",48,0,1
+NA,1,1,1,1,0,0,1,0,2,"Woman","White / Caucasian",43,0,1
+0,0,0,1,0,1,1,1,1,4,"Woman","Asian / Pacific Islander",41,0,0
+NA,1,1,1,1,1,0,0,0,2,"Woman","White / Caucasian",36,0,1
+0,0,0,1,1,1,0,1,0,1,"Man","White / Caucasian",31,1,1
+0,0,0,1,1,1,0,1,1,2,"Man","White / Caucasian",57,1,1
+1,0,0,0,1,1,0,1,1,1,"Man","White / Caucasian",26,1,1
+0,0,1,1,1,1,0,1,0,0,"Man","White / Caucasian",46,1,1
+NA,1,1,1,0,1,0,0,0,2,"Man","White / Caucasian",37,1,1
+NA,1,0,1,0,1,1,0,1,1,"Man","Hispanic / Latinx",38,1,0
+1,0,0,0,1,1,0,1,1,0,"Man","Asian / Pacific Islander",50,1,0
+NA,1,1,1,1,1,0,0,0,3,"Woman","White / Caucasian",53,0,1
+0,0,0,1,1,1,0,1,0,0,"Man","White / Caucasian",81,1,1
+NA,1,1,1,0,0,0,1,0,0,"Man","Hispanic / Latinx",32,1,0
+1,0,0,1,0,0,1,1,1,2,"Woman","White / Caucasian",56,0,1
+NA,1,1,1,0,0,0,1,0,2,"Woman","White / Caucasian",43,0,1
+NA,1,1,1,0,0,0,1,0,2,"Woman","Asian / Pacific Islander",68,0,0
+NA,1,1,1,0,0,0,1,0,1,"Woman","White / Caucasian",74,0,1
+1,0,0,1,1,0,0,1,1,2,"Man","White / Caucasian",68,1,1
+1,0,0,1,0,0,1,1,0,3,"Man","White / Caucasian",28,1,1
+NA,1,1,0,1,1,0,1,0,1,"Man","White / Caucasian",56,1,1
+NA,1,1,0,0,1,0,1,0,1,"Man","White / Caucasian",46,1,1
+0,0,0,1,0,1,1,1,1,1,"Woman","White / Caucasian",53,0,1
+0,0,0,1,0,1,1,1,1,1,"Woman","Black or African American",35,0,0
+1,0,0,0,0,1,1,1,0,2,"Woman","White / Caucasian",64,0,1
+1,0,0,1,0,0,0,1,0,2,"Man","White / Caucasian",70,1,1
+NA,1,0,1,0,0,1,1,1,0,"Woman","White / Caucasian",50,0,1
+NA,1,1,1,1,1,0,0,0,2,"Man","Asian / Pacific Islander",42,1,0
+NA,1,0,0,1,1,0,1,1,2,"Woman","White / Caucasian",45,0,1
+0,0,0,1,0,1,1,1,1,1,"Woman","White / Caucasian",52,0,1
+NA,1,1,1,0,1,0,0,0,1,"Man","White / Caucasian",54,1,1
+NA,1,1,1,1,1,0,0,0,2,"Woman","Black or African American",49,0,0
+NA,1,0,1,1,1,0,0,1,3,"Man","White / Caucasian",39,1,1
+1,0,0,1,0,0,1,1,1,1,"Man","White / Caucasian",33,1,1
+NA,1,0,0,1,1,0,1,1,3,"Man","White / Caucasian",46,1,1
+0,0,0,1,0,1,1,1,0,0,"Man","White / Caucasian",33,1,1
+NA,1,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",58,0,1
+0,0,0,1,0,1,1,1,0,3,"Man","White / Caucasian",47,1,1
+NA,1,0,1,0,1,0,0,0,2,"Woman","White / Caucasian",34,0,1
+1,0,1,0,1,1,0,1,0,0,"Woman","White / Caucasian",61,0,1
+0,0,1,1,1,1,0,1,0,1,"Man","White / Caucasian",53,1,1
+1,0,0,1,0,0,1,1,1,0,"Man","White / Caucasian",28,1,1
+1,0,1,1,1,1,0,0,0,2,"Woman","Black or African American",44,0,0
+NA,1,1,0,1,1,0,1,0,1,"Man","White / Caucasian",36,1,1
+0,0,1,1,0,1,0,1,0,0,"Man","Hispanic / Latinx",29,1,0
+NA,1,0,1,1,0,0,1,0,1,"Woman","White / Caucasian",58,0,1
+0,0,0,1,1,1,0,1,0,0,"Man","White / Caucasian",60,1,1
+1,0,0,1,1,0,0,1,1,2,"Man","White / Caucasian",31,1,1
+1,0,0,1,0,0,1,1,1,0,"Woman","White / Caucasian",31,0,1
+NA,1,1,1,1,0,0,1,0,1,"Man","White / Caucasian",38,1,1
+0,0,1,1,1,1,0,1,0,1,"Woman","White / Caucasian",37,0,1
+NA,1,0,0,0,1,1,1,0,0,"Man","White / Caucasian",30,1,1
+NA,1,1,1,1,0,0,1,0,0,"Woman","Hispanic / Latinx",37,0,0
+0,0,0,1,0,1,1,1,1,3,"Woman","White / Caucasian",35,0,1
+0,0,0,1,1,1,0,1,1,0,"Man","Asian / Pacific Islander",32,1,0
+1,0,0,1,1,1,0,0,0,0,"Man","Black or African American",35,1,0
+1,0,0,1,0,1,1,0,1,2,"Man","White / Caucasian",75,1,1
+0,0,0,1,1,1,0,1,1,0,"Man","Asian / Pacific Islander",30,1,0
+NA,1,0,1,0,0,0,1,0,2,"Woman","White / Caucasian",34,0,1
+NA,1,0,1,1,0,0,1,0,0,"Woman","White / Caucasian",38,0,1
+NA,1,0,0,0,1,1,1,0,1,"Woman","White / Caucasian",52,0,1
+0,0,0,1,0,1,0,1,0,0,"Man","White / Caucasian",59,1,1
+NA,1,1,1,0,0,0,1,0,1,"Woman","Asian / Pacific Islander",47,0,0
+1,0,0,1,0,1,1,0,0,0,"Man","Hispanic / Latinx",27,1,0
+1,0,0,0,0,1,1,1,1,4,"Woman","White / Caucasian",29,0,1
+1,0,1,1,1,0,0,1,0,0,"Man","White / Caucasian",39,1,1
+NA,1,1,1,1,1,0,0,0,2,"Woman","White / Caucasian",34,0,1
+1,0,0,1,0,1,0,0,0,0,"Woman","White / Caucasian",42,0,1
+NA,1,1,0,1,1,0,1,0,0,"Woman","White / Caucasian",51,0,1
+0,0,0,1,0,1,1,1,0,0,"Man","Black or African American",35,1,0
+NA,1,1,0,1,1,0,1,0,1,"Man","White / Caucasian",47,1,1
+0,0,0,1,0,1,1,1,1,1,"Woman","White / Caucasian",43,0,1
+NA,1,1,1,0,1,0,0,0,0,"Man","Black or African American",45,1,0
+1,0,0,1,0,1,0,0,0,1,"Man","White / Caucasian",47,1,1
+NA,1,0,1,0,0,1,1,1,1,"Man","White / Caucasian",34,1,1
+NA,1,0,1,0,1,0,0,0,1,"Woman","Hispanic / Latinx",27,0,0
+NA,1,0,1,0,0,1,1,1,0,"Woman","Black or African American",26,0,0
+1,0,0,1,0,0,1,1,1,1,"Man","White / Caucasian",41,1,1
+0,0,0,1,0,1,1,1,0,2,"Man","White / Caucasian",38,1,1
+NA,1,0,0,0,1,1,1,1,0,"Woman","Hispanic / Latinx",42,0,0
+NA,1,1,1,0,0,0,1,0,1,"Man","White / Caucasian",34,1,1
+NA,1,0,1,0,0,1,1,1,0,"Woman","White / Caucasian",25,0,1
+NA,1,1,0,1,1,0,1,0,1,"Woman","White / Caucasian",50,0,1
+NA,1,0,1,0,1,1,0,1,2,"Woman","Black or African American",51,0,0
+NA,1,0,1,0,1,1,0,0,0,"Man","White / Caucasian",35,1,1
+NA,1,1,1,1,1,0,0,0,3,"Woman","White / Caucasian",51,0,1
+0,0,0,1,0,1,0,1,0,3,"Man","White / Caucasian",40,1,1
+0,0,0,1,0,1,1,1,0,3,"Man","White / Caucasian",38,1,1
+0,0,0,1,0,1,0,1,0,3,"Woman","White / Caucasian",41,0,1
+1,0,0,1,0,0,1,1,1,3,"Man","White / Caucasian",32,1,1
+NA,1,0,1,1,1,0,0,0,1,"Woman","White / Caucasian",26,0,1
+NA,1,1,1,1,0,0,1,0,0,"Man","White / Caucasian",34,1,1
+NA,1,0,1,0,1,1,0,0,2,"Woman","White / Caucasian",36,0,1
+NA,1,0,1,1,0,0,1,1,1,"Man","White / Caucasian",53,1,1
+0,0,1,1,1,1,0,1,0,2,"Man","White / Caucasian",39,1,1
+1,0,0,0,0,1,0,1,0,2,"Man","White / Caucasian",29,1,1
+NA,1,1,1,1,0,0,1,0,0,"Woman","White / Caucasian",44,0,1
+NA,1,0,1,0,0,0,1,0,5,"Woman","White / Caucasian",22,0,1
+0,0,1,1,1,1,0,1,0,0,"Man","White / Caucasian",20,1,1
+NA,1,1,1,1,0,0,1,0,1,"Man","White / Caucasian",45,1,1
+NA,1,0,0,0,1,0,1,0,0,"Man","White / Caucasian",61,1,1
+0,0,0,1,1,1,0,1,1,2,"Man","Asian / Pacific Islander",50,1,0
+1,0,0,1,1,0,0,1,1,2,"Woman","White / Caucasian",30,0,1
+NA,1,1,0,1,1,0,1,0,1,"Man","White / Caucasian",52,1,1
+1,0,0,0,1,1,0,1,1,2,"Woman","Black or African American",47,0,0
+0,0,0,1,0,1,1,1,1,0,"Woman","White / Caucasian",47,0,1
+1,0,0,1,0,1,0,0,0,2,"Man","White / Caucasian",28,1,1
+NA,1,0,0,0,1,1,1,1,2,"Man","White / Caucasian",60,1,1
+1,0,1,1,1,0,0,1,0,1,"Man","White / Caucasian",38,1,1
+0,0,0,1,1,1,0,1,1,3,"Woman","White / Caucasian",32,0,1
+1,0,0,0,1,1,0,1,0,0,"Woman","Asian / Pacific Islander",40,0,0
+NA,1,1,1,0,0,0,1,0,0,"Man","White / Caucasian",61,1,1
+NA,1,1,1,1,0,0,1,0,0,"Man","White / Caucasian",33,1,1
+NA,1,1,0,1,1,0,1,0,1,"Woman","White / Caucasian",63,0,1
+0,0,0,1,0,1,0,1,0,0,"Woman","White / Caucasian",38,0,1
+NA,1,1,0,1,1,0,1,0,0,"Man","White / Caucasian",30,1,1
+NA,1,0,1,1,1,0,0,1,2,"Man","White / Caucasian",33,1,1
+NA,1,1,1,0,1,0,0,0,1,"Woman","White / Caucasian",55,0,1
+1,0,0,1,1,0,0,1,1,0,"Man","White / Caucasian",26,1,1
+NA,1,1,1,1,1,0,0,0,0,"Woman","White / Caucasian",67,0,1
+1,0,0,0,0,1,0,1,0,2,"Man","White / Caucasian",41,1,1
+1,0,1,1,0,0,0,1,0,1,"Woman","White / Caucasian",69,0,1
+0,0,1,1,0,1,0,1,0,0,"Man","White / Caucasian",29,1,1
+NA,1,1,1,1,0,0,1,0,0,"Woman","White / Caucasian",49,0,1
+NA,1,1,1,1,0,0,1,0,3,"Woman","Asian / Pacific Islander",46,0,0
+NA,1,1,1,0,1,0,0,0,1,"Woman","Black or African American",35,0,0
+1,0,0,1,0,1,1,0,0,1,"Man","White / Caucasian",39,1,1
+1,0,1,0,1,1,0,1,0,1,"Man","White / Caucasian",49,1,1
+0,0,0,1,0,1,0,1,0,1,"Another gender not listed here:","Hispanic / Latinx",28,0,0
+1,0,1,0,0,1,0,1,0,2,"Woman","White / Caucasian",54,0,1
+0,0,0,1,0,1,1,1,1,1,"Man","Hispanic / Latinx",34,1,0
+NA,1,0,1,1,0,0,1,0,1,"Woman","White / Caucasian",36,0,1
+0,0,1,1,1,1,0,1,0,1,"Man","Hispanic / Latinx",69,1,0
+NA,1,1,1,1,1,0,0,0,0,"Woman","White / Caucasian",32,0,1
+1,0,1,1,1,1,0,0,0,1,"Man","White / Caucasian",35,1,1
+NA,1,0,1,0,0,1,1,0,1,"Woman","White / Caucasian",38,0,1
+0,0,0,1,1,1,0,1,1,2,"Man","White / Caucasian",42,1,1
+NA,1,1,1,1,0,0,1,0,2,"Woman","Asian / Pacific Islander",37,0,0
+NA,1,0,1,0,1,1,0,0,2,"Woman","White / Caucasian",36,0,1
+NA,1,1,1,1,0,0,1,0,1,"Woman","White / Caucasian",39,0,1
+NA,1,0,1,1,1,0,0,1,0,"Woman","White / Caucasian",48,0,1
+1,0,0,1,0,0,1,1,0,1,"Woman","White / Caucasian",51,0,1
+0,0,0,1,0,1,0,1,0,1,"Man","Hispanic / Latinx",32,1,0
+0,0,0,1,0,1,1,1,0,3,"Woman","Black or African American",40,0,0
+1,0,0,0,0,1,0,1,0,1,"Man","Black or African American",30,1,0
+1,0,0,1,1,0,0,1,0,0,"Man","White / Caucasian",59,1,1
+NA,1,0,1,1,1,0,0,1,2,"Man","Hispanic / Latinx",35,1,0
+0,0,0,1,0,1,1,1,1,0,"Man","White / Caucasian",34,1,1
+NA,1,0,1,1,0,0,1,0,5,"Woman","White / Caucasian",56,0,1
+1,0,1,1,1,1,0,0,0,3,"Woman","White / Caucasian",30,0,1
+NA,1,1,0,1,1,0,1,0,0,"Man","Hispanic / Latinx",29,1,0
+NA,1,0,1,0,0,1,1,1,0,"Man","White / Caucasian",41,1,1
+1,0,1,1,1,0,0,1,0,0,"Man","White / Caucasian",24,1,1
+0,0,0,1,0,1,1,1,0,1,"Woman","White / Caucasian",25,0,1
+NA,1,0,1,1,0,0,1,1,1,"Man","White / Caucasian",24,1,1
+1,0,0,0,1,1,0,1,0,1,"Non-binary","White / Caucasian",34,0,1
+NA,1,0,0,0,1,1,1,1,2,"Woman","Hispanic / Latinx",42,0,0
+NA,1,1,1,1,1,0,0,0,1,"Woman","White / Caucasian",35,0,1
+NA,1,1,1,0,1,0,0,0,0,"Man","Hispanic / Latinx",39,1,0
+0,0,0,1,0,1,1,1,1,0,"Man","White / Caucasian",37,1,1
+0,0,1,1,1,1,0,1,0,0,"Woman","White / Caucasian",24,0,1
+NA,1,1,1,1,1,0,0,0,0,"Man","White / Caucasian",56,1,1
+0,0,0,1,0,1,0,1,0,2,"Man","White / Caucasian",36,1,1
+NA,1,0,1,1,1,0,0,1,1,"Man","Black or African American",45,1,0
+0,0,0,1,1,1,0,1,1,3,"Man","Asian / Pacific Islander",41,1,0
+NA,1,0,1,1,0,0,1,0,0,"Man","Black or African American",32,1,0
+0,0,0,1,0,1,1,1,1,1,"Man","Asian / Pacific Islander",52,1,0
+NA,1,0,0,0,1,1,1,0,3,"Man","White / Caucasian",33,1,1
+NA,1,0,0,1,1,0,1,1,0,"Man","Hispanic / Latinx",33,1,0
+1,0,0,0,0,1,1,1,1,1,"Man","White / Caucasian",43,1,1
+1,0,0,1,1,1,0,0,1,0,"Man","White / Caucasian",35,1,1
+NA,1,0,1,1,0,0,1,1,3,"Man","Asian / Pacific Islander",28,1,0
+0,0,1,1,1,1,0,1,0,0,"Man","White / Caucasian",38,1,1
+0,0,0,1,0,1,1,1,0,2,"Man","White / Caucasian",36,1,1
+NA,1,0,1,0,1,0,0,0,0,"Man","White / Caucasian",45,1,1
+NA,1,0,1,0,0,0,1,0,0,"Man","White / Caucasian",34,1,1
+1,0,1,0,1,1,0,1,0,0,"Woman","White / Caucasian",72,0,1
+0,0,1,1,0,1,0,1,0,0,"Man","White / Caucasian",41,1,1
+NA,1,0,1,0,1,0,0,0,2,"Woman","White / Caucasian",39,0,1
+NA,1,0,1,0,1,1,0,1,1,"Man","White / Caucasian",31,1,1
+1,0,0,0,0,1,1,1,1,2,"Man","White / Caucasian",36,1,1
+NA,1,1,1,1,0,0,1,0,0,"Man","White / Caucasian",32,1,1
+0,0,1,1,0,1,0,1,0,3,"Man","White / Caucasian",36,1,1
+NA,1,1,1,1,1,0,0,0,0,"Man","White / Caucasian",42,1,1
+NA,1,0,0,1,1,0,1,0,1,"Man","White / Caucasian",38,1,1
+0,0,1,1,1,1,0,1,0,0,"Woman","White / Caucasian",43,0,1
+1,0,0,0,0,1,1,1,1,0,"Man","White / Caucasian",37,1,1
+NA,1,0,0,0,1,1,1,0,1,"Woman","White / Caucasian",42,0,1
+NA,1,0,1,1,0,0,1,1,1,"Woman","White / Caucasian",49,0,1
+NA,1,0,1,1,0,0,1,1,2,"Woman","White / Caucasian",33,0,1
+0,0,0,1,1,1,0,1,0,0,"Man","White / Caucasian",30,1,1
+NA,1,0,1,0,0,0,1,0,1,"Woman","White / Caucasian",33,0,1
+1,0,0,1,0,1,1,0,1,1,"Man","Black or African American",42,1,0
+1,0,0,0,0,1,1,1,1,3,"Man","White / Caucasian",33,1,1
+NA,1,0,1,0,0,1,1,0,3,"Man","White / Caucasian",30,1,1
+NA,1,0,1,1,0,0,1,1,0,"Woman","White / Caucasian",34,0,1
+NA,1,0,0,0,1,1,1,0,3,"Woman","White / Caucasian",49,0,1
+NA,1,0,0,0,1,1,1,1,3,"Man","White / Caucasian",41,1,1
+1,0,0,1,1,1,0,0,0,0,"Man","White / Caucasian",35,1,1
+0,0,0,1,0,1,1,1,1,2,"Woman","White / Caucasian",57,0,1
+1,0,1,1,1,0,0,1,0,1,"Man","White / Caucasian",28,1,1
+NA,1,0,1,0,1,1,0,0,1,"Man","White / Caucasian",50,1,1
+NA,1,1,1,1,0,0,1,0,2,"Man","White / Caucasian",48,1,1
+0,0,0,1,0,1,1,1,1,1,"Man","White / Caucasian",30,1,1
+1,0,0,1,0,0,0,1,0,0,"Man","Asian / Pacific Islander",30,1,0
+NA,1,1,1,1,0,0,1,0,2,"Man","White / Caucasian",42,1,1
+NA,1,0,1,1,1,0,0,1,3,"Man","Black or African American",42,1,0
+0,0,0,1,1,1,0,1,0,2,"Woman","White / Caucasian",59,0,1
+NA,1,1,0,0,1,0,1,0,1,"Man","White / Caucasian",31,1,1
+0,0,0,1,1,1,0,1,1,1,"Man","White / Caucasian",34,1,1
+NA,1,0,1,0,0,0,1,0,2,"Woman","White / Caucasian",37,0,1
+1,0,0,0,0,1,0,1,0,0,"Woman","Black or African American",42,0,0
+0,0,1,1,1,1,0,1,0,3,"Non-binary","Black or African American",38,0,0
+NA,1,0,1,1,0,0,1,1,0,"Woman","White / Caucasian",50,0,1
+1,0,1,0,1,1,0,1,0,0,"Man","White / Caucasian",67,1,1
+NA,1,1,0,1,1,0,1,0,0,"Woman","White / Caucasian",39,0,1
+1,0,0,0,1,1,0,1,1,1,"Man","White / Caucasian",34,1,1

@@ -1,0 +1,209 @@
+---
+title: "Benchmark Quota Simulation"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  pdf_document: 
+    toc: yes
+    toc_depth: 2
+    fig_caption: true
+header-includes:
+  \renewcommand{\contentsname}{Items}
+---
+
+```{r setup, include=FALSE}
+rm(list=ls())
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE,
+	results = "hide"
+)
+library(dplyr)
+library(lmtest)
+library(sandwich)
+library(systemfit)
+library(car)
+library(broom)
+library(qualtRics)
+library(knitr)
+library(rmarkdown)
+library(ggplot2)
+library(grid)
+library(extrafont)
+library(stargazer)
+library(tidyverse)
+```
+
+```{r include=FALSE}
+if ( (!is.null(knitr::current_input()))) {
+  if (("pdf_document" ==
+                rmarkdown::all_output_formats(knitr::current_input())[1])) {
+      stargazer_type <- "latex"
+  }
+} else {
+  stargazer_type <- "text"
+}
+
+robust_summary <- function(model) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting original model summary
+    model_summary <- summary(model)
+
+    # Updating standard errors, t-values, and p-values in the coefficients table
+    model_summary$coefficients[, "Std. Error"] <- robust_se
+    model_summary$coefficients[, "t value"] <- model_summary$coefficients[, "Estimate"] / robust_se
+    model_summary$coefficients[, "Pr(>|t|)"] <- 2 * pt(-abs(model_summary$coefficients[, "t value"]), df = model_summary$df[2], lower.tail = TRUE)
+
+    return(model_summary)
+}
+robust_confint <- function(model, level = 0.95) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting the coefficients
+    est <- coef(model)
+
+    # Calculating the critical value for the t-distribution
+    alpha <- 1 - level
+    t_crit <- qt(1 - alpha / 2, df = df.residual(model))
+
+    # Calculating the confidence intervals
+    lower <- est - t_crit * robust_se
+    upper <- est + t_crit * robust_se
+
+    # Combining into a matrix
+    confint <- cbind(lower, upper)
+    rownames(confint) <- names(est)
+    colnames(confint) <- c("2.5 %", "97.5 %")
+
+    return(confint)
+}
+perform_simulation <- function(data) {
+  d_original <- data %>% 
+    mutate(
+      condition = ifelse(gender_feedback == 1, "Treatment", "Control"),
+    ) %>% 
+    select(condition, female_pick, base_gender)
+  
+  d_rooney <- d_original %>%
+    filter(condition == "Control") %>%
+    mutate(
+      female_pick = case_when(
+        base_gender == 0 & female_pick == 0 ~ 1,
+        TRUE ~ female_pick
+      ),
+      condition = "Rooney"
+    )
+  
+  d_combined <- bind_rows(d_original, d_rooney) %>%
+    mutate(
+      condition = factor(condition, levels = c("Control", "Rooney", "Treatment"))
+    )
+  
+  lm_model <- lm(female_pick ~ condition, data=d_combined)
+  
+  wald_test <- linearHypothesis(lm_model, "conditionRooney - conditionTreatment = 0")
+  
+  list(model = lm_model, wald_test = wald_test)
+}
+
+```
+
+\newpage
+
+## Read Data from Study 1,3
+
+
+
+```{r echo=TRUE}
+s1a <- read.csv("Study1A.csv", check.names = F)
+s1b <- read.csv("Study1B.csv", check.names = F)
+s3a <- read.csv("Study3A.csv", check.names = F)
+s3b <- read.csv("Study3B.csv", check.names = F)
+```
+
+## Simulation (Table 8, S8)
+
+```{r, results="asis"}
+perform_simulation <- function(data, study_type) {
+  if (study_type == "gender") {
+    feedback_col <- "gender_feedback"
+    pick_col <- "female_pick"
+    base_col <- "base_gender"
+  } else if (study_type == "race") {
+    feedback_col <- "race_feedback"
+    pick_col <- "race_pick"
+    base_col <- "base_race"
+  }
+  
+  d_original <- data %>% 
+    mutate(
+      condition = ifelse(!!sym(feedback_col) == 1, "Treatment", "Control"),
+      pick = !!sym(pick_col),
+      base = !!sym(base_col)
+    )
+  
+  d_quota <- d_original %>%
+    filter(condition == "Control") %>%
+    mutate(
+      pick = case_when(
+        base == 0 & pick == 0 ~ 1,
+        TRUE ~ pick
+      ),
+      condition = "Quota"
+    )
+  
+  d_combined <- bind_rows(d_original, d_quota) %>%
+    mutate(
+      condition = factor(condition, levels = c("Control", "Quota", "Treatment"))
+    )
+  
+  lm_model <- lm(pick ~ condition, data=d_combined)
+  
+  robust_se <- sqrt(diag(vcovHC(lm_model, type = "HC3")))
+  wald_test <- linearHypothesis(lm_model, "conditionQuota - conditionTreatment = 0", vcov = vcovHC(lm_model, type = "HC3"))
+  
+  list(model = lm_model, wald_test = wald_test, robust_se = robust_se)
+}
+
+# List of datasets with their types
+datasets <- list(
+  s1a = list(data = s1a, type = "gender"),
+  s1b = list(data = s1b, type = "race"),
+  s3a = list(data = s3a, type = "gender"),
+  s3b = list(data = s3b, type = "race")
+)
+
+# Perform simulation for each dataset
+results <- map(datasets, ~perform_simulation(.x$data, .x$type))
+
+# Extract models, Wald tests, and robust standard errors
+models <- map(results, "model")
+wald_tests <- map(results, "wald_test")
+robust_se <- map(results, "robust_se")
+
+# Create stargazer table
+stargazer(models$s1a, models$s1b, models$s3a, models$s3b,
+          type = "latex",
+          column.labels = c("Study 1A", "Study 1B", "Study 3A", "Study 3B"),
+          model.numbers = FALSE,
+          se = list(robust_se$s1a, robust_se$s1b, robust_se$s3a, robust_se$s3b),
+          keep.stat = c("n", "rsq"),
+          notes = "+p<0.1; *p<0.05; **p<0.01; ***p<0.001",
+          notes.append = FALSE,
+          header = FALSE,
+          dep.var.labels = NULL,
+          covariate.labels = c("Quota", "Treatment"),
+          omit = "Constant")
+
+# Display Wald test results
+wald_results <- map_df(wald_tests, ~data.frame(F_value = .x$F[2], p_value = .x$`Pr(>F)`[2]), .id = "Study")
+wald_results$Study <- c("Study 1A", "Study 1B", "Study 3A", "Study 3B")
+
+knitr::kable(wald_results, 
+             caption = "Wald Test Results for All Studies",
+             col.names = c("Study", "F-value", "p-value"),
+             digits = 4)
+```

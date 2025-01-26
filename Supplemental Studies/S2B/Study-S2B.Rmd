@@ -1,0 +1,577 @@
+---
+title: "Study 2"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  pdf_document: 
+    toc: yes
+    toc_depth: 2
+    fig_caption: true
+header-includes:
+  \renewcommand{\contentsname}{Items}
+   \usepackage{fvextra}
+   \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+---
+
+```{r setup, include=FALSE}
+rm(list=ls())
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE,
+	results = "hide"
+)
+library(dplyr)
+library(lmtest)
+library(sandwich)
+library(systemfit)
+library(car)
+library(broom)
+library(qualtRics)
+library(knitr)
+library(rmarkdown)
+library(stargazer)
+library(ggplot2)
+library(gridExtra)
+
+```
+
+```{r include=FALSE}
+if ( (!is.null(knitr::current_input()))) {
+  if (("pdf_document" ==
+                rmarkdown::all_output_formats(knitr::current_input())[1])) {
+      stargazer_type <- "latex"
+  }
+} else {
+  stargazer_type <- "text"
+}
+
+
+robust_summary <- function(model) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting original model summary
+    model_summary <- summary(model)
+
+    # Updating standard errors, t-values, and p-values in the coefficients table
+    model_summary$coefficients[, "Std. Error"] <- robust_se
+    model_summary$coefficients[, "t value"] <- model_summary$coefficients[, "Estimate"] / robust_se
+    model_summary$coefficients[, "Pr(>|t|)"] <- 2 * pt(-abs(model_summary$coefficients[, "t value"]), df = model_summary$df[2], lower.tail = TRUE)
+
+    return(model_summary)
+}
+robust_confint <- function(model, level = 0.95) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting the coefficients
+    est <- coef(model)
+
+    # Calculating the critical value for the t-distribution
+    alpha <- 1 - level
+    t_crit <- qt(1 - alpha / 2, df = df.residual(model))
+
+    # Calculating the confidence intervals
+    lower <- est - t_crit * robust_se
+    upper <- est + t_crit * robust_se
+
+    # Combining into a matrix
+    confint <- cbind(lower, upper)
+    rownames(confint) <- names(est)
+    colnames(confint) <- c("2.5 %", "97.5 %")
+
+    return(confint)
+}
+```
+
+\newpage
+
+## Read Data
+
+```{r echo=TRUE}
+## Pull directly from Qualtrics API
+qual_data <- fetch_survey(surveyID='SV_2tycLNwc08A12cK',
+                   label = T,
+                   convert = F,
+                   start_date = "2024-01-22",
+                   force_request = T)
+
+
+```
+
+
+```{r}
+## 
+women <- c('The Broski Report with Brittany Broski', 'Would You Believe…? with Rebecca Rogers', 'Wiser Than Me with Julia Louis-Dreyfus', 'Where Should We Begin? with Esther Perel', 'Money Rehab with Nicole Lapin')
+episodes <- c('The Diary Of A CEO with Steven Bartlett', 'On Purpose with Jay Shetty', 'Lex Fridman Podcast', 'The School of Greatness', 'Passion Struck with John R. Miles', 'The Joe Budden Podcast', 'The Bill Simmons Podcast', 'This Past Weekend w/ Theo Von', 'Money Rehab with Nicole Lapin', 'The Peter Attia Drive')
+duration <- c('Huberman Lab', 'Shawn Ryan Show', 'Lex Fridman Podcast', 'The Joe Budden Podcast', 'Dan Carlin\'s Hardcore History')
+years <- c('What Now? with Trevor Noah', 'The Ultimate Human with Gary Brecka', 'The Broski Report with Brittany Broski', 'Would You Believe…? with Rebecca Rogers', 'The Wayback with Ryan Sickler', 'Wiser Than Me with Julia Louis-Dreyfus', 'All There Is with Anderson Cooper', 'The Ezra Klein Show', 'Passion Struck with John R. Miles', 'Money Rehab with Nicole Lapin', 'The Money Mondays')
+
+d0 <- qual_data |> 
+    filter(!is.na(`choice-7`), !is.na(workerId), Finished==1) |> 
+    mutate(
+    gender_feedback = as.numeric(grepl("feature a female host", feedbackItem1) |
+                  grepl("feature a female host", feedbackItem2) |
+                  grepl("feature a female host", feedbackItem3)),
+    episodes_shown = as.numeric(grepl("have more than 300 episodes", feedbackItem1) |
+                  grepl("have more than 300 episodes", feedbackItem2) |
+                  grepl("have more than 300 episodes", feedbackItem3)),
+    duration_shown = as.numeric(grepl("have an average episode length greater than 2 hours", feedbackItem1) |
+                grepl("have an average episode length greater than 2 hours", feedbackItem2) |
+                grepl("have an average episode length greater than 2 hours", feedbackItem3)),
+    years_shown = as.numeric(grepl("started over 3 years ago", feedbackItem1) |
+                 grepl("started over 3 years ago", feedbackItem2) |
+                 grepl("started over 3 years ago", feedbackItem3)),
+    female = case_when(`choice-7` %in% women ~ 1,
+                           TRUE ~ 0),
+    episodes_pick = case_when(`choice-7` %in% episodes ~ 1,
+                           TRUE ~ 0),
+    duration_pick = case_when(`choice-7` %in% duration ~ 1,
+                           TRUE ~ 0),
+    years_pick = case_when(`choice-7` %in% years ~ 1,
+                           TRUE ~ 0),
+    encouragement = case_when(group=="encourage" ~ 1,
+                                   group=="base" ~ 0,
+                                TRUE ~ NA),
+    race_code = case_when(race=="White / Caucasian" ~ 1, TRUE ~ 0),
+    age = as.numeric(age),
+    gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
+    base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% women))) |> 
+  select(
+    encouragement, gender_feedback, female, episodes_pick, episodes_shown, duration_shown, duration_pick, years_pick, years_shown, base_gender, gender, race, age, gender_code, race_code
+  ) |> 
+  slice(1:1000) # pre-registered sample size
+
+d0_w_encouragement <- d0 |> 
+  filter(encouragement == 1)
+
+d0_no_encouragement <- d0 |> 
+  filter(encouragement == 0)
+
+
+# Write the API-pulled data into a CSV file
+
+write.csv(d0, 'Study2.csv', row.names = FALSE, quote = TRUE) 
+
+###########################################################################################
+# when reading the csv, use the following command: read.csv('Study2.csv', check.names = F)
+###########################################################################################
+```
+
+## Variable Names
+
+\begin{table}[!htbp] \centering 
+  \label{tab:variables} 
+\begin{tabular}{|l|p{10cm}|} 
+\hline 
+\textbf{Variable} & \textbf{Description} \\ 
+\hline 
+\texttt{encouragement} & Binary indicator of whether the participant was randomly assigned to the encouragement condition. \\
+\hline
+\texttt{gender\_feedback} & Binary indicator of whether the participant was randomly assigned to gender feedback condition. \\
+\hline
+\texttt{female} & Binary indicator of whether the participant selected a female podcast host for their seventh selection. \\
+\hline
+\texttt{episodes\_shown} & Binary indicator of whether the participant was randomly assigned to receive feedback on the number of episodes in the podcast. \\
+\hline
+\texttt{episodes\_pick} & Binary indicator of whether the participant selected a podcast with over $300$ episodes. \\
+\hline
+\texttt{duration\_shown} & Binary indicator of whether the participant was randomly assigned to receive feedback on the duration of podcasts. \\
+\hline
+\texttt{duration\_pick} & Binary indicator of whether the participant selected a podcast with an average length of over $2$ hours. \\
+\hline
+\texttt{years\_shown} & Binary indicator of whether the participant was randomly assigned to receive feedback about when the podcast started. \\
+\hline
+\texttt{years\_pick} & Binary indicator of whether the participant selected a podcast that started over $3$ years ago. \\
+\hline
+\texttt{base\_gender} & Count of the number of podcasts with a female host selected in the initial six podcasts. \\
+\hline
+\texttt{gender} & Self-selected gender. \\
+\hline
+\texttt{race} & Self-selected race. \\
+\hline
+\texttt{age} & Self-entered age. \\
+\hline
+\texttt{gender\_code} & Dummy code for gender (male = 1). \\
+\hline
+\texttt{race\_code} & Dummy code for race (white = 1). \\
+\hline
+\end{tabular} 
+\end{table} 
+
+\newpage
+
+## Demographics
+
+```{r results='markup'}
+## Excluded participants
+
+cat('Excluded Participants:', nrow(qual_data) - nrow(d0), '\n')
+
+## Gender
+
+gender_percentages <- round(prop.table(table(d0$gender)) * 100, 2)
+
+gender_df <- data.frame(
+  Percentage = gender_percentages,
+  gender = names(gender_percentages)
+)[1:2]
+
+colnames(gender_df) <- c("Percentage", "gender")
+
+print(gender_df)
+
+
+## Race
+
+race_percentages <- round(prop.table(table(d0$race)) * 100, 2)
+
+race_df <- data.frame(
+  Percentage = race_percentages,
+  Race = names(race_percentages)
+)[1:2]
+
+colnames(race_df) <- c("Percentage", "Race")
+
+print(race_df)
+
+## Age
+
+age_summary <- d0 |> 
+  select(age) |> 
+  summarize(mean_age = mean(age, na.rm = T), sd_age = sd(age, na.rm = T))
+
+age_summary
+
+
+```
+
+\newpage
+
+\newpage
+
+## Primary Analysis
+
+
+```{r echo=TRUE, results='markup'}
+# primary model, no encouragement
+r1 <- lm(female ~ gender_feedback * encouragement, data=d0)
+robust_summary(r1)
+```
+
+
+\newpage
+
+### Secondary Analysis
+
+```{r echo=TRUE, results='markup'}
+## episodes feedback
+r_episodes <- lm(episodes_pick ~ episodes_shown*encouragement, data=d0)
+
+# Display the summary with robust standard errors
+robust_summary(r_episodes)
+robust_confint(r_episodes)
+
+## duration feedback
+r_duration <- lm(duration_pick ~ duration_shown*encouragement, data=d0)
+
+# Display the summary with robust standard errors
+robust_summary(r_duration)
+robust_confint(r_duration)
+
+## years feedback
+r_years <- lm(years_pick ~ years_shown*encouragement, data=d0)
+
+# Display the summary with robust standard errors
+robust_summary(r_years)
+robust_confint(r_years)
+
+## interaction of base gender
+# primary model
+r_interaction <- lm(female ~ gender_feedback*base_gender, data=d0)
+
+
+# Display the summary with robust standard errors
+robust_summary(r_interaction)
+```
+
+\newpage
+
+## Figure S1A Code
+
+```{r echo=TRUE}
+dgender_plot <- d0_no_encouragement |> 
+  select(gender_feedback, female) |> 
+  group_by(gender_feedback, female) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(female == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(gender_feedback==0 ~ coef(summary(r1))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r1))[, "Std. Error"][2]*100)) |> 
+  mutate(gender_feedback = case_when(gender_feedback==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = gender_feedback)
+
+## dataframe for CEO information
+
+dduration_plot <- d0_no_encouragement |> 
+  select(duration_shown, duration_pick) |> 
+  group_by(duration_shown, duration_pick) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(duration_pick == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(duration_shown==0 ~ coef(robust_summary(r_duration))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r_duration))[, "Std. Error"][2]*100)) |> 
+  mutate(duration_shown = case_when(duration_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = duration_shown)
+
+## dataframe for episodes information
+
+depisodes_plot <- d0_no_encouragement |> 
+  select(episodes_shown, episodes_pick) |> 
+  group_by(episodes_shown, episodes_pick) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(episodes_pick == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(episodes_shown==0 ~ coef(robust_summary(r_episodes))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r_episodes))[, "Std. Error"][2]*100)) |> 
+  mutate(episodes_shown = case_when(episodes_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = episodes_shown)
+
+## dataframe for years information
+
+dyears_plot <- d0_no_encouragement |> 
+  select(years_shown, years_pick) |> 
+  group_by(years_shown, years_pick) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(years_pick == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(years_shown==0 ~ coef(robust_summary(r_years))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r_years))[, "Std. Error"][2]*100)) |> 
+  mutate(years_shown = case_when(years_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = years_shown)
+
+df_combined <- bind_rows(
+  dduration_plot %>% mutate(Category = "\nOver 3\nHours"),
+  dyears_plot %>% mutate(Category = "\nStarted 3\nYears Ago"),
+  depisodes_plot %>% mutate(Category = "\nWith Over\n300 Episodes"),
+  dgender_plot %>% mutate(Category = "\nWith Female\nHost")
+, .id = "id") %>% 
+  mutate(Category = factor(Category, levels = c("\nOver 3\nHours", '\nStarted 3\nYears Ago', "\nWith Over\n300 Episodes", '\nWith Female\nHost')))
+
+p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
+  geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
+  geom_text(data = df_combined %>% filter(!(Category == "\nOver 3\nHours" & Condition == "\"Control\"")), 
+          aes(label=paste0(sprintf("%.1f", freq*100),"%")), 
+          position=position_dodge(width=0.7), vjust=5, size = 4, color = "white")+
+  geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
+  facet_wrap(~factor(Category, c("\nOver 3\nHours", '\nStarted 3\nYears Ago', "\nWith Over\n300 Episodes", '\nWith Female\nHost')), nrow = 1, strip.position = "bottom") +
+  geom_segment(data = df_combined %>% filter(Category %in% c("\nOver 3\nHours", "\nWith Over\n300 Episodes", '\nWith Female\nHost') & Condition == "\"Treatment\""), 
+               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5), 
+               inherit.aes = FALSE) +
+    geom_segment(data = df_combined %>% filter(Category %in% c('\nStarted 3\nYears Ago') & Condition == "\"Control\""), 
+               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5), 
+               inherit.aes = FALSE) +
+  geom_text(data = df_combined %>% filter(Category %in% c("\nWith Over\n300 Episodes") & Condition == "\"Treatment\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."), 
+            inherit.aes = FALSE, vjust = 0) +
+    geom_text(data = df_combined %>% filter(Category %in% c("\nOver 3\nHours") & Condition == "\"Treatment\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "+"), 
+            inherit.aes = FALSE, vjust = 0) +
+    geom_text(data = df_combined %>% filter(Category %in% c('\nStarted 3\nYears Ago') & Condition == "\"Control\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "*"), 
+            inherit.aes = FALSE, vjust = 0) +
+  geom_text(data = df_combined %>% filter(Category == '\nWith Female\nHost' & Condition == "\"Treatment\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
+            inherit.aes = FALSE, vjust = 0) +
+  geom_text(data = df_combined %>% filter(Category == "\nOver 3\nHours" & Condition == "\"Control\""), 
+          aes(label = paste0(sprintf("%.1f", freq*100), "%"), 
+              x = Condition, y = freq*100 + se + 4), # offset to adjust the position
+          inherit.aes = FALSE, vjust = -0.5, size = 4, color = "black") +
+  
+  theme_bw() +
+  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback", "Feedback provided"), "Feedback") +
+  scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,85)) +
+  scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
+  labs(x= "Feedback on % of podcasts...", y = "% of New Podcasts with the Target Attribute",
+       caption = 'Note: Error Bars are SEs', title = "The Effect of Getting Feedback on Your Panel's Composition") +
+  theme(plot.caption = element_text(face = "italic"),
+        legend.position = "none",
+        #legend.position = c(0.5, 0.85),
+        legend.title = element_blank(),
+        legend.direction = "horizontal",
+        legend.text = element_text(size = 14),
+        legend.key.size = unit(7, 'mm'),
+        legend.background = element_rect(fill = "white"),
+        panel.grid.minor = element_blank(),
+        panel.grid = element_blank(),
+        panel.border = element_rect(fill= NA, color = "white"),
+        plot.background = element_rect(fill = "white"),
+        panel.background = element_rect(fill = "white"),
+        axis.title.x = element_text(face="bold", size = 13, vjust = 19),
+        plot.title = element_blank(),
+        axis.title.y = element_text(size = 14, color = "black"),
+        axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_text(size = 14, color = "black"),
+        strip.text = element_text(size = 14, color = "black"),
+        strip.background = element_rect(color = "white", fill = "white"))
+
+#p_combined_A
+```
+
+\newpage
+
+## Figure S1B Code
+
+
+```{r echo=TRUE, results="asis"}
+dgender_plot <- d0_w_encouragement |> 
+  select(gender_feedback, female) |> 
+  group_by(gender_feedback, female) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(female == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(gender_feedback==0 ~ coef(summary(r1))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r1))[, "Std. Error"][2]*100)) |> 
+  mutate(gender_feedback = case_when(gender_feedback==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = gender_feedback)
+
+## dataframe for CEO information
+
+dduration_plot <- d0_w_encouragement |> 
+  select(duration_shown, duration_pick) |> 
+  group_by(duration_shown, duration_pick) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(duration_pick == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(duration_shown==0 ~ coef(robust_summary(r_duration))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r_duration))[, "Std. Error"][2]*100)) |> 
+  mutate(duration_shown = case_when(duration_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = duration_shown)
+
+## dataframe for episodes information
+
+depisodes_plot <- d0_w_encouragement |> 
+  select(episodes_shown, episodes_pick) |> 
+  group_by(episodes_shown, episodes_pick) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(episodes_pick == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(episodes_shown==0 ~ coef(robust_summary(r_episodes))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r_episodes))[, "Std. Error"][2]*100)) |> 
+  mutate(episodes_shown = case_when(episodes_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = episodes_shown)
+
+## dataframe for years information
+
+dyears_plot <- d0_w_encouragement |> 
+  select(years_shown, years_pick) |> 
+  group_by(years_shown, years_pick) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(years_pick == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(years_shown==0 ~ coef(robust_summary(r_years))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r_years))[, "Std. Error"][2]*100)) |> 
+  mutate(years_shown = case_when(years_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = years_shown)
+
+df_combined <- bind_rows(
+  dduration_plot %>% mutate(Category = "\nOver 3\nHours"),
+  dyears_plot %>% mutate(Category = "\nStarted 3\nYears Ago"),
+  depisodes_plot %>% mutate(Category = "\nWith Over\n300 Episodes"),
+  dgender_plot %>% mutate(Category = "\nWith Female\nHost")
+, .id = "id") %>% 
+  mutate(Category = factor(Category, levels = c("\nOver 3\nHours", '\nStarted 3\nYears Ago', "\nWith Over\n300 Episodes", '\nWith Female\nHost')))
+
+p_combined_B <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
+  geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
+  geom_text(data = df_combined %>% filter(!(Category == "\nOver 3\nHours")), 
+          aes(label=paste0(sprintf("%.1f", freq*100),"%")), 
+          position=position_dodge(width=0.7), vjust=5, size = 4, color = "white")+
+  geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
+  facet_wrap(~factor(Category, c("\nOver 3\nHours", '\nStarted 3\nYears Ago', "\nWith Over\n300 Episodes", '\nWith Female\nHost')), nrow = 1, strip.position = "bottom") +
+  geom_segment(data = df_combined %>% filter(Category %in% c("\nOver 3\nHours", "\nWith Over\n300 Episodes", '\nWith Female\nHost') & Condition == "\"Treatment\""), 
+               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5), 
+               inherit.aes = FALSE) +
+    geom_segment(data = df_combined %>% filter(Category %in% c('\nStarted 3\nYears Ago') & Condition == "\"Control\""), 
+               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5), 
+               inherit.aes = FALSE) +
+  geom_text(data = df_combined %>% filter(Category %in% c("\nWith Over\n300 Episodes") & Condition == "\"Treatment\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."), 
+            inherit.aes = FALSE, vjust = 0) +
+    geom_text(data = df_combined %>% filter(Category %in% c("\nOver 3\nHours") & Condition == "\"Treatment\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "*"), 
+            inherit.aes = FALSE, vjust = 0) +
+    geom_text(data = df_combined %>% filter(Category %in% c('\nStarted 3\nYears Ago') & Condition == "\"Control\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "*"), 
+            inherit.aes = FALSE, vjust = 0) +
+  geom_text(data = df_combined %>% filter(Category == '\nWith Female\nHost' & Condition == "\"Treatment\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
+            inherit.aes = FALSE, vjust = 0) +
+  geom_text(data = df_combined %>% filter(Category == "\nOver 3\nHours"), 
+          aes(label = paste0(sprintf("%.1f", freq*100), "%"), 
+              x = Condition, y = 40), # offset to adjust the position
+          inherit.aes = FALSE, vjust = -0.5, size = 4, color = "black") +
+  
+  theme_bw() +
+  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback", "Feedback provided"), "Feedback") +
+  scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,110)) +
+  scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
+  labs(x = "Feedback on % of podcasts...", y = "% of New Podcasts with the Target Attribute",
+       caption = 'Note: Error Bars are SEs', title = "The Effect of Getting Feedback on Your Panel's Composition") +
+  theme(plot.caption = element_text(face = "italic"),
+        legend.position = c(0.5, 0.85),
+        legend.title = element_blank(),
+        legend.direction = "horizontal",
+        legend.text = element_text(size = 12),
+        legend.key.size = unit(7, 'mm'),
+        legend.background = element_rect(fill = "white"),
+        panel.grid.minor = element_blank(),
+        panel.grid = element_blank(),
+        panel.border = element_rect(fill= NA, color = "white"),
+        plot.background = element_rect(fill = "white"),
+        panel.background = element_rect(fill = "white"),
+        axis.title.x = element_text(face="bold", size = 13, vjust = 19),
+        plot.title = element_blank(),
+        axis.title.y = element_blank(),  # Remove y-axis title
+        axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_blank(),  # Remove y-axis text
+        axis.ticks.y = element_blank(),  # Remove y-axis ticks
+        strip.text = element_text(size = 12, color = "black"),
+        strip.background = element_rect(color = "white", fill = "white"))
+
+#p_combined_B
+# Create separate plots for the labels
+label_A <- ggplot() + 
+  annotate("text", x = 0, y = 0, label = "A", size = 6, fontface = "bold") +
+  theme_void()
+
+label_B <- ggplot() + 
+  annotate("text", x = 0, y = 0, label = "B", size = 6, fontface = "bold") +
+  theme_void()
+
+# Combine the main plots and labels using grid.arrange()
+combined_plot <- grid.arrange(
+  arrangeGrob(label_A, p_combined_A, ncol = 1, heights = c(0.1, 1)),
+  arrangeGrob(label_B, p_combined_B, ncol = 1, heights = c(0.1, 1)),
+  ncol = 2
+)
+#ggsave("FigureS1.pdf", combined_plot, width = 16, height = 7, units = "in", device = cairo_pdf, family = "Times New Roman")
+```

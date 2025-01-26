@@ -1,0 +1,1001 @@
+"female_pick","tech_pick","founder_pick","gender_feedback","founder_comp","tech_comp","male_pool","choice-1","choice-2","choice-3","choice-4","choice-5","choice-6","choice-7","race","gender","age","gender_code","race_code"
+1,0,0,1,0.423076923076923,0.461538461538462,0,1,0,0,1,1,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",32,1,1
+1,0,0,0,0.346153846153846,0.461538461538462,0,1,0,0,1,1,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",27,1,1
+1,0,0,1,0.384615384615385,0.423076923076923,0,1,0,0,1,1,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Woman",50,0,1
+1,0,1,0,0.423076923076923,0.461538461538462,0,0,0,0,1,0,0,"Tory Burch (Founder of Tory Burch)","White / Caucasian","Man",27,1,1
+1,1,0,0,0.423076923076923,0.384615384615385,0,1,1,0,1,1,0,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",55,1,1
+0,0,0,1,0.346153846153846,0.346153846153846,0,1,1,1,0,0,0,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Man",43,1,1
+0,0,0,0,0.461538461538462,0.461538461538462,1,0,0,0,0,1,1,"James Dimon (CEO of JP Morgan)","White / Caucasian","Man",46,1,1
+0,0,0,1,0.346153846153846,0.423076923076923,0,1,0,0,1,1,1,"James Dimon (CEO of JP Morgan)","Asian / Pacific Islander","Man",37,1,0
+0,0,1,1,0.5,0.461538461538462,1,1,0,0,1,0,0,"Daymond John (Founder of FUBU)","White / Caucasian","Man",34,1,1
+0,0,1,0,0.346153846153846,0.346153846153846,0,0,0,1,0,1,1,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Man",55,1,1
+0,1,1,0,0.384615384615385,0.461538461538462,0,0,0,0,1,1,1,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",39,0,1
+0,1,0,1,0.423076923076923,0.5,1,0,0,0,0,0,0,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Man",47,1,1
+0,0,0,0,0.5,0.461538461538462,1,0,0,0,0,1,0,"Warren Buffet (CEO of Berkshire Hathaway)","Asian / Pacific Islander","Man",38,1,0
+0,1,1,0,0.461538461538462,0.5,1,1,0,1,0,1,0,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Woman",43,0,1
+0,1,1,0,0.538461538461538,0.5,1,0,0,0,0,0,0,"Bill Gates (Co-founder of Microsoft)","Asian / Pacific Islander","Man",39,1,0
+0,0,1,0,0.423076923076923,0.5,1,0,0,1,1,0,0,"Daymond John (Founder of FUBU)","White / Caucasian","Man",49,1,1
+1,0,1,0,0.384615384615385,0.384615384615385,0,1,0,0,0,0,0,"Julia Hartz (Founder of EventBrite)","Hispanic / Latinx","Man",36,1,0
+0,1,0,0,0.384615384615385,0.384615384615385,0,0,0,0,1,1,0,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Man",45,1,1
+0,0,1,1,0.423076923076923,0.423076923076923,1,1,1,1,0,0,0,"Daymond John (Founder of FUBU)","White / Caucasian","Woman",35,0,1
+0,0,0,1,0.423076923076923,0.423076923076923,1,0,1,0,1,1,0,"James Dimon (CEO of JP Morgan)","White / Caucasian","Woman",52,0,1
+1,0,0,1,0.384615384615385,0.461538461538462,0,0,1,0,0,0,1,"Rosalind Brewer (CEO of Walgreens)","Hispanic / Latinx","Man",32,1,0
+1,0,0,0,0.346153846153846,0.384615384615385,0,0,1,0,1,1,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",26,1,1
+0,1,1,1,0.5,0.538461538461538,1,0,0,0,0,0,0,"Mark Zuckerberg (Co-founder of Facebook)","White / Caucasian","Man",41,1,1
+0,0,0,0,0.5,0.538461538461538,1,0,0,0,0,0,1,"James Gorman (CEO of Morgan Stanley)","Black or African American","Man",44,1,0
+1,0,0,1,0.384615384615385,0.461538461538462,0,1,0,0,0,0,0,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Man",59,1,1
+0,1,1,1,0.346153846153846,0.423076923076923,0,0,1,0,1,1,1,"Larry Page (Co-founder of Google)","White / Caucasian","Man",56,1,1
+1,0,1,1,0.346153846153846,0.461538461538462,0,0,1,0,0,0,1,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",41,1,1
+1,1,1,1,0.461538461538462,0.576923076923077,1,1,0,0,1,0,0,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Man",46,1,1
+0,1,0,0,0.461538461538462,0.5,1,0,1,0,0,0,0,"Stewart Butterfield (CEO of Slack)","White / Caucasian","Woman",24,0,1
+0,1,1,1,0.461538461538462,0.423076923076923,1,0,0,0,1,0,0,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",33,0,1
+0,1,1,0,0.538461538461538,0.5,1,0,0,0,1,0,0,"Sergey Brin (Co-founder of Google)","White / Caucasian","Man",46,1,1
+0,1,0,0,0.5,0.576923076923077,1,0,0,0,1,1,1,"Tim Cook (CEO of Apple)","White / Caucasian","Man",62,1,1
+1,1,0,0,0.384615384615385,0.423076923076923,0,0,1,0,1,0,0,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",37,1,1
+1,0,0,1,0.384615384615385,0.346153846153846,0,1,0,0,1,1,1,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Woman",58,0,1
+1,1,1,1,0.423076923076923,0.461538461538462,0,1,1,1,0,0,0,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Woman",37,0,1
+0,1,0,0,0.307692307692308,0.346153846153846,0,1,0,0,1,1,1,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Woman",32,0,1
+0,1,1,1,0.5,0.461538461538462,1,0,0,0,0,0,0,"Jeff Bezos (Founder of Amazon)","Asian / Pacific Islander","Man",34,1,0
+1,1,1,0,0.346153846153846,0.461538461538462,0,0,1,1,1,0,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Man",27,1,1
+1,0,0,1,0.461538461538462,0.461538461538462,1,0,0,0,0,0,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Man",54,1,1
+0,0,0,0,0.346153846153846,0.346153846153846,0,1,0,1,1,0,1,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Man",52,1,1
+0,1,1,0,0.423076923076923,0.5,1,1,0,0,0,1,0,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Woman",43,0,1
+1,0,0,0,0.346153846153846,0.346153846153846,0,1,0,1,0,0,1,"Jane Fraser (CEO of Citigroup)","Asian / Pacific Islander","Man",32,1,0
+0,0,1,0,0.5,0.5,1,0,0,0,0,0,0,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",32,1,1
+0,0,0,1,0.423076923076923,0.5,1,0,0,0,0,0,0,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Man",58,1,1
+1,0,0,1,0.461538461538462,0.384615384615385,1,0,1,1,0,0,0,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Man",57,1,1
+1,0,0,0,0.346153846153846,0.384615384615385,0,0,1,0,1,1,0,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",58,0,1
+1,1,0,0,0.576923076923077,0.5,1,0,0,0,0,0,1,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",64,1,1
+0,1,0,1,0.461538461538462,0.461538461538462,1,0,0,0,0,1,0,"Tim Cook (CEO of Apple)","White / Caucasian","Woman",24,0,1
+1,0,1,1,0.384615384615385,0.423076923076923,0,0,1,0,1,1,1,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Woman",55,0,1
+1,0,0,1,0.423076923076923,0.423076923076923,1,0,1,0,0,0,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Woman",44,0,1
+0,0,0,0,0.384615384615385,0.423076923076923,0,0,0,0,0,1,0,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Man",40,1,1
+1,0,1,1,0.346153846153846,0.423076923076923,0,0,0,1,1,1,0,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Woman",62,0,1
+1,0,0,1,0.307692307692308,0.423076923076923,0,0,1,1,1,0,0,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",32,1,1
+0,1,1,0,0.461538461538462,0.461538461538462,1,0,0,0,0,1,0,"Sergey Brin (Co-founder of Google)","White / Caucasian","Man",36,1,1
+1,0,0,0,0.423076923076923,0.5,1,1,0,1,0,1,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",36,0,1
+0,1,1,1,0.423076923076923,0.423076923076923,1,0,1,0,0,0,1,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Man",68,1,1
+1,0,1,0,0.5,0.461538461538462,1,0,0,0,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",57,1,1
+0,1,0,0,0.384615384615385,0.384615384615385,0,1,1,1,1,0,1,"Stewart Butterfield (CEO of Slack)","White / Caucasian","Woman",32,0,1
+1,0,0,1,0.538461538461538,0.461538461538462,1,0,1,0,1,0,1,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Woman",58,0,1
+1,1,0,0,0.423076923076923,0.461538461538462,1,0,0,0,0,1,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",49,0,1
+0,0,1,0,0.423076923076923,0.461538461538462,1,0,1,1,1,0,0,"Phil Knight (Co-founder of Nike)","White / Caucasian","Woman",41,0,1
+1,0,0,1,0.346153846153846,0.461538461538462,0,1,0,0,1,1,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",44,1,1
+1,1,0,0,0.423076923076923,0.461538461538462,1,0,0,0,0,0,0,"Safra Katz (CEO of Oracle)","White / Caucasian","Man",24,1,1
+1,0,0,0,0.423076923076923,0.423076923076923,0,0,0,0,1,1,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",41,1,1
+1,0,0,0,0.423076923076923,0.384615384615385,0,1,1,1,0,0,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Man",39,1,1
+1,0,0,1,0.346153846153846,0.423076923076923,0,0,0,1,1,1,1,"Tricia Griffith (CEO of Progressive)","Black or African American","Woman",43,0,0
+1,1,0,1,0.346153846153846,0.461538461538462,0,1,1,1,1,1,1,"Corie Barry (CEO of Best Buy)","American Indian or Alaskan Native","Woman",38,0,0
+0,0,0,0,0.461538461538462,0.423076923076923,1,0,0,0,0,0,0,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Woman",38,0,1
+0,0,1,0,0.538461538461538,0.5,1,0,0,1,0,0,0,"Daymond John (Founder of FUBU)","White / Caucasian","Man",75,1,1
+1,0,1,0,0.5,0.5,1,0,0,0,0,0,0,"Tory Burch (Founder of Tory Burch)","Black or African American","Woman",35,0,0
+1,0,0,1,0.461538461538462,0.461538461538462,1,0,0,0,0,0,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Woman",61,0,1
+1,0,0,1,0.461538461538462,0.538461538461538,1,0,0,0,1,1,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",45,1,1
+0,0,0,0,0.346153846153846,0.346153846153846,0,1,1,1,0,1,1,"James Dimon (CEO of JP Morgan)","Black or African American","Man",37,1,0
+1,1,0,1,0.346153846153846,0.346153846153846,0,0,0,1,0,1,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Man",33,1,1
+0,1,1,1,0.423076923076923,0.423076923076923,1,0,0,1,1,0,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Man",44,1,1
+0,0,1,0,0.461538461538462,0.5,1,0,0,0,0,0,0,"Daymond John (Founder of FUBU)","Hispanic / Latinx","Woman",39,0,0
+0,1,1,1,0.538461538461538,0.461538461538462,1,0,0,1,1,1,1,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Woman",58,0,1
+0,0,0,1,0.423076923076923,0.461538461538462,0,0,1,1,1,1,1,"James Dimon (CEO of JP Morgan)","White / Caucasian","Woman",29,0,1
+0,0,0,0,0.307692307692308,0.346153846153846,0,0,0,1,1,0,1,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Man",45,1,1
+1,0,0,1,0.423076923076923,0.423076923076923,0,0,1,0,1,1,0,"Carol Tome (CEO of UPS)","Asian / Pacific Islander","Man",30,1,0
+0,0,0,0,0.461538461538462,0.5,1,0,0,0,1,0,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",48,1,1
+1,0,0,0,0.423076923076923,0.384615384615385,0,0,0,0,1,1,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Woman",69,0,1
+1,1,0,1,0.346153846153846,0.423076923076923,0,0,0,0,1,1,0,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Woman",29,0,1
+0,1,1,1,0.538461538461538,0.5,1,1,0,0,0,0,0,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Woman",60,0,1
+1,1,1,0,0.5,0.423076923076923,1,0,1,0,0,1,0,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",35,0,1
+0,1,1,1,0.423076923076923,0.461538461538462,0,0,1,1,1,1,0,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",42,0,1
+0,0,1,0,0.346153846153846,0.423076923076923,0,0,1,1,0,1,1,"Daymond John (Founder of FUBU)","White / Caucasian","Man",33,1,1
+0,1,1,1,0.461538461538462,0.461538461538462,1,0,0,0,0,0,1,"Sergey Brin (Co-founder of Google)","White / Caucasian","Man",38,1,1
+1,0,0,0,0.384615384615385,0.423076923076923,0,0,0,1,0,1,1,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Man",47,1,1
+0,0,0,1,0.384615384615385,0.423076923076923,0,0,0,0,1,0,0,"Charles Koch (CEO of Koch Industries)","Asian / Pacific Islander","Woman",46,0,0
+1,0,0,0,0.346153846153846,0.346153846153846,0,0,0,0,0,0,1,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Man",27,1,1
+1,0,0,0,0.346153846153846,0.384615384615385,0,1,1,0,1,1,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Woman",36,0,1
+0,1,1,1,0.423076923076923,0.461538461538462,1,1,0,1,0,0,1,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Woman",67,0,1
+1,0,1,1,0.5,0.538461538461538,1,0,0,0,0,0,1,"Tory Burch (Founder of Tory Burch)","Asian / Pacific Islander","Man",42,1,0
+0,1,1,0,0.384615384615385,0.423076923076923,0,1,1,1,0,1,1,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Woman",53,0,1
+1,0,0,1,0.5,0.423076923076923,1,0,0,0,0,0,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",46,1,1
+1,0,0,0,0.384615384615385,0.423076923076923,0,1,1,0,1,1,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",36,0,1
+1,0,1,1,0.346153846153846,0.423076923076923,0,1,1,0,1,1,1,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Woman",44,0,1
+0,1,1,1,0.461538461538462,0.5,1,0,0,0,0,0,0,"Mark Zuckerberg (Co-founder of Facebook)","Black or African American","Woman",26,0,0
+1,1,1,1,0.346153846153846,0.346153846153846,0,1,0,1,0,0,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",43,0,1
+1,1,1,1,0.461538461538462,0.461538461538462,1,0,0,0,0,0,0,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Man",30,1,1
+1,1,1,1,0.461538461538462,0.5,1,0,0,0,0,0,0,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Man",38,1,1
+0,1,0,0,0.461538461538462,0.423076923076923,1,0,0,0,0,0,0,"Tim Cook (CEO of Apple)","White / Caucasian","Woman",35,0,1
+1,1,1,0,0.346153846153846,0.346153846153846,0,1,1,1,1,0,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",70,0,1
+0,1,0,0,0.423076923076923,0.538461538461538,1,0,1,1,1,0,1,"Tim Cook (CEO of Apple)","White / Caucasian","Woman",64,0,1
+0,1,1,0,0.461538461538462,0.5,1,1,1,1,0,0,0,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Man",35,1,1
+0,0,0,1,0.538461538461538,0.5,1,0,0,0,1,0,1,"James Dimon (CEO of JP Morgan)","White / Caucasian","Woman",60,0,1
+0,0,0,0,0.5,0.5,1,0,0,0,0,0,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",63,1,1
+1,1,1,0,0.346153846153846,0.384615384615385,0,1,1,0,1,0,0,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",36,0,1
+0,0,0,1,0.346153846153846,0.461538461538462,0,1,0,1,1,1,1,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Woman",60,0,1
+1,1,0,1,0.346153846153846,0.423076923076923,0,0,0,1,1,1,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Woman",47,0,1
+0,0,1,0,0.538461538461538,0.5,1,1,0,0,0,0,1,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",40,1,1
+1,0,1,1,0.230769230769231,0.423076923076923,0,0,0,1,1,1,1,"Tory Burch (Founder of Tory Burch)","Asian / Pacific Islander","Man",52,1,0
+1,0,0,0,0.346153846153846,0.423076923076923,0,1,0,1,1,1,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Woman",47,0,1
+0,0,0,1,0.423076923076923,0.461538461538462,1,0,0,0,0,0,1,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Woman",74,0,1
+1,0,1,1,0.5,0.5,1,0,0,0,0,0,0,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",55,1,1
+1,1,0,1,0.346153846153846,0.461538461538462,0,1,1,1,0,1,1,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Woman",47,0,1
+0,1,1,0,0.461538461538462,0.5,1,0,0,0,0,0,0,"Larry Page (Co-founder of Google)","Asian / Pacific Islander","Man",35,1,0
+0,0,1,1,0.423076923076923,0.423076923076923,1,0,0,0,0,1,1,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",79,1,1
+1,1,0,0,0.423076923076923,0.423076923076923,0,1,1,1,1,1,0,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Woman",74,0,1
+0,1,1,1,0.384615384615385,0.423076923076923,0,0,1,0,0,0,1,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Woman",34,0,1
+1,1,1,0,0.346153846153846,0.384615384615385,0,0,0,0,1,1,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",29,0,1
+0,0,0,0,0.423076923076923,0.5,1,0,0,0,0,1,0,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Woman",64,0,1
+0,0,1,1,0.5,0.5,1,0,0,1,0,1,0,"Phil Knight (Co-founder of Nike)","Asian / Pacific Islander","Woman",47,0,0
+1,0,0,0,0.423076923076923,0.384615384615385,0,0,1,1,0,1,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Woman",59,0,1
+1,1,1,1,0.461538461538462,0.538461538461538,1,0,1,0,1,1,0,"Melanie Perkins (Founder of Canva)","White / Caucasian","Man",56,1,1
+0,1,0,1,0.423076923076923,0.5,1,1,0,0,0,1,0,"Tim Cook (CEO of Apple)","White / Caucasian","Man",27,1,1
+0,0,0,0,0.423076923076923,0.538461538461538,1,0,0,0,1,0,0,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Man",38,1,1
+0,1,0,0,0.461538461538462,0.423076923076923,1,1,1,0,1,1,1,"Stewart Butterfield (CEO of Slack)","Black or African American","Woman",32,0,0
+1,0,1,1,0.346153846153846,0.384615384615385,0,0,0,0,0,1,0,"Tory Burch (Founder of Tory Burch)","Black or African American","Man",36,1,0
+1,1,0,0,0.346153846153846,0.423076923076923,0,0,0,1,0,1,0,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",42,1,1
+1,0,0,1,0.384615384615385,0.461538461538462,0,1,0,0,0,1,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Woman",25,0,1
+0,0,1,1,0.5,0.423076923076923,1,0,1,1,0,0,0,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Woman",61,0,1
+1,1,1,0,0.5,0.423076923076923,0,0,0,0,0,1,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Man",49,1,1
+1,0,0,0,0.5,0.5,1,0,0,0,0,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",39,0,1
+1,0,0,0,0.384615384615385,0.5,0,1,0,1,0,0,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",29,1,1
+1,0,1,0,0.384615384615385,0.423076923076923,0,0,0,0,1,1,0,"Tory Burch (Founder of Tory Burch)","White / Caucasian","Woman",36,0,1
+1,0,0,0,0.461538461538462,0.461538461538462,0,1,1,1,1,1,1,"Mary Barra (CEO of General Motors)","Black or African American","Woman",58,0,0
+1,0,1,1,0.576923076923077,0.461538461538462,1,0,0,0,1,0,0,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",35,1,1
+1,0,0,1,0.423076923076923,0.384615384615385,0,1,1,1,0,0,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Woman",58,0,1
+1,0,0,1,0.346153846153846,0.384615384615385,0,0,1,0,1,0,1,"Carol Tome (CEO of UPS)","White / Caucasian","Man",37,1,1
+1,0,0,1,0.346153846153846,0.461538461538462,0,0,1,1,0,0,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Man",31,1,1
+1,0,0,0,0.346153846153846,0.461538461538462,0,0,1,1,1,1,1,"Carol Tome (CEO of UPS)","Asian / Pacific Islander","Woman",39,0,0
+1,0,0,1,0.5,0.5,1,0,0,1,0,1,0,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Woman",54,0,1
+1,0,1,0,0.423076923076923,0.384615384615385,0,0,0,1,1,0,1,"Tory Burch (Founder of Tory Burch)","White / Caucasian","Woman",41,0,1
+1,0,0,0,0.5,0.461538461538462,1,0,0,0,1,0,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Man",61,1,1
+1,0,0,1,0.461538461538462,0.423076923076923,1,0,0,1,1,0,1,"Carol Tome (CEO of UPS)","Asian / Pacific Islander","Woman",29,0,0
+0,0,0,0,0.5,0.423076923076923,1,0,0,0,1,1,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",70,0,1
+1,0,0,1,0.423076923076923,0.423076923076923,0,0,0,0,1,1,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",33,1,1
+0,0,1,0,0.423076923076923,0.461538461538462,1,0,1,0,1,1,1,"Daymond John (Founder of FUBU)","White / Caucasian","Man",54,1,1
+0,0,1,1,0.461538461538462,0.423076923076923,0,0,0,0,0,1,1,"Daymond John (Founder of FUBU)","White / Caucasian","Man",28,1,1
+0,1,0,1,0.461538461538462,0.5,1,0,0,0,0,1,0,"Sundar Pichai (CEO of Alphabet Inc.)","Black or African American","Man",26,1,0
+0,0,1,1,0.423076923076923,0.5,1,0,0,0,1,0,1,"Sean Combs (Founder of Bad Boy Entertainment)","Black or African American","Man",25,1,0
+1,0,0,0,0.461538461538462,0.461538461538462,1,0,0,0,0,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",68,1,1
+1,0,0,0,0.5,0.461538461538462,1,0,0,1,1,1,1,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Woman",36,0,1
+0,0,1,1,0.384615384615385,0.423076923076923,0,0,1,1,0,1,1,"Daymond John (Founder of FUBU)","White / Caucasian","Woman",44,0,1
+0,1,1,0,0.384615384615385,0.461538461538462,0,0,1,0,1,1,0,"Garrett Camp (Co-founder of Uber)","Asian / Pacific Islander","Man",45,1,0
+0,0,1,0,0.538461538461538,0.461538461538462,1,0,0,1,0,1,1,"Daymond John (Founder of FUBU)","Hispanic / Latinx","Woman",33,0,0
+0,1,1,1,0.384615384615385,0.461538461538462,1,0,1,0,0,1,1,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Woman",33,0,1
+1,0,0,1,0.423076923076923,0.384615384615385,0,0,1,0,0,1,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",35,1,1
+0,1,0,1,0.461538461538462,0.5,1,0,0,0,0,1,0,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Man",34,1,1
+1,1,0,1,0.461538461538462,0.5,1,1,0,1,0,0,0,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",29,1,1
+0,1,0,1,0.269230769230769,0.423076923076923,0,0,0,1,1,1,1,"Tim Cook (CEO of Apple)","Asian / Pacific Islander","Non-binary",38,0,0
+0,0,0,1,0.346153846153846,0.423076923076923,0,1,1,0,1,0,0,"Marvin Ellison (CEO of Lowe’s)","Asian / Pacific Islander","Man",35,1,0
+1,1,0,0,0.423076923076923,0.384615384615385,0,0,0,0,0,1,1,"Corie Barry (CEO of Best Buy)","Asian / Pacific Islander","Woman",31,0,0
+1,1,1,1,0.384615384615385,0.423076923076923,0,1,1,1,1,0,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",27,0,1
+1,1,0,0,0.346153846153846,0.384615384615385,0,1,1,0,1,1,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Man",51,1,1
+0,0,0,0,0.538461538461538,0.538461538461538,1,0,1,0,0,1,0,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Woman",74,0,1
+1,0,1,0,0.346153846153846,0.384615384615385,0,0,0,1,1,0,0,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",43,1,1
+1,0,0,1,0.423076923076923,0.423076923076923,0,1,1,0,0,1,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Non-binary",56,0,1
+0,0,0,1,0.384615384615385,0.423076923076923,0,0,1,0,1,0,1,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",54,1,1
+0,0,0,0,0.5,0.423076923076923,1,0,1,1,0,0,1,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Woman",42,0,1
+0,0,0,1,0.307692307692308,0.423076923076923,0,0,0,0,1,1,0,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Woman",51,0,1
+1,0,1,1,0.423076923076923,0.461538461538462,0,1,1,1,0,0,1,"Tory Burch (Founder of Tory Burch)","Black or African American","Woman",30,0,0
+0,1,1,0,0.346153846153846,0.423076923076923,0,1,1,0,0,0,1,"Sergey Brin (Co-founder of Google)","White / Caucasian","Man",67,1,1
+0,0,0,0,0.5,0.576923076923077,1,0,0,0,0,0,1,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",66,0,1
+1,0,0,0,0.423076923076923,0.423076923076923,0,1,0,1,1,1,1,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",43,0,1
+1,1,1,1,0.5,0.461538461538462,1,0,0,0,1,0,0,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Man",40,1,1
+0,0,0,1,0.307692307692308,0.461538461538462,0,0,0,0,0,1,1,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Woman",41,0,1
+0,1,1,0,0.5,0.538461538461538,1,0,1,0,0,0,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Woman",69,0,1
+0,0,1,1,0.5,0.538461538461538,1,0,0,0,0,0,0,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",28,1,1
+0,0,0,1,0.423076923076923,0.5,1,0,0,0,0,0,0,"Warren Buffet (CEO of Berkshire Hathaway)","Asian / Pacific Islander","Man",34,1,0
+0,1,1,1,0.461538461538462,0.5,1,0,0,0,0,0,0,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Man",65,1,1
+1,0,0,1,0.538461538461538,0.538461538461538,1,1,1,1,0,0,1,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",31,0,1
+1,0,1,1,0.346153846153846,0.423076923076923,0,0,0,0,0,0,1,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",30,1,1
+1,0,0,1,0.5,0.5,1,1,0,0,0,1,0,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Woman",37,0,1
+0,1,1,1,0.538461538461538,0.5,1,0,1,0,0,1,0,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Woman",38,0,1
+0,0,0,1,0.423076923076923,0.384615384615385,0,1,1,0,0,0,1,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",56,1,1
+1,1,0,1,0.384615384615385,0.384615384615385,0,1,0,1,1,1,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Man",56,1,1
+1,0,0,1,0.269230769230769,0.384615384615385,0,0,0,1,1,0,1,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Woman",38,0,1
+0,1,0,0,0.423076923076923,0.5,1,0,0,0,0,0,0,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Man",47,1,1
+0,0,1,0,0.423076923076923,0.5,1,0,0,0,0,1,1,"Daymond John (Founder of FUBU)","Black or African American","Woman",44,0,0
+0,1,0,1,0.384615384615385,0.423076923076923,0,1,1,1,1,1,1,"Tim Cook (CEO of Apple)","White / Caucasian","Woman",45,0,1
+0,0,0,1,0.461538461538462,0.461538461538462,1,0,0,0,0,0,0,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Man",43,1,1
+1,0,0,0,0.384615384615385,0.461538461538462,0,1,1,1,0,1,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Man",64,1,1
+0,1,0,0,0.346153846153846,0.384615384615385,0,1,1,0,1,0,1,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Woman",29,0,1
+1,1,1,0,0.423076923076923,0.423076923076923,0,0,1,0,1,0,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Man",30,1,1
+1,0,0,0,0.384615384615385,0.461538461538462,1,0,0,0,1,0,1,"Carol Tome (CEO of UPS)","White / Caucasian","Man",52,1,1
+0,0,0,0,0.461538461538462,0.461538461538462,1,0,0,0,0,0,1,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Woman",64,0,1
+1,0,0,0,0.461538461538462,0.461538461538462,1,1,0,0,0,0,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",32,1,1
+0,0,0,0,0.461538461538462,0.423076923076923,1,0,0,1,0,0,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",45,0,1
+0,1,1,0,0.461538461538462,0.538461538461538,1,0,0,0,0,0,0,"Mark Zuckerberg (Co-founder of Facebook)","Asian / Pacific Islander","Man",33,1,0
+0,1,0,1,0.423076923076923,0.423076923076923,1,0,1,1,1,0,0,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Woman",48,0,1
+1,0,0,1,0.461538461538462,0.461538461538462,1,0,0,1,1,0,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",39,1,1
+1,1,0,0,0.346153846153846,0.346153846153846,0,1,0,1,1,0,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Woman",46,0,1
+0,1,1,0,0.384615384615385,0.384615384615385,0,0,1,1,1,1,1,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",54,0,1
+1,0,0,0,0.461538461538462,0.423076923076923,1,0,0,0,0,0,0,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Man",55,1,1
+1,1,1,0,0.423076923076923,0.346153846153846,0,0,0,1,1,0,0,"Melanie Perkins (Founder of Canva)","Black or African American","Man",32,1,0
+1,0,1,0,0.423076923076923,0.423076923076923,0,0,0,1,1,0,1,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Woman",45,0,1
+1,0,0,1,0.5,0.461538461538462,1,0,0,0,1,0,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",54,1,1
+0,0,1,1,0.384615384615385,0.346153846153846,0,1,0,0,0,1,1,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",40,1,1
+1,0,0,1,0.423076923076923,0.423076923076923,0,0,1,0,1,0,1,"Carol Tome (CEO of UPS)","White / Caucasian","Man",60,1,1
+0,1,1,0,0.423076923076923,0.461538461538462,0,1,1,1,0,1,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Man",68,1,1
+0,0,0,0,0.423076923076923,0.423076923076923,0,1,0,1,1,1,1,"James Dimon (CEO of JP Morgan)","White / Caucasian","Man",36,1,1
+1,0,0,0,0.346153846153846,0.423076923076923,0,0,0,1,0,1,1,"Carol Tome (CEO of UPS)","White / Caucasian","Man",38,1,1
+0,0,0,0,0.538461538461538,0.461538461538462,1,0,0,0,0,0,0,"James Dimon (CEO of JP Morgan)","White / Caucasian","Woman",57,0,1
+1,0,0,0,0.461538461538462,0.576923076923077,1,0,0,0,0,0,0,"Carol Tome (CEO of UPS)","Black or African American","Woman",38,0,0
+0,1,1,0,0.384615384615385,0.461538461538462,0,0,1,1,1,1,1,"Mark Zuckerberg (Co-founder of Facebook)","Black or African American","Man",43,1,0
+0,1,1,1,0.346153846153846,0.384615384615385,0,0,0,1,1,1,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Man",56,1,1
+1,1,0,0,0.346153846153846,0.461538461538462,0,1,0,0,0,0,1,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",44,1,1
+1,1,0,0,0.461538461538462,0.5,1,0,0,0,0,0,0,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Woman",34,0,1
+0,0,0,1,0.384615384615385,0.346153846153846,0,1,1,1,0,1,1,"James Dimon (CEO of JP Morgan)","Asian / Pacific Islander","Man",40,1,0
+1,0,0,0,0.423076923076923,0.384615384615385,0,0,0,1,1,1,1,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Man",69,1,1
+1,0,0,1,0.461538461538462,0.538461538461538,1,0,0,0,0,1,1,"Carol Tome (CEO of UPS)","White / Caucasian","Man",46,1,1
+0,0,0,0,0.346153846153846,0.461538461538462,0,0,1,0,1,1,1,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",42,0,1
+0,0,0,0,0.423076923076923,0.5,1,0,0,0,1,0,0,"James Dimon (CEO of JP Morgan)","White / Caucasian","Man",28,1,1
+0,1,0,1,0.461538461538462,0.461538461538462,1,1,1,0,1,0,1,"Tim Cook (CEO of Apple)","White / Caucasian","Man",46,1,1
+1,0,1,0,0.461538461538462,0.423076923076923,1,1,1,0,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","Black or African American","Woman",51,0,0
+1,1,1,0,0.307692307692308,0.461538461538462,0,0,0,0,1,0,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Man",39,1,1
+0,1,0,0,0.423076923076923,0.461538461538462,1,0,0,0,0,0,0,"Tim Cook (CEO of Apple)","White / Caucasian","Man",27,1,1
+1,0,1,0,0.346153846153846,0.346153846153846,0,0,0,0,1,1,1,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Woman",68,0,1
+1,0,0,1,0.5,0.5,1,0,0,0,0,0,0,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Man",30,1,1
+1,0,0,0,0.461538461538462,0.461538461538462,1,0,0,1,0,0,0,"Carol Tome (CEO of UPS)","Hispanic / Latinx","Woman",46,0,0
+1,0,0,0,0.5,0.5,1,0,0,0,0,0,0,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Woman",52,0,1
+0,0,0,0,0.461538461538462,0.461538461538462,1,0,0,1,0,0,1,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Man",39,1,1
+1,1,0,1,0.5,0.5,1,0,1,1,1,0,0,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",45,0,1
+0,1,1,1,0.423076923076923,0.384615384615385,1,0,0,0,1,1,1,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Man",61,1,1
+1,1,0,1,0.384615384615385,0.423076923076923,0,0,0,0,1,1,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Man",52,1,1
+1,0,0,1,0.307692307692308,0.423076923076923,0,1,0,1,1,1,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",53,0,1
+0,0,1,1,0.5,0.423076923076923,1,0,0,0,0,0,1,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",36,1,1
+1,1,0,1,0.346153846153846,0.461538461538462,0,0,0,0,0,0,0,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",29,0,1
+0,0,1,1,0.346153846153846,0.384615384615385,0,0,1,0,1,0,1,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Man",53,1,1
+1,0,0,0,0.307692307692308,0.423076923076923,0,1,0,0,0,1,0,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Man",59,1,1
+0,0,0,1,0.423076923076923,0.423076923076923,1,1,1,0,1,0,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",28,1,1
+0,1,0,1,0.384615384615385,0.384615384615385,0,0,1,1,1,1,1,"Jeff Weiner (CEO of LinkedIn)","Asian / Pacific Islander","Woman",58,0,0
+0,1,1,1,0.461538461538462,0.461538461538462,1,0,0,1,1,0,0,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Man",63,1,1
+1,0,0,1,0.461538461538462,0.461538461538462,0,0,0,1,1,1,0,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Woman",65,0,1
+0,0,1,1,0.384615384615385,0.384615384615385,0,0,1,0,1,0,1,"Daymond John (Founder of FUBU)","White / Caucasian","Woman",34,0,1
+1,0,0,0,0.384615384615385,0.423076923076923,0,1,1,0,1,0,1,"Oprah Winfrey (CEO of Oprah Winfrey Network)","Black or African American","Man",26,1,0
+0,0,0,1,0.346153846153846,0.346153846153846,0,1,1,0,1,1,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",61,0,1
+1,0,1,0,0.423076923076923,0.5,1,0,0,0,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","Black or African American","Woman",46,0,0
+1,1,1,1,0.346153846153846,0.346153846153846,0,0,1,1,1,1,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",71,0,1
+1,1,0,0,0.423076923076923,0.461538461538462,0,0,0,0,1,1,0,"Corie Barry (CEO of Best Buy)","White / Caucasian","Man",37,1,1
+1,0,0,1,0.346153846153846,0.461538461538462,0,1,1,1,1,0,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",36,1,1
+1,0,1,0,0.423076923076923,0.423076923076923,0,0,0,0,1,1,1,"Arianna Huffington (Co-founder of Huffington Post)","Black or African American","Woman",32,0,0
+1,0,0,0,0.5,0.461538461538462,1,0,0,1,0,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",32,0,1
+0,1,0,0,0.307692307692308,0.423076923076923,0,1,1,1,0,1,1,"Tim Cook (CEO of Apple)","White / Caucasian","Woman",45,0,1
+0,1,0,1,0.423076923076923,0.461538461538462,1,0,0,0,0,1,1,"Tim Cook (CEO of Apple)","White / Caucasian","Man",31,1,1
+1,0,0,1,0.423076923076923,0.384615384615385,0,0,0,0,1,1,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",43,1,1
+1,1,1,0,0.461538461538462,0.5,1,0,1,0,0,0,1,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Man",70,1,1
+0,1,1,0,0.461538461538462,0.461538461538462,1,0,1,0,1,0,1,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",55,0,1
+0,1,1,1,0.5,0.461538461538462,1,0,0,0,0,0,0,"Garrett Camp (Co-founder of Uber)","Asian / Pacific Islander","Man",41,1,0
+0,0,0,0,0.307692307692308,0.346153846153846,0,0,0,1,0,1,1,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Man",40,1,1
+1,0,0,1,0.461538461538462,0.423076923076923,0,1,1,0,1,1,0,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Man",68,1,1
+1,1,1,1,0.461538461538462,0.461538461538462,1,0,0,0,0,1,0,"Melanie Perkins (Founder of Canva)","Hispanic / Latinx","Woman",30,0,0
+1,0,0,1,0.346153846153846,0.384615384615385,0,1,1,0,1,0,1,"Michelle Buck (CEO of The Hershey Company)","Black or African American","Man",41,1,0
+1,0,0,1,0.346153846153846,0.384615384615385,0,0,1,0,1,1,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Man",37,1,1
+1,0,0,0,0.461538461538462,0.461538461538462,1,0,0,0,0,0,0,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Man",34,1,1
+0,1,1,0,0.423076923076923,0.423076923076923,1,0,0,0,0,0,0,"Mark Zuckerberg (Co-founder of Facebook)","White / Caucasian","Woman",66,0,1
+1,0,0,0,0.346153846153846,0.423076923076923,0,0,1,1,0,1,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",33,1,1
+0,1,0,0,0.423076923076923,0.461538461538462,0,0,0,1,1,0,1,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Man",54,1,1
+0,0,1,1,0.461538461538462,0.461538461538462,1,1,0,0,0,0,0,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Man",42,1,1
+0,1,1,0,0.461538461538462,0.538461538461538,1,0,0,1,1,0,0,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Woman",29,0,1
+0,0,1,0,0.384615384615385,0.5,1,1,0,0,1,0,1,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Man",54,1,1
+0,1,1,0,0.423076923076923,0.5,1,0,1,0,1,0,0,"Larry Page (Co-founder of Google)","White / Caucasian","Man",34,1,1
+1,1,0,1,0.307692307692308,0.423076923076923,0,0,1,0,1,1,0,"Corie Barry (CEO of Best Buy)","White / Caucasian","Man",36,1,1
+0,0,1,1,0.423076923076923,0.423076923076923,0,1,1,1,1,1,1,"Sean Combs (Founder of Bad Boy Entertainment)","Asian / Pacific Islander","Woman",36,0,0
+1,1,1,1,0.5,0.461538461538462,1,0,0,0,0,0,0,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Man",35,1,1
+1,1,0,1,0.346153846153846,0.423076923076923,0,0,1,0,1,1,0,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Woman",47,0,1
+0,0,1,1,0.461538461538462,0.538461538461538,1,0,0,0,0,0,0,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Woman",52,0,1
+0,1,1,0,0.461538461538462,0.538461538461538,1,0,0,0,0,0,0,"Mark Zuckerberg (Co-founder of Facebook)","White / Caucasian","Woman",34,0,1
+1,0,0,1,0.5,0.461538461538462,1,0,0,0,0,0,0,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Man",63,1,1
+0,1,1,1,0.346153846153846,0.423076923076923,0,1,1,0,1,0,0,"Mark Zuckerberg (Co-founder of Facebook)","White / Caucasian","Man",37,1,1
+0,0,1,0,0.461538461538462,0.384615384615385,1,0,0,1,0,0,1,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Man",37,1,1
+0,0,0,1,0.5,0.5,1,0,0,0,1,1,0,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Man",47,1,1
+0,1,0,0,0.423076923076923,0.461538461538462,1,0,0,1,0,1,1,"Tim Cook (CEO of Apple)","White / Caucasian","Man",66,1,1
+1,1,1,0,0.346153846153846,0.384615384615385,0,0,1,0,1,0,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Man",44,1,1
+1,0,0,1,0.538461538461538,0.5,1,0,0,0,0,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",51,1,1
+1,1,0,0,0.461538461538462,0.538461538461538,1,0,0,0,0,0,0,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",46,0,1
+1,1,0,1,0.384615384615385,0.346153846153846,0,0,0,0,0,1,1,"Safra Katz (CEO of Oracle)","Black or African American","Man",29,1,0
+0,1,1,1,0.384615384615385,0.346153846153846,0,0,1,1,1,0,1,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",24,0,1
+1,0,0,0,0.384615384615385,0.384615384615385,0,0,1,1,0,1,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Woman",55,0,1
+1,1,0,0,0.384615384615385,0.461538461538462,0,1,1,0,0,1,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",59,0,1
+1,0,0,0,0.384615384615385,0.423076923076923,0,1,0,0,0,1,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Woman",39,0,1
+0,0,1,1,0.384615384615385,0.538461538461538,1,0,0,0,0,1,0,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Man",34,1,1
+1,1,0,0,0.384615384615385,0.384615384615385,0,1,1,1,1,1,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",42,0,1
+0,0,0,1,0.346153846153846,0.346153846153846,0,0,0,0,1,0,1,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Man",49,1,1
+0,1,0,1,0.423076923076923,0.461538461538462,1,0,1,1,1,0,1,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Woman",36,0,1
+0,1,0,0,0.461538461538462,0.461538461538462,0,0,1,1,1,1,0,"Tim Cook (CEO of Apple)","Asian / Pacific Islander","Woman",32,0,0
+1,1,0,1,0.423076923076923,0.423076923076923,0,1,0,0,0,0,0,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",45,0,1
+1,0,0,1,0.307692307692308,0.423076923076923,0,0,0,0,1,1,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",62,1,1
+0,0,1,1,0.384615384615385,0.384615384615385,0,0,0,1,1,0,1,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Man",72,1,1
+0,0,0,1,0.384615384615385,0.461538461538462,0,0,1,0,0,1,0,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Man",37,1,1
+0,1,1,1,0.423076923076923,0.5,1,0,0,0,0,0,0,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Woman",78,0,1
+1,0,0,1,0.269230769230769,0.423076923076923,0,1,0,1,1,0,0,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Woman",42,0,1
+1,0,0,1,0.5,0.5,1,0,0,1,0,0,1,"Michelle Buck (CEO of The Hershey Company)","Black or African American","Woman",32,0,0
+1,0,0,0,0.346153846153846,0.384615384615385,0,0,0,1,1,0,0,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Woman",75,0,1
+1,0,0,1,0.461538461538462,0.5,1,0,1,0,0,0,0,"Mary Barra (CEO of General Motors)","Asian / Pacific Islander","Man",50,1,0
+0,1,1,0,0.423076923076923,0.5,0,0,0,0,1,0,1,"Sergey Brin (Co-founder of Google)","Asian / Pacific Islander","Man",36,1,0
+1,1,1,0,0.423076923076923,0.307692307692308,0,1,1,1,1,1,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Man",34,1,1
+0,0,0,0,0.461538461538462,0.423076923076923,1,0,0,0,0,0,0,"Warren Buffet (CEO of Berkshire Hathaway)","American Indian or Alaskan Native","Woman",26,0,0
+0,1,0,0,0.538461538461538,0.576923076923077,1,0,0,0,0,0,0,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Man",26,1,1
+0,0,0,0,0.5,0.538461538461538,1,1,0,1,0,0,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",36,0,1
+1,1,0,1,0.5,0.538461538461538,1,0,0,0,1,0,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",51,0,1
+0,0,0,0,0.5,0.5,1,0,0,0,0,0,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",30,1,1
+1,0,1,0,0.346153846153846,0.461538461538462,0,0,0,0,1,0,1,"Arianna Huffington (Co-founder of Huffington Post)","Black or African American","Man",51,1,0
+0,1,1,0,0.538461538461538,0.461538461538462,1,1,0,0,0,0,1,"Larry Page (Co-founder of Google)","White / Caucasian","Man",44,1,1
+1,0,0,1,0.5,0.461538461538462,1,0,0,0,0,0,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Man",50,1,1
+1,0,0,1,0.5,0.461538461538462,1,0,0,0,1,1,1,"Michelle Buck (CEO of The Hershey Company)","Asian / Pacific Islander","Man",33,1,0
+0,0,0,1,0.346153846153846,0.423076923076923,0,0,1,1,1,0,1,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Man",35,1,1
+1,0,1,1,0.384615384615385,0.384615384615385,0,1,1,1,1,1,1,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Woman",35,0,1
+0,0,1,0,0.5,0.5,1,0,0,0,0,0,0,"Daymond John (Founder of FUBU)","White / Caucasian","Man",43,1,1
+1,0,0,1,0.423076923076923,0.5,1,0,1,0,0,0,0,"Rosalind Brewer (CEO of Walgreens)","Black or African American","Man",41,1,0
+1,0,0,0,0.384615384615385,0.461538461538462,0,0,1,0,0,1,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Woman",35,0,1
+1,0,0,1,0.346153846153846,0.384615384615385,0,1,1,1,0,1,0,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Woman",70,0,1
+1,1,1,0,0.384615384615385,0.384615384615385,0,1,1,0,1,0,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",38,0,1
+0,0,0,1,0.346153846153846,0.346153846153846,0,0,0,1,1,0,1,"Charles Koch (CEO of Koch Industries)","Black or African American","Man",31,1,0
+1,0,0,0,0.461538461538462,0.423076923076923,1,0,0,0,0,0,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",39,1,1
+1,0,1,0,0.384615384615385,0.384615384615385,0,1,0,1,1,1,1,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Woman",47,0,1
+1,1,0,0,0.461538461538462,0.576923076923077,1,0,0,0,0,0,0,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",37,0,1
+0,1,0,0,0.461538461538462,0.5,1,0,0,0,0,0,0,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Man",48,1,1
+0,1,1,1,0.384615384615385,0.423076923076923,0,0,1,0,0,1,1,"Sergey Brin (Co-founder of Google)","White / Caucasian","Man",36,1,1
+1,1,0,1,0.423076923076923,0.538461538461538,1,0,0,0,0,1,0,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",36,1,1
+0,1,1,1,0.423076923076923,0.461538461538462,0,1,1,1,1,1,0,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Woman",32,0,1
+1,0,1,0,0.346153846153846,0.423076923076923,0,1,1,0,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",37,1,1
+1,0,1,0,0.346153846153846,0.461538461538462,0,1,1,1,1,1,1,"Tory Burch (Founder of Tory Burch)","White / Caucasian","Woman",63,0,1
+1,0,0,1,0.461538461538462,0.5,1,1,0,1,0,0,0,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Man",43,1,1
+0,0,1,0,0.5,0.423076923076923,1,0,0,0,1,0,1,"Michael Bloomberg (Co-founder of Bloomberg LP)","Asian / Pacific Islander","Woman",32,0,0
+0,1,1,0,0.384615384615385,0.384615384615385,0,1,0,1,1,1,0,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Man",33,1,1
+1,1,0,1,0.461538461538462,0.5,1,0,0,0,0,0,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Man",30,1,1
+0,1,1,0,0.461538461538462,0.461538461538462,1,0,0,0,0,0,0,"Sergey Brin (Co-founder of Google)","White / Caucasian","Man",48,1,1
+1,0,0,0,0.5,0.461538461538462,1,0,0,1,0,0,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",67,1,1
+0,0,0,1,0.384615384615385,0.423076923076923,1,0,0,0,0,1,0,"James Dimon (CEO of JP Morgan)","White / Caucasian","Man",54,1,1
+1,1,0,0,0.384615384615385,0.423076923076923,0,0,0,1,1,1,1,"Anne Wojcicki (CEO of 23andMe)","American Indian or Alaskan Native","Woman",50,0,0
+1,1,1,0,0.307692307692308,0.461538461538462,0,0,1,0,1,0,0,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",52,0,1
+0,0,0,0,0.461538461538462,0.538461538461538,1,0,0,0,0,0,1,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Man",32,1,1
+1,0,0,0,0.423076923076923,0.384615384615385,0,1,1,1,1,0,1,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",35,0,1
+1,1,1,0,0.423076923076923,0.461538461538462,0,0,0,0,0,0,1,"Whitney Wolfe Herd (Founder of Bumble)","Asian / Pacific Islander","Man",34,1,0
+1,1,0,1,0.5,0.5,1,0,0,0,0,0,0,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",39,1,1
+0,1,1,1,0.461538461538462,0.5,1,0,0,0,0,1,1,"Bill Gates (Co-founder of Microsoft)","Black or African American","Woman",34,0,0
+1,0,0,1,0.423076923076923,0.5,1,0,0,0,0,0,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Man",42,1,1
+1,0,0,1,0.307692307692308,0.384615384615385,0,1,0,1,0,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",35,1,1
+1,1,0,1,0.346153846153846,0.423076923076923,0,0,0,1,1,0,0,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",37,1,1
+1,0,0,1,0.461538461538462,0.5,1,0,1,0,0,1,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Woman",34,0,1
+0,0,1,1,0.346153846153846,0.346153846153846,0,0,0,1,1,1,1,"Phil Knight (Co-founder of Nike)","Hispanic / Latinx","Man",43,1,0
+0,1,1,0,0.384615384615385,0.384615384615385,0,1,1,0,1,1,1,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Woman",65,0,1
+0,1,1,1,0.384615384615385,0.423076923076923,0,0,1,0,1,1,1,"Jeff Bezos (Founder of Amazon)","American Indian or Alaskan Native","Man",39,1,0
+0,1,1,0,0.461538461538462,0.461538461538462,1,0,1,0,1,1,0,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",53,0,1
+1,0,0,0,0.5,0.461538461538462,1,0,0,0,0,0,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",45,0,1
+1,1,1,0,0.346153846153846,0.423076923076923,0,0,1,1,1,1,1,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Man",35,1,1
+1,1,0,0,0.423076923076923,0.5,1,1,0,0,0,0,0,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",70,1,1
+1,0,0,0,0.384615384615385,0.423076923076923,0,0,1,1,1,1,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Woman",33,0,1
+0,0,0,0,0.461538461538462,0.461538461538462,1,1,0,0,1,0,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",36,0,1
+1,0,0,1,0.384615384615385,0.423076923076923,0,0,1,1,0,0,0,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Woman",57,0,1
+1,1,1,0,0.346153846153846,0.384615384615385,0,1,1,1,1,1,1,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Man",43,1,1
+1,0,0,1,0.461538461538462,0.5,1,0,0,0,0,0,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",41,1,1
+0,1,1,1,0.384615384615385,0.346153846153846,0,1,0,0,1,1,0,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Woman",50,0,1
+1,0,0,1,0.384615384615385,0.346153846153846,0,1,1,1,0,0,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Woman",24,0,1
+0,1,1,1,0.423076923076923,0.538461538461538,1,0,0,0,0,0,0,"Mark Zuckerberg (Co-founder of Facebook)","Black or African American","Man",34,1,0
+1,0,1,1,0.346153846153846,0.346153846153846,0,1,1,0,1,1,0,"Tory Burch (Founder of Tory Burch)","White / Caucasian","Woman",46,0,1
+1,1,1,1,0.384615384615385,0.346153846153846,0,1,1,1,0,0,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",39,0,1
+1,0,1,0,0.5,0.461538461538462,1,1,0,0,1,0,1,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Woman",35,0,1
+0,1,0,1,0.461538461538462,0.461538461538462,1,1,1,1,1,1,1,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Man",43,1,1
+0,1,1,0,0.346153846153846,0.423076923076923,0,0,0,1,1,1,1,"Mark Zuckerberg (Co-founder of Facebook)","White / Caucasian","Man",40,1,1
+1,0,0,1,0.5,0.423076923076923,1,0,1,0,0,0,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",40,0,1
+1,0,0,1,0.384615384615385,0.461538461538462,0,0,0,1,0,0,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",45,1,1
+1,0,0,1,0.346153846153846,0.423076923076923,0,0,0,1,0,0,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",63,1,1
+0,0,0,0,0.538461538461538,0.576923076923077,1,0,0,1,0,0,1,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Man",48,1,1
+1,0,0,0,0.423076923076923,0.423076923076923,0,1,0,1,1,0,0,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",57,1,1
+0,1,0,0,0.384615384615385,0.461538461538462,0,1,0,0,1,1,1,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Man",44,1,1
+1,1,1,0,0.423076923076923,0.461538461538462,0,0,0,0,1,1,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Man",75,1,1
+1,1,1,1,0.5,0.538461538461538,1,0,0,0,0,1,0,"Melanie Perkins (Founder of Canva)","Hispanic / Latinx","Man",30,1,0
+1,0,1,0,0.461538461538462,0.461538461538462,1,0,0,0,1,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",43,1,1
+1,1,1,0,0.576923076923077,0.538461538461538,1,0,0,1,0,0,0,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",43,0,1
+0,0,0,0,0.423076923076923,0.423076923076923,0,1,1,0,1,1,1,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Woman",46,0,1
+1,0,0,1,0.461538461538462,0.5,1,0,0,0,0,1,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Woman",67,0,1
+1,0,0,1,0.5,0.538461538461538,1,0,1,0,1,0,0,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Man",31,1,1
+0,1,1,1,0.423076923076923,0.461538461538462,1,0,1,0,0,0,1,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",66,0,1
+0,0,1,0,0.461538461538462,0.5,1,0,0,0,0,1,0,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Man",46,1,1
+1,1,1,0,0.5,0.538461538461538,1,0,0,0,0,1,0,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",38,0,1
+1,0,1,1,0.423076923076923,0.346153846153846,0,0,1,1,0,1,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Woman",42,0,1
+0,1,1,0,0.461538461538462,0.5,1,0,0,0,1,0,1,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Man",29,1,1
+1,1,1,1,0.384615384615385,0.384615384615385,0,0,1,1,1,1,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Man",34,1,1
+1,1,1,0,0.269230769230769,0.384615384615385,0,1,1,1,1,1,0,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",34,0,1
+0,1,1,1,0.461538461538462,0.5,0,0,0,1,0,0,1,"Bill Gates (Co-founder of Microsoft)","Asian / Pacific Islander","Woman",44,0,0
+1,1,0,1,0.384615384615385,0.423076923076923,0,1,1,1,1,0,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Woman",40,0,1
+0,1,1,1,0.461538461538462,0.5,1,0,0,0,0,0,0,"Mark Zuckerberg (Co-founder of Facebook)","Black or African American","Man",37,1,0
+1,1,0,0,0.5,0.5,1,0,1,0,0,0,0,"Corie Barry (CEO of Best Buy)","Hispanic / Latinx","Woman",32,0,0
+0,1,1,0,0.5,0.5,1,0,0,0,0,0,0,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Woman",40,0,1
+1,1,0,1,0.538461538461538,0.5,1,0,0,0,0,0,0,"Kathy Warden (CEO of Northrupp Grumman)","Black or African American","Man",57,1,0
+0,0,0,0,0.423076923076923,0.5,1,0,0,0,1,0,0,"James Dimon (CEO of JP Morgan)","White / Caucasian","Man",31,1,1
+0,0,0,1,0.346153846153846,0.461538461538462,0,1,1,1,1,0,0,"Marvin Ellison (CEO of Lowe’s)","Black or African American","Woman",36,0,0
+0,1,0,0,0.423076923076923,0.538461538461538,1,0,0,0,0,0,0,"Tim Cook (CEO of Apple)","White / Caucasian","Man",67,1,1
+1,0,0,1,0.423076923076923,0.5,1,0,0,0,1,0,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Man",36,1,1
+1,1,0,0,0.346153846153846,0.423076923076923,0,0,0,1,1,1,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Woman",62,0,1
+1,0,0,1,0.461538461538462,0.5,1,0,0,0,1,0,1,"Carol Tome (CEO of UPS)","White / Caucasian","Man",36,1,1
+0,0,0,1,0.461538461538462,0.461538461538462,1,0,1,1,1,0,1,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",30,0,1
+1,0,0,1,0.461538461538462,0.461538461538462,1,0,0,0,1,0,0,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Woman",72,0,1
+1,0,0,0,0.423076923076923,0.538461538461538,1,1,0,1,0,0,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",38,1,1
+0,0,0,0,0.346153846153846,0.346153846153846,0,1,0,0,1,1,0,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Man",27,1,1
+0,1,1,1,0.5,0.5,1,0,1,0,0,0,1,"Sergey Brin (Co-founder of Google)","White / Caucasian","Woman",41,0,1
+0,0,1,0,0.384615384615385,0.423076923076923,0,0,1,0,1,0,1,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Woman",34,0,1
+1,0,0,0,0.423076923076923,0.461538461538462,0,1,0,0,1,0,1,"Carol Tome (CEO of UPS)","White / Caucasian","Man",34,1,1
+1,1,1,0,0.423076923076923,0.461538461538462,1,0,0,0,0,0,0,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",32,0,1
+1,0,0,0,0.384615384615385,0.384615384615385,0,0,0,0,1,1,0,"Jane Fraser (CEO of Citigroup)","Asian / Pacific Islander","Woman",48,0,0
+1,1,0,1,0.423076923076923,0.423076923076923,0,0,0,0,0,0,0,"Safra Katz (CEO of Oracle)","White / Caucasian","Man",58,1,1
+0,0,0,0,0.384615384615385,0.384615384615385,0,1,1,0,0,1,0,"Marvin Ellison (CEO of Lowe’s)","Black or African American","Woman",30,0,0
+0,1,1,0,0.461538461538462,0.5,1,0,1,0,1,0,1,"Mark Zuckerberg (Co-founder of Facebook)","White / Caucasian","Woman",35,0,1
+1,1,1,1,0.461538461538462,0.423076923076923,0,1,0,1,1,0,1,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Man",30,1,1
+1,1,1,1,0.5,0.461538461538462,1,0,1,0,0,0,0,"Melanie Perkins (Founder of Canva)","White / Caucasian","Man",39,1,1
+1,0,1,0,0.461538461538462,0.5,1,0,0,0,0,0,0,"Tory Burch (Founder of Tory Burch)","Black or African American","Non-binary",31,0,0
+0,0,1,1,0.423076923076923,0.423076923076923,0,1,0,0,1,1,0,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",50,1,1
+1,0,0,1,0.538461538461538,0.423076923076923,1,0,0,0,0,0,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",36,1,1
+1,0,0,1,0.461538461538462,0.461538461538462,1,0,0,0,0,0,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Man",36,1,1
+0,0,1,1,0.384615384615385,0.423076923076923,0,0,0,1,0,0,0,"Michael Bloomberg (Co-founder of Bloomberg LP)","Black or African American","Man",47,1,0
+1,0,0,0,0.346153846153846,0.346153846153846,0,1,1,0,1,1,0,"Tricia Griffith (CEO of Progressive)","Asian / Pacific Islander","Man",35,1,0
+1,1,0,1,0.423076923076923,0.423076923076923,0,0,1,1,1,1,1,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Woman",43,0,1
+0,1,0,1,0.384615384615385,0.423076923076923,0,1,0,1,1,1,1,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Man",31,1,1
+1,0,0,0,0.346153846153846,0.423076923076923,0,0,0,0,0,1,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",35,1,1
+1,0,0,1,0.461538461538462,0.5,1,0,0,0,0,0,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Woman",38,0,1
+0,0,1,0,0.307692307692308,0.423076923076923,0,1,1,0,1,1,1,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Man",41,1,1
+1,0,0,1,0.384615384615385,0.461538461538462,0,0,0,1,1,1,0,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Woman",29,0,1
+1,0,0,0,0.423076923076923,0.423076923076923,0,0,1,1,0,0,1,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Man",33,1,1
+0,1,1,1,0.5,0.5,1,0,0,0,0,1,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Woman",58,0,1
+0,1,1,1,0.461538461538462,0.5,1,0,0,0,0,0,1,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Man",29,1,1
+0,1,0,1,0.5,0.5,1,0,0,0,1,0,0,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Man",35,1,1
+0,0,0,0,0.5,0.538461538461538,1,1,0,1,0,1,0,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Woman",51,0,1
+0,1,1,0,0.346153846153846,0.461538461538462,0,1,0,0,1,1,0,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Man",42,1,1
+0,0,1,0,0.461538461538462,0.5,1,0,0,0,0,1,1,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",43,1,1
+0,1,1,0,0.461538461538462,0.461538461538462,1,0,0,0,0,1,0,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Man",68,1,1
+1,0,0,1,0.307692307692308,0.423076923076923,0,1,1,1,1,1,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Woman",57,0,1
+0,0,1,1,0.423076923076923,0.423076923076923,0,1,1,1,1,1,1,"Michael Bloomberg (Co-founder of Bloomberg LP)","Black or African American","Man",73,1,0
+0,1,0,1,0.5,0.461538461538462,1,0,0,0,0,0,0,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Man",43,1,1
+1,0,1,0,0.384615384615385,0.423076923076923,0,0,1,0,1,0,1,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",56,1,1
+0,1,1,0,0.538461538461538,0.5,1,0,1,0,0,0,1,"Garrett Camp (Co-founder of Uber)","Black or African American","Man",37,1,0
+1,0,0,0,0.384615384615385,0.423076923076923,0,0,0,1,0,0,1,"Delphine Arnault (CEO of Christian Dior)","Hispanic / Latinx","Man",39,1,0
+1,0,0,1,0.384615384615385,0.5,0,0,0,1,0,1,0,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Woman",39,0,1
+0,1,1,0,0.538461538461538,0.423076923076923,1,0,0,0,0,0,0,"Larry Page (Co-founder of Google)","White / Caucasian","Man",40,1,1
+0,0,1,1,0.5,0.461538461538462,1,0,0,0,0,0,0,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Woman",28,0,1
+0,0,1,1,0.423076923076923,0.461538461538462,1,0,0,1,0,0,0,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Man",62,1,1
+0,1,0,1,0.5,0.461538461538462,1,0,0,0,0,0,0,"Tim Cook (CEO of Apple)","Black or African American","Woman",32,0,0
+0,0,1,0,0.346153846153846,0.423076923076923,0,0,0,1,1,1,1,"Michael Bloomberg (Co-founder of Bloomberg LP)","Black or African American","Woman",32,0,0
+1,1,0,1,0.461538461538462,0.576923076923077,1,0,0,0,0,0,1,"Kathy Warden (CEO of Northrupp Grumman)","Hispanic / Latinx","Woman",28,0,0
+1,0,0,1,0.461538461538462,0.5,1,0,0,1,1,0,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",35,1,1
+1,1,0,0,0.461538461538462,0.576923076923077,1,1,1,0,1,0,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Woman",47,0,1
+1,0,0,1,0.423076923076923,0.461538461538462,1,0,0,0,0,0,0,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Woman",34,0,1
+1,1,0,1,0.384615384615385,0.461538461538462,0,1,1,1,0,1,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Man",38,1,1
+1,1,1,0,0.423076923076923,0.384615384615385,0,1,1,1,1,1,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",64,0,1
+1,0,0,1,0.461538461538462,0.461538461538462,0,1,0,0,0,1,1,"Michelle Buck (CEO of The Hershey Company)","Black or African American","Woman",37,0,0
+0,0,0,0,0.461538461538462,0.461538461538462,1,0,1,0,0,0,0,"James Dimon (CEO of JP Morgan)","White / Caucasian","Woman",43,0,1
+0,0,0,0,0.461538461538462,0.461538461538462,1,0,0,0,1,1,0,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Man",36,1,1
+1,1,0,1,0.384615384615385,0.346153846153846,0,0,1,1,0,0,1,"Anne Wojcicki (CEO of 23andMe)","Black or African American","Woman",48,0,0
+1,0,1,1,0.538461538461538,0.5,1,1,0,1,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Woman",23,0,1
+1,0,1,1,0.5,0.5,1,0,0,1,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","Black or African American","Woman",27,0,0
+1,1,1,0,0.346153846153846,0.384615384615385,0,1,0,0,1,1,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",51,0,1
+0,0,1,0,0.384615384615385,0.384615384615385,0,1,1,1,1,0,1,"Daymond John (Founder of FUBU)","White / Caucasian","Woman",29,0,1
+0,0,1,0,0.423076923076923,0.538461538461538,1,1,1,1,1,1,1,"Sean Combs (Founder of Bad Boy Entertainment)","American Indian or Alaskan Native","Man",59,1,0
+0,0,0,0,0.423076923076923,0.423076923076923,1,0,0,1,0,1,0,"James Dimon (CEO of JP Morgan)","White / Caucasian","Woman",27,0,1
+1,0,0,1,0.346153846153846,0.5,0,1,0,0,0,1,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",34,0,1
+1,0,1,1,0.384615384615385,0.423076923076923,0,0,1,1,1,1,1,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Woman",46,0,1
+1,0,0,0,0.461538461538462,0.538461538461538,1,0,0,0,0,0,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",73,1,1
+0,1,1,1,0.423076923076923,0.5,0,1,0,0,1,1,0,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Woman",41,0,1
+1,0,0,1,0.346153846153846,0.423076923076923,0,0,0,0,1,1,1,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Woman",46,0,1
+1,0,0,0,0.461538461538462,0.5,1,0,0,1,1,0,1,"Karen Lynch (CEO of CVS Health)","Asian / Pacific Islander","Woman",28,0,0
+1,0,1,0,0.346153846153846,0.423076923076923,0,0,0,0,1,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",33,1,1
+0,0,1,1,0.5,0.461538461538462,1,0,1,0,0,0,0,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Man",45,1,1
+1,0,0,1,0.461538461538462,0.538461538461538,1,0,1,0,0,0,0,"Mary Barra (CEO of General Motors)","Asian / Pacific Islander","Woman",49,0,0
+1,1,0,0,0.423076923076923,0.461538461538462,1,0,1,0,1,0,0,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",70,1,1
+0,1,1,0,0.346153846153846,0.384615384615385,0,1,0,1,0,1,1,"Bill Gates (Co-founder of Microsoft)","American Indian or Alaskan Native","Man",46,1,0
+1,0,1,0,0.346153846153846,0.423076923076923,0,0,1,1,1,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Woman",58,0,1
+0,0,0,1,0.423076923076923,0.423076923076923,1,1,0,1,0,0,0,"James Dimon (CEO of JP Morgan)","Asian / Pacific Islander","Man",28,1,0
+1,0,0,1,0.423076923076923,0.423076923076923,1,0,1,0,0,1,0,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",65,1,1
+0,0,0,0,0.384615384615385,0.346153846153846,0,0,1,0,1,1,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",32,1,1
+1,0,0,1,0.346153846153846,0.384615384615385,0,1,0,0,1,1,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",52,1,1
+1,1,0,1,0.423076923076923,0.5,1,0,0,0,0,0,0,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",35,1,1
+1,0,0,1,0.423076923076923,0.423076923076923,0,1,1,0,1,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",45,0,1
+1,0,0,0,0.423076923076923,0.461538461538462,1,0,1,1,0,1,0,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",58,0,1
+1,0,0,1,0.461538461538462,0.5,1,0,0,1,0,0,0,"Oprah Winfrey (CEO of Oprah Winfrey Network)","Black or African American","Woman",41,0,0
+1,0,1,0,0.307692307692308,0.461538461538462,0,0,1,1,1,1,1,"Tory Burch (Founder of Tory Burch)","White / Caucasian","Woman",51,0,1
+0,1,1,1,0.423076923076923,0.461538461538462,0,0,1,1,1,1,0,"Garrett Camp (Co-founder of Uber)","Black or African American","Woman",48,0,0
+1,1,0,1,0.384615384615385,0.423076923076923,0,1,1,1,1,1,1,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Woman",44,0,1
+1,0,0,0,0.346153846153846,0.423076923076923,0,1,1,1,0,1,1,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Man",50,1,1
+0,1,1,1,0.461538461538462,0.384615384615385,1,1,1,1,1,1,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Woman",38,0,1
+0,0,1,0,0.5,0.5,1,0,0,1,0,0,1,"Phil Knight (Co-founder of Nike)","Black or African American","Woman",33,0,0
+0,0,1,1,0.384615384615385,0.384615384615385,0,1,0,1,1,1,1,"Phil Knight (Co-founder of Nike)","White / Caucasian","Woman",34,0,1
+1,0,0,1,0.461538461538462,0.5,1,0,0,0,1,1,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Woman",37,0,1
+1,0,1,0,0.384615384615385,0.346153846153846,0,1,0,0,0,1,1,"Julia Hartz (Founder of EventBrite)","Black or African American","Woman",39,0,0
+1,1,0,0,0.384615384615385,0.384615384615385,0,0,0,1,1,0,0,"Safra Katz (CEO of Oracle)","White / Caucasian","Man",32,1,1
+1,0,0,1,0.423076923076923,0.538461538461538,1,0,0,0,0,0,0,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Woman",31,0,1
+0,0,0,0,0.461538461538462,0.461538461538462,1,0,0,1,1,0,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",69,0,1
+0,1,1,0,0.461538461538462,0.538461538461538,1,0,0,0,0,0,1,"Bill Gates (Co-founder of Microsoft)","Black or African American","Man",36,1,0
+0,0,1,0,0.423076923076923,0.423076923076923,0,1,1,0,1,1,0,"Sean Combs (Founder of Bad Boy Entertainment)","American Indian or Alaskan Native","Man",46,1,0
+1,1,1,1,0.384615384615385,0.384615384615385,0,1,1,1,1,0,1,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Woman",33,0,1
+1,0,1,1,0.5,0.461538461538462,1,0,0,0,0,0,1,"Julia Hartz (Founder of EventBrite)","Black or African American","Woman",55,0,0
+0,0,0,1,0.384615384615385,0.5,1,0,0,1,1,1,1,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Man",34,1,1
+1,0,0,1,0.346153846153846,0.423076923076923,0,0,0,1,1,0,1,"Carol Tome (CEO of UPS)","White / Caucasian","Man",40,1,1
+0,0,1,0,0.346153846153846,0.384615384615385,0,0,1,1,1,0,0,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Woman",40,0,1
+1,0,0,0,0.307692307692308,0.423076923076923,0,0,1,1,0,0,1,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Woman",41,0,1
+0,1,1,0,0.384615384615385,0.423076923076923,0,1,1,1,0,1,0,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Woman",42,0,1
+1,1,0,0,0.384615384615385,0.461538461538462,0,0,0,0,1,1,0,"Corie Barry (CEO of Best Buy)","White / Caucasian","Man",32,1,1
+0,1,0,0,0.423076923076923,0.461538461538462,1,0,1,1,1,0,1,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Non-binary",55,0,1
+1,0,0,0,0.423076923076923,0.461538461538462,1,0,0,0,0,1,1,"Karen Lynch (CEO of CVS Health)","Asian / Pacific Islander","Man",41,1,0
+1,1,0,0,0.461538461538462,0.538461538461538,1,0,0,0,0,0,1,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Woman",49,0,1
+0,1,1,1,0.461538461538462,0.461538461538462,1,0,0,0,0,1,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Man",48,1,1
+1,1,0,1,0.346153846153846,0.384615384615385,0,0,1,1,0,0,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Woman",50,0,1
+1,1,1,1,0.346153846153846,0.423076923076923,0,0,0,1,1,1,0,"Melanie Perkins (Founder of Canva)","Black or African American","Man",41,1,0
+0,1,1,0,0.461538461538462,0.576923076923077,1,1,0,0,1,0,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Woman",42,0,1
+1,0,0,0,0.346153846153846,0.423076923076923,0,0,1,1,0,1,0,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",60,1,1
+1,0,0,0,0.384615384615385,0.384615384615385,0,0,0,1,1,1,1,"Carol Tome (CEO of UPS)","White / Caucasian","Man",35,1,1
+1,1,0,1,0.346153846153846,0.346153846153846,0,0,1,0,0,1,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Woman",35,0,1
+0,0,1,0,0.5,0.461538461538462,1,0,0,0,0,1,0,"Daymond John (Founder of FUBU)","Hispanic / Latinx","Man",39,1,0
+1,1,0,1,0.461538461538462,0.538461538461538,1,0,0,0,0,0,0,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",42,1,1
+1,1,1,1,0.346153846153846,0.423076923076923,0,1,1,1,1,1,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",33,0,1
+1,0,1,1,0.5,0.538461538461538,1,0,0,1,1,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",53,1,1
+1,1,0,1,0.423076923076923,0.461538461538462,0,0,0,1,0,1,1,"Anne Wojcicki (CEO of 23andMe)","Asian / Pacific Islander","Woman",61,0,0
+0,1,1,0,0.461538461538462,0.423076923076923,1,0,0,0,0,0,0,"Larry Page (Co-founder of Google)","White / Caucasian","Man",41,1,1
+0,0,0,0,0.5,0.576923076923077,1,0,0,0,1,1,0,"Warren Buffet (CEO of Berkshire Hathaway)","American Indian or Alaskan Native","Man",30,1,0
+0,0,0,0,0.538461538461538,0.5,1,0,1,1,0,0,0,"James Dimon (CEO of JP Morgan)","White / Caucasian","Woman",41,0,1
+0,0,0,0,0.5,0.538461538461538,1,0,0,0,1,1,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",58,1,1
+1,1,0,1,0.461538461538462,0.5,1,0,0,0,1,0,0,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",64,1,1
+1,0,0,1,0.423076923076923,0.384615384615385,0,1,0,1,0,1,1,"Jane Fraser (CEO of Citigroup)","Black or African American","Man",45,1,0
+1,0,1,1,0.538461538461538,0.461538461538462,1,0,0,0,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",32,1,1
+1,1,0,1,0.346153846153846,0.346153846153846,0,1,1,0,1,0,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",44,0,1
+0,0,0,1,0.5,0.461538461538462,1,1,0,0,1,0,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",71,1,1
+1,0,1,1,0.384615384615385,0.461538461538462,0,1,1,0,0,1,1,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",25,1,1
+1,1,0,0,0.423076923076923,0.384615384615385,0,1,1,1,1,1,1,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Woman",68,0,1
+0,0,1,0,0.5,0.538461538461538,1,0,1,0,1,0,1,"Phil Knight (Co-founder of Nike)","White / Caucasian","Woman",29,0,1
+0,0,0,0,0.423076923076923,0.5,1,0,1,1,0,0,1,"James Dimon (CEO of JP Morgan)","Black or African American","Woman",36,0,0
+1,1,0,0,0.423076923076923,0.423076923076923,0,0,0,1,1,0,0,"Corie Barry (CEO of Best Buy)","Hispanic / Latinx","Man",36,1,0
+0,1,1,0,0.384615384615385,0.423076923076923,0,0,1,0,1,1,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Woman",62,0,1
+1,0,1,1,0.538461538461538,0.5,1,0,0,0,0,0,0,"Julia Hartz (Founder of EventBrite)","Asian / Pacific Islander","Man",28,1,0
+1,0,1,1,0.461538461538462,0.461538461538462,1,0,0,0,1,0,0,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Woman",32,0,1
+1,0,0,0,0.384615384615385,0.307692307692308,0,1,0,0,0,1,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Man",56,1,1
+1,1,1,0,0.538461538461538,0.461538461538462,1,0,1,0,1,1,0,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",40,0,1
+1,0,0,1,0.5,0.538461538461538,1,0,0,0,0,0,0,"Michelle Buck (CEO of The Hershey Company)","Asian / Pacific Islander","Man",50,1,0
+1,0,0,1,0.384615384615385,0.461538461538462,1,0,0,0,0,0,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",32,1,1
+1,0,0,1,0.346153846153846,0.461538461538462,0,1,1,1,1,1,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Woman",33,0,1
+1,0,0,1,0.461538461538462,0.5,1,0,0,0,0,0,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",30,1,1
+0,1,1,0,0.423076923076923,0.5,0,0,0,1,0,1,0,"Mark Zuckerberg (Co-founder of Facebook)","White / Caucasian","Man",21,1,1
+0,0,1,0,0.423076923076923,0.461538461538462,1,0,1,0,1,0,0,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Man",42,1,1
+1,1,0,0,0.307692307692308,0.384615384615385,0,1,1,1,0,1,1,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",36,1,1
+0,0,1,1,0.384615384615385,0.461538461538462,0,1,0,1,1,0,0,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Woman",49,0,1
+1,1,0,0,0.384615384615385,0.423076923076923,0,1,1,0,1,1,0,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Woman",42,0,1
+0,0,1,0,0.461538461538462,0.461538461538462,1,0,0,0,0,1,1,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Man",58,1,1
+1,0,0,0,0.269230769230769,0.461538461538462,0,0,1,0,1,1,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Woman",66,0,1
+1,0,1,1,0.346153846153846,0.5,0,0,0,0,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",33,1,1
+1,0,0,1,0.423076923076923,0.538461538461538,1,0,1,0,1,0,0,"Karen Lynch (CEO of CVS Health)","Hispanic / Latinx","Man",64,1,0
+1,1,1,0,0.423076923076923,0.423076923076923,0,0,1,1,1,1,0,"Whitney Wolfe Herd (Founder of Bumble)","Hispanic / Latinx","Man",24,1,0
+0,1,0,1,0.5,0.538461538461538,1,0,0,0,0,0,0,"Stewart Butterfield (CEO of Slack)","Asian / Pacific Islander","Man",24,1,0
+1,0,1,1,0.461538461538462,0.461538461538462,1,0,0,1,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",51,1,1
+1,0,1,0,0.5,0.461538461538462,1,0,1,1,1,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Woman",56,0,1
+0,1,0,0,0.423076923076923,0.384615384615385,0,1,1,1,1,1,1,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Woman",59,0,1
+0,1,1,0,0.5,0.538461538461538,1,1,0,0,0,0,1,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",34,0,1
+0,1,0,1,0.346153846153846,0.423076923076923,0,1,0,0,1,0,1,"Stewart Butterfield (CEO of Slack)","White / Caucasian","Man",46,1,1
+0,0,1,1,0.423076923076923,0.5,1,0,0,0,0,0,0,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",31,1,1
+0,1,1,1,0.346153846153846,0.423076923076923,0,0,0,1,1,0,1,"Sergey Brin (Co-founder of Google)","White / Caucasian","Woman",66,0,1
+0,1,1,1,0.423076923076923,0.423076923076923,0,1,0,1,0,1,0,"Sergey Brin (Co-founder of Google)","American Indian or Alaskan Native","Another gender not listed here:",38,0,0
+1,1,1,0,0.384615384615385,0.423076923076923,0,1,0,1,0,1,1,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Man",41,1,1
+0,1,1,1,0.423076923076923,0.461538461538462,1,0,0,0,0,0,0,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Man",32,1,1
+1,0,0,0,0.346153846153846,0.384615384615385,0,1,1,0,1,1,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Woman",65,0,1
+0,1,1,0,0.461538461538462,0.576923076923077,1,0,0,1,0,0,1,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Woman",43,0,1
+0,1,1,0,0.5,0.538461538461538,1,1,0,0,0,0,1,"Sergey Brin (Co-founder of Google)","White / Caucasian","Woman",37,0,1
+1,1,0,0,0.384615384615385,0.461538461538462,1,1,0,0,1,0,0,"Corie Barry (CEO of Best Buy)","White / Caucasian","Man",33,1,1
+0,1,1,0,0.538461538461538,0.461538461538462,1,1,0,0,0,0,1,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Man",37,1,1
+1,1,1,1,0.307692307692308,0.384615384615385,0,0,1,1,1,1,0,"Leah Busque (Founder of TaskRabbit)","Black or African American","Woman",23,0,0
+1,1,1,0,0.384615384615385,0.461538461538462,0,0,0,1,0,1,1,"Leah Busque (Founder of TaskRabbit)","Asian / Pacific Islander","Woman",35,0,0
+1,0,0,0,0.423076923076923,0.461538461538462,1,0,0,0,0,1,0,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",58,0,1
+1,1,0,0,0.269230769230769,0.384615384615385,0,1,0,1,0,1,1,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Woman",43,0,1
+0,1,1,1,0.384615384615385,0.384615384615385,0,1,0,1,1,1,1,"Mark Zuckerberg (Co-founder of Facebook)","Black or African American","Man",35,1,0
+1,0,0,1,0.423076923076923,0.5,1,0,1,1,0,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",51,0,1
+0,0,0,1,0.307692307692308,0.346153846153846,0,0,1,1,1,0,0,"James Dimon (CEO of JP Morgan)","Asian / Pacific Islander","Man",47,1,0
+1,0,0,1,0.461538461538462,0.423076923076923,1,1,1,1,1,1,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Woman",23,0,1
+0,0,0,1,0.384615384615385,0.384615384615385,0,0,1,0,1,1,1,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Woman",71,0,1
+1,0,1,0,0.538461538461538,0.461538461538462,1,0,1,0,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",45,1,1
+0,0,0,1,0.5,0.461538461538462,1,0,0,0,0,0,0,"James Dimon (CEO of JP Morgan)","Hispanic / Latinx","Man",38,1,0
+1,1,0,0,0.384615384615385,0.423076923076923,0,1,0,1,0,1,1,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",42,1,1
+0,0,0,1,0.346153846153846,0.384615384615385,0,1,0,0,1,1,1,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",64,0,1
+0,0,1,0,0.461538461538462,0.461538461538462,1,0,1,1,0,1,0,"Daymond John (Founder of FUBU)","White / Caucasian","Woman",41,0,1
+1,0,1,1,0.5,0.461538461538462,1,0,0,0,0,0,0,"Julia Hartz (Founder of EventBrite)","Black or African American","Woman",37,0,0
+1,0,0,0,0.307692307692308,0.384615384615385,0,1,1,1,1,0,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",32,0,1
+1,0,0,0,0.384615384615385,0.423076923076923,0,1,0,1,1,1,0,"Rosalind Brewer (CEO of Walgreens)","Black or African American","Woman",40,0,0
+1,0,0,0,0.5,0.5,1,0,0,0,0,1,0,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Woman",22,0,1
+0,1,1,0,0.307692307692308,0.384615384615385,0,1,1,1,1,0,1,"Sergey Brin (Co-founder of Google)","White / Caucasian","Man",72,1,1
+1,0,0,1,0.423076923076923,0.538461538461538,1,0,0,0,0,0,0,"Rosalind Brewer (CEO of Walgreens)","Black or African American","Man",32,1,0
+0,1,1,1,0.423076923076923,0.461538461538462,0,0,0,1,1,1,1,"Larry Page (Co-founder of Google)","White / Caucasian","Man",28,1,1
+1,0,0,1,0.346153846153846,0.423076923076923,0,0,0,1,0,1,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Woman",28,0,1
+1,0,1,0,0.384615384615385,0.423076923076923,0,1,1,1,1,1,1,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",38,1,1
+0,0,1,1,0.461538461538462,0.461538461538462,1,1,0,0,1,0,1,"Daymond John (Founder of FUBU)","White / Caucasian","Woman",33,0,1
+0,0,0,1,0.423076923076923,0.423076923076923,1,0,0,1,0,0,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",42,1,1
+1,1,1,1,0.384615384615385,0.461538461538462,0,0,1,0,1,0,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",42,0,1
+0,1,1,1,0.538461538461538,0.461538461538462,1,0,0,0,1,0,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Woman",31,0,1
+0,1,0,1,0.5,0.538461538461538,1,0,0,0,0,0,1,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Woman",39,0,1
+0,0,0,1,0.384615384615385,0.423076923076923,0,1,0,0,0,1,0,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Man",47,1,1
+1,0,0,1,0.384615384615385,0.346153846153846,0,1,1,0,1,1,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",25,1,1
+0,1,0,0,0.384615384615385,0.423076923076923,0,1,0,1,0,0,1,"Stewart Butterfield (CEO of Slack)","White / Caucasian","Woman",26,0,1
+0,0,1,0,0.5,0.5,1,0,0,0,0,0,0,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Woman",29,0,1
+1,1,0,1,0.346153846153846,0.423076923076923,0,1,1,1,1,0,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Man",62,1,1
+1,0,0,0,0.423076923076923,0.5,1,0,0,0,0,0,1,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Man",74,1,1
+1,0,0,0,0.384615384615385,0.384615384615385,0,0,1,0,0,1,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",30,1,1
+1,0,0,1,0.423076923076923,0.461538461538462,0,0,1,1,0,1,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",39,1,1
+0,0,0,0,0.5,0.5,1,0,0,1,1,1,1,"James Dimon (CEO of JP Morgan)","White / Caucasian","Woman",51,0,1
+0,0,1,1,0.423076923076923,0.423076923076923,1,0,0,0,0,0,0,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Woman",56,0,1
+1,0,0,0,0.423076923076923,0.5,1,0,0,0,1,1,0,"Michelle Buck (CEO of The Hershey Company)","Asian / Pacific Islander","Woman",39,0,0
+1,1,0,0,0.461538461538462,0.423076923076923,1,0,0,1,0,1,0,"Anne Wojcicki (CEO of 23andMe)","Black or African American","Man",52,1,0
+1,1,1,0,0.423076923076923,0.346153846153846,0,1,1,1,0,0,0,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",28,0,1
+1,1,0,0,0.384615384615385,0.423076923076923,0,1,1,1,0,1,1,"Safra Katz (CEO of Oracle)","Asian / Pacific Islander","Man",33,1,0
+1,1,0,1,0.384615384615385,0.384615384615385,0,1,0,0,1,1,1,"Kathy Warden (CEO of Northrupp Grumman)","Black or African American","Man",32,1,0
+1,0,0,1,0.384615384615385,0.461538461538462,0,0,1,0,1,0,1,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Man",27,1,1
+0,1,1,1,0.423076923076923,0.423076923076923,0,1,1,1,1,1,1,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",30,0,1
+1,0,0,1,0.307692307692308,0.384615384615385,0,1,1,0,0,1,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",67,0,1
+1,0,0,0,0.423076923076923,0.5,0,0,0,1,1,1,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",42,0,1
+0,1,1,1,0.423076923076923,0.5,1,0,0,0,0,0,0,"Larry Page (Co-founder of Google)","White / Caucasian","Man",45,1,1
+0,1,0,1,0.461538461538462,0.538461538461538,1,0,0,0,1,1,0,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Woman",70,0,1
+1,1,0,1,0.384615384615385,0.423076923076923,0,0,0,1,0,1,0,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",48,1,1
+1,0,0,0,0.5,0.461538461538462,1,0,0,0,0,0,0,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",73,1,1
+0,0,0,0,0.346153846153846,0.384615384615385,0,0,1,0,1,1,1,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Woman",30,0,1
+0,1,1,1,0.461538461538462,0.384615384615385,1,0,0,0,0,0,1,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Man",35,1,1
+1,0,0,1,0.384615384615385,0.538461538461538,1,0,0,0,0,0,0,"Oprah Winfrey (CEO of Oprah Winfrey Network)","Black or African American","Woman",48,0,0
+0,1,0,1,0.461538461538462,0.5,1,0,0,0,0,0,0,"Tim Cook (CEO of Apple)","White / Caucasian","Woman",45,0,1
+1,0,0,0,0.384615384615385,0.346153846153846,0,1,1,1,1,0,1,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Woman",26,0,1
+1,0,1,0,0.5,0.461538461538462,1,0,1,1,0,0,0,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",46,1,1
+1,0,0,0,0.461538461538462,0.461538461538462,1,0,0,1,0,0,1,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",39,0,1
+0,0,0,1,0.384615384615385,0.384615384615385,0,0,0,0,1,1,1,"James Dimon (CEO of JP Morgan)","White / Caucasian","Man",48,1,1
+0,0,0,0,0.423076923076923,0.423076923076923,0,1,1,1,0,1,1,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",57,0,1
+0,1,0,1,0.384615384615385,0.423076923076923,0,1,1,1,1,0,1,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Woman",41,0,1
+1,0,0,1,0.461538461538462,0.461538461538462,1,0,0,0,0,1,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Woman",50,0,1
+0,1,0,0,0.346153846153846,0.384615384615385,0,1,1,1,1,0,0,"Tim Cook (CEO of Apple)","White / Caucasian","Man",46,1,1
+0,1,0,1,0.461538461538462,0.384615384615385,1,0,0,0,1,1,1,"Jeff Weiner (CEO of LinkedIn)","Hispanic / Latinx","Woman",30,0,0
+1,0,0,0,0.5,0.5,1,0,0,1,0,0,0,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Woman",32,0,1
+1,0,0,1,0.423076923076923,0.423076923076923,0,0,0,1,0,0,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Woman",46,0,1
+0,0,1,1,0.461538461538462,0.538461538461538,1,0,0,0,0,1,0,"Daymond John (Founder of FUBU)","White / Caucasian","Man",42,1,1
+0,0,0,0,0.5,0.461538461538462,1,0,1,0,0,0,0,"Marvin Ellison (CEO of Lowe’s)","Asian / Pacific Islander","Man",43,1,0
+1,0,0,0,0.423076923076923,0.423076923076923,0,0,0,1,1,1,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Woman",59,0,1
+1,0,0,0,0.346153846153846,0.5,0,1,0,1,0,1,1,"Mary Barra (CEO of General Motors)","Asian / Pacific Islander","Woman",31,0,0
+0,1,1,0,0.5,0.461538461538462,1,1,0,1,0,1,1,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Woman",60,0,1
+1,1,0,0,0.461538461538462,0.5,1,0,0,0,1,1,0,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",30,1,1
+0,0,1,0,0.5,0.461538461538462,1,0,0,0,0,0,1,"Daymond John (Founder of FUBU)","White / Caucasian","Man",58,1,1
+1,1,0,0,0.307692307692308,0.384615384615385,0,1,1,0,0,1,1,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Woman",46,0,1
+0,0,0,1,0.423076923076923,0.461538461538462,1,0,0,0,0,0,0,"Warren Buffet (CEO of Berkshire Hathaway)","Asian / Pacific Islander","Man",37,1,0
+1,0,0,0,0.423076923076923,0.423076923076923,0,0,1,0,1,1,0,"Michelle Buck (CEO of The Hershey Company)","American Indian or Alaskan Native","Woman",59,0,0
+1,1,0,0,0.346153846153846,0.5,0,1,1,0,1,1,0,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",35,1,1
+0,0,0,0,0.5,0.461538461538462,1,0,1,0,0,0,0,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Man",40,1,1
+0,1,0,0,0.461538461538462,0.5,1,0,0,1,0,1,0,"Sundar Pichai (CEO of Alphabet Inc.)","Black or African American","Woman",41,0,0
+1,0,0,0,0.384615384615385,0.384615384615385,0,1,1,1,1,1,1,"Oprah Winfrey (CEO of Oprah Winfrey Network)","American Indian or Alaskan Native","Man",56,1,0
+0,0,1,0,0.5,0.461538461538462,1,0,0,0,1,1,1,"Daymond John (Founder of FUBU)","White / Caucasian","Woman",64,0,1
+0,1,1,1,0.384615384615385,0.461538461538462,0,1,1,0,1,0,1,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Woman",60,0,1
+1,0,0,1,0.346153846153846,0.384615384615385,0,1,1,1,1,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",39,0,1
+1,0,1,1,0.384615384615385,0.384615384615385,0,0,1,0,1,0,1,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Woman",69,0,1
+1,1,1,1,0.461538461538462,0.5,1,1,0,0,0,0,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Man",55,1,1
+1,0,0,1,0.423076923076923,0.423076923076923,1,0,0,0,0,1,0,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Woman",37,0,1
+1,1,1,0,0.346153846153846,0.423076923076923,0,1,0,1,1,1,1,"Melanie Perkins (Founder of Canva)","Black or African American","Woman",46,0,0
+1,0,0,1,0.423076923076923,0.423076923076923,0,0,0,1,0,0,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",61,0,1
+1,0,0,1,0.461538461538462,0.423076923076923,0,0,0,0,1,0,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",27,1,1
+0,0,0,0,0.384615384615385,0.423076923076923,1,0,0,0,0,0,0,"Warren Buffet (CEO of Berkshire Hathaway)","Black or African American","Man",55,1,0
+0,0,0,1,0.307692307692308,0.384615384615385,0,0,1,1,1,0,1,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Man",50,1,1
+1,0,0,1,0.461538461538462,0.5,1,0,0,0,0,0,0,"Delphine Arnault (CEO of Christian Dior)","Black or African American","Woman",35,0,0
+0,1,1,0,0.461538461538462,0.423076923076923,0,1,1,1,1,1,1,"Garrett Camp (Co-founder of Uber)","Asian / Pacific Islander","Woman",45,0,0
+1,0,0,0,0.5,0.5,1,0,0,0,0,0,0,"Jane Fraser (CEO of Citigroup)","Hispanic / Latinx","Man",25,1,0
+0,0,0,1,0.538461538461538,0.538461538461538,1,0,0,0,0,1,0,"James Dimon (CEO of JP Morgan)","White / Caucasian","Woman",57,0,1
+0,0,1,0,0.384615384615385,0.384615384615385,0,0,1,0,0,0,1,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",24,1,1
+1,1,0,0,0.461538461538462,0.5,1,0,1,0,0,0,1,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Woman",56,0,1
+0,0,1,1,0.384615384615385,0.461538461538462,0,0,1,1,0,1,1,"Phil Knight (Co-founder of Nike)","White / Caucasian","Woman",34,0,1
+1,1,1,0,0.307692307692308,0.423076923076923,0,1,1,1,0,1,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",57,0,1
+1,0,0,1,0.5,0.538461538461538,1,0,0,0,0,0,0,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Woman",26,0,1
+1,0,0,1,0.346153846153846,0.384615384615385,0,0,1,0,0,1,0,"Mary Barra (CEO of General Motors)","Asian / Pacific Islander","Man",26,1,0
+0,0,0,0,0.538461538461538,0.5,1,1,0,1,0,0,1,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Woman",56,0,1
+0,1,1,0,0.423076923076923,0.461538461538462,0,1,1,1,1,0,1,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Man",26,1,1
+0,0,1,1,0.384615384615385,0.423076923076923,0,0,0,1,0,1,1,"Daymond John (Founder of FUBU)","Black or African American","Woman",53,0,0
+0,1,1,0,0.346153846153846,0.5,0,1,0,1,1,0,1,"Sergey Brin (Co-founder of Google)","Black or African American","Man",34,1,0
+0,0,1,1,0.423076923076923,0.5,1,0,1,1,0,1,1,"Phil Knight (Co-founder of Nike)","White / Caucasian","Woman",44,0,1
+1,0,1,0,0.384615384615385,0.461538461538462,0,1,0,1,1,1,1,"Arianna Huffington (Co-founder of Huffington Post)","Hispanic / Latinx","Woman",27,0,0
+1,0,0,1,0.461538461538462,0.423076923076923,1,1,0,0,0,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",24,0,1
+1,0,0,1,0.5,0.461538461538462,1,0,0,0,0,0,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",62,1,1
+1,0,1,0,0.461538461538462,0.423076923076923,1,0,1,0,1,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Woman",49,0,1
+0,0,1,1,0.461538461538462,0.461538461538462,1,1,1,0,0,1,0,"Daymond John (Founder of FUBU)","White / Caucasian","Man",34,1,1
+0,1,1,1,0.5,0.5,1,0,0,0,0,0,0,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Man",34,1,1
+0,1,0,0,0.423076923076923,0.461538461538462,1,0,0,0,1,0,0,"Tim Cook (CEO of Apple)","Black or African American","Man",51,1,0
+0,0,0,1,0.423076923076923,0.461538461538462,0,0,1,1,0,0,1,"Charles Koch (CEO of Koch Industries)","Black or African American","Woman",49,0,0
+1,0,1,1,0.307692307692308,0.384615384615385,0,1,1,1,1,1,1,"Tory Burch (Founder of Tory Burch)","White / Caucasian","Woman",28,0,1
+0,0,0,1,0.461538461538462,0.5,1,0,1,1,0,0,0,"James Dimon (CEO of JP Morgan)","White / Caucasian","Woman",26,0,1
+0,1,1,0,0.5,0.461538461538462,1,0,1,0,1,0,0,"Sergey Brin (Co-founder of Google)","White / Caucasian","Man",44,1,1
+1,0,0,0,0.423076923076923,0.384615384615385,0,0,1,0,0,1,0,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Man",42,1,1
+1,1,1,1,0.384615384615385,0.423076923076923,0,1,0,1,1,1,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Man",40,1,1
+1,0,0,1,0.538461538461538,0.461538461538462,1,0,0,0,0,1,0,"Tricia Griffith (CEO of Progressive)","Asian / Pacific Islander","Man",33,1,0
+0,1,1,1,0.346153846153846,0.423076923076923,0,0,1,1,0,1,0,"Mark Zuckerberg (Co-founder of Facebook)","White / Caucasian","Woman",43,0,1
+1,0,0,0,0.384615384615385,0.5,0,1,0,0,0,1,1,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Man",45,1,1
+0,1,1,1,0.423076923076923,0.461538461538462,0,1,1,1,1,0,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Woman",33,0,1
+0,1,1,0,0.423076923076923,0.423076923076923,0,1,1,1,0,1,1,"Sergey Brin (Co-founder of Google)","White / Caucasian","Woman",63,0,1
+0,0,0,1,0.5,0.461538461538462,1,0,0,0,0,1,0,"James Gorman (CEO of Morgan Stanley)","Asian / Pacific Islander","Woman",55,0,0
+1,0,1,1,0.5,0.423076923076923,1,0,1,1,0,0,1,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Woman",28,0,1
+1,0,0,0,0.5,0.5,1,0,0,0,1,0,1,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Woman",61,0,1
+0,1,1,1,0.5,0.5,1,0,0,0,0,0,0,"Sergey Brin (Co-founder of Google)","White / Caucasian","Woman",28,0,1
+0,0,0,0,0.461538461538462,0.423076923076923,1,1,1,0,0,0,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",45,0,1
+1,1,1,0,0.384615384615385,0.307692307692308,0,0,1,0,0,1,1,"Leah Busque (Founder of TaskRabbit)","Hispanic / Latinx","Woman",32,0,0
+1,0,1,1,0.5,0.5,1,0,0,0,0,1,0,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Woman",33,0,1
+1,0,0,1,0.346153846153846,0.384615384615385,0,0,1,1,0,1,1,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Man",34,1,1
+0,1,1,0,0.461538461538462,0.5,1,0,0,0,0,0,0,"Sergey Brin (Co-founder of Google)","White / Caucasian","Woman",30,0,1
+1,0,0,1,0.384615384615385,0.461538461538462,0,0,0,0,1,1,1,"Carol Tome (CEO of UPS)","White / Caucasian","Man",42,1,1
+1,0,0,0,0.423076923076923,0.461538461538462,1,0,1,0,0,0,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Woman",53,0,1
+0,0,1,1,0.346153846153846,0.384615384615385,0,0,0,1,0,0,1,"Michael Bloomberg (Co-founder of Bloomberg LP)","Asian / Pacific Islander","Woman",31,0,0
+1,1,1,1,0.307692307692308,0.384615384615385,0,1,1,1,1,1,1,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Woman",47,0,1
+1,1,0,0,0.346153846153846,0.307692307692308,0,1,0,1,1,1,0,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",48,0,1
+1,0,0,1,0.5,0.5,1,1,1,1,1,1,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Woman",44,0,1
+1,1,1,0,0.461538461538462,0.461538461538462,1,0,0,0,1,1,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",52,0,1
+0,0,1,0,0.423076923076923,0.461538461538462,1,0,0,0,0,1,0,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Man",34,1,1
+0,0,0,1,0.346153846153846,0.423076923076923,0,0,0,1,1,0,0,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Woman",38,0,1
+0,0,1,0,0.423076923076923,0.384615384615385,0,1,0,1,1,0,1,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Woman",54,0,1
+0,0,0,0,0.461538461538462,0.461538461538462,1,0,0,0,1,0,0,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Woman",45,0,1
+1,1,0,1,0.346153846153846,0.423076923076923,0,0,1,0,0,1,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",44,0,1
+1,0,0,1,0.346153846153846,0.461538461538462,0,0,1,0,1,0,0,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",45,1,1
+0,0,1,0,0.461538461538462,0.5,1,0,0,1,0,1,0,"Phil Knight (Co-founder of Nike)","White / Caucasian","Woman",48,0,1
+0,0,1,0,0.461538461538462,0.5,1,1,0,1,0,0,0,"Phil Knight (Co-founder of Nike)","Asian / Pacific Islander","Man",43,1,0
+0,1,0,1,0.461538461538462,0.461538461538462,1,0,1,1,1,0,0,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Woman",71,0,1
+1,0,0,0,0.269230769230769,0.384615384615385,0,1,1,1,1,1,1,"Karen Lynch (CEO of CVS Health)","Black or African American","Woman",51,0,0
+1,0,0,0,0.384615384615385,0.384615384615385,0,1,0,0,0,0,1,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Non-binary",25,0,1
+1,0,0,1,0.384615384615385,0.384615384615385,0,1,0,1,1,0,1,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Woman",24,0,1
+0,0,1,0,0.461538461538462,0.461538461538462,1,1,1,1,0,0,0,"Phil Knight (Co-founder of Nike)","White / Caucasian","Woman",41,0,1
+1,0,0,0,0.346153846153846,0.423076923076923,0,0,0,0,0,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",36,1,1
+1,1,0,1,0.461538461538462,0.461538461538462,1,0,0,0,1,1,0,"Safra Katz (CEO of Oracle)","White / Caucasian","Man",39,1,1
+0,1,1,1,0.5,0.461538461538462,1,0,0,0,0,0,0,"Sergey Brin (Co-founder of Google)","White / Caucasian","Man",60,1,1
+0,1,0,0,0.423076923076923,0.5,1,0,0,0,0,0,0,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Man",35,1,1
+1,0,1,0,0.384615384615385,0.423076923076923,0,0,0,0,1,1,0,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Woman",25,0,1
+1,1,0,0,0.423076923076923,0.461538461538462,0,1,1,0,1,1,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",37,0,1
+1,1,0,0,0.423076923076923,0.461538461538462,0,1,1,0,1,1,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",52,0,1
+1,0,1,1,0.5,0.5,1,0,0,1,0,0,1,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",30,1,1
+1,1,1,1,0.461538461538462,0.538461538461538,1,0,0,0,0,0,0,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Man",42,1,1
+0,1,1,0,0.5,0.461538461538462,1,0,0,0,1,0,0,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Man",69,1,1
+0,0,0,0,0.384615384615385,0.384615384615385,0,0,1,0,1,1,1,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",26,1,1
+1,0,1,1,0.461538461538462,0.5,1,1,0,0,0,0,1,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",38,1,1
+0,0,1,1,0.423076923076923,0.5,1,1,0,0,0,0,0,"Phil Knight (Co-founder of Nike)","Black or African American","Woman",21,0,0
+1,1,1,1,0.461538461538462,0.5,1,0,0,0,0,0,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",40,0,1
+1,0,0,1,0.423076923076923,0.5,1,0,0,0,0,0,1,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Woman",35,0,1
+1,0,0,0,0.576923076923077,0.5,1,0,0,0,0,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",38,1,1
+1,0,0,1,0.384615384615385,0.461538461538462,0,0,1,1,0,1,1,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",50,0,1
+0,1,0,0,0.423076923076923,0.5,1,0,0,0,0,0,0,"Tim Cook (CEO of Apple)","White / Caucasian","Man",39,1,1
+1,0,0,0,0.384615384615385,0.5,0,0,1,1,1,0,1,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Woman",23,0,1
+0,1,0,1,0.461538461538462,0.5,1,0,0,0,0,0,0,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Man",41,1,1
+0,1,1,1,0.384615384615385,0.384615384615385,0,1,0,1,1,1,1,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",25,0,1
+0,1,0,1,0.307692307692308,0.384615384615385,0,0,1,0,1,0,1,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Woman",55,0,1
+1,0,0,0,0.346153846153846,0.423076923076923,0,1,0,1,1,0,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Woman",56,0,1
+0,0,0,0,0.461538461538462,0.5,1,0,0,1,0,0,0,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Man",30,1,1
+1,1,0,1,0.346153846153846,0.384615384615385,0,1,0,0,0,1,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Man",30,1,1
+0,0,1,0,0.423076923076923,0.461538461538462,1,0,0,0,0,0,0,"Phil Knight (Co-founder of Nike)","Black or African American","Man",33,1,0
+1,0,0,0,0.423076923076923,0.384615384615385,0,0,1,0,1,1,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",57,1,1
+1,1,1,0,0.384615384615385,0.423076923076923,0,0,1,0,1,1,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Man",47,1,1
+1,1,1,1,0.307692307692308,0.384615384615385,0,1,1,1,1,0,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",45,0,1
+0,1,1,1,0.307692307692308,0.423076923076923,0,1,1,1,0,0,0,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Man",61,1,1
+0,0,1,0,0.461538461538462,0.576923076923077,1,0,0,0,0,0,0,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",52,1,1
+0,0,1,0,0.461538461538462,0.5,1,0,0,0,0,0,1,"Michael Bloomberg (Co-founder of Bloomberg LP)","Asian / Pacific Islander","Man",32,1,0
+1,0,0,1,0.423076923076923,0.461538461538462,1,0,0,0,1,0,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",39,1,1
+1,1,0,0,0.5,0.461538461538462,1,1,1,1,1,1,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Woman",41,0,1
+1,1,1,0,0.307692307692308,0.346153846153846,0,0,0,1,1,0,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Man",44,1,1
+1,0,1,0,0.346153846153846,0.461538461538462,0,0,1,0,1,1,1,"Arianna Huffington (Co-founder of Huffington Post)","Asian / Pacific Islander","Woman",42,0,0
+1,0,0,0,0.423076923076923,0.423076923076923,1,0,0,1,0,1,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Man",70,1,1
+1,1,0,1,0.461538461538462,0.5,1,0,0,0,0,0,0,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",71,1,1
+1,1,1,1,0.269230769230769,0.384615384615385,0,0,1,0,1,0,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Man",57,1,1
+1,0,0,1,0.346153846153846,0.346153846153846,0,0,0,0,1,0,1,"Michelle Buck (CEO of The Hershey Company)","Asian / Pacific Islander","Man",33,1,0
+1,0,0,0,0.346153846153846,0.423076923076923,0,1,1,1,0,1,1,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Woman",45,0,1
+0,0,0,1,0.461538461538462,0.423076923076923,1,0,0,0,0,0,1,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Man",26,1,1
+1,1,0,0,0.423076923076923,0.384615384615385,0,1,1,1,0,1,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Non-binary",32,0,1
+0,1,1,1,0.423076923076923,0.461538461538462,0,0,1,0,1,1,1,"Larry Page (Co-founder of Google)","Black or African American","Woman",41,0,0
+1,0,1,0,0.384615384615385,0.461538461538462,0,0,0,1,1,0,0,"Tory Burch (Founder of Tory Burch)","Asian / Pacific Islander","Man",35,1,0
+0,0,0,1,0.423076923076923,0.423076923076923,1,0,0,0,0,0,0,"James Dimon (CEO of JP Morgan)","White / Caucasian","Man",38,1,1
+1,0,1,1,0.346153846153846,0.461538461538462,0,1,1,0,0,1,1,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Woman",30,0,1
+1,0,1,1,0.307692307692308,0.346153846153846,0,1,1,1,1,0,1,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",33,1,1
+0,0,1,0,0.5,0.538461538461538,1,0,0,0,0,0,0,"Phil Knight (Co-founder of Nike)","White / Caucasian","Woman",59,0,1
+1,0,1,1,0.5,0.461538461538462,1,0,0,0,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",44,1,1
+0,0,1,0,0.423076923076923,0.384615384615385,0,1,0,0,0,0,0,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Woman",29,0,1
+0,0,1,1,0.423076923076923,0.538461538461538,1,0,0,0,1,1,1,"Sean Combs (Founder of Bad Boy Entertainment)","Black or African American","Woman",31,0,0
+1,1,1,0,0.346153846153846,0.384615384615385,0,1,0,0,1,1,0,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",40,0,1
+1,0,1,1,0.5,0.461538461538462,1,0,0,0,1,0,0,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",29,1,1
+1,0,0,0,0.423076923076923,0.5,1,1,0,0,0,0,1,"Karen Lynch (CEO of CVS Health)","Asian / Pacific Islander","Man",52,1,0
+0,0,1,1,0.423076923076923,0.384615384615385,0,0,0,0,0,0,0,"Daymond John (Founder of FUBU)","White / Caucasian","Man",40,1,1
+1,1,0,1,0.423076923076923,0.5,1,0,0,0,0,0,0,"Anne Wojcicki (CEO of 23andMe)","Black or African American","Woman",28,0,0
+1,0,1,1,0.461538461538462,0.423076923076923,1,0,0,0,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",58,1,1
+1,1,0,0,0.346153846153846,0.423076923076923,0,1,1,0,0,1,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Woman",43,0,1
+1,1,0,0,0.461538461538462,0.461538461538462,1,0,0,0,0,0,1,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",53,1,1
+1,0,0,1,0.5,0.423076923076923,1,1,0,0,0,0,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",41,0,1
+0,1,1,1,0.346153846153846,0.423076923076923,0,1,0,0,1,1,1,"Jeff Bezos (Founder of Amazon)","Asian / Pacific Islander","Woman",31,0,0
+1,1,0,0,0.384615384615385,0.384615384615385,0,1,1,1,1,0,1,"Safra Katz (CEO of Oracle)","Black or African American","Man",56,1,0
+1,0,0,1,0.307692307692308,0.461538461538462,0,1,1,1,1,1,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Man",25,1,1
+1,0,0,0,0.346153846153846,0.423076923076923,0,0,1,1,1,0,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",37,1,1
+1,0,0,1,0.5,0.461538461538462,1,0,1,0,0,1,0,"Tricia Griffith (CEO of Progressive)","Black or African American","Man",29,1,0
+1,0,1,1,0.307692307692308,0.423076923076923,0,0,0,1,1,1,1,"Tory Burch (Founder of Tory Burch)","White / Caucasian","Woman",27,0,1
+1,1,0,0,0.384615384615385,0.423076923076923,0,0,1,1,1,1,1,"Corie Barry (CEO of Best Buy)","Hispanic / Latinx","Man",27,1,0
+1,0,1,1,0.346153846153846,0.384615384615385,0,1,0,0,1,1,1,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",25,1,1
+0,0,1,0,0.461538461538462,0.538461538461538,1,0,0,1,0,1,0,"Daymond John (Founder of FUBU)","White / Caucasian","Woman",43,0,1
+1,1,1,1,0.461538461538462,0.5,1,1,1,1,1,1,1,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Woman",59,0,1
+0,0,1,0,0.461538461538462,0.384615384615385,1,0,0,1,1,1,0,"Daymond John (Founder of FUBU)","White / Caucasian","Man",37,1,1
+0,0,1,0,0.461538461538462,0.5,1,1,0,0,1,1,0,"Daymond John (Founder of FUBU)","White / Caucasian","Man",39,1,1
+0,0,0,0,0.5,0.423076923076923,1,0,0,0,0,0,1,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Man",42,1,1
+1,0,0,0,0.307692307692308,0.384615384615385,0,0,0,1,1,0,0,"Mary Barra (CEO of General Motors)","Asian / Pacific Islander","Man",28,1,0
+0,0,1,0,0.538461538461538,0.5,1,0,1,0,0,1,0,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Woman",68,0,1
+0,1,0,0,0.461538461538462,0.538461538461538,1,0,0,0,0,0,0,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Woman",69,0,1
+1,0,0,1,0.346153846153846,0.5,0,0,0,1,1,1,0,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Woman",44,0,1
+1,0,0,0,0.384615384615385,0.423076923076923,0,0,0,1,1,0,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",62,0,1
+1,0,0,1,0.5,0.5,1,0,0,0,1,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",41,1,1
+0,0,1,1,0.5,0.5,1,0,1,0,0,1,1,"Phil Knight (Co-founder of Nike)","Asian / Pacific Islander","Woman",48,0,0
+1,1,0,0,0.423076923076923,0.538461538461538,1,0,0,0,0,0,0,"Corie Barry (CEO of Best Buy)","White / Caucasian","Man",40,1,1
+0,1,1,1,0.5,0.423076923076923,1,0,1,0,0,0,0,"Mark Zuckerberg (Co-founder of Facebook)","White / Caucasian","Woman",54,0,1
+0,1,1,1,0.307692307692308,0.423076923076923,0,0,0,1,1,0,1,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Man",43,1,1
+1,0,0,1,0.307692307692308,0.384615384615385,0,1,1,1,1,0,1,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",50,0,1
+1,0,1,0,0.346153846153846,0.384615384615385,0,0,1,0,0,1,1,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Woman",48,0,1
+0,1,1,0,0.538461538461538,0.5,1,0,1,0,1,0,1,"Garrett Camp (Co-founder of Uber)","Asian / Pacific Islander","Woman",36,0,0
+1,0,0,1,0.461538461538462,0.423076923076923,1,0,0,1,0,0,0,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Woman",46,0,1
+1,0,0,0,0.384615384615385,0.384615384615385,0,1,0,1,0,0,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",33,1,1
+1,1,0,0,0.538461538461538,0.5,1,1,0,0,1,0,0,"Corie Barry (CEO of Best Buy)","White / Caucasian","Woman",40,0,1
+0,1,0,1,0.346153846153846,0.461538461538462,0,0,0,0,1,0,1,"Tim Cook (CEO of Apple)","White / Caucasian","Man",35,1,1
+1,1,1,0,0.346153846153846,0.423076923076923,0,1,1,1,1,1,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Man",42,1,1
+0,0,0,1,0.346153846153846,0.423076923076923,0,1,1,1,1,0,1,"James Dimon (CEO of JP Morgan)","White / Caucasian","Woman",32,0,1
+1,0,0,1,0.538461538461538,0.423076923076923,1,0,0,0,0,1,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",34,1,1
+0,1,1,1,0.5,0.423076923076923,0,0,0,0,0,0,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Man",45,1,1
+1,0,0,1,0.461538461538462,0.5,1,0,0,0,0,1,0,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",38,1,1
+0,1,0,0,0.461538461538462,0.538461538461538,1,0,0,0,1,0,0,"Jeff Weiner (CEO of LinkedIn)","Black or African American","Woman",27,0,0
+1,0,1,1,0.538461538461538,0.5,1,0,0,0,0,0,1,"Tory Burch (Founder of Tory Burch)","Asian / Pacific Islander","Man",43,1,0
+1,1,0,0,0.384615384615385,0.423076923076923,0,1,0,0,0,1,1,"Corie Barry (CEO of Best Buy)","Black or African American","Woman",30,0,0
+0,1,1,1,0.423076923076923,0.461538461538462,1,0,0,0,1,0,0,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",50,0,1
+1,0,0,1,0.346153846153846,0.461538461538462,0,1,1,0,0,1,0,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",66,1,1
+0,1,1,0,0.5,0.5,1,0,0,1,0,1,0,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Woman",43,0,1
+0,0,1,1,0.423076923076923,0.538461538461538,1,0,0,0,0,0,1,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Man",48,1,1
+1,1,0,0,0.423076923076923,0.461538461538462,1,0,0,1,1,1,0,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",57,1,1
+1,0,0,0,0.346153846153846,0.384615384615385,0,0,0,1,1,1,0,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Woman",71,0,1
+1,0,0,1,0.5,0.5,1,0,0,0,0,1,1,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Man",48,1,1
+0,0,0,0,0.538461538461538,0.423076923076923,1,0,0,1,1,0,1,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",62,1,1
+1,1,0,0,0.346153846153846,0.384615384615385,0,0,1,0,0,0,1,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",28,1,1
+0,0,1,1,0.461538461538462,0.461538461538462,0,0,1,0,1,0,1,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Woman",39,0,1
+0,1,0,0,0.5,0.461538461538462,1,0,0,0,0,0,1,"Tim Cook (CEO of Apple)","Asian / Pacific Islander","Woman",38,0,0
+1,0,0,0,0.346153846153846,0.423076923076923,0,1,0,1,0,1,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",66,0,1
+0,1,1,1,0.346153846153846,0.461538461538462,0,1,1,1,0,1,1,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Woman",46,0,1
+0,1,1,1,0.384615384615385,0.461538461538462,0,0,1,1,1,1,0,"Jeff Bezos (Founder of Amazon)","Asian / Pacific Islander","Woman",37,0,0
+1,0,0,0,0.384615384615385,0.423076923076923,0,1,1,1,1,1,0,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",50,0,1
+0,0,0,0,0.346153846153846,0.346153846153846,0,0,1,0,1,1,0,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Man",68,1,1
+1,0,0,0,0.346153846153846,0.384615384615385,0,0,0,0,0,0,1,"Jane Fraser (CEO of Citigroup)","Black or African American","Woman",25,0,0
+1,0,0,0,0.423076923076923,0.423076923076923,1,0,0,0,0,0,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Woman",64,0,1
+1,0,0,0,0.423076923076923,0.346153846153846,0,1,0,0,1,0,0,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Man",40,1,1
+1,1,1,1,0.5,0.538461538461538,1,1,1,1,0,1,0,"Melanie Perkins (Founder of Canva)","White / Caucasian","Man",26,1,1
+1,0,1,0,0.307692307692308,0.461538461538462,0,1,1,1,1,0,1,"Arianna Huffington (Co-founder of Huffington Post)","Black or African American","Man",47,1,0
+0,0,0,1,0.461538461538462,0.5,1,0,0,1,0,1,0,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Woman",42,0,1
+1,1,0,1,0.384615384615385,0.384615384615385,0,0,0,1,1,0,1,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",50,0,1
+0,0,0,0,0.5,0.461538461538462,1,0,0,0,0,1,0,"Warren Buffet (CEO of Berkshire Hathaway)","Asian / Pacific Islander","Man",26,1,0
+1,0,0,0,0.5,0.461538461538462,1,0,0,1,0,1,0,"Delphine Arnault (CEO of Christian Dior)","Asian / Pacific Islander","Man",31,1,0
+1,1,1,0,0.384615384615385,0.423076923076923,0,0,1,0,0,1,1,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",24,0,1
+0,0,0,1,0.423076923076923,0.461538461538462,1,0,0,0,0,0,0,"James Dimon (CEO of JP Morgan)","Hispanic / Latinx","Woman",45,0,0
+1,0,0,1,0.346153846153846,0.423076923076923,0,0,1,1,0,1,1,"Carol Tome (CEO of UPS)","Asian / Pacific Islander","Man",33,1,0
+1,1,0,1,0.346153846153846,0.384615384615385,0,0,0,1,1,0,1,"Corie Barry (CEO of Best Buy)","White / Caucasian","Woman",27,0,1
+1,0,1,0,0.423076923076923,0.461538461538462,1,0,0,0,1,1,1,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",44,1,1
+1,0,0,1,0.423076923076923,0.423076923076923,1,0,0,0,0,1,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Woman",35,0,1
+1,1,0,0,0.346153846153846,0.384615384615385,0,0,1,1,1,1,0,"Safra Katz (CEO of Oracle)","White / Caucasian","Woman",42,0,1
+1,0,0,1,0.346153846153846,0.384615384615385,0,0,0,0,1,1,0,"Oprah Winfrey (CEO of Oprah Winfrey Network)","Hispanic / Latinx","Man",31,1,0
+1,0,0,1,0.423076923076923,0.423076923076923,1,0,1,0,0,0,0,"Tricia Griffith (CEO of Progressive)","Black or African American","Man",29,1,0
+0,1,1,1,0.423076923076923,0.423076923076923,1,0,0,0,0,0,1,"Sergey Brin (Co-founder of Google)","White / Caucasian","Man",39,1,1
+1,1,1,1,0.346153846153846,0.384615384615385,0,0,1,1,0,1,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Man",40,1,1
+0,1,1,1,0.423076923076923,0.461538461538462,1,0,0,0,1,1,1,"Larry Page (Co-founder of Google)","White / Caucasian","Man",38,1,1
+0,1,0,1,0.346153846153846,0.384615384615385,0,0,0,1,1,1,1,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Woman",31,0,1
+0,0,0,1,0.461538461538462,0.538461538461538,1,0,0,0,1,1,0,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Man",59,1,1
+0,0,1,1,0.384615384615385,0.423076923076923,0,1,1,1,0,0,1,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Man",41,1,1
+0,0,0,0,0.5,0.538461538461538,1,0,0,0,0,1,0,"Marvin Ellison (CEO of Lowe’s)","Black or African American","Man",42,1,0
+0,1,1,1,0.423076923076923,0.5,1,0,0,0,0,0,0,"Sergey Brin (Co-founder of Google)","Black or African American","Man",42,1,0
+0,1,1,0,0.538461538461538,0.461538461538462,1,0,0,0,0,0,0,"Larry Page (Co-founder of Google)","White / Caucasian","Man",37,1,1
+0,1,1,0,0.423076923076923,0.461538461538462,1,1,1,0,1,0,1,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Woman",63,0,1
+1,1,0,1,0.423076923076923,0.5,1,0,0,0,0,1,0,"Anne Wojcicki (CEO of 23andMe)","Asian / Pacific Islander","Woman",27,0,0
+0,1,1,0,0.5,0.5,1,0,0,0,0,0,0,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",62,0,1
+1,0,0,0,0.384615384615385,0.384615384615385,0,1,1,1,0,0,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",63,1,1
+1,1,1,0,0.461538461538462,0.5,1,0,0,0,0,0,0,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",37,0,1
+1,0,0,1,0.384615384615385,0.423076923076923,0,0,0,1,0,0,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Man",34,1,1
+1,1,0,0,0.384615384615385,0.423076923076923,0,0,0,1,0,0,0,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Woman",70,0,1
+1,0,0,0,0.384615384615385,0.384615384615385,0,0,1,0,1,0,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",44,0,1
+1,0,0,0,0.461538461538462,0.461538461538462,1,0,0,0,0,0,1,"Tricia Griffith (CEO of Progressive)","Hispanic / Latinx","Woman",37,0,0
+0,1,1,0,0.384615384615385,0.384615384615385,0,0,0,1,0,0,1,"Mark Zuckerberg (Co-founder of Facebook)","White / Caucasian","Woman",28,0,1
+1,0,0,0,0.423076923076923,0.5,1,0,1,0,0,1,1,"Karen Lynch (CEO of CVS Health)","White / Caucasian","Woman",30,0,1
+1,0,0,1,0.307692307692308,0.346153846153846,0,0,1,0,1,1,1,"Mary Barra (CEO of General Motors)","Black or African American","Man",24,1,0
+0,0,0,0,0.346153846153846,0.384615384615385,0,1,0,0,1,1,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",35,0,1
+1,1,0,1,0.5,0.5,1,0,0,0,0,0,0,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",22,1,1
+0,1,0,0,0.5,0.5,1,0,0,0,0,0,0,"Jeff Weiner (CEO of LinkedIn)","Asian / Pacific Islander","Man",32,1,0
+1,0,0,1,0.461538461538462,0.423076923076923,1,0,1,0,0,1,0,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Woman",46,0,1
+0,0,0,0,0.5,0.576923076923077,1,0,0,0,0,0,0,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Man",37,1,1
+1,1,0,0,0.423076923076923,0.346153846153846,0,0,1,1,1,0,1,"Corie Barry (CEO of Best Buy)","Asian / Pacific Islander","Man",36,1,0
+1,0,1,1,0.346153846153846,0.384615384615385,0,1,1,1,0,0,0,"Julia Hartz (Founder of EventBrite)","Hispanic / Latinx","Woman",28,0,0
+1,0,0,1,0.384615384615385,0.384615384615385,0,0,1,0,0,1,0,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Woman",58,0,1
+0,1,0,0,0.461538461538462,0.423076923076923,1,0,0,0,0,1,0,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Man",37,1,1
+1,1,0,0,0.423076923076923,0.423076923076923,0,1,1,1,1,1,1,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",66,1,1
+0,1,1,1,0.461538461538462,0.5,1,0,1,0,0,0,0,"Jeff Bezos (Founder of Amazon)","Black or African American","Woman",40,0,0
+1,0,0,1,0.461538461538462,0.461538461538462,1,0,1,0,1,0,0,"Rosalind Brewer (CEO of Walgreens)","Black or African American","Man",31,1,0
+0,1,0,1,0.423076923076923,0.461538461538462,0,1,0,1,0,0,1,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Man",53,1,1
+1,0,0,1,0.346153846153846,0.384615384615385,0,1,0,0,1,1,1,"Oprah Winfrey (CEO of Oprah Winfrey Network)","White / Caucasian","Man",63,1,1
+1,0,0,0,0.384615384615385,0.423076923076923,0,1,1,0,1,1,1,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",31,0,1
+0,0,1,0,0.384615384615385,0.384615384615385,0,0,0,0,1,1,1,"Sean Combs (Founder of Bad Boy Entertainment)","Black or African American","Man",39,1,0
+0,1,1,0,0.5,0.538461538461538,1,0,0,0,1,0,0,"Sergey Brin (Co-founder of Google)","White / Caucasian","Woman",64,0,1
+1,0,0,1,0.423076923076923,0.461538461538462,0,0,0,0,1,1,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Woman",40,0,1
+1,1,1,1,0.461538461538462,0.461538461538462,1,0,0,0,1,0,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",64,0,1
+1,0,0,1,0.461538461538462,0.461538461538462,1,0,0,0,0,0,0,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Man",39,1,1
+1,1,1,1,0.384615384615385,0.423076923076923,0,0,1,1,1,1,0,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Another gender not listed here:",59,0,1
+1,1,0,1,0.423076923076923,0.423076923076923,0,0,1,0,0,1,1,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",58,1,1
+1,0,0,0,0.307692307692308,0.384615384615385,0,1,1,0,1,1,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",26,1,1
+1,0,0,1,0.384615384615385,0.461538461538462,0,0,0,1,0,1,1,"Mary Barra (CEO of General Motors)","Hispanic / Latinx","Man",38,1,0
+0,0,0,1,0.5,0.461538461538462,1,1,0,0,0,0,1,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",25,1,1
+0,0,1,0,0.423076923076923,0.461538461538462,1,0,1,0,1,0,0,"Phil Knight (Co-founder of Nike)","White / Caucasian","Woman",29,0,1
+0,1,1,0,0.307692307692308,0.423076923076923,0,1,1,0,0,1,1,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Man",69,1,1
+0,1,0,1,0.538461538461538,0.5,1,0,1,1,0,0,1,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Man",52,1,1
+0,1,1,0,0.423076923076923,0.423076923076923,0,0,1,1,0,1,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Man",41,1,1
+1,1,0,1,0.5,0.538461538461538,1,0,1,0,1,0,0,"Anne Wojcicki (CEO of 23andMe)","Black or African American","Woman",23,0,0
+1,1,0,1,0.423076923076923,0.538461538461538,1,0,0,0,1,1,1,"Safra Katz (CEO of Oracle)","Asian / Pacific Islander","Man",55,1,0
+0,0,0,1,0.384615384615385,0.423076923076923,0,0,0,1,1,1,1,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Woman",65,0,1
+0,1,0,1,0.346153846153846,0.346153846153846,0,0,1,0,1,1,1,"Jeff Weiner (CEO of LinkedIn)","White / Caucasian","Man",38,1,1
+0,0,1,1,0.346153846153846,0.384615384615385,0,1,1,0,1,0,1,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Woman",56,0,1
+1,0,1,1,0.346153846153846,0.384615384615385,0,0,0,1,0,0,1,"Tory Burch (Founder of Tory Burch)","White / Caucasian","Woman",31,0,1
+1,0,1,0,0.461538461538462,0.5,1,0,0,0,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Man",34,1,1
+1,0,1,1,0.5,0.423076923076923,1,0,0,0,0,1,1,"Tory Burch (Founder of Tory Burch)","White / Caucasian","Woman",35,0,1
+0,0,1,0,0.423076923076923,0.5,1,0,0,0,0,0,0,"Michael Bloomberg (Co-founder of Bloomberg LP)","White / Caucasian","Man",30,1,1
+0,0,0,0,0.461538461538462,0.538461538461538,1,0,0,0,0,0,1,"Warren Buffet (CEO of Berkshire Hathaway)","White / Caucasian","Woman",26,0,1
+0,1,1,0,0.461538461538462,0.461538461538462,1,1,0,0,0,1,0,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",69,0,1
+1,0,0,1,0.5,0.5,1,0,1,1,0,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",42,1,1
+0,0,1,0,0.346153846153846,0.384615384615385,0,1,0,1,1,1,1,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",67,1,1
+0,0,0,0,0.5,0.423076923076923,1,0,1,0,0,0,0,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Woman",62,0,1
+0,0,0,0,0.423076923076923,0.461538461538462,1,0,1,0,0,0,0,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Man",54,1,1
+1,1,0,1,0.538461538461538,0.538461538461538,1,0,0,1,0,0,1,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Man",45,1,1
+1,1,0,0,0.384615384615385,0.346153846153846,0,0,1,0,1,0,1,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",44,1,1
+1,0,0,0,0.384615384615385,0.423076923076923,0,0,0,1,0,1,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",38,1,1
+0,0,1,1,0.384615384615385,0.423076923076923,0,0,1,1,1,1,0,"Sean Combs (Founder of Bad Boy Entertainment)","Hispanic / Latinx","Woman",27,0,0
+0,0,1,1,0.423076923076923,0.461538461538462,0,0,1,1,0,1,1,"Michael Bloomberg (Co-founder of Bloomberg LP)","Hispanic / Latinx","Man",35,1,0
+1,1,1,1,0.423076923076923,0.5,1,0,0,0,0,0,0,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Man",39,1,1
+1,1,1,0,0.461538461538462,0.5,1,0,0,0,0,0,0,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",59,0,1
+1,0,0,0,0.346153846153846,0.384615384615385,0,0,0,0,0,1,0,"Rosalind Brewer (CEO of Walgreens)","White / Caucasian","Woman",67,0,1
+1,0,0,1,0.423076923076923,0.423076923076923,1,0,0,0,0,0,0,"Carol Tome (CEO of UPS)","White / Caucasian","Man",41,1,1
+1,0,0,0,0.346153846153846,0.346153846153846,0,1,0,0,0,1,1,"Delphine Arnault (CEO of Christian Dior)","Asian / Pacific Islander","Woman",40,0,0
+1,1,1,1,0.423076923076923,0.346153846153846,0,0,0,1,0,1,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",58,0,1
+1,1,1,0,0.307692307692308,0.423076923076923,0,1,1,1,0,1,0,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",29,0,1
+1,1,0,0,0.307692307692308,0.384615384615385,0,0,1,1,1,1,0,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Woman",72,0,1
+1,1,0,1,0.384615384615385,0.346153846153846,0,0,0,1,1,0,0,"Safra Katz (CEO of Oracle)","White / Caucasian","Man",48,1,1
+1,1,0,1,0.346153846153846,0.384615384615385,0,1,1,1,1,1,1,"Kathy Warden (CEO of Northrupp Grumman)","White / Caucasian","Woman",23,0,1
+1,0,0,1,0.538461538461538,0.461538461538462,1,0,0,0,1,0,1,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Woman",63,0,1
+0,0,0,0,0.384615384615385,0.423076923076923,1,0,0,0,1,0,1,"James Dimon (CEO of JP Morgan)","White / Caucasian","Woman",56,0,1
+0,1,1,0,0.423076923076923,0.461538461538462,1,0,0,1,1,0,1,"Jeff Bezos (Founder of Amazon)","White / Caucasian","Woman",33,0,1
+1,0,0,0,0.307692307692308,0.346153846153846,0,0,0,0,0,1,1,"Delphine Arnault (CEO of Christian Dior)","White / Caucasian","Woman",36,0,1
+0,1,0,1,0.384615384615385,0.423076923076923,0,0,1,1,1,0,0,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Man",37,1,1
+0,0,0,1,0.461538461538462,0.5,1,0,0,0,0,0,1,"James Dimon (CEO of JP Morgan)","White / Caucasian","Man",51,1,1
+0,1,1,0,0.423076923076923,0.423076923076923,1,1,0,0,0,1,1,"Mark Zuckerberg (Co-founder of Facebook)","White / Caucasian","Woman",32,0,1
+0,0,0,0,0.461538461538462,0.5,1,1,0,0,0,1,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Woman",45,0,1
+1,0,0,0,0.384615384615385,0.423076923076923,0,1,1,0,0,0,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",32,1,1
+0,0,1,0,0.5,0.5,1,1,0,0,1,1,0,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Woman",33,0,1
+1,0,0,1,0.423076923076923,0.461538461538462,0,0,0,0,1,1,1,"Mary Barra (CEO of General Motors)","Black or African American","Woman",67,0,0
+0,1,1,0,0.384615384615385,0.423076923076923,0,1,0,0,1,1,0,"Sergey Brin (Co-founder of Google)","White / Caucasian","Woman",70,0,1
+0,0,1,1,0.538461538461538,0.461538461538462,1,1,1,0,0,1,0,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Woman",36,0,1
+0,1,0,1,0.307692307692308,0.461538461538462,0,1,1,1,1,1,1,"Jeff Weiner (CEO of LinkedIn)","Black or African American","Man",31,1,0
+1,0,1,0,0.384615384615385,0.461538461538462,0,1,0,1,1,1,1,"Arianna Huffington (Co-founder of Huffington Post)","White / Caucasian","Woman",67,0,1
+0,0,0,1,0.461538461538462,0.461538461538462,1,0,0,0,1,0,1,"James Gorman (CEO of Morgan Stanley)","White / Caucasian","Woman",56,0,1
+0,1,0,1,0.346153846153846,0.423076923076923,0,1,0,0,1,1,0,"Sundar Pichai (CEO of Alphabet Inc.)","Asian / Pacific Islander","Man",42,1,0
+0,0,1,0,0.461538461538462,0.423076923076923,1,0,0,0,0,0,0,"Sean Combs (Founder of Bad Boy Entertainment)","White / Caucasian","Woman",44,0,1
+0,0,0,0,0.538461538461538,0.538461538461538,1,0,0,1,0,0,0,"Marvin Ellison (CEO of Lowe’s)","White / Caucasian","Man",52,1,1
+0,1,1,1,0.538461538461538,0.538461538461538,1,0,0,0,0,0,0,"Larry Page (Co-founder of Google)","White / Caucasian","Woman",34,0,1
+1,1,1,1,0.461538461538462,0.461538461538462,1,0,1,1,0,0,1,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Woman",64,0,1
+1,0,0,1,0.230769230769231,0.384615384615385,0,0,1,0,0,0,1,"Mary Barra (CEO of General Motors)","White / Caucasian","Man",42,1,1
+1,1,0,1,0.384615384615385,0.461538461538462,0,1,1,1,1,1,1,"Safra Katz (CEO of Oracle)","Asian / Pacific Islander","Woman",52,0,0
+0,1,1,0,0.423076923076923,0.423076923076923,0,1,1,1,1,1,1,"Sergey Brin (Co-founder of Google)","Asian / Pacific Islander","Woman",46,0,0
+0,0,1,0,0.538461538461538,0.5,1,0,0,0,1,0,0,"Daymond John (Founder of FUBU)","White / Caucasian","Man",26,1,1
+1,0,0,0,0.307692307692308,0.384615384615385,0,1,0,1,1,0,1,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Man",36,1,1
+0,0,0,1,0.538461538461538,0.538461538461538,1,0,0,0,0,0,1,"James Gorman (CEO of Morgan Stanley)","Asian / Pacific Islander","Man",67,1,0
+0,1,1,1,0.461538461538462,0.384615384615385,1,0,0,0,0,1,1,"Garrett Camp (Co-founder of Uber)","White / Caucasian","Man",56,1,1
+1,1,0,0,0.461538461538462,0.538461538461538,1,0,0,0,0,0,0,"Kathy Warden (CEO of Northrupp Grumman)","Black or African American","Woman",33,0,0
+1,0,1,1,0.384615384615385,0.384615384615385,0,1,1,1,0,1,0,"Tory Burch (Founder of Tory Burch)","White / Caucasian","Man",28,1,1
+1,0,0,0,0.307692307692308,0.307692307692308,0,0,1,0,1,0,1,"Jane Fraser (CEO of Citigroup)","White / Caucasian","Woman",55,0,1
+0,0,0,1,0.423076923076923,0.5,1,0,0,0,0,0,0,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Man",31,1,1
+1,0,0,0,0.423076923076923,0.5,1,0,0,0,1,1,0,"Tricia Griffith (CEO of Progressive)","Asian / Pacific Islander","Woman",38,0,0
+1,1,1,0,0.346153846153846,0.384615384615385,0,1,1,0,0,1,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",59,0,1
+1,0,0,0,0.538461538461538,0.461538461538462,1,0,1,0,0,1,0,"Jane Fraser (CEO of Citigroup)","Black or African American","Woman",37,0,0
+1,1,1,0,0.346153846153846,0.423076923076923,0,1,0,0,0,1,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",62,0,1
+1,0,1,0,0.423076923076923,0.384615384615385,0,1,0,0,1,1,0,"Julia Hartz (Founder of EventBrite)","White / Caucasian","Man",31,1,1
+1,1,1,1,0.423076923076923,0.384615384615385,0,0,0,1,1,1,0,"Melanie Perkins (Founder of Canva)","White / Caucasian","Woman",33,0,1
+0,0,1,0,0.5,0.461538461538462,1,0,0,0,0,0,1,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",69,1,1
+1,1,0,1,0.346153846153846,0.423076923076923,0,0,0,1,1,0,1,"Anne Wojcicki (CEO of 23andMe)","White / Caucasian","Man",29,1,1
+1,1,1,1,0.5,0.538461538461538,1,0,0,0,0,0,0,"Whitney Wolfe Herd (Founder of Bumble)","White / Caucasian","Woman",67,0,1
+0,0,1,0,0.538461538461538,0.5,1,0,0,0,0,0,0,"Phil Knight (Co-founder of Nike)","White / Caucasian","Woman",42,0,1
+0,0,0,0,0.423076923076923,0.461538461538462,1,0,0,0,0,0,0,"James Dimon (CEO of JP Morgan)","White / Caucasian","Man",30,1,1
+0,0,0,1,0.384615384615385,0.461538461538462,0,0,0,1,1,1,1,"James Gorman (CEO of Morgan Stanley)","Hispanic / Latinx","Man",32,1,0
+0,1,0,0,0.307692307692308,0.423076923076923,0,0,0,1,0,0,1,"Sundar Pichai (CEO of Alphabet Inc.)","White / Caucasian","Man",57,1,1
+0,0,0,1,0.346153846153846,0.384615384615385,0,0,0,1,1,1,1,"Charles Koch (CEO of Koch Industries)","White / Caucasian","Woman",48,0,1
+1,1,1,1,0.461538461538462,0.5,1,0,0,1,0,0,0,"Melanie Perkins (Founder of Canva)","Black or African American","Man",47,1,0
+1,0,0,1,0.461538461538462,0.5,1,0,0,0,0,0,0,"Tricia Griffith (CEO of Progressive)","White / Caucasian","Man",29,1,1
+0,1,1,0,0.461538461538462,0.461538461538462,1,0,0,0,0,1,0,"Jeff Bezos (Founder of Amazon)","Asian / Pacific Islander","Man",32,1,0
+1,0,0,0,0.384615384615385,0.423076923076923,0,0,0,1,1,0,1,"Carol Tome (CEO of UPS)","White / Caucasian","Woman",64,0,1
+1,0,1,1,0.5,0.538461538461538,1,0,0,0,0,0,0,"Arianna Huffington (Co-founder of Huffington Post)","Black or African American","Man",26,1,0
+1,1,1,1,0.346153846153846,0.423076923076923,0,1,0,1,0,1,1,"Leah Busque (Founder of TaskRabbit)","White / Caucasian","Woman",31,0,1
+0,0,1,0,0.5,0.538461538461538,1,0,0,0,1,0,0,"Phil Knight (Co-founder of Nike)","White / Caucasian","Man",37,1,1
+1,0,0,0,0.384615384615385,0.384615384615385,0,1,0,1,0,1,0,"Michelle Buck (CEO of The Hershey Company)","White / Caucasian","Woman",71,0,1
+0,1,0,1,0.307692307692308,0.423076923076923,0,0,1,1,1,0,1,"Tim Cook (CEO of Apple)","White / Caucasian","Woman",35,0,1
+1,0,0,0,0.423076923076923,0.461538461538462,0,1,0,1,1,1,0,"Mary Barra (CEO of General Motors)","White / Caucasian","Woman",25,0,1
+0,1,1,0,0.384615384615385,0.384615384615385,0,0,1,1,0,1,1,"Bill Gates (Co-founder of Microsoft)","White / Caucasian","Woman",31,0,1
+1,1,0,1,0.346153846153846,0.384615384615385,0,0,0,1,1,0,0,"Corie Barry (CEO of Best Buy)","White / Caucasian","Man",44,1,1
+0,1,1,0,0.461538461538462,0.461538461538462,1,0,0,0,1,0,0,"Sergey Brin (Co-founder of Google)","White / Caucasian","Man",34,1,1
+0,0,0,1,0.5,0.5,1,0,0,0,1,0,0,"James Dimon (CEO of JP Morgan)","White / Caucasian","Man",42,1,1

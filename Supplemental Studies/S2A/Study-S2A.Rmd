@@ -1,0 +1,677 @@
+---
+title: "Study S2"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  pdf_document: 
+    toc: yes
+    toc_depth: 2
+    fig_caption: true
+header-includes:
+  \renewcommand{\contentsname}{Items}
+   \usepackage{fvextra}
+   \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+---
+
+```{r setup, include=FALSE}
+rm(list=ls())
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE,
+	results = "hide"
+)
+library(dplyr)
+library(lmtest)
+library(sandwich)
+library(systemfit)
+library(car)
+library(broom)
+library(qualtRics)
+library(knitr)
+library(rmarkdown)
+library(stargazer)
+library(ggplot2)
+library(gridExtra)
+```
+
+```{r include=FALSE}
+if ( (!is.null(knitr::current_input()))) {
+  if (("pdf_document" ==
+                rmarkdown::all_output_formats(knitr::current_input())[1])) {
+      stargazer_type <- "latex"
+  }
+} else {
+  stargazer_type <- "text"
+}
+
+
+robust_summary <- function(model) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting original model summary
+    model_summary <- summary(model)
+
+    # Updating standard errors, t-values, and p-values in the coefficients table
+    model_summary$coefficients[, "Std. Error"] <- robust_se
+    model_summary$coefficients[, "t value"] <- model_summary$coefficients[, "Estimate"] / robust_se
+    model_summary$coefficients[, "Pr(>|t|)"] <- 2 * pt(-abs(model_summary$coefficients[, "t value"]), df = model_summary$df[2], lower.tail = TRUE)
+
+    return(model_summary)
+}
+robust_confint <- function(model, level = 0.95) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting the coefficients
+    est <- coef(model)
+
+    # Calculating the critical value for the t-distribution
+    alpha <- 1 - level
+    t_crit <- qt(1 - alpha / 2, df = df.residual(model))
+
+    # Calculating the confidence intervals
+    lower <- est - t_crit * robust_se
+    upper <- est + t_crit * robust_se
+
+    # Combining into a matrix
+    confint <- cbind(lower, upper)
+    rownames(confint) <- names(est)
+    colnames(confint) <- c("2.5 %", "97.5 %")
+
+    return(confint)
+}
+```
+
+\newpage
+
+## Read Data
+
+```{r echo=TRUE}
+## Pull directly from Qualtrics API
+qual_data <- fetch_survey(surveyID='SV_3sK5vJ1hXsDPKom',
+                   label = T,
+                   convert = F,
+                   start_date = "2022-12-01",
+                   force_request = T)
+
+
+```
+
+```{r}
+# Specify the names of the individuals in each category
+females <- c('Mary Barra (CEO of General Motors)', 'Oprah Winfrey (CEO of Oprah Winfrey Network)',
+             'Janet Yellen (U.S. Secretary Treasury)', 'Jane Fraser (CEO of Citigroup)',
+             'Rosalind Brewer (CEO of Walgreens)')
+
+ceos <- c("Tim Cook (CEO of Apple)", "Elon Musk (CEO of Tesla)", "Oprah Winfrey (CEO of Oprah Winfrey Network)",
+          "Mary Barra (CEO of General Motors)", "Jane Fraser (CEO of Citigroup)", "Marvin Ellison (CEO of Lowe’s)",
+          "Warren Buffet (CEO of Berkshire Hathaway)", "Charles Koch (CEO of Koch Industries)",
+          "Stewart Butterfield (CEO of Slack)", "Jack Ma (CEO of Alibaba)", "Rosalind Brewer (CEO of Walgreens)",
+          "Jeff Weiner (CEO of LinkedIn)")
+
+techs <- c("Bill Gates (Co-founder of Microsoft)", "Mark Zuckerberg (Co-founder of Facebook)", 
+           "Tim Cook (CEO of Apple)", "Elon Musk (CEO of Tesla)", "Larry Page (Co-founder of Google)",
+           "Sergey Brin (Co-founder of Google)", "Jeff Bezos (Founder of Amazon)",
+           "Stewart Butterfield (CEO of Slack)", "Jack Ma (CEO of Alibaba)",
+           "Jeff Weiner (CEO of LinkedIn)")
+
+founders <- c("Bill Gates (Co-founder of Microsoft)", "Mark Zuckerberg (Co-founder of Facebook)",
+              "Larry Page (Co-founder of Google)", "Sergey Brin (Co-founder of Google)",
+              "Sean Combs (Founder of Bad Boy Entertainment)", "Daymond John (Founder of FUBU)",
+              "Jeff Bezos (Founder of Amazon)", "Michael Bloomberg (Co-founder of Bloomberg LP)",
+              "Phil Knight (Co-founder of Nike)")
+
+
+d0 <- qual_data |> 
+  mutate(ec_2 = tolower(ec_2)) |> 
+  filter(workerId!="", selection_6!="", ec_2 %in% c("one one", "\"one one\""), Finished==1)  |>  
+  mutate(fem_choice = across(c(bonus_ctrl2_7, bonus_ctrl1_7, bonus_trt_7),
+                ~ case_when(. %in% females ~ 1,
+                            TRUE ~ 0)),
+         ceo_choice = across(c(bonus_ctrl2_7, bonus_ctrl1_7, bonus_trt_7),
+                ~ case_when(. %in% ceos ~ 1,
+                            TRUE ~ 0)),
+				  tech_choice = across(c(bonus_ctrl2_7, bonus_ctrl1_7, bonus_trt_7),
+                ~ case_when(. %in% techs ~ 1,
+					TRUE ~ 0)),
+					founder_choice = across(c(bonus_ctrl2_7, bonus_ctrl1_7, bonus_trt_7),
+                ~ case_when(. %in% founders ~ 1,
+					TRUE ~ 0)),
+         condition = case_when(group %in% c("control1", "control2") ~ "Control",
+                               TRUE ~ "Treatment")) |> 
+  mutate(fem_score = case_when(`female_count_type-1` == "are female" ~ female_count_1,
+                            `female_count_type-2` == "are female" ~ female_count_2,
+                            `female_count_type-3` == "are female" ~ female_count_3),
+         gender_feedback = case_when(condition=="Control" ~ 0, condition=="Treatment" ~ 1),
+         founder = case_when((group == "control1" & (`count_type-1` == "are founders" | `count_type-2` == "are founders")) | (group=="control2") | (group=="treatment" & (`female_count_type-1` == "are founders" | `female_count_type-2` == "are founders" | `female_count_type-3` == "are founders")) ~ 1, TRUE ~ 0),
+         tech = case_when((group == "control1" & (`count_type-1` == "are in the technology industry" | `count_type-2` == "are in the technology industry")) | (group=="control2") | (group=="treatment" & (`female_count_type-1` == "are in the technology industry" | `female_count_type-2` == "are in the technology industry" | `female_count_type-3` == "are in the technology industry")) ~ 1, TRUE ~ 0),
+         ceo = case_when((group == "control1" & (`count_type-1` == "are CEOs" | `count_type-2` == "are CEOs")) | (group=="control2") | (group=="treatment" & (`female_count_type-1` == "are CEOs" | `female_count_type-2` == "are CEOs" | `female_count_type-3` == "are CEOs")) ~ 1, TRUE ~ 0),
+         list_two = case_when(group=="control1" ~ 1, group=="control2" ~ 0, TRUE ~ NA_real_)) |> 
+  mutate(female = case_when(fem_choice$bonus_ctrl2_7==1 | fem_choice$bonus_ctrl1_7==1 |  fem_choice$bonus_trt_7==1 ~ 1, TRUE ~ 0),
+         ceo_pick = case_when(ceo_choice$bonus_ctrl2_7==1 | ceo_choice$bonus_ctrl1_7==1 |  ceo_choice$bonus_trt_7==1 ~ 1, TRUE ~ 0),
+         founder_pick = case_when(founder_choice$bonus_ctrl2_7==1 | founder_choice$bonus_ctrl1_7==1 |  founder_choice$bonus_trt_7==1 ~ 1, TRUE ~ 0),
+         tech_pick = case_when(tech_choice$bonus_ctrl2_7==1 | tech_choice$bonus_ctrl1_7==1 |  tech_choice$bonus_trt_7==1 ~ 1, TRUE ~ 0),
+         gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
+         race_code = case_when(race=="White / Caucasian" ~ 1, TRUE ~ 0),
+         age = as.numeric(age),
+         gender = case_when(gender=="" ~ "N/A",
+                            TRUE ~ gender),
+         race = case_when(race=="" ~ "N/A",
+                          TRUE ~ race),
+         encouragement = case_when(vignette=="demand" ~ 1,
+                                   vignette=="base" ~ 0,
+                                TRUE ~ NA),
+         base_gender = rowSums(across(selection_1:selection_6, ~ . %in% females))) |> 
+  select(
+    list_two, encouragement, gender_feedback, female, ceo, ceo_pick, founder, founder_pick, tech, tech_pick, base_gender, gender, race, age, gender_code, race_code
+  ) |> 
+  slice(1:1000) # pre-registered sample size
+
+d0_w_encouragement <- d0 |> 
+  filter(encouragement == 1)
+
+d0_no_encouragement <- d0 |> 
+  filter(encouragement == 0)
+
+
+# Write the API-pulled data into a CSV file
+
+write.csv(d0, 'StudyS2.csv', row.names = FALSE, quote = TRUE) 
+
+###########################################################################################
+# when reading the csv, use the following command: read.csv('StudyS2.csv', check.names = F)
+###########################################################################################
+```
+
+## Variable Names
+
+\begin{table}[!htbp] \centering 
+  \label{tab:variables} 
+\begin{tabular}{|l|p{10cm}|} 
+\hline 
+\textbf{Variable} & \textbf{Description} \\ 
+\hline 
+\texttt{list\_two} & Binary indicator of whether the control received a list of two attributes (list\_two=1) or not (list\_two=0). \\
+\texttt{encouragement} & Binary indicator of whether a participant was randomly assigned to the encouragement condition. \\
+\hline
+\texttt{gender\_feedback} & Binary indicator of whether a participant was randomly assigned to gender feedback condition. \\
+\hline
+\texttt{female} & Binary indicator of whether a participant selected a female business leader for their seventh selection. \\
+\hline
+\texttt{ceo} & Binary indicator of whether a participant was randomly assigned to receive CEO feedback. \\
+\hline
+\texttt{ceo\_pick} & Binary indicator of whether a participant selected a CEO business leader for their seventh selection. \\
+\hline
+\texttt{founder} & Binary indicator of whether a participant was randomly assigned to receive founder feedback. \\
+\hline
+\texttt{founder\_pick} & Binary indicator of whether a participant selected a founder business leader for their seventh selection. \\
+\hline
+\texttt{tech} & Binary indicator of whether a participant was randomly assigned to receive technologist feedback. \\
+\hline
+\texttt{tech\_pick} & Binary indicator of whether a participant selected a technologist business leader for their seventh selection. \\
+\hline
+\texttt{base\_gender} & Count of the number of female panelists selected in the initial six selections. \\
+\hline
+\texttt{gender} & Self-selected gender. \\
+\hline
+\texttt{race} & Self-selected race. \\
+\hline
+\texttt{age} & Self-entered age. \\
+\hline
+\texttt{gender\_code} & Dummy code for gender (male = 1). \\
+\hline
+\texttt{race\_code} & Dummy code for race (white = 1). \\
+\hline
+\end{tabular} 
+\end{table} 
+
+\newpage
+
+## Demographics
+
+```{r results='markup'}
+## Excluded participants
+
+cat('Excluded Participants:', nrow(qual_data) - nrow(d0), '\n')
+
+## Gender
+
+gender_percentages <- signif(prop.table(table(d0$gender)) * 100, 3)
+
+gender_df <- data.frame(
+  Percentage = gender_percentages,
+  gender = names(gender_percentages)
+)[1:2]
+
+colnames(gender_df) <- c("Percentage", "gender")
+
+print(gender_df)
+
+
+## Race
+
+race_percentages <- signif(prop.table(table(d0$race)) * 100, 3)
+
+race_df <- data.frame(
+  Percentage = race_percentages,
+  Race = names(race_percentages)
+)[1:2]
+
+colnames(race_df) <- c("Percentage", "Race")
+
+print(race_df)
+
+## Age
+
+age_summary <- d0 |> 
+  select(age) |> 
+  summarize(mean_age = mean(age, na.rm = T), sd_age = sd(age, na.rm = T))
+
+age_summary
+
+```
+
+\newpage
+
+## Pooled Analysis
+
+```{r echo=TRUE, results='markup'}
+
+## no gender feedback
+r0_0 <- lm(female ~ list_two, data=d0_no_encouragement)
+
+# Calculate robust standard errors
+robust_summary(r0_0)
+
+## no diversity encouragement
+r0_1 <- lm(female ~ list_two, data=d0_w_encouragement)
+
+# Calculate robust standard errors
+robust_summary(r0_1)
+
+```
+
+
+\newpage
+
+## Primary Analysis
+
+### No Encouragement
+
+```{r echo=TRUE, results='markup'}
+# primary model, no encouragement
+r1 <- lm(female ~ gender_feedback*encouragement, data=d0)
+
+robust_summary(r1)
+robust_confint(r1)
+
+
+```
+
+
+## Secondary Analysis
+
+
+```{r echo=TRUE, results='markup'}
+## ceo feedback
+r_ceo <- lm(ceo_pick ~ ceo*encouragement, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r_ceo)
+robust_confint(r_ceo)
+
+## founder feedback
+r_founder <- lm(founder_pick ~ founder*encouragement, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r_founder)
+robust_confint(r_founder)
+
+## tech feedback
+r_tech <- lm(tech_pick ~ tech*encouragement, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r_tech)
+robust_confint(r_tech)
+
+## interaction of base gender
+# primary model
+r_interaction <- lm(female ~ gender_feedback*base_gender, data=d0)
+
+
+# Display the summary with robust standard errors
+robust_summary(r_interaction)
+```
+
+## Figure S5A Code
+
+
+```{r echo=TRUE, results='asis'}
+dgender_plot <- d0_no_encouragement |> 
+  select(gender_feedback, female) |> 
+  group_by(gender_feedback, female) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(female == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(gender_feedback==0 ~ coef(summary(r1))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r1))[, "Std. Error"][2]*100)) |> 
+  mutate(gender_feedback = case_when(gender_feedback==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = gender_feedback)
+
+## dataframe for CEO information
+
+dceo_plot <- d0_no_encouragement |> 
+  select(ceo, ceo_pick) |> 
+  group_by(ceo, ceo_pick) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(ceo_pick == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(ceo==0 ~ coef(robust_summary(r_ceo))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r_ceo))[, "Std. Error"][2]*100)) |> 
+  mutate(ceo = case_when(ceo==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = ceo)
+
+## dataframe for Founder information
+
+dfounder_plot <- d0_no_encouragement |> 
+  select(founder, founder_pick) |> 
+  group_by(founder, founder_pick) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(founder_pick == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(founder==0 ~ coef(robust_summary(r_founder))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r_founder))[, "Std. Error"][2]*100)) |> 
+  mutate(founder = case_when(founder==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = founder)
+
+## dataframe for Tech information
+
+dtech_plot <- d0_no_encouragement |> 
+  select(tech, tech_pick) |> 
+  group_by(tech, tech_pick) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(tech_pick == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(tech==0 ~ coef(robust_summary(r_tech))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r_tech))[, "Std. Error"][2]*100)) |> 
+  mutate(tech = case_when(tech==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = tech)
+
+df_combined <- bind_rows(
+  dceo_plot %>% mutate(Category = "\nCEOs"),
+  dtech_plot %>% mutate(Category = "\nTechnologists"),
+  dfounder_plot %>% mutate(Category = "\nFounders"),
+  dgender_plot %>% mutate(Category = "\nFemale")
+, .id = "id") %>% 
+  mutate(Category = factor(Category, levels = c('\nCEOs', '\nTechnologists', '\nFounders', '\nFemale')))
+
+p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
+  geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
+  geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")), 
+            position=position_dodge(width=0.7), vjust=5, size = 4, color = "white") +
+  geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
+  facet_wrap(~factor(Category, c('\nCEOs', '\nTechnologists', '\nFounders', '\nFemale')), nrow = 1, strip.position = "bottom") +
+  geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""), 
+               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5), 
+               inherit.aes = FALSE) +
+  geom_text(data = df_combined %>% filter(Category %in% c('\nCEOs', '\nTechnologists') & Condition == "\"Treatment\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."), 
+            inherit.aes = FALSE, vjust = 0) +
+    geom_text(data = df_combined %>% filter(Category %in% c('\nFounders') & Condition == "\"Treatment\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "*"), 
+            inherit.aes = FALSE, vjust = 0) +
+  geom_text(data = df_combined %>% filter(Category == '\nFemale' & Condition == "\"Treatment\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
+            inherit.aes = FALSE, vjust = 0) +
+  theme_bw() +
+  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback", "Feedback provided"), "Feedback") +
+  scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,80)) +
+  scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
+  labs(x = "Feedback on % of panelists who were...", y = "% of New Panelists with the Target Identity",
+       caption = 'Note: Error Bars are SEs', title = "The Effect of Getting Feedback on Your Panel's Composition") +
+  theme(plot.caption = element_text(face = "italic"),
+        legend.position = c(0.5, 0.85),
+        legend.title = element_blank(),
+        legend.direction = "horizontal",
+        legend.text = element_text(size = 12),
+        legend.key.size = unit(7, 'mm'),
+        legend.background = element_rect(fill = "white"),
+        panel.grid.minor = element_blank(),
+        panel.grid = element_blank(),
+        panel.border = element_rect(fill= NA, color = "white"),
+        plot.background = element_rect(fill = "white"),
+        panel.background = element_rect(fill = "white"),
+        axis.title.x = element_text(face="bold", size = 13, vjust = 19),
+        plot.title = element_blank(),
+        axis.title.y = element_text(size = 12, color = "black"),
+        axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_text(size = 12, color = "black"),
+        strip.text = element_text(size = 12, color = "black"),
+        strip.background = element_rect(color = "white", fill = "white"))
+#p_combined_A
+```
+
+\newpage
+
+## Figure S5B Code
+
+
+```{r echo=TRUE, results='asis'}
+dgender_plot <- d0_w_encouragement |> 
+  select(gender_feedback, female) |> 
+  group_by(gender_feedback, female) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(female == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(gender_feedback==0 ~ coef(summary(r1))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r1))[, "Std. Error"][2]*100)) |> 
+  mutate(gender_feedback = case_when(gender_feedback==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = gender_feedback)
+
+## dataframe for CEO information
+
+dceo_plot <- d0_w_encouragement |> 
+  select(ceo, ceo_pick) |> 
+  group_by(ceo, ceo_pick) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(ceo_pick == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(ceo==0 ~ coef(robust_summary(r_ceo))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r_ceo))[, "Std. Error"][2]*100)) |> 
+  mutate(ceo = case_when(ceo==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = ceo)
+
+## dataframe for Founder information
+
+dfounder_plot <- d0_w_encouragement |> 
+  select(founder, founder_pick) |> 
+  group_by(founder, founder_pick) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(founder_pick == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(founder==0 ~ coef(robust_summary(r_founder))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r_founder))[, "Std. Error"][2]*100)) |> 
+  mutate(founder = case_when(founder==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = founder)
+
+## dataframe for Tech information
+
+dtech_plot <- d0_w_encouragement |> 
+  select(tech, tech_pick) |> 
+  group_by(tech, tech_pick) |> 
+  summarise(n = n()) |> 
+  mutate(freq = n / sum(n)) |> 
+  filter(tech_pick == 1) |> 
+  mutate(sd = sqrt((freq*(1-freq))/n)*100,
+         se = case_when(tech==0 ~ coef(robust_summary(r_tech))[, "Std. Error"][1]*100,
+                        TRUE ~ coef(robust_summary(r_tech))[, "Std. Error"][2]*100)) |> 
+  mutate(tech = case_when(tech==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = tech)
+
+df_combined <- bind_rows(
+  dceo_plot %>% mutate(Category = "\nCEOs"),
+  dtech_plot %>% mutate(Category = "\nTechnologists"),
+  dfounder_plot %>% mutate(Category = "\nFounders"),
+  dgender_plot %>% mutate(Category = "\nFemale")
+, .id = "id") %>% 
+  mutate(Category = factor(Category, levels = c('\nCEOs', '\nTechnologists', '\nFounders', '\nFemale')))
+
+p_combined_B <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
+  geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
+  geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")), 
+            position=position_dodge(width=0.7), vjust=5, size = 4, color = "white") +
+  geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
+  facet_wrap(~factor(Category, c('\nCEOs', '\nTechnologists', '\nFounders', '\nFemale')), nrow = 1, strip.position = "bottom") +
+  geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""), 
+               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5), 
+               inherit.aes = FALSE) +
+  geom_text(data = df_combined %>% filter(Category %in% c('\nCEOs', '\nTechnologists') & Condition == "\"Treatment\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."), 
+            inherit.aes = FALSE, vjust = 0) +
+    geom_text(data = df_combined %>% filter(Category %in% c('\nFounders') & Condition == "\"Treatment\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "*"), 
+            inherit.aes = FALSE, vjust = 0) +
+  geom_text(data = df_combined %>% filter(Category == '\nFemale' & Condition == "\"Treatment\""), 
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
+            inherit.aes = FALSE, vjust = 0) +
+  theme_bw() +
+  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,80)) +
+  scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
+  labs(x = "Feedback on % of panelists who were...", y = "% of New Panelists with the Target Identity",
+       caption = 'Note: Error Bars are SEs', title = "The Effect of Getting Feedback on Your Panel's Composition") +
+  theme(plot.caption = element_text(face = "italic"),
+        legend.position = c(0.5, 0.85),
+        legend.title = element_blank(),
+        legend.direction = "horizontal",
+        legend.text = element_text(size = 12),
+        legend.key.size = unit(7, 'mm'),
+        legend.background = element_rect(fill = "white"),
+        panel.grid.minor = element_blank(),
+        panel.grid = element_blank(),
+        panel.border = element_rect(fill= NA, color = "white"),
+        plot.background = element_rect(fill = "white"),
+        panel.background = element_rect(fill = "white"),
+        axis.title.x = element_text(face="bold", size = 13, vjust = 19),
+        plot.title = element_blank(),
+        axis.title.y = element_blank(),  # Remove y-axis title
+        axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_blank(),  # Remove y-axis text
+        axis.ticks.y = element_blank(),  # Remove y-axis ticks
+        strip.text = element_text(size = 12, color = "black"),
+        strip.background = element_rect(color = "white", fill = "white"))
+
+#p_combined_B
+# Create separate plots for the labels
+label_A <- ggplot() + 
+  annotate("text", x = 0, y = 0, label = "A", size = 6, fontface = "bold") +
+  theme_void()
+
+label_B <- ggplot() + 
+  annotate("text", x = 0, y = 0, label = "B", size = 6, fontface = "bold") +
+  theme_void()
+
+# Combine the main plots and labels using grid.arrange()
+combined_plot <- grid.arrange(
+  arrangeGrob(label_A, p_combined_A, ncol = 1, heights = c(0.1, 1)),
+  arrangeGrob(label_B, p_combined_B, ncol = 1, heights = c(0.1, 1)),
+  ncol = 2
+)
+ggsave("FigureS5.pdf", combined_plot, width = 16, height = 7, units = "in", device = cairo_pdf, family = "Times New Roman")
+```
+
+\newpage
+
+
+## System of Equations
+
+
+```{r echo=FALSE, results='markup'}
+# Founder
+
+founder.eqn <- list(
+  foundereq = as.numeric(founder_pick) ~ founder + tech + ceo + gender_feedback,
+  femaleeq = as.numeric(female) ~ founder + tech + ceo + gender_feedback
+)
+summary(lm(as.numeric(founder_pick) ~ founder + tech + ceo + gender_feedback - 1, data=d0_no_encouragement))
+# Define restriction matrix
+restrict_founder <- "foundereq_founder - femaleeq_gender_feedback = 0"
+
+# Fit the system of equations with the restriction
+unrestricted_founder <- systemfit(founder.eqn, data=d0_no_encouragement)
+#summary(unrestricted_founder)
+# Tech
+
+tech.eqn <- list(
+  techeq = as.numeric(tech_pick) ~ founder + tech + ceo + gender_feedback,
+  femaleeq = as.numeric(female) ~ founder + tech + ceo + gender_feedback
+)
+
+# Define restriction matrix
+restrict_tech <- "techeq_tech - femaleeq_gender_feedback = 0"
+
+# Fit the system of equations with the restriction
+unrestricted_tech <- systemfit(tech.eqn, data=d0_no_encouragement)
+
+# ceo
+
+ceo.eqn <- list(
+  ceoeq = as.numeric(ceo_pick) ~ founder + tech + ceo + gender_feedback,
+  femaleeq = as.numeric(female) ~ founder + tech + ceo + gender_feedback
+)
+
+# Define restriction matrix
+restrict_ceo <- "ceoeq_ceo - femaleeq_gender_feedback = 0"
+
+# Fit the system of equations with the restriction
+unrestricted_ceo <- systemfit(ceo.eqn, data=d0_no_encouragement)
+
+
+# wald tests
+# Run linear hypothesis tests
+lh_result_founder = linearHypothesis(unrestricted_founder, restrict_founder)
+lh_result_tech = linearHypothesis(unrestricted_tech, restrict_tech)
+lh_result_ceo = linearHypothesis(unrestricted_ceo, restrict_ceo)
+
+
+
+# Collecting coefficient values and standard errors
+founder_coef <- lh_result_founder$F[2]
+
+tech_coef <- lh_result_tech$F[2]
+
+ceo_coef <- lh_result_ceo$F[2]
+
+# Extracting p-values
+p_value_founder = lh_result_founder$`Pr(>F)`[2]
+p_value_tech = lh_result_tech$`Pr(>F)`[2]
+p_value_ceo = lh_result_ceo$`Pr(>F)`[2]
+
+# Include p-values in the summary table
+data.frame(
+  `Test` = c("Gender Feedback - Founder Feedback", "Gender Feedback - Tech Feedback", "Gender Feedback - CEO Feedback"),
+  `Wald Coefficient` = c(founder_coef, tech_coef, ceo_coef),
+  P_Value = c(p_value_founder, p_value_tech, p_value_ceo),
+  row.names = 1
+)
+
+```
+

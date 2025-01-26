@@ -1,0 +1,648 @@
+---
+title: "Study 3A"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  pdf_document: 
+    toc: yes
+    toc_depth: 2
+    fig_caption: true
+header-includes:
+  \renewcommand{\contentsname}{Items}
+   \usepackage{fvextra}
+   \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+---
+
+```{r setup, include=FALSE}
+rm(list=ls())
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE,
+	results = "hide"
+)
+library(dplyr)
+library(lmtest)
+library(sandwich)
+library(systemfit)
+library(car)
+library(broom)
+library(qualtRics)
+library(knitr)
+library(rmarkdown)
+library(tidyverse)
+library(psych)
+library(mediation)
+```
+
+```{r include=FALSE}
+if ( (!is.null(knitr::current_input()))) {
+  if (("pdf_document" ==
+                rmarkdown::all_output_formats(knitr::current_input())[1])) {
+      stargazer_type <- "latex"
+  }
+} else {
+  stargazer_type <- "text"
+}
+
+robust_summary <- function(model) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting original model summary
+    model_summary <- summary(model)
+
+    # Updating standard errors, t-values, and p-values in the coefficients table
+    model_summary$coefficients[, "Std. Error"] <- robust_se
+    model_summary$coefficients[, "t value"] <- model_summary$coefficients[, "Estimate"] / robust_se
+    model_summary$coefficients[, "Pr(>|t|)"] <- 2 * pt(-abs(model_summary$coefficients[, "t value"]), df = model_summary$df[2], lower.tail = TRUE)
+
+    return(model_summary)
+}
+robust_confint <- function(model, level = 0.95) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting the coefficients
+    est <- coef(model)
+
+    # Calculating the critical value for the t-distribution
+    alpha <- 1 - level
+    t_crit <- qt(1 - alpha / 2, df = df.residual(model))
+
+    # Calculating the confidence intervals
+    lower <- est - t_crit * robust_se
+    upper <- est + t_crit * robust_se
+
+    # Combining into a matrix
+    confint <- cbind(lower, upper)
+    rownames(confint) <- names(est)
+    colnames(confint) <- c("2.5 %", "97.5 %")
+
+    return(confint)
+}
+```
+
+\newpage
+
+## Read Data
+
+```{r echo=TRUE}
+## Pull directly from Qualtrics API
+qual_data <- fetch_survey(surveyID='SV_e4eMITeZ8WisKSa',
+                   label = T,
+                   convert = F,
+                   start_date = "2024-01-03",
+                   force_request = T)
+
+
+```
+
+
+
+```{r echo=TRUE}
+women <- c('Sylvia Plath', 'Isabel Allende', 'Lucy Maud', 'Jane Austen', 'Joyce Carol Oates', 'Zadie Smith')
+poets <- c('George Orwell','Sylvia Plath','Jack London', 'Charles Dickens', 'Neil Gaiman', 'Jorge Luis Borges')
+oldies <- c('Charles Dickens', 'Ernest Hemingway', 'Herman Melville', 'Jack London', 'Jane Austen', 'Jorge Luis Borges', 'J.R.R. Tolkien', 'Lucy Maud', 'Nathaniel Hawthorne', 'F. Scott Fitzgerald')
+books <- c('Charles Dickens', 'Herman Melville', 'Isabel Allende', 'Jack London', 'John Steinbeck', 'Joyce Carol Oates', 'Jorge Luis Borges', 'J.R.R. Tolkien', 'Lucy Maud', 'Michael Crichton', 'Ray Bradbury', 'Kurt Vonnegut', 'Ian McEwan')
+
+
+# Process the data
+d0 <- qual_data |> 
+    filter(!is.na(`choice-7`), !is.na(PROLIFIC_PID), Finished==1) |> 
+    mutate(
+    gender_feedback = as.numeric(grepl("were women", feedbackItem1) |
+                  grepl("were women", feedbackItem2) |
+                  grepl("were women", feedbackItem3)),
+    poets_shown = as.numeric(grepl("wrote poetry", feedbackItem1) |
+                  grepl("wrote poetry", feedbackItem2) |
+                  grepl("wrote poetry", feedbackItem3)),
+    oldies_shown = as.numeric(grepl("were born in the 1800s", feedbackItem1) |
+                grepl("were born in the 1800s", feedbackItem2) |
+                grepl("were born in the 1800s", feedbackItem3)),
+    books_shown = as.numeric(grepl("wrote more than 10 books", feedbackItem1) |
+                 grepl("wrote more than 10 books", feedbackItem2) |
+                 grepl("wrote more than 10 books", feedbackItem3)),
+    female_pick = case_when(`choice-7` %in% women ~ 1,
+                           TRUE ~ 0),
+    poets_pick = case_when(`choice-7` %in% poets ~ 1,
+                           TRUE ~ 0),
+    oldies_pick = case_when(`choice-7` %in% oldies ~ 1,
+                           TRUE ~ 0),
+    books_pick = case_when(`choice-7` %in% books ~ 1,
+                           TRUE ~ 0),
+    gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
+    race_code = case_when(str_detect(race, "White / Caucasian") ~ 1, TRUE ~ 0),
+    base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% women))
+  ) |> 
+  mutate(
+    across(c(I1:E3),
+           ~ case_when(
+             . == "Strongly disagree" ~ 1, . == "Disagree" ~ 2, . == "Somewhat disagree" ~ 3, . == "Neither agree nor disagree" ~ 4, 
+             . == "Somewhat agree" ~ 5, . == "Agree" ~ 6, . == "Strongly agree" ~ 7, TRUE ~ NA_integer_))) |> 
+  mutate(
+    internal1Z = (I1 - mean(I1, na.rm = TRUE)) / sd(I1, na.rm = TRUE),
+    internal2Z = (I2 - mean(I2, na.rm = TRUE)) / sd(I2, na.rm = TRUE),
+    internal3Z = (I3 - mean(I3, na.rm = TRUE)) / sd(I3, na.rm = TRUE),
+    internal4Z = (I4 - mean(I4, na.rm = TRUE)) / sd(I4, na.rm = TRUE),
+    internal = (internal1Z + internal2Z + internal3Z + internal4Z) / 4,
+    external1Z = (E1 - mean(E1, na.rm = TRUE)) / sd(E1, na.rm = TRUE),
+    external2Z = (E2 - mean(E2, na.rm = TRUE)) / sd(E2, na.rm = TRUE),
+    external3Z = (E3 - mean(E3, na.rm = TRUE)) / sd(E3, na.rm = TRUE),
+    external = (external1Z + external2Z + external3Z) / 3
+  ) |> 
+  dplyr::select(gender_feedback:books_pick, base_gender,`choice-1`:`choice-7`, race, gender, age, gender_code, race_code, internal1Z:external) |> 
+  slice(1:1000) # pre=registered sample size
+
+# Write the API-pulled data into a CSV file
+
+write.csv(d0, 'Study3A.csv', row.names = FALSE, quote = TRUE) 
+
+###########################################################################################
+# when reading the csv, use the following command: read.csv('Study3A.csv', check.names = F)
+###########################################################################################
+```
+
+\newpage
+
+## Variable Names
+
+\begin{table}[!htbp] \centering 
+  \label{tab:variables} 
+\begin{tabular}{|l|p{10cm}|} 
+\hline 
+\textbf{Variable} & \textbf{Description} \\ 
+\hline 
+\texttt{gender\_feedback} & Binary indicator of whether a participant was randomly assigned to gender feedback condition. \\
+\hline
+\texttt{female\_pick} & Binary indicator of whether a participant selected a female author for their seventh selection \\
+\hline
+\texttt{poets\_pick} & Binary indicator of whether a participant selected an author that wrote poetry for their seventh selection. \\
+\hline
+\texttt{oldies\_pick} & Binary indicator of whether a participant selected an author that was born in the $1800s$ for their seventh selection. \\
+\hline
+\texttt{book\_pick} & Binary indicator of whether a participant selected an author that wrote more than $10$ books for their seventh selection. \\
+\hline
+\texttt{base\_gender} & Count of the number of female authors selected in the initial six authors. \\
+\hline
+\texttt{choice-1 to choice-7} & The selected authors \\
+\hline
+\texttt{gender} & Self-selected gender. \\
+\hline
+\texttt{race} & Self-selected race. \\
+\hline
+\texttt{age} & Self-entered age. \\
+\hline
+\texttt{gender\_code} & Dummy code for gender (male = 1). \\
+\hline
+\texttt{race\_code} & Dummy code for race (white = 1). \\
+\hline
+\texttt{internal1Z-4Z} & Individual standardized scale items for Internal Motivation to Respond Without Prejudice. \\
+\hline
+\texttt{external1Z-3Z} & Individual standardized scale items for External Motivation to Respond Without Prejudice. \\
+\hline
+\texttt{internal} & Aggregated scale items for Internal Motivation to Respond Without Prejudice. \\
+\hline
+\texttt{external} & Aggregated scale items for External Motivation to Respond Without Prejudice. \\
+\hline
+\end{tabular} 
+\end{table} 
+
+\newpage
+
+
+## Demographics
+
+```{r results='markup'}
+## Excluded participants
+
+cat('Excluded Participants:', nrow(qual_data) - nrow(d0), '\n')
+
+## Gender
+
+gender_percentages <- round(prop.table(table(d0$gender)) * 100, 2)
+
+gender_df <- data.frame(
+  Percentage = gender_percentages,
+  gender = names(gender_percentages)
+)[1:2]
+
+colnames(gender_df) <- c("Percentage", "gender")
+
+print(gender_df)
+
+
+## Race
+
+
+race_percentages <- round(prop.table(table(d0$race)) * 100, 2)
+
+# Create the final data frame
+race_df <- data.frame(
+  Percentage = race_percentages,
+  Race = names(race_percentages)
+)[1:2]
+
+# Reorder the columns
+colnames(race_df) <- c("Percentage", "Race")
+
+# Print the data frame
+print(race_df)
+
+## Age
+
+age_summary <- d0 |> 
+  dplyr::select(age) |> 
+  summarize(mean_age = mean(age, na.rm = T), sd_age = sd(age, na.rm = T))
+
+age_summary
+
+```
+
+\newpage
+
+## Cronbach's Alpha
+
+```{r echo=TRUE, message=FALSE, results='markup'}
+# Calculating Cronbach's Alpha for the Internal subscale
+internal_items <- d0[, c("internal1Z", "internal2Z", "internal3Z", "internal4Z")]
+alpha_internal <- alpha(internal_items)
+
+cat("Cronbach's Alpha for Internal Subscale: ", alpha_internal$total$raw_alpha, "\n")
+
+# Calculating Cronbach's Alpha for the External subscale
+external_items <- d0[, c("external1Z", "external2Z", "external3Z")]
+alpha_external <- alpha(external_items)
+cat("Cronbach's Alpha for External Subscale: ", alpha_external$total$raw_alpha, "\n")
+
+```
+
+\newpage
+
+## Primary Analysis
+
+```{r echo=TRUE, results='markup'}
+# primary model
+r1 <- lm(female_pick ~ gender_feedback, data=d0)
+
+# Display the summary with robust standard errors
+robust_summary(r1)
+robust_confint(r1)
+```
+
+\newpage
+
+## Robustness
+
+```{r echo=TRUE, results='markup'}
+
+## which feedback was shown with gender, remove constant due to ollinearity
+r2 <- lm(female_pick ~ gender_feedback + oldies_pick + poets_pick + books_pick - 1, data=d0)
+
+# Display the summary with robust standard errors
+robust_summary(r2)
+robust_confint(r2)
+
+## robust to demographic controls
+
+r3 <- lm(female_pick ~ gender_feedback + gender_code + race_code + age, data=d0)
+
+# Display the summary with robust standard errors
+robust_summary(r3)
+robust_confint(r3)
+
+## logistic regression
+# Fit the logistic regression model
+r4 <- glm(female_pick ~ gender_feedback, family = binomial, data=d0)
+summary(r4)
+# Odds ratio
+tidy_r4 <- tidy(r4, exponentiate = TRUE, conf.int = T)
+print(tidy_r4)
+```
+
+## Interaction Analysis
+
+```{r echo=TRUE, results='markup'}
+## interaction of base gender
+# primary model
+r_interaction <- lm(female_pick ~ gender_feedback*base_gender, data=d0)
+
+
+# Display the summary with robust standard errors
+robust_summary(r_interaction)
+
+```
+
+
+\newpage
+
+
+## Mediation
+
+```{r results='markup'}
+# Set seed for reproducibility
+set.seed(123)
+
+# Define function for Sobel Test
+sobel_test <- function(med.fit, out.fit, mediator) {
+  med.se <- sqrt(diag(vcovHC(med.fit)))[mediator]
+  out.se <- sqrt(diag(vcovHC(out.fit)))[mediator]
+  sobel_test_statistic <- coef(out.fit)[mediator] / sqrt(vcovHC(out.fit)[mediator, mediator])
+  sobel_p_value <- 2 * (1 - pnorm(abs(sobel_test_statistic)))
+  list(statistic = sobel_test_statistic, p_value = sobel_p_value, se = out.se)
+}
+
+# -----------------------------
+# Internal Motivation Analysis
+# -----------------------------
+
+# Direct effect model
+dir.fit.internal <- lm(female_pick ~ gender_feedback, data=d0)
+
+# Mediator model
+med.fit.internal <- lm(internal ~ gender_feedback, data = d0)
+
+# Outcome model including mediator
+out.fit.internal <- lm(female_pick ~ gender_feedback + internal, data = d0)
+
+# Mediation analysis
+med.out.internal <- mediate(med.fit.internal, out.fit.internal, boot = TRUE, 
+                            treat = "gender_feedback", boot.ci.type = "perc", mediator = "internal", sims = 10000)
+
+# Sensitivity analysis
+sens.out.internal <- medsens(med.out.internal, rho.by = 0.01, eps=.01, effect.type = "indirect", sims = 10000)
+
+# Sobel test for internal motivation
+sobel.internal <- sobel_test(med.fit.internal, out.fit.internal, "internal")
+
+# Print and visualize results for internal motivation
+cat("Sobel test for Internal Motivation\n")
+print(sobel.internal)
+summary(med.out.internal)
+plot(sens.out.internal)
+
+# -----------------------------
+# External Motivation Analysis
+# -----------------------------
+
+# Direct effect model (same as internal, so no need to recompute)
+# dir.fit.external <- dir.fit.internal
+
+# Mediator model
+med.fit.external <- lm(external ~ gender_feedback, data = d0)
+
+# Outcome model including mediator
+out.fit.external <- lm(female_pick ~ gender_feedback + external, data = d0)
+
+# Mediation analysis
+med.out.external <- mediate(med.fit.external, out.fit.external, boot = TRUE, 
+                            treat = "gender_feedback", boot.ci.type = "perc", mediator = "external", sims = 10000)
+
+# Sensitivity analysis
+sens.out.external <- medsens(med.out.external, rho.by = 0.01, eps=.01, effect.type = "indirect", sims = 10000)
+
+# Sobel test for external motivation
+sobel.external <- sobel_test(med.fit.external, out.fit.external, "external")
+
+# Print and visualize results for external motivation
+cat("Sobel test for External Motivation\n")
+print(sobel.external)
+summary(med.out.external)
+plot(sens.out.external)
+
+# ---------------------------------
+# Combined Multiple Mediation Model
+# ---------------------------------
+
+# Compute the correlation coefficient and p-value
+correlation_result <- cor.test(d0$internal, d0$external)
+correlation_coefficient <- correlation_result$estimate
+p_value <- correlation_result$p.value
+
+# Print the results
+cat("Correlation Between Internal and External: ", correlation_coefficient, "\n")
+cat("P-value: ", p_value, "\n")
+
+# Building combined outcome model with both mediators
+out.fit.combined <- lm(female_pick ~ gender_feedback + internal + external, data = d0)
+
+# Run combined mediation analyses
+med.out.combined.internal <- mediate(med.fit.internal, out.fit.combined, boot = TRUE, 
+                                     treat = "gender_feedback", boot.ci.type = "perc", mediator = "internal", sims = 10000)
+med.out.combined.external <- mediate(med.fit.external, out.fit.combined, boot = TRUE, 
+                                     treat = "gender_feedback", boot.ci.type = "perc", mediator = "external", sims = 10000)
+
+# Summarize and print the results for combined analysis
+cat("Combined Multiple Mediation Model Results\n")
+summary(med.out.combined.internal)
+summary(med.out.combined.external)
+
+
+```
+
+## Figure S2 Code
+
+```{r echo=TRUE}
+
+dfemale_plot <- d0 |> 
+  dplyr::select(gender_feedback, female_pick) |> 
+  dplyr::group_by(gender_feedback) |> 
+  dplyr::summarise(
+    n = n(),  
+    freq = mean(female_pick),  
+    sd = sd(female_pick) * 100, 
+    se = (sd(female_pick) / sqrt(n())) * 100  
+  ) |> 
+  dplyr::mutate(
+    gender_feedback = case_when(
+      gender_feedback == 1 ~ "\"Treatment\"",
+      TRUE ~ "\"Control\""
+    )
+  ) |> 
+  dplyr::rename(Condition = gender_feedback)
+
+
+##### poets
+
+
+r_poets <- lm(poets_pick ~ poets_shown, data=d0)
+
+
+dpoets_plot <- d0 |> 
+  dplyr::select(poets_shown, poets_pick) |> 
+  dplyr::group_by(poets_shown) |> 
+  dplyr::summarise(
+    n = n(),  
+    freq = mean(poets_pick),  
+    sd = sd(poets_pick) * 100, 
+    se = (sd(poets_pick) / sqrt(n())) * 100  
+  )|> 
+  mutate(poets_shown = case_when(poets_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = poets_shown)
+
+
+##### books
+
+r_books <- lm(books_pick ~ books_shown, data=d0)
+
+dbooks_plot <- d0 |> 
+  dplyr::select(books_shown, books_pick) |> 
+  dplyr::group_by(books_shown) |> 
+  dplyr::summarise(
+    n = n(),  
+    freq = mean(books_pick),  
+    sd = sd(books_pick) * 100, 
+    se = (sd(books_pick) / sqrt(n())) * 100  
+  )|> 
+  mutate(books_shown = case_when(books_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = books_shown)
+
+
+#### oldies
+
+r_oldies <- lm(oldies_pick ~ oldies_shown, data=d0)
+
+
+doldies_plot <- d0 |> 
+  dplyr::select(oldies_shown, oldies_pick) |> 
+  dplyr::group_by(oldies_shown) |> 
+  dplyr::summarise(
+    n = n(),  
+    freq = mean(oldies_pick),  
+    sd = sd(oldies_pick) * 100, 
+    se = (sd(oldies_pick) / sqrt(n())) * 100  
+  )|> 
+  mutate(oldies_shown = case_when(oldies_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = oldies_shown)
+
+## Combine plots
+
+df_combined <- bind_rows(
+  dpoets_plot %>% mutate(Category = "\nWrote Poetry"),
+  dbooks_plot %>% mutate(Category = "\nWrote > 10 books"),
+  doldies_plot %>% mutate(Category = "\nWere Born\nin the 1800s"),
+  dfemale_plot %>% mutate(Category = "\nWere Women")
+, .id = "id") %>% 
+  mutate(Category = factor(Category, levels = c('\nWrote Poetry', '\nWrote > 10 books', '\nWere Born\nin the 1800s', '\nWere Women')))
+
+p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
+  geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
+  geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")), 
+            position=position_dodge(width=0.7), vjust=5, size = 4, color = "white") +
+  geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
+  facet_wrap(~factor(Category, c('\nWrote Poetry', '\nWrote > 10 books', '\nWere Born\nin the 1800s', '\nWere Women')), nrow = 1, strip.position = "bottom") +
+   geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""), 
+                aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5), 
+                inherit.aes = FALSE) +
+   geom_text(data = df_combined %>% filter(Category %in% c('\nWrote Poetry', '\nWrote > 10 books', '\nWere Born\nin the 1800s') & Condition == "\"Treatment\""), 
+             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."), 
+             inherit.aes = FALSE, vjust = 0) +
+   geom_text(data = df_combined %>% filter(Category == '\nWere Women' & Condition == "\"Treatment\""), 
+             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
+             inherit.aes = FALSE, vjust = 0) +
+  theme_bw() +
+  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,90)) +
+  scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
+  labs(x = "Feedback on % of authors who...", y = "% of New Authors with the Target Attribute",title = "The Effect of Getting Feedback on Your Author Selections") +
+  theme(plot.caption = element_text(face = "italic"),
+        legend.position = c(0.5, 0.95),
+        legend.title = element_blank(),
+        legend.direction = "horizontal",
+        legend.text = element_text(size = 12),
+        legend.key.size = unit(7, 'mm'),
+        legend.background = element_rect(fill = "white"),
+        panel.grid.minor = element_blank(),
+        panel.grid = element_blank(),
+        panel.border = element_rect(fill= NA, color = "white"),
+        plot.background = element_rect(fill = "white"),
+        panel.background = element_rect(fill = "white"),
+        axis.title.x = element_text(face="bold", size = 13, vjust = 21),
+        plot.title = element_blank(),
+        axis.title.y = element_text(size = 12, color = "black"),
+        axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_text(size = 12, color = "black"),
+        strip.text = element_text(size = 12, color = "black"),
+        strip.background = element_rect(colour = "white", fill = "white"))
+
+#p_combined
+# Save the plot with Times New Roman font
+ggsave("Figure-S2.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+```
+
+
+## System of Simultaneous Equations
+
+```{r results='markup'}
+# poets
+
+poets.eqn <- list(
+  poetseq = as.numeric(poets_pick) ~ poets_shown + books_shown + oldies_shown + gender_feedback - 1,
+  femaleeq = as.numeric(female_pick) ~ poets_shown + books_shown + oldies_shown + gender_feedback - 1
+)
+
+# Define restriction matrix
+restrict_poets <- "poetseq_poets_shown - femaleeq_gender_feedback = 0"
+
+# Fit the system of equations with the restriction
+unrestricted_poets <- systemfit(poets.eqn, data=d0)
+#robust_summary(unrestricted_poets)
+# books
+
+books.eqn <- list(
+  bookseq = as.numeric(books_pick) ~ poets_shown + books_shown + oldies_shown + gender_feedback - 1,
+  femaleeq = as.numeric(female_pick) ~ poets_shown + books_shown + oldies_shown + gender_feedback - 1
+)
+
+# Define restriction matrix
+restrict_books <- "bookseq_books_shown - femaleeq_gender_feedback = 0"
+
+# Fit the system of equations with the restriction
+unrestricted_books <- systemfit(books.eqn, data=d0)
+
+# oldies
+
+oldies.eqn <- list(
+  oldieseq = as.numeric(oldies_pick) ~ poets_shown + books_shown + oldies_shown + gender_feedback - 1,
+  femaleeq = as.numeric(female_pick) ~ poets_shown + books_shown + oldies_shown + gender_feedback - 1
+)
+
+# Define restriction matrix
+restrict_oldies <- "oldieseq_oldies_shown - femaleeq_gender_feedback = 0"
+
+# Fit the system of equations with the restriction
+unrestricted_oldies <- systemfit(oldies.eqn, data=d0)
+
+
+# wald tests
+# Run linear hypothesis tests
+lh_result_poets = linearHypothesis(unrestricted_poets, restrict_poets)
+lh_result_books = linearHypothesis(unrestricted_books, restrict_books)
+lh_result_oldies = linearHypothesis(unrestricted_oldies, restrict_oldies)
+
+
+
+# Collecting coefficient values and standard errors
+poets_coef <- lh_result_poets$F[2]
+books_coef <- lh_result_books$F[2]
+oldies_coef <- lh_result_oldies$F[2]
+
+
+# Extracting p-values
+p_value_poets = lh_result_poets$`Pr(>F)`[2]
+p_value_books = lh_result_books$`Pr(>F)`[2]
+p_value_oldies = lh_result_oldies$`Pr(>F)`[2]
+
+# Include p-values in the summary table
+data.frame(
+  `Test` = c("Gender Feedback - poets Feedback", "Gender Feedback - books Feedback", "Gender Feedback - oldies Feedback"),
+  `Wald Coefficient` = c(poets_coef, books_coef, oldies_coef),
+  P_Value = c(p_value_poets, p_value_books, p_value_oldies),
+  row.names = 1
+)
+
+```
+
