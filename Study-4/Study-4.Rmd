@@ -79,6 +79,25 @@ robust_confint <- function(model, level = 0.95) {
 
     return(confint)
 }
+extract_regression_estimates <- function(model) {
+  # Get robust summary
+  rob_sum <- robust_summary(model)
+  # Get robust confidence intervals
+  rob_ci <- robust_confint(model)
+  
+  # Extract coefficient for the treatment variable (second row)
+  estimate <- rob_sum$coefficients[2, "Estimate"] * 100  # Convert to percentage points
+  se <- rob_sum$coefficients[2, "Std. Error"] * 100
+  ci_lower <- rob_ci[2, 1] * 100
+  ci_upper <- rob_ci[2, 2] * 100
+  
+  return(list(
+    estimate = estimate,
+    se = se,
+    ci_lower = ci_lower,
+    ci_upper = ci_upper
+  ))
+}
 
 ```
 
@@ -131,7 +150,7 @@ d0 <- d0 |>
     gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
     race_code = case_when(race=="White / Caucasian" ~ 1, TRUE ~ 0),
   ) |> 
-  select(gender_feedback:entertainer_pick, gender, base_gender, `choice-1`:`choice-7`, race,age, gender_code, race_code) 
+  dplyr::select(gender_feedback:entertainer_pick, gender, base_gender, `choice-1`:`choice-7`, race,age, gender_code, race_code) 
 
 # Write the API-pulled data into a CSV file
 
@@ -252,6 +271,27 @@ robust_summary(r_entertainer)
 
 ```
 
+```{r include=FALSE}
+# Extract estimates for overall plot
+gender_est <- extract_regression_estimates(r1)
+pages_est <- extract_regression_estimates(r_pages)
+year_est <- extract_regression_estimates(r_year)
+entertainer_est <- extract_regression_estimates(r_entertainer)
+
+study4_estimates <- data.frame(
+    Study = "STUDY 4",
+    Stimuli = c("gender", "pages", "years", "entertainer"),
+    Estimate = c(gender_est$estimate, pages_est$estimate, year_est$estimate, entertainer_est$estimate),
+    SE = c(gender_est$se, pages_est$se, year_est$se, entertainer_est$se),
+    CI_Lower = c(gender_est$ci_lower, pages_est$ci_lower, year_est$ci_lower, entertainer_est$ci_lower),
+    CI_Upper = c(gender_est$ci_upper, pages_est$ci_upper, year_est$ci_upper, entertainer_est$ci_upper)
+)
+
+# Save the estimates to an RDS file
+saveRDS(study4_estimates, file = "../Manuscript_Figures/figure3-estimates/study4_estimates.rds")
+
+```
+
 \newpage
 
 ## Figure 6 Code
@@ -345,7 +385,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"),
             inherit.aes = FALSE, vjust = 0, family = "Times New Roman", size = 6) +
   theme_bw() +
-  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of biographies that...", y = "% of Final Biographies with the Target Attribute",

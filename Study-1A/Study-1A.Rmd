@@ -80,6 +80,26 @@ robust_confint <- function(model, level = 0.95) {
 
     return(confint)
 }
+extract_regression_estimates <- function(model) {
+  # Get robust summary
+  rob_sum <- robust_summary(model)
+  # Get robust confidence intervals
+  rob_ci <- robust_confint(model)
+  
+  # Extract coefficient for the treatment variable (second row)
+  estimate <- rob_sum$coefficients[2, "Estimate"] * 100  # Convert to percentage points
+  se <- rob_sum$coefficients[2, "Std. Error"] * 100
+  ci_lower <- rob_ci[2, 1] * 100
+  ci_upper <- rob_ci[2, 2] * 100
+  
+  return(list(
+    estimate = estimate,
+    se = se,
+    ci_lower = ci_lower,
+    ci_upper = ci_upper
+  ))
+}
+
 
 ```
 
@@ -318,6 +338,28 @@ robust_summary(r_interaction)
 
 ```
 
+```{r include=FALSE}
+# Extract estimates for overall plot
+gender_est <- extract_regression_estimates(r1)
+budget_est <- extract_regression_estimates(r_budget)
+year_est <- extract_regression_estimates(r_year)
+poli_est <- extract_regression_estimates(r_poli)
+
+# Combine into a data frame
+study1A_estimates <- data.frame(
+    Study = "STUDY 1A",
+    Stimuli = c("gender", "budget", "year", "political"),
+    Estimate = c(gender_est$estimate, budget_est$estimate, year_est$estimate, poli_est$estimate),
+    SE = c(gender_est$se, budget_est$se, year_est$se, poli_est$se),
+    CI_Lower = c(gender_est$ci_lower, budget_est$ci_lower, year_est$ci_lower, poli_est$ci_lower),
+    CI_Upper = c(gender_est$ci_upper, budget_est$ci_upper, year_est$ci_upper, poli_est$ci_upper)
+)
+
+# Save the estimates to an RDS file
+saveRDS(study1A_estimates, file = "../Manuscript_Figures/figure3-estimates/study1A_estimates.rds")
+
+```
+
 ## Figure 2A Code
 
 ```{r echo=TRUE}
@@ -403,7 +445,7 @@ df_combined <- bind_rows(
 p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq * 100, fill = Condition)) +
   geom_bar(stat = "identity", width = 0.85, position = position_dodge(width = 0.7)) +
   geom_text(aes(label = paste0(sprintf("%.1f", freq * 100), "%")), 
-            position = position_dodge(width = 0.7), vjust = 5, size = 7, color = "white") +
+            position = position_dodge(width = 0.7), vjust = 5, size = 7, color = "white", family = "Times New Roman") +
   geom_errorbar(aes(ymin = freq * 100 - se, ymax = freq * 100 + se), width = .1, position = position_dodge(width = 0.7)) +
   facet_wrap(~factor(Category, c('\nAbove a\n$40M Budget', '\nReleased After\n2010', '\nAbout a\nPolitical leader', '\nAbout a \nWoman Protagonist')), nrow = 1, strip.position = "bottom") +
   geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""),
@@ -416,7 +458,7 @@ p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq * 100, fill = Co
             aes(x = 1.5, y = freq * 100 + se + 9, label = "***"),
             inherit.aes = FALSE, vjust = 0, size = 7, family = "Times New Roman") +
   theme_bw() +
-  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x, "%"), limits = c(0, 100)) +
   scale_x_discrete(labels = c("Control" = "Not\nShown", "Treatment" = "Shown")) +
   labs(x = "Feedback on % of films that were...", y = "% of Final Films Selected with the Target Attribute", 
@@ -441,11 +483,10 @@ p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq * 100, fill = Co
         axis.text.y = element_text(size = 20, color = "black", family = "Times New Roman"),
         strip.text = element_text(size = 20, color = "black", family = "Times New Roman"),
         strip.background = element_rect(colour = "white", fill = "white"))
+  
 #p_combined_A
-
-
-# Save the plot with Times New Roman font
-ggsave("Figure-2A.pdf", plot = p_combined_A, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+# Save the plot as an R object so we can re-load it later
+saveRDS(p_combined_A, file = "p_combined_A.rds")
 
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: "Study 2"
+title: "Study S2B"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document: 
@@ -151,10 +151,10 @@ d0_no_encouragement <- d0 |>
 
 # Write the API-pulled data into a CSV file
 
-write.csv(d0, 'Study2.csv', row.names = FALSE, quote = TRUE) 
+write.csv(d0, 'StudyS2B.csv', row.names = FALSE, quote = TRUE) 
 
 ###########################################################################################
-# when reading the csv, use the following command: read.csv('Study2.csv', check.names = F)
+# when reading the csv, use the following command: read.csv('StudyS2B.csv', check.names = F)
 ###########################################################################################
 ```
 
@@ -297,7 +297,7 @@ robust_summary(r_interaction)
 
 \newpage
 
-## Figure S1A Code
+## Figure S5A Code
 
 ```{r echo=TRUE}
 dgender_plot <- d0_no_encouragement |> 
@@ -397,7 +397,7 @@ p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Cond
           inherit.aes = FALSE, vjust = -0.5, size = 4, color = "black") +
   
   theme_bw() +
-  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,85)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x= "Feedback on % of podcasts...", y = "% of New Podcasts with the Target Attribute",
@@ -429,10 +429,10 @@ p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Cond
 
 \newpage
 
-## Figure S1B Code
+## Figure S5B Code
 
 
-```{r echo=TRUE, results="asis"}
+```{r echo=TRUE}
 dgender_plot <- d0_w_encouragement |> 
   select(gender_feedback, female) |> 
   group_by(gender_feedback, female) |> 
@@ -530,7 +530,7 @@ p_combined_B <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Cond
           inherit.aes = FALSE, vjust = -0.5, size = 4, color = "black") +
   
   theme_bw() +
-  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,110)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of podcasts...", y = "% of New Podcasts with the Target Attribute",
@@ -573,5 +573,5 @@ combined_plot <- grid.arrange(
   arrangeGrob(label_B, p_combined_B, ncol = 1, heights = c(0.1, 1)),
   ncol = 2
 )
-#ggsave("FigureS1.pdf", combined_plot, width = 16, height = 7, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("../Supplemental_Figures/Figure-S5.pdf", combined_plot, width = 16, height = 7, units = "in", device = cairo_pdf, family = "Times New Roman")
 ```

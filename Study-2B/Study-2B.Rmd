@@ -1,5 +1,5 @@
 ---
-title: "Study 3B"
+title: "Study 2B"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document: 
@@ -80,6 +80,25 @@ robust_confint <- function(model, level = 0.95) {
     colnames(confint) <- c("2.5 %", "97.5 %")
 
     return(confint)
+}
+extract_regression_estimates <- function(model) {
+  # Get robust summary
+  rob_sum <- robust_summary(model)
+  # Get robust confidence intervals
+  rob_ci <- robust_confint(model)
+  
+  # Extract coefficient for the treatment variable (second row)
+  estimate <- rob_sum$coefficients[2, "Estimate"] * 100  # Convert to percentage points
+  se <- rob_sum$coefficients[2, "Std. Error"] * 100
+  ci_lower <- rob_ci[2, 1] * 100
+  ci_upper <- rob_ci[2, 2] * 100
+  
+  return(list(
+    estimate = estimate,
+    se = se,
+    ci_lower = ci_lower,
+    ci_upper = ci_upper
+  ))
 }
 ```
 
@@ -171,10 +190,10 @@ d0 <- qual_data |>
 
 # Write the API-pulled data into a CSV file
 
-write.csv(d0, 'Study3B.csv', row.names = FALSE, quote = TRUE) 
+write.csv(d0, 'Study2B.csv', row.names = FALSE, quote = TRUE) 
 
 ###########################################################################################
-# when reading the csv, use the following command: read.csv('Study3B.csv', check.names = F)
+# when reading the csv, use the following command: read.csv('Study2B.csv', check.names = F)
 ###########################################################################################
 ```
 
@@ -370,6 +389,59 @@ robust_summary(r_interaction)
 
 ```
 
+\newpage
+
+## Secondary Analysis
+
+
+```{r}
+## oldies feedback
+r_oldies <- lm(oldies_pick ~ oldies, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r_oldies)
+robust_confint(r_oldies)
+
+
+## poets feedback
+r_poets <- lm(poets_pick ~ poets, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r_poets)
+robust_confint(r_poets)
+
+
+## books feedback
+r_books <- lm(book_pick ~ books, data=d0)
+
+
+# Display the robust_summary with robust standard errors
+robust_summary(r_books)
+robust_confint(r_books)
+
+```
+
+```{r include=FALSE}
+# Extract estimates for overall plot
+race_est <- extract_regression_estimates(r1)
+oldies_est <- extract_regression_estimates(r_oldies)
+poets_est <- extract_regression_estimates(r_poets)
+books_est <- extract_regression_estimates(r_books)
+
+study2B_estimates <- data.frame(
+    Study = "STUDY 2B",
+    Stimuli = c("race", "oldies", "poets", "books"),
+    Estimate = c(race_est$estimate, oldies_est$estimate, poets_est$estimate, books_est$estimate),
+    SE = c(race_est$se, oldies_est$se, poets_est$se, books_est$se),
+    CI_Lower = c(race_est$ci_lower, oldies_est$ci_lower, poets_est$ci_lower, books_est$ci_lower),
+    CI_Upper = c(race_est$ci_upper, oldies_est$ci_upper, poets_est$ci_upper, books_est$ci_upper)
+)
+getwd()
+# Save the estimates to an RDS file
+saveRDS(study2B_estimates, file = "../Manuscript_Figures/figure3-estimates/study2B_estimates.rds")
+
+```
+
 
 \newpage
 
@@ -562,7 +634,7 @@ df_combined <- bind_rows(
 p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
   geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
   geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")), 
-            position=position_dodge(width=0.7), vjust=5, size = 4, color = "white") +
+            position=position_dodge(width=0.7), vjust=5, size = 5, color = "white") +
   geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
   facet_wrap(~factor(Category, c('\nWrote Poetry', '\nWrote > 10 books', '\nWere Born\nin the 1800s', '\nWere Racial\nMinorities')), nrow = 1, strip.position = "bottom") +
    geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""), 
@@ -570,15 +642,15 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
                 inherit.aes = FALSE) +
    geom_text(data = df_combined %>% filter(Category %in% c('\nWrote > 10 books') & Condition == "\"Treatment\""), 
              aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."), 
-             inherit.aes = FALSE, vjust = 0) +
+             inherit.aes = FALSE, vjust = 0, size = 5) +
     geom_text(data = df_combined %>% filter(Category %in% c('\nWrote Poetry', '\nWere Born\nin the 1800s') & Condition == "\"Treatment\""), 
              aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "+"), 
-             inherit.aes = FALSE, vjust = 0) +
+             inherit.aes = FALSE, vjust = 0, size = 5) +
    geom_text(data = df_combined %>% filter(Category == '\nWere Racial\nMinorities' & Condition == "\"Treatment\""), 
              aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
-             inherit.aes = FALSE, vjust = 0) +
+             inherit.aes = FALSE, vjust = 0, size = 5) +
   theme_bw() +
-  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,95)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of authors who...", y = "% of New Authors with the Target Attribute",
@@ -587,7 +659,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         legend.position = c(0.5, 0.95),
         legend.title = element_blank(),
         legend.direction = "horizontal",
-        legend.text = element_text(size = 12),
+        legend.text = element_text(size = 20),
         legend.key.size = unit(7, 'mm'),
         legend.background = element_rect(fill = "white"),
         panel.grid.minor = element_blank(),
@@ -595,18 +667,18 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         panel.border = element_rect(fill= NA, color = "white"),
         plot.background = element_rect(fill = "white"),
         panel.background = element_rect(fill = "white"),
-        axis.title.x = element_text(face="bold", size = 13, vjust = 21),
+        axis.title.x = element_text(face="bold", size = 21, vjust = 17),
         plot.title = element_blank(),
-        axis.title.y = element_text(size = 12, color = "black"),
+        axis.title.y = element_text(size = 20, color = "black"),
         axis.text.x = element_blank(),
         axis.ticks = element_blank(),
-        axis.text.y = element_text(size = 12, color = "black"),
-        strip.text = element_text(size = 12, color = "black"),
+        axis.text.y = element_text(size = 20, color = "black"),
+        strip.text = element_text(size = 20, color = "black"),
         strip.background = element_rect(colour = "white", fill = "white"))
 
 #p_combined
 # Save the plot with Times New Roman font
-ggsave("Figure-S3.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+# ggsave("../Supplemental Studies/Supplemental_Figures/Figure-S2.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
 ```
 
 \newpage

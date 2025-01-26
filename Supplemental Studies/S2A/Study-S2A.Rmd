@@ -1,5 +1,5 @@
 ---
-title: "Study S2"
+title: "Study S2A"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document: 
@@ -177,10 +177,10 @@ d0_no_encouragement <- d0 |>
 
 # Write the API-pulled data into a CSV file
 
-write.csv(d0, 'StudyS2.csv', row.names = FALSE, quote = TRUE) 
+write.csv(d0, 'StudyS2A.csv', row.names = FALSE, quote = TRUE) 
 
 ###########################################################################################
-# when reading the csv, use the following command: read.csv('StudyS2.csv', check.names = F)
+# when reading the csv, use the following command: read.csv('StudyS2A.csv', check.names = F)
 ###########################################################################################
 ```
 
@@ -344,7 +344,7 @@ r_interaction <- lm(female ~ gender_feedback*base_gender, data=d0)
 robust_summary(r_interaction)
 ```
 
-## Figure S5A Code
+## Figure S4A Code
 
 
 ```{r echo=TRUE, results='asis'}
@@ -433,7 +433,7 @@ p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Cond
             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
             inherit.aes = FALSE, vjust = 0) +
   theme_bw() +
-  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,80)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of panelists who were...", y = "% of New Panelists with the Target Identity",
@@ -463,7 +463,7 @@ p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Cond
 
 \newpage
 
-## Figure S5B Code
+## Figure S4B Code
 
 
 ```{r echo=TRUE, results='asis'}
@@ -552,7 +552,7 @@ p_combined_B <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Cond
             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
             inherit.aes = FALSE, vjust = 0) +
   theme_bw() +
-  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,80)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of panelists who were...", y = "% of New Panelists with the Target Identity",
@@ -595,7 +595,7 @@ combined_plot <- grid.arrange(
   arrangeGrob(label_B, p_combined_B, ncol = 1, heights = c(0.1, 1)),
   ncol = 2
 )
-ggsave("FigureS5.pdf", combined_plot, width = 16, height = 7, units = "in", device = cairo_pdf, family = "Times New Roman")
+# ggsave("../Supplemental_Figures/Figure-S4.pdf", combined_plot, width = 16, height = 7, units = "in", device = cairo_pdf, family = "Times New Roman")
 ```
 
 \newpage

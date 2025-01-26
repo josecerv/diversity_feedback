@@ -166,7 +166,7 @@ d0 <- qual_data |>
          race = case_when(race=="" ~ "N/A",
                           TRUE ~ race),
          base_gender = rowSums(across(selection_1:selection_6, ~ . %in% females))) |> 
-  select(
+  dplyr::select(
     list_two, gender_feedback, female, ceo, ceo_pick, founder, founder_pick, tech, tech_pick, base_gender, gender, race, age, gender_code, race_code
   )
 
@@ -259,7 +259,7 @@ print(race_df)
 ## Age
 
 age_summary <- d0 |> 
-  select(age) |> 
+  dplyr::select(age) |> 
   summarize(mean_age = mean(age, na.rm = T), sd_age = sd(age, na.rm = T))
 
 age_summary
@@ -362,13 +362,13 @@ robust_summary(r_interaction)
 
 ```
 
-## Figure S4 Code
+## Figure S3 Code
 
 ```{r echo=TRUE}
 ## dataframe for Gender information
 
 dgender_plot <- d0 |> 
-  select(gender_feedback, female) |> 
+  dplyr::select(gender_feedback, female) |> 
   group_by(gender_feedback, female) |> 
   summarise(n = n()) |> 
   mutate(freq = n / sum(n)) |> 
@@ -383,7 +383,7 @@ dgender_plot <- d0 |>
 ## dataframe for CEO information
 
 dceo_plot <- d0 |> 
-  select(ceo, ceo_pick) |> 
+  dplyr::select(ceo, ceo_pick) |> 
   group_by(ceo, ceo_pick) |> 
   summarise(n = n()) |> 
   mutate(freq = n / sum(n)) |> 
@@ -398,7 +398,7 @@ dceo_plot <- d0 |>
 ## dataframe for Founder information
 
 dfounder_plot <- d0 |> 
-  select(founder, founder_pick) |> 
+  dplyr::select(founder, founder_pick) |> 
   group_by(founder, founder_pick) |> 
   summarise(n = n()) |> 
   mutate(freq = n / sum(n)) |> 
@@ -413,7 +413,7 @@ dfounder_plot <- d0 |>
 ## dataframe for Tech information
 
 dtech_plot <- d0 |> 
-  select(tech, tech_pick) |> 
+  dplyr::select(tech, tech_pick) |> 
   group_by(tech, tech_pick) |> 
   summarise(n = n()) |> 
   mutate(freq = n / sum(n)) |> 
@@ -436,7 +436,7 @@ df_combined <- bind_rows(
 p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
   geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
   geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")), 
-            position=position_dodge(width=0.7), vjust=5, size = 4, color = "white") +
+            position=position_dodge(width=0.7), vjust=5, size = 5, color = "white") +
   geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
   facet_wrap(~factor(Category, c('\nCEOs', '\nTechnologists', '\nFounders', '\nFemale')), nrow = 1, strip.position = "bottom") +
   geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""), 
@@ -444,15 +444,15 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
                inherit.aes = FALSE) +
   geom_text(data = df_combined %>% filter(Category %in% c('\nCEOs', '\nTechnologists') & Condition == "\"Treatment\""), 
             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."), 
-            inherit.aes = FALSE, vjust = 0) +
+            inherit.aes = FALSE, vjust = 0, size = 5) +
     geom_text(data = df_combined %>% filter(Category %in% c('\nFounders') & Condition == "\"Treatment\""), 
             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "*"), 
-            inherit.aes = FALSE, vjust = 0) +
+            inherit.aes = FALSE, vjust = 0, size = 5) +
   geom_text(data = df_combined %>% filter(Category == '\nFemale' & Condition == "\"Treatment\""), 
             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
-            inherit.aes = FALSE, vjust = 0) +
+            inherit.aes = FALSE, vjust = 0, size = 5) +
   theme_bw() +
-  scale_fill_manual(values = c("#535350", "#c18354"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,80)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of panelists who were...", y = "% of New Panelists with the Target Identity",
@@ -461,7 +461,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         legend.position = c(0.5, 0.85),
         legend.title = element_blank(),
         legend.direction = "horizontal",
-        legend.text = element_text(size = 12),
+        legend.text = element_text(size = 20, family = "Times New Roman"),
         legend.key.size = unit(7, 'mm'),
         legend.background = element_rect(fill = "white"),
         panel.grid.minor = element_blank(),
@@ -469,17 +469,18 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         panel.border = element_rect(fill= NA, color = "white"),
         plot.background = element_rect(fill = "white"),
         panel.background = element_rect(fill = "white"),
-        axis.title.x = element_text(face="bold", size = 13, vjust = 21),
+        axis.title.x = element_text(face="bold", size = 22, vjust = 13, family = "Times New Roman"),
         plot.title = element_blank(),
-        axis.title.y = element_text(size = 12, color = "black"),
+        axis.title.y = element_text(size = 20, color = "black", family = "Times New Roman"),
         axis.text.x = element_blank(),
         axis.ticks = element_blank(),
-        axis.text.y = element_text(size = 12, color = "black"),
-        strip.text = element_text(size = 12, color = "black"),
+        axis.text.y = element_text(size = 20, color = "black", family = "Times New Roman"),
+        strip.text = element_text(size = 20, color = "black", family = "Times New Roman"),
         strip.background = element_rect(colour = "white", fill = "white"))
 
 # Save the plot with Times New Roman font
-ggsave("Figure-S4.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+# ggsave("../Supplemental_Figures/Figure-S3.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+
 
 ```
 
