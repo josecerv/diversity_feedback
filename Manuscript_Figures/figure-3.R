@@ -10,7 +10,7 @@ library(patchwork)
 # Load the Times New Roman font
 loadfonts(device = "pdf")
 
-# Define the path to the estimates (adjust this path if necessary)
+# Define the path to the estimates
 estimate_path <- paste0(getwd(), "/figure3-estimates/")
 
 # Read in the estimates from the .Rds files

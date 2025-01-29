@@ -106,59 +106,60 @@ extract_regression_estimates <- function(model) {
 ## Read Data
 
 ```{r echo=TRUE}
-## Pull directly from Qualtrics API
-d0 <- fetch_survey(surveyID='SV_1BJC5tq7iCTDLpk',
-                   label = T,
-                   convert = F,
-                   start_date = "2024-03-27",
-                   force_request = T)
-```
+# Set this to TRUE if you have API access, FALSE if using CSV
+USE_API <- FALSE
 
-```{r , include=FALSE, results="asis"}
-## Original pilot data
+if(USE_API) {
+  ## Pull directly from Qualtrics API
+  d0 <- fetch_survey(surveyID='SV_1BJC5tq7iCTDLpk',
+                     label = T,
+                     convert = F,
+                     start_date = "2024-03-27",
+                     force_request = T)
+} else {
+  # Read the processed data directly from CSV
+  d0 <- read.csv('Study4.csv', check.names = F)
+}
+
+# Define the categories
 women <- c('Anne Frank',  'Tina Fey',  'Jackie Kennedy',  'Helen Keller',  'Barbra Streisand')
 pages <- c('Tina Fey', 'Keith Richards',  'Andre Agassi',  'Henry Winkler',  'Willie Nelson',  'Michael J. Fox',  'John Stamos')
 year <- c('Steve Jobs',  'J. Robert Oppenheimer',  'Mark Twain',  'Anthony Bourdain',  'Andrew Jackson',  'Tina Fey',  'Johnny Cash',  'Jackie Kennedy',  'Theodore Roosevelt',  'Che Guevara',  'Tennessee Williams',  'Keith Richards',  'Napoleon Bonaparte',  'Andre Agassi',  'Henry Winkler',  'Robin Williams',  'Willie Nelson',  'Michael J. Fox',  'John Stamos')
 entertainer <- c('Anthony Bourdain',  'Tina Fey',  'Johnny Cash',  'Jim Carroll',  'Keith Richards',  'Henry Winkler',  'Robin Williams',  'Willie Nelson',  'Michael J. Fox',  'John Stamos', 'Barbra Streisand')
 
-
-
-d0 <- d0 |> 
+if(USE_API) {
+  d0 <- d0 |> 
     filter(!is.na(`choice-7`)) |> 
     mutate(
-    gender_feedback = as.numeric(grepl("feature a female protagonist", feedbackItem1) |
-                  grepl("feature a female protagonist", feedbackItem2) |
-                  grepl("feature a female protagonist", feedbackItem3)),
-    pages_shown = as.numeric(grepl("are over 500 pages", feedbackItem1) |
-                  grepl("are over 500 pages", feedbackItem2) |
-                  grepl("are over 500 pages", feedbackItem3)),
-    year_shown = as.numeric(grepl("were written in the past 25 years", feedbackItem1) |
-                grepl("were written in the past 25 years", feedbackItem2) |
-                grepl("were written in the past 25 years", feedbackItem3)),
-    entertainer_shown = as.numeric(grepl("feature an entertainer", feedbackItem1) |
-                 grepl("feature an entertainer", feedbackItem2) |
-                 grepl("feature an entertainer", feedbackItem3)),
-    female_pick = case_when(`choice-7` %in% women ~ 1,
-                           TRUE ~ 0),
-    pages_pick = case_when(`choice-7` %in% pages ~ 1,
-                           TRUE ~ 0),
-    year_pick = case_when(`choice-7` %in% year ~ 1,
-                           TRUE ~ 0),
-    entertainer_pick = case_when(`choice-7` %in% entertainer ~ 1,
-                           TRUE ~ 0),
-    base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% women)),
-    gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
-    race_code = case_when(race=="White / Caucasian" ~ 1, TRUE ~ 0),
-  ) |> 
-  dplyr::select(gender_feedback:entertainer_pick, gender, base_gender, `choice-1`:`choice-7`, race,age, gender_code, race_code) 
-
-# Write the API-pulled data into a CSV file
-
-write.csv(d0, 'Study4.csv', row.names = FALSE, quote = TRUE) 
-
-###########################################################################################
-# when reading the csv, use the following command: read.csv('Study4.csv', check.names = F)
-###########################################################################################
+      gender_feedback = as.numeric(grepl("feature a female protagonist", feedbackItem1) |
+                    grepl("feature a female protagonist", feedbackItem2) |
+                    grepl("feature a female protagonist", feedbackItem3)),
+      pages_shown = as.numeric(grepl("are over 500 pages", feedbackItem1) |
+                    grepl("are over 500 pages", feedbackItem2) |
+                    grepl("are over 500 pages", feedbackItem3)),
+      year_shown = as.numeric(grepl("were written in the past 25 years", feedbackItem1) |
+                  grepl("were written in the past 25 years", feedbackItem2) |
+                  grepl("were written in the past 25 years", feedbackItem3)),
+      entertainer_shown = as.numeric(grepl("feature an entertainer", feedbackItem1) |
+                   grepl("feature an entertainer", feedbackItem2) |
+                   grepl("feature an entertainer", feedbackItem3)),
+      female_pick = case_when(`choice-7` %in% women ~ 1,
+                             TRUE ~ 0),
+      pages_pick = case_when(`choice-7` %in% pages ~ 1,
+                             TRUE ~ 0),
+      year_pick = case_when(`choice-7` %in% year ~ 1,
+                             TRUE ~ 0),
+      entertainer_pick = case_when(`choice-7` %in% entertainer ~ 1,
+                             TRUE ~ 0),
+      base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% women)),
+      gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
+      race_code = case_when(race=="White / Caucasian" ~ 1, TRUE ~ 0),
+    ) |> 
+    dplyr::select(gender_feedback:entertainer_pick, gender, base_gender, `choice-1`:`choice-7`, race,age, gender_code, race_code) 
+    
+  # Write the API-pulled data into a CSV file
+  write.csv(d0, 'Study4.csv', row.names = FALSE, quote = TRUE)
+}
 ```
 
 

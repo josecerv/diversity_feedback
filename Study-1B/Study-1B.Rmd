@@ -104,59 +104,61 @@ extract_regression_estimates <- function(model) {
 ## Read Data
 
 ```{r echo=TRUE}
-## Pull directly from Qualtrics API
-qual_data <- fetch_survey(surveyID='SV_eFIgYjv3jONWknQ',
-                   label = T,
-                   convert = F,
-                   start_date = "2023-12-14",
-                   force_request = T) 
-```
+# Set this to TRUE if you have API access, FALSE if using CSV
+USE_API <- FALSE
 
+if(USE_API) {
+  ## Pull directly from Qualtrics API
+  qual_data <- fetch_survey(surveyID='SV_eFIgYjv3jONWknQ',
+                     label = T,
+                     convert = F,
+                     start_date = "2023-12-14",
+                     force_request = T)
+} else {
+  # Read the processed data directly from CSV
+  d0 <- read.csv('Study1B.csv', check.names = F)
+}
 
-```{r , include=FALSE, results="asis"}
 # Define the categories
 race_list <- c('Salem','Harriet', 'Ali', '42')
 budget <- c('Oppenheimer', 'Moneyball', 'Ali', 'Braveheart', 'A Beautiful Mind' ,'The Aviator', 'The King\'s Speech', 'Rocketman', 'The Greatest Showman','Walk the Line')
 year <- c('A Beautiful Day in the Neighborhood', 'Oppenheimer', 'Salem', 'Moneyball', 'The Imitation Game', 'Tolkien', 'Jobs', 'J. Edgar', 'Hitchcock', 'LBJ','On The Basis of Sex', 'The Founder','Chappaquiddick', 'Rocketman', 'The Greatest Showman','Walk the Line', 'Harriet')
 duration <- c('Moneyball', 'Chaplin', 'W. A Life Misunderstood', 'The Aviator', 'J. Edgar', 'Oppenheimer', 'Selma', 'The Doors', 'A Beautiful Mind', 'Harriet', 'Nixon', 'On The Basis of Sex', 'Jobs' ,'Braveheart', 'Ali', '42', 'Patton', 'Rocketman', 'Walk the Line')
 
-# Process the data
-d0 <- qual_data %>% 
+if(USE_API) {
+  # Process the API data
+  d0 <- qual_data %>% 
     dplyr::filter(!is.na(`choice-8`), Finished==1) %>% 
     dplyr::mutate(
-    race_feedback = as.numeric(grepl("featured a racial minority protagonist", feedbackItem1) |
-                  grepl("featured a racial minority protagonist", feedbackItem2) |
-                  grepl("featured a racial minority protagonist", feedbackItem3)),
-    budget_shown = as.numeric(grepl("had a big budget \\(>\\$40 million\\)", feedbackItem1) |
-                  grepl("had a big budget \\(>\\$40 million\\)", feedbackItem2) |
-                  grepl("had a big budget \\(>\\$40 million\\)", feedbackItem3)),
-    year_shown = as.numeric(grepl("were released after 2010", feedbackItem1) |
-                grepl("were released after 2010", feedbackItem2) |
-                grepl("were released after 2010", feedbackItem3)),
-    duration_shown = as.numeric(grepl("had a runtime over 2 hrs", feedbackItem1) |
-                 grepl("had a runtime over 2 hrs", feedbackItem2) |
-                 grepl("had a runtime over 2 hrs", feedbackItem3)),
-    race_pick = case_when(`choice-8` %in% race_list ~ 1,
-                           TRUE ~ 0),
-    budget_pick = case_when(`choice-8` %in% budget ~ 1,
-                           TRUE ~ 0),
-    year_pick = case_when(`choice-8` %in% year ~ 1,
-                           TRUE ~ 0),
-    duration_pick = case_when(`choice-8` %in% duration ~ 1,
-                           TRUE ~ 0),
-    gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
-    race_code = case_when(race=="White / Caucasian" ~ 1, TRUE ~ 0),
-    base_race = rowSums(across(`choice-1`:`choice-7`, ~ . %in% race_list))) %>%
-  dplyr::select(race_feedback:duration_pick, gender, base_race, `choice-1`:`choice-8`, race, age, gender_code, race_code) %>%
-  slice(1:1000) # pre-registered sample size
-
-# Write the API-pulled data into a CSV file
-
-#write.csv(d0, 'Study1B.csv', row.names = FALSE, quote = TRUE) 
-
-###########################################################################################
-# when reading the csv, use the following command: read.csv('Study1B.csv', check.names = F)
-###########################################################################################
+      race_feedback = as.numeric(grepl("featured a racial minority protagonist", feedbackItem1) |
+                    grepl("featured a racial minority protagonist", feedbackItem2) |
+                    grepl("featured a racial minority protagonist", feedbackItem3)),
+      budget_shown = as.numeric(grepl("had a big budget \\(>\\$40 million\\)", feedbackItem1) |
+                    grepl("had a big budget \\(>\\$40 million\\)", feedbackItem2) |
+                    grepl("had a big budget \\(>\\$40 million\\)", feedbackItem3)),
+      year_shown = as.numeric(grepl("were released after 2010", feedbackItem1) |
+                  grepl("were released after 2010", feedbackItem2) |
+                  grepl("were released after 2010", feedbackItem3)),
+      duration_shown = as.numeric(grepl("had a runtime over 2 hrs", feedbackItem1) |
+                   grepl("had a runtime over 2 hrs", feedbackItem2) |
+                   grepl("had a runtime over 2 hrs", feedbackItem3)),
+      race_pick = case_when(`choice-8` %in% race_list ~ 1,
+                             TRUE ~ 0),
+      budget_pick = case_when(`choice-8` %in% budget ~ 1,
+                             TRUE ~ 0),
+      year_pick = case_when(`choice-8` %in% year ~ 1,
+                             TRUE ~ 0),
+      duration_pick = case_when(`choice-8` %in% duration ~ 1,
+                             TRUE ~ 0),
+      gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
+      race_code = case_when(race=="White / Caucasian" ~ 1, TRUE ~ 0),
+      base_race = rowSums(across(`choice-1`:`choice-7`, ~ . %in% race_list))) %>%
+    dplyr::select(race_feedback:duration_pick, gender, base_race, `choice-1`:`choice-8`, race, age, gender_code, race_code) %>%
+    slice(1:1000) # pre-registered sample size
+    
+  # Write the API-pulled data into a CSV file
+  write.csv(d0, 'Study1B.csv', row.names = FALSE, quote = TRUE)
+}
 ```
 
 \newpage

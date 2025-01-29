@@ -106,79 +106,78 @@ extract_regression_estimates <- function(model) {
 ## Read Data
 
 ```{r echo=TRUE}
-## Pull directly from Qualtrics API
-qual_data <- fetch_survey(surveyID='SV_e4eMITeZ8WisKSa',
-                   label = T,
-                   convert = F,
-                   start_date = "2024-01-03",
-                   force_request = T)
+# Set this to TRUE if you have API access, FALSE if using CSV
+USE_API <- FALSE
 
+if(USE_API) {
+  ## Pull directly from Qualtrics API
+  qual_data <- fetch_survey(surveyID='SV_e4eMITeZ8WisKSa',
+                     label = T,
+                     convert = F,
+                     start_date = "2024-01-03",
+                     force_request = T)
+} else {
+  # Read the processed data directly from CSV
+  d0 <- read.csv('Study2A.csv', check.names = F)
+}
 
-```
-
-
-
-```{r echo=TRUE}
+# Define the categories
 women <- c('Sylvia Plath', 'Isabel Allende', 'Lucy Maud', 'Jane Austen', 'Joyce Carol Oates', 'Zadie Smith')
 poets <- c('George Orwell','Sylvia Plath','Jack London', 'Charles Dickens', 'Neil Gaiman', 'Jorge Luis Borges')
 oldies <- c('Charles Dickens', 'Ernest Hemingway', 'Herman Melville', 'Jack London', 'Jane Austen', 'Jorge Luis Borges', 'J.R.R. Tolkien', 'Lucy Maud', 'Nathaniel Hawthorne', 'F. Scott Fitzgerald')
 books <- c('Charles Dickens', 'Herman Melville', 'Isabel Allende', 'Jack London', 'John Steinbeck', 'Joyce Carol Oates', 'Jorge Luis Borges', 'J.R.R. Tolkien', 'Lucy Maud', 'Michael Crichton', 'Ray Bradbury', 'Kurt Vonnegut', 'Ian McEwan')
 
-
-# Process the data
-d0 <- qual_data |> 
+if(USE_API) {
+  # Process the API data
+  d0 <- qual_data |> 
     filter(!is.na(`choice-7`), !is.na(PROLIFIC_PID), Finished==1) |> 
     mutate(
-    gender_feedback = as.numeric(grepl("were women", feedbackItem1) |
-                  grepl("were women", feedbackItem2) |
-                  grepl("were women", feedbackItem3)),
-    poets_shown = as.numeric(grepl("wrote poetry", feedbackItem1) |
-                  grepl("wrote poetry", feedbackItem2) |
-                  grepl("wrote poetry", feedbackItem3)),
-    oldies_shown = as.numeric(grepl("were born in the 1800s", feedbackItem1) |
-                grepl("were born in the 1800s", feedbackItem2) |
-                grepl("were born in the 1800s", feedbackItem3)),
-    books_shown = as.numeric(grepl("wrote more than 10 books", feedbackItem1) |
-                 grepl("wrote more than 10 books", feedbackItem2) |
-                 grepl("wrote more than 10 books", feedbackItem3)),
-    female_pick = case_when(`choice-7` %in% women ~ 1,
-                           TRUE ~ 0),
-    poets_pick = case_when(`choice-7` %in% poets ~ 1,
-                           TRUE ~ 0),
-    oldies_pick = case_when(`choice-7` %in% oldies ~ 1,
-                           TRUE ~ 0),
-    books_pick = case_when(`choice-7` %in% books ~ 1,
-                           TRUE ~ 0),
-    gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
-    race_code = case_when(str_detect(race, "White / Caucasian") ~ 1, TRUE ~ 0),
-    base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% women))
-  ) |> 
-  mutate(
-    across(c(I1:E3),
-           ~ case_when(
-             . == "Strongly disagree" ~ 1, . == "Disagree" ~ 2, . == "Somewhat disagree" ~ 3, . == "Neither agree nor disagree" ~ 4, 
-             . == "Somewhat agree" ~ 5, . == "Agree" ~ 6, . == "Strongly agree" ~ 7, TRUE ~ NA_integer_))) |> 
-  mutate(
-    internal1Z = (I1 - mean(I1, na.rm = TRUE)) / sd(I1, na.rm = TRUE),
-    internal2Z = (I2 - mean(I2, na.rm = TRUE)) / sd(I2, na.rm = TRUE),
-    internal3Z = (I3 - mean(I3, na.rm = TRUE)) / sd(I3, na.rm = TRUE),
-    internal4Z = (I4 - mean(I4, na.rm = TRUE)) / sd(I4, na.rm = TRUE),
-    internal = (internal1Z + internal2Z + internal3Z + internal4Z) / 4,
-    external1Z = (E1 - mean(E1, na.rm = TRUE)) / sd(E1, na.rm = TRUE),
-    external2Z = (E2 - mean(E2, na.rm = TRUE)) / sd(E2, na.rm = TRUE),
-    external3Z = (E3 - mean(E3, na.rm = TRUE)) / sd(E3, na.rm = TRUE),
-    external = (external1Z + external2Z + external3Z) / 3
-  ) |> 
-  dplyr::select(gender_feedback:books_pick, base_gender,`choice-1`:`choice-7`, race, gender, age, gender_code, race_code, internal1Z:external) |> 
-  slice(1:1000) # pre=registered sample size
-
-# Write the API-pulled data into a CSV file
-
-write.csv(d0, 'Study2A.csv', row.names = FALSE, quote = TRUE) 
-
-###########################################################################################
-# when reading the csv, use the following command: read.csv('Study2A.csv', check.names = F)
-###########################################################################################
+      gender_feedback = as.numeric(grepl("were women", feedbackItem1) |
+                    grepl("were women", feedbackItem2) |
+                    grepl("were women", feedbackItem3)),
+      poets_shown = as.numeric(grepl("wrote poetry", feedbackItem1) |
+                    grepl("wrote poetry", feedbackItem2) |
+                    grepl("wrote poetry", feedbackItem3)),
+      oldies_shown = as.numeric(grepl("were born in the 1800s", feedbackItem1) |
+                  grepl("were born in the 1800s", feedbackItem2) |
+                  grepl("were born in the 1800s", feedbackItem3)),
+      books_shown = as.numeric(grepl("wrote more than 10 books", feedbackItem1) |
+                   grepl("wrote more than 10 books", feedbackItem2) |
+                   grepl("wrote more than 10 books", feedbackItem3)),
+      female_pick = case_when(`choice-7` %in% women ~ 1,
+                             TRUE ~ 0),
+      poets_pick = case_when(`choice-7` %in% poets ~ 1,
+                             TRUE ~ 0),
+      oldies_pick = case_when(`choice-7` %in% oldies ~ 1,
+                             TRUE ~ 0),
+      books_pick = case_when(`choice-7` %in% books ~ 1,
+                             TRUE ~ 0),
+      gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
+      race_code = case_when(str_detect(race, "White / Caucasian") ~ 1, TRUE ~ 0),
+      base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% women))
+    ) |> 
+    mutate(
+      across(c(I1:E3),
+             ~ case_when(
+               . == "Strongly disagree" ~ 1, . == "Disagree" ~ 2, . == "Somewhat disagree" ~ 3, . == "Neither agree nor disagree" ~ 4, 
+               . == "Somewhat agree" ~ 5, . == "Agree" ~ 6, . == "Strongly agree" ~ 7, TRUE ~ NA_integer_))) |> 
+    mutate(
+      internal1Z = (I1 - mean(I1, na.rm = TRUE)) / sd(I1, na.rm = TRUE),
+      internal2Z = (I2 - mean(I2, na.rm = TRUE)) / sd(I2, na.rm = TRUE),
+      internal3Z = (I3 - mean(I3, na.rm = TRUE)) / sd(I3, na.rm = TRUE),
+      internal4Z = (I4 - mean(I4, na.rm = TRUE)) / sd(I4, na.rm = TRUE),
+      internal = (internal1Z + internal2Z + internal3Z + internal4Z) / 4,
+      external1Z = (E1 - mean(E1, na.rm = TRUE)) / sd(E1, na.rm = TRUE),
+      external2Z = (E2 - mean(E2, na.rm = TRUE)) / sd(E2, na.rm = TRUE),
+      external3Z = (E3 - mean(E3, na.rm = TRUE)) / sd(E3, na.rm = TRUE),
+      external = (external1Z + external2Z + external3Z) / 3
+    ) |> 
+    dplyr::select(gender_feedback:books_pick, base_gender,`choice-1`:`choice-7`, race, gender, age, gender_code, race_code, internal1Z:external) |> 
+    slice(1:1000) # pre-registered sample size
+    
+  # Write the API-pulled data into a CSV file
+  write.csv(d0, 'Study2A.csv', row.names = FALSE, quote = TRUE)
+}
 ```
 
 \newpage
