@@ -86,7 +86,7 @@ robust_confint <- function(model, level = 0.95) {
 
 ```{r echo=TRUE}
 # Set this to TRUE if you have API access, FALSE if using CSV
-USE_API <- TRUE
+USE_API <- FALSE
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
