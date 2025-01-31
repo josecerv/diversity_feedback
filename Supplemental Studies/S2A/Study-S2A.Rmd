@@ -101,6 +101,8 @@ if(USE_API) {
 } else {
   # Read the processed data directly from CSV
   d0 <- read.csv('StudyS2A.csv', check.names = F)
+  num_excluded <- unique(d0$num_excluded_total)
+  
 }
 
 # Define the categories
@@ -170,6 +172,12 @@ if(USE_API) {
     select(
       list_two, encouragement, gender_feedback, female, ceo, ceo_pick, founder, founder_pick, tech, tech_pick, base_gender, gender, race, age, gender_code, race_code) |> 
     slice(1:1000) # pre-registered sample size
+  
+  # Calculate the number of excluded participants
+  num_excluded <- nrow(qual_data) - nrow(d0)
+
+  # Save num_excluded in d0
+  d0$num_excluded_total <- num_excluded  # As a column
     
   # Write the API-pulled data into a CSV file
   write.csv(d0, 'StudyS2A.csv', row.names = FALSE, quote = TRUE)
@@ -184,6 +192,7 @@ d0_no_encouragement <- d0 |>
 
 ```
 
+\newpage
 
 ## Variable Names
 
@@ -234,7 +243,7 @@ d0_no_encouragement <- d0 |>
 ```{r results='markup'}
 ## Excluded participants
 
-cat('Excluded Participants:', nrow(qual_data) - nrow(d0), '\n')
+cat('Excluded Participants:', num_excluded, '\n')
 
 ## Gender
 
@@ -298,7 +307,6 @@ robust_summary(r0_1)
 
 ## Primary Analysis
 
-### No Encouragement
 
 ```{r echo=TRUE, results='markup'}
 # primary model, no encouragement

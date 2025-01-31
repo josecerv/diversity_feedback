@@ -90,7 +90,7 @@ robust_confint <- function(model, level = 0.95) {
 
 ```{r echo=TRUE}
 # Set this to TRUE if you have API access, FALSE if using CSV
-USE_API <- FALSE
+USE_API <- TRUE
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
@@ -102,6 +102,7 @@ if(USE_API) {
 } else {
   # Read the processed data directly from CSV
   d0 <- read.csv('StudyS2B.csv', check.names = F)
+  num_excluded <- unique(d0$num_excluded_total)
 }
 
 # Define the categories
@@ -145,6 +146,12 @@ if(USE_API) {
       encouragement, gender_feedback, female, episodes_pick, episodes_shown, duration_shown, duration_pick, years_pick, years_shown, base_gender, gender, race, age, gender_code, race_code
     ) |> 
     slice(1:1000) # pre-registered sample size
+  
+  # Calculate the number of excluded participants
+  num_excluded <- nrow(qual_data) - nrow(d0)
+
+  # Save num_excluded in d0
+  d0$num_excluded_total <- num_excluded  # As a column
     
   # Write the API-pulled data into a CSV file
   write.csv(d0, 'StudyS2B.csv', row.names = FALSE, quote = TRUE)
@@ -208,7 +215,7 @@ d0_no_encouragement <- d0 |>
 ```{r results='markup'}
 ## Excluded participants
 
-cat('Excluded Participants:', nrow(qual_data) - nrow(d0), '\n')
+cat('Excluded Participants:', num_excluded, '\n')
 
 ## Gender
 

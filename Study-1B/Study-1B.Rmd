@@ -117,6 +117,7 @@ if(USE_API) {
 } else {
   # Read the processed data directly from CSV
   d0 <- read.csv('Study1B.csv', check.names = F)
+  num_excluded <- unique(d0$num_excluded_total)
 }
 
 # Define the categories
@@ -155,6 +156,12 @@ if(USE_API) {
       base_race = rowSums(across(`choice-1`:`choice-7`, ~ . %in% race_list))) %>%
     dplyr::select(race_feedback:duration_pick, gender, base_race, `choice-1`:`choice-8`, race, age, gender_code, race_code) %>%
     slice(1:1000) # pre-registered sample size
+  
+  # Calculate the number of excluded participants
+  num_excluded <- nrow(qual_data) - nrow(d0)
+
+  # Save num_excluded in d0
+  d0$num_excluded_total <- num_excluded  # As a column
     
   # Write the API-pulled data into a CSV file
   write.csv(d0, 'Study1B.csv', row.names = FALSE, quote = TRUE)
@@ -211,7 +218,7 @@ if(USE_API) {
 ```{r results='markup'}
 ## Excluded participants
 
-cat('Excluded Participants:', nrow(qual_data) - nrow(d0), '\n')
+cat('Excluded Participants:', num_excluded, '\n')
 
 ## Gender
 

@@ -97,6 +97,7 @@ if(USE_API) {
 } else {
   # Read the processed data directly from CSV
   d0 <- read.csv('StudyS3.csv', check.names = F)
+  num_excluded <- unique(d0$num_excluded_total)
 }
 
 # Define the categories
@@ -139,6 +140,11 @@ if(USE_API) {
       base_race = rowSums(across(`choice-1`:`choice-6`, ~ . %in% URM))
     ) |> 
     select(race_pick:race_code, gender, race, age, `choice-1`:`choice-7`)
+  # Calculate the number of excluded participants
+  num_excluded <- nrow(qual_data) - nrow(d0)
+
+  # Save num_excluded in d0
+  d0$num_excluded_total <- num_excluded  # As a column
     
   # Write the API-pulled data into a CSV file
   write.csv(d0, 'StudyS3.csv', row.names = FALSE, quote = TRUE)
@@ -185,10 +191,10 @@ d0_minority_pool <- d0 |>
 
 
 
-```{r include=FALSE, results='markup'}
+```{r results='markup'}
 ## Excluded participants
 
-cat('Excluded Participants:', nrow(qual_data) - nrow(d0), '\n')
+cat('Excluded Participants:', num_excluded, '\n')
 
 ## Gender
 
