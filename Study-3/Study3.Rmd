@@ -255,7 +255,7 @@ d0_male_pool |>
   dplyr::group_by(gender_feedback) |> 
   dplyr::summarize(mean = mean(base_gender/6))
 
-t.test(base_gender ~ gender_feedback, data=d0_male_pool)
+t.test(base_gender/6 ~ gender_feedback, data=d0_male_pool)
 
 ## Initial Selections
 
@@ -272,7 +272,7 @@ d0_female_pool |>
   dplyr::group_by(gender_feedback) |> 
   dplyr::summarize(mean = mean(base_gender/6))
 
-t.test(base_gender ~ gender_feedback, data=d0_female_pool)
+t.test(base_gender/6 ~ gender_feedback, data=d0_female_pool)
 
 ```
 

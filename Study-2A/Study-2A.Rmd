@@ -296,7 +296,7 @@ d0 |>
   dplyr::group_by(gender_feedback) |> 
   dplyr::summarize(mean = mean(base_gender/6))
 
-t.test(base_gender ~ gender_feedback, data=d0)
+t.test(base_gender/6 ~ gender_feedback, data=d0)
 
 ```
 

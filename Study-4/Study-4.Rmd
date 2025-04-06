@@ -257,7 +257,7 @@ d0 |>
   dplyr::group_by(gender_feedback) |> 
   dplyr::summarize(mean = mean(base_gender/6))
 
-t.test(base_gender ~ gender_feedback, data=d0)
+t.test(base_gender/6 ~ gender_feedback, data=d0)
 
 ```
 
@@ -272,6 +272,15 @@ r1 <- lm(female_pick ~ gender_feedback, data=d0)
 # robust standard errors
 robust_summary(r1)
 robust_confint(r1)
+
+# robustness test
+
+# primary model
+r_robust <- lm(female_pick ~ gender_feedback + base_gender, data=d0)
+
+# robust standard errors
+robust_summary(r_robust)
+robust_confint(r_robust)
 
 ```
 \newpage

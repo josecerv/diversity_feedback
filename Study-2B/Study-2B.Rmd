@@ -322,7 +322,7 @@ d0 |>
   dplyr::summarize(mean = mean(base_race/6))
 
 
-t.test(base_race ~ race_feedback, data=d0)
+t.test(base_race/6 ~ race_feedback, data=d0)
 ```
 
 \newpage

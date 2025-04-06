@@ -262,15 +262,15 @@ cat('SD (num of initial women selected): ',round(sd(d0$base_race), 2))
 
 ## Initial Selections (%)
 
-cat('Percentage (initial women selected): ', round(mean(d0$base_race), 2)/6)
-cat('SD (initial women selected): ',round(sd(d0$base_race), 2)/6)
+cat('Percentage (initial women selected): ', round(mean(d0$base_race), 2)/7)
+cat('SD (initial women selected): ',round(sd(d0$base_race), 2)/7)
 
 d0 |> 
   dplyr::select(base_race, race_feedback) |> 
   dplyr::group_by(race_feedback) |> 
-  dplyr::summarize(mean = mean(base_race/6))
+  dplyr::summarize(mean = mean(base_race/7))
 
-t.test(base_race ~ race_feedback, data=d0)
+t.test(base_race/7 ~ race_feedback, data=d0)
 ```
 
 \newpage
