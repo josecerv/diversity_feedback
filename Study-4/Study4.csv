@@ -301,5 +301,3 @@
 1,1,0,1,0,0,1,0,"Woman",4,"Robin Williams","Jackie Kennedy","Anne Frank","Nelson Mandela","Barbra Streisand","Helen Keller","Napoleon Bonaparte","White / Caucasian",19,0,1
 0,1,1,1,0,0,1,0,"Man",0,"Anthony Bourdain","Steve Jobs","Napoleon Bonaparte","Robin Williams","J. Robert Oppenheimer","Keith Richards","Mark Twain","Black or African American",21,1,0
 0,1,1,1,0,0,1,1,"Non-binary",0,"Jim Carroll","Che Guevara","Keith Richards","Nelson Mandela","Mark Twain","Thomas Jefferson","Robin Williams","Black or African American",27,0,0
-0,1,1,1,1,0,0,0,NA,2,"Barbra Streisand","J. Robert Oppenheimer","Keith Richards","Jackie Kennedy","Steve Jobs","Johnny Cash","Helen Keller",NA,NA,0,0
-1,1,0,1,0,1,1,1,NA,2,"Nelson Mandela","Michael J. Fox","Andrew Jackson","Jackie Kennedy","Anne Frank","Napoleon Bonaparte","Keith Richards",NA,NA,0,0

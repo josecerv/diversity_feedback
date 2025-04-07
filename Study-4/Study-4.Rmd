@@ -115,6 +115,7 @@ if(USE_API) {
                      label = T,
                      convert = F,
                      start_date = "2024-03-27",
+                     end_date ="2024-05-15",
                      force_request = T)
 } else {
   # Read the processed data directly from CSV
@@ -283,6 +284,39 @@ robust_summary(r_robust)
 robust_confint(r_robust)
 
 ```
+
+\newpage
+
+## Robustness
+
+```{r echo=TRUE, results='markup'}
+
+## which feedback was shown with gender, remove constant due to ollinearity
+r2 <- lm(female_pick ~ gender_feedback + pages_shown + year_shown + entertainer_shown - 1, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r2)
+robust_confint(r2)
+
+## robust to demographic controls
+
+r3 <- lm(female_pick ~ gender_feedback + gender_code + race_code + age, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r3)
+robust_confint(r3)
+
+## logistic regression
+# Fit the logistic regression model
+r4 <- glm(female_pick ~ gender_feedback, family = binomial, data=d0)
+
+# Odds ratio
+tidy_r4 <- tidy(r4, exponentiate = TRUE, conf.int = T)
+print(tidy_r4)
+summary(r4)
+```
+
+
 \newpage
 
 ```{r include=FALSE}
