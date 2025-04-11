@@ -319,16 +319,19 @@ summary(r4)
 
 \newpage
 
-```{r include=FALSE}
+```{r echo=FALSE, results='markup'}
 
 r_pages <- lm(pages_pick ~ pages_shown, data=d0)
 robust_summary(r_pages)
+robust_confint(r_pages)
 
 r_year <- lm(year_pick ~ year_shown, data=d0)
 robust_summary(r_year)
+robust_confint(r_year)
 
 r_entertainer <- lm(entertainer_pick ~ entertainer_shown, data=d0)
 robust_summary(r_entertainer)
+robust_confint(r_entertainer)
 
 ```
 
