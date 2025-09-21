@@ -478,3 +478,58 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
 # ggsave("../Manuscript_Figures/Figure-4.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
 
 ```
+
+## Testing Asymmetry in Effects (Response to Reviewer 3)
+
+```{r asymmetry-test}
+# Testing whether the effect of gender feedback differs significantly 
+# between women underrepresented vs overrepresented conditions
+
+library(systemfit)
+library(car)
+
+# Prepare data for simultaneous equations
+# Create separate datasets for each condition
+d_underrep <- d0 %>% 
+  filter(male_pool == 1) %>%
+  mutate(feedback_effect = gender_feedback)
+
+d_overrep <- d0 %>% 
+  filter(male_pool == 0) %>%
+  mutate(feedback_effect = gender_feedback)
+
+# Estimate separate models
+model_underrep <- lm(female_pick ~ feedback_effect, data = d_underrep)
+model_overrep <- lm(female_pick ~ feedback_effect, data = d_overrep)
+
+# Display the coefficients
+cat('Effect when women underrepresented:\n')
+print(summary(model_underrep)$coefficients['feedback_effect',])
+
+cat('\nEffect when women overrepresented:\n')
+print(summary(model_overrep)$coefficients['feedback_effect',])
+
+# Test for significant difference using interaction model
+# This tests whether the treatment effect differs by pool type
+interaction_model <- lm(female_pick ~ gender_feedback * male_pool, data = d0)
+cat('\n\nInteraction model testing asymmetry:\n')
+summary(interaction_model)
+
+# Extract the interaction coefficient
+interaction_coef <- coef(interaction_model)['gender_feedback:male_pool']
+interaction_se <- summary(interaction_model)$coefficients['gender_feedback:male_pool', 'Std. Error']
+interaction_p <- summary(interaction_model)$coefficients['gender_feedback:male_pool', 'Pr(>|t|)']
+
+cat('\n\nKey test of asymmetry (interaction term):\n')
+cat('Difference in effects:', round(interaction_coef * 100, 2), 'percentage points\n')
+cat('Standard error:', round(interaction_se * 100, 2), '\n')
+cat('p-value:', round(interaction_p, 4), '\n')
+
+if(interaction_p < 0.05) {
+  cat('\nThe asymmetry IS statistically significant (p < 0.05).\n')
+  cat('The effect of gender feedback is significantly stronger when women are underrepresented\n')
+  cat('compared to when women are overrepresented.\n')
+} else {
+  cat('\nThe asymmetry is NOT statistically significant (p >= 0.05).\n')
+}
+```

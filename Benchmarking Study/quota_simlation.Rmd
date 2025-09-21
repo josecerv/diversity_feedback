@@ -206,4 +206,9 @@ knitr::kable(wald_results,
              caption = "Wald Test Results for All Studies",
              col.names = c("Study", "F-value", "p-value"),
              digits = 4)
+
+robust_confint(models$s1a)
+robust_confint(models$s1b)
+robust_confint(models$s2A)
+robust_confint(models$s2B)
 ```
