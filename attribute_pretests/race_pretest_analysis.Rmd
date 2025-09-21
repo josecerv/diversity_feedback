@@ -1,0 +1,524 @@
+---
+title: "Race Attribute Pretest Analysis"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE,
+                      fig.width = 10, fig.height = 6)
+
+# Load required libraries
+library(tidyverse)
+library(qualtRics)
+library(kableExtra)
+library(ggthemes)
+library(broom)
+library(effectsize)
+
+# Set theme for all plots
+theme_set(theme_economist())
+```
+
+# Data Collection
+
+```{r api-setup}
+# Set up Qualtrics API credentials (should be configured in .Renviron)
+# qualtrics_api_credentials(api_key = "YOUR_API_KEY",
+#                          base_url = "YOUR_BASE_URL",
+#                          install = TRUE)
+
+# Survey ID for race pretest
+survey_id <- "SV_2cbaXVDl66VOsAu"
+```
+
+```{r fetch-data}
+# Fetch survey data using Qualtrics API
+survey_data <- fetch_survey(surveyID = survey_id,
+                            force_request = TRUE,
+                            verbose = FALSE)
+
+# Display initial data dimensions
+cat("Initial sample size:", nrow(survey_data), "\n")
+cat("Number of variables:", ncol(survey_data), "\n")
+```
+
+# Data Cleaning
+
+```{r data-cleaning}
+# Clean and prepare data
+clean_data <- survey_data %>%
+  # Filter for completed responses
+  filter(Finished == TRUE) %>%
+  # Filter for those who passed attention checks
+  filter(!is.na(ec_1_1) & !is.na(ec_2)) %>%
+  # Select relevant columns
+  select(ResponseId, StartDate, EndDate, Duration = `Duration (in seconds)`,
+         # Importance ratings
+         importance_minority = importance_1,  # Feature a racial minority protagonist
+         importance_budget = importance_2,    # Had a big budget
+         importance_recent = importance_3,    # Released after 2010
+         importance_runtime = importance_4,   # Runtime over 2 hrs
+         # Demographics
+         gender, race,
+         # Comments
+         comments = end) %>%
+  # Convert importance ratings to numeric
+  mutate(across(starts_with("importance_"), as.numeric))
+
+# Display cleaned data dimensions
+cat("Sample size after cleaning:", nrow(clean_data), "\n")
+
+# Check for missing values in importance ratings
+missing_importance <- clean_data %>%
+  select(starts_with("importance_")) %>%
+  summarise_all(~sum(is.na(.)))
+
+kable(missing_importance,
+      caption = "Missing Values in Importance Ratings") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+# Descriptive Statistics
+
+## Sample Demographics
+
+```{r demographics}
+# Gender distribution
+gender_dist <- clean_data %>%
+  count(gender) %>%
+  mutate(percentage = round(n / sum(n) * 100, 1))
+
+# Race distribution
+race_dist <- clean_data %>%
+  count(race) %>%
+  mutate(percentage = round(n / sum(n) * 100, 1))
+
+# Display demographics tables
+kable(gender_dist,
+      col.names = c("Gender", "N", "%"),
+      caption = "Gender Distribution") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+kable(race_dist,
+      col.names = c("Race/Ethnicity", "N", "%"),
+      caption = "Race/Ethnicity Distribution") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+## Importance Ratings Summary
+
+```{r importance-summary}
+# Calculate summary statistics for each attribute
+importance_summary <- clean_data %>%
+  select(starts_with("importance_")) %>%
+  pivot_longer(everything(), names_to = "attribute", values_to = "rating") %>%
+  mutate(attribute = case_when(
+    attribute == "importance_minority" ~ "Racial Minority Protagonist",
+    attribute == "importance_budget" ~ "Big Budget (>$40M)",
+    attribute == "importance_recent" ~ "Released After 2010",
+    attribute == "importance_runtime" ~ "Runtime Over 2 Hours"
+  )) %>%
+  group_by(attribute) %>%
+  summarise(
+    N = n(),
+    Mean = round(mean(rating, na.rm = TRUE), 2),
+    SD = round(sd(rating, na.rm = TRUE), 2),
+    Median = median(rating, na.rm = TRUE),
+    Min = min(rating, na.rm = TRUE),
+    Max = max(rating, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  arrange(desc(Mean))
+
+kable(importance_summary,
+      caption = "Importance Ratings Summary Statistics") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+# Statistical Analysis
+
+## OLS Regression Analysis
+
+Testing differences in importance ratings across attributes using OLS regression with attribute dummy variables.
+
+```{r regression-setup}
+# Reshape data for regression
+regression_data <- clean_data %>%
+  select(ResponseId, starts_with("importance_")) %>%
+  pivot_longer(-ResponseId, names_to = "attribute", values_to = "rating") %>%
+  mutate(
+    # Create dummy variables with Minority Protagonist as reference category
+    is_budget = ifelse(attribute == "importance_budget", 1, 0),
+    is_recent = ifelse(attribute == "importance_recent", 1, 0),
+    is_runtime = ifelse(attribute == "importance_runtime", 1, 0),
+    attribute_label = factor(case_when(
+      attribute == "importance_minority" ~ "Minority Protagonist (Reference)",
+      attribute == "importance_budget" ~ "Big Budget",
+      attribute == "importance_recent" ~ "Recent Release",
+      attribute == "importance_runtime" ~ "Long Runtime"
+    ))
+  )
+```
+
+## Main OLS Model
+
+```{r ols-main}
+# Run OLS regression with Minority Protagonist as reference
+ols_model <- lm(rating ~ is_budget + is_recent + is_runtime,
+                data = regression_data)
+
+# Get tidy summary
+ols_summary <- tidy(ols_model, conf.int = TRUE)
+
+# Add interpretation column
+ols_summary <- ols_summary %>%
+  mutate(
+    term = case_when(
+      term == "(Intercept)" ~ "Minority Protagonist (Baseline)",
+      term == "is_budget" ~ "Big Budget vs. Minority",
+      term == "is_recent" ~ "Recent Release vs. Minority",
+      term == "is_runtime" ~ "Long Runtime vs. Minority"
+    ),
+    significant = ifelse(p.value < 0.05, "Yes", "No")
+  )
+
+# Display regression results
+kable(ols_summary %>%
+        select(Coefficient = term,
+               Estimate = estimate,
+               SE = std.error,
+               `95% CI Lower` = conf.low,
+               `95% CI Upper` = conf.high,
+               `t-value` = statistic,
+               `p-value` = p.value,
+               Significant = significant),
+      digits = 3,
+      caption = "OLS Regression Results (Minority Protagonist as Reference)") %>%
+  kable_styling(bootstrap_options = c("striped", "hover")) %>%
+  row_spec(which(ols_summary$significant == "Yes"), bold = TRUE)
+
+# Model statistics
+cat("\nModel Statistics:\n")
+cat("R-squared:", round(summary(ols_model)$r.squared, 3), "\n")
+cat("Adjusted R-squared:", round(summary(ols_model)$adj.r.squared, 3), "\n")
+cat("F-statistic:", round(summary(ols_model)$fstatistic[1], 2), "\n")
+cat("Overall p-value:", format.pval(pf(summary(ols_model)$fstatistic[1],
+                                       summary(ols_model)$fstatistic[2],
+                                       summary(ols_model)$fstatistic[3],
+                                       lower.tail = FALSE)), "\n")
+```
+
+## Robust Standard Errors
+
+```{r robust-se}
+# Calculate robust standard errors
+library(sandwich)
+library(lmtest)
+
+# Heteroskedasticity-robust standard errors
+robust_se <- coeftest(ols_model, vcov = vcovHC(ols_model, type = "HC1"))
+robust_df <- as.data.frame(robust_se)
+robust_df$term <- rownames(robust_df)
+
+# Clean up results
+robust_results <- robust_df %>%
+  mutate(
+    term = case_when(
+      term == "(Intercept)" ~ "Minority Protagonist (Baseline)",
+      term == "is_budget" ~ "Big Budget vs. Minority",
+      term == "is_recent" ~ "Recent Release vs. Minority",
+      term == "is_runtime" ~ "Long Runtime vs. Minority"
+    ),
+    significant = ifelse(`Pr(>|t|)` < 0.05, "Yes", "No"),
+    conf_low = Estimate - 1.96 * `Std. Error`,
+    conf_high = Estimate + 1.96 * `Std. Error`
+  ) %>%
+  select(
+    Coefficient = term,
+    Estimate,
+    `Robust SE` = `Std. Error`,
+    `95% CI Lower` = conf_low,
+    `95% CI Upper` = conf_high,
+    `t-value` = `t value`,
+    `p-value` = `Pr(>|t|)`,
+    Significant = significant
+  )
+
+kable(robust_results,
+      digits = 3,
+      caption = "OLS Results with Robust Standard Errors") %>%
+  kable_styling(bootstrap_options = c("striped", "hover")) %>%
+  row_spec(which(robust_results$Significant == "Yes"), bold = TRUE)
+```
+
+## Pairwise Comparisons
+
+```{r pairwise-ols}
+# Test all pairwise differences using different reference categories
+comparisons <- list()
+
+# Budget as reference
+model_budget <- lm(rating ~ I(attribute == "importance_minority") +
+                            I(attribute == "importance_recent") +
+                            I(attribute == "importance_runtime"),
+                  data = regression_data)
+budget_coef <- coef(model_budget)
+
+# Recent as reference
+model_recent <- lm(rating ~ I(attribute == "importance_minority") +
+                            I(attribute == "importance_budget") +
+                            I(attribute == "importance_runtime"),
+                  data = regression_data)
+recent_coef <- coef(model_recent)
+
+# Create comparison matrix
+comparison_matrix <- data.frame(
+  Comparison = c("Minority vs. Budget",
+                 "Minority vs. Recent",
+                 "Minority vs. Runtime",
+                 "Budget vs. Recent",
+                 "Budget vs. Runtime",
+                 "Recent vs. Runtime"),
+  Difference = c(-coef(ols_model)["is_budget"],
+                 -coef(ols_model)["is_recent"],
+                 -coef(ols_model)["is_runtime"],
+                 budget_coef[3],
+                 budget_coef[4],
+                 recent_coef[4]),
+  stringsAsFactors = FALSE
+)
+
+# Add confidence intervals and p-values from the models
+comparison_matrix$Difference <- round(comparison_matrix$Difference, 3)
+
+kable(comparison_matrix,
+      caption = "All Pairwise Comparisons") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+## Equivalence Testing
+
+Testing whether the importance of the racial minority protagonist attribute is practically equivalent to other attributes.
+
+```{r equivalence}
+# Define equivalence bounds (e.g., ±0.5 on 7-point scale)
+equiv_bound <- 0.5
+
+# Get mean ratings for each attribute
+mean_ratings <- clean_data %>%
+  summarise(across(starts_with("importance_"), ~mean(., na.rm = TRUE)))
+
+# Calculate differences from minority protagonist rating
+minority_mean <- mean_ratings$importance_minority
+differences <- data.frame(
+  Attribute = c("Big Budget", "Recent Release", "Long Runtime"),
+  Difference = c(
+    mean_ratings$importance_budget - minority_mean,
+    mean_ratings$importance_recent - minority_mean,
+    mean_ratings$importance_runtime - minority_mean
+  )
+) %>%
+  mutate(
+    Within_Bounds = abs(Difference) < equiv_bound,
+    Interpretation = ifelse(Within_Bounds,
+                           "Practically Equivalent",
+                           "Meaningfully Different")
+  )
+
+kable(differences,
+      digits = 2,
+      caption = paste("Equivalence Testing (Bounds: ±", equiv_bound, ")", sep = "")) %>%
+  kable_styling(bootstrap_options = c("striped", "hover")) %>%
+  row_spec(which(differences$Within_Bounds), bold = TRUE)
+```
+
+
+# Visualizations
+
+## Importance Ratings Distribution
+
+```{r rating-distribution}
+# Create violin plot with box plot overlay
+ggplot(regression_data, aes(x = attribute_label, y = rating, fill = attribute_label)) +
+  geom_violin(alpha = 0.7, trim = FALSE) +
+  geom_boxplot(width = 0.2, alpha = 0.9) +
+  geom_jitter(width = 0.1, alpha = 0.3, size = 1) +
+  stat_summary(fun = mean, geom = "point", shape = 23, size = 3,
+               fill = "red", color = "red") +
+  scale_y_continuous(breaks = 1:7, limits = c(0.5, 7.5)) +
+  scale_fill_economist() +
+  labs(title = "Distribution of Importance Ratings by Attribute",
+       subtitle = "Race Pretest Survey Results",
+       x
+       = "Film Attribute",
+       y = "Importance Rating (1-7)",
+       caption = "Red diamonds indicate mean values") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none")
+```
+
+## Mean Importance with Confidence Intervals
+
+```{r mean-ci-plot}
+# Calculate means and confidence intervals
+ci_data <- regression_data %>%
+  group_by(attribute_label) %>%
+  summarise(
+    mean = mean(rating, na.rm = TRUE),
+    se = sd(rating, na.rm = TRUE) / sqrt(n()),
+    lower = mean - 1.96 * se,
+    upper = mean + 1.96 * se,
+    .groups = "drop"
+  ) %>%
+  arrange(desc(mean))
+
+# Create plot
+ggplot(ci_data, aes(x = reorder(attribute_label, mean), y = mean)) +
+  geom_point(size = 4, color = "darkblue") +
+  geom_errorbar(aes(ymin = lower, ymax = upper),
+                width = 0.2, size = 1, color = "darkblue") +
+  geom_hline(yintercept = 4, linetype = "dashed", color = "gray50") +
+  coord_flip() +
+  scale_y_continuous(breaks = 1:7, limits = c(1, 7)) +
+  labs(title = "Mean Importance Ratings with 95% Confidence Intervals",
+       subtitle = "Race Pretest Survey",
+       x = "Film Attribute",
+       y = "Mean Importance Rating",
+       caption = "Dashed line indicates scale midpoint (4)") +
+  theme_minimal() +
+  theme(panel.grid.major.y = element_blank())
+```
+
+## Correlation Matrix
+
+```{r correlation}
+# Calculate correlation matrix
+cor_matrix <- clean_data %>%
+  select(starts_with("importance_")) %>%
+  cor(use = "complete.obs")
+
+# Rename for display
+colnames(cor_matrix) <- rownames(cor_matrix) <-
+  c("Minority", "Budget", "Recent", "Runtime")
+
+# Create correlation plot
+library(corrplot)
+corrplot(cor_matrix,
+         method = "color",
+         type = "upper",
+         order = "hclust",
+         addCoef.col = "black",
+         tl.col = "black",
+         tl.srt = 45,
+         diag = FALSE,
+         title = "Correlation Matrix of Importance Ratings",
+         mar = c(0, 0, 2, 0))
+```
+
+## Comparison by Participant Race
+
+```{r race-comparison}
+# Analyze minority protagonist importance by participant race
+race_analysis <- clean_data %>%
+  filter(!is.na(race)) %>%
+  mutate(minority_status = ifelse(race %in% c("Black or African American",
+                                              "Hispanic / Latinx",
+                                              "Asian / Pacific Islander",
+                                              "American Indian or Alaskan Native"),
+                                  "Racial Minority",
+                                  "White")) %>%
+  group_by(minority_status) %>%
+  summarise(
+    N = n(),
+    Mean_Minority_Import = round(mean(importance_minority, na.rm = TRUE), 2),
+    SD = round(sd(importance_minority, na.rm = TRUE), 2),
+    .groups = "drop"
+  )
+
+if(nrow(race_analysis) > 1) {
+  kable(race_analysis,
+        caption = "Minority Protagonist Importance by Participant Race") %>%
+    kable_styling(bootstrap_options = c("striped", "hover"))
+
+  # Create comparison plot
+  ggplot(clean_data %>%
+           filter(!is.na(race)) %>%
+           mutate(minority_status = ifelse(race %in% c("Black or African American",
+                                                      "Hispanic / Latinx",
+                                                      "Asian / Pacific Islander",
+                                                      "American Indian or Alaskan Native"),
+                                          "Racial Minority",
+                                          "White")),
+         aes(x = minority_status, y = importance_minority, fill = minority_status)) +
+    geom_boxplot(alpha = 0.7) +
+    geom_jitter(width = 0.1, alpha = 0.3) +
+    stat_summary(fun = mean, geom = "point", shape = 23, size = 3,
+                 fill = "red", color = "red") +
+    scale_fill_manual(values = c("Racial Minority" = "#4A90E2", "White" = "#7B68EE")) +
+    labs(title = "Minority Protagonist Importance by Participant Race",
+         x = "Participant Race Group",
+         y = "Importance Rating (1-7)",
+         caption = "Red diamonds indicate mean values") +
+    theme_minimal() +
+    theme(legend.position = "none")
+}
+```
+
+# Key Findings
+
+```{r key-findings}
+# Identify key patterns
+minority_rank <- which(importance_summary$attribute == "Racial Minority Protagonist")
+minority_mean <- importance_summary$Mean[importance_summary$attribute == "Racial Minority Protagonist"]
+overall_mean <- mean(importance_summary$Mean)
+
+# Test if all means are within 1 point of each other
+range_ratings <- max(importance_summary$Mean) - min(importance_summary$Mean)
+all_similar <- range_ratings < 1
+
+cat("KEY FINDINGS:\n")
+cat("=============\n\n")
+cat("1. Racial minority protagonist attribute ranked #", minority_rank,
+    " out of 4 attributes\n", sep = "")
+cat("2. Mean importance of minority protagonist: ", minority_mean, "\n", sep = "")
+cat("3. Overall mean across all attributes: ", round(overall_mean, 2), "\n", sep = "")
+cat("4. Range of mean ratings: ", round(range_ratings, 2), "\n", sep = "")
+cat("5. All attributes rated similarly (within 1 point): ",
+    ifelse(all_similar, "YES", "NO"), "\n", sep = "")
+
+# Check OLS model significance
+ols_p_value <- pf(summary(ols_model)$fstatistic[1],
+                  summary(ols_model)$fstatistic[2],
+                  summary(ols_model)$fstatistic[3],
+                  lower.tail = FALSE)
+
+if(ols_p_value < 0.05) {
+  cat("6. Significant differences detected (OLS p < 0.05): YES\n")
+  # Check which specific comparisons are significant
+  sig_comparisons <- ols_summary %>%
+    filter(significant == "Yes" & term != "Minority Protagonist (Baseline)")
+  if(nrow(sig_comparisons) > 0) {
+    cat("   Significant differences from Minority Protagonist:\n")
+    for(i in 1:nrow(sig_comparisons)) {
+      cat("   - ", sig_comparisons$term[i], ": ",
+          round(sig_comparisons$estimate[i], 2), " (p = ",
+          round(sig_comparisons$p.value[i], 3), ")\n", sep = "")
+    }
+  }
+} else {
+  cat("6. Significant differences detected (OLS p < 0.05): NO\n")
+  cat("   -> No significant differences in importance ratings across attributes\n")
+}
+```
+
+# Session Information
+
+```{r session-info}
+sessionInfo()
+```
