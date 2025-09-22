@@ -51,6 +51,44 @@ cat("Number of variables:", ncol(survey_data), "\n")
 # Data Cleaning
 
 ```{r data-cleaning}
+# First, let's examine the raw data to understand how scales are coded
+cat("=== EXAMINING RAW DATA STRUCTURE ===\n\n")
+
+# Check raw values for the importance questions
+raw_check <- survey_data %>%
+  filter(Finished == TRUE) %>%
+  select(importance_1, importance_2, importance_3, importance_4) %>%
+  slice_head(n = 20)  # Look at first 20 responses
+
+cat("Sample of raw importance values (first 20 responses):\n")
+print(raw_check)
+
+# Check unique values for each importance question
+cat("\n\nUnique values in each importance question:\n")
+cat("importance_1 (minority):", unique(survey_data$importance_1), "\n")
+cat("importance_2 (budget):", unique(survey_data$importance_2), "\n")
+cat("importance_3 (recent):", unique(survey_data$importance_3), "\n")
+cat("importance_4 (runtime):", unique(survey_data$importance_4), "\n\n")
+
+# Function to clean scale values - handles Qualtrics text anchors properly
+clean_scale <- function(x) {
+  x <- as.character(x)
+
+  # Handle specific Qualtrics text anchors found in data:
+  # "Not at all important 1" -> 1
+  # "Very important7" -> 7
+  # Regular numbers stay as-is
+  x <- case_when(
+    grepl("Not at all important.*1", x) ~ "1",
+    grepl("Very important.*7", x) ~ "7",
+    TRUE ~ x
+  )
+
+  # Remove any remaining non-numeric characters
+  x <- gsub("[^0-9]", "", x)
+  return(as.numeric(x))
+}
+
 # Clean and prepare data
 clean_data <- survey_data %>%
   # Filter for completed responses
@@ -67,20 +105,74 @@ clean_data <- survey_data %>%
          # Demographics
          gender, race,
          # Comments
-         comments = end) %>%
-  # Convert importance ratings to numeric
-  mutate(across(starts_with("importance_"), as.numeric))
+         comments = end)
 
-# Display cleaned data dimensions
-cat("Sample size after cleaning:", nrow(clean_data), "\n")
+# Show raw values before cleaning
+cat("=== VALUES BEFORE CLEANING ===\n")
+temp_check <- clean_data %>%
+  select(starts_with("importance_")) %>%
+  slice_head(n = 10)
+print(temp_check)
 
-# Check for missing values in importance ratings
+# Apply cleaning
+clean_data <- clean_data %>%
+  # Clean importance ratings (handle text anchors if present)
+  mutate(across(starts_with("importance_"), clean_scale)) %>%
+  # EXCLUDE participants who didn't answer ALL four importance questions
+  filter(complete.cases(importance_minority, importance_budget,
+                        importance_recent, importance_runtime))
+
+# Display data dimensions at each step
+cat("\n=== SAMPLE SIZE TRACKING ===\n")
+cat("Initial sample size:", nrow(survey_data), "\n")
+cat("After filtering for completion and attention checks:",
+    nrow(filter(survey_data, Finished == TRUE, !is.na(ec_1_1), !is.na(ec_2))), "\n")
+cat("After excluding incomplete importance ratings:", nrow(clean_data), "\n\n")
+
+# Check for missing values in importance ratings (should be 0 now)
 missing_importance <- clean_data %>%
   select(starts_with("importance_")) %>%
   summarise_all(~sum(is.na(.)))
 
 kable(missing_importance,
-      caption = "Missing Values in Importance Ratings") %>%
+      caption = "Missing Values in Importance Ratings (After Filtering)") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+# Show distribution of values to confirm scale is 1-7
+cat("\n=== FINAL SCALE DISTRIBUTION ===\n")
+scale_check <- clean_data %>%
+  select(starts_with("importance_")) %>%
+  pivot_longer(everything(), names_to = "item", values_to = "value") %>%
+  count(value) %>%
+  arrange(value)
+
+# Check if 1 and 7 are present
+has_ones <- 1 %in% scale_check$value
+has_sevens <- 7 %in% scale_check$value
+
+if(!has_ones || !has_sevens) {
+  cat("WARNING: Scale may not be properly coded!\n")
+  cat("  - Contains 1s:", has_ones, "\n")
+  cat("  - Contains 7s:", has_sevens, "\n")
+  cat("  - Actual range:", min(scale_check$value), "-", max(scale_check$value), "\n\n")
+}
+
+kable(scale_check,
+      col.names = c("Scale Value", "Frequency"),
+      caption = "Distribution of Scale Values (Should be 1-7 Range)") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+# Additional diagnostic: show distribution by item
+item_dist <- clean_data %>%
+  select(starts_with("importance_")) %>%
+  pivot_longer(everything(), names_to = "item", values_to = "value") %>%
+  group_by(item, value) %>%
+  count() %>%
+  pivot_wider(names_from = value, values_from = n, values_fill = 0)
+
+cat("\n=== DISTRIBUTION BY ITEM ===\n")
+kable(item_dist,
+      caption = "Response Distribution by Item") %>%
   kable_styling(bootstrap_options = c("striped", "hover"))
 ```
 
@@ -214,47 +306,174 @@ cat("Overall p-value:", format.pval(pf(summary(ols_model)$fstatistic[1],
                                        lower.tail = FALSE)), "\n")
 ```
 
-## Robust Standard Errors
+## Pairwise T-Tests
 
-```{r robust-se}
-# Calculate robust standard errors
-library(sandwich)
-library(lmtest)
+```{r t-tests}
+# Function to calculate Cohen's d for paired samples
+cohens_d_paired <- function(x, y) {
+  diff <- x - y
+  sd_diff <- sd(diff, na.rm = TRUE)
+  mean_diff <- mean(diff, na.rm = TRUE)
 
-# Heteroskedasticity-robust standard errors
-robust_se <- coeftest(ols_model, vcov = vcovHC(ols_model, type = "HC1"))
-robust_df <- as.data.frame(robust_se)
-robust_df$term <- rownames(robust_df)
+  # Cohen's d for paired samples
+  d <- mean_diff / sd_diff
 
-# Clean up results
-robust_results <- robust_df %>%
-  mutate(
-    term = case_when(
-      term == "(Intercept)" ~ "Minority Protagonist (Baseline)",
-      term == "is_budget" ~ "Big Budget vs. Minority",
-      term == "is_recent" ~ "Recent Release vs. Minority",
-      term == "is_runtime" ~ "Long Runtime vs. Minority"
-    ),
-    significant = ifelse(`Pr(>|t|)` < 0.05, "Yes", "No"),
-    conf_low = Estimate - 1.96 * `Std. Error`,
-    conf_high = Estimate + 1.96 * `Std. Error`
-  ) %>%
-  select(
-    Coefficient = term,
-    Estimate,
-    `Robust SE` = `Std. Error`,
-    `95% CI Lower` = conf_low,
-    `95% CI Upper` = conf_high,
-    `t-value` = `t value`,
-    `p-value` = `Pr(>|t|)`,
-    Significant = significant
+  # Classify magnitude
+  magnitude <- case_when(
+    abs(d) < 0.2 ~ "negligible",
+    abs(d) < 0.5 ~ "small",
+    abs(d) < 0.8 ~ "medium",
+    TRUE ~ "large"
   )
 
-kable(robust_results,
-      digits = 3,
-      caption = "OLS Results with Robust Standard Errors") %>%
+  return(list(estimate = d, magnitude = magnitude))
+}
+
+# Create list to store results
+t_test_results <- list()
+
+# Define attribute pairs for comparison
+comparisons <- list(
+  c("importance_minority", "importance_budget", "Minority Protagonist", "Big Budget"),
+  c("importance_minority", "importance_recent", "Minority Protagonist", "Recent Release"),
+  c("importance_minority", "importance_runtime", "Minority Protagonist", "Long Runtime"),
+  c("importance_budget", "importance_recent", "Big Budget", "Recent Release"),
+  c("importance_budget", "importance_runtime", "Big Budget", "Long Runtime"),
+  c("importance_recent", "importance_runtime", "Recent Release", "Long Runtime")
+)
+
+# Perform t-tests for each comparison
+for(comp in comparisons) {
+  var1 <- comp[1]
+  var2 <- comp[2]
+  label1 <- comp[3]
+  label2 <- comp[4]
+
+  # Paired t-test (since same participants rate all attributes)
+  t_result <- t.test(clean_data[[var1]], clean_data[[var2]], paired = TRUE)
+
+  # Calculate Cohen's d for effect size
+  cohen_d <- cohens_d_paired(clean_data[[var1]], clean_data[[var2]])
+
+  # Store results
+  t_test_results[[paste(label1, "vs", label2)]] <- list(
+    comparison = paste(label1, "vs", label2),
+    mean_diff = mean(clean_data[[var1]] - clean_data[[var2]], na.rm = TRUE),
+    t_stat = t_result$statistic,
+    df = t_result$parameter,
+    p_value = t_result$p.value,
+    ci_lower = t_result$conf.int[1],
+    ci_upper = t_result$conf.int[2],
+    cohens_d = cohen_d$estimate,
+    d_magnitude = cohen_d$magnitude
+  )
+}
+
+# Convert to data frame
+t_test_df <- bind_rows(t_test_results) %>%
+  mutate(
+    # Apply multiple comparison corrections
+    p_bonferroni = p.adjust(p_value, method = "bonferroni", n = 6),
+    p_holm = p.adjust(p_value, method = "holm", n = 6),
+
+    # Determine significance at different correction levels
+    sig_uncorrected = ifelse(p_value < 0.05, "Yes", "No"),
+    sig_bonferroni = ifelse(p_bonferroni < 0.05, "Yes", "No"),
+    sig_holm = ifelse(p_holm < 0.05, "Yes", "No"),
+
+    # Format for display
+    mean_diff = round(mean_diff, 3),
+    t_stat = round(t_stat, 2),
+    cohens_d = round(cohens_d, 3),
+    p_value = round(p_value, 4),
+    p_bonferroni = round(p_bonferroni, 4),
+    p_holm = round(p_holm, 4),
+    ci_lower = round(ci_lower, 3),
+    ci_upper = round(ci_upper, 3)
+  )
+
+# Display main results table
+kable(t_test_df %>%
+        select(Comparison = comparison,
+               `Mean Diff` = mean_diff,
+               `t` = t_stat,
+               `df` = df,
+               `p-value` = p_value,
+               `p (Bonf.)` = p_bonferroni,
+               `Cohen's d` = cohens_d,
+               `Effect Size` = d_magnitude),
+      caption = "Pairwise T-Tests Between Attributes") %>%
   kable_styling(bootstrap_options = c("striped", "hover")) %>%
-  row_spec(which(robust_results$Significant == "Yes"), bold = TRUE)
+  row_spec(which(t_test_df$sig_uncorrected == "Yes"), bold = TRUE) %>%
+  footnote(general = "Bold rows indicate p < 0.05 (uncorrected). Bonferroni correction applied for 6 comparisons.")
+
+# Summary of significant findings
+cat("\n=== T-TEST SUMMARY ===\n")
+cat("Total comparisons:", nrow(t_test_df), "\n")
+cat("Significant (uncorrected):", sum(t_test_df$sig_uncorrected == "Yes"), "\n")
+cat("Significant (Holm correction):", sum(t_test_df$sig_holm == "Yes"), "\n")
+cat("Significant (Bonferroni):", sum(t_test_df$sig_bonferroni == "Yes"), "\n\n")
+
+# Check if any comparison involving minority protagonist is significant
+minority_comparisons <- t_test_df %>%
+  filter(grepl("Minority Protagonist", comparison))
+
+if(any(minority_comparisons$sig_bonferroni == "Yes")) {
+  cat("WARNING: Significant differences found with Minority Protagonist attribute\n")
+  cat("even after Bonferroni correction:\n")
+  sig_minority <- minority_comparisons %>%
+    filter(sig_bonferroni == "Yes")
+  for(i in 1:nrow(sig_minority)) {
+    cat("  -", sig_minority$comparison[i], "(p =", sig_minority$p_bonferroni[i], ")\n")
+  }
+} else {
+  cat("✓ No significant differences with Minority Protagonist attribute\n")
+  cat("  after correcting for multiple comparisons\n")
+}
+```
+
+## Effect Size Interpretation
+
+```{r effect-sizes}
+# Create effect size interpretation guide
+effect_guide <- data.frame(
+  `Cohen's d Range` = c("< 0.2", "0.2 - 0.5", "0.5 - 0.8", "> 0.8"),
+  Interpretation = c("Negligible", "Small", "Medium", "Large"),
+  `Practical Significance` = c(
+    "No practical difference",
+    "Minor difference, likely not meaningful",
+    "Moderate difference, potentially meaningful",
+    "Substantial difference, likely meaningful"
+  ),
+  stringsAsFactors = FALSE
+)
+
+kable(effect_guide,
+      caption = "Cohen's d Effect Size Interpretation Guide") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+# Show distribution of effect sizes
+cat("\n=== EFFECT SIZE DISTRIBUTION ===\n")
+effect_summary <- t_test_df %>%
+  group_by(d_magnitude) %>%
+  summarise(
+    Count = n(),
+    `Mean |d|` = round(mean(abs(cohens_d)), 3),
+    .groups = "drop"
+  )
+
+print(effect_summary)
+
+# Identify largest effect sizes
+cat("\nLargest effect sizes:\n")
+largest_effects <- t_test_df %>%
+  arrange(desc(abs(cohens_d))) %>%
+  slice_head(n = 3)
+
+for(i in 1:nrow(largest_effects)) {
+  cat(i, ". ", largest_effects$comparison[i], ": d = ",
+      largest_effects$cohens_d[i], " (", largest_effects$d_magnitude[i], ")\n", sep = "")
+}
 ```
 
 ## Pairwise Comparisons
@@ -482,15 +701,20 @@ overall_mean <- mean(importance_summary$Mean)
 range_ratings <- max(importance_summary$Mean) - min(importance_summary$Mean)
 all_similar <- range_ratings < 1
 
-cat("KEY FINDINGS:\n")
-cat("=============\n\n")
-cat("1. Racial minority protagonist attribute ranked #", minority_rank,
-    " out of 4 attributes\n", sep = "")
-cat("2. Mean importance of minority protagonist: ", minority_mean, "\n", sep = "")
+cat("========================================\n")
+cat("HYPOTHESIS TEST RESULTS\n")
+cat("========================================\n\n")
+cat("Hypothesis: There should be NO significant differences in importance\n")
+cat("           ratings across all four attributes\n\n")
+
+cat("DESCRIPTIVE STATISTICS:\n")
+cat("-----------------------\n")
+cat("1. Sample size after exclusions: ", nrow(clean_data), "\n", sep = "")
+cat("2. Minority protagonist mean rating: ", minority_mean, " (Rank: #", minority_rank, "/4)\n", sep = "")
 cat("3. Overall mean across all attributes: ", round(overall_mean, 2), "\n", sep = "")
 cat("4. Range of mean ratings: ", round(range_ratings, 2), "\n", sep = "")
-cat("5. All attributes rated similarly (within 1 point): ",
-    ifelse(all_similar, "YES", "NO"), "\n", sep = "")
+cat("5. All attributes within 1 point: ",
+    ifelse(all_similar, "YES ✓", "NO ✗"), "\n\n", sep = "")
 
 # Check OLS model significance
 ols_p_value <- pf(summary(ols_model)$fstatistic[1],
@@ -498,23 +722,76 @@ ols_p_value <- pf(summary(ols_model)$fstatistic[1],
                   summary(ols_model)$fstatistic[3],
                   lower.tail = FALSE)
 
+cat("STATISTICAL SIGNIFICANCE TESTS:\n")
+cat("-------------------------------\n")
+cat("OLS Regression Results:\n")
+cat("• Overall model F-statistic p-value: ", format(ols_p_value, scientific = FALSE, digits = 4), "\n", sep = "")
+
 if(ols_p_value < 0.05) {
-  cat("6. Significant differences detected (OLS p < 0.05): YES\n")
+  cat("• Result: SIGNIFICANT differences detected (p < 0.05) ✗\n")
+  cat("• Hypothesis REJECTED - There ARE significant differences\n\n")
+
   # Check which specific comparisons are significant
   sig_comparisons <- ols_summary %>%
     filter(significant == "Yes" & term != "Minority Protagonist (Baseline)")
   if(nrow(sig_comparisons) > 0) {
-    cat("   Significant differences from Minority Protagonist:\n")
+    cat("Specific significant differences from Minority Protagonist:\n")
     for(i in 1:nrow(sig_comparisons)) {
-      cat("   - ", sig_comparisons$term[i], ": ",
-          round(sig_comparisons$estimate[i], 2), " (p = ",
-          round(sig_comparisons$p.value[i], 3), ")\n", sep = "")
+      cat("  - ", sig_comparisons$term[i], ": ",
+          sprintf("%+.3f", sig_comparisons$estimate[i]),
+          " (p = ", sprintf("%.3f", sig_comparisons$p.value[i]), ")\n", sep = "")
     }
+  } else {
+    cat("  No individual comparisons reached significance\n")
   }
 } else {
-  cat("6. Significant differences detected (OLS p < 0.05): NO\n")
-  cat("   -> No significant differences in importance ratings across attributes\n")
+  cat("• Result: NO significant differences detected (p ≥ 0.05) ✓\n")
+  cat("• Hypothesis SUPPORTED - No significant differences in importance\n\n")
+
+  # Show all comparison p-values even if not significant
+  all_comparisons <- ols_summary %>%
+    filter(term != "Minority Protagonist (Baseline)")
+  cat("All comparisons with Minority Protagonist (for reference):\n")
+  for(i in 1:nrow(all_comparisons)) {
+    cat("  - ", all_comparisons$term[i], ": ",
+        sprintf("%+.3f", all_comparisons$estimate[i]),
+        " (p = ", sprintf("%.3f", all_comparisons$p.value[i]), ")\n", sep = "")
+  }
 }
+
+cat("\n")
+cat("CONCLUSION:\n")
+cat("-----------\n")
+if(ols_p_value >= 0.05) {
+  cat("The data support the hypothesis that there are no significant\n")
+  cat("differences in perceived importance across the four attributes.\n")
+  cat("The minority protagonist attribute is viewed as similarly important\n")
+  cat("as the other control attributes (budget, recency, runtime).\n")
+} else {
+  cat("The data do not support the hypothesis. There are significant\n")
+  cat("differences in perceived importance across the four attributes.\n")
+  cat("Further investigation may be needed to determine if the minority\n")
+  cat("protagonist attribute should be adjusted or replaced.\n")
+}
+
+# Additional detail table
+cat("\n")
+cat("========================================\n")
+cat("DETAILED MEAN COMPARISONS\n")
+cat("========================================\n")
+
+# Create comparison table
+detail_table <- importance_summary %>%
+  select(Attribute = attribute, Mean, SD, N) %>%
+  mutate(
+    `Difference from Minority` = Mean - minority_mean,
+    `% Difference` = round((Mean - minority_mean) / minority_mean * 100, 1)
+  )
+
+print(kable(detail_table,
+            digits = 2,
+            caption = "Detailed Attribute Comparisons") %>%
+        kable_styling(bootstrap_options = c("striped", "hover")))
 ```
 
 # Session Information
