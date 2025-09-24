@@ -1,0 +1,513 @@
+---
+title: "Between-Subjects Attribute Importance Analysis - Gender Biopic"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE,
+                      fig.width = 10, fig.height = 6)
+
+# Load required libraries
+library(tidyverse)
+library(qualtRics)
+library(kableExtra)
+library(ggthemes)
+library(broom)
+library(effsize)
+
+# Set theme for all plots
+theme_set(theme_economist())
+```
+
+# Study Design
+
+This is a **between-subjects** design where each participant rated the importance of **only one** attribute for a biopic film. This design avoids direct comparison bias that might occur when participants rate all attributes together.
+
+Key differences from within-subjects design:
+
+- **Between-subjects**: Each participant rates ONE attribute → Independent samples t-tests
+- **Within-subjects**: Each participant rates ALL attributes → Paired t-tests
+
+# Data Collection
+
+```{r api-setup}
+# Set up Qualtrics API credentials
+qualtrics_api_credentials(api_key = "BJ6aDiEgtQihneCgtZycVLYjaj0ao9gYkdRkb1UZ",
+                          base_url = "yul1.qualtrics.com",
+                          install = FALSE,
+                          overwrite = TRUE)
+
+# Survey ID for between-subjects gender biopic pretest
+survey_id <- "SV_5tHLohN6J7MozKS"
+
+# Fetch survey data
+cat("Fetching survey data from Qualtrics...\n")
+raw_data <- fetch_survey(survey_id, force_request = TRUE)
+cat("Successfully fetched", nrow(raw_data), "responses\n")
+```
+
+# Data Preparation
+
+```{r data-prep}
+# Filter for complete responses
+complete_data <- raw_data %>%
+  filter(Finished == TRUE | Finished == "True" | Finished == 1) %>%
+  filter(Status == "IP Address" | Status == 0)
+
+cat("Complete responses:", nrow(complete_data), "\n")
+
+# The survey structure:
+# - importance_1 through importance_4: Each represents a different attribute
+# - Each participant only answers ONE of these questions
+
+# Function to clean scale values with text anchors
+clean_scale <- function(x) {
+  x <- as.character(x)
+  x <- case_when(
+    grepl("Not at all important", x, ignore.case = TRUE) ~ "1",
+    grepl("Very important", x, ignore.case = TRUE) ~ "7",
+    TRUE ~ x
+  )
+  return(as.numeric(x))
+}
+
+# Clean importance columns - handle text anchors
+complete_data <- complete_data %>%
+  mutate(across(starts_with("importance_"), clean_scale))
+
+# Filter to only include participants who answered at least one importance question
+clean_data <- complete_data %>%
+  filter(
+    !is.na(importance_1) | !is.na(importance_2) |
+    !is.na(importance_3) | !is.na(importance_4)
+  )
+
+cat("Participants who answered an importance question:", nrow(clean_data), "\n")
+
+# Reshape data to long format to identify which attribute each person rated
+# Each importance column corresponds to a different attribute
+attribute_mapping <- c(
+  "importance_1" = "Female Protagonist",
+  "importance_2" = "Big Budget",
+  "importance_3" = "Recent Release",
+  "importance_4" = "Political Leader"
+)
+
+# Pivot to long format
+clean_data_long <- clean_data %>%
+  select(ResponseId, importance_1:importance_4) %>%
+  pivot_longer(
+    cols = starts_with("importance_"),
+    names_to = "importance_var",
+    values_to = "importance",
+    values_drop_na = TRUE  # This drops NA values, keeping only the one answered
+  ) %>%
+  mutate(
+    attribute = attribute_mapping[importance_var]
+  ) %>%
+  select(ResponseId, attribute, importance)
+
+# Join back with other variables if needed
+clean_data <- clean_data_long %>%
+  left_join(
+    complete_data %>% select(ResponseId, gender, race, workerId),
+    by = "ResponseId"
+  )
+
+cat("\nFinal sample size after cleaning:", nrow(clean_data), "\n")
+cat("Attributes tested:", paste(unique(clean_data$attribute), collapse = ", "), "\n")
+
+# Verify each person only has one rating
+responses_per_person <- clean_data %>%
+  count(ResponseId) %>%
+  filter(n > 1)
+
+if(nrow(responses_per_person) > 0) {
+  cat("\nWARNING: Some participants have multiple responses. This should not happen in between-subjects design.\n")
+} else {
+  cat("✓ Confirmed: Each participant rated exactly one attribute (between-subjects design)\n")
+}
+```
+
+# Sample Distribution
+
+```{r sample-dist}
+# Check distribution across conditions
+sample_dist <- clean_data %>%
+  count(attribute) %>%
+  arrange(desc(n)) %>%
+  mutate(percentage = round(n / sum(n) * 100, 1))
+
+kable(sample_dist,
+      col.names = c("Attribute", "N", "Percentage"),
+      caption = "Participant Distribution Across Attributes") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+# Visualize distribution
+ggplot(sample_dist, aes(x = reorder(attribute, n), y = n)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_text(aes(label = n), hjust = -0.2) +
+  coord_flip() +
+  labs(x = "Attribute",
+       y = "Number of Participants",
+       title = "Sample Size by Attribute Condition") +
+  theme_minimal()
+```
+
+# Descriptive Statistics
+
+```{r descriptives}
+# Calculate descriptive statistics by attribute
+desc_stats <- clean_data %>%
+  group_by(attribute) %>%
+  summarise(
+    n = n(),
+    mean = mean(importance, na.rm = TRUE),
+    sd = sd(importance, na.rm = TRUE),
+    se = sd/sqrt(n),
+    median = median(importance, na.rm = TRUE),
+    min = min(importance, na.rm = TRUE),
+    max = max(importance, na.rm = TRUE),
+    ci_lower = mean - 1.96 * se,
+    ci_upper = mean + 1.96 * se,
+    .groups = 'drop'
+  ) %>%
+  arrange(desc(mean))
+
+# Display table
+kable(desc_stats %>%
+        select(attribute, n, mean, sd, se, median, min, max),
+      digits = 2,
+      col.names = c("Attribute", "N", "Mean", "SD", "SE", "Median", "Min", "Max"),
+      caption = "Descriptive Statistics for Attribute Importance Ratings") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+# Visualize means with confidence intervals
+ggplot(desc_stats, aes(x = reorder(attribute, mean), y = mean)) +
+  geom_point(size = 3) +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0.2) +
+  geom_hline(yintercept = 4, linetype = "dashed", alpha = 0.5) +
+  coord_flip() +
+  scale_y_continuous(limits = c(1, 7), breaks = 1:7) +
+  labs(x = "Attribute",
+       y = "Mean Importance Rating (1-7)",
+       title = "Attribute Importance with 95% Confidence Intervals",
+       subtitle = "Dashed line represents scale midpoint") +
+  theme_minimal()
+```
+
+# Statistical Analysis: Female Protagonist vs. Other Attributes
+
+```{r t-tests}
+# Focus on Female Protagonist comparisons
+gender_attribute <- "Female Protagonist"
+
+# Get Female Protagonist data
+gender_data <- clean_data %>%
+  filter(attribute == gender_attribute) %>%
+  pull(importance)
+
+# Get other attributes
+other_attributes <- unique(clean_data$attribute)[unique(clean_data$attribute) != gender_attribute]
+
+# Perform independent samples t-tests
+t_test_results <- list()
+
+for(attr in other_attributes) {
+  # Get comparison attribute data
+  attr_data <- clean_data %>%
+    filter(attribute == attr) %>%
+    pull(importance)
+
+  # Independent samples t-test (Welch's t-test for unequal variances)
+  t_result <- t.test(gender_data, attr_data, var.equal = FALSE)
+
+  # Calculate Cohen's d
+  cohen_result <- cohen.d(gender_data, attr_data)
+
+  # Store results
+  t_test_results[[attr]] <- tibble(
+    comparison = paste(gender_attribute, "vs", attr),
+    gender_mean = mean(gender_data, na.rm = TRUE),
+    gender_n = length(gender_data),
+    other_mean = mean(attr_data, na.rm = TRUE),
+    other_n = length(attr_data),
+    mean_diff = mean(gender_data, na.rm = TRUE) - mean(attr_data, na.rm = TRUE),
+    t_stat = t_result$statistic,
+    df = t_result$parameter,
+    p_value = t_result$p.value,
+    ci_lower = t_result$conf.int[1],
+    ci_upper = t_result$conf.int[2],
+    cohens_d = cohen_result$estimate,
+    d_magnitude = cohen_result$magnitude
+  )
+}
+
+# Combine results
+all_results <- bind_rows(t_test_results)
+
+# Apply multiple comparison corrections
+all_results <- all_results %>%
+  mutate(
+    p_bonferroni = p.adjust(p_value, method = "bonferroni"),
+    p_holm = p.adjust(p_value, method = "holm"),
+    p_fdr = p.adjust(p_value, method = "fdr")
+  )
+
+# Format for display
+display_results <- all_results %>%
+  mutate(
+    across(c(gender_mean, other_mean, mean_diff, t_stat, cohens_d), ~round(., 3)),
+    across(c(p_value, p_bonferroni, p_holm, p_fdr), ~round(., 4)),
+    df = round(df, 1),
+    sig_stars = case_when(
+      p_value < 0.001 ~ "***",
+      p_value < 0.01 ~ "**",
+      p_value < 0.05 ~ "*",
+      TRUE ~ ""
+    )
+  )
+
+# Display main results
+kable(display_results %>%
+        select(comparison, gender_mean, other_mean, mean_diff, t_stat, df,
+               p_value, sig_stars, cohens_d, d_magnitude),
+      col.names = c("Comparison", "Female Mean", "Other Mean", "Diff", "t", "df",
+                   "p-value", "Sig", "Cohen's d", "Magnitude"),
+      caption = "Independent Samples T-Tests: Female Protagonist vs. Other Attributes") %>%
+  kable_styling(bootstrap_options = c("striped", "hover")) %>%
+  column_spec(8, bold = TRUE)
+```
+
+## Multiple Comparison Corrections
+
+```{r corrections}
+# Show corrected p-values
+kable(display_results %>%
+        select(comparison, p_value, p_holm, p_bonferroni, p_fdr),
+      col.names = c("Comparison", "Uncorrected", "Holm", "Bonferroni", "FDR"),
+      digits = 4,
+      caption = "P-values with Multiple Comparison Corrections") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+# Count significant results
+sig_summary <- tibble(
+  Correction = c("Uncorrected", "Holm", "Bonferroni", "FDR"),
+  `Significant (p < 0.05)` = c(
+    sum(all_results$p_value < 0.05),
+    sum(all_results$p_holm < 0.05),
+    sum(all_results$p_bonferroni < 0.05),
+    sum(all_results$p_fdr < 0.05)
+  ),
+  `Total Comparisons` = nrow(all_results)
+)
+
+kable(sig_summary,
+      caption = "Number of Significant Differences by Correction Method") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+# Summary of Findings
+
+```{r summary}
+# Identify significant differences
+gender_higher <- all_results %>%
+  filter(mean_diff > 0 & p_value < 0.05) %>%
+  mutate(attribute = str_remove(comparison, paste0(gender_attribute, " vs ")))
+
+gender_lower <- all_results %>%
+  filter(mean_diff < 0 & p_value < 0.05) %>%
+  mutate(attribute = str_remove(comparison, paste0(gender_attribute, " vs ")))
+
+# Create summary
+cat("## Key Findings:\n\n")
+
+if(nrow(gender_higher) > 0) {
+  cat("### Female Protagonist rated SIGNIFICANTLY HIGHER than:\n")
+  for(i in 1:nrow(gender_higher)) {
+    cat("- **", gender_higher$attribute[i], "** (p = ",
+        round(gender_higher$p_value[i], 4),
+        ", d = ", round(gender_higher$cohens_d[i], 3), ")\n", sep = "")
+  }
+  cat("\n")
+}
+
+if(nrow(gender_lower) > 0) {
+  cat("### Female Protagonist rated SIGNIFICANTLY LOWER than:\n")
+  for(i in 1:nrow(gender_lower)) {
+    cat("- **", gender_lower$attribute[i], "** (p = ",
+        round(gender_lower$p_value[i], 4),
+        ", d = ", round(gender_lower$cohens_d[i], 3), ")\n", sep = "")
+  }
+  cat("\n")
+}
+
+if(nrow(gender_higher) == 0 && nrow(gender_lower) == 0) {
+  cat("### No significant differences found between Female Protagonist and other attributes\n\n")
+}
+
+# Overall ranking
+ranking <- desc_stats %>%
+  arrange(desc(mean)) %>%
+  mutate(rank = row_number())
+
+gender_rank <- which(ranking$attribute == gender_attribute)
+
+cat("\n### Overall Importance Ranking:\n")
+cat("Female Protagonist ranks **#", gender_rank, " out of ", nrow(ranking),
+    "** attributes\n\n", sep = "")
+
+# Display full ranking
+kable(ranking %>% select(rank, attribute, mean, sd, n),
+      col.names = c("Rank", "Attribute", "Mean", "SD", "N"),
+      digits = 2,
+      caption = "Complete Attribute Ranking by Mean Importance") %>%
+  kable_styling(bootstrap_options = c("striped", "hover")) %>%
+  row_spec(gender_rank, bold = TRUE, background = "#e8f4f8")
+```
+
+# Comparison: Within vs. Between-Subjects Designs
+
+```{r comparison}
+comparison_table <- tibble(
+  Aspect = c("Participant Task", "Statistical Test", "Sample Size", "Bias Risk",
+             "Statistical Power", "Individual Differences"),
+  `Within-Subjects` = c(
+    "Rate ALL attributes",
+    "Paired t-tests",
+    "Smaller total N needed",
+    "Direct comparison/contrast effects",
+    "Higher (controls individual variance)",
+    "Controlled"
+  ),
+  `Between-Subjects` = c(
+    "Rate ONE attribute only",
+    "Independent samples t-tests",
+    "Larger total N needed",
+    "No direct comparison bias",
+    "Lower (individual variance not controlled)",
+    "Not controlled"
+  )
+)
+
+kable(comparison_table,
+      caption = "Methodological Comparison: Within vs. Between-Subjects Designs") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+# Effect Size Interpretation
+
+```{r effect-sizes}
+# Visualize effect sizes
+effect_plot_data <- display_results %>%
+  mutate(
+    attribute = str_remove(comparison, paste0(gender_attribute, " vs ")),
+    direction = ifelse(cohens_d > 0, "Female Higher", "Female Lower")
+  )
+
+ggplot(effect_plot_data, aes(x = reorder(attribute, cohens_d), y = cohens_d, fill = direction)) +
+  geom_bar(stat = "identity") +
+  geom_hline(yintercept = 0, linetype = "solid") +
+  geom_hline(yintercept = c(-0.2, 0.2), linetype = "dashed", alpha = 0.3) +
+  geom_hline(yintercept = c(-0.5, 0.5), linetype = "dashed", alpha = 0.5) +
+  geom_hline(yintercept = c(-0.8, 0.8), linetype = "dashed", alpha = 0.7) +
+  coord_flip() +
+  scale_fill_manual(values = c("Female Higher" = "steelblue", "Female Lower" = "coral")) +
+  labs(x = "Comparison Attribute",
+       y = "Cohen's d (Effect Size)",
+       title = "Effect Sizes for Female Protagonist Comparisons",
+       subtitle = "Dashed lines indicate small (0.2), medium (0.5), and large (0.8) effects",
+       fill = "Direction") +
+  theme_minimal()
+
+# Effect size guidelines table
+effect_guidelines <- tibble(
+  `Effect Size` = c("Negligible", "Small", "Medium", "Large"),
+  `Cohen's d` = c("< 0.2", "0.2 - 0.5", "0.5 - 0.8", "> 0.8"),
+  `Count in Data` = c(
+    sum(abs(all_results$cohens_d) < 0.2),
+    sum(abs(all_results$cohens_d) >= 0.2 & abs(all_results$cohens_d) < 0.5),
+    sum(abs(all_results$cohens_d) >= 0.5 & abs(all_results$cohens_d) < 0.8),
+    sum(abs(all_results$cohens_d) >= 0.8)
+  )
+)
+
+kable(effect_guidelines,
+      caption = "Cohen's d Effect Size Guidelines and Distribution") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+# Export Results Table
+
+```{r export-table, fig.width=8, fig.height=4}
+# Create clean table for export
+export_table <- display_results %>%
+  mutate(
+    # Clean up comparison names - remove "Female Protagonist vs "
+    Comparison = str_remove(comparison, "Female Protagonist vs "),
+    # Round values for clean display
+    `Female Mean` = round(gender_mean, 2),
+    `Other Mean` = round(other_mean, 2),
+    Diff = round(mean_diff, 2),
+    `p-value` = round(p_value, 3),
+    `Cohen's d` = round(cohens_d, 2)
+  ) %>%
+  select(Comparison, `Female Mean`, `Other Mean`, Diff, `p-value`, `Cohen's d`)
+
+# Create table plot using gridExtra and ggplot2
+library(gridExtra)
+library(grid)
+
+# Convert to grob (graphical object)
+table_grob <- tableGrob(
+  export_table,
+  rows = NULL,  # No row numbers
+  theme = ttheme_default(
+    base_size = 12,
+    base_colour = "black",
+    base_family = "",
+    parse = FALSE,
+    padding = unit(c(4, 4), "mm"),
+    core = list(
+      bg_params = list(fill = c("white", "#f7f7f7"), col = NA),
+      fg_params = list(fontsize = 11)
+    ),
+    colhead = list(
+      bg_params = list(fill = "#4a90e2", col = NA),
+      fg_params = list(fontsize = 12, col = "white", fontface = "bold")
+    )
+  )
+)
+
+# Create the plot
+g <- ggplot() +
+  annotation_custom(table_grob) +
+  theme_void() +
+  labs(title = "Female Protagonist vs Other Attributes: Between-Subjects Comparison") +
+  theme(plot.title = element_text(hjust = 0.5, size = 14, face = "bold", margin = margin(b = 10)))
+
+# Display the plot
+print(g)
+
+# Save as PNG
+ggsave("attribute_pretests/between/between_subjects_results_table.png",
+       plot = g,
+       width = 8,
+       height = 4,
+       dpi = 300,
+       bg = "white")
+
+cat("\n✓ Table exported to: attribute_pretests/between/between_subjects_results_table.png\n")
+```
+
+# Session Information
+
+```{r session-info}
+sessionInfo()
+```
