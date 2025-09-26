@@ -461,6 +461,7 @@ export_table <- display_results %>%
   select(Comparison, `Female Mean`, `Other Mean`, Diff, `p-value`, `Cohen's d`)
 
 # Create table plot using gridExtra and ggplot2
+
 library(gridExtra)
 library(grid)
 

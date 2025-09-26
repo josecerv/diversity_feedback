@@ -1,0 +1,367 @@
+---
+title: "Between-Subjects Author Attribute Importance Analysis"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE,
+                      fig.width = 10, fig.height = 6)
+
+library(tidyverse)
+library(qualtRics)
+library(kableExtra)
+library(ggthemes)
+library(broom)
+library(effsize)
+
+theme_set(theme_economist())
+```
+
+# Study Design
+
+This is a **between-subjects** design where each participant rated the importance of **only one** attribute about authors. Participants responded to:
+
+**Question:** "The percentage of authors who ${e://Field/attribute}"
+
+**Scale:** 1 = Not at all important, 7 = Very important (with numeric labels 2-6)
+
+# Data Collection
+
+```{r api-setup}
+qualtrics_api_credentials(api_key = "BJ6aDiEgtQihneCgtZycVLYjaj0ao9gYkdRkb1UZ",
+                          base_url = "yul1.qualtrics.com",
+                          install = FALSE,
+                          overwrite = TRUE)
+
+survey_id <- "SV_cASPdJCJOBdOu1M"
+
+cat("Fetching survey data from Qualtrics...\n")
+raw_data <- fetch_survey(survey_id, force_request = TRUE)
+cat("Successfully fetched", nrow(raw_data), "responses\n")
+```
+
+# Data Preparation
+
+```{r data-prep}
+complete_data <- raw_data %>%
+  filter(Finished == TRUE | Finished == "True" | Finished == 1) %>%
+  filter(Status == "IP Address" | Status == 0)
+
+cat("Complete responses:", nrow(complete_data), "\n")
+
+# Function to clean scale values with text anchors
+clean_scale <- function(x) {
+  x <- as.character(x)
+  x <- case_when(
+    grepl("Not at all important", x, ignore.case = TRUE) ~ "1",
+    grepl("Very important", x, ignore.case = TRUE) ~ "7",
+    TRUE ~ x
+  )
+  return(as.numeric(x))
+}
+
+# Find the importance column (may vary based on Qualtrics export)
+importance_cols <- names(complete_data)[grepl("importance|percentage", names(complete_data), ignore.case = TRUE)]
+importance_col <- importance_cols[1]  # Take first matching column
+
+if(is.null(importance_col) || length(importance_col) == 0) {
+  # If no column found with those names, look for Q columns
+  q_cols <- names(complete_data)[grepl("^Q[0-9]", names(complete_data))]
+  if(length(q_cols) > 0) {
+    importance_col <- q_cols[1]
+  }
+}
+
+cat("Using importance column:", importance_col, "\n")
+
+# Clean the importance ratings
+complete_data[[importance_col]] <- clean_scale(complete_data[[importance_col]])
+
+# Extract attribute from embedded field
+clean_data <- complete_data %>%
+  filter(!is.na(.data[[importance_col]])) %>%
+  rename(importance = !!importance_col) %>%
+  mutate(
+    # Clean attribute text - remove any extra whitespace
+    attribute = str_trim(attribute)
+  )
+
+cat("\nFinal sample size after cleaning:", nrow(clean_data), "\n")
+cat("Number of unique attributes:", n_distinct(clean_data$attribute), "\n")
+```
+
+# Sample Distribution
+
+```{r sample-dist}
+sample_dist <- clean_data %>%
+  count(attribute) %>%
+  arrange(desc(n)) %>%
+  mutate(percentage = round(n / sum(n) * 100, 1))
+
+kable(sample_dist,
+      col.names = c("Attribute", "N", "Percentage"),
+      caption = "Participant Distribution Across Attributes") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+# Descriptive Statistics
+
+```{r descriptives}
+desc_stats <- clean_data %>%
+  group_by(attribute) %>%
+  summarise(
+    n = n(),
+    mean = mean(importance, na.rm = TRUE),
+    sd = sd(importance, na.rm = TRUE),
+    se = sd/sqrt(n),
+    median = median(importance, na.rm = TRUE),
+    min = min(importance, na.rm = TRUE),
+    max = max(importance, na.rm = TRUE),
+    .groups = 'drop'
+  ) %>%
+  arrange(desc(mean))
+
+kable(desc_stats %>%
+        select(attribute, n, mean, sd, median),
+      digits = 2,
+      col.names = c("Attribute", "N", "Mean", "SD", "Median"),
+      caption = "Descriptive Statistics for All Attributes") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+# Primary Comparisons
+
+## Women vs. All Other Attributes
+
+```{r women-comparison}
+# Define key attributes
+women_attr <- "were women."
+racial_attr <- "were racial minorities."
+
+# Get women data
+women_data <- clean_data %>%
+  filter(attribute == women_attr)
+
+# Get all other attributes EXCLUDING racial minorities
+other_attrs_excl_racial <- clean_data %>%
+  filter(attribute != women_attr & attribute != racial_attr)
+
+# Calculate statistics for each non-women, non-racial attribute
+women_comparisons <- other_attrs_excl_racial %>%
+  group_by(attribute) %>%
+  group_modify(~ {
+    # Get current attribute data
+    attr_data <- .x$importance
+    women_importance <- women_data$importance
+
+    # Perform t-test
+    t_result <- t.test(women_importance, attr_data, var.equal = FALSE)
+
+    # Calculate Cohen's d
+    cohen_result <- cohen.d(women_importance, attr_data)
+
+    # Return results
+    tibble(
+      women_mean = mean(women_importance, na.rm = TRUE),
+      women_sd = sd(women_importance, na.rm = TRUE),
+      women_n = length(women_importance),
+      other_mean = mean(attr_data, na.rm = TRUE),
+      other_sd = sd(attr_data, na.rm = TRUE),
+      other_n = length(attr_data),
+      mean_diff = mean(women_importance, na.rm = TRUE) - mean(attr_data, na.rm = TRUE),
+      t_stat = t_result$statistic,
+      df = t_result$parameter,
+      p_value = t_result$p.value,
+      cohens_d = cohen_result$estimate
+    )
+  }) %>%
+  ungroup()
+
+# Format for display
+women_table <- women_comparisons %>%
+  mutate(
+    `Women Mean (SD)` = paste0(round(women_mean, 2), " (", round(women_sd, 2), ")"),
+    `Other Mean (SD)` = paste0(round(other_mean, 2), " (", round(other_sd, 2), ")"),
+    `Difference` = round(mean_diff, 2),
+    `t-statistic` = round(t_stat, 2),
+    `p-value` = round(p_value, 3),
+    `Cohen's d` = round(cohens_d, 2),
+    sig = case_when(
+      p_value < 0.001 ~ "***",
+      p_value < 0.01 ~ "**",
+      p_value < 0.05 ~ "*",
+      TRUE ~ ""
+    )
+  ) %>%
+  select(attribute, `Women Mean (SD)`, `Other Mean (SD)`, `Difference`,
+         `t-statistic`, `p-value`, sig, `Cohen's d`) %>%
+  arrange(desc(`Difference`))
+
+kable(women_table,
+      caption = "Women vs. All Other Attributes (excluding Racial Minorities)") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>%
+  column_spec(7, bold = TRUE)
+```
+
+## Racial Minorities vs. All Other Attributes
+
+```{r racial-comparison}
+# Get racial minorities data
+racial_data <- clean_data %>%
+  filter(attribute == racial_attr)
+
+# Get all other attributes EXCLUDING women
+other_attrs_excl_women <- clean_data %>%
+  filter(attribute != racial_attr & attribute != women_attr)
+
+# Calculate statistics for each non-racial, non-women attribute
+racial_comparisons <- other_attrs_excl_women %>%
+  group_by(attribute) %>%
+  group_modify(~ {
+    # Get current attribute data
+    attr_data <- .x$importance
+    racial_importance <- racial_data$importance
+
+    # Perform t-test
+    t_result <- t.test(racial_importance, attr_data, var.equal = FALSE)
+
+    # Calculate Cohen's d
+    cohen_result <- cohen.d(racial_importance, attr_data)
+
+    # Return results
+    tibble(
+      racial_mean = mean(racial_importance, na.rm = TRUE),
+      racial_sd = sd(racial_importance, na.rm = TRUE),
+      racial_n = length(racial_importance),
+      other_mean = mean(attr_data, na.rm = TRUE),
+      other_sd = sd(attr_data, na.rm = TRUE),
+      other_n = length(attr_data),
+      mean_diff = mean(racial_importance, na.rm = TRUE) - mean(attr_data, na.rm = TRUE),
+      t_stat = t_result$statistic,
+      df = t_result$parameter,
+      p_value = t_result$p.value,
+      cohens_d = cohen_result$estimate
+    )
+  }) %>%
+  ungroup()
+
+# Format for display
+racial_table <- racial_comparisons %>%
+  mutate(
+    `Race Mean (SD)` = paste0(round(racial_mean, 2), " (", round(racial_sd, 2), ")"),
+    `Other Mean (SD)` = paste0(round(other_mean, 2), " (", round(other_sd, 2), ")"),
+    `Difference` = round(mean_diff, 2),
+    `t-statistic` = round(t_stat, 2),
+    `p-value` = round(p_value, 3),
+    `Cohen's d` = round(cohens_d, 2),
+    sig = case_when(
+      p_value < 0.001 ~ "***",
+      p_value < 0.01 ~ "**",
+      p_value < 0.05 ~ "*",
+      TRUE ~ ""
+    )
+  ) %>%
+  select(attribute, `Race Mean (SD)`, `Other Mean (SD)`, `Difference`,
+         `t-statistic`, `p-value`, sig, `Cohen's d`) %>%
+  arrange(desc(`Difference`))
+
+kable(racial_table,
+      caption = "Racial Minorities vs. All Other Attributes (excluding Women)") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>%
+  column_spec(7, bold = TRUE)
+```
+
+# Summary Statistics
+
+```{r summary-stats}
+# Create summary of key attributes
+key_summary <- desc_stats %>%
+  filter(attribute %in% c(women_attr, racial_attr)) %>%
+  mutate(
+    `Mean (SD)` = paste0(round(mean, 2), " (", round(sd, 2), ")"),
+    Rank = rank(-mean, ties.method = "min")
+  ) %>%
+  select(attribute, n, `Mean (SD)`, Rank)
+
+# Add overall ranking info
+total_attrs <- n_distinct(clean_data$attribute)
+key_summary <- key_summary %>%
+  mutate(
+    `Overall Rank` = paste0(Rank, " / ", total_attrs)
+  ) %>%
+  select(-Rank)
+
+kable(key_summary,
+      caption = "Summary Statistics for Key Attributes") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+# Visualization
+
+```{r visualization, fig.height=8}
+# Prepare data for visualization
+viz_data <- bind_rows(
+  women_comparisons %>%
+    mutate(comparison = "Women", key_mean = women_mean[1]),
+  racial_comparisons %>%
+    mutate(comparison = "Racial Minorities", key_mean = racial_mean[1])
+)
+
+# Create comparison plot
+ggplot(viz_data, aes(x = reorder(attribute, mean_diff), y = mean_diff, fill = comparison)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  geom_hline(yintercept = 0, linetype = "solid", alpha = 0.5) +
+  coord_flip() +
+  scale_fill_manual(values = c("Women" = "#e74c3c", "Racial Minorities" = "#3498db")) +
+  labs(
+    x = "Comparison Attribute",
+    y = "Mean Difference (Key Attribute - Other)",
+    title = "Importance Differences: Women & Racial Minorities vs. Other Attributes",
+    subtitle = "Positive values indicate higher importance for the key attribute",
+    fill = "Key Attribute"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top")
+```
+
+# Effect Size Distribution
+
+```{r effect-sizes}
+# Combine effect sizes
+all_effect_sizes <- bind_rows(
+  women_comparisons %>%
+    mutate(comparison = "Women", abs_d = abs(cohens_d)),
+  racial_comparisons %>%
+    mutate(comparison = "Racial Minorities", abs_d = abs(cohens_d))
+)
+
+# Categorize effect sizes
+effect_summary <- all_effect_sizes %>%
+  mutate(
+    magnitude = case_when(
+      abs_d < 0.2 ~ "Negligible",
+      abs_d < 0.5 ~ "Small",
+      abs_d < 0.8 ~ "Medium",
+      TRUE ~ "Large"
+    )
+  ) %>%
+  group_by(comparison, magnitude) %>%
+  summarise(count = n(), .groups = 'drop') %>%
+  pivot_wider(names_from = magnitude, values_from = count, values_fill = 0)
+
+kable(effect_summary,
+      caption = "Distribution of Effect Sizes (Cohen's d)") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+# Session Information
+
+```{r session-info}
+sessionInfo()
+```
