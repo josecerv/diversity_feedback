@@ -119,12 +119,16 @@ if(USE_API) {
   num_excluded <- unique(d0$num_excluded_total)
 }
 
-# Define the NEW categories based on the provided information
+# Define the categories based on the JavaScript feedback code
 women <- c('Zadie Smith', 'Isabel Allende', 'Jane Austen',
            'Joyce Carol Oates', 'Lucy Maud', 'Sylvia Plath')
 
-major_award <- c('Sylvia Plath', 'Ernest Hemingway', 'Gabriel Garcia Marquez',
-                 'John Steinbeck', 'Joyce Carol Oates', 'Cormac McCarthy', 'Ray Bradbury')
+multi_genre <- c('Herman Melville', 'Joyce Carol Oates', 'Cormac McCarthy', 'Ray Bradbury',
+                 'Kurt Vonnegut', 'George Orwell', 'Isabel Allende', 'Gabriel Garcia Marquez',
+                 'Lucy Maud', 'Neil Gaiman', 'J.R.R. Tolkien')
+
+sold_30m <- c('Charles Dickens', 'Gabriel Garcia Marquez', 'George Orwell', 'Isabel Allende',
+              'J.D. Salinger', 'J.R.R. Tolkien', 'Lucy Maud', 'F. Scott Fitzgerald')
 
 classic_50plus <- c('Jane Austen', 'Charles Dickens', 'Herman Melville', 'Nathaniel Hawthorne',
                     'Jack London', 'J.D. Salinger', 'F. Scott Fitzgerald', 'Ernest Hemingway',
@@ -132,43 +136,34 @@ classic_50plus <- c('Jane Austen', 'Charles Dickens', 'Herman Melville', 'Nathan
                     'Ray Bradbury', 'Kurt Vonnegut', 'Gabriel Garcia Marquez',
                     'Michael Crichton', 'Sylvia Plath')
 
-all_three_forms <- c('Charles Dickens', 'Ernest Hemingway', 'George Orwell', 'Herman Melville',
-                     'Jack London', 'Joyce Carol Oates', 'Jorge Luis Borges', 'J.R.R. Tolkien',
-                     'Nathaniel Hawthorne', 'Sylvia Plath', 'Ray Bradbury', 'Neil Gaiman',
-                     'F. Scott Fitzgerald')
-
-multi_genre <- c('Herman Melville', 'Joyce Carol Oates', 'Cormac McCarthy', 'Ray Bradbury',
-                 'Kurt Vonnegut', 'George Orwell', 'Isabel Allende', 'Gabriel Garcia Marquez',
-                 'Lucy Maud', 'Neil Gaiman', 'J.R.R. Tolkien')
-
 if(USE_API) {
   # Process the API data with new category definitions
   d0 <- qual_data |>
     filter(!is.na(`choice-7`)) |>
     mutate(
-      # Gender feedback detection remains the same
+      # Gender feedback detection
       gender_feedback = as.numeric(grepl("were women", feedbackItem1) |
                     grepl("were women", feedbackItem2) |
                     grepl("were women", feedbackItem3)),
 
-      # Update attribute feedback detection based on new attributes
-      award_shown = as.numeric(grepl("won a Pulitzer Prize, Nobel Prize or National Book Award", feedbackItem1) |
-                   grepl("won a Pulitzer Prize, Nobel Prize or National Book Award", feedbackItem2) |
-                   grepl("won a Pulitzer Prize, Nobel Prize or National Book Award", feedbackItem3)),
+      # Attribute feedback detection based on JavaScript code
+      forms_shown = as.numeric(grepl("spanning multiple genres", feedbackItem1) |
+                   grepl("spanning multiple genres", feedbackItem2) |
+                   grepl("spanning multiple genres", feedbackItem3)),
+
+      sold30m_shown = as.numeric(grepl("30M\\+ copies sold", feedbackItem1) |
+                     grepl("30M\\+ copies sold", feedbackItem2) |
+                     grepl("30M\\+ copies sold", feedbackItem3)),
 
       classic_shown = as.numeric(grepl("remained in continuous print for over 50 years", feedbackItem1) |
                      grepl("remained in continuous print for over 50 years", feedbackItem2) |
                      grepl("remained in continuous print for over 50 years", feedbackItem3)),
 
-      forms_shown = as.numeric(grepl("spanning multiple genres", feedbackItem1) |
-                   grepl("spanning multiple genres", feedbackItem2) |
-                   grepl("spanning multiple genres", feedbackItem3)),
-
-      # Picks based on new categories
+      # Picks based on categories
       female_pick = case_when(`choice-7` %in% women ~ 1, TRUE ~ 0),
-      award_pick = case_when(`choice-7` %in% major_award ~ 1, TRUE ~ 0),
-      classic_pick = case_when(`choice-7` %in% classic_50plus ~ 1, TRUE ~ 0),
       forms_pick = case_when(`choice-7` %in% multi_genre ~ 1, TRUE ~ 0),
+      sold30m_pick = case_when(`choice-7` %in% sold_30m ~ 1, TRUE ~ 0),
+      classic_pick = case_when(`choice-7` %in% classic_50plus ~ 1, TRUE ~ 0),
 
       # Demographics
       gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
@@ -208,7 +203,8 @@ if(USE_API) {
       external3Z = (E3 - mean(E3, na.rm = TRUE)) / sd(E3, na.rm = TRUE),
       external = (external1Z + external2Z + external3Z) / 3
     ) |>
-    dplyr::select(gender_feedback:forms_pick, base_gender, `choice-1`:`choice-7`,
+    dplyr::select(gender_feedback, forms_shown, sold30m_shown, classic_shown,
+                  female_pick, forms_pick, sold30m_pick, classic_pick, base_gender, `choice-1`:`choice-7`,
                   race, gender, age, gender_code, race_code, poli, poli_numeric, poli_centered,
                   internal1Z:external) |>
     slice(1:1000) # pre-registered sample size
@@ -238,11 +234,11 @@ if(USE_API) {
 \hline
 \texttt{female\_pick} & Binary indicator of whether a participant selected a female author for their seventh selection \\
 \hline
-\texttt{award\_pick} & Binary indicator of whether a participant selected an author with major awards (Pulitzer, Nobel, National Book Award) for their seventh selection. \\
+\texttt{forms\_pick} & Binary indicator of whether a participant selected an author who wrote in multiple genres for their seventh selection. \\
+\hline
+\texttt{sold30m\_pick} & Binary indicator of whether a participant selected an author with at least one book with 30M+ copies sold for their seventh selection. \\
 \hline
 \texttt{classic\_pick} & Binary indicator of whether a participant selected an author with a book in print for $50+$ years for their seventh selection. \\
-\hline
-\texttt{forms\_pick} & Binary indicator of whether a participant selected an author who wrote in multiple genres for their seventh selection. \\
 \hline
 \texttt{base\_gender} & Count of the number of female authors selected in the initial six authors. \\
 \hline
@@ -388,7 +384,7 @@ robust_confint(r1)
 ```{r echo=TRUE, results='markup'}
 
 ## which feedback was shown with gender, remove constant due to collinearity
-r2 <- lm(female_pick ~ gender_feedback + classic_shown + award_shown + forms_shown - 1, data=d0)
+r2 <- lm(female_pick ~ gender_feedback + classic_shown + sold30m_shown + forms_shown - 1, data=d0)
 
 # Display the summary with robust standard errors
 robust_summary(r2)
@@ -498,12 +494,12 @@ robust_summary(r_classic)
 robust_confint(r_classic)
 
 
-## award feedback
-r_award <- lm(award_pick ~ award_shown, data=d0)
+## sold 30M+ copies feedback
+r_sold30m <- lm(sold30m_pick ~ sold30m_shown, data=d0)
 
 # Display the robust_summary with robust standard errors
-robust_summary(r_award)
-robust_confint(r_award)
+robust_summary(r_sold30m)
+robust_confint(r_sold30m)
 
 
 ## forms (multi-genre) feedback
@@ -519,16 +515,16 @@ robust_confint(r_forms)
 # Extract estimates for overall plot
 gender_est <- extract_regression_estimates(r1)
 classic_est <- extract_regression_estimates(r_classic)
-award_est <- extract_regression_estimates(r_award)
+sold30m_est <- extract_regression_estimates(r_sold30m)
 forms_est <- extract_regression_estimates(r_forms)
 
 study2A_pilot_estimates <- data.frame(
     Study = "STUDY 2A PILOT",
-    Stimuli = c("gender", "classic", "award", "forms"),
-    Estimate = c(gender_est$estimate, classic_est$estimate, award_est$estimate, forms_est$estimate),
-    SE = c(gender_est$se, classic_est$se, award_est$se, forms_est$se),
-    CI_Lower = c(gender_est$ci_lower, classic_est$ci_lower, award_est$ci_lower, forms_est$ci_lower),
-    CI_Upper = c(gender_est$ci_upper, classic_est$ci_upper, award_est$ci_upper, forms_est$ci_upper)
+    Stimuli = c("gender", "classic", "sold30m", "forms"),
+    Estimate = c(gender_est$estimate, classic_est$estimate, sold30m_est$estimate, forms_est$estimate),
+    SE = c(gender_est$se, classic_est$se, sold30m_est$se, forms_est$se),
+    CI_Lower = c(gender_est$ci_lower, classic_est$ci_lower, sold30m_est$ci_lower, forms_est$ci_lower),
+    CI_Upper = c(gender_est$ci_upper, classic_est$ci_upper, sold30m_est$ci_upper, forms_est$ci_upper)
 )
 
 # Save the estimates to an RDS file
@@ -643,6 +639,26 @@ summary(med.out.combined.external)
 
 ```{r echo=TRUE}
 
+# Get p-values from regression models
+p_gender <- robust_summary(r1)$coefficients["gender_feedback", "Pr(>|t|)"]
+p_sold30m <- robust_summary(r_sold30m)$coefficients["sold30m_shown", "Pr(>|t|)"]
+p_forms <- robust_summary(r_forms)$coefficients["forms_shown", "Pr(>|t|)"]
+p_classic <- robust_summary(r_classic)$coefficients["classic_shown", "Pr(>|t|)"]
+
+# Function to convert p-value to significance stars
+get_sig_stars <- function(p) {
+  if (p < 0.001) return("***")
+  else if (p < 0.01) return("**")
+  else if (p < 0.05) return("*")
+  else return("n.s.")
+}
+
+# Get significance labels
+sig_gender <- get_sig_stars(p_gender)
+sig_sold30m <- get_sig_stars(p_sold30m)
+sig_forms <- get_sig_stars(p_forms)
+sig_classic <- get_sig_stars(p_classic)
+
 dfemale_plot <- d0 |>
   dplyr::select(gender_feedback, female_pick) |>
   dplyr::group_by(gender_feedback) |>
@@ -661,20 +677,20 @@ dfemale_plot <- d0 |>
   dplyr::rename(Condition = gender_feedback)
 
 
-##### award
+##### sold 30M+
 
-daward_plot <- d0 |>
-  dplyr::select(award_shown, award_pick) |>
-  dplyr::group_by(award_shown) |>
+dsold30m_plot <- d0 |>
+  dplyr::select(sold30m_shown, sold30m_pick) |>
+  dplyr::group_by(sold30m_shown) |>
   dplyr::summarise(
     n = n(),
-    freq = mean(award_pick),
-    sd = sd(award_pick) * 100,
-    se = (sd(award_pick) / sqrt(n())) * 100
+    freq = mean(sold30m_pick),
+    sd = sd(sold30m_pick) * 100,
+    se = (sd(sold30m_pick) / sqrt(n())) * 100
   )|>
-  mutate(award_shown = case_when(award_shown==1 ~ "\"Treatment\"",
+  mutate(sold30m_shown = case_when(sold30m_shown==1 ~ "\"Treatment\"",
                           TRUE ~ "\"Control\"")) |>
-  rename(Condition = award_shown)
+  rename(Condition = sold30m_shown)
 
 
 ##### forms
@@ -711,27 +727,24 @@ dclassic_plot <- d0 |>
 ## Combine plots
 
 df_combined <- bind_rows(
-  daward_plot %>% mutate(Category = "\nWon Major\nAwards"),
-  dforms_plot %>% mutate(Category = "\nWrote Multiple\nGenres"),
-  dclassic_plot %>% mutate(Category = "\n50+ Years\nin Print"),
-  dfemale_plot %>% mutate(Category = "\nWere Women")
+  dforms_plot %>% mutate(Category = "\nWrote Multiple\nGenres", sig_label = sig_forms),
+  dsold30m_plot %>% mutate(Category = "\n30M+ Copies\nSold", sig_label = sig_sold30m),
+  dclassic_plot %>% mutate(Category = "\n50+ Years\nin Print", sig_label = sig_classic),
+  dfemale_plot %>% mutate(Category = "\nWere Women", sig_label = sig_gender)
 , .id = "id") %>%
-  mutate(Category = factor(Category, levels = c('\nWon Major\nAwards', '\nWrote Multiple\nGenres', '\n50+ Years\nin Print', '\nWere Women')))
+  mutate(Category = factor(Category, levels = c('\nWrote Multiple\nGenres', '\n30M+ Copies\nSold', '\n50+ Years\nin Print', '\nWere Women')))
 
 p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
   geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
   geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")),
             position=position_dodge(width=0.7), vjust=5, size = 5, color = "white") +
   geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
-  facet_wrap(~factor(Category, c('\nWon Major\nAwards', '\nWrote Multiple\nGenres', '\n50+ Years\nin Print', '\nWere Women')), nrow = 1, strip.position = "bottom") +
+  facet_wrap(~factor(Category, c('\nWrote Multiple\nGenres', '\n30M+ Copies\nSold', '\n50+ Years\nin Print', '\nWere Women')), nrow = 1, strip.position = "bottom") +
    geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""),
                 aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5),
                 inherit.aes = FALSE) +
-   geom_text(data = df_combined %>% filter(Category %in% c('\nWon Major\nAwards', '\nWrote Multiple\nGenres', '\n50+ Years\nin Print') & Condition == "\"Treatment\""),
-             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."),
-             inherit.aes = FALSE, vjust = 0, size = 5) +
-   geom_text(data = df_combined %>% filter(Category == '\nWere Women' & Condition == "\"Treatment\""),
-             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"),
+   geom_text(data = df_combined %>% filter(Condition == "\"Treatment\""),
+             aes(x = 1.5, y = freq*100 + se + 7, label = sig_label),
              inherit.aes = FALSE, vjust = 0, size = 5) +
   theme_bw() +
   scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
@@ -768,24 +781,24 @@ ggsave("Figure-S1-pilot.pdf", plot = p_combined, width = 10, height = 8, units =
 ## System of Simultaneous Equations
 
 ```{r results='markup'}
-# award
+# sold30m
 
-award.eqn <- list(
-  awardeq = as.numeric(award_pick) ~ award_shown + forms_shown + classic_shown + gender_feedback - 1,
-  femaleeq = as.numeric(female_pick) ~ award_shown + forms_shown + classic_shown + gender_feedback - 1
+sold30m.eqn <- list(
+  sold30meq = as.numeric(sold30m_pick) ~ sold30m_shown + forms_shown + classic_shown + gender_feedback - 1,
+  femaleeq = as.numeric(female_pick) ~ sold30m_shown + forms_shown + classic_shown + gender_feedback - 1
 )
 
 # Define restriction matrix
-restrict_award <- "awardeq_award_shown - femaleeq_gender_feedback = 0"
+restrict_sold30m <- "sold30meq_sold30m_shown - femaleeq_gender_feedback = 0"
 
 # Fit the system of equations with the restriction
-unrestricted_award <- systemfit(award.eqn, data=d0)
+unrestricted_sold30m <- systemfit(sold30m.eqn, data=d0)
 
 # forms
 
 forms.eqn <- list(
-  formseq = as.numeric(forms_pick) ~ award_shown + forms_shown + classic_shown + gender_feedback - 1,
-  femaleeq = as.numeric(female_pick) ~ award_shown + forms_shown + classic_shown + gender_feedback - 1
+  formseq = as.numeric(forms_pick) ~ sold30m_shown + forms_shown + classic_shown + gender_feedback - 1,
+  femaleeq = as.numeric(female_pick) ~ sold30m_shown + forms_shown + classic_shown + gender_feedback - 1
 )
 
 # Define restriction matrix
@@ -797,8 +810,8 @@ unrestricted_forms <- systemfit(forms.eqn, data=d0)
 # classic
 
 classic.eqn <- list(
-  classiceq = as.numeric(classic_pick) ~ award_shown + forms_shown + classic_shown + gender_feedback - 1,
-  femaleeq = as.numeric(female_pick) ~ award_shown + forms_shown + classic_shown + gender_feedback - 1
+  classiceq = as.numeric(classic_pick) ~ sold30m_shown + forms_shown + classic_shown + gender_feedback - 1,
+  femaleeq = as.numeric(female_pick) ~ sold30m_shown + forms_shown + classic_shown + gender_feedback - 1
 )
 
 # Define restriction matrix
@@ -810,28 +823,28 @@ unrestricted_classic <- systemfit(classic.eqn, data=d0)
 
 # wald tests
 # Run linear hypothesis tests
-lh_result_award = linearHypothesis(unrestricted_award, restrict_award)
+lh_result_sold30m = linearHypothesis(unrestricted_sold30m, restrict_sold30m)
 lh_result_forms = linearHypothesis(unrestricted_forms, restrict_forms)
 lh_result_classic = linearHypothesis(unrestricted_classic, restrict_classic)
 
 
 
 # Collecting coefficient values and standard errors
-award_coef <- lh_result_award$F[2]
+sold30m_coef <- lh_result_sold30m$F[2]
 forms_coef <- lh_result_forms$F[2]
 classic_coef <- lh_result_classic$F[2]
 
 
 # Extracting p-values
-p_value_award = lh_result_award$`Pr(>F)`[2]
+p_value_sold30m = lh_result_sold30m$`Pr(>F)`[2]
 p_value_forms = lh_result_forms$`Pr(>F)`[2]
 p_value_classic = lh_result_classic$`Pr(>F)`[2]
 
 # Include p-values in the summary table
 data.frame(
-  `Test` = c("Gender Feedback - Award Feedback", "Gender Feedback - Forms Feedback", "Gender Feedback - Classic Feedback"),
-  `Wald Coefficient` = c(award_coef, forms_coef, classic_coef),
-  P_Value = c(p_value_award, p_value_forms, p_value_classic),
+  `Test` = c("Gender Feedback - Sold30M Feedback", "Gender Feedback - Forms Feedback", "Gender Feedback - Classic Feedback"),
+  `Wald Coefficient` = c(sold30m_coef, forms_coef, classic_coef),
+  P_Value = c(p_value_sold30m, p_value_forms, p_value_classic),
   row.names = 1
 )
 
