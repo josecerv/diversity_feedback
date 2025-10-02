@@ -35,6 +35,10 @@ library(mediation)
 ```
 
 ```{r include=FALSE}
+qualtrics_api_credentials(api_key = "BJ6aDiEgtQihneCgtZycVLYjaj0ao9gYkdRkb1UZ",
+                          base_url = "yul1.qualtrics.com",
+                          install = F,
+                          overwrite = T)
 if ( (!is.null(knitr::current_input()))) {
   if (("pdf_document" ==
                 rmarkdown::all_output_formats(knitr::current_input())[1])) {
@@ -112,6 +116,7 @@ USE_API <- T
 if(USE_API) {
   ## Pull directly from Qualtrics API
   qual_data <- fetch_survey(surveyID='SV_diLrc4ha88321dY',  # New Study ID
+                            start_date = "2025-10-02",
                      force_request = T)
 } else {
   # Read the processed data directly from CSV

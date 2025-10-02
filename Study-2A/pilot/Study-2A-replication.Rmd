@@ -35,6 +35,10 @@ library(mediation)
 ```
 
 ```{r include=FALSE}
+qualtrics_api_credentials(api_key = "BJ6aDiEgtQihneCgtZycVLYjaj0ao9gYkdRkb1UZ",
+                          base_url = "yul1.qualtrics.com",
+                          install = F,
+                          overwrite = T)
 if ( (!is.null(knitr::current_input()))) {
   if (("pdf_document" ==
                 rmarkdown::all_output_formats(knitr::current_input())[1])) {
@@ -107,14 +111,14 @@ extract_regression_estimates <- function(model) {
 
 ```{r echo=TRUE}
 # Set this to TRUE if you have API access, FALSE if using CSV
-USE_API <- FALSE
+USE_API <- T
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
   qual_data <- fetch_survey(surveyID='SV_5aTf8as54qnmh14',
                      label = T,
                      convert = F,
-                     start_date = "2024-01-03",
+                     start_date = "2025-10-02",
                      force_request = T)
 } else {
   # Read the processed data directly from CSV

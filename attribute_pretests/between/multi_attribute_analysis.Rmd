@@ -23,8 +23,8 @@ theme_set(theme_economist())
 ```{r api-setup, include=FALSE}
 qualtrics_api_credentials(api_key = "BJ6aDiEgtQihneCgtZycVLYjaj0ao9gYkdRkb1UZ",
                           base_url = "yul1.qualtrics.com",
-                          install = FALSE,
-                          overwrite = TRUE)
+                          install = F,
+                          overwrite = T)
 
 survey_id <- "SV_cASPdJCJOBdOu1M"
 
