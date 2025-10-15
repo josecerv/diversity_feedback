@@ -14,7 +14,8 @@
       "Bash(mkdir:*)",
       "Bash(mv:*)",
       "Bash(Rscript:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(cp:*)"
     ],
     "deny": [],
     "ask": []

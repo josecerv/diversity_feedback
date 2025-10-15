@@ -1,8 +1,8 @@
 ---
-title: "Study 2B"
+title: "Study 2B - New Attributes"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
-  pdf_document: 
+  pdf_document:
     toc: yes
     toc_depth: 2
     fig_caption: true
@@ -35,6 +35,10 @@ library(mediation)
 ```
 
 ```{r include=FALSE}
+qualtrics_api_credentials(api_key = "BJ6aDiEgtQihneCgtZycVLYjaj0ao9gYkdRkb1UZ",
+                          base_url = "yul1.qualtrics.com",
+                          install = F,
+                          overwrite = T)
 if ( (!is.null(knitr::current_input()))) {
   if (("pdf_document" ==
                 rmarkdown::all_output_formats(knitr::current_input())[1])) {
@@ -43,7 +47,6 @@ if ( (!is.null(knitr::current_input()))) {
 } else {
   stargazer_type <- "text"
 }
-
 
 robust_summary <- function(model) {
     # Calculating robust standard errors
@@ -86,13 +89,13 @@ extract_regression_estimates <- function(model) {
   rob_sum <- robust_summary(model)
   # Get robust confidence intervals
   rob_ci <- robust_confint(model)
-  
+
   # Extract coefficient for the treatment variable (second row)
   estimate <- rob_sum$coefficients[2, "Estimate"] * 100  # Convert to percentage points
   se <- rob_sum$coefficients[2, "Std. Error"] * 100
   ci_lower <- rob_ci[2, 1] * 100
   ci_upper <- rob_ci[2, 2] * 100
-  
+
   return(list(
     estimate = estimate,
     se = se,
@@ -108,14 +111,12 @@ extract_regression_estimates <- function(model) {
 
 ```{r echo=TRUE}
 # Set this to TRUE if you have API access, FALSE if using CSV
-USE_API <- FALSE
+USE_API <- T
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
-  qual_data <- fetch_survey(surveyID='SV_9KBd2ktMonQbXWS',
-                     label = T,
-                     convert = F,
-                     start_date = "2022-10-14",
+  qual_data <- fetch_survey(surveyID='SV_cGCFBxyTGbzsZvw',  # New Study ID
+                            start_date = "2025-10-08",
                      force_request = T)
 } else {
   # Read the processed data directly from CSV
@@ -123,58 +124,93 @@ if(USE_API) {
   num_excluded <- unique(d0$num_excluded_total)
 }
 
-# Define the categories
-books_list <- c("Agatha Christie", "Alice Walker", "Charles Dickens", "Herman Melville", "Isabel Allende", "Jack London", "John Steinbeck", "Joyce Carol Oates", "Jorge Luis Borges", "JRR Tolkien", "Louisa May Alcott", "Lucy Maud", "Michael Crichton", "Sandra Cisneros", "Toni Morrison")
-oldies_list <- c("Agatha Christie", "Charles Dickens", "Emily Bronte", "Ernest Hemingway", "Herman Melville", "Jack London", "Jane Austen", "Jorge Luis Borges", "JRR Tolkien", "Louisa May Alcott", "Lucy Maud", "Nathaniel Hawthorne", "WEB Du Bois")
-poets_list <- c("Alice Walker", "Charles Dickens", "Emily Bronte", "George Orwell", "Jack London", "James Baldwin", "Joyce Carol Oates", "Jorge Luis Borges", "Louisa May Alcott", "Lucy Maud", "Sandra Cisneros", "Sylvia Plath", "Toni Morrison")
-race_list <- c("Alice Walker", "Gabriel Garcia Marquez", "Isabel Allende", "James Baldwin", "Sandra Cisneros", "Toni Morrison", "WEB Du Bois", "Jorge Luis Borges")
+# Define the categories based on the JavaScript feedback code
+minority <- c(
+  'Alice Walker', 'Gabriel Garcia Marquez', 'Isabel Allende',
+  'Sandra Cisneros', 'Toni Morrison', 'WEB Du Bois'
+)
+
+multi_genre <- c(
+  'Agatha Christie', 'Emily Bronte', 'Gabriel Garcia Marquez', 'George Orwell',
+  'Herman Melville', 'Isabel Allende', 'Joyce Carol Oates', 'J.R.R. Tolkien',
+  'Louisa May Alcott', 'Lucy Maud', 'Ray Bradbury', 'Sandra Cisneros',
+  'Toni Morrison', 'WEB Du Bois'
+)
+
+sold_30m <- c(
+  'Charles Dickens', 'Gabriel Garcia Marquez', 'George Orwell', 'Isabel Allende',
+  'J.D. Salinger', 'J.R.R. Tolkien', 'Lucy Maud', 'F. Scott Fitzgerald'
+)
+
+classic_50plus <- c(
+  'Agatha Christie', 'Charles Dickens', 'Emily Bronte', 'Ernest Hemingway',
+  'F. Scott Fitzgerald', 'Gabriel Garcia Marquez', 'George Orwell', 'Herman Melville',
+  'J.D. Salinger', 'J.R.R. Tolkien', 'Jack London', 'Jane Austen', 'John Steinbeck',
+  'Louisa May Alcott', 'Lucy Maud', 'Nathaniel Hawthorne', 'Ray Bradbury',
+  'Sylvia Plath', 'WEB Du Bois'
+)
 
 if(USE_API) {
-  d0 <- qual_data |> 
-    mutate(ec_2 = tolower(ec_2)) |> 
-    filter(workerId!="", selection_6 != "", ec_2 %in% c("one one", "\"one one\""), bonus_ctrl2_7 != "" | 
-                  bonus_ctrl1_7 != "" | 
-                  bonus_trt_7 != "", Finished==1) |> 
-    dplyr::select(c(selection_1:last_col()))  |>  
-    # Replace NA with an empty string in relevant columns
-    mutate(across(starts_with("race"), ~replace_na(., ""), .names = "new_{.col}")) %>%
-    # Combine race columns into a single column
-    unite("race_combined", starts_with("new_race"), sep = ", ", na.rm = TRUE, remove = TRUE) %>%
-    # Clean up the race column
-    mutate(race = sapply(strsplit(race_combined, ", "), function(x) {
-      cleaned_entries = x[!str_detect(x, "^\\s*$")]
-      paste(cleaned_entries, collapse = ", ")
-    }))  |> 
-    mutate(race_choice = across(c(bonus_ctrl2_7, bonus_ctrl1_7, bonus_trt_7),
-                  ~ case_when(. %in% race_list ~ 1,
-                              TRUE ~ 0)),
-           book_choice = across(c(bonus_ctrl2_7, bonus_ctrl1_7, bonus_trt_7),
-                  ~ case_when(. %in% books_list  ~ 1,
-                              TRUE ~ 0)),
-            oldies_choice = across(c(bonus_ctrl2_7, bonus_ctrl1_7, bonus_trt_7),
-                  ~ case_when(. %in% oldies_list ~ 1,
-                    TRUE ~ 0)),
-            poets_choice = across(c(bonus_ctrl2_7, bonus_ctrl1_7, bonus_trt_7),
-                  ~ case_when(. %in% poets_list ~ 1,
-                    TRUE ~ 0)),
-           race_feedback = case_when(group %in% c("control1", "control2") ~ 0,
-                                 TRUE ~ 1)) |> 
-    mutate(race_pick = case_when(race_choice$bonus_ctrl2_7==1 | race_choice$bonus_ctrl1_7==1 |  race_choice$bonus_trt_7==1 ~ 1, TRUE ~ 0),
-           poets_pick = case_when(poets_choice$bonus_ctrl2_7==1 | poets_choice$bonus_ctrl1_7==1 |  poets_choice$bonus_trt_7==1 ~ 1, TRUE ~ 0),
-           oldies_pick = case_when(oldies_choice$bonus_ctrl2_7==1 | oldies_choice$bonus_ctrl1_7==1 |  oldies_choice$bonus_trt_7==1 ~ 1, TRUE ~ 0),
-           book_pick = case_when(book_choice$bonus_ctrl2_7==1 | book_choice$bonus_ctrl1_7==1 |  book_choice$bonus_trt_7==1 ~ 1, TRUE ~ 0),
-           poets = case_when((group == "control1" & (`count_type-1` == "wrote poetry" | `count_type-2` == "wrote poetry")) | (group=="control2") | (group=="treatment" & (`minority_count_type-1` == "wrote poetry" | `minority_count_type-2` == "wrote poetry" | `minority_count_type-3` == "wrote poetry")) ~ 1, TRUE ~ 0),
-           oldies = case_when((group == "control1" & (`count_type-1` == "were born in the 1800s" | `count_type-2` == "were born in the 1800s")) | (group=="control2") | (group=="treatment" & (`minority_count_type-1` == "were born in the 1800s" | `minority_count_type-2` == "were born in the 1800s" | `minority_count_type-3` == "were born in the 1800s")) ~ 1, TRUE ~ 0),
-           books = case_when((group == "control1" & (`count_type-1` == "wrote more than 10 books" | `count_type-2` == "wrote more than 10 books")) | (group=="control2") | (group=="treatment" & (`minority_count_type-1` == "wrote more than 10 books" | `minority_count_type-2` == "wrote more than 10 books" | `minority_count_type-3` == "wrote more than 10 books")) ~ 1, TRUE ~ 0),
-            gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
-            race_code = case_when(str_detect(race, "White / Caucasian") ~ 1, TRUE ~ 0),
-           age = as.numeric(age),
-           list_two = case_when(group=="control1" ~ 1, group=="control2" ~ 0, TRUE ~ NA_real_)) |> 
+  # Process the API data with new category definitions
+  d0 <- qual_data |>
+    filter(!is.na(`choice-7`), !is.na(PROLIFIC_PID)) |>
+    mutate(
+      # Minority feedback detection
+      minority_feedback = as.numeric(grepl("were racial minorities", feedbackItem1) |
+                    grepl("were racial minorities", feedbackItem2) |
+                    grepl("were racial minorities", feedbackItem3)),
+
+      # Attribute feedback detection based on JavaScript code
+      forms_shown = as.numeric(grepl("spanning multiple genres", feedbackItem1) |
+                   grepl("spanning multiple genres", feedbackItem2) |
+                   grepl("spanning multiple genres", feedbackItem3)),
+
+      sold30m_shown = as.numeric(grepl("30M\\+ copies sold", feedbackItem1) |
+                     grepl("30M\\+ copies sold", feedbackItem2) |
+                     grepl("30M\\+ copies sold", feedbackItem3)),
+
+      classic_shown = as.numeric(grepl("remained in continuous print for over 50 years", feedbackItem1) |
+                     grepl("remained in continuous print for over 50 years", feedbackItem2) |
+                     grepl("remained in continuous print for over 50 years", feedbackItem3)),
+
+      # Picks based on categories
+      minority_pick = case_when(`choice-7` %in% minority ~ 1, TRUE ~ 0),
+      forms_pick = case_when(`choice-7` %in% multi_genre ~ 1, TRUE ~ 0),
+      sold30m_pick = case_when(`choice-7` %in% sold_30m ~ 1, TRUE ~ 0),
+      classic_pick = case_when(`choice-7` %in% classic_50plus ~ 1, TRUE ~ 0),
+
+      # Demographics
+      gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
+      race_code = case_when(str_detect(race, "White / Caucasian") ~ 1, TRUE ~ 0),
+
+      # Process political ideology (1-7 scale)
+      poli_numeric = case_when(
+        poli == "1Extremely liberal" ~ 1,
+        poli == "2Liberal" ~ 2,
+        poli == "3Slightly liberal" ~ 3,
+        poli == "4Moderate; middle of the road" ~ 4,
+        poli == "5Slightly conservative" ~ 5,
+        poli == "6Conservative" ~ 6,
+        poli == "7Extremely conservative" ~ 7,
+        TRUE ~ NA_integer_
+      ),
+
+      # Center political ideology for interaction
+      poli_centered = poli_numeric - 4,  # Center at moderate (4)
+
+      # Process political party affiliation
+      party_democrat = case_when(poli_party == "Democrat" ~ 1, TRUE ~ 0),
+      party_independent = case_when(poli_party == "Independent" ~ 1, TRUE ~ 0),
+      party_republican = case_when(poli_party == "Republican" ~ 1, TRUE ~ 0),
+
+      base_minority = rowSums(across(`choice-1`:`choice-6`, ~ . %in% minority))
+    ) |>
     mutate(
       across(c(I1:E3),
              ~ case_when(
-               . == "Strongly disagree" ~ 1, . == "Disagree" ~ 2, . == "Somewhat disagree" ~ 3, . == "Neither agree nor disagree" ~ 4, 
-               . == "Somewhat agree" ~ 5, . == "Agree" ~ 6, . == "Strongly agree" ~ 7, TRUE ~ NA_integer_))) |> 
+               . == "Strongly disagree" ~ 1, . == "Disagree" ~ 2, . == "Somewhat disagree" ~ 3,
+               . == "Neither agree nor disagree" ~ 4, . == "Somewhat agree" ~ 5, . == "Agree" ~ 6,
+               . == "Strongly agree" ~ 7, TRUE ~ NA_integer_))) |>
     mutate(
       internal1Z = (I1 - mean(I1, na.rm = TRUE)) / sd(I1, na.rm = TRUE),
       internal2Z = (I2 - mean(I2, na.rm = TRUE)) / sd(I2, na.rm = TRUE),
@@ -184,59 +220,67 @@ if(USE_API) {
       external1Z = (E1 - mean(E1, na.rm = TRUE)) / sd(E1, na.rm = TRUE),
       external2Z = (E2 - mean(E2, na.rm = TRUE)) / sd(E2, na.rm = TRUE),
       external3Z = (E3 - mean(E3, na.rm = TRUE)) / sd(E3, na.rm = TRUE),
-      external = (external1Z + external2Z + external3Z) / 3,
-      base_race = rowSums(across(selection_1:selection_6, ~ . %in% race_list))
-    ) |> 
-    dplyr::select(list_two, race_feedback, race_pick:books, base_race, selection_1:selection_6,bonus_ctrl2_7, bonus_ctrl1_7, bonus_trt_7, race, gender, age, gender_code, race_code, internal1Z:external) |> 
-    slice(1:1000) #pre-registered sample size 
+      external = (external1Z + external2Z + external3Z) / 3
+    ) |>
+    dplyr::select(minority_feedback, forms_shown, sold30m_shown, classic_shown,
+                  minority_pick, forms_pick, sold30m_pick, classic_pick, base_minority, `choice-1`:`choice-7`,
+                  race, gender, age, gender_code, race_code, poli, poli_numeric, poli_centered,
+                  poli_party, party_democrat, party_independent, party_republican,
+                  internal1Z:external) |>
+    slice(1:1000) # pre-registered sample size
 
   # Calculate the number of excluded participants
   num_excluded <- nrow(qual_data) - nrow(d0)
 
   # Save num_excluded in d0
   d0$num_excluded_total <- num_excluded  # As a column
-    
+
   # Write the API-pulled data into a CSV file
   write.csv(d0, 'Study2B.csv', row.names = FALSE, quote = TRUE)
 }
-
 ```
 
 \newpage
 
 ## Variable Names
 
-\begin{table}[!htbp] \centering 
-  \label{tab:variables} 
-\begin{tabular}{|l|p{10cm}|} 
-\hline 
-\textbf{Variable} & \textbf{Description} \\ 
-\hline 
-\texttt{list\_two} & Binary indicator of whether the control received a list of two attributes (list\_two=1) or not (list\_two=0). \\
+\begin{table}[!htbp] \centering
+  \label{tab:variables}
+\begin{tabular}{|l|p{10cm}|}
 \hline
-\texttt{race\_feedback} & Binary indicator of whether a participant was randomly assigned to race feedback condition. \\
+\textbf{Variable} & \textbf{Description} \\
 \hline
-\texttt{race\_pick} & Binary indicator of whether a participant selected a racial minority protagonist for their seventh author selection \\
+\texttt{minority\_feedback} & Binary indicator of whether a participant was randomly assigned to racial minority feedback condition. \\
 \hline
-\texttt{poets\_pick} & Binary indicator of whether a participant selected an author that wrote poetry for their seventh selection. \\
+\texttt{minority\_pick} & Binary indicator of whether a participant selected a racial minority author for their seventh selection \\
 \hline
-\texttt{oldies\_pick} & Binary indicator of whether a participant selected an author that was born in the $1800s$ for their seventh selection. \\
+\texttt{forms\_pick} & Binary indicator of whether a participant selected an author who wrote in multiple genres for their seventh selection. \\
 \hline
-\texttt{book\_pick} & Binary indicator of whether a participant selected an author that wrote more than $10$ books for their seventh selection. \\
+\texttt{sold30m\_pick} & Binary indicator of whether a participant selected an author with at least one book with 30M+ copies sold for their seventh selection. \\
 \hline
-\texttt{base\_race} & Count of the number of racial minority authors selected in the initial six authors. \\
+\texttt{classic\_pick} & Binary indicator of whether a participant selected an author with a book in print for $50+$ years for their seventh selection. \\
 \hline
-\texttt{selection\_1 to selection\_6} & The selected authors \\
+\texttt{base\_minority} & Count of the number of racial minority authors selected in the initial six authors. \\
 \hline
-\texttt{bonus\_ctrl1\_7, bonus\_ctrl2\_7} & The final selected author for control \\
-\hline
-\texttt{bonus\_trt\_7} & The final selected author for treatment \\
+\texttt{choice-1 to choice-7} & The selected authors \\
 \hline
 \texttt{gender} & Self-selected gender. \\
 \hline
 \texttt{race} & Self-selected race. \\
 \hline
 \texttt{age} & Self-entered age. \\
+\hline
+\texttt{poli} & Political ideology on 7-point scale (1 = extremely liberal, 7 = extremely conservative). \\
+\hline
+\texttt{poli\_centered} & Centered political ideology (0 = moderate). \\
+\hline
+\texttt{poli\_party} & Political party affiliation (Democrat, Republican, Independent). \\
+\hline
+\texttt{party\_democrat} & Indicator for Democrat party affiliation. \\
+\hline
+\texttt{party\_independent} & Indicator for Independent party affiliation. \\
+\hline
+\texttt{party\_republican} & Indicator for Republican party affiliation (reference category). \\
 \hline
 \texttt{gender\_code} & Dummy code for gender (male = 1). \\
 \hline
@@ -250,10 +294,11 @@ if(USE_API) {
 \hline
 \texttt{external} & Aggregated scale items for External Motivation to Respond Without Prejudice. \\
 \hline
-\end{tabular} 
-\end{table} 
+\end{tabular}
+\end{table}
 
 \newpage
+
 
 ## Demographics
 
@@ -278,58 +323,75 @@ print(gender_df)
 
 ## Race
 
-# Separate the combined race entries and unlist
-individual_races <- unlist(strsplit(d0$race, ",\\s*"))
 
-# Create a new data frame with these individual race entries
-race_data <- data.frame(Race = individual_races)
-
-# Calculate the proportions
-race_percentages <- round(prop.table(table(race_data$Race)) * 100, 2)
+race_percentages <- round(prop.table(table(d0$race)) * 100, 2)
 
 # Create the final data frame
 race_df <- data.frame(
-  Percentage = as.numeric(race_percentages),
+  Percentage = race_percentages,
   Race = names(race_percentages)
-)
+)[1:2]
+
 # Reorder the columns
-race_df <- race_df[c("Race", "Percentage")]
+colnames(race_df) <- c("Percentage", "Race")
 
 # Print the data frame
 print(race_df)
 
 ## Age
 
-age_summary <- d0 |> 
-  dplyr::select(age) |> 
+age_summary <- d0 |>
+  dplyr::select(age) |>
   summarize(mean_age = mean(age, na.rm = T), sd_age = sd(age, na.rm = T))
 
 age_summary
 
+## Political Ideology
+
+poli_summary <- d0 |>
+  dplyr::select(poli_numeric) |>
+  summarize(mean_poli = mean(poli_numeric, na.rm = T), sd_poli = sd(poli_numeric, na.rm = T))
+
+cat('Mean Political Ideology (1-7 scale): ', round(poli_summary$mean_poli, 2), '\n')
+cat('SD Political Ideology: ', round(poli_summary$sd_poli, 2), '\n')
+
+## Political Party
+
+party_percentages <- round(prop.table(table(d0$poli_party)) * 100, 2)
+
+party_df <- data.frame(
+  Percentage = party_percentages,
+  Party = names(party_percentages)
+)[1:2]
+
+colnames(party_df) <- c("Percentage", "Party")
+
+print(party_df)
+
 ## Initial Selections
 
-cat('Mean (num of initial women selected): ', round(mean(d0$base_race), 2))
-cat('SD (num of initial women selected): ',round(sd(d0$base_race), 2))
+cat('Mean (num of initial racial minorities selected): ', round(mean(d0$base_minority), 2))
+cat('SD (num of initial racial minorities selected): ',round(sd(d0$base_minority), 2))
 
 ## Initial Selections (%)
 
-cat('Percentage (initial women selected): ', round(mean(d0$base_race), 2)/6)
-cat('SD (initial women selected): ',round(sd(d0$base_race), 2)/6)
+cat('Percentage (initial racial minorities selected): ', round(mean(d0$base_minority), 2)/6)
+cat('SD (initial racial minorities selected): ',round(sd(d0$base_minority), 2)/6)
 
-d0 |> 
-  dplyr::select(base_race, race_feedback) |> 
-  dplyr::group_by(race_feedback) |> 
-  dplyr::summarize(mean = mean(base_race/6))
+d0 |>
+  dplyr::select(base_minority, minority_feedback) |>
+  dplyr::group_by(minority_feedback) |>
+  dplyr::summarize(mean = mean(base_minority/6))
 
+t.test(base_minority/6 ~ minority_feedback, data=d0)
 
-t.test(base_race/6 ~ race_feedback, data=d0)
 ```
 
 \newpage
 
 ## Cronbach's Alpha
 
-```{r echo=TRUE, results='markup'}
+```{r echo=TRUE, message=FALSE, results='markup'}
 # Calculating Cronbach's Alpha for the Internal subscale
 internal_items <- d0[, c("internal1Z", "internal2Z", "internal3Z", "internal4Z")]
 alpha_internal <- alpha(internal_items)
@@ -345,23 +407,11 @@ cat("Cronbach's Alpha for External Subscale: ", alpha_external$total$raw_alpha, 
 
 \newpage
 
-## Pooled Analysis
-
-```{r echo=TRUE, results='markup'}
-
-r0 <- lm(race_pick ~ list_two, data=d0)
-
-# Display the summary with robust standard errors
-robust_summary(r0)
-
-```
-
 ## Primary Analysis
 
 ```{r echo=TRUE, results='markup'}
 # primary model
-r1 <- lm(race_pick ~ race_feedback, data=d0)
-summary(r1)
+r1 <- lm(minority_pick ~ minority_feedback, data=d0)
 
 # Display the summary with robust standard errors
 robust_summary(r1)
@@ -374,24 +424,24 @@ robust_confint(r1)
 
 ```{r echo=TRUE, results='markup'}
 
-## which feedback was shown with gender, remove constant due to collinearity
-r2 <- lm(race_pick ~ race_feedback + oldies_pick + poets_pick + book_pick - 1, data=d0)
-
+## which feedback was shown with minority, remove constant due to collinearity
+r2 <- lm(minority_pick ~ minority_feedback + classic_shown + sold30m_shown + forms_shown - 1, data=d0)
 
 # Display the summary with robust standard errors
 robust_summary(r2)
+robust_confint(r2)
 
 ## robust to demographic controls
 
-r3 <- lm(race_pick~ race_feedback + gender_code + race_code + age, data=d0)
+r3 <- lm(minority_pick ~ minority_feedback + gender_code + race_code + age, data=d0)
 
-# robust standard errors
+# Display the summary with robust standard errors
 robust_summary(r3)
 robust_confint(r3)
 
 ## logistic regression
 # Fit the logistic regression model
-r4 <- glm(race_pick ~ race_feedback, family = binomial, data=d0)
+r4 <- glm(minority_pick ~ minority_feedback, family = binomial, data=d0)
 summary(r4)
 # Odds ratio
 tidy_r4 <- tidy(r4, exponentiate = TRUE, conf.int = T)
@@ -401,9 +451,9 @@ print(tidy_r4)
 ## Interaction Analysis
 
 ```{r echo=TRUE, results='markup'}
-## interaction of base gender
+## interaction of base minority
 # primary model
-r_interaction <- lm(race_pick ~ race_feedback*base_race, data=d0)
+r_interaction <- lm(minority_pick ~ minority_feedback*base_minority, data=d0)
 
 
 # Display the summary with robust standard errors
@@ -413,64 +463,181 @@ robust_summary(r_interaction)
 
 \newpage
 
+## Moderation by Political Ideology
+
+```{r echo=TRUE, results='markup'}
+# Test for moderation by political ideology
+r_poli_moderation <- lm(minority_pick ~ minority_feedback * poli_centered, data=d0)
+
+# Display the summary with robust standard errors
+cat("Moderation by Political Ideology\n")
+robust_summary(r_poli_moderation)
+robust_confint(r_poli_moderation)
+
+# Simple slopes analysis at different levels of political ideology
+# Liberal (1 SD below mean, approximately liberal)
+liberal_slope <- coef(r_poli_moderation)["minority_feedback"] +
+                 coef(r_poli_moderation)["minority_feedback:poli_centered"] * (-2)
+
+# Moderate (at mean, centered = 0)
+moderate_slope <- coef(r_poli_moderation)["minority_feedback"]
+
+# Conservative (1 SD above mean, approximately conservative)
+conservative_slope <- coef(r_poli_moderation)["minority_feedback"] +
+                      coef(r_poli_moderation)["minority_feedback:poli_centered"] * (2)
+
+cat("\n\nSimple Slopes Analysis:\n")
+cat("Effect of minority feedback for liberals (ideology = 2): ", round(liberal_slope * 100, 2), "%\n")
+cat("Effect of minority feedback for moderates (ideology = 4): ", round(moderate_slope * 100, 2), "%\n")
+cat("Effect of minority feedback for conservatives (ideology = 6): ", round(conservative_slope * 100, 2), "%\n")
+
+# Visualization of interaction
+library(ggplot2)
+# Create prediction data
+pred_data <- expand.grid(
+  minority_feedback = c(0, 1),
+  poli_centered = seq(-3, 3, by = 0.5)  # From very liberal to very conservative
+)
+pred_data$minority_pick <- predict(r_poli_moderation, newdata = pred_data)
+pred_data$poli_label <- pred_data$poli_centered + 4  # Convert back to 1-7 scale
+
+# Plot interaction
+p_interaction <- ggplot(pred_data, aes(x = poli_label, y = minority_pick * 100,
+                                       color = factor(minority_feedback))) +
+  geom_line(size = 1.2) +
+  scale_color_manual(values = c("0" = "#990000", "1" = "#011F5B"),
+                     labels = c("0" = "Control", "1" = "Minority Feedback")) +
+  scale_x_continuous(breaks = 1:7,
+                     labels = c("Extremely\nLiberal", "Liberal", "Slightly\nLiberal",
+                               "Moderate", "Slightly\nConservative", "Conservative",
+                               "Extremely\nConservative")) +
+  labs(x = "Political Ideology",
+       y = "% Selecting Racial Minority Author",
+       title = "Moderation by Political Ideology",
+       color = "Condition") +
+  theme_bw() +
+  theme(legend.position = "top",
+        axis.text.x = element_text(angle = 45, hjust = 1))
+
+print(p_interaction)
+```
+
+\newpage
+
+## Moderation by Political Party
+
+```{r echo=TRUE, results='markup'}
+# Test for moderation by political party affiliation
+# Republican is the reference category
+r_party_moderation <- lm(minority_pick ~ minority_feedback * party_democrat +
+                                      minority_feedback * party_independent, data=d0)
+
+# Display the summary with robust standard errors
+cat("Moderation by Political Party Affiliation\n")
+robust_summary(r_party_moderation)
+robust_confint(r_party_moderation)
+
+# Simple effects analysis for each party
+# Effect for Republicans (reference category)
+republican_effect <- coef(r_party_moderation)["minority_feedback"]
+
+# Effect for Democrats
+democrat_effect <- coef(r_party_moderation)["minority_feedback"] +
+                   coef(r_party_moderation)["minority_feedback:party_democrat"]
+
+# Effect for Independents
+independent_effect <- coef(r_party_moderation)["minority_feedback"] +
+                      coef(r_party_moderation)["minority_feedback:party_independent"]
+
+cat("\n\nSimple Effects Analysis:\n")
+cat("Effect of minority feedback for Republicans: ", round(republican_effect * 100, 2), "%\n")
+cat("Effect of minority feedback for Democrats: ", round(democrat_effect * 100, 2), "%\n")
+cat("Effect of minority feedback for Independents: ", round(independent_effect * 100, 2), "%\n")
+
+# Compute means for each group and condition
+party_means <- d0 |>
+  group_by(poli_party, minority_feedback) |>
+  summarize(
+    mean_minority_pick = mean(minority_pick, na.rm = TRUE),
+    n = n()
+  ) |>
+  filter(!is.na(poli_party))
+
+print(party_means)
+
+# Visualization of interaction
+p_party_interaction <- ggplot(party_means, aes(x = poli_party, y = mean_minority_pick * 100,
+                                                fill = factor(minority_feedback))) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.7) +
+  scale_fill_manual(values = c("0" = "#990000", "1" = "#011F5B"),
+                    labels = c("0" = "Control", "1" = "Minority Feedback")) +
+  labs(x = "Political Party",
+       y = "% Selecting Racial Minority Author",
+       title = "Moderation by Political Party Affiliation",
+       fill = "Condition") +
+  theme_bw() +
+  theme(legend.position = "top")
+
+print(p_party_interaction)
+```
+
+\newpage
+
 ## Secondary Analysis
 
-
 ```{r}
-## oldies feedback
-r_oldies <- lm(oldies_pick ~ oldies, data=d0)
+## classic feedback
+r_classic <- lm(classic_pick ~ classic_shown, data=d0)
 
 # Display the robust_summary with robust standard errors
-robust_summary(r_oldies)
-robust_confint(r_oldies)
+robust_summary(r_classic)
+robust_confint(r_classic)
 
 
-## poets feedback
-r_poets <- lm(poets_pick ~ poets, data=d0)
-
-# Display the robust_summary with robust standard errors
-robust_summary(r_poets)
-robust_confint(r_poets)
-
-
-## books feedback
-r_books <- lm(book_pick ~ books, data=d0)
-
+## sold 30M+ copies feedback
+r_sold30m <- lm(sold30m_pick ~ sold30m_shown, data=d0)
 
 # Display the robust_summary with robust standard errors
-robust_summary(r_books)
-robust_confint(r_books)
+robust_summary(r_sold30m)
+robust_confint(r_sold30m)
+
+
+## forms (multi-genre) feedback
+r_forms <- lm(forms_pick ~ forms_shown, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r_forms)
+robust_confint(r_forms)
 
 ```
 
 ```{r include=FALSE}
 # Extract estimates for overall plot
-race_est <- extract_regression_estimates(r1)
-oldies_est <- extract_regression_estimates(r_oldies)
-poets_est <- extract_regression_estimates(r_poets)
-books_est <- extract_regression_estimates(r_books)
+minority_est <- extract_regression_estimates(r1)
+classic_est <- extract_regression_estimates(r_classic)
+sold30m_est <- extract_regression_estimates(r_sold30m)
+forms_est <- extract_regression_estimates(r_forms)
 
 study2B_estimates <- data.frame(
     Study = "STUDY 2B",
-    Stimuli = c("race", "oldies", "poets", "books"),
-    Estimate = c(race_est$estimate, oldies_est$estimate, poets_est$estimate, books_est$estimate),
-    SE = c(race_est$se, oldies_est$se, poets_est$se, books_est$se),
-    CI_Lower = c(race_est$ci_lower, oldies_est$ci_lower, poets_est$ci_lower, books_est$ci_lower),
-    CI_Upper = c(race_est$ci_upper, oldies_est$ci_upper, poets_est$ci_upper, books_est$ci_upper)
+    Stimuli = c("minority", "classic", "sold30m", "forms"),
+    Estimate = c(minority_est$estimate, classic_est$estimate, sold30m_est$estimate, forms_est$estimate),
+    SE = c(minority_est$se, classic_est$se, sold30m_est$se, forms_est$se),
+    CI_Lower = c(minority_est$ci_lower, classic_est$ci_lower, sold30m_est$ci_lower, forms_est$ci_lower),
+    CI_Upper = c(minority_est$ci_upper, classic_est$ci_upper, sold30m_est$ci_upper, forms_est$ci_upper)
 )
-getwd()
+
 # Save the estimates to an RDS file
-saveRDS(study2B_estimates, file = "../Manuscript_Figures/figure3-estimates/study2B_estimates.rds")
+saveRDS(study2B_estimates, file = "study2B_estimates.rds")
 
 ```
 
-
 \newpage
+
 
 ## Mediation
 
-
-```{r echo=TRUE, results='markup'}
+```{r results='markup'}
 # Set seed for reproducibility
 set.seed(123)
 
@@ -488,17 +655,17 @@ sobel_test <- function(med.fit, out.fit, mediator) {
 # -----------------------------
 
 # Direct effect model
-dir.fit.internal <- lm(race_pick ~ race_feedback, data=d0)
+dir.fit.internal <- lm(minority_pick ~ minority_feedback, data=d0)
 
 # Mediator model
-med.fit.internal <- lm(internal ~ race_feedback, data = d0)
+med.fit.internal <- lm(internal ~ minority_feedback, data = d0)
 
 # Outcome model including mediator
-out.fit.internal <- lm(race_pick ~ race_feedback + internal, data = d0)
+out.fit.internal <- lm(minority_pick ~ minority_feedback + internal, data = d0)
 
 # Mediation analysis
-med.out.internal <- mediate(med.fit.internal, out.fit.internal, boot = TRUE, 
-                            treat = "race_feedback", boot.ci.type = "perc", mediator = "internal", sims = 10000)
+med.out.internal <- mediate(med.fit.internal, out.fit.internal, boot = TRUE,
+                            treat = "minority_feedback", boot.ci.type = "perc", mediator = "internal", sims = 10000)
 
 # Sensitivity analysis
 sens.out.internal <- medsens(med.out.internal, rho.by = 0.01, eps=.01, effect.type = "indirect", sims = 10000)
@@ -512,23 +679,19 @@ print(sobel.internal)
 summary(med.out.internal)
 plot(sens.out.internal)
 
-
 # -----------------------------
 # External Motivation Analysis
 # -----------------------------
 
-# Direct effect model (same as internal, so no need to recompute)
-# dir.fit.external <- dir.fit.internal
-
 # Mediator model
-med.fit.external <- lm(external ~ race_feedback, data = d0)
+med.fit.external <- lm(external ~ minority_feedback, data = d0)
 
 # Outcome model including mediator
-out.fit.external <- lm(race_pick ~ race_feedback + external, data = d0)
+out.fit.external <- lm(minority_pick ~ minority_feedback + external, data = d0)
 
 # Mediation analysis
-med.out.external <- mediate(med.fit.external, out.fit.external, boot = TRUE, 
-                            treat = "race_feedback", boot.ci.type = "perc", mediator = "external", sims = 10000)
+med.out.external <- mediate(med.fit.external, out.fit.external, boot = TRUE,
+                            treat = "minority_feedback", boot.ci.type = "perc", mediator = "external", sims = 10000)
 
 # Sensitivity analysis
 sens.out.external <- medsens(med.out.external, rho.by = 0.01, eps=.01, effect.type = "indirect", sims = 10000)
@@ -556,127 +719,138 @@ cat("Correlation Between Internal and External: ", correlation_coefficient, "\n"
 cat("P-value: ", p_value, "\n")
 
 # Building combined outcome model with both mediators
-out.fit.combined <- lm(race_pick ~ race_feedback + internal + external, data = d0)
+out.fit.combined <- lm(minority_pick ~ minority_feedback + internal + external, data = d0)
 
 # Run combined mediation analyses
-med.out.combined.internal <- mediate(med.fit.internal, out.fit.combined, boot = TRUE, 
-                                     treat = "race_feedback", boot.ci.type = "perc", mediator = "internal", sims = 10000)
-med.out.combined.external <- mediate(med.fit.external, out.fit.combined, boot = TRUE, 
-                                     treat = "race_feedback", boot.ci.type = "perc", mediator = "external", sims = 10000)
+med.out.combined.internal <- mediate(med.fit.internal, out.fit.combined, boot = TRUE,
+                                     treat = "minority_feedback", boot.ci.type = "perc", mediator = "internal", sims = 10000)
+med.out.combined.external <- mediate(med.fit.external, out.fit.combined, boot = TRUE,
+                                     treat = "minority_feedback", boot.ci.type = "perc", mediator = "external", sims = 10000)
 
 # Summarize and print the results for combined analysis
 cat("Combined Multiple Mediation Model Results\n")
 summary(med.out.combined.internal)
 summary(med.out.combined.external)
+
+
 ```
 
-\newpage
-
-## Figure S3
+## Figure S1 Code
 
 ```{r echo=TRUE}
 
-drace_plot <- d0 |> 
-  dplyr::select(race_feedback, race_pick) |> 
-  dplyr::group_by(race_feedback) |> 
+# Get p-values from regression models
+p_minority <- robust_summary(r1)$coefficients["minority_feedback", "Pr(>|t|)"]
+p_sold30m <- robust_summary(r_sold30m)$coefficients["sold30m_shown", "Pr(>|t|)"]
+p_forms <- robust_summary(r_forms)$coefficients["forms_shown", "Pr(>|t|)"]
+p_classic <- robust_summary(r_classic)$coefficients["classic_shown", "Pr(>|t|)"]
+
+# Function to convert p-value to significance stars
+get_sig_stars <- function(p) {
+  if (p < 0.001) return("***")
+  else if (p < 0.01) return("**")
+  else if (p < 0.05) return("*")
+  else return("n.s.")
+}
+
+# Get significance labels
+sig_minority <- get_sig_stars(p_minority)
+sig_sold30m <- get_sig_stars(p_sold30m)
+sig_forms <- get_sig_stars(p_forms)
+sig_classic <- get_sig_stars(p_classic)
+
+dminority_plot <- d0 |>
+  dplyr::select(minority_feedback, minority_pick) |>
+  dplyr::group_by(minority_feedback) |>
   dplyr::summarise(
-    n = n(),  
-    freq = mean(race_pick),  
-    sd = sd(race_pick) * 100, 
-    se = (sd(race_pick) / sqrt(n())) * 100  
-  ) |> 
-  mutate(race_feedback = case_when(race_feedback==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
-  rename(Condition = race_feedback)
+    n = n(),
+    freq = mean(minority_pick),
+    sd = sd(minority_pick) * 100,
+    se = (sd(minority_pick) / sqrt(n())) * 100
+  ) |>
+  dplyr::mutate(
+    minority_feedback = case_when(
+      minority_feedback == 1 ~ "\"Treatment\"",
+      TRUE ~ "\"Control\""
+    )
+  ) |>
+  dplyr::rename(Condition = minority_feedback)
 
-##### poets
 
+##### sold 30M+
 
-r_poets <- lm(poets_pick ~ poets, data=d0)
-
-dpoets_plot <- d0 |> 
-  dplyr::select(poets, poets_pick) |> 
-  dplyr::group_by(poets) |> 
+dsold30m_plot <- d0 |>
+  dplyr::select(sold30m_shown, sold30m_pick) |>
+  dplyr::group_by(sold30m_shown) |>
   dplyr::summarise(
-    n = n(),  
-    freq = mean(poets_pick),  
-    sd = sd(poets_pick) * 100, 
-    se = (sd(poets_pick) / sqrt(n())) * 100  
-  ) |> 
-  mutate(poets = case_when(poets==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
-  rename(Condition = poets)
+    n = n(),
+    freq = mean(sold30m_pick),
+    sd = sd(sold30m_pick) * 100,
+    se = (sd(sold30m_pick) / sqrt(n())) * 100
+  )|>
+  mutate(sold30m_shown = case_when(sold30m_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |>
+  rename(Condition = sold30m_shown)
 
 
-##### books
+##### forms
 
-r_books <- lm(book_pick ~ books, data=d0)
-
-dbooks_plot <- d0 |> 
-  dplyr::select(books, book_pick) |> 
-  dplyr::group_by(books) |> 
+dforms_plot <- d0 |>
+  dplyr::select(forms_shown, forms_pick) |>
+  dplyr::group_by(forms_shown) |>
   dplyr::summarise(
-    n = n(),  
-    freq = mean(book_pick),  
-    sd = sd(book_pick) * 100, 
-    se = (sd(book_pick) / sqrt(n())) * 100  
-  ) |> 
-  mutate(books = case_when(books==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
-  rename(Condition = books)
+    n = n(),
+    freq = mean(forms_pick),
+    sd = sd(forms_pick) * 100,
+    se = (sd(forms_pick) / sqrt(n())) * 100
+  )|>
+  mutate(forms_shown = case_when(forms_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |>
+  rename(Condition = forms_shown)
 
 
-#### oldies
+#### classic
 
-r_oldies <- lm(oldies_pick ~ oldies, data=d0)
-
-doldies_plot <- d0 |> 
-  dplyr::select(oldies, oldies_pick) |> 
-  dplyr::group_by(oldies) |> 
+dclassic_plot <- d0 |>
+  dplyr::select(classic_shown, classic_pick) |>
+  dplyr::group_by(classic_shown) |>
   dplyr::summarise(
-    n = n(),  
-    freq = mean(oldies_pick),  
-    sd = sd(oldies_pick) * 100, 
-    se = (sd(oldies_pick) / sqrt(n())) * 100  
-  ) |> 
-  mutate(oldies = case_when(oldies==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
-  rename(Condition = oldies)
+    n = n(),
+    freq = mean(classic_pick),
+    sd = sd(classic_pick) * 100,
+    se = (sd(classic_pick) / sqrt(n())) * 100
+  )|>
+  mutate(classic_shown = case_when(classic_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |>
+  rename(Condition = classic_shown)
 
 ## Combine plots
 
 df_combined <- bind_rows(
-  dpoets_plot %>% mutate(Category = "\nWrote Poetry"),
-  dbooks_plot %>% mutate(Category = "\nWrote > 10 books"),
-  doldies_plot %>% mutate(Category = "\nWere Born\nin the 1800s"),
-  drace_plot %>% mutate(Category = "\nWere Racial\nMinorities")
-, .id = "id") %>% 
-  mutate(Category = factor(Category, levels = c('\nWrote Poetry', '\nWrote > 10 books', '\nWere Born\nin the 1800s', '\nWere Racial\nMinorities')))
+  dforms_plot %>% mutate(Category = "\nWrote Multiple\nGenres", sig_label = sig_forms),
+  dsold30m_plot %>% mutate(Category = "\n30M+ Copies\nSold", sig_label = sig_sold30m),
+  dclassic_plot %>% mutate(Category = "\n50+ Years\nin Print", sig_label = sig_classic),
+  dminority_plot %>% mutate(Category = "\nWere Racial\nMinorities", sig_label = sig_minority)
+, .id = "id") %>%
+  mutate(Category = factor(Category, levels = c('\nWrote Multiple\nGenres', '\n30M+ Copies\nSold', '\n50+ Years\nin Print', '\nWere Racial\nMinorities')))
 
 p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
   geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
-  geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")), 
+  geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")),
             position=position_dodge(width=0.7), vjust=5, size = 5, color = "white") +
   geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
-  facet_wrap(~factor(Category, c('\nWrote Poetry', '\nWrote > 10 books', '\nWere Born\nin the 1800s', '\nWere Racial\nMinorities')), nrow = 1, strip.position = "bottom") +
-   geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""), 
-                aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5), 
+  facet_wrap(~factor(Category, c('\nWrote Multiple\nGenres', '\n30M+ Copies\nSold', '\n50+ Years\nin Print', '\nWere Racial\nMinorities')), nrow = 1, strip.position = "bottom") +
+   geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""),
+                aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5),
                 inherit.aes = FALSE) +
-   geom_text(data = df_combined %>% filter(Category %in% c('\nWrote > 10 books') & Condition == "\"Treatment\""), 
-             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."), 
-             inherit.aes = FALSE, vjust = 0, size = 5) +
-    geom_text(data = df_combined %>% filter(Category %in% c('\nWrote Poetry', '\nWere Born\nin the 1800s') & Condition == "\"Treatment\""), 
-             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "+"), 
-             inherit.aes = FALSE, vjust = 0, size = 5) +
-   geom_text(data = df_combined %>% filter(Category == '\nWere Racial\nMinorities' & Condition == "\"Treatment\""), 
-             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
+   geom_text(data = df_combined %>% filter(Condition == "\"Treatment\""),
+             aes(x = 1.5, y = freq*100 + se + 7, label = sig_label),
              inherit.aes = FALSE, vjust = 0, size = 5) +
   theme_bw() +
   scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
-  scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,95)) +
+  scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
-  labs(x = "Feedback on % of authors who...", y = "% of New Authors with the Target Attribute",
-       caption = 'Note: Error Bars are SEs', title = "The Effect of Getting Feedback on Your Author Selections") +
+  labs(x = "Feedback on % of authors who...", y = "% of New Authors with the Target Attribute",title = "The Effect of Getting Feedback on Your Author Selections") +
   theme(plot.caption = element_text(face = "italic"),
         legend.position = c(0.5, 0.95),
         legend.title = element_blank(),
@@ -698,81 +872,80 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         strip.text = element_text(size = 20, color = "black"),
         strip.background = element_rect(colour = "white", fill = "white"))
 
-#p_combined
+p_combined
 # Save the plot with Times New Roman font
-# ggsave("../Supplemental Studies/Supplemental_Figures/Figure-S2.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("Figure-S1.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
 ```
 
-\newpage
 
 ## System of Simultaneous Equations
 
 ```{r results='markup'}
-# poets40
-poets.eqn <- list(
-  poetseq = as.numeric(poets_pick) ~ poets + books + oldies + race_feedback - 1,
-  raceeq = as.numeric(race_pick) ~ poets + books + oldies + race_feedback - 1
+# sold30m
+
+sold30m.eqn <- list(
+  sold30meq = as.numeric(sold30m_pick) ~ sold30m_shown + forms_shown + classic_shown + minority_feedback - 1,
+  minorityeq = as.numeric(minority_pick) ~ sold30m_shown + forms_shown + classic_shown + minority_feedback - 1
 )
 
 # Define restriction matrix
-restrict_poets <- "poetseq_poets - raceeq_race_feedback = 0"
+restrict_sold30m <- "sold30meq_sold30m_shown - minorityeq_minority_feedback = 0"
 
 # Fit the system of equations with the restriction
-unrestricted_poets <- systemfit(poets.eqn, data=d0)
-#robust_summary(unrestricted_poets)
-# books
+unrestricted_sold30m <- systemfit(sold30m.eqn, data=d0)
 
-books.eqn <- list(
-  bookseq = as.numeric(book_pick) ~ poets + books + oldies + race_feedback - 1,
-  raceeq = as.numeric(race_pick) ~ poets + books + oldies + race_feedback - 1
+# forms
+
+forms.eqn <- list(
+  formseq = as.numeric(forms_pick) ~ sold30m_shown + forms_shown + classic_shown + minority_feedback - 1,
+  minorityeq = as.numeric(minority_pick) ~ sold30m_shown + forms_shown + classic_shown + minority_feedback - 1
 )
 
 # Define restriction matrix
-restrict_books <- "bookseq_books - raceeq_race_feedback = 0"
+restrict_forms <- "formseq_forms_shown - minorityeq_minority_feedback = 0"
 
 # Fit the system of equations with the restriction
-unrestricted_books <- systemfit(books.eqn, data=d0)
+unrestricted_forms <- systemfit(forms.eqn, data=d0)
 
-# oldies
+# classic
 
-oldies.eqn <- list(
-  oldieseq = as.numeric(oldies_pick) ~ poets + books + oldies + race_feedback - 1,
-  raceeq = as.numeric(race_pick) ~ poets + books + oldies + race_feedback - 1
+classic.eqn <- list(
+  classiceq = as.numeric(classic_pick) ~ sold30m_shown + forms_shown + classic_shown + minority_feedback - 1,
+  minorityeq = as.numeric(minority_pick) ~ sold30m_shown + forms_shown + classic_shown + minority_feedback - 1
 )
 
 # Define restriction matrix
-restrict_oldies <- "oldieseq_oldies - raceeq_race_feedback = 0"
+restrict_classic <- "classiceq_classic_shown - minorityeq_minority_feedback = 0"
 
 # Fit the system of equations with the restriction
-unrestricted_oldies <- systemfit(oldies.eqn, data=d0)
+unrestricted_classic <- systemfit(classic.eqn, data=d0)
 
 
 # wald tests
 # Run linear hypothesis tests
-lh_result_poets = linearHypothesis(unrestricted_poets, restrict_poets)
-lh_result_books = linearHypothesis(unrestricted_books, restrict_books)
-lh_result_oldies = linearHypothesis(unrestricted_oldies, restrict_oldies)
+lh_result_sold30m = linearHypothesis(unrestricted_sold30m, restrict_sold30m)
+lh_result_forms = linearHypothesis(unrestricted_forms, restrict_forms)
+lh_result_classic = linearHypothesis(unrestricted_classic, restrict_classic)
 
 
 
 # Collecting coefficient values and standard errors
-poets_coef <- lh_result_poets$F[2]
-books_coef <- lh_result_books$F[2]
-oldies_coef <- lh_result_oldies$F[2]
+sold30m_coef <- lh_result_sold30m$F[2]
+forms_coef <- lh_result_forms$F[2]
+classic_coef <- lh_result_classic$F[2]
 
 
 # Extracting p-values
-p_value_poets = lh_result_poets$`Pr(>F)`[2]
-p_value_books = lh_result_books$`Pr(>F)`[2]
-p_value_oldies = lh_result_oldies$`Pr(>F)`[2]
+p_value_sold30m = lh_result_sold30m$`Pr(>F)`[2]
+p_value_forms = lh_result_forms$`Pr(>F)`[2]
+p_value_classic = lh_result_classic$`Pr(>F)`[2]
 
 # Include p-values in the summary table
 data.frame(
-  `Test` = c("Race Feedback - poets Feedback", "Race Feedback - books Feedback", "Race Feedback - oldies Feedback"),
-  `Wald Coefficient` = c(poets_coef, books_coef, oldies_coef),
-  P_Value = c(p_value_poets, p_value_books, p_value_oldies),
+  `Test` = c("Minority Feedback - Sold30M Feedback", "Minority Feedback - Forms Feedback", "Minority Feedback - Classic Feedback"),
+  `Wald Coefficient` = c(sold30m_coef, forms_coef, classic_coef),
+  P_Value = c(p_value_sold30m, p_value_forms, p_value_classic),
   row.names = 1
 )
 
 ```
-

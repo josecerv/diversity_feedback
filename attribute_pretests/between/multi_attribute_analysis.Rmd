@@ -1,9 +1,14 @@
 ---
-title: "Author Attribute Importance Analysis"
+title: "Author Attributes Test"
 date: "`r format(Sys.Date(), '%B %d, %Y')`"
 output:
   pdf_document:
     toc: false
+geometry: margin=0.5in
+header-includes:
+  - \usepackage{float}
+  - \usepackage{setspace}
+  - \setstretch{0.9}
 ---
 
 ```{r setup, include=FALSE}
@@ -29,7 +34,7 @@ qualtrics_api_credentials(api_key = "BJ6aDiEgtQihneCgtZycVLYjaj0ao9gYkdRkb1UZ",
 survey_id <- "SV_cASPdJCJOBdOu1M"
 
 cat("Fetching survey data from Qualtrics...\n")
-raw_data <- fetch_survey(survey_id, force_request = TRUE)
+raw_data <- fetch_survey(survey_id, force_request = TRUE, start_date = "2025-10-07")
 cat("Successfully fetched", nrow(raw_data), "responses\n")
 ```
 
@@ -151,7 +156,8 @@ kable(women_table,
       caption = "Women vs. All Other Attributes (excluding Racial Minorities)",
       format = "latex",
       booktabs = TRUE) %>%
-  kable_styling(latex_options = c("striped", "scale_down"))
+  kable_styling(latex_options = c("striped", "scale_down", "HOLD_position"),
+                font_size = 8)
 ```
 
 ```{r racial-comparison}
@@ -218,7 +224,8 @@ kable(racial_table,
       caption = "Racial Minorities vs. All Other Attributes (excluding Women)",
       format = "latex",
       booktabs = TRUE) %>%
-  kable_styling(latex_options = c("striped", "scale_down"))
+  kable_styling(latex_options = c("striped", "scale_down", "HOLD_position"),
+                font_size = 8)
 ```
 
 
