@@ -1,0 +1,195 @@
+"treatment","set_num","women_feedback","age_feedback","location_feedback","university_feedback","women_count","women_proportion","age_count","age_proportion","location_count","location_proportion","university_count","university_proportion","choice-1","choice-2","choice-3","race","gender","age","gender_code","race_code","cond","set","num_excluded_total"
+0,2,0,1,1,1,1,0.333333333333333,2,0.666666666666667,0,0,0,0,"Ezra Eeman","Paris Marx","Brittany Luse","White / Caucasian","Woman",28,0,1,"control",2,66
+1,2,1,1,1,0,2,0.666666666666667,1,0.333333333333333,1,0.333333333333333,0,0,"Brittany Luse","Paris Marx","Moira Gunn","White / Caucasian","Woman",36,0,1,"treatment",2,66
+0,1,0,1,1,1,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,"Ezra Eeman","Jane Barrett","Andrew Ng","White / Caucasian","Man",42,1,1,"control",1,66
+1,2,1,1,1,0,3,1,0,0,1,0.333333333333333,0,0,"Brittany Luse","Davar Ardalan","Moira Gunn","White / Caucasian","Woman",29,0,1,"treatment",2,66
+1,2,1,1,1,0,1,0.333333333333333,0,0,1,0.333333333333333,2,0.666666666666667,"Jane Barrett","Ethan Mollick","Austan Goolsbee","White / Caucasian","Man",49,1,1,"treatment",2,66
+0,2,0,1,1,1,2,0.666666666666667,0,0,0,0,0,0,"Davar Ardalan","Craig Smith","Jane Barrett","White / Caucasian","Woman",41,0,1,"control",2,66
+1,1,1,1,1,0,1,0.333333333333333,0,0,1,0.333333333333333,2,0.666666666666667,"Austan Goolsbee","Andrew Ng","Brittany Luse","White / Caucasian","Man",29,1,1,"treatment",1,66
+1,1,1,0,1,1,3,1,1,0.333333333333333,1,0.333333333333333,0,0,"Moira Gunn","Zoe Kleinman","Emily Kwong","White / Caucasian","Woman",56,0,1,"treatment",1,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,2,0.666666666666667,"Anton Korinek","Jane Barrett","Erik Brynjolfsson","White / Caucasian","Man",68,1,1,"control",1,66
+1,1,1,1,1,0,1,0.333333333333333,0,0,1,0.333333333333333,2,0.666666666666667,"Austan Goolsbee","Ethan Mollick","Jane Barrett","White / Caucasian","Woman",33,0,1,"treatment",1,66
+0,1,0,1,1,1,0,0,0,0,0,0,0,0,"Azeem Azhar","Kai-Fu Lee","Nilay Patel","White / Caucasian","Man",59,1,1,"control",1,66
+1,2,1,1,0,1,3,1,1,0.333333333333333,0,0,0,0,"Brittany Luse","Emily Kwong","Zoe Kleinman","White / Caucasian","Woman",30,0,1,"treatment",2,66
+1,2,1,1,1,0,2,0.666666666666667,0,0,1,0.333333333333333,1,0.333333333333333,"Davar Ardalan","Jane Barrett","Ethan Mollick","Asian / Pacific Islander","Woman",22,0,0,"treatment",2,66
+1,2,1,1,0,1,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Jane Barrett","Brittany Luse","Paris Marx","White / Caucasian","Man",45,1,1,"treatment",2,66
+0,2,0,1,1,1,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,0,0,"Emily Kwong","Aaron Pressman","Ed Zitron","White / Caucasian","Man",43,1,1,"control",2,66
+0,2,0,1,1,1,1,0.333333333333333,0,0,2,0.666666666666667,1,0.333333333333333,"Amandeep Singh Gill","Andrew Ng","Moira Gunn","White / Caucasian","Man",49,1,1,"control",2,66
+0,1,0,1,1,1,0,0,0,0,1,0.333333333333333,1,0.333333333333333,"Andrew Ng","Azeem Azhar","Kai-Fu Lee","White / Caucasian","Woman",32,0,1,"control",1,66
+0,1,0,1,1,1,1,0.333333333333333,1,0.333333333333333,0,0,0,0,"Michael Safi","Ezra Eeman","Zoe Kleinman","Hispanic / Latinx","Man",24,1,0,"control",1,66
+0,1,0,1,1,1,0,0,1,0.333333333333333,1,0.333333333333333,2,0.666666666666667,"Austan Goolsbee","Bobby Allyn","Erik Brynjolfsson","White / Caucasian","Woman",53,0,1,"control",1,66
+1,1,1,1,1,0,1,0.333333333333333,0,0,1,0.333333333333333,0,0,"Zoe Kleinman","Amandeep Singh Gill","Ed Zitron","White / Caucasian","Woman",54,0,1,"treatment",1,66
+1,1,1,1,0,1,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,"Jane Barrett","Austan Goolsbee","Kevin Roose","White / Caucasian","Man",71,1,1,"treatment",1,66
+1,1,1,0,1,1,3,1,0,0,0,0,0,0,"Jane Barrett","Brittany Luse","Davar Ardalan","White / Caucasian","Woman",33,0,1,"treatment",1,66
+1,2,1,1,1,0,2,0.666666666666667,2,0.666666666666667,0,0,0,0,"Emily Kwong","Brittany Luse","Bobby Allyn","White / Caucasian","Woman",30,0,1,"treatment",2,66
+1,1,1,1,1,0,0,0,0,0,1,0.333333333333333,1,0.333333333333333,"Craig Smith","Kai-Fu Lee","Erik Brynjolfsson","White / Caucasian","Man",46,1,1,"treatment",1,66
+0,2,0,1,1,1,2,0.666666666666667,0,0,1,0.333333333333333,1,0.333333333333333,"Zoe Kleinman","Andrew Ng","Brittany Luse","White / Caucasian","Woman",34,0,1,"control",2,66
+1,2,1,0,1,1,0,0,0,0,0,0,2,0.666666666666667,"Austan Goolsbee","Anton Korinek","Jason Calacanis","White / Caucasian","Woman",44,0,1,"treatment",2,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,2,0.666666666666667,1,0.333333333333333,"Ed Zitron","Andrew Ng","Brittany Luse","White / Caucasian","Woman",38,0,1,"control",1,66
+1,2,1,1,1,0,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Brittany Luse","Amandeep Singh Gill","Emily Kwong","Black or African American","Woman",30,0,0,"treatment",2,66
+0,2,0,1,1,1,1,0.333333333333333,0,0,2,0.666666666666667,2,0.666666666666667,"Jane Barrett","Andrew Ng","Ethan Mollick","Black or African American","Woman",52,0,0,"control",2,66
+0,2,0,1,1,1,1,0.333333333333333,1,0.333333333333333,0,0,1,0.333333333333333,"Austan Goolsbee","Jane Barrett","Paris Marx","White / Caucasian","Woman",60,0,1,"control",2,66
+1,1,1,0,1,1,1,0.333333333333333,0,0,0,0,0,0,"Aaron Pressman","Jane Barrett","Azeem Azhar","Hispanic / Latinx","Woman",52,0,0,"treatment",1,66
+0,1,0,1,1,1,0,0,0,0,1,0.333333333333333,2,0.666666666666667,"Aaron Pressman","Anton Korinek","Andrew Ng","Hispanic / Latinx","Man",31,1,0,"control",1,66
+0,2,0,1,1,1,1,0.333333333333333,1,0.333333333333333,0,0,0,0,"Davar Ardalan","Jason Calacanis","Ezra Eeman","White / Caucasian","Woman",37,0,1,"control",2,66
+0,1,0,1,1,1,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Brittany Luse","Jane Barrett","Ezra Eeman","White / Caucasian","Man",28,1,1,"control",1,66
+0,2,0,1,1,1,0,0,0,0,0,0,2,0.666666666666667,"Austan Goolsbee","Kai-Fu Lee","Anton Korinek","White / Caucasian","Man",37,1,1,"control",2,66
+1,2,1,1,1,0,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Ezra Eeman","Jane Barrett","Brittany Luse","White / Caucasian","Man",50,1,1,"treatment",2,66
+1,1,1,0,1,1,2,0.666666666666667,1,0.333333333333333,1,0.333333333333333,0,0,"Jane Barrett","Moira Gunn","Ezra Eeman","White / Caucasian","Man",42,1,1,"treatment",1,66
+0,1,0,1,1,1,1,0.333333333333333,2,0.666666666666667,1,0.333333333333333,0,0,"Kevin Roose","Bobby Allyn","Davar Ardalan","White / Caucasian","Man",73,1,1,"control",1,66
+0,1,0,1,1,1,0,0,0,0,1,0.333333333333333,1,0.333333333333333,"Craig Smith","Erik Brynjolfsson","Amandeep Singh Gill","White / Caucasian","Man",32,1,1,"control",1,66
+0,1,0,1,1,1,2,0.666666666666667,0,0,1,0.333333333333333,0,0,"Ed Zitron","Jane Barrett","Brittany Luse","White / Caucasian","Man",28,1,1,"control",1,66
+1,1,1,1,1,0,1,0.333333333333333,1,0.333333333333333,2,0.666666666666667,1,0.333333333333333,"Ethan Mollick","Bobby Allyn","Moira Gunn","White / Caucasian","Woman",36,0,1,"treatment",1,66
+1,2,1,0,1,1,2,0.666666666666667,0,0,0,0,0,0,"Jane Barrett","Zoe Kleinman","Amandeep Singh Gill","White / Caucasian","Woman",38,0,1,"treatment",2,66
+1,1,1,0,1,1,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,0,0,"Kevin Roose","Brittany Luse","Nilay Patel","Black or African American","Woman",45,0,0,"treatment",1,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,0,0,1,0.333333333333333,"Jane Barrett","Kai-Fu Lee","Anton Korinek","White / Caucasian","Man",47,1,1,"control",1,66
+0,2,0,1,1,1,1,0.333333333333333,2,0.666666666666667,0,0,0,0,"Paris Marx","Zoe Kleinman","Ezra Eeman","White / Caucasian","Woman",49,0,1,"control",2,66
+1,1,1,1,1,0,1,0.333333333333333,0,0,2,0.666666666666667,2,0.666666666666667,"Andrew Ng","Ethan Mollick","Jane Barrett","White / Caucasian","Woman",62,0,1,"treatment",1,66
+0,2,0,1,1,1,2,0.666666666666667,0,0,0,0,0,0,"Amandeep Singh Gill","Jane Barrett","Brittany Luse","White / Caucasian","Woman",48,0,1,"control",2,66
+0,1,0,1,1,1,2,0.666666666666667,1,0.333333333333333,0,0,1,0.333333333333333,"Jane Barrett","Austan Goolsbee","Emily Kwong","White / Caucasian","Man",41,1,1,"control",1,66
+1,1,1,1,0,1,0,0,0,0,1,0.333333333333333,2,0.666666666666667,"Austan Goolsbee","Aaron Pressman","Andrew Ng","White / Caucasian","Man",65,1,1,"treatment",1,66
+1,1,1,0,1,1,1,0.333333333333333,2,0.666666666666667,0,0,1,0.333333333333333,"Emily Kwong","Anton Korinek","Bobby Allyn","Hispanic / Latinx","Woman",30,0,0,"treatment",1,66
+1,1,1,1,1,0,1,0.333333333333333,0,0,1,0.333333333333333,0,0,"Ed Zitron","Nilay Patel","Brittany Luse","Black or African American","Man",40,1,0,"treatment",1,66
+1,2,1,1,0,1,0,0,0,0,2,0.666666666666667,2,0.666666666666667,"Amandeep Singh Gill","Erik Brynjolfsson","Andrew Ng","White / Caucasian","Man",41,1,1,"treatment",2,66
+0,2,0,1,1,1,0,0,0,0,0,0,0,0,"Jason Calacanis","Kai-Fu Lee","Amandeep Singh Gill","White / Caucasian","Woman",62,0,1,"control",2,66
+0,2,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Amandeep Singh Gill","Davar Ardalan","Andrew Ng","White / Caucasian","Woman",49,0,1,"control",2,66
+1,1,1,1,0,1,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Brittany Luse","Bobby Allyn","Davar Ardalan","Black or African American","Woman",24,0,0,"treatment",1,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,2,0.666666666666667,"Ethan Mollick","Jane Barrett","Austan Goolsbee","White / Caucasian","Man",51,1,1,"control",1,66
+0,2,0,1,1,1,0,0,0,0,1,0.333333333333333,2,0.666666666666667,"Ethan Mollick","Aaron Pressman","Austan Goolsbee","White / Caucasian","Woman",60,0,1,"control",2,66
+1,2,1,1,1,0,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Andrew Ng","Zoe Kleinman","Nilay Patel","White / Caucasian","Man",64,1,1,"treatment",2,66
+1,2,1,1,0,1,2,0.666666666666667,0,0,0,0,0,0,"Zoe Kleinman","Aaron Pressman","Jane Barrett","Asian / Pacific Islander","Woman",30,0,0,"treatment",2,66
+0,1,0,1,1,1,2,0.666666666666667,0,0,0,0,0,0,"Kai-Fu Lee","Brittany Luse","Zoe Kleinman","White / Caucasian","Man",54,1,1,"control",1,66
+0,2,0,1,1,1,1,0.333333333333333,0,0,2,0.666666666666667,1,0.333333333333333,"Jane Barrett","Andrew Ng","Ed Zitron","White / Caucasian","Woman",58,0,1,"control",2,66
+0,2,0,1,1,1,3,1,0,0,0,0,0,0,"Jane Barrett","Brittany Luse","Zoe Kleinman","Asian / Pacific Islander","Woman",35,0,0,"control",2,66
+1,2,1,1,1,0,1,0.333333333333333,0,0,1,0.333333333333333,0,0,"Jane Barrett","Ed Zitron","Craig Smith","White / Caucasian","Woman",34,0,1,"treatment",2,66
+0,2,0,1,1,1,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Brittany Luse","Paris Marx","Jane Barrett","White / Caucasian","Woman",28,0,1,"control",2,66
+0,1,0,1,1,1,0,0,0,0,0,0,1,0.333333333333333,"Jason Calacanis","Austan Goolsbee","Azeem Azhar","White / Caucasian","Woman",51,0,1,"control",1,66
+1,2,1,1,1,0,1,0.333333333333333,0,0,1,0.333333333333333,2,0.666666666666667,"Jane Barrett","Austan Goolsbee","Erik Brynjolfsson","White / Caucasian","Woman",66,0,1,"treatment",2,66
+1,2,1,1,1,0,1,0.333333333333333,0,0,2,0.666666666666667,2,0.666666666666667,"Ethan Mollick","Davar Ardalan","Andrew Ng","Asian / Pacific Islander","Woman",28,0,0,"treatment",2,66
+1,1,1,1,1,0,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,"Andrew Ng","Bobby Allyn","Jane Barrett","White / Caucasian","Woman",67,0,1,"treatment",1,66
+0,2,0,1,1,1,2,0.666666666666667,2,0.666666666666667,0,0,0,0,"Davar Ardalan","Emily Kwong","Bobby Allyn","White / Caucasian","Woman",31,0,1,"control",2,66
+1,1,1,1,1,0,1,0.333333333333333,0,0,0,0,1,0.333333333333333,"Austan Goolsbee","Jane Barrett","Amandeep Singh Gill","White / Caucasian","Woman",52,0,1,"treatment",1,66
+0,1,0,1,1,1,1,0.333333333333333,2,0.666666666666667,1,0.333333333333333,0,0,"Ezra Eeman","Emily Kwong","Ed Zitron","White / Caucasian","Man",38,1,1,"control",1,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Amandeep Singh Gill","Austan Goolsbee","Moira Gunn","White / Caucasian","Woman",41,0,1,"control",1,66
+0,2,0,1,1,1,0,0,1,0.333333333333333,0,0,1,0.333333333333333,"Amandeep Singh Gill","Anton Korinek","Paris Marx","White / Caucasian","Woman",42,0,1,"control",2,66
+1,2,1,1,1,0,0,0,0,0,1,0.333333333333333,1,0.333333333333333,"Craig Smith","Ethan Mollick","Nilay Patel","White / Caucasian","Man",65,1,1,"treatment",2,66
+0,2,0,1,1,1,1,0.333333333333333,0,0,0,0,0,0,"Nilay Patel","Kai-Fu Lee","Zoe Kleinman","White / Caucasian","Man",50,1,1,"control",2,66
+0,1,0,1,1,1,0,0,1,0.333333333333333,2,0.666666666666667,1,0.333333333333333,"Andrew Ng","Paris Marx","Ed Zitron","White / Caucasian","Woman",28,0,1,"control",1,66
+1,1,1,0,1,1,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,"Andrew Ng","Emily Kwong","Kai-Fu Lee","Asian / Pacific Islander","Man",34,1,0,"treatment",1,66
+1,2,1,0,1,1,2,0.666666666666667,0,0,0,0,0,0,"Davar Ardalan","Brittany Luse","Kai-Fu Lee","White / Caucasian","Woman",49,0,1,"treatment",2,66
+1,2,1,1,1,0,2,0.666666666666667,0,0,0,0,0,0,"Jane Barrett","Michael Safi","Zoe Kleinman","White / Caucasian","Man",37,1,1,"treatment",2,66
+1,1,1,0,1,1,2,0.666666666666667,0,0,0,0,1,0.333333333333333,"Brittany Luse","Austan Goolsbee","Jane Barrett","Black or African American","Man",24,1,0,"treatment",1,66
+0,1,0,1,1,1,0,0,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,"Andrew Ng","Ezra Eeman","Nilay Patel","White / Caucasian","Woman",47,0,1,"control",1,66
+1,1,1,1,1,0,1,0.333333333333333,1,0.333333333333333,0,0,0,0,"Jane Barrett","Paris Marx","Craig Smith","White / Caucasian","Woman",47,0,1,"treatment",1,66
+1,1,1,1,0,1,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,"Bobby Allyn","Ethan Mollick","Jane Barrett","White / Caucasian","Man",35,1,1,"treatment",1,66
+0,2,0,1,1,1,1,0.333333333333333,1,0.333333333333333,2,0.666666666666667,1,0.333333333333333,"Ethan Mollick","Kevin Roose","Brittany Luse","White / Caucasian","Man",53,1,1,"control",2,66
+1,1,1,0,1,1,2,0.666666666666667,1,0.333333333333333,1,0.333333333333333,0,0,"Emily Kwong","Davar Ardalan","Ed Zitron","White / Caucasian","Woman",46,0,1,"treatment",1,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,2,0.666666666666667,2,0.666666666666667,"Andrew Ng","Brittany Luse","Ethan Mollick","White / Caucasian","Man",39,1,1,"control",1,66
+1,2,1,1,1,0,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Emily Kwong","Aaron Pressman","Brittany Luse","White / Caucasian","Woman",40,0,1,"treatment",2,66
+1,1,1,1,0,1,1,0.333333333333333,1,0.333333333333333,0,0,1,0.333333333333333,"Brittany Luse","Paris Marx","Austan Goolsbee","White / Caucasian","Man",55,1,1,"treatment",1,66
+0,2,0,1,1,1,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Jane Barrett","Zoe Kleinman","Ezra Eeman","White / Caucasian","Woman",60,0,1,"control",2,66
+1,2,1,1,1,0,0,0,0,0,2,0.666666666666667,3,1,"Erik Brynjolfsson","Austan Goolsbee","Ethan Mollick","White / Caucasian","Man",35,1,1,"treatment",2,66
+0,1,0,1,1,1,1,0.333333333333333,1,0.333333333333333,0,0,0,0,"Paris Marx","Craig Smith","Davar Ardalan","White / Caucasian","Woman",50,0,1,"control",1,66
+1,2,1,1,1,0,2,0.666666666666667,0,0,1,0.333333333333333,1,0.333333333333333,"Andrew Ng","Zoe Kleinman","Brittany Luse","White / Caucasian","Man",31,1,1,"treatment",2,66
+0,2,0,1,1,1,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Jane Barrett","Zoe Kleinman","Bobby Allyn","White / Caucasian","Woman",61,0,1,"control",2,66
+0,1,0,1,1,1,0,0,0,0,2,0.666666666666667,2,0.666666666666667,"Craig Smith","Andrew Ng","Ethan Mollick","Asian / Pacific Islander","Man",45,1,0,"control",1,66
+1,2,1,1,1,0,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Jane Barrett","Andrew Ng","Craig Smith","White / Caucasian","Woman",38,0,1,"treatment",2,66
+1,1,1,1,1,0,3,1,0,0,1,0.333333333333333,0,0,"Davar Ardalan","Moira Gunn","Zoe Kleinman","Black or African American","Man",54,1,0,"treatment",1,66
+1,1,1,1,1,0,1,0.333333333333333,0,0,2,0.666666666666667,1,0.333333333333333,"Craig Smith","Moira Gunn","Andrew Ng","White / Caucasian","Woman",76,0,1,"treatment",1,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Andrew Ng","Jane Barrett","Amandeep Singh Gill","White / Caucasian","Woman",57,0,1,"control",1,66
+0,1,0,1,1,1,0,0,0,0,3,1,2,0.666666666666667,"Ed Zitron","Ethan Mollick","Andrew Ng","Hispanic / Latinx","Woman",36,0,0,"control",1,66
+0,2,0,1,1,1,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,"Emily Kwong","Nilay Patel","Ethan Mollick","Black or African American","Man",54,1,0,"control",2,66
+1,2,1,1,1,0,3,1,0,0,0,0,0,0,"Davar Ardalan","Jane Barrett","Brittany Luse","White / Caucasian","Man",27,1,1,"treatment",2,66
+1,2,1,1,1,0,3,1,1,0.333333333333333,0,0,0,0,"Davar Ardalan","Brittany Luse","Emily Kwong","White / Caucasian","Woman",39,0,1,"treatment",2,66
+0,2,0,1,1,1,1,0.333333333333333,1,0.333333333333333,0,0,0,0,"Amandeep Singh Gill","Davar Ardalan","Ezra Eeman","White / Caucasian","Woman",61,0,1,"control",2,66
+0,1,0,1,1,1,2,0.666666666666667,0,0,1,0.333333333333333,0,0,"Brittany Luse","Spencer Kelly","Moira Gunn","Black or African American","Woman",47,0,0,"control",1,66
+1,1,1,0,1,1,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,"Davar Ardalan","Andrew Ng","Paris Marx","White / Caucasian","Woman",68,0,1,"treatment",1,66
+0,2,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,0,0,"Moira Gunn","Kai-Fu Lee","Azeem Azhar","Hispanic / Latinx","Woman",31,0,0,"control",2,66
+0,2,0,1,1,1,1,0.333333333333333,0,0,0,0,0,0,"Craig Smith","Davar Ardalan","Azeem Azhar","White / Caucasian","Woman",43,0,1,"control",2,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,2,0.666666666666667,"Andrew Ng","Jane Barrett","Austan Goolsbee","White / Caucasian","Woman",41,0,1,"control",1,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,0,0,0,0,"Aaron Pressman","Davar Ardalan","Amandeep Singh Gill","White / Caucasian","Woman",30,0,1,"control",1,66
+1,1,1,0,1,1,3,1,0,0,0,0,0,0,"Brittany Luse","Davar Ardalan","Jane Barrett","White / Caucasian","Man",36,1,1,"treatment",1,66
+0,1,0,1,1,1,2,0.666666666666667,0,0,2,0.666666666666667,1,0.333333333333333,"Ethan Mollick","Moira Gunn","Zoe Kleinman","White / Caucasian","Man",77,1,1,"control",1,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Brittany Luse","Andrew Ng","Amandeep Singh Gill","American Indian or Alaskan Native","Woman",50,0,0,"control",1,66
+1,2,1,1,1,0,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Azeem Azhar","Andrew Ng","Brittany Luse","Hispanic / Latinx","Woman",49,0,0,"treatment",2,66
+0,1,0,1,1,1,1,0.333333333333333,2,0.666666666666667,2,0.666666666666667,1,0.333333333333333,"Andrew Ng","Emily Kwong","Kevin Roose","White / Caucasian","Man",50,1,1,"control",1,66
+1,1,1,0,1,1,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Craig Smith","Davar Ardalan","Ethan Mollick","White / Caucasian","Woman",64,0,1,"treatment",1,66
+1,1,1,1,0,1,2,0.666666666666667,0,0,0,0,0,0,"Brittany Luse","Amandeep Singh Gill","Jane Barrett","Black or African American","Woman",27,0,0,"treatment",1,66
+1,2,1,1,0,1,1,0.333333333333333,2,0.666666666666667,0,0,0,0,"Emily Kwong","Nilay Patel","Ezra Eeman","Black or African American","Woman",61,0,0,"treatment",2,66
+1,1,1,0,1,1,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Davar Ardalan","Paris Marx","Jane Barrett","White / Caucasian","Man",57,1,1,"treatment",1,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,0,0,0,0,"Zoe Kleinman","Amandeep Singh Gill","Kai-Fu Lee","White / Caucasian","Man",34,1,1,"control",1,66
+1,1,1,1,1,0,3,1,1,0.333333333333333,1,0.333333333333333,0,0,"Davar Ardalan","Emily Kwong","Moira Gunn","Hispanic / Latinx","Woman",33,0,0,"treatment",1,66
+1,1,1,0,1,1,0,0,0,0,0,0,0,0,"Azeem Azhar","Kai-Fu Lee","Craig Smith","White / Caucasian","Man",37,1,1,"treatment",1,66
+0,2,0,1,1,1,2,0.666666666666667,2,0.666666666666667,0,0,0,0,"Brittany Luse","Bobby Allyn","Emily Kwong","Black or African American","Woman",50,0,0,"control",2,66
+1,1,1,1,1,0,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Andrew Ng","Azeem Azhar","Brittany Luse","Asian / Pacific Islander","Man",33,1,0,"treatment",1,66
+0,2,0,1,1,1,1,0.333333333333333,0,0,2,0.666666666666667,1,0.333333333333333,"Moira Gunn","Andrew Ng","Aaron Pressman","Black or African American","Woman",32,0,0,"control",2,66
+1,1,1,0,1,1,0,0,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,"Paris Marx","Aaron Pressman","Andrew Ng","White / Caucasian","Man",34,1,1,"treatment",1,66
+1,1,1,1,0,1,1,0.333333333333333,1,0.333333333333333,0,0,0,0,"Davar Ardalan","Craig Smith","Paris Marx","White / Caucasian","Woman",64,0,1,"treatment",1,66
+0,1,0,1,1,1,0,0,1,0.333333333333333,1,0.333333333333333,0,0,"Kevin Roose","Amandeep Singh Gill","Spencer Kelly","Hispanic / Latinx","Man",30,1,0,"control",1,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,2,0.666666666666667,"Andrew Ng","Austan Goolsbee","Davar Ardalan","Black or African American","Man",62,1,0,"control",1,66
+0,2,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Aaron Pressman","Ethan Mollick","Zoe Kleinman","White / Caucasian","Man",76,1,1,"control",2,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Brittany Luse","Nilay Patel","Ethan Mollick","Black or African American","Woman",45,0,0,"control",1,66
+1,1,1,1,1,0,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Brittany Luse","Davar Ardalan","Bobby Allyn","White / Caucasian","Man",30,1,1,"treatment",1,66
+1,2,1,1,1,0,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Amandeep Singh Gill","Jane Barrett","Ethan Mollick","White / Caucasian","Woman",39,0,1,"treatment",2,66
+0,1,0,1,1,1,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,2,0.666666666666667,"Emily Kwong","Austan Goolsbee","Andrew Ng","White / Caucasian","Man",44,1,1,"control",1,66
+1,1,1,0,1,1,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Davar Ardalan","Paris Marx","Brittany Luse","Asian / Pacific Islander","Man",40,1,0,"treatment",1,66
+1,1,1,1,0,1,0,0,1,0.333333333333333,0,0,1,0.333333333333333,"Kai-Fu Lee","Austan Goolsbee","Ezra Eeman","Asian / Pacific Islander","Man",39,1,0,"treatment",1,66
+0,1,0,1,1,1,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Zoe Kleinman","Kai-Fu Lee","Emily Kwong","White / Caucasian","Woman",52,0,1,"control",1,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Ethan Mollick","Brittany Luse","Amandeep Singh Gill","Black or African American","Man",29,1,0,"control",1,66
+1,2,1,1,0,1,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Andrew Ng","Azeem Azhar","Jane Barrett","White / Caucasian","Man",53,1,1,"treatment",2,66
+0,2,0,1,1,1,2,0.666666666666667,1,0.333333333333333,0,0,1,0.333333333333333,"Davar Ardalan","Anton Korinek","Emily Kwong","White / Caucasian","Woman",57,0,1,"control",2,66
+0,2,0,1,1,1,2,0.666666666666667,0,0,1,0.333333333333333,0,0,"Amandeep Singh Gill","Davar Ardalan","Moira Gunn","White / Caucasian","Man",51,1,1,"control",2,66
+1,1,1,1,0,1,0,0,1,0.333333333333333,1,0.333333333333333,0,0,"Ed Zitron","Ezra Eeman","Craig Smith","White / Caucasian","Woman",52,0,1,"treatment",1,66
+0,2,0,1,1,1,0,0,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,"Aaron Pressman","Andrew Ng","Paris Marx","Black or African American","Woman",23,0,0,"control",2,66
+1,1,1,1,1,0,0,0,0,0,1,0.333333333333333,2,0.666666666666667,"Azeem Azhar","Austan Goolsbee","Andrew Ng","White / Caucasian","Woman",44,0,1,"treatment",1,66
+1,1,1,0,1,1,1,0.333333333333333,0,0,2,0.666666666666667,2,0.666666666666667,"Ethan Mollick","Anton Korinek","Moira Gunn","White / Caucasian","Woman",54,0,1,"treatment",1,66
+1,2,1,1,1,0,0,0,0,0,2,0.666666666666667,3,1,"Anton Korinek","Erik Brynjolfsson","Ethan Mollick","White / Caucasian","Another gender not listed here:",35,0,1,"treatment",2,66
+0,2,0,1,1,1,2,0.666666666666667,2,0.666666666666667,0,0,0,0,"Emily Kwong","Bobby Allyn","Jane Barrett","White / Caucasian","Woman",37,0,1,"control",2,66
+1,1,1,1,1,0,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,"Jane Barrett","Andrew Ng","Ezra Eeman","White / Caucasian","Woman",45,0,1,"treatment",1,66
+0,1,0,1,1,1,1,0.333333333333333,2,0.666666666666667,1,0.333333333333333,1,0.333333333333333,"Bobby Allyn","Andrew Ng","Emily Kwong","White / Caucasian","Woman",57,0,1,"control",1,66
+0,2,0,1,1,1,2,0.666666666666667,2,0.666666666666667,0,0,0,0,"Emily Kwong","Bobby Allyn","Jane Barrett","Hispanic / Latinx","Man",36,1,0,"control",2,66
+1,2,1,1,0,1,1,0.333333333333333,1,0.333333333333333,0,0,1,0.333333333333333,"Austan Goolsbee","Ezra Eeman","Zoe Kleinman","Hispanic / Latinx","Man",37,1,0,"treatment",2,66
+0,2,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,0,0,"Kai-Fu Lee","Moira Gunn","Azeem Azhar","Black or African American","Man",27,1,0,"control",2,66
+0,1,0,1,1,1,1,0.333333333333333,1,0.333333333333333,0,0,0,0,"Bobby Allyn","Jane Barrett","Craig Smith","White / Caucasian","Woman",64,0,1,"control",1,66
+0,1,0,1,1,1,0,0,1,0.333333333333333,0,0,1,0.333333333333333,"Paris Marx","Nilay Patel","Austan Goolsbee","White / Caucasian","Man",45,1,1,"control",1,66
+1,2,1,1,1,0,2,0.666666666666667,1,0.333333333333333,2,0.666666666666667,0,0,"Moira Gunn","Kevin Roose","Zoe Kleinman","White / Caucasian","Woman",37,0,1,"treatment",2,66
+1,1,1,1,0,1,3,1,0,0,0,0,0,0,"Jane Barrett","Brittany Luse","Davar Ardalan","White / Caucasian","Woman",35,0,1,"treatment",1,66
+1,2,1,0,1,1,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Amandeep Singh Gill","Emily Kwong","Brittany Luse","Asian / Pacific Islander","Woman",30,0,0,"treatment",2,66
+0,1,0,1,1,1,2,0.666666666666667,2,0.666666666666667,0,0,0,0,"Emily Kwong","Brittany Luse","Paris Marx","White / Caucasian","Woman",38,0,1,"control",1,66
+0,1,0,1,1,1,2,0.666666666666667,2,0.666666666666667,0,0,0,0,"Bobby Allyn","Zoe Kleinman","Emily Kwong","White / Caucasian","Woman",44,0,1,"control",1,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,0,0,0,0,"Brittany Luse","Nilay Patel","Azeem Azhar","White / Caucasian","Woman",47,0,1,"control",1,66
+1,2,1,1,0,1,1,0.333333333333333,1,0.333333333333333,0,0,1,0.333333333333333,"Brittany Luse","Austan Goolsbee","Paris Marx","White / Caucasian","Man",45,1,1,"treatment",2,66
+0,2,0,1,1,1,0,0,2,0.666666666666667,1,0.333333333333333,1,0.333333333333333,"Bobby Allyn","Ethan Mollick","Paris Marx","Black or African American","Man",35,1,0,"control",2,66
+0,2,0,1,1,1,1,0.333333333333333,2,0.666666666666667,1,0.333333333333333,0,0,"Emily Kwong","Ed Zitron","Ezra Eeman","Hispanic / Latinx","Man",35,1,0,"control",2,66
+0,2,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Azeem Azhar","Andrew Ng","Brittany Luse","Hispanic / Latinx","Man",32,1,0,"control",2,66
+1,2,1,1,1,0,2,0.666666666666667,0,0,1,0.333333333333333,1,0.333333333333333,"Moira Gunn","Davar Ardalan","Austan Goolsbee","White / Caucasian","Man",66,1,1,"treatment",2,66
+1,2,1,0,1,1,1,0.333333333333333,0,0,0,0,0,0,"Brittany Luse","Amandeep Singh Gill","Kai-Fu Lee","Black or African American","Man",38,1,0,"treatment",2,66
+1,1,1,1,0,1,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Craig Smith","Moira Gunn","Austan Goolsbee","White / Caucasian","Man",47,1,1,"treatment",1,66
+1,2,1,0,1,1,2,0.666666666666667,0,0,1,0.333333333333333,0,0,"Brittany Luse","Davar Ardalan","Ed Zitron","White / Caucasian","Woman",39,0,1,"treatment",2,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,2,0.666666666666667,"Brittany Luse","Andrew Ng","Anton Korinek","White / Caucasian","Woman",32,0,1,"control",1,66
+1,2,1,1,0,1,0,0,0,0,1,0.333333333333333,1,0.333333333333333,"Ethan Mollick","Kai-Fu Lee","Nilay Patel","White / Caucasian","Woman",70,0,1,"treatment",2,66
+1,2,1,1,1,0,3,1,1,0.333333333333333,0,0,0,0,"Emily Kwong","Brittany Luse","Jane Barrett","Hispanic / Latinx","Woman",39,0,0,"treatment",2,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,2,0.666666666666667,2,0.666666666666667,"Austan Goolsbee","Moira Gunn","Andrew Ng","White / Caucasian","Man",57,1,1,"control",1,66
+0,1,0,1,1,1,1,0.333333333333333,2,0.666666666666667,1,0.333333333333333,0,0,"Kevin Roose","Emily Kwong","Kai-Fu Lee","White / Caucasian","Woman",36,0,1,"control",1,66
+1,1,1,1,0,1,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Jane Barrett","Ethan Mollick","Aaron Pressman","White / Caucasian","Man",60,1,1,"treatment",1,66
+0,2,0,1,1,1,0,0,1,0.333333333333333,2,0.666666666666667,1,0.333333333333333,"Bobby Allyn","Erik Brynjolfsson","Ed Zitron","Black or African American","Man",39,1,0,"control",2,66
+0,1,0,1,1,1,0,0,0,0,1,0.333333333333333,2,0.666666666666667,"Austan Goolsbee","Ethan Mollick","Kai-Fu Lee","White / Caucasian","Woman",46,0,1,"control",1,66
+1,2,1,1,1,0,2,0.666666666666667,0,0,0,0,0,0,"Brittany Luse","Zoe Kleinman","Amandeep Singh Gill","White / Caucasian","Woman",51,0,1,"treatment",2,66
+0,2,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,2,0.666666666666667,"Andrew Ng","Zoe Kleinman","Austan Goolsbee","White / Caucasian","Woman",51,0,1,"control",2,66
+1,2,1,1,0,1,2,0.666666666666667,0,0,0,0,0,0,"Brittany Luse","Jane Barrett","Craig Smith","Asian / Pacific Islander","Woman",50,0,0,"treatment",2,66
+1,2,1,0,1,1,1,0.333333333333333,0,0,1,0.333333333333333,1,0.333333333333333,"Jane Barrett","Andrew Ng","Amandeep Singh Gill","Black or African American","Man",44,1,0,"treatment",2,66
+0,2,0,1,1,1,0,0,0,0,1,0.333333333333333,1,0.333333333333333,"Andrew Ng","Nilay Patel","Azeem Azhar","Black or African American","Woman",66,0,0,"control",2,66
+1,2,1,0,1,1,2,0.666666666666667,0,0,0,0,1,0.333333333333333,"Jane Barrett","Austan Goolsbee","Davar Ardalan","White / Caucasian","Man",64,1,1,"treatment",2,66
+1,1,1,0,1,1,1,0.333333333333333,0,0,2,0.666666666666667,2,0.666666666666667,"Brittany Luse","Erik Brynjolfsson","Ethan Mollick","Black or African American","Man",50,1,0,"treatment",1,66
+1,1,1,1,0,1,2,0.666666666666667,0,0,1,0.333333333333333,1,0.333333333333333,"Jane Barrett","Ethan Mollick","Brittany Luse","Hispanic / Latinx","Man",44,1,0,"treatment",1,66
+0,1,0,1,1,1,0,0,0,0,2,0.666666666666667,3,1,"Ethan Mollick","Anton Korinek","Andrew Ng","White / Caucasian","Woman",57,0,1,"control",1,66
+0,1,0,1,1,1,0,0,0,0,1,0.333333333333333,1,0.333333333333333,"Ethan Mollick","Nilay Patel","Craig Smith","White / Caucasian","Woman",38,0,1,"control",1,66
+0,1,0,1,1,1,1,0.333333333333333,0,0,1,0.333333333333333,0,0,"Craig Smith","Jane Barrett","Ed Zitron","White / Caucasian","Woman",60,0,1,"control",1,66
+1,1,1,0,1,1,2,0.666666666666667,0,0,0,0,0,0,"Jane Barrett","Davar Ardalan","Kai-Fu Lee","White / Caucasian","Woman",37,0,1,"treatment",1,66
+0,1,0,1,1,1,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Aaron Pressman","Emily Kwong","Brittany Luse","Black or African American","Man",24,1,0,"control",1,66
+0,1,0,1,1,1,1,0.333333333333333,2,0.666666666666667,0,0,0,0,"Ezra Eeman","Bobby Allyn","Jane Barrett","White / Caucasian","Woman",26,0,1,"control",1,66
+1,1,1,0,1,1,1,0.333333333333333,0,0,0,0,0,0,"Kai-Fu Lee","Jane Barrett","Azeem Azhar","Asian / Pacific Islander","Man",29,1,0,"treatment",1,66
+0,2,0,1,1,1,0,0,1,0.333333333333333,1,0.333333333333333,1,0.333333333333333,"Andrew Ng","Paris Marx","Amandeep Singh Gill","Black or African American","Woman",52,0,0,"control",2,66
+1,1,1,1,0,1,0,0,1,0.333333333333333,0,0,0,0,"Aaron Pressman","Bobby Allyn","Azeem Azhar","White / Caucasian","Woman",34,0,1,"treatment",1,66
+0,2,0,1,1,1,2,0.666666666666667,0,0,1,0.333333333333333,0,0,"Moira Gunn","Michael Safi","Brittany Luse","White / Caucasian","Woman",51,0,1,"control",2,66
+1,2,1,1,1,0,2,0.666666666666667,1,0.333333333333333,0,0,0,0,"Brittany Luse","Amandeep Singh Gill","Emily Kwong","Black or African American","Woman",29,0,0,"treatment",2,66
