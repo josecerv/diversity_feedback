@@ -1,5 +1,5 @@
 ---
-title: "Study 5 - AI Expert Selection"
+title: "NPR Study"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document:
@@ -108,7 +108,7 @@ extract_regression_estimates <- function(model) {
 
 ## Read Data
 
-```{r echo=TRUE}
+```{r include=FALSE}
 # Set this to TRUE if you have API access, FALSE if using CSV
 USE_API <- T
 
@@ -250,7 +250,7 @@ if(USE_API) {
 
 ## Demographics
 
-```{r results='markup'}
+```{r echo=FALSE, results='markup'}
 ## Excluded participants
 
 cat('Excluded Participants:', num_excluded, '\n')
@@ -329,19 +329,13 @@ r1 <- lm(women_proportion ~ treatment + set_num, data=d0)
 # Display the summary with robust standard errors
 robust_summary(r1)
 robust_confint(r1)
-
-# Treatment effect only (for comparison)
-cat("\n\nTreatment effect without Set indicator (for comparison):\n")
-r1_simple <- lm(women_proportion ~ treatment, data=d0)
-robust_summary(r1_simple)
-robust_confint(r1_simple)
 ```
 
 \newpage
 
 ## Robustness
 
-```{r echo=TRUE, results='markup'}
+```{r echo=FALSE, results='markup'}
 
 ## Which feedback was shown with gender, remove constant due to collinearity
 r2 <- lm(women_proportion ~ women_feedback + age_feedback + location_feedback + university_feedback - 1, data=d0)
@@ -349,37 +343,6 @@ r2 <- lm(women_proportion ~ women_feedback + age_feedback + location_feedback + 
 # Display the summary with robust standard errors
 robust_summary(r2)
 robust_confint(r2)
-
-## Robust to demographic controls (PREREGISTERED)
-# Create missing indicator variables for demographics
-d0_robust <- d0 |>
-  mutate(
-    gender_missing = case_when(is.na(gender) ~ 1, TRUE ~ 0),
-    race_missing = case_when(is.na(race) ~ 1, TRUE ~ 0),
-    age_missing = case_when(is.na(age) ~ 1, TRUE ~ 0),
-    # Replace NA with 0 for the actual demographic variables
-    gender_code = case_when(is.na(gender_code) ~ 0, TRUE ~ gender_code),
-    race_code = case_when(is.na(race_code) ~ 0, TRUE ~ race_code),
-    age = case_when(is.na(age) ~ 0, TRUE ~ age)
-  )
-
-r3 <- lm(women_proportion ~ treatment + set_num + gender_code + race_code + age +
-         gender_missing + race_missing + age_missing, data=d0_robust)
-
-# Display the summary with robust standard errors
-cat("Demographic controls with missing indicators (PREREGISTERED):\n")
-robust_summary(r3)
-robust_confint(r3)
-
-## Logistic regression on any woman selected (0/1)
-d0_logit <- d0 |> mutate(any_woman = case_when(women_count > 0 ~ 1, TRUE ~ 0))
-
-r4 <- glm(any_woman ~ treatment, family = binomial, data=d0_logit)
-
-# Odds ratio
-tidy_r4 <- tidy(r4, exponentiate = TRUE, conf.int = T)
-print(tidy_r4)
-summary(r4)
 
 ## Dropout robustness check (PREREGISTERED)
 # For any participants who drop out after assignment to conditions but before selecting experts,
@@ -419,153 +382,12 @@ if(any(is.na(d0$women_proportion))) {
 }
 ```
 
-\newpage
-
-## Set Assignment Analysis
-
-```{r echo=TRUE, results='markup'}
-# Test whether Set 1 vs Set 2 matters
-# In Set 1: women feedback shows 10%, in Set 2: women feedback shows 20%
-
-cat("Set Assignment Analysis\n")
-cat("========================\n\n")
-
-# Overall set effect
-r_set <- lm(women_proportion ~ set_num, data=d0)
-cat("Main effect of Set (1 vs 2):\n")
-robust_summary(r_set)
-robust_confint(r_set)
-
-# Interaction between treatment and set
-r_interaction <- lm(women_proportion ~ treatment * set_num, data=d0)
-cat("\nInteraction between Treatment and Set:\n")
-robust_summary(r_interaction)
-robust_confint(r_interaction)
-
-# Simple effects: Does set matter within treatment condition?
-d0_treatment <- d0 |> filter(treatment == 1)
-d0_control <- d0 |> filter(treatment == 0)
-
-cat("\nSet effect within Treatment condition only:\n")
-r_set_treatment <- lm(women_proportion ~ set_num, data=d0_treatment)
-robust_summary(r_set_treatment)
-robust_confint(r_set_treatment)
-
-cat("\nSet effect within Control condition only:\n")
-r_set_control <- lm(women_proportion ~ set_num, data=d0_control)
-robust_summary(r_set_control)
-robust_confint(r_set_control)
-
-# Descriptive statistics by condition and set
-cat("\nDescriptive statistics by Treatment and Set:\n")
-d0 |>
-  group_by(treatment, set_num) |>
-  summarize(
-    mean_women = mean(women_proportion),
-    sd_women = sd(women_proportion),
-    n = n()
-  ) |>
-  print()
-
-# Test treatment effect separately for each set
-cat("\nTreatment effect within Set 1 (women feedback shows 10%):\n")
-d0_set1 <- d0 |> filter(set_num == 1)
-r_treat_set1 <- lm(women_proportion ~ treatment, data=d0_set1)
-robust_summary(r_treat_set1)
-robust_confint(r_treat_set1)
-
-cat("\nTreatment effect within Set 2 (women feedback shows 20%):\n")
-d0_set2 <- d0 |> filter(set_num == 2)
-r_treat_set2 <- lm(women_proportion ~ treatment, data=d0_set2)
-robust_summary(r_treat_set2)
-robust_confint(r_treat_set2)
-
-```
-
-\newpage
-
-## Statistical Approach to Set Differences
-
-```{r echo=TRUE, results='markup'}
-# From a statistical perspective, we can test set differences in multiple ways:
-
-cat("Statistical Testing Approaches for Set Differences\n")
-cat("===================================================\n\n")
-
-cat("Approach 1: Test if the percentage shown (10% vs 20%) affects response\n")
-cat("-----------------------------------------------------------------------\n")
-cat("This tests whether the *magnitude* of the feedback percentage matters.\n")
-cat("H0: Set 1 (10%) and Set 2 (20%) produce the same response\n")
-cat("Ha: Different percentages produce different responses\n\n")
-
-# Create dummy variable for set 2
-d0_treated <- d0 |> filter(treatment == 1) |> mutate(set2 = case_when(set_num == 2 ~ 1, TRUE ~ 0))
-
-r_dose_response <- lm(women_proportion ~ set2, data=d0_treated)
-cat("Test of Set 2 (20%) vs Set 1 (10%) within Treatment:\n")
-robust_summary(r_dose_response)
-robust_confint(r_dose_response)
-
-cat("\n\nApproach 2: Test for interaction (does treatment effect vary by set?)\n")
-cat("-----------------------------------------------------------------------\n")
-cat("This tests whether the treatment is MORE effective with one set vs another.\n")
-cat("H0: Treatment effect is the same for both sets\n")
-cat("Ha: Treatment effect differs between sets\n\n")
-
-# F-test for interaction term
-cat("F-test for interaction term from full model:\n")
-anova_result <- anova(r_interaction)
-print(anova_result)
-
-# Extract interaction coefficient
-interaction_coef <- coef(r_interaction)["treatment:set_num"]
-cat("\nInteraction coefficient: ", interaction_coef, "\n")
-cat("Interpretation: The treatment effect changes by ", round(interaction_coef * 100, 2),
-    " percentage points for each unit increase in set number\n")
-
-cat("\n\nApproach 3: Equivalence testing\n")
-cat("-----------------------------------------------------------------------\n")
-cat("Rather than testing if sets are different, test if they are equivalent.\n")
-cat("This reverses the null hypothesis to show similarity.\n\n")
-
-# Calculate treatment effects for each set
-treat_effect_set1 <- coef(r_treat_set1)["treatment"]
-treat_effect_set2 <- coef(r_treat_set2)["treatment"]
-
-cat("Treatment effect in Set 1: ", round(treat_effect_set1 * 100, 2), "%\n")
-cat("Treatment effect in Set 2: ", round(treat_effect_set2 * 100, 2), "%\n")
-cat("Difference: ", round((treat_effect_set2 - treat_effect_set1) * 100, 2), " percentage points\n")
-
-# Two one-sided tests (TOST) for equivalence
-# Define equivalence bounds (e.g., +/- 10 percentage points)
-equiv_bound <- 0.10
-
-# Get SEs for each effect
-se_set1 <- sqrt(diag(vcovHC(r_treat_set1, type = "HC3")))["treatment"]
-se_set2 <- sqrt(diag(vcovHC(r_treat_set2, type = "HC3")))["treatment"]
-
-# Calculate z-scores for equivalence tests
-z_upper <- (treat_effect_set1 - treat_effect_set2 - equiv_bound) / sqrt(se_set1^2 + se_set2^2)
-z_lower <- (treat_effect_set1 - treat_effect_set2 + equiv_bound) / sqrt(se_set1^2 + se_set2^2)
-
-p_upper <- pnorm(z_upper)
-p_lower <- pnorm(z_lower, lower.tail = FALSE)
-
-cat("\nEquivalence test (bounds = +/- ", equiv_bound * 100, " percentage points):\n")
-cat("Upper test p-value: ", p_upper, "\n")
-cat("Lower test p-value: ", p_lower, "\n")
-cat("Equivalence p-value: ", max(p_upper, p_lower), "\n")
-cat("Conclusion: ", ifelse(max(p_upper, p_lower) < 0.05,
-                           "Effects are statistically equivalent",
-                           "Cannot conclude equivalence"), "\n")
-
-```
 
 \newpage
 
 ## Secondary Analysis: Other Attributes
 
-```{r echo=TRUE, results='markup'}
+```{r echo=FALSE, results='markup'}
 
 ## Age feedback
 r_age <- lm(age_proportion ~ age_feedback, data=d0)
@@ -597,8 +419,8 @@ robust_confint(r_university)
 
 ```{r include=FALSE}
 # Extract estimates for overall plot
-# Use r1_simple for visualization to get clean treatment effect
-women_est <- extract_regression_estimates(r1_simple)
+# Use r1 (preregistered model with set_num control) for women feedback
+women_est <- extract_regression_estimates(r1)
 age_est <- extract_regression_estimates(r_age)
 location_est <- extract_regression_estimates(r_location)
 university_est <- extract_regression_estimates(r_university)
@@ -621,7 +443,7 @@ saveRDS(study5_estimates, file = "study5_estimates.rds")
 
 ## Visualization
 
-```{r echo=TRUE, results='markup', fig.width=10, fig.height=8}
+```{r echo=FALSE, fig.height=8, fig.width=10, results='markup'}
 
 # Get p-values from regression models
 p_women <- robust_summary(r1)$coefficients["treatment", "Pr(>|t|)"]
@@ -760,11 +582,9 @@ ggsave("Figure-Study5.pdf", plot = p_combined, width = 10, height = 8, units = "
 
 \newpage
 
-## System of Simultaneous Equations (PREREGISTERED)
+## System of Simultaneous Equations
 
-```{r results='markup'}
-# Test whether the effect of women feedback is different from other feedback types
-# PREREGISTERED: Include set_num in all models as specified
+```{r echo=FALSE, results='markup'}
 
 # Age
 age.eqn <- list(
@@ -848,7 +668,6 @@ summary_table <- data.frame(
 )
 print(summary_table, row.names = FALSE)
 
-cat("\nInterpretation: A significant result (p < 0.05) indicates that the feedback effect\n")
-cat("for women is statistically different from the feedback effect for that attribute.\n")
+
 
 ```
