@@ -114,7 +114,7 @@ USE_API <- T
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
-  qual_data <- fetch_survey(surveyID='SV_diYpq4P39svNYou',
+  qual_data <- fetch_survey(surveyID='SV_3TY7uEVc8wzS8N8',
                             start_date = "2025-10-01",
                      force_request = T)
 } else {
@@ -323,11 +323,18 @@ t.test(women_proportion ~ treatment, data=d0)
 
 ```{r echo=TRUE, results='markup'}
 # Primary model: Effect of treatment on proportion of women selected
-r1 <- lm(women_proportion ~ treatment, data=d0)
+# As preregistered: includes treatment (gender feedback) and Set1 indicator
+r1 <- lm(women_proportion ~ treatment + set_num, data=d0)
 
 # Display the summary with robust standard errors
 robust_summary(r1)
 robust_confint(r1)
+
+# Treatment effect only (for comparison)
+cat("\n\nTreatment effect without Set indicator (for comparison):\n")
+r1_simple <- lm(women_proportion ~ treatment, data=d0)
+robust_summary(r1_simple)
+robust_confint(r1_simple)
 ```
 
 \newpage
@@ -343,11 +350,24 @@ r2 <- lm(women_proportion ~ women_feedback + age_feedback + location_feedback + 
 robust_summary(r2)
 robust_confint(r2)
 
-## Robust to demographic controls
+## Robust to demographic controls (PREREGISTERED)
+# Create missing indicator variables for demographics
+d0_robust <- d0 |>
+  mutate(
+    gender_missing = case_when(is.na(gender) ~ 1, TRUE ~ 0),
+    race_missing = case_when(is.na(race) ~ 1, TRUE ~ 0),
+    age_missing = case_when(is.na(age) ~ 1, TRUE ~ 0),
+    # Replace NA with 0 for the actual demographic variables
+    gender_code = case_when(is.na(gender_code) ~ 0, TRUE ~ gender_code),
+    race_code = case_when(is.na(race_code) ~ 0, TRUE ~ race_code),
+    age = case_when(is.na(age) ~ 0, TRUE ~ age)
+  )
 
-r3 <- lm(women_proportion ~ treatment + gender_code + race_code + age, data=d0)
+r3 <- lm(women_proportion ~ treatment + set_num + gender_code + race_code + age +
+         gender_missing + race_missing + age_missing, data=d0_robust)
 
 # Display the summary with robust standard errors
+cat("Demographic controls with missing indicators (PREREGISTERED):\n")
 robust_summary(r3)
 robust_confint(r3)
 
@@ -360,6 +380,43 @@ r4 <- glm(any_woman ~ treatment, family = binomial, data=d0_logit)
 tidy_r4 <- tidy(r4, exponentiate = TRUE, conf.int = T)
 print(tidy_r4)
 summary(r4)
+
+## Dropout robustness check (PREREGISTERED)
+# For any participants who drop out after assignment to conditions but before selecting experts,
+# impute their women_proportion as the mean from the no gender feedback condition
+
+cat("\n\nDropout Robustness Check (PREREGISTERED):\n")
+cat("=========================================\n\n")
+
+# Check if there are any missing values in women_proportion among those assigned to conditions
+# (This would indicate dropouts after assignment)
+if(any(is.na(d0$women_proportion))) {
+  cat("Dropouts detected after condition assignment\n")
+
+  # Calculate mean women_proportion in control condition
+  control_mean <- mean(d0$women_proportion[d0$treatment == 0], na.rm = TRUE)
+
+  cat("Control condition mean women proportion:", control_mean, "\n")
+  cat("Number of dropouts to impute:", sum(is.na(d0$women_proportion)), "\n\n")
+
+  # Create dataset with imputed values
+  d0_imputed <- d0 |>
+    mutate(women_proportion_imputed = case_when(
+      is.na(women_proportion) ~ control_mean,
+      TRUE ~ women_proportion
+    ))
+
+  # Run primary model with imputed data
+  r5_imputed <- lm(women_proportion_imputed ~ treatment + set_num, data=d0_imputed)
+
+  cat("Primary analysis with dropout imputation:\n")
+  robust_summary(r5_imputed)
+  robust_confint(r5_imputed)
+
+} else {
+  cat("No dropouts detected after condition assignment.\n")
+  cat("All participants who were assigned to conditions completed their expert selections.\n")
+}
 ```
 
 \newpage
@@ -540,7 +597,8 @@ robust_confint(r_university)
 
 ```{r include=FALSE}
 # Extract estimates for overall plot
-women_est <- extract_regression_estimates(r1)
+# Use r1_simple for visualization to get clean treatment effect
+women_est <- extract_regression_estimates(r1_simple)
 age_est <- extract_regression_estimates(r_age)
 location_est <- extract_regression_estimates(r_location)
 university_est <- extract_regression_estimates(r_university)
@@ -702,15 +760,16 @@ ggsave("Figure-Study5.pdf", plot = p_combined, width = 10, height = 8, units = "
 
 \newpage
 
-## System of Simultaneous Equations
+## System of Simultaneous Equations (PREREGISTERED)
 
 ```{r results='markup'}
 # Test whether the effect of women feedback is different from other feedback types
+# PREREGISTERED: Include set_num in all models as specified
 
 # Age
 age.eqn <- list(
-  ageeq = as.numeric(age_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback - 1,
-  womeneq = as.numeric(women_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback - 1
+  ageeq = as.numeric(age_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1,
+  womeneq = as.numeric(women_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1
 )
 
 # Define restriction matrix
@@ -721,8 +780,8 @@ unrestricted_age <- systemfit(age.eqn, data=d0)
 
 # Location
 location.eqn <- list(
-  locationeq = as.numeric(location_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback - 1,
-  womeneq = as.numeric(women_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback - 1
+  locationeq = as.numeric(location_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1,
+  womeneq = as.numeric(women_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1
 )
 
 # Define restriction matrix
@@ -733,8 +792,8 @@ unrestricted_location <- systemfit(location.eqn, data=d0)
 
 # University
 university.eqn <- list(
-  universityeq = as.numeric(university_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback - 1,
-  womeneq = as.numeric(women_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback - 1
+  universityeq = as.numeric(university_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1,
+  womeneq = as.numeric(women_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1
 )
 
 # Define restriction matrix
@@ -746,26 +805,50 @@ unrestricted_university <- systemfit(university.eqn, data=d0)
 
 # Wald tests
 # Run linear hypothesis tests
-lh_result_age = linearHypothesis(unrestricted_age, restrict_age)
-lh_result_location = linearHypothesis(unrestricted_location, restrict_location)
-lh_result_university = linearHypothesis(unrestricted_university, restrict_university)
+cat("Wald Tests for Cross-Equation Comparisons:\n")
+cat("==========================================\n\n")
 
-# Collecting coefficient values and standard errors
-age_coef <- lh_result_age$F[2]
-location_coef <- lh_result_location$F[2]
-university_coef <- lh_result_university$F[2]
+cat("Test 1: Women Feedback Effect vs. Age Feedback Effect\n")
+cat("------------------------------------------------------\n")
+lh_result_age = linearHypothesis(unrestricted_age, restrict_age)
+print(lh_result_age)
+
+cat("\n\nTest 2: Women Feedback Effect vs. Location Feedback Effect\n")
+cat("-----------------------------------------------------------\n")
+lh_result_location = linearHypothesis(unrestricted_location, restrict_location)
+print(lh_result_location)
+
+cat("\n\nTest 3: Women Feedback Effect vs. University Feedback Effect\n")
+cat("-------------------------------------------------------------\n")
+lh_result_university = linearHypothesis(unrestricted_university, restrict_university)
+print(lh_result_university)
+
+# Collecting F-statistics (Wald test statistics)
+age_fstat <- lh_result_age$F[2]
+location_fstat <- lh_result_location$F[2]
+university_fstat <- lh_result_university$F[2]
 
 # Extracting p-values
 p_value_age = lh_result_age$`Pr(>F)`[2]
 p_value_location = lh_result_location$`Pr(>F)`[2]
 p_value_university = lh_result_university$`Pr(>F)`[2]
 
-# Include p-values in the summary table
-data.frame(
-  `Test` = c("Women Feedback - Age Feedback", "Women Feedback - Location Feedback", "Women Feedback - University Feedback"),
-  `Wald Coefficient` = c(age_coef, location_coef, university_coef),
-  P_Value = c(p_value_age, p_value_location, p_value_university),
-  row.names = 1
+# Summary table
+cat("\n\nSummary of Wald Tests:\n")
+cat("======================\n")
+summary_table <- data.frame(
+  Test = c("Women vs. Age Feedback", "Women vs. Location Feedback", "Women vs. University Feedback"),
+  F_Statistic = round(c(age_fstat, location_fstat, university_fstat), 2),
+  P_Value = format.pval(c(p_value_age, p_value_location, p_value_university), digits = 3),
+  Significant = c(
+    ifelse(p_value_age < 0.05, "Yes", "No"),
+    ifelse(p_value_location < 0.05, "Yes", "No"),
+    ifelse(p_value_university < 0.05, "Yes", "No")
+  )
 )
+print(summary_table, row.names = FALSE)
+
+cat("\nInterpretation: A significant result (p < 0.05) indicates that the feedback effect\n")
+cat("for women is statistically different from the feedback effect for that attribute.\n")
 
 ```
