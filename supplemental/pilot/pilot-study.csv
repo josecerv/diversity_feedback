@@ -1,302 +1,453 @@
 "cond","base_condition","gender_feedback","poets_shown","oldies_shown","books_shown","women_shown","female_pick","poets_pick","oldies_pick","books_pick","base_gender","base_poets","base_oldies","base_books","choice-1","choice-2","choice-3","choice-4","choice-5","choice-6","choice-7","race","gender","age","gender_code","race_code","num_excluded_total"
-"control","low",0,1,1,1,0,0,0,1,0,3,2,2,1,"Jane Austen","J.D. Salinger","Virginia Woolf","Zadie Smith","Charles Dickens","Gabriel Garcia Marquez","Oscar Wilde","White / Caucasian","Man",22,1,1,25
-"treat","low",1,0,1,1,1,0,0,0,0,2,1,1,2,"Jane Austen","J.D. Salinger","Michael Crichton","F. Scott Fitzgerald","John Steinbeck","Sylvia Plath","Kurt Vonnegut","White / Caucasian","Woman",45,0,1,25
-"treat","low",1,1,1,0,1,0,0,0,0,1,1,1,1,"Ernest Hemingway","Albert Camus","J.D. Salinger","Joyce Carol Oates","Gabriel Garcia Marquez","Kurt Vonnegut","Flann O'Brien","White / Caucasian","Woman",45,0,1,25
-"control","high",0,1,1,1,0,1,1,1,0,3,3,3,5,"Charles Dickens","Maya Angelou","Isabel Allende","J.R.R. Tolkien","Jack London","Margaret Atwood","Virginia Woolf","White / Caucasian","Woman",36,0,1,25
-"treat","high",1,1,1,0,1,1,1,0,1,6,4,1,2,"Zadie Smith","Margaret Atwood","Sylvia Plath","Maya Angelou","Isabel Allende","Virginia Woolf","Joyce Carol Oates","White / Caucasian","Woman",46,0,1,25
-"control","low",0,1,1,1,0,0,0,0,0,2,1,2,2,"Nathaniel Hawthorne","Jane Austen","F. Scott Fitzgerald","J.K. Rowling","Michael Crichton","J.D. Salinger","Neil Gaiman","Black or African American","Man",38,1,0,25
-"control","high",0,1,1,1,0,0,0,1,1,3,2,3,3,"Ernest Hemingway","Charles Dickens","Jane Austen","Maya Angelou","J.R.R. Tolkien","J.K. Rowling","Rudyard Kipling","White / Caucasian","Man",52,1,1,25
-"control","low",0,1,1,1,0,1,0,0,0,3,2,1,3,"John Steinbeck","Virginia Woolf","J.K. Rowling","George Orwell","Jane Austen","Ray Bradbury","Zadie Smith","Hispanic / Latinx","Man",34,1,0,25
-"treat","low",1,0,1,1,1,1,1,1,0,1,2,2,4,"Charles Dickens","George Orwell","J.K. Rowling","F. Scott Fitzgerald","John Steinbeck","Ray Bradbury","Virginia Woolf","White / Caucasian","Man",35,1,1,25
-"treat","high",1,0,1,1,1,0,0,1,1,5,4,2,3,"J.K. Rowling","Jack London","Margaret Atwood","Virginia Woolf","Maya Angelou","Sylvia Plath","Rudyard Kipling","White / Caucasian","Woman",47,0,1,25
-"treat","high",1,0,1,1,1,1,1,1,1,3,3,3,3,"J.R.R. Tolkien","Jane Austen","Maya Angelou","Oscar Wilde","Margaret Atwood","Charles Dickens","Lucy Maud","Asian / Pacific Islander","Woman",31,0,0,25
-"treat","high",1,1,1,0,1,0,0,1,1,3,1,3,4,"Ayn Rand","Charles Dickens","J.R.R. Tolkien","Jack London","J.K. Rowling","Jane Austen","Rudyard Kipling","White / Caucasian","Man",41,1,1,25
-"treat","high",1,0,1,1,1,1,0,0,0,3,5,3,2,"Charles Dickens","Virginia Woolf","Sylvia Plath","J.R.R. Tolkien","Maya Angelou","Neil Gaiman","Ayn Rand","Asian / Pacific Islander","Man",51,1,0,25
-"treat","high",1,1,0,1,1,0,1,0,0,2,0,4,3,"J.K. Rowling","Ernest Hemingway","J.R.R. Tolkien","Oscar Wilde","Jack London","Jane Austen","Neil Gaiman","White / Caucasian","Man",33,1,1,25
-"treat","low",1,1,1,0,1,0,1,1,1,2,2,1,1,"John Steinbeck","J.D. Salinger","Sylvia Plath","Jane Austen","George Orwell","Ernest Hemingway","Charles Dickens","Asian / Pacific Islander","Woman",42,0,0,25
-"treat","low",1,1,1,0,1,0,0,1,0,2,3,3,2,"J.K. Rowling","Jane Austen","Nathaniel Hawthorne","Charles Dickens","F. Scott Fitzgerald","George Orwell","Oscar Wilde","White / Caucasian","Woman",38,0,1,25
-"treat","high",1,1,1,0,1,0,0,1,0,2,3,3,4,"Jack London","J.K. Rowling","J.R.R. Tolkien","Charles Dickens","George Orwell","Maya Angelou","Ernest Hemingway","White / Caucasian","Man",48,1,1,25
-"treat","low",1,1,1,0,1,1,1,0,0,2,1,3,1,"J.D. Salinger","Virginia Woolf","Oscar Wilde","John Steinbeck","Jane Austen","F. Scott Fitzgerald","Sylvia Plath","White / Caucasian","Woman",62,0,1,25
-"control","high",0,1,1,1,0,0,0,1,0,4,5,3,3,"Margaret Atwood","J.R.R. Tolkien","Virginia Woolf","Maya Angelou","Charles Dickens","Sylvia Plath","Ernest Hemingway","White / Caucasian","Woman",54,0,1,25
-"treat","low",1,1,1,0,1,1,1,0,0,1,0,2,1,"F. Scott Fitzgerald","J.D. Salinger","Oscar Wilde","Michael Crichton","Zadie Smith","Albert Camus","Sylvia Plath","White / Caucasian","Woman",47,0,1,25
-"control","high",0,1,1,1,0,0,1,0,0,3,2,3,3,"Jane Austen","J.R.R. Tolkien","Ernest Hemingway","Charles Dickens","J.K. Rowling","Maya Angelou","George Orwell","White / Caucasian","Woman",38,0,1,25
-"control","low",0,1,1,1,0,1,1,1,0,2,3,3,3,"Charles Dickens","J.K. Rowling","Sylvia Plath","Michael Crichton","F. Scott Fitzgerald","Nathaniel Hawthorne","Virginia Woolf","White / Caucasian","Woman",33,0,1,25
-"control","high",0,1,1,1,0,1,1,1,1,6,4,0,3,"Isabel Allende","Margaret Atwood","Maya Angelou","Joyce Carol Oates","Zadie Smith","Sylvia Plath","Lucy Maud","Black or African American","Woman",59,0,0,25
-"treat","low",1,0,1,1,1,0,0,0,0,0,1,3,3,"Charles Dickens","Ernest Hemingway","F. Scott Fitzgerald","Ray Bradbury","John Steinbeck","J.D. Salinger","Kurt Vonnegut","White / Caucasian","Man",73,1,1,25
-"control","low",0,1,1,1,0,1,0,0,1,1,1,4,1,"Ernest Hemingway","Virginia Woolf","John Steinbeck","F. Scott Fitzgerald","Oscar Wilde","J.D. Salinger","J.K. Rowling","Hispanic / Latinx","Man",31,1,0,25
-"control","low",0,1,1,1,0,0,0,1,0,2,2,2,1,"Zadie Smith","Oscar Wilde","Charles Dickens","Jane Austen","Edward Upward","George Orwell","Ernest Hemingway","Black or African American","Woman",51,0,0,25
-"treat","high",1,1,0,1,1,0,0,1,1,4,4,1,2,"George Orwell","Sylvia Plath","Isabel Allende","Margaret Atwood","Maya Angelou","Oscar Wilde","Rudyard Kipling","White / Caucasian","Man",51,1,1,25
-"treat","high",1,0,1,1,1,0,1,1,1,3,3,2,2,"J.K. Rowling","Jorge Luis Borges","George Orwell","Maya Angelou","Ernest Hemingway","Jane Austen","Charles Dickens","White / Caucasian","Man",59,1,1,25
-"control","low",0,1,1,1,0,1,0,0,0,1,2,1,2,"Gabriel Garcia Marquez","Kurt Vonnegut","Neil Gaiman","Ray Bradbury","Sylvia Plath","Charles Dickens","Zadie Smith","White / Caucasian","Man",61,1,1,25
-"control","low",0,1,1,1,0,0,0,1,0,1,0,2,1,"Antoine de Saint-Exupéry","Gabriel Garcia Marquez","Ernest Hemingway","John Steinbeck","Jane Austen","F. Scott Fitzgerald","Oscar Wilde","White / Caucasian","Man",60,1,1,25
-"control","high",0,1,1,1,0,1,0,0,1,2,3,2,1,"Maya Angelou","J.R.R. Tolkien","Ernest Hemingway","George Orwell","Jane Austen","Neil Gaiman","Isabel Allende","White / Caucasian","Woman",53,0,1,25
-"control","high",0,1,1,1,0,1,1,0,0,3,0,3,3,"Jane Austen","J.K. Rowling","Ernest Hemingway","J.R.R. Tolkien","Oscar Wilde","Isabel Allende","Maya Angelou","White / Caucasian","Woman",39,0,1,25
-"treat","low",1,1,1,0,1,1,1,0,1,3,2,2,2,"Virginia Woolf","George Orwell","J.K. Rowling","F. Scott Fitzgerald","Michael Crichton","Jane Austen","Joyce Carol Oates","White / Caucasian","Woman",44,0,1,25
-"treat","high",1,1,1,0,1,0,1,1,1,3,3,2,4,"George Orwell","J.R.R. Tolkien","Margaret Atwood","Jane Austen","J.K. Rowling","Herman Melville","Charles Dickens","Asian / Pacific Islander","Man",34,1,0,25
-"control","high",0,1,1,1,0,1,1,1,1,3,4,2,4,"Margaret Atwood","Charles Dickens","George Orwell","J.R.R. Tolkien","J.K. Rowling","Sylvia Plath","Lucy Maud","White / Caucasian","Woman",32,0,1,25
-"control","low",0,1,1,1,0,0,0,0,1,0,1,1,1,"George Orwell","J.D. Salinger","Albert Camus","F. Scott Fitzgerald","Kurt Vonnegut","Ray Bradbury","John Steinbeck","White / Caucasian","Man",35,1,1,25
-"control","high",0,1,1,1,0,1,0,0,0,3,3,3,5,"J.K. Rowling","J.R.R. Tolkien","Charles Dickens","Maya Angelou","Joyce Carol Oates","Jack London","Ayn Rand","White / Caucasian","Man",40,1,1,25
-"treat","high",1,1,0,1,1,1,0,0,0,2,2,5,3,"Jack London","Charles Dickens","Oscar Wilde","Virginia Woolf","Ernest Hemingway","J.K. Rowling","Jane Austen","White / Caucasian","Man",53,1,1,25
-"treat","low",1,1,1,0,1,0,0,0,0,3,3,3,1,"Albert Camus","Jane Austen","Charles Dickens","Virginia Woolf","Sylvia Plath","Oscar Wilde","Antoine de Saint-Exupéry","Hispanic / Latinx","Woman",22,0,0,25
-"treat","high",1,0,1,1,1,0,0,1,0,2,3,3,3,"George Orwell","J.R.R. Tolkien","Herman Melville","Sylvia Plath","Oscar Wilde","J.K. Rowling","Ernest Hemingway","White / Caucasian","Woman",37,0,1,25
-"control","low",0,1,1,1,0,0,0,0,0,2,2,3,2,"Jane Austen","Oscar Wilde","John Steinbeck","Charles Dickens","Virginia Woolf","Kurt Vonnegut","Albert Camus","White / Caucasian","Woman",43,0,1,25
-"treat","low",1,1,1,0,1,1,1,1,0,1,2,3,3,"J.K. Rowling","Charles Dickens","Michael Crichton","Nathaniel Hawthorne","F. Scott Fitzgerald","J.D. Salinger","Virginia Woolf","White / Caucasian","Woman",54,0,1,25
-"control","low",0,1,1,1,0,1,1,0,0,1,1,1,2,"John Steinbeck","Kurt Vonnegut","J.D. Salinger","Ray Bradbury","Jane Austen","Nathaniel Hawthorne","Sylvia Plath","White / Caucasian","Man",61,1,1,25
-"treat","high",1,0,1,1,1,0,1,1,1,3,3,3,1,"Ernest Hemingway","Maya Angelou","Virginia Woolf","George Orwell","Jack London","Ayn Rand","Charles Dickens","White / Caucasian","Man",54,1,1,25
-"treat","high",1,1,1,0,1,0,1,1,0,1,2,4,4,"Jack London","J.K. Rowling","Rudyard Kipling","Charles Dickens","Ernest Hemingway","George Orwell","Victor Hugo","White / Caucasian","Man",69,1,1,25
-"treat","low",1,1,1,0,1,0,0,0,1,1,0,2,2,"Oscar Wilde","F. Scott Fitzgerald","Neil Gaiman","Ray Bradbury","J.D. Salinger","J.K. Rowling","John Steinbeck","Black or African American","Woman",33,0,0,25
-"control","high",0,1,1,1,0,1,1,0,1,3,3,2,1,"Maya Angelou","Jack London","Ernest Hemingway","Sylvia Plath","Zadie Smith","Neil Gaiman","Margaret Atwood","White / Caucasian","Woman",73,0,1,25
-"treat","low",1,1,1,0,1,0,0,0,1,1,2,3,1,"George Orwell","Ernest Hemingway","Albert Camus","Jane Austen","Charles Dickens","F. Scott Fitzgerald","John Steinbeck","Asian / Pacific Islander","Man",35,1,0,25
-"control","high",0,1,1,1,0,1,1,1,1,3,2,4,3,"Jane Austen","Ernest Hemingway","Charles Dickens","Virginia Woolf","J.K. Rowling","J.R.R. Tolkien","Lucy Maud","White / Caucasian","Man",60,1,1,25
-"control","low",0,1,1,1,0,0,0,0,0,1,3,4,1,"Oscar Wilde","F. Scott Fitzgerald","Charles Dickens","George Orwell","Jane Austen","Nathaniel Hawthorne","Antoine de Saint-Exupéry","White / Caucasian","Woman",60,0,1,25
-"control","high",0,1,1,1,0,1,0,0,1,5,4,2,1,"Maya Angelou","Jane Austen","Sylvia Plath","Virginia Woolf","Charles Dickens","Zadie Smith","J.K. Rowling","Black or African American","Woman",29,0,0,25
-"control","high",0,1,1,1,0,0,1,0,0,3,3,2,3,"Maya Angelou","J.R.R. Tolkien","J.K. Rowling","Ernest Hemingway","George Orwell","Margaret Atwood","Neil Gaiman","White / Caucasian","Man",49,1,1,25
-"treat","high",1,0,1,1,1,1,1,1,1,4,4,1,2,"Zadie Smith","Maya Angelou","Margaret Atwood","Sylvia Plath","J.R.R. Tolkien","George Orwell","Lucy Maud","Hispanic / Latinx","Non-binary",39,0,0,25
-"control","low",0,1,1,1,0,1,0,0,0,1,1,3,3,"F. Scott Fitzgerald","Michael Crichton","Ernest Hemingway","J.K. Rowling","Charles Dickens","J.D. Salinger","Jane Austen","White / Caucasian","Woman",42,0,1,25
-"control","low",0,1,1,1,0,1,0,0,0,1,2,3,3,"George Orwell","Charles Dickens","J.K. Rowling","F. Scott Fitzgerald","Ernest Hemingway","Ray Bradbury","Jane Austen","Hispanic / Latinx","Man",31,1,0,25
-"treat","high",1,1,1,0,1,0,0,1,0,2,1,4,4,"J.R.R. Tolkien","Ernest Hemingway","Charles Dickens","J.K. Rowling","Jane Austen","Rudyard Kipling","Oscar Wilde","White / Caucasian","Man",42,1,1,25
-"treat","high",1,1,1,0,1,1,0,0,0,2,3,3,2,"Ernest Hemingway","Jane Austen","J.R.R. Tolkien","Maya Angelou","Charles Dickens","George Orwell","Ayn Rand","Hispanic / Latinx","Man",43,1,0,25
-"control","high",0,1,1,1,0,0,1,1,1,2,4,4,2,"George Orwell","J.R.R. Tolkien","Maya Angelou","Ernest Hemingway","Charles Dickens","Virginia Woolf","Herman Melville","White / Caucasian","Woman",61,0,1,25
-"control","high",0,1,1,1,0,0,1,1,1,1,2,4,4,"George Orwell","Charles Dickens","J.K. Rowling","J.R.R. Tolkien","Jack London","James Joyce","Jorge Luis Borges","Asian / Pacific Islander","Man",28,1,0,25
-"treat","low",1,1,1,0,1,1,0,0,0,0,1,2,1,"Neil Gaiman","John Steinbeck","George Orwell","F. Scott Fitzgerald","Oscar Wilde","J.D. Salinger","Zadie Smith","Hispanic / Latinx","Man",36,1,0,25
-"treat","low",1,1,1,0,1,0,0,1,0,4,3,1,1,"Ray Bradbury","Virginia Woolf","Sylvia Plath","George Orwell","Jane Austen","Zadie Smith","Ernest Hemingway","White / Caucasian","Woman",44,0,1,25
-"control","high",0,1,1,1,0,0,0,1,1,4,2,3,4,"Lucy Maud","J.R.R. Tolkien","Jack London","Jane Austen","Maya Angelou","J.K. Rowling","Rudyard Kipling","White / Caucasian","Woman",53,0,1,25
-"control","low",0,1,1,1,0,0,0,0,0,1,2,2,3,"Kurt Vonnegut","George Orwell","J.K. Rowling","Charles Dickens","Michael Crichton","F. Scott Fitzgerald","Neil Gaiman","White / Caucasian","Man",46,1,1,25
-"control","high",0,1,1,1,0,1,1,0,0,3,3,2,2,"Margaret Atwood","Victor Hugo","Zadie Smith","George Orwell","Isabel Allende","Oscar Wilde","Maya Angelou","White / Caucasian","Woman",41,0,1,25
-"control","high",0,1,1,1,0,1,1,0,1,2,4,3,1,"Ernest Hemingway","Charles Dickens","Maya Angelou","Oscar Wilde","Sylvia Plath","George Orwell","Margaret Atwood","White / Caucasian","Woman",61,0,1,25
-"treat","low",1,1,1,0,1,1,0,0,0,2,2,2,4,"Charles Dickens","Neil Gaiman","J.K. Rowling","Michael Crichton","Ray Bradbury","Virginia Woolf","Jane Austen","Asian / Pacific Islander","Man",36,1,0,25
-"control","low",0,1,1,1,0,0,1,1,1,3,2,1,4,"Virginia Woolf","John Steinbeck","J.K. Rowling","Sylvia Plath","Ray Bradbury","Michael Crichton","Charles Dickens","Hispanic / Latinx","Woman",30,0,0,25
-"treat","low",1,1,1,0,1,0,0,0,0,1,1,2,0,"Jane Austen","Oscar Wilde","Nathaniel Hawthorne","Gabriel Garcia Marquez","Antoine de Saint-Exupéry","Albert Camus","Flann O'Brien","White / Caucasian","Woman",32,0,1,25
-"treat","low",1,1,1,0,1,0,1,1,1,4,2,1,1,"Jane Austen","J.D. Salinger","Ernest Hemingway","Joyce Carol Oates","Sylvia Plath","Zadie Smith","Charles Dickens","White / Caucasian","Woman",48,0,1,25
-"treat","high",1,0,1,1,1,0,0,1,0,3,4,3,3,"Joyce Carol Oates","Isabel Allende","George Orwell","Victor Hugo","J.R.R. Tolkien","Virginia Woolf","Ernest Hemingway","White / Caucasian","Woman",66,0,1,25
-"control","low",0,1,1,1,0,0,1,0,0,3,2,2,1,"Jane Austen","Virginia Woolf","Zadie Smith","Kurt Vonnegut","Gabriel Garcia Marquez","Charles Dickens","George Orwell","White / Caucasian","Woman",57,0,1,25
-"control","high",0,1,1,1,0,1,0,0,0,6,3,0,2,"Jane Austen","Joyce Carol Oates","Maya Angelou","J.K. Rowling","Zadie Smith","Sylvia Plath","Ayn Rand","Black or African American","Woman",30,0,0,25
-"control","high",0,1,1,1,0,1,0,0,1,2,4,2,4,"Neil Gaiman","J.R.R. Tolkien","J.K. Rowling","Margaret Atwood","George Orwell","Charles Dickens","Isabel Allende","White / Caucasian","Man",39,1,1,25
-"control","low",0,1,1,1,0,0,0,0,0,2,2,3,3,"Michael Crichton","Jane Austen","F. Scott Fitzgerald","Nathaniel Hawthorne","J.K. Rowling","Charles Dickens","Gabriel Garcia Marquez","White / Caucasian","Woman",47,0,1,25
-"control","high",0,1,1,1,0,0,1,1,1,3,2,3,2,"Charles Dickens","Maya Angelou","Jane Austen","Ernest Hemingway","J.K. Rowling","Oscar Wilde","Herman Melville","White / Caucasian","Man",39,1,1,25
-"control","high",0,1,1,1,0,1,0,0,1,2,2,5,5,"Charles Dickens","Jane Austen","Lucy Maud","J.R.R. Tolkien","Jack London","Rudyard Kipling","J.K. Rowling","White / Caucasian","Woman",57,0,1,25
-"treat","low",1,1,1,0,1,0,0,1,0,2,1,2,4,"Charles Dickens","F. Scott Fitzgerald","J.K. Rowling","Michael Crichton","Ray Bradbury","Jane Austen","Ernest Hemingway","White / Caucasian","Man",43,1,1,25
-"treat","high",1,1,1,0,1,1,0,0,1,2,3,4,3,"Maya Angelou","Charles Dickens","Sylvia Plath","Rudyard Kipling","Jack London","Ernest Hemingway","Isabel Allende","Black or African American","Man",39,1,0,25
-"control","high",0,1,1,1,0,0,0,1,0,4,2,2,3,"Maya Angelou","Zadie Smith","Isabel Allende","Jane Austen","Charles Dickens","Rudyard Kipling","James Joyce","Black or African American","Woman",56,0,0,25
-"control","high",0,1,1,1,0,1,1,1,1,3,3,4,2,"Maya Angelou","J.R.R. Tolkien","Virginia Woolf","Jack London","Ernest Hemingway","Sylvia Plath","Lucy Maud","Black or African American","Man",40,1,0,25
-"treat","low",1,1,1,0,1,0,0,0,1,2,3,3,3,"Charles Dickens","Ray Bradbury","George Orwell","Ernest Hemingway","J.K. Rowling","Virginia Woolf","Michael Crichton","White / Caucasian","Man",51,1,1,25
-"control","low",0,1,1,1,0,1,1,1,0,2,2,0,1,"Joyce Carol Oates","George Orwell","Kurt Vonnegut","J.D. Salinger","Gabriel Garcia Marquez","Zadie Smith","Virginia Woolf","White / Caucasian","Woman",39,0,1,25
-"control","low",0,1,1,1,0,0,0,0,1,1,2,3,2,"J.K. Rowling","George Orwell","Charles Dickens","J.D. Salinger","Oscar Wilde","F. Scott Fitzgerald","Michael Crichton","White / Caucasian","Man",28,1,1,25
-"treat","low",1,0,1,1,1,0,1,1,1,3,1,4,1,"Jane Austen","F. Scott Fitzgerald","Ernest Hemingway","Virginia Woolf","Oscar Wilde","J.K. Rowling","Charles Dickens","Asian / Pacific Islander","Woman",24,0,0,25
-"treat","high",1,1,1,0,1,0,0,1,1,3,2,3,2,"J.K. Rowling","Jane Austen","George Orwell","Jack London","James Joyce","Virginia Woolf","J.R.R. Tolkien","White / Caucasian","Man",38,1,1,25
-"control","low",0,1,1,1,0,0,0,0,0,2,2,3,3,"Charles Dickens","J.K. Rowling","Gabriel Garcia Marquez","Virginia Woolf","Ernest Hemingway","Michael Crichton","Neil Gaiman","White / Caucasian","Woman",35,0,1,25
-"control","high",0,1,1,1,0,1,1,0,0,1,2,4,5,"J.K. Rowling","George Orwell","J.R.R. Tolkien","Herman Melville","Jack London","Rudyard Kipling","Maya Angelou","White / Caucasian","Man",24,1,1,25
-"control","low",0,1,1,1,0,0,1,0,0,2,0,2,2,"Ernest Hemingway","Neil Gaiman","Jane Austen","Michael Crichton","F. Scott Fitzgerald","J.K. Rowling","George Orwell","Asian / Pacific Islander","Man",47,1,0,25
-"control","high",0,1,1,1,0,0,0,1,1,3,3,2,2,"Ernest Hemingway","George Orwell","Margaret Atwood","Maya Angelou","J.R.R. Tolkien","Jane Austen","Jack London","White / Caucasian","Man",31,1,1,25
-"treat","high",1,1,1,0,1,0,1,1,1,3,2,4,3,"Jane Austen","Isabel Allende","Ernest Hemingway","J.R.R. Tolkien","Charles Dickens","Virginia Woolf","Herman Melville","White / Caucasian","Woman",55,0,1,25
-"treat","low",1,1,1,0,1,1,0,0,0,2,2,2,2,"Virginia Woolf","Kurt Vonnegut","Joyce Carol Oates","Gabriel Garcia Marquez","Oscar Wilde","Ray Bradbury","Jane Austen","White / Caucasian","Man",42,1,1,25
-"control","low",0,1,1,1,0,1,1,1,0,2,3,2,4,"Ernest Hemingway","Michael Crichton","Ray Bradbury","Charles Dickens","Sylvia Plath","Joyce Carol Oates","Virginia Woolf","White / Caucasian","Man",35,1,1,25
-"treat","high",1,1,1,0,1,1,1,0,1,3,4,2,3,"George Orwell","Zadie Smith","Herman Melville","Maya Angelou","Isabel Allende","Jorge Luis Borges","Margaret Atwood","White / Caucasian","Man",71,1,1,25
-"control","low",0,1,1,1,0,0,0,1,0,1,2,4,2,"Jane Austen","F. Scott Fitzgerald","Charles Dickens","Nathaniel Hawthorne","Ernest Hemingway","Ray Bradbury","Oscar Wilde","White / Caucasian","Woman",64,0,1,25
-"treat","low",1,1,1,0,1,0,0,0,1,0,3,4,1,"Nathaniel Hawthorne","Charles Dickens","George Orwell","F. Scott Fitzgerald","Ernest Hemingway","Edward Upward","Michael Crichton","Black or African American","Man",43,1,0,25
-"control","high",0,1,1,1,0,0,0,1,1,2,3,4,4,"Maya Angelou","Ernest Hemingway","J.K. Rowling","Charles Dickens","Rudyard Kipling","Herman Melville","J.R.R. Tolkien","Black or African American","Man",57,1,0,25
-"treat","high",1,1,0,1,1,0,1,1,1,2,2,4,3,"Jane Austen","Margaret Atwood","Oscar Wilde","Ernest Hemingway","J.R.R. Tolkien","Herman Melville","Charles Dickens","Asian / Pacific Islander","Man",30,1,0,25
-"control","low",0,1,1,1,0,0,1,1,0,2,3,1,2,"Joyce Carol Oates","Kurt Vonnegut","Albert Camus","George Orwell","Zadie Smith","Charles Dickens","Nathaniel Hawthorne","White / Caucasian","Man",57,1,1,25
-"control","low",0,1,1,1,0,0,0,0,0,2,2,2,5,"Charles Dickens","J.K. Rowling","John Steinbeck","Joyce Carol Oates","Ray Bradbury","Ernest Hemingway","Kurt Vonnegut","Black or African American","Man",29,1,0,25
-"treat","high",1,1,0,1,1,0,0,1,1,2,3,4,4,"Charles Dickens","George Orwell","Ernest Hemingway","Jack London","J.K. Rowling","Lucy Maud","Rudyard Kipling","White / Caucasian","Man",58,1,1,25
-"control","low",0,1,1,1,0,0,0,1,0,2,1,1,5,"Michael Crichton","J.K. Rowling","John Steinbeck","Ray Bradbury","Joyce Carol Oates","F. Scott Fitzgerald","Ernest Hemingway","White / Caucasian","Woman",60,0,1,25
-"treat","low",1,0,1,1,1,0,0,0,1,6,3,1,2,"Zadie Smith","J.K. Rowling","Joyce Carol Oates","Sylvia Plath","Virginia Woolf","Jane Austen","Ray Bradbury","Black or African American","Woman",52,0,0,25
-"control","low",0,1,1,1,0,1,1,0,0,0,1,4,2,"Ray Bradbury","Charles Dickens","Ernest Hemingway","Oscar Wilde","F. Scott Fitzgerald","J.D. Salinger","Sylvia Plath","White / Caucasian","Woman",65,0,1,25
-"treat","low",1,1,0,1,1,0,0,0,1,2,2,1,3,"George Orwell","Charles Dickens","Jane Austen","J.K. Rowling","Antoine de Saint-Exupéry","Michael Crichton","Ray Bradbury","White / Caucasian","Woman",50,0,1,25
-"treat","low",1,1,0,1,1,0,0,1,0,2,3,2,2,"Virginia Woolf","Kurt Vonnegut","Charles Dickens","Ray Bradbury","Neil Gaiman","Sylvia Plath","Ernest Hemingway","White / Caucasian","Woman",54,0,1,25
-"control","high",0,1,1,1,0,1,1,0,1,6,3,1,3,"Joyce Carol Oates","Jane Austen","Ayn Rand","Lucy Maud","Maya Angelou","Isabel Allende","Margaret Atwood","Asian / Pacific Islander","Woman",45,0,0,25
-"treat","high",1,1,1,0,1,1,1,1,1,2,3,3,2,"Zadie Smith","George Orwell","J.R.R. Tolkien","Jorge Luis Borges","Maya Angelou","Oscar Wilde","Lucy Maud","White / Caucasian","Woman",35,0,1,25
-"control","low",0,1,1,1,0,1,0,0,0,3,4,2,2,"Charles Dickens","Joyce Carol Oates","Jane Austen","Virginia Woolf","George Orwell","Edward Upward","Zadie Smith","White / Caucasian","Woman",41,0,1,25
-"treat","high",1,1,0,1,1,1,1,0,0,1,3,6,2,"J.R.R. Tolkien","James Joyce","Herman Melville","Virginia Woolf","Victor Hugo","Oscar Wilde","Sylvia Plath","White / Caucasian","Man",35,1,1,25
-"treat","high",1,1,1,0,1,1,0,0,1,3,3,2,2,"George Orwell","Jane Austen","Maya Angelou","Margaret Atwood","J.R.R. Tolkien","James Joyce","Isabel Allende","White / Caucasian","Woman",40,0,1,25
-"control","low",0,1,1,1,0,1,1,1,0,2,2,1,6,"Charles Dickens","Michael Crichton","J.K. Rowling","Ray Bradbury","John Steinbeck","Joyce Carol Oates","Virginia Woolf","White / Caucasian","Man",33,1,1,25
-"treat","high",1,1,0,1,1,0,0,1,0,2,1,4,4,"J.K. Rowling","J.R.R. Tolkien","Jack London","Charles Dickens","Jane Austen","Ernest Hemingway","Oscar Wilde","White / Caucasian","Man",46,1,1,25
-"treat","low",1,1,1,0,1,0,0,1,0,6,3,1,2,"Jane Austen","J.K. Rowling","Zadie Smith","Joyce Carol Oates","Sylvia Plath","Virginia Woolf","Ernest Hemingway","White / Caucasian","Woman",38,0,1,25
-"control","high",0,1,1,1,0,1,1,0,0,1,3,4,4,"Charles Dickens","Rudyard Kipling","Isabel Allende","Neil Gaiman","Herman Melville","Ernest Hemingway","Sylvia Plath","White / Caucasian","Man",51,1,1,25
-"treat","low",1,1,1,0,1,1,1,0,1,3,2,2,1,"J.K. Rowling","Zadie Smith","Virginia Woolf","J.D. Salinger","George Orwell","Oscar Wilde","Joyce Carol Oates","Black or African American","Woman",47,0,0,25
-"treat","low",1,1,1,0,1,0,0,0,0,3,3,4,1,"Virginia Woolf","Oscar Wilde","Sylvia Plath","Joyce Carol Oates","Ernest Hemingway","F. Scott Fitzgerald","Antoine de Saint-Exupéry","White / Caucasian","Woman",24,0,1,25
-"treat","low",1,1,1,0,1,1,1,1,0,2,3,3,1,"Jane Austen","Sylvia Plath","Oscar Wilde","Nathaniel Hawthorne","Kurt Vonnegut","Charles Dickens","Virginia Woolf","White / Caucasian","Man",53,1,1,25
-"treat","low",1,1,0,1,1,1,0,0,1,3,1,1,2,"Zadie Smith","Jane Austen","Gabriel Garcia Marquez","F. Scott Fitzgerald","Michael Crichton","Joyce Carol Oates","J.K. Rowling","Black or African American","Woman",41,0,0,25
-"treat","low",1,0,1,1,1,1,1,0,0,3,3,3,2,"Virginia Woolf","J.K. Rowling","F. Scott Fitzgerald","George Orwell","Charles Dickens","Jane Austen","Sylvia Plath","White / Caucasian","Woman",57,0,1,25
-"treat","high",1,0,1,1,1,1,1,0,1,0,1,6,3,"Ernest Hemingway","J.R.R. Tolkien","Rudyard Kipling","Herman Melville","Oscar Wilde","James Joyce","Joyce Carol Oates","White / Caucasian","Man",71,1,1,25
-"control","low",0,1,1,1,0,1,0,0,0,0,2,2,2,"F. Scott Fitzgerald","Ray Bradbury","George Orwell","Gabriel Garcia Marquez","Charles Dickens","Edward Upward","Jane Austen","Black or African American","Man",50,1,0,25
-"treat","high",1,1,0,1,1,1,1,0,0,3,2,2,4,"J.K. Rowling","George Orwell","J.R.R. Tolkien","Jane Austen","Charles Dickens","Isabel Allende","Maya Angelou","White / Caucasian","Man",45,1,1,25
-"control","high",0,1,1,1,0,0,0,1,1,2,2,4,2,"James Joyce","Ernest Hemingway","Charles Dickens","Maya Angelou","Jack London","Ayn Rand","J.R.R. Tolkien","White / Caucasian","Man",52,1,1,25
-"control","low",0,1,1,1,0,0,0,0,0,1,2,3,2,"F. Scott Fitzgerald","John Steinbeck","Jane Austen","Charles Dickens","J.D. Salinger","Nathaniel Hawthorne","Antoine de Saint-Exupéry","Asian / Pacific Islander","Man",37,1,0,25
-"control","high",0,1,1,1,0,0,1,0,0,3,3,2,2,"Jane Austen","J.K. Rowling","Jorge Luis Borges","Neil Gaiman","Oscar Wilde","Sylvia Plath","George Orwell","Asian / Pacific Islander","Woman",29,0,0,25
-"treat","high",1,0,1,1,1,1,1,0,0,6,2,2,3,"J.K. Rowling","Virginia Woolf","Jane Austen","Lucy Maud","Ayn Rand","Isabel Allende","Maya Angelou","Asian / Pacific Islander","Woman",20,0,0,25
-"treat","high",1,1,1,0,1,0,1,0,0,3,2,3,2,"Ernest Hemingway","J.R.R. Tolkien","Maya Angelou","Oscar Wilde","Ayn Rand","Margaret Atwood","George Orwell","Hispanic / Latinx","Woman",59,0,0,25
-"control","high",0,1,1,1,0,1,1,1,1,3,4,4,2,"Virginia Woolf","Maya Angelou","Sylvia Plath","J.R.R. Tolkien","Charles Dickens","Oscar Wilde","Lucy Maud","White / Caucasian","Man",36,1,1,25
-"control","low",0,1,1,1,0,0,0,0,0,4,3,1,2,"Sylvia Plath","Gabriel Garcia Marquez","Zadie Smith","Joyce Carol Oates","Ray Bradbury","Virginia Woolf","George Saunders","White / Caucasian","Man",33,1,1,25
-"control","high",0,1,1,1,0,0,0,1,1,3,3,4,4,"J.K. Rowling","Jane Austen","Lucy Maud","J.R.R. Tolkien","Charles Dickens","Victor Hugo","Rudyard Kipling","White / Caucasian","Woman",64,0,1,25
-"treat","high",1,1,1,0,1,0,1,1,1,4,3,2,3,"Maya Angelou","Margaret Atwood","Charles Dickens","Ernest Hemingway","Jane Austen","Isabel Allende","Herman Melville","White / Caucasian","Woman",28,0,1,25
-"control","high",0,1,1,1,0,1,0,0,0,3,4,4,3,"Margaret Atwood","Charles Dickens","J.R.R. Tolkien","Virginia Woolf","Maya Angelou","Ernest Hemingway","Jane Austen","Black or African American","Man",62,1,0,25
-"control","high",0,1,1,1,0,0,1,0,0,6,4,1,2,"Margaret Atwood","Sylvia Plath","Virginia Woolf","Jane Austen","Isabel Allende","Maya Angelou","George Orwell","Hispanic / Latinx","Woman",33,0,0,25
-"treat","high",1,1,1,0,1,0,1,0,0,1,3,5,3,"Victor Hugo","James Joyce","Zadie Smith","Jack London","Herman Melville","Charles Dickens","George Orwell","White / Caucasian","Woman",74,0,1,25
-"treat","low",1,1,1,0,1,0,0,0,0,0,2,3,2,"Kurt Vonnegut","Ernest Hemingway","Ray Bradbury","Oscar Wilde","George Orwell","Charles Dickens","J.D. Salinger","White / Caucasian","Man",58,1,1,25
-"control","low",0,1,1,1,0,0,0,0,1,3,0,0,2,"Zadie Smith","Jane Austen","Neil Gaiman","Michael Crichton","Albert Camus","J.K. Rowling","Ray Bradbury","White / Caucasian","Woman",46,0,1,25
-"control","low",0,1,1,1,0,1,0,0,1,3,2,1,1,"George Orwell","Jane Austen","Ray Bradbury","Virginia Woolf","Zadie Smith","Gabriel Garcia Marquez","J.K. Rowling","White / Caucasian","Woman",26,0,1,25
-"control","low",0,1,1,1,0,0,0,1,0,1,2,2,4,"J.K. Rowling","Ernest Hemingway","Charles Dickens","John Steinbeck","Michael Crichton","George Orwell","F. Scott Fitzgerald","White / Caucasian","Man",40,1,1,25
-"treat","low",1,0,1,1,1,0,0,0,1,2,3,4,3,"Charles Dickens","Ernest Hemingway","Virginia Woolf","J.K. Rowling","Michael Crichton","Nathaniel Hawthorne","John Steinbeck","White / Caucasian","Man",56,1,1,25
-"treat","high",1,0,1,1,1,1,1,0,0,2,2,4,3,"James Joyce","Jane Austen","Charles Dickens","Jack London","Ernest Hemingway","Margaret Atwood","Maya Angelou","Hispanic / Latinx","Non-binary",63,0,0,25
-"control","high",0,1,1,1,0,0,1,0,0,3,3,3,3,"Charles Dickens","Jane Austen","J.R.R. Tolkien","Margaret Atwood","Ernest Hemingway","Maya Angelou","George Orwell","White / Caucasian","Man",54,1,1,25
-"control","low",0,1,1,1,0,1,0,0,0,1,1,2,2,"J.D. Salinger","Albert Camus","Charles Dickens","Jane Austen","Ernest Hemingway","Michael Crichton","Zadie Smith","White / Caucasian","Man",39,1,1,25
-"treat","low",1,0,1,1,1,1,0,0,0,1,1,2,4,"Gabriel Garcia Marquez","John Steinbeck","J.K. Rowling","Michael Crichton","Charles Dickens","Ernest Hemingway","Jane Austen","White / Caucasian","Man",52,1,1,25
-"treat","low",1,0,1,1,1,1,0,0,0,3,1,0,2,"Neil Gaiman","Antoine de Saint-Exupéry","Kurt Vonnegut","Zadie Smith","J.K. Rowling","Joyce Carol Oates","Jane Austen","Asian / Pacific Islander","Woman",40,0,0,25
-"control","low",0,1,1,1,0,0,0,0,1,2,1,3,2,"Jane Austen","George Saunders","Charles Dickens","Oscar Wilde","F. Scott Fitzgerald","J.K. Rowling","Michael Crichton","Black or African American","Woman",33,0,0,25
-"treat","low",1,0,1,1,1,0,0,0,1,2,2,2,3,"Charles Dickens","Jane Austen","J.K. Rowling","George Orwell","F. Scott Fitzgerald","Ray Bradbury","John Steinbeck","White / Caucasian","Man",42,1,1,25
-"treat","low",1,1,1,0,1,0,1,1,0,0,2,3,2,"Charles Dickens","George Orwell","F. Scott Fitzgerald","Ernest Hemingway","John Steinbeck","J.D. Salinger","Nathaniel Hawthorne","White / Caucasian","Man",35,1,1,25
-"control","low",0,1,1,1,0,0,0,1,0,2,2,2,0,"Oscar Wilde","Sylvia Plath","Jane Austen","F. Scott Fitzgerald","George Orwell","Antoine de Saint-Exupéry","Ernest Hemingway","White / Caucasian","Man",40,1,1,25
-"control","high",0,1,1,1,0,1,1,1,1,2,4,3,2,"Neil Gaiman","Herman Melville","Jane Austen","Ernest Hemingway","Maya Angelou","Charles Dickens","Lucy Maud","Black or African American","Woman",45,0,0,25
-"control","low",0,1,1,1,0,0,0,1,0,1,1,2,2,"J.K. Rowling","Gabriel Garcia Marquez","Nathaniel Hawthorne","F. Scott Fitzgerald","Michael Crichton","J.D. Salinger","Oscar Wilde","Black or African American","Man",38,1,0,25
-"treat","low",1,1,1,0,1,0,0,0,0,0,2,3,1,"Oscar Wilde","Ray Bradbury","Nathaniel Hawthorne","Edward Upward","F. Scott Fitzgerald","George Orwell","Albert Camus","White / Caucasian","Man",64,1,1,25
-"treat","low",1,0,1,1,1,1,0,0,0,1,2,1,3,"J.K. Rowling","George Orwell","Charles Dickens","J.D. Salinger","John Steinbeck","Kurt Vonnegut","Zadie Smith","White / Caucasian","Woman",69,0,1,25
-"treat","high",1,1,1,0,1,0,1,0,0,3,2,3,3,"Oscar Wilde","Margaret Atwood","Maya Angelou","J.R.R. Tolkien","James Joyce","Isabel Allende","Neil Gaiman","White / Caucasian","Woman",51,0,1,25
-"control","low",0,1,1,1,0,1,1,1,0,3,2,0,2,"Joyce Carol Oates","Sylvia Plath","Jane Austen","Antoine de Saint-Exupéry","Michael Crichton","Gabriel Garcia Marquez","Virginia Woolf","Asian / Pacific Islander","Man",48,1,0,25
-"control","low",0,1,1,1,0,0,0,0,1,1,1,3,2,"Charles Dickens","Jane Austen","F. Scott Fitzgerald","Oscar Wilde","John Steinbeck","Antoine de Saint-Exupéry","Michael Crichton","White / Caucasian","Man",53,1,1,25
-"control","low",0,1,1,1,0,0,1,0,0,0,2,4,1,"Charles Dickens","Nathaniel Hawthorne","Kurt Vonnegut","Ernest Hemingway","J.D. Salinger","F. Scott Fitzgerald","George Orwell","White / Caucasian","Man",49,1,1,25
-"control","high",0,1,1,1,0,0,1,1,1,2,2,4,2,"J.K. Rowling","J.R.R. Tolkien","Ernest Hemingway","Oscar Wilde","George Orwell","Virginia Woolf","Charles Dickens","White / Caucasian","Man",37,1,1,25
-"control","high",0,1,1,1,0,0,0,1,0,1,2,5,2,"Jack London","Victor Hugo","Ernest Hemingway","Oscar Wilde","Jane Austen","Charles Dickens","James Joyce","White / Caucasian","Man",65,1,1,25
-"control","high",0,1,1,1,0,0,1,1,1,0,2,5,3,"Ernest Hemingway","Charles Dickens","Rudyard Kipling","Oscar Wilde","George Orwell","Jack London","Herman Melville","White / Caucasian","Man",62,1,1,25
-"treat","high",1,1,1,0,1,1,1,0,1,2,3,4,2,"J.R.R. Tolkien","Virginia Woolf","Jane Austen","Charles Dickens","Ernest Hemingway","George Orwell","Margaret Atwood","White / Caucasian","Woman",52,0,1,25
-"control","low",0,1,1,1,0,0,0,1,0,1,3,3,2,"Jane Austen","Michael Crichton","Charles Dickens","George Orwell","F. Scott Fitzgerald","Nathaniel Hawthorne","Oscar Wilde","White / Caucasian","Woman",33,0,1,25
-"treat","low",1,0,1,1,1,0,0,0,0,0,2,2,3,"George Orwell","Ray Bradbury","Charles Dickens","J.D. Salinger","Ernest Hemingway","John Steinbeck","Kurt Vonnegut","White / Caucasian","Man",49,1,1,25
-"treat","low",1,1,1,0,1,1,0,0,0,2,2,3,3,"Jane Austen","F. Scott Fitzgerald","Nathaniel Hawthorne","J.K. Rowling","Charles Dickens","Michael Crichton","Zadie Smith","White / Caucasian","Woman",37,0,1,25
-"treat","high",1,0,1,1,1,1,0,0,0,3,4,4,2,"Charles Dickens","Ernest Hemingway","Sylvia Plath","Maya Angelou","Rudyard Kipling","Virginia Woolf","Zadie Smith","Hispanic / Latinx","Woman",52,0,0,25
-"treat","high",1,1,1,0,1,1,1,1,1,3,2,2,5,"Isabel Allende","Neil Gaiman","J.K. Rowling","Margaret Atwood","Jack London","Rudyard Kipling","Lucy Maud","White / Caucasian","Woman",63,0,1,25
-"control","high",0,1,1,1,0,1,1,1,0,6,3,1,4,"Maya Angelou","Lucy Maud","Margaret Atwood","J.K. Rowling","Jane Austen","Isabel Allende","Virginia Woolf","American Indian or Alaskan Native","Woman",47,0,0,25
-"treat","low",1,0,1,1,1,0,0,0,0,0,0,2,2,"John Steinbeck","Michael Crichton","Gabriel Garcia Marquez","Oscar Wilde","Ernest Hemingway","Antoine de Saint-Exupéry","Edward Upward","Hispanic / Latinx","Woman",39,0,0,25
-"treat","low",1,0,1,1,1,0,0,1,0,2,3,2,3,"Michael Crichton","J.K. Rowling","Jane Austen","Charles Dickens","Nathaniel Hawthorne","George Orwell","F. Scott Fitzgerald","White / Caucasian","Woman",36,0,1,25
-"treat","low",1,0,1,1,1,1,0,0,0,3,3,1,2,"Sylvia Plath","Gabriel Garcia Marquez","Kurt Vonnegut","Joyce Carol Oates","Virginia Woolf","John Steinbeck","Zadie Smith","White / Caucasian","Woman",23,0,1,25
-"control","low",0,1,1,1,0,0,0,0,0,2,3,2,2,"George Orwell","Charles Dickens","Sylvia Plath","Ernest Hemingway","Jane Austen","John Steinbeck","Edward Upward","White / Caucasian","Man",44,1,1,25
-"treat","high",1,1,1,0,1,1,0,0,1,3,4,2,2,"Charles Dickens","George Orwell","Ernest Hemingway","Jane Austen","Maya Angelou","Margaret Atwood","J.K. Rowling","White / Caucasian","Woman",58,0,1,25
-"control","low",0,1,1,1,0,1,1,0,1,1,2,4,2,"Charles Dickens","Jane Austen","Oscar Wilde","John Steinbeck","Nathaniel Hawthorne","Ernest Hemingway","Joyce Carol Oates","White / Caucasian","Man",27,1,1,25
-"control","high",0,1,1,1,0,1,0,0,1,3,4,4,2,"Maya Angelou","Neil Gaiman","Ernest Hemingway","Rudyard Kipling","Lucy Maud","Virginia Woolf","Isabel Allende","Black or African American","Man",54,1,0,25
-"treat","high",1,1,1,0,1,0,0,1,1,6,5,1,2,"Joyce Carol Oates","Virginia Woolf","Maya Angelou","Margaret Atwood","Sylvia Plath","Jane Austen","J.R.R. Tolkien","White / Caucasian","Woman",41,0,1,25
-"treat","high",1,1,0,1,1,1,1,0,0,6,2,0,3,"Zadie Smith","Isabel Allende","J.K. Rowling","Joyce Carol Oates","Maya Angelou","Jane Austen","Sylvia Plath","Black or African American","Woman",53,0,0,25
-"treat","high",1,0,1,1,1,1,0,0,0,3,4,3,2,"Sylvia Plath","Oscar Wilde","Joyce Carol Oates","Charles Dickens","Ernest Hemingway","Maya Angelou","Zadie Smith","Black or African American","Woman",53,0,0,25
-"control","low",0,1,1,1,0,0,0,0,1,1,1,2,1,"George Orwell","J.D. Salinger","F. Scott Fitzgerald","Jane Austen","Michael Crichton","Ernest Hemingway","Ray Bradbury","Hispanic / Latinx","Man",29,1,0,25
-"control","high",0,1,1,1,0,1,0,0,1,5,4,1,2,"Zadie Smith","Isabel Allende","Sylvia Plath","Maya Angelou","Joyce Carol Oates","Victor Hugo","J.K. Rowling","Hispanic / Latinx","Woman",41,0,0,25
-"treat","high",1,1,0,1,1,0,1,1,1,2,1,4,2,"Oscar Wilde","J.R.R. Tolkien","Ernest Hemingway","Jack London","Jane Austen","Maya Angelou","Charles Dickens","White / Caucasian","Man",73,1,1,25
-"control","high",0,1,1,1,0,1,0,0,1,2,4,4,4,"Charles Dickens","Oscar Wilde","Ernest Hemingway","Margaret Atwood","Joyce Carol Oates","Herman Melville","Isabel Allende","White / Caucasian","Woman",43,0,1,25
-"treat","low",1,1,1,0,1,0,0,0,1,1,2,3,1,"Charles Dickens","F. Scott Fitzgerald","Neil Gaiman","Oscar Wilde","George Orwell","Jane Austen","Michael Crichton","White / Caucasian","Woman",46,0,1,25
-"control","high",0,1,1,1,0,0,0,1,1,3,3,3,1,"Oscar Wilde","Ernest Hemingway","Jane Austen","George Orwell","Virginia Woolf","Margaret Atwood","J.R.R. Tolkien","White / Caucasian","Man",35,1,1,25
-"control","low",0,1,1,1,0,0,0,1,0,0,3,3,2,"John Steinbeck","George Orwell","Charles Dickens","F. Scott Fitzgerald","J.D. Salinger","Nathaniel Hawthorne","Ernest Hemingway","White / Caucasian","Man",52,1,1,25
-"treat","high",1,1,0,1,1,1,1,0,1,5,1,1,2,"J.K. Rowling","Maya Angelou","Ayn Rand","Rudyard Kipling","Jane Austen","Zadie Smith","Margaret Atwood","Asian / Pacific Islander","Woman",35,0,0,25
-"control","high",0,1,1,1,0,0,1,1,1,3,2,3,5,"Isabel Allende","Rudyard Kipling","J.R.R. Tolkien","Joyce Carol Oates","Margaret Atwood","Ernest Hemingway","Herman Melville","White / Caucasian","Man",39,1,1,25
-"control","low",0,1,1,1,0,0,1,1,0,1,2,0,2,"Ray Bradbury","Sylvia Plath","Kurt Vonnegut","J.D. Salinger","George Orwell","John Steinbeck","Nathaniel Hawthorne","Asian / Pacific Islander","Woman",41,0,0,25
-"treat","low",1,1,1,0,1,1,1,0,1,0,2,1,3,"Kurt Vonnegut","George Orwell","John Steinbeck","Charles Dickens","Ray Bradbury","Gabriel Garcia Marquez","Joyce Carol Oates","White / Caucasian","Woman",49,0,1,25
-"treat","high",1,0,1,1,1,0,0,1,1,3,2,3,3,"Jane Austen","Zadie Smith","Rudyard Kipling","Ernest Hemingway","Margaret Atwood","Herman Melville","J.R.R. Tolkien","Black or African American","Man",39,1,0,25
-"control","high",0,1,1,1,0,0,1,1,1,4,3,3,1,"Oscar Wilde","Ernest Hemingway","Maya Angelou","J.K. Rowling","Virginia Woolf","Sylvia Plath","Charles Dickens","White / Caucasian","Woman",34,0,1,25
-"control","high",0,1,1,1,0,1,1,1,1,1,2,5,4,"Ernest Hemingway","Jack London","Charles Dickens","J.K. Rowling","Rudyard Kipling","Victor Hugo","Lucy Maud","White / Caucasian","Woman",58,0,1,25
-"treat","low",1,1,1,0,1,1,1,1,0,2,2,2,3,"J.K. Rowling","Ernest Hemingway","Michael Crichton","Joyce Carol Oates","George Orwell","F. Scott Fitzgerald","Virginia Woolf","White / Caucasian","Man",38,1,1,25
-"treat","high",1,0,1,1,1,1,0,0,0,3,2,2,4,"J.R.R. Tolkien","Neil Gaiman","J.K. Rowling","Rudyard Kipling","Margaret Atwood","Jane Austen","Zadie Smith","White / Caucasian","Woman",30,0,1,25
-"control","high",0,1,1,1,0,0,0,1,1,2,1,4,4,"Ernest Hemingway","J.K. Rowling","Rudyard Kipling","Herman Melville","Jack London","Ayn Rand","J.R.R. Tolkien","White / Caucasian","Man",39,1,1,25
-"control","low",0,1,1,1,0,0,0,1,0,3,4,3,2,"Charles Dickens","Jane Austen","Ernest Hemingway","Joyce Carol Oates","Virginia Woolf","George Orwell","Oscar Wilde","White / Caucasian","Woman",32,0,1,25
-"control","high",0,1,1,1,0,0,1,1,1,5,4,1,3,"Margaret Atwood","Jane Austen","Maya Angelou","J.K. Rowling","Charles Dickens","Sylvia Plath","Jorge Luis Borges","White / Caucasian","Woman",30,0,1,25
-"control","high",0,1,1,1,0,0,1,1,1,3,1,3,4,"Margaret Atwood","J.R.R. Tolkien","J.K. Rowling","Jane Austen","Ernest Hemingway","Rudyard Kipling","Jorge Luis Borges","American Indian or Alaskan Native","Man",31,1,0,25
-"treat","high",1,1,1,0,1,1,0,0,1,2,3,4,3,"Lucy Maud","Victor Hugo","Ernest Hemingway","George Orwell","J.R.R. Tolkien","J.K. Rowling","Isabel Allende","White / Caucasian","Man",44,1,1,25
-"control","low",0,1,1,1,0,1,1,0,0,2,2,2,1,"J.K. Rowling","George Orwell","Jane Austen","Nathaniel Hawthorne","Oscar Wilde","Neil Gaiman","Sylvia Plath","White / Caucasian","Woman",37,0,1,25
-"treat","low",1,1,1,0,1,0,1,1,0,4,3,2,3,"J.K. Rowling","Jane Austen","Charles Dickens","Sylvia Plath","Virginia Woolf","Michael Crichton","Nathaniel Hawthorne","White / Caucasian","Woman",49,0,1,25
-"control","low",0,1,1,1,0,0,0,0,0,2,2,1,1,"Albert Camus","Neil Gaiman","Gabriel Garcia Marquez","Sylvia Plath","Joyce Carol Oates","F. Scott Fitzgerald","J.D. Salinger","White / Caucasian","Man",51,1,1,25
-"control","high",0,1,1,1,0,0,1,1,1,0,2,5,3,"Oscar Wilde","George Orwell","J.R.R. Tolkien","Ernest Hemingway","Jack London","Herman Melville","Charles Dickens","White / Caucasian","Man",46,1,1,25
-"treat","low",1,1,1,0,1,1,1,0,0,1,1,2,3,"Neil Gaiman","Ray Bradbury","Kurt Vonnegut","J.K. Rowling","Charles Dickens","F. Scott Fitzgerald","Sylvia Plath","White / Caucasian","Woman",74,0,1,25
-"control","high",0,1,1,1,0,1,0,0,0,1,1,4,2,"George Orwell","Jack London","Ayn Rand","J.R.R. Tolkien","Oscar Wilde","James Joyce","Jane Austen","White / Caucasian","Man",53,1,1,25
-"treat","high",1,1,1,0,1,0,1,0,0,1,2,5,4,"Charles Dickens","Ernest Hemingway","J.R.R. Tolkien","J.K. Rowling","Victor Hugo","Rudyard Kipling","George Orwell","White / Caucasian","Man",31,1,1,25
-"treat","high",1,0,1,1,1,1,1,1,1,1,3,4,3,"Charles Dickens","J.R.R. Tolkien","Ernest Hemingway","Jane Austen","George Orwell","Herman Melville","Lucy Maud","White / Caucasian","Woman",67,0,1,25
-"treat","high",1,0,1,1,1,1,1,0,1,3,5,3,1,"Neil Gaiman","Victor Hugo","Charles Dickens","Maya Angelou","Virginia Woolf","Jane Austen","Margaret Atwood","Asian / Pacific Islander","Woman",50,0,0,25
-"control","low",0,1,1,1,0,0,0,1,0,3,3,3,3,"Jane Austen","Nathaniel Hawthorne","Charles Dickens","J.K. Rowling","Virginia Woolf","Michael Crichton","F. Scott Fitzgerald","White / Caucasian","Woman",38,0,1,25
-"control","high",0,1,1,1,0,1,1,1,0,3,1,3,4,"J.R.R. Tolkien","J.K. Rowling","Jane Austen","Charles Dickens","Ernest Hemingway","Isabel Allende","Virginia Woolf","Black or African American","Woman",45,0,0,25
-"treat","low",1,1,1,0,1,0,0,0,1,1,2,3,2,"Charles Dickens","J.K. Rowling","Ernest Hemingway","George Orwell","F. Scott Fitzgerald","Gabriel Garcia Marquez","Ray Bradbury","White / Caucasian","Man",65,1,1,25
-"treat","low",1,1,0,1,1,0,0,0,1,2,2,3,2,"Jane Austen","J.K. Rowling","Antoine de Saint-Exupéry","Ernest Hemingway","Charles Dickens","Nathaniel Hawthorne","John Steinbeck","White / Caucasian","Woman",66,0,1,25
-"control","high",0,1,1,1,0,1,1,0,0,4,2,2,3,"Maya Angelou","Isabel Allende","James Joyce","J.R.R. Tolkien","Zadie Smith","Margaret Atwood","Sylvia Plath","White / Caucasian","Woman",56,0,1,25
-"treat","low",1,1,1,0,1,1,1,0,1,3,2,3,2,"Virginia Woolf","Jane Austen","Charles Dickens","Zadie Smith","Oscar Wilde","Ray Bradbury","Joyce Carol Oates","Black or African American","Woman",42,0,0,25
-"treat","high",1,0,1,1,1,0,0,1,1,3,1,3,4,"Isabel Allende","Zadie Smith","Jack London","Jorge Luis Borges","Anya Seton","Ernest Hemingway","J.R.R. Tolkien","White / Caucasian","Woman",45,0,1,25
-"treat","low",1,1,1,0,1,1,1,0,0,2,1,2,4,"F. Scott Fitzgerald","Michael Crichton","J.K. Rowling","Jane Austen","John Steinbeck","Charles Dickens","Sylvia Plath","White / Caucasian","Woman",56,0,1,25
-"control","high",0,1,1,1,0,0,0,1,1,4,3,3,1,"Sylvia Plath","Jane Austen","J.K. Rowling","Victor Hugo","Virginia Woolf","Oscar Wilde","J.R.R. Tolkien","White / Caucasian","Woman",54,0,1,25
-"control","high",0,1,1,1,0,1,1,0,1,1,2,3,3,"J.R.R. Tolkien","J.K. Rowling","George Orwell","Neil Gaiman","Jack London","Oscar Wilde","Margaret Atwood","Black or African American","Man",35,1,0,25
-"treat","high",1,1,1,0,1,0,1,0,0,2,3,3,2,"Charles Dickens","Jane Austen","George Orwell","Oscar Wilde","J.K. Rowling","Victor Hugo","Neil Gaiman","White / Caucasian","Man",60,1,1,25
-"treat","high",1,0,1,1,1,1,1,0,1,3,2,3,4,"Jane Austen","Isabel Allende","J.K. Rowling","Charles Dickens","J.R.R. Tolkien","Victor Hugo","Margaret Atwood","White / Caucasian","Woman",39,0,1,25
-"treat","high",1,1,1,0,1,0,0,1,0,4,4,2,4,"J.K. Rowling","Margaret Atwood","Maya Angelou","Herman Melville","Jane Austen","Charles Dickens","Ernest Hemingway","White / Caucasian","Woman",70,0,1,25
-"control","low",0,1,1,1,0,1,0,0,1,2,2,2,2,"Jane Austen","Charles Dickens","Ray Bradbury","Gabriel Garcia Marquez","Virginia Woolf","Neil Gaiman","J.K. Rowling","Black or African American","Woman",62,0,0,25
-"control","low",0,1,1,1,0,0,0,0,0,0,1,1,3,"Neil Gaiman","Ray Bradbury","Michael Crichton","George Orwell","John Steinbeck","Ernest Hemingway","Antoine de Saint-Exupéry","White / Caucasian","Man",50,1,1,25
-"control","low",0,1,1,1,0,0,0,0,1,3,3,3,4,"Virginia Woolf","Joyce Carol Oates","J.K. Rowling","Charles Dickens","Ray Bradbury","Ernest Hemingway","Michael Crichton","White / Caucasian","Woman",61,0,1,25
-"treat","low",1,1,1,0,1,0,0,0,1,2,1,3,2,"Jane Austen","J.K. Rowling","Charles Dickens","Ernest Hemingway","Oscar Wilde","J.D. Salinger","Michael Crichton","White / Caucasian","Woman",38,0,1,25
-"treat","low",1,1,0,1,1,1,0,0,0,0,1,2,4,"Michael Crichton","Ernest Hemingway","Ray Bradbury","John Steinbeck","Charles Dickens","Kurt Vonnegut","Jane Austen","White / Caucasian","Man",78,1,1,25
-"control","low",0,1,1,1,0,0,0,0,1,1,1,2,3,"Jane Austen","Charles Dickens","F. Scott Fitzgerald","Ray Bradbury","J.D. Salinger","John Steinbeck","Michael Crichton","White / Caucasian","Woman",58,0,1,25
-"treat","high",1,1,0,1,1,1,0,0,0,3,2,3,3,"J.K. Rowling","J.R.R. Tolkien","Maya Angelou","Jane Austen","Charles Dickens","Oscar Wilde","Zadie Smith","Black or African American","Man",47,1,0,25
-"treat","high",1,1,1,0,1,1,0,0,0,2,3,4,3,"Maya Angelou","Charles Dickens","J.R.R. Tolkien","Ernest Hemingway","Oscar Wilde","Margaret Atwood","Jane Austen","White / Caucasian","Man",33,1,1,25
-"control","high",0,1,1,1,0,1,1,1,0,4,2,3,4,"Ayn Rand","J.R.R. Tolkien","Ernest Hemingway","Lucy Maud","Isabel Allende","Margaret Atwood","Virginia Woolf","White / Caucasian","Man",54,1,1,25
-"control","low",0,1,1,1,0,0,0,1,0,1,2,3,3,"J.K. Rowling","Charles Dickens","George Orwell","Ernest Hemingway","Oscar Wilde","John Steinbeck","F. Scott Fitzgerald","White / Caucasian","Man",38,1,1,25
-"control","high",0,1,1,1,0,1,1,1,0,2,3,3,2,"Jane Austen","George Orwell","Charles Dickens","Maya Angelou","Ernest Hemingway","J.R.R. Tolkien","Virginia Woolf","White / Caucasian","Man",56,1,1,25
-"control","low",0,1,1,1,0,1,0,0,0,3,3,3,2,"Ray Bradbury","Sylvia Plath","Charles Dickens","Oscar Wilde","Jane Austen","Virginia Woolf","Zadie Smith","White / Caucasian","Woman",28,0,1,25
-"control","high",0,1,1,1,0,1,0,0,0,1,2,4,2,"Charles Dickens","J.K. Rowling","Ernest Hemingway","George Orwell","Oscar Wilde","James Joyce","Zadie Smith","White / Caucasian","Man",38,1,1,25
-"treat","high",1,0,1,1,1,0,1,1,1,3,1,3,5,"J.K. Rowling","Jane Austen","Margaret Atwood","J.R.R. Tolkien","Rudyard Kipling","Jack London","Herman Melville","White / Caucasian","Man",29,1,1,25
-"control","high",0,1,1,1,0,0,1,1,1,0,2,5,2,"George Orwell","Ernest Hemingway","Oscar Wilde","J.R.R. Tolkien","James Joyce","Charles Dickens","Herman Melville","White / Caucasian","Woman",71,0,1,25
-"control","low",0,1,1,1,0,0,0,0,1,1,2,4,2,"Charles Dickens","Ernest Hemingway","Oscar Wilde","George Orwell","J.K. Rowling","F. Scott Fitzgerald","John Steinbeck","White / Caucasian","Man",33,1,1,25
-"treat","low",1,0,1,1,1,0,0,0,0,2,2,1,1,"Ray Bradbury","F. Scott Fitzgerald","George Orwell","J.D. Salinger","Zadie Smith","Sylvia Plath","Gabriel Garcia Marquez","White / Caucasian","Man",37,1,1,25
-"treat","high",1,1,1,0,1,1,0,0,1,2,4,4,5,"Herman Melville","Jack London","Maya Angelou","Joyce Carol Oates","Rudyard Kipling","Charles Dickens","J.K. Rowling","White / Caucasian","Woman",43,0,1,25
-"treat","low",1,0,1,1,1,0,0,1,0,3,2,1,2,"Flann O'Brien","Edward Upward","Zadie Smith","Jane Austen","Charles Dickens","Joyce Carol Oates","Ernest Hemingway","Black or African American","Woman",25,0,0,25
-"treat","high",1,0,1,1,1,0,1,0,0,3,3,5,4,"Charles Dickens","J.K. Rowling","J.R.R. Tolkien","James Joyce","Virginia Woolf","Lucy Maud","George Orwell","White / Caucasian","Man",45,1,1,25
-"control","high",0,1,1,1,0,1,1,0,0,4,5,3,3,"Lucy Maud","Virginia Woolf","Victor Hugo","Anya Seton","George Orwell","Margaret Atwood","Maya Angelou","Black or African American","Woman",27,0,0,25
-"control","low",0,1,1,1,0,0,0,0,0,3,3,2,4,"Virginia Woolf","Antoine de Saint-Exupéry","J.K. Rowling","Joyce Carol Oates","Charles Dickens","John Steinbeck","J.D. Salinger","Black or African American","Woman",33,0,0,25
-"treat","low",1,0,1,1,1,1,1,0,0,2,2,1,3,"George Orwell","Ray Bradbury","Michael Crichton","Jane Austen","Charles Dickens","Zadie Smith","Sylvia Plath","White / Caucasian","Woman",26,0,1,25
-"treat","low",1,1,1,0,1,0,0,0,1,3,2,2,2,"Sylvia Plath","Neil Gaiman","F. Scott Fitzgerald","Joyce Carol Oates","J.K. Rowling","Ernest Hemingway","Michael Crichton","White / Caucasian","Woman",33,0,1,25
-"treat","high",1,1,1,0,1,0,1,1,1,2,4,4,4,"Jack London","J.R.R. Tolkien","George Orwell","Joyce Carol Oates","Virginia Woolf","Herman Melville","Jorge Luis Borges","White / Caucasian","Woman",37,0,1,25
-"treat","low",1,1,1,0,1,1,1,1,0,3,2,2,2,"Charles Dickens","George Orwell","J.K. Rowling","Zadie Smith","Jane Austen","F. Scott Fitzgerald","Virginia Woolf","White / Caucasian","Man",49,1,1,25
-"control","low",0,1,1,1,0,1,1,1,0,2,2,1,6,"J.K. Rowling","Charles Dickens","Michael Crichton","Joyce Carol Oates","John Steinbeck","Ray Bradbury","Virginia Woolf","Black or African American","Woman",28,0,0,25
-"treat","low",1,1,1,0,1,0,0,0,0,3,3,2,1,"Ernest Hemingway","George Orwell","Sylvia Plath","Virginia Woolf","J.K. Rowling","Kurt Vonnegut","J.D. Salinger","White / Caucasian","Man",39,1,1,25
-"treat","high",1,1,0,1,1,1,0,0,1,4,6,3,1,"Sylvia Plath","Lucy Maud","Virginia Woolf","Maya Angelou","George Orwell","Victor Hugo","Isabel Allende","Black or African American","Woman",27,0,0,25
-"treat","high",1,1,1,0,1,0,1,1,1,3,3,2,2,"Neil Gaiman","Charles Dickens","Jane Austen","Maya Angelou","Isabel Allende","Ernest Hemingway","Jorge Luis Borges","White / Caucasian","Man",31,1,1,25
-"treat","low",1,0,1,1,1,0,1,1,0,2,2,3,1,"Ernest Hemingway","Kurt Vonnegut","Virginia Woolf","Oscar Wilde","Joyce Carol Oates","J.D. Salinger","Nathaniel Hawthorne","White / Caucasian","Man",50,1,1,25
-"control","high",0,1,1,1,0,0,1,1,0,4,3,1,3,"Oscar Wilde","Margaret Atwood","J.K. Rowling","Maya Angelou","Isabel Allende","George Orwell","Victor Hugo","Hispanic / Latinx","Man",30,1,0,25
-"control","low",0,1,1,1,0,0,0,1,0,1,1,1,1,"Ray Bradbury","Edward Upward","Neil Gaiman","Virginia Woolf","Albert Camus","Gabriel Garcia Marquez","Oscar Wilde","White / Caucasian","Man",69,1,1,25
-"control","low",0,1,1,1,0,0,1,1,0,2,1,4,2,"J.K. Rowling","Oscar Wilde","F. Scott Fitzgerald","Jane Austen","Ernest Hemingway","Charles Dickens","Nathaniel Hawthorne","White / Caucasian","Woman",29,0,1,25
-"control","high",0,1,1,1,0,0,1,1,1,2,2,4,3,"Jane Austen","James Joyce","Margaret Atwood","Ernest Hemingway","Jack London","Charles Dickens","Herman Melville","White / Caucasian","Woman",57,0,1,25
-"treat","high",1,1,1,0,1,0,0,1,1,1,2,4,2,"J.R.R. Tolkien","Ayn Rand","Oscar Wilde","Charles Dickens","George Orwell","Ernest Hemingway","Rudyard Kipling","Asian / Pacific Islander","Man",23,1,0,25
-"control","low",0,1,1,1,0,0,0,0,0,2,2,0,2,"J.D. Salinger","J.K. Rowling","Sylvia Plath","Neil Gaiman","George Orwell","John Steinbeck","Flann O'Brien","White / Caucasian","Man",34,1,1,25
-"control","low",0,1,1,1,0,0,0,0,1,0,2,2,3,"Charles Dickens","John Steinbeck","Ernest Hemingway","Ray Bradbury","George Orwell","J.D. Salinger","Michael Crichton","White / Caucasian","Man",71,1,1,25
-"treat","low",1,0,1,1,1,1,1,0,0,2,2,1,2,"Ray Bradbury","Nathaniel Hawthorne","Zadie Smith","Joyce Carol Oates","J.D. Salinger","Gabriel Garcia Marquez","Sylvia Plath","Black or African American","Woman",37,0,0,25
-"treat","high",1,0,1,1,1,1,0,0,0,3,2,4,4,"Ayn Rand","Jack London","Herman Melville","Virginia Woolf","Rudyard Kipling","J.K. Rowling","Jane Austen","White / Caucasian","Woman",34,0,1,25
-"treat","low",1,0,1,1,1,0,0,1,0,3,3,3,3,"J.K. Rowling","Jane Austen","Charles Dickens","Nathaniel Hawthorne","F. Scott Fitzgerald","Joyce Carol Oates","Ernest Hemingway","White / Caucasian","Woman",29,0,1,25
-"control","low",0,1,1,1,0,1,0,0,0,1,2,2,2,"Michael Crichton","Ray Bradbury","Edward Upward","Nathaniel Hawthorne","Sylvia Plath","Oscar Wilde","Jane Austen","White / Caucasian","Woman",20,0,1,25
-"control","high",0,1,1,1,0,0,1,1,1,6,5,1,3,"Maya Angelou","Isabel Allende","Margaret Atwood","Joyce Carol Oates","Sylvia Plath","Virginia Woolf","Jorge Luis Borges","Black or African American","Woman",50,0,0,25
-"control","low",0,1,1,1,0,0,0,0,0,3,1,1,1,"Virginia Woolf","Kurt Vonnegut","Albert Camus","Zadie Smith","Jane Austen","Michael Crichton","Neil Gaiman","White / Caucasian","Man",50,1,1,25
-"control","high",0,1,1,1,0,1,1,0,0,3,3,2,4,"Margaret Atwood","George Orwell","Charles Dickens","J.K. Rowling","Jane Austen","J.R.R. Tolkien","Maya Angelou","White / Caucasian","Woman",58,0,1,25
-"control","low",0,1,1,1,0,0,0,0,1,2,3,3,0,"Kurt Vonnegut","Albert Camus","Oscar Wilde","Virginia Woolf","Nathaniel Hawthorne","Sylvia Plath","John Steinbeck","White / Caucasian","Man",47,1,1,25
-"treat","high",1,0,1,1,1,0,0,1,1,6,3,0,4,"J.K. Rowling","Zadie Smith","Anya Seton","Maya Angelou","Margaret Atwood","Joyce Carol Oates","Jack London","White / Caucasian","Woman",37,0,1,25
-"control","high",0,1,1,1,0,1,1,1,1,2,2,4,4,"J.K. Rowling","Herman Melville","Ernest Hemingway","Oscar Wilde","Margaret Atwood","J.R.R. Tolkien","Lucy Maud","White / Caucasian","Woman",75,0,1,25
-"treat","high",1,1,0,1,1,0,0,1,1,4,3,2,5,"Margaret Atwood","Isabel Allende","J.K. Rowling","Rudyard Kipling","Maya Angelou","Charles Dickens","J.R.R. Tolkien","White / Caucasian","Woman",45,0,1,25
-"treat","low",1,0,1,1,1,0,0,0,1,4,3,1,2,"Gabriel Garcia Marquez","Sylvia Plath","Virginia Woolf","Ray Bradbury","Jane Austen","Joyce Carol Oates","Michael Crichton","White / Caucasian","Woman",42,0,1,25
-"control","low",0,1,1,1,0,0,1,1,1,2,1,2,1,"John Steinbeck","Jane Austen","Oscar Wilde","Virginia Woolf","Flann O'Brien","Edward Upward","Charles Dickens","White / Caucasian","Man",51,1,1,25
-"treat","low",1,0,1,1,1,1,0,0,0,3,4,1,1,"Virginia Woolf","Sylvia Plath","Kurt Vonnegut","George Orwell","Joyce Carol Oates","Gabriel Garcia Marquez","Jane Austen","White / Caucasian","Woman",42,0,1,25
-"treat","high",1,1,0,1,1,0,1,1,1,2,3,3,3,"J.R.R. Tolkien","Charles Dickens","Sylvia Plath","George Orwell","Anya Seton","Ernest Hemingway","Jorge Luis Borges","Black or African American","Man",28,1,0,25
-"control","high",0,1,1,1,0,0,0,1,0,2,5,5,3,"Charles Dickens","J.R.R. Tolkien","Virginia Woolf","Victor Hugo","Herman Melville","Sylvia Plath","Ernest Hemingway","White / Caucasian","Man",31,1,1,25
-"treat","low",1,1,1,0,1,0,0,0,1,0,2,3,2,"George Orwell","F. Scott Fitzgerald","Ernest Hemingway","Charles Dickens","John Steinbeck","J.D. Salinger","Michael Crichton","White / Caucasian","Man",58,1,1,25
-"control","low",0,1,1,1,0,0,0,0,1,1,2,3,1,"Jane Austen","George Orwell","Charles Dickens","F. Scott Fitzgerald","J.D. Salinger","Ernest Hemingway","John Steinbeck","Hispanic / Latinx","Woman",63,0,0,25
-"control","low",0,1,1,1,0,0,0,0,0,1,3,1,1,"George Orwell","Nathaniel Hawthorne","John Steinbeck","Sylvia Plath","Gabriel Garcia Marquez","Albert Camus","Kurt Vonnegut","White / Caucasian","Woman",50,0,1,25
-"control","high",0,1,1,1,0,1,1,0,1,4,4,2,2,"Margaret Atwood","Lucy Maud","Neil Gaiman","Jane Austen","Oscar Wilde","Maya Angelou","Joyce Carol Oates","White / Caucasian","Woman",75,0,1,25
-"treat","high",1,0,1,1,1,0,0,1,0,3,3,2,2,"Rudyard Kipling","Margaret Atwood","George Orwell","Ayn Rand","Ernest Hemingway","Sylvia Plath","Oscar Wilde","White / Caucasian","Man",50,1,1,25
-"treat","low",1,1,1,0,1,0,1,1,0,2,2,3,3,"Jane Austen","Charles Dickens","Ray Bradbury","Virginia Woolf","John Steinbeck","Oscar Wilde","Nathaniel Hawthorne","Black or African American","Woman",60,0,0,25
-"treat","low",1,0,1,1,1,0,1,1,1,4,2,2,1,"J.K. Rowling","J.D. Salinger","Zadie Smith","F. Scott Fitzgerald","Sylvia Plath","Virginia Woolf","Charles Dickens","White / Caucasian","Woman",42,0,1,25
-"control","high",0,1,1,1,0,1,1,1,0,2,4,3,3,"Charles Dickens","George Orwell","J.K. Rowling","Victor Hugo","Margaret Atwood","Oscar Wilde","Virginia Woolf","White / Caucasian","Woman",40,0,1,25
-"treat","high",1,1,0,1,1,0,1,0,0,2,3,3,3,"Herman Melville","Oscar Wilde","Margaret Atwood","Jane Austen","J.R.R. Tolkien","Neil Gaiman","George Orwell","White / Caucasian","Man",30,1,1,25
-"control","high",0,1,1,1,0,1,0,0,1,6,5,1,2,"Maya Angelou","Margaret Atwood","Joyce Carol Oates","Sylvia Plath","Virginia Woolf","Zadie Smith","Isabel Allende","White / Caucasian","Woman",54,0,1,25
-"treat","high",1,1,1,0,1,0,1,1,1,3,4,3,1,"Maya Angelou","Virginia Woolf","Herman Melville","George Orwell","Oscar Wilde","Jane Austen","Charles Dickens","White / Caucasian","Woman",42,0,1,25
-"control","low",0,1,1,1,0,0,0,0,0,2,2,1,3,"Ernest Hemingway","George Orwell","Michael Crichton","Joyce Carol Oates","Ray Bradbury","Jane Austen","Neil Gaiman","White / Caucasian","Man",30,1,1,25
-"control","high",0,1,1,1,0,0,1,1,0,4,2,2,5,"Rudyard Kipling","Isabel Allende","Margaret Atwood","Jack London","J.K. Rowling","Maya Angelou","Victor Hugo","Black or African American","Woman",28,0,0,25
-"control","low",0,1,1,1,0,1,0,0,0,3,2,1,2,"John Steinbeck","Ernest Hemingway","Jane Austen","Gabriel Garcia Marquez","Sylvia Plath","Joyce Carol Oates","Zadie Smith","Asian / Pacific Islander","Woman",58,0,0,25
-"control","high",0,1,1,1,0,1,0,0,1,4,3,2,4,"Jane Austen","J.K. Rowling","Maya Angelou","Margaret Atwood","Charles Dickens","J.R.R. Tolkien","Isabel Allende","White / Caucasian","Woman",34,0,1,25
-"control","low",0,1,1,1,0,0,0,0,0,2,3,2,1,"Ray Bradbury","George Orwell","Ernest Hemingway","Albert Camus","Sylvia Plath","Virginia Woolf","Kurt Vonnegut","White / Caucasian","Man",37,1,1,25
-"treat","low",1,1,1,0,1,0,0,1,0,1,2,2,2,"J.K. Rowling","Charles Dickens","F. Scott Fitzgerald","Kurt Vonnegut","George Orwell","J.D. Salinger","Oscar Wilde","White / Caucasian","Woman",68,0,1,25
-"control","high",0,1,1,1,0,0,1,1,1,2,3,3,1,"Ayn Rand","Victor Hugo","George Orwell","Jane Austen","Herman Melville","Ernest Hemingway","Charles Dickens","White / Caucasian","Man",31,1,1,25
-"treat","high",1,1,1,0,1,0,1,0,0,3,5,3,1,"Jorge Luis Borges","Virginia Woolf","George Orwell","Victor Hugo","Maya Angelou","Jane Austen","Neil Gaiman","White / Caucasian","Man",32,1,1,25
-"treat","low",1,1,1,0,1,0,0,0,0,4,2,1,2,"Kurt Vonnegut","Michael Crichton","Virginia Woolf","Zadie Smith","Jane Austen","Joyce Carol Oates","Gabriel Garcia Marquez","White / Caucasian","Woman",29,0,1,25
-"treat","low",1,1,0,1,1,1,1,1,0,1,2,0,3,"Ray Bradbury","Joyce Carol Oates","John Steinbeck","Kurt Vonnegut","George Orwell","J.D. Salinger","Virginia Woolf","White / Caucasian","Woman",67,0,1,25
-"control","high",0,1,1,1,0,0,0,1,1,3,4,2,3,"J.K. Rowling","Neil Gaiman","James Joyce","Lucy Maud","George Orwell","Margaret Atwood","J.R.R. Tolkien","White / Caucasian","Woman",39,0,1,25
-"treat","high",1,0,1,1,1,0,0,1,0,2,4,5,4,"Lucy Maud","Charles Dickens","Jack London","Victor Hugo","Jane Austen","Herman Melville","James Joyce","Black or African American","Man",44,1,0,25
-"control","low",0,1,1,1,0,0,0,0,1,4,2,2,2,"Zadie Smith","J.K. Rowling","Joyce Carol Oates","Sylvia Plath","F. Scott Fitzgerald","Ernest Hemingway","Ray Bradbury","Black or African American","Woman",37,0,0,25
-"control","low",0,1,1,1,0,0,0,0,1,2,3,2,2,"Sylvia Plath","Charles Dickens","Neil Gaiman","J.K. Rowling","George Orwell","Oscar Wilde","Ray Bradbury","White / Caucasian","Woman",51,0,1,25
-"treat","high",1,1,1,0,1,1,0,0,1,5,2,1,3,"J.R.R. Tolkien","Margaret Atwood","Maya Angelou","Jane Austen","Isabel Allende","Zadie Smith","J.K. Rowling","White / Caucasian","Woman",43,0,1,25
-"control","high",0,1,1,1,0,0,0,1,0,3,3,4,3,"Rudyard Kipling","Jane Austen","Ernest Hemingway","Maya Angelou","Charles Dickens","Lucy Maud","Oscar Wilde","White / Caucasian","Man",36,1,1,25
-"treat","low",1,1,0,1,1,0,0,0,0,2,0,1,2,"Zadie Smith","Michael Crichton","Neil Gaiman","J.K. Rowling","Kurt Vonnegut","Oscar Wilde","Antoine de Saint-Exupéry","White / Caucasian","Man",60,1,1,25
+"control","med",0,1,1,1,0,0,1,0,0,2,1,2,2,"Oscar Wilde","F. Scott Fitzgerald","Joyce Carol Oates","John Steinbeck","Albert Camus","Zadie Smith","Neil Gaiman","White / Caucasian","Woman",45,0,1,38
+"treat","high",1,0,1,1,1,0,0,1,0,2,2,2,4,"Zadie Smith","Ray Bradbury","Lucy Maud","Michael Crichton","George Orwell","Charles Dickens","Ernest Hemingway","White / Caucasian","Man",40,1,1,38
+"treat","high",1,0,1,1,1,0,1,1,0,1,2,4,2,"F. Scott Fitzgerald","Ray Bradbury","Ernest Hemingway","J.K. Rowling","Oscar Wilde","Charles Dickens","Victor Hugo","White / Caucasian","Man",33,1,1,38
+"control","low",0,1,1,1,0,0,0,0,0,2,1,2,1,"J.K. Rowling","Ernest Hemingway","Jane Austen","F. Scott Fitzgerald","George Orwell","John Steinbeck","J.D. Salinger","White / Caucasian","Woman",39,0,1,38
+"control","high",0,1,1,1,0,0,0,0,1,3,1,3,2,"Jane Austen","Victor Hugo","J.K. Rowling","John Steinbeck","F. Scott Fitzgerald","Lucy Maud","Michael Crichton","White / Caucasian","Woman",30,0,1,38
+"treat","low",1,1,0,1,1,0,0,0,0,1,0,0,1,"Kazuo Ishiguro","George Saunders","Cormac McCarthy","Gabriel Garcia Marquez","Jane Austen","Michael Crichton","Antoine de Saint-Exupéry","White / Caucasian","Man",36,1,1,38
+"treat","low",1,1,1,0,1,0,0,1,0,1,1,0,2,"Albert Camus","J.K. Rowling","Kurt Vonnegut","John Steinbeck","George Orwell","J.D. Salinger","Ernest Hemingway","White / Caucasian","Man",70,1,1,38
+"treat","high",1,1,0,1,1,0,0,0,1,4,3,2,2,"George Orwell","Zadie Smith","Virginia Woolf","Maya Angelou","Jorge Luis Borges","Isabel Allende","Ray Bradbury","White / Caucasian","Woman",55,0,1,38
+"control","med",0,1,1,1,0,1,0,1,0,4,2,0,2,"Jane Austen","George Orwell","Sylvia Plath","Zadie Smith","Joyce Carol Oates","Michael Crichton","Virginia Woolf","Hispanic / Latinx","Woman",33,0,0,38
+"control","low",0,1,1,1,0,0,0,0,1,0,1,1,0,"Kevin Wilson","Nathaniel Hawthorne","Daniel Mason","Anthony Doerr","George Orwell","J.D. Salinger","John Steinbeck","White / Caucasian","Man",62,1,1,38
+"control","low",0,1,1,1,0,0,0,0,0,2,0,1,0,"J.K. Rowling","Jane Austen","F. Scott Fitzgerald","Anthony Doerr","Kazuo Ishiguro","George Saunders","Edward Upward","Asian / Pacific Islander","Man",35,1,0,38
+"treat","high",1,1,1,0,1,0,1,0,0,1,1,3,3,"Ernest Hemingway","John Steinbeck","J.K. Rowling","Michael Crichton","Charles Dickens","F. Scott Fitzgerald","George Orwell","White / Caucasian","Man",39,1,1,38
+"control","high",0,1,1,1,0,0,1,1,1,6,2,1,2,"Sylvia Plath","Zadie Smith","Jane Austen","Maya Angelou","Lucy Maud","Joyce Carol Oates","Charles Dickens","White / Caucasian","Man",34,1,1,38
+"control","high",0,1,1,1,0,1,1,0,0,4,2,0,2,"John Steinbeck","Jane Austen","Joyce Carol Oates","George Orwell","Sylvia Plath","Zadie Smith","Maya Angelou","Asian / Pacific Islander","Man",48,1,0,38
+"treat","low",1,1,1,0,1,0,0,0,0,1,1,0,1,"Kurt Vonnegut","Antoine de Saint-Exupéry","George Orwell","Jane Austen","Anthony Doerr","Kevin Wilson","Cormac McCarthy","White / Caucasian","Man",42,1,1,38
+"control","med",0,1,1,1,0,1,0,0,0,1,1,1,2,"Edward Upward","Neil Gaiman","Antoine de Saint-Exupéry","Nathaniel Hawthorne","Michael Crichton","Joyce Carol Oates","J.K. Rowling","White / Caucasian","Woman",35,0,1,38
+"control","low",0,1,1,1,0,0,0,1,0,2,1,1,1,"J.K. Rowling","Neil Gaiman","Jane Austen","Michael Crichton","Cormac McCarthy","F. Scott Fitzgerald","Nathaniel Hawthorne","White / Caucasian","Man",38,1,1,38
+"treat","med",1,1,1,0,1,0,0,1,0,2,1,1,1,"J.K. Rowling","J.D. Salinger","Jane Austen","John Steinbeck","George Orwell","F. Scott Fitzgerald","Ernest Hemingway","Asian / Pacific Islander","Man",27,1,0,38
+"treat","high",1,1,1,0,1,0,1,1,0,5,1,1,2,"John Steinbeck","Jane Austen","Virginia Woolf","Joyce Carol Oates","Maya Angelou","J.K. Rowling","Oscar Wilde","White / Caucasian","Woman",66,0,1,38
+"treat","high",1,1,0,1,1,0,1,0,0,3,2,4,1,"Charles Dickens","Sylvia Plath","Jane Austen","Virginia Woolf","Nathaniel Hawthorne","F. Scott Fitzgerald","George Orwell","White / Caucasian","Woman",30,0,1,38
+"treat","high",1,0,1,1,1,0,0,0,1,3,1,3,3,"Lucy Maud","F. Scott Fitzgerald","Isabel Allende","J.K. Rowling","Edward Upward","Charles Dickens","Kurt Vonnegut","White / Caucasian","Woman",39,0,1,38
+"control","low",0,1,1,1,0,0,0,0,1,1,1,1,2,"Ernest Hemingway","George Orwell","Albert Camus","Michael Crichton","Jane Austen","Kurt Vonnegut","John Steinbeck","Black or African American","Man",50,1,0,38
+"control","high",0,1,1,1,0,0,1,0,0,2,0,1,4,"F. Scott Fitzgerald","John Steinbeck","Joyce Carol Oates","Kurt Vonnegut","Isabel Allende","Edward Upward","George Orwell","White / Caucasian","Man",26,1,1,38
+"treat","med",1,0,1,1,1,0,0,1,0,1,3,2,2,"J.K. Rowling","J.D. Salinger","Oscar Wilde","Charles Dickens","George Orwell","Ray Bradbury","Ernest Hemingway","White / Caucasian","Man",43,1,1,38
+"control","med",0,1,1,1,0,0,0,1,0,2,2,1,3,"Jane Austen","J.K. Rowling","Michael Crichton","Ray Bradbury","Charles Dickens","George Orwell","Nathaniel Hawthorne","White / Caucasian","Woman",54,0,1,38
+"control","med",0,1,1,1,0,1,1,0,0,3,1,2,4,"Ray Bradbury","Charles Dickens","Joyce Carol Oates","John Steinbeck","Zadie Smith","Virginia Woolf","Sylvia Plath","White / Caucasian","Man",39,1,1,38
+"control","med",0,1,1,1,0,0,0,0,1,0,2,2,3,"Ray Bradbury","George Orwell","J.D. Salinger","Kurt Vonnegut","Charles Dickens","Ernest Hemingway","Michael Crichton","White / Caucasian","Woman",61,0,1,38
+"control","high",0,1,1,1,0,1,0,0,0,3,1,3,2,"Victor Hugo","Jane Austen","Michael Crichton","J.K. Rowling","Lucy Maud","Ernest Hemingway","Zadie Smith","White / Caucasian","Man",37,1,1,38
+"control","high",0,1,1,1,0,1,0,0,1,3,3,2,2,"Jorge Luis Borges","Kurt Vonnegut","George Orwell","Zadie Smith","Virginia Woolf","Maya Angelou","Isabel Allende","White / Caucasian","Non-binary",41,0,1,38
+"control","low",0,1,1,1,0,1,0,0,0,1,1,1,0,"Cormac McCarthy","Flann O'Brien","Kazuo Ishiguro","F. Scott Fitzgerald","Jane Austen","Gabriel Garcia Marquez","J.K. Rowling","White / Caucasian","Man",47,1,1,38
+"control","med",0,1,1,1,0,1,0,1,0,0,1,1,2,"Michael Crichton","Gabriel Garcia Marquez","John Steinbeck","George Orwell","Ernest Hemingway","Antoine de Saint-Exupéry","Virginia Woolf","White / Caucasian","Man",60,1,1,38
+"treat","high",1,1,0,1,1,0,0,0,1,4,3,1,2,"Ray Bradbury","George Orwell","Virginia Woolf","Maya Angelou","Isabel Allende","Sylvia Plath","Michael Crichton","Hispanic / Latinx","Woman",33,0,0,38
+"treat","med",1,1,1,0,1,0,0,0,1,1,1,3,3,"Charles Dickens","Ernest Hemingway","Kurt Vonnegut","J.K. Rowling","Michael Crichton","F. Scott Fitzgerald","John Steinbeck","Asian / Pacific Islander","Man",41,1,0,38
+"treat","med",1,0,1,1,1,0,0,0,0,1,1,4,0,"Ernest Hemingway","Albert Camus","Nathaniel Hawthorne","F. Scott Fitzgerald","George Orwell","Virginia Woolf","J.D. Salinger","White / Caucasian","Non-binary",28,0,1,38
+"treat","med",1,1,1,0,1,0,0,1,0,2,1,1,3,"Ray Bradbury","Jane Austen","J.K. Rowling","Charles Dickens","J.D. Salinger","Michael Crichton","F. Scott Fitzgerald","White / Caucasian","Woman",52,0,1,38
+"treat","med",1,1,1,0,1,1,0,0,0,3,2,2,2,"Jane Austen","Michael Crichton","Oscar Wilde","Virginia Woolf","Ray Bradbury","Sylvia Plath","Zadie Smith","White / Caucasian","Man",28,1,1,38
+"treat","high",1,1,0,1,1,1,1,0,0,0,3,3,2,"John Steinbeck","Oscar Wilde","Victor Hugo","Neil Gaiman","Kurt Vonnegut","Ernest Hemingway","Sylvia Plath","White / Caucasian","Man",54,1,1,38
+"control","high",0,1,1,1,0,0,1,0,0,1,2,4,2,"Ray Bradbury","Victor Hugo","Virginia Woolf","F. Scott Fitzgerald","Oscar Wilde","Michael Crichton","George Orwell","White / Caucasian","Woman",38,0,1,38
+"treat","low",1,1,1,0,1,0,0,0,0,1,1,2,1,"Michael Crichton","J.K. Rowling","Nathaniel Hawthorne","George Orwell","Albert Camus","F. Scott Fitzgerald","Edward Upward","White / Caucasian","Man",19,1,1,38
+"control","high",0,1,1,1,0,1,0,0,1,6,1,2,2,"Lucy Maud","Joyce Carol Oates","Sylvia Plath","Jane Austen","Virginia Woolf","Zadie Smith","Isabel Allende","White / Caucasian","Man",40,1,1,38
+"treat","high",1,1,1,0,1,1,1,0,0,1,1,2,2,"John Steinbeck","F. Scott Fitzgerald","J.K. Rowling","Ernest Hemingway","Ray Bradbury","George Orwell","Maya Angelou","White / Caucasian","Man",58,1,1,38
+"treat","med",1,1,1,0,1,0,0,0,1,3,2,1,1,"Sylvia Plath","J.K. Rowling","Michael Crichton","George Orwell","Jane Austen","Nathaniel Hawthorne","Ray Bradbury","White / Caucasian","Woman",37,0,1,38
+"treat","low",1,0,1,1,1,0,0,0,0,1,2,1,1,"Michael Crichton","George Orwell","Neil Gaiman","Nathaniel Hawthorne","Jane Austen","Anthony Doerr","Cormac McCarthy","White / Caucasian","Man",41,1,1,38
+"treat","high",1,1,1,0,1,1,1,0,0,2,0,4,2,"Ernest Hemingway","Nathaniel Hawthorne","Jane Austen","Michael Crichton","Lucy Maud","F. Scott Fitzgerald","Maya Angelou","Hispanic / Latinx","Non-binary",64,0,0,38
+"control","high",0,1,1,1,0,0,0,0,1,1,2,5,2,"Ernest Hemingway","John Steinbeck","F. Scott Fitzgerald","Jorge Luis Borges","Virginia Woolf","Oscar Wilde","Kurt Vonnegut","Asian / Pacific Islander","Man",22,1,0,38
+"control","low",0,1,1,1,0,0,0,0,0,1,1,1,2,"Jane Austen","Kurt Vonnegut","Ernest Hemingway","George Orwell","Antoine de Saint-Exupéry","John Steinbeck","Gabriel Garcia Marquez","White / Caucasian","Woman",38,0,1,38
+"treat","med",1,1,1,0,1,0,0,1,0,2,4,2,1,"Oscar Wilde","Charles Dickens","Neil Gaiman","Jane Austen","George Orwell","J.K. Rowling","F. Scott Fitzgerald","Asian / Pacific Islander","Woman",21,0,0,38
+"treat","med",1,1,1,0,1,1,0,1,0,2,3,2,2,"Ernest Hemingway","Sylvia Plath","Charles Dickens","George Orwell","John Steinbeck","Zadie Smith","Virginia Woolf","White / Caucasian","Woman",74,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,2,1,0,0,"J.D. Salinger","Gabriel Garcia Marquez","Zadie Smith","George Orwell","Anthony Veasna So","Jane Austen","Daniel Mason","White / Caucasian","Man",35,1,1,38
+"control","med",0,1,1,1,0,1,0,0,0,2,1,3,2,"J.K. Rowling","Michael Crichton","Virginia Woolf","J.D. Salinger","Charles Dickens","F. Scott Fitzgerald","Jane Austen","White / Caucasian","Woman",54,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,2,1,1,2,"George Orwell","Jane Austen","Kurt Vonnegut","F. Scott Fitzgerald","Zadie Smith","John Steinbeck","J.D. Salinger","White / Caucasian","Man",35,1,1,38
+"treat","med",1,1,1,0,1,1,0,0,0,0,2,3,2,"J.D. Salinger","Charles Dickens","F. Scott Fitzgerald","George Orwell","Ernest Hemingway","John Steinbeck","Jane Austen","Black or African American","Man",27,1,0,38
+"treat","low",1,1,1,0,1,0,0,1,0,1,0,0,1,"Zadie Smith","Kazuo Ishiguro","Gabriel Garcia Marquez","Kurt Vonnegut","Kevin Wilson","Anthony Doerr","Nathaniel Hawthorne","White / Caucasian","Woman",50,0,1,38
+"treat","high",1,0,1,1,1,0,1,0,0,3,3,2,3,"Jane Austen","Charles Dickens","Ray Bradbury","Neil Gaiman","Sylvia Plath","Lucy Maud","George Orwell","Black or African American","Man",31,1,0,38
+"treat","med",1,1,0,1,1,1,0,0,0,1,1,3,2,"Ernest Hemingway","Oscar Wilde","Michael Crichton","J.K. Rowling","F. Scott Fitzgerald","John Steinbeck","Jane Austen","White / Caucasian","Man",35,1,1,38
+"treat","low",1,1,0,1,1,0,0,1,0,1,1,1,1,"George Orwell","Cormac McCarthy","F. Scott Fitzgerald","Michael Crichton","J.D. Salinger","Jane Austen","Nathaniel Hawthorne","Hispanic / Latinx","Man",31,1,0,38
+"treat","med",1,1,1,0,1,1,0,0,0,2,1,3,2,"Jane Austen","Gabriel Garcia Marquez","Charles Dickens","F. Scott Fitzgerald","Joyce Carol Oates","Ernest Hemingway","Zadie Smith","White / Caucasian","Woman",38,0,1,38
+"treat","med",1,1,1,0,1,0,0,0,0,1,2,2,2,"Jane Austen","Charles Dickens","John Steinbeck","F. Scott Fitzgerald","J.D. Salinger","George Orwell","Antoine de Saint-Exupéry","White / Caucasian","Woman",67,0,1,38
+"treat","low",1,1,1,0,1,0,0,0,1,2,1,1,1,"George Orwell","Kurt Vonnegut","J.K. Rowling","J.D. Salinger","Jane Austen","Nathaniel Hawthorne","Michael Crichton","White / Caucasian","Man",38,1,1,38
+"control","med",0,1,1,1,0,1,1,0,0,0,2,2,2,"Michael Crichton","George Orwell","F. Scott Fitzgerald","Albert Camus","Oscar Wilde","John Steinbeck","Sylvia Plath","White / Caucasian","Woman",47,0,1,38
+"control","med",0,1,1,1,0,0,1,0,0,3,0,2,2,"Nathaniel Hawthorne","J.K. Rowling","Joyce Carol Oates","Zadie Smith","Ernest Hemingway","Kurt Vonnegut","George Orwell","White / Caucasian","Woman",62,0,1,38
+"control","high",0,1,1,1,0,0,0,0,1,2,4,3,2,"Oscar Wilde","Kurt Vonnegut","Virginia Woolf","George Orwell","Sylvia Plath","Charles Dickens","John Steinbeck","White / Caucasian","Woman",56,0,1,38
+"treat","low",1,1,0,1,1,0,0,0,0,2,1,0,1,"Michael Crichton","George Orwell","Zadie Smith","Cormac McCarthy","Albert Camus","J.K. Rowling","Gabriel Garcia Marquez","White / Caucasian","Man",63,1,1,38
+"treat","low",1,1,0,1,1,1,0,0,0,1,1,2,0,"Anthony Doerr","Jane Austen","Nathaniel Hawthorne","George Orwell","Ernest Hemingway","Daniel Mason","Zadie Smith","White / Caucasian","Woman",70,0,1,38
+"control","high",0,1,1,1,0,1,0,1,1,2,4,3,2,"Charles Dickens","Maya Angelou","Oscar Wilde","Victor Hugo","Michael Crichton","J.K. Rowling","Lucy Maud","White / Caucasian","Woman",38,0,1,38
+"control","med",0,1,1,1,0,0,0,0,1,2,1,2,2,"J.K. Rowling","Ray Bradbury","Kurt Vonnegut","F. Scott Fitzgerald","Oscar Wilde","Jane Austen","Michael Crichton","Hispanic / Latinx","Woman",23,0,0,38
+"treat","high",1,1,0,1,1,1,0,1,1,3,4,2,0,"Sylvia Plath","Jane Austen","Victor Hugo","F. Scott Fitzgerald","George Orwell","Maya Angelou","Lucy Maud","White / Caucasian","Woman",23,0,1,38
+"control","med",0,1,1,1,0,1,0,0,0,1,1,0,3,"Michael Crichton","Ray Bradbury","George Orwell","J.D. Salinger","John Steinbeck","Zadie Smith","J.K. Rowling","White / Caucasian","Woman",67,0,1,38
+"treat","high",1,0,1,1,1,1,0,1,0,2,3,3,2,"Charles Dickens","Maya Angelou","Ernest Hemingway","Oscar Wilde","Jane Austen","John Steinbeck","Virginia Woolf","White / Caucasian","Woman",67,0,1,38
+"control","med",0,1,1,1,0,1,1,0,0,2,0,0,3,"J.K. Rowling","J.D. Salinger","Kurt Vonnegut","Michael Crichton","Ray Bradbury","Zadie Smith","Sylvia Plath","White / Caucasian","Woman",72,0,1,38
+"treat","med",1,0,1,1,1,0,0,0,1,3,2,0,3,"George Orwell","Joyce Carol Oates","Jane Austen","Sylvia Plath","Michael Crichton","Ray Bradbury","John Steinbeck","White / Caucasian","Woman",30,0,1,38
+"control","low",0,1,1,1,0,0,0,0,1,1,2,3,0,"J.K. Rowling","Neil Gaiman","Nathaniel Hawthorne","George Orwell","F. Scott Fitzgerald","Ernest Hemingway","Michael Crichton","White / Caucasian","Man",57,1,1,38
+"treat","high",1,1,1,0,1,0,1,1,0,5,2,3,1,"F. Scott Fitzgerald","Maya Angelou","Sylvia Plath","Jane Austen","Virginia Woolf","Lucy Maud","Victor Hugo","White / Caucasian","Woman",47,0,1,38
+"control","high",0,1,1,1,0,0,0,0,1,4,2,2,3,"Charles Dickens","J.K. Rowling","Maya Angelou","Michael Crichton","Jane Austen","Lucy Maud","Ray Bradbury","White / Caucasian","Woman",50,0,1,38
+"treat","low",1,1,0,1,1,0,0,1,0,2,1,1,1,"Jane Austen","F. Scott Fitzgerald","George Orwell","Zadie Smith","Michael Crichton","Kazuo Ishiguro","Ernest Hemingway","Asian / Pacific Islander","Woman",30,0,0,38
+"treat","med",1,1,1,0,1,0,0,0,0,2,1,2,2,"Zadie Smith","George Saunders","Ernest Hemingway","Charles Dickens","Jane Austen","Ray Bradbury","Albert Camus","White / Caucasian","Man",29,1,1,38
+"control","low",0,1,1,1,0,0,0,0,1,3,0,2,0,"Jane Austen","Gabriel Garcia Marquez","F. Scott Fitzgerald","Nathaniel Hawthorne","J.K. Rowling","Zadie Smith","Kurt Vonnegut","Black or African American","Woman",28,0,0,38
+"control","high",0,1,1,1,0,0,0,0,1,3,2,2,2,"Charles Dickens","Jane Austen","Zadie Smith","F. Scott Fitzgerald","Ray Bradbury","Maya Angelou","Michael Crichton","White / Caucasian","Woman",33,0,1,38
+"treat","med",1,1,1,0,1,1,0,0,0,0,3,2,4,"George Orwell","Ray Bradbury","Oscar Wilde","John Steinbeck","Charles Dickens","Kurt Vonnegut","J.K. Rowling","White / Caucasian","Man",58,1,1,38
+"control","med",0,1,1,1,0,0,1,0,0,2,1,3,2,"J.K. Rowling","Ernest Hemingway","Charles Dickens","Jane Austen","John Steinbeck","F. Scott Fitzgerald","George Orwell","White / Caucasian","Man",59,1,1,38
+"control","med",0,1,1,1,0,0,0,0,1,2,2,3,0,"George Orwell","Jane Austen","F. Scott Fitzgerald","J.K. Rowling","Oscar Wilde","Nathaniel Hawthorne","Michael Crichton","White / Caucasian","Woman",29,0,1,38
+"treat","med",1,1,0,1,1,1,0,0,1,2,1,2,2,"J.K. Rowling","Michael Crichton","Nathaniel Hawthorne","Jane Austen","Charles Dickens","Antoine de Saint-Exupéry","Joyce Carol Oates","White / Caucasian","Woman",53,0,1,38
+"control","high",0,1,1,1,0,1,1,0,0,1,2,4,2,"Ray Bradbury","F. Scott Fitzgerald","Ernest Hemingway","Charles Dickens","Oscar Wilde","J.K. Rowling","Sylvia Plath","White / Caucasian","Woman",27,0,1,38
+"treat","low",1,1,1,0,1,0,0,0,0,1,0,1,1,"Zadie Smith","Antoine de Saint-Exupéry","Gabriel Garcia Marquez","Michael Crichton","Ernest Hemingway","Kazuo Ishiguro","Anthony Veasna So","White / Caucasian","Non-binary",36,0,1,38
+"control","low",0,1,1,1,0,0,0,0,1,2,1,1,2,"Ernest Hemingway","Jane Austen","Zadie Smith","Michael Crichton","John Steinbeck","George Orwell","Kurt Vonnegut","White / Caucasian","Woman",32,0,1,38
+"treat","high",1,0,1,1,1,0,0,1,0,3,3,2,3,"Ray Bradbury","Maya Angelou","Jane Austen","Charles Dickens","Neil Gaiman","Lucy Maud","Ernest Hemingway","White / Caucasian","Woman",65,0,1,38
+"treat","med",1,1,0,1,1,0,1,1,1,3,1,1,1,"Jane Austen","George Orwell","Antoine de Saint-Exupéry","Zadie Smith","Virginia Woolf","Michael Crichton","Charles Dickens","White / Caucasian","Woman",30,0,1,38
+"control","med",0,1,1,1,0,0,1,1,0,3,0,2,2,"Ernest Hemingway","Zadie Smith","Kurt Vonnegut","Virginia Woolf","J.D. Salinger","Joyce Carol Oates","Oscar Wilde","White / Caucasian","Man",49,1,1,38
+"control","low",0,1,1,1,0,1,0,0,0,1,1,2,1,"F. Scott Fitzgerald","George Orwell","John Steinbeck","J.D. Salinger","Ernest Hemingway","Jane Austen","Zadie Smith","Asian / Pacific Islander","Man",30,1,0,38
+"treat","low",1,1,1,0,1,0,0,1,0,2,0,0,1,"Kazuo Ishiguro","Jane Austen","Anthony Veasna So","Zadie Smith","Gabriel Garcia Marquez","Kurt Vonnegut","F. Scott Fitzgerald","White / Caucasian","Woman",46,0,1,38
+"control","low",0,1,1,1,0,0,0,0,1,1,1,0,1,"Gabriel Garcia Marquez","John Steinbeck","Antoine de Saint-Exupéry","Jane Austen","Kazuo Ishiguro","Neil Gaiman","Kurt Vonnegut","Asian / Pacific Islander","Man",38,1,0,38
+"treat","low",1,1,1,0,1,0,0,1,0,0,1,2,2,"Kurt Vonnegut","J.D. Salinger","F. Scott Fitzgerald","Michael Crichton","Nathaniel Hawthorne","George Orwell","Ernest Hemingway","White / Caucasian","Man",52,1,1,38
+"control","low",0,1,1,1,0,1,0,0,0,0,1,1,3,"Michael Crichton","Ernest Hemingway","George Orwell","John Steinbeck","Kurt Vonnegut","Antoine de Saint-Exupéry","J.K. Rowling","White / Caucasian","Man",61,1,1,38
+"control","high",0,1,1,1,0,0,0,0,1,3,2,1,1,"F. Scott Fitzgerald","John Steinbeck","Jane Austen","J.K. Rowling","Maya Angelou","George Orwell","Michael Crichton","White / Caucasian","Woman",46,0,1,38
+"control","med",0,1,1,1,0,0,1,0,0,0,2,2,2,"George Orwell","Oscar Wilde","Ray Bradbury","Ernest Hemingway","Kurt Vonnegut","Albert Camus","Neil Gaiman","White / Caucasian","Man",56,1,1,38
+"treat","med",1,0,1,1,1,1,0,0,0,1,2,1,3,"J.K. Rowling","Michael Crichton","Charles Dickens","Kurt Vonnegut","George Orwell","J.D. Salinger","Zadie Smith","White / Caucasian","Man",46,1,1,38
+"treat","high",1,1,1,0,1,1,1,0,0,2,2,1,2,"Ray Bradbury","Kurt Vonnegut","George Orwell","Ernest Hemingway","Zadie Smith","Maya Angelou","Sylvia Plath","White / Caucasian","Man",31,1,1,38
+"treat","low",1,1,1,0,1,1,0,0,0,0,0,0,1,"Kurt Vonnegut","Kazuo Ishiguro","Anthony Doerr","Gabriel Garcia Marquez","Anthony Veasna So","Kevin Wilson","Zadie Smith","White / Caucasian","Man",30,1,1,38
+"treat","low",1,1,1,0,1,0,0,1,0,0,1,1,2,"Kurt Vonnegut","George Orwell","Albert Camus","Ernest Hemingway","J.D. Salinger","John Steinbeck","F. Scott Fitzgerald","White / Caucasian","Man",58,1,1,38
+"treat","med",1,1,1,0,1,0,0,0,1,1,1,1,4,"Jane Austen","J.D. Salinger","Kurt Vonnegut","John Steinbeck","Michael Crichton","Charles Dickens","Ray Bradbury","White / Caucasian","Man",42,1,1,38
+"control","low",0,1,1,1,0,0,1,0,0,2,0,2,2,"F. Scott Fitzgerald","Michael Crichton","Zadie Smith","Jane Austen","Nathaniel Hawthorne","Kurt Vonnegut","Flann O'Brien","Asian / Pacific Islander","Man",33,1,0,38
+"control","low",0,1,1,1,0,0,0,0,1,1,1,3,0,"Ernest Hemingway","George Orwell","Jane Austen","J.D. Salinger","Nathaniel Hawthorne","F. Scott Fitzgerald","John Steinbeck","White / Caucasian","Woman",38,0,1,38
+"treat","low",1,1,1,0,1,0,0,0,1,1,0,2,2,"John Steinbeck","F. Scott Fitzgerald","Cormac McCarthy","Ernest Hemingway","Jane Austen","Michael Crichton","Kurt Vonnegut","Black or African American","Man",49,1,0,38
+"control","med",0,1,1,1,0,0,0,1,0,1,1,3,3,"Ernest Hemingway","F. Scott Fitzgerald","J.K. Rowling","Charles Dickens","John Steinbeck","Michael Crichton","Nathaniel Hawthorne","Hispanic / Latinx","Man",36,1,0,38
+"control","med",0,1,1,1,0,0,1,1,0,2,0,1,1,"Albert Camus","J.D. Salinger","Zadie Smith","J.K. Rowling","F. Scott Fitzgerald","Michael Crichton","Oscar Wilde","Black or African American","Woman",30,0,0,38
+"control","high",0,1,1,1,0,0,1,1,1,2,2,4,0,"Maya Angelou","Jane Austen","Nathaniel Hawthorne","F. Scott Fitzgerald","Victor Hugo","Ernest Hemingway","Jorge Luis Borges","Hispanic / Latinx","Man",43,1,0,38
+"control","med",0,1,1,1,0,0,1,1,1,2,0,1,2,"Jane Austen","Ray Bradbury","Gabriel Garcia Marquez","John Steinbeck","J.K. Rowling","F. Scott Fitzgerald","Charles Dickens","White / Caucasian","Woman",59,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,1,1,1,0,"J.K. Rowling","Antoine de Saint-Exupéry","Anthony Veasna So","Anthony Doerr","Flann O'Brien","Ernest Hemingway","J.D. Salinger","White / Caucasian","Woman",48,0,1,38
+"treat","med",1,1,1,0,1,1,0,1,0,2,3,2,2,"Charles Dickens","Sylvia Plath","John Steinbeck","Jane Austen","George Orwell","Nathaniel Hawthorne","Virginia Woolf","White / Caucasian","Woman",44,0,1,38
+"control","high",0,1,1,1,0,0,1,1,0,1,3,2,3,"John Steinbeck","Ernest Hemingway","Maya Angelou","George Orwell","Charles Dickens","Kurt Vonnegut","Victor Hugo","White / Caucasian","Man",51,1,1,38
+"control","med",0,1,1,1,0,1,0,1,0,5,2,1,2,"Jane Austen","J.K. Rowling","Joyce Carol Oates","Zadie Smith","Sylvia Plath","Charles Dickens","Virginia Woolf","White / Caucasian","Woman",38,0,1,38
+"treat","low",1,0,1,1,1,0,0,0,0,1,0,1,2,"Albert Camus","J.K. Rowling","Ernest Hemingway","John Steinbeck","J.D. Salinger","Kurt Vonnegut","Cormac McCarthy","White / Caucasian","Man",49,1,1,38
+"treat","high",1,1,0,1,1,0,1,0,0,3,1,1,2,"Neil Gaiman","J.K. Rowling","Ray Bradbury","Jane Austen","Isabel Allende","Ernest Hemingway","George Orwell","Black or African American","Man",54,1,0,38
+"treat","med",1,1,1,0,1,0,0,0,1,2,3,2,1,"Nathaniel Hawthorne","J.K. Rowling","Sylvia Plath","Oscar Wilde","Michael Crichton","George Orwell","John Steinbeck","Black or African American","Woman",26,0,0,38
+"control","low",0,1,1,1,0,0,0,1,0,2,0,1,1,"Jane Austen","Michael Crichton","Daniel Mason","Kevin Wilson","J.K. Rowling","F. Scott Fitzgerald","Nathaniel Hawthorne","White / Caucasian","Woman",50,0,1,38
+"control","high",0,1,1,1,0,0,1,1,0,4,2,2,1,"Maya Angelou","Lucy Maud","F. Scott Fitzgerald","Jane Austen","Zadie Smith","George Orwell","Oscar Wilde","White / Caucasian","Woman",40,0,1,38
+"treat","med",1,1,1,0,1,0,0,0,0,1,1,2,2,"Oscar Wilde","F. Scott Fitzgerald","Joyce Carol Oates","Gabriel Garcia Marquez","John Steinbeck","J.D. Salinger","Antoine de Saint-Exupéry","Asian / Pacific Islander","Man",37,1,0,38
+"control","med",0,1,1,1,0,0,0,0,1,2,1,0,2,"Neil Gaiman","Jane Austen","J.K. Rowling","John Steinbeck","Kurt Vonnegut","J.D. Salinger","Michael Crichton","White / Caucasian","Woman",45,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,2,0,1,1,"J.K. Rowling","Cormac McCarthy","F. Scott Fitzgerald","J.D. Salinger","Jane Austen","Kurt Vonnegut","Gabriel Garcia Marquez","Hispanic / Latinx","Woman",52,0,0,38
+"treat","med",1,1,1,0,1,1,0,0,1,3,1,2,1,"Oscar Wilde","Kurt Vonnegut","Gabriel Garcia Marquez","Virginia Woolf","Jane Austen","Zadie Smith","Joyce Carol Oates","American Indian or Alaskan Native","Woman",43,0,0,38
+"treat","low",1,1,1,0,1,0,0,0,0,2,1,0,2,"Kurt Vonnegut","Jane Austen","Zadie Smith","George Orwell","J.D. Salinger","John Steinbeck","Anthony Doerr","White / Caucasian","Woman",50,0,1,38
+"treat","high",1,1,1,0,1,1,0,0,0,3,3,1,3,"Oscar Wilde","Sylvia Plath","Isabel Allende","Maya Angelou","Michael Crichton","Ray Bradbury","Zadie Smith","White / Caucasian","Man",35,1,1,38
+"control","high",0,1,1,1,0,0,0,1,0,3,2,4,1,"Nathaniel Hawthorne","Zadie Smith","Ernest Hemingway","Virginia Woolf","Maya Angelou","Charles Dickens","F. Scott Fitzgerald","White / Caucasian","Woman",47,0,1,38
+"control","med",0,1,1,1,0,0,0,0,1,2,1,2,2,"John Steinbeck","Jane Austen","Charles Dickens","J.D. Salinger","J.K. Rowling","Ernest Hemingway","Ray Bradbury","White / Caucasian","Man",38,1,1,38
+"control","med",0,1,1,1,0,0,0,0,0,2,2,3,2,"George Orwell","Michael Crichton","Charles Dickens","J.K. Rowling","F. Scott Fitzgerald","Virginia Woolf","J.D. Salinger","White / Caucasian","Man",42,1,1,38
+"treat","med",1,1,1,0,1,1,0,1,0,2,2,2,1,"George Orwell","Jane Austen","Oscar Wilde","Kurt Vonnegut","F. Scott Fitzgerald","Zadie Smith","Virginia Woolf","White / Caucasian","Woman",26,0,1,38
+"control","high",0,1,1,1,0,0,1,1,1,3,1,3,1,"Maya Angelou","Virginia Woolf","J.K. Rowling","F. Scott Fitzgerald","John Steinbeck","Nathaniel Hawthorne","Jorge Luis Borges","White / Caucasian","Woman",40,0,1,38
+"treat","high",1,0,1,1,1,0,0,0,1,1,0,2,2,"Nathaniel Hawthorne","Jane Austen","F. Scott Fitzgerald","Edward Upward","Kurt Vonnegut","Michael Crichton","John Steinbeck","Hispanic / Latinx","Man",43,1,0,38
+"treat","med",1,0,1,1,1,0,0,0,1,1,1,3,3,"Charles Dickens","John Steinbeck","Ernest Hemingway","Ray Bradbury","Jane Austen","Nathaniel Hawthorne","Kurt Vonnegut","White / Caucasian","Woman",83,0,1,38
+"control","high",0,1,1,1,0,1,0,1,0,3,2,1,3,"Maya Angelou","J.K. Rowling","Charles Dickens","Ray Bradbury","Michael Crichton","Jane Austen","Virginia Woolf","White / Caucasian","Woman",62,0,1,38
+"control","high",0,1,1,1,0,1,0,0,1,4,1,3,1,"Maya Angelou","J.K. Rowling","F. Scott Fitzgerald","Isabel Allende","Virginia Woolf","Ernest Hemingway","Joyce Carol Oates","Black or African American","Man",38,1,0,38
+"treat","high",1,1,1,0,1,1,1,0,0,2,0,2,3,"Ernest Hemingway","John Steinbeck","Virginia Woolf","Jane Austen","Michael Crichton","Ray Bradbury","Maya Angelou","White / Caucasian","Woman",51,0,1,38
+"control","med",0,1,1,1,0,0,1,1,1,2,1,2,1,"Zadie Smith","J.K. Rowling","George Saunders","Michael Crichton","Ernest Hemingway","Oscar Wilde","Charles Dickens","Black or African American","Man",33,1,0,38
+"control","high",0,1,1,1,0,0,0,1,0,4,2,1,2,"Maya Angelou","Ray Bradbury","Nathaniel Hawthorne","Isabel Allende","Sylvia Plath","Zadie Smith","F. Scott Fitzgerald","White / Caucasian","Man",69,1,1,38
+"control","low",0,1,1,1,0,1,0,0,0,0,1,2,2,"Ernest Hemingway","Kurt Vonnegut","George Orwell","Michael Crichton","F. Scott Fitzgerald","Cormac McCarthy","Jane Austen","White / Caucasian","Man",39,1,1,38
+"control","high",0,1,1,1,0,0,0,0,1,5,3,1,1,"Maya Angelou","Lucy Maud","George Orwell","J.K. Rowling","Jane Austen","Sylvia Plath","Ray Bradbury","Black or African American","Woman",37,0,0,38
+"control","high",0,1,1,1,0,0,0,0,1,1,4,3,2,"Maya Angelou","Victor Hugo","Charles Dickens","Ernest Hemingway","Michael Crichton","Neil Gaiman","Ray Bradbury","Black or African American","Man",34,1,0,38
+"control","high",0,1,1,1,0,0,0,1,0,3,5,3,1,"Virginia Woolf","George Orwell","Charles Dickens","Maya Angelou","Sylvia Plath","Oscar Wilde","Nathaniel Hawthorne","White / Caucasian","Woman",37,0,1,38
+"treat","low",1,1,0,1,1,0,0,0,0,2,0,2,1,"F. Scott Fitzgerald","Ernest Hemingway","J.K. Rowling","Jane Austen","Gabriel Garcia Marquez","John Steinbeck","Albert Camus","White / Caucasian","Man",53,1,1,38
+"control","med",0,1,1,1,0,1,0,0,0,4,1,1,1,"John Steinbeck","J.D. Salinger","Virginia Woolf","Sylvia Plath","J.K. Rowling","Jane Austen","Zadie Smith","White / Caucasian","Woman",34,0,1,38
+"treat","high",1,1,0,1,1,0,0,1,0,2,1,3,3,"J.K. Rowling","F. Scott Fitzgerald","Ernest Hemingway","Charles Dickens","Michael Crichton","Isabel Allende","Nathaniel Hawthorne","White / Caucasian","Woman",39,0,1,38
+"control","high",0,1,1,1,0,1,0,0,1,1,2,2,3,"Ray Bradbury","John Steinbeck","Victor Hugo","Maya Angelou","Kurt Vonnegut","Ernest Hemingway","Isabel Allende","White / Caucasian","Woman",63,0,1,38
+"treat","low",1,0,1,1,1,0,0,0,1,1,1,1,2,"Ernest Hemingway","Kurt Vonnegut","J.K. Rowling","George Orwell","Cormac McCarthy","Michael Crichton","John Steinbeck","White / Caucasian","Man",78,1,1,38
+"control","low",0,1,1,1,0,0,1,0,0,3,0,1,0,"Jane Austen","Zadie Smith","J.K. Rowling","Kazuo Ishiguro","Kevin Wilson","F. Scott Fitzgerald","Flann O'Brien","White / Caucasian","Woman",37,0,1,38
+"treat","med",1,1,1,0,1,1,1,0,0,3,0,2,1,"J.D. Salinger","J.K. Rowling","Ray Bradbury","Virginia Woolf","Nathaniel Hawthorne","Jane Austen","Sylvia Plath","White / Caucasian","Woman",73,0,1,38
+"control","high",0,1,1,1,0,0,0,0,1,1,1,4,2,"Charles Dickens","Michael Crichton","Ernest Hemingway","J.K. Rowling","Nathaniel Hawthorne","F. Scott Fitzgerald","John Steinbeck","White / Caucasian","Man",52,1,1,38
+"control","high",0,1,1,1,0,1,0,0,0,2,2,3,2,"Maya Angelou","Ray Bradbury","Zadie Smith","Charles Dickens","Ernest Hemingway","F. Scott Fitzgerald","J.K. Rowling","Black or African American","Man",57,1,0,38
+"control","low",0,1,1,1,0,0,0,1,0,2,1,0,1,"Zadie Smith","John Steinbeck","Cormac McCarthy","Gabriel Garcia Marquez","Jane Austen","George Orwell","Ernest Hemingway","White / Caucasian","Man",71,1,1,38
+"treat","high",1,1,0,1,1,0,1,0,0,1,3,4,1,"George Orwell","Ernest Hemingway","J.K. Rowling","Charles Dickens","Oscar Wilde","F. Scott Fitzgerald","Flann O'Brien","White / Caucasian","Man",34,1,1,38
+"treat","high",1,1,1,0,1,1,1,0,0,2,3,0,2,"George Orwell","Ray Bradbury","Maya Angelou","Jane Austen","Neil Gaiman","Kurt Vonnegut","Sylvia Plath","White / Caucasian","Man",52,1,1,38
+"treat","low",1,1,1,0,1,0,0,0,0,1,1,0,1,"J.K. Rowling","Michael Crichton","J.D. Salinger","Neil Gaiman","Albert Camus","Anthony Veasna So","Cormac McCarthy","White / Caucasian","Woman",37,0,1,38
+"treat","med",1,1,0,1,1,1,0,0,0,2,2,2,3,"Jane Austen","J.K. Rowling","Oscar Wilde","Michael Crichton","Kurt Vonnegut","Charles Dickens","Zadie Smith","White / Caucasian","Woman",72,0,1,38
+"treat","med",1,1,0,1,1,0,0,1,0,4,2,2,1,"Jane Austen","Sylvia Plath","Virginia Woolf","Joyce Carol Oates","Gabriel Garcia Marquez","Oscar Wilde","F. Scott Fitzgerald","Hispanic / Latinx","Woman",64,0,0,38
+"treat","low",1,0,1,1,1,0,0,1,0,1,1,1,2,"J.K. Rowling","Michael Crichton","Ernest Hemingway","George Orwell","John Steinbeck","J.D. Salinger","Nathaniel Hawthorne","White / Caucasian","Man",61,1,1,38
+"treat","high",1,1,1,0,1,0,1,1,0,3,1,2,3,"Joyce Carol Oates","Charles Dickens","Ernest Hemingway","Jane Austen","J.K. Rowling","Michael Crichton","Oscar Wilde","White / Caucasian","Woman",64,0,1,38
+"treat","med",1,1,1,0,1,0,0,0,1,3,3,0,2,"Zadie Smith","George Orwell","Sylvia Plath","Neil Gaiman","Kurt Vonnegut","Joyce Carol Oates","Michael Crichton","Black or African American","Woman",32,0,0,38
+"treat","high",1,1,1,0,1,1,0,0,1,2,3,1,3,"Ray Bradbury","George Orwell","Jane Austen","Michael Crichton","Charles Dickens","Maya Angelou","Isabel Allende","White / Caucasian","Woman",47,0,1,38
+"treat","high",1,1,0,1,1,0,0,0,1,0,3,4,2,"Nathaniel Hawthorne","Ray Bradbury","Ernest Hemingway","George Orwell","Charles Dickens","Oscar Wilde","Michael Crichton","Asian / Pacific Islander","Man",30,1,0,38
+"control","low",0,1,1,1,0,0,0,1,0,1,2,0,1,"J.D. Salinger","Kurt Vonnegut","Albert Camus","Neil Gaiman","Jane Austen","George Orwell","Ernest Hemingway","White / Caucasian","Man",31,1,1,38
+"control","med",0,1,1,1,0,1,0,0,0,1,1,2,4,"Charles Dickens","Michael Crichton","Ernest Hemingway","Ray Bradbury","John Steinbeck","J.K. Rowling","Jane Austen","White / Caucasian","Man",51,1,1,38
+"treat","low",1,1,1,0,1,0,0,0,0,2,1,0,2,"Jane Austen","J.K. Rowling","John Steinbeck","J.D. Salinger","George Orwell","Kurt Vonnegut","Kazuo Ishiguro","White / Caucasian","Woman",67,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,2,1,0,0,"Neil Gaiman","Jane Austen","Antoine de Saint-Exupéry","Anthony Veasna So","Kevin Wilson","Zadie Smith","Anthony Doerr","White / Caucasian","Woman",30,0,1,38
+"control","med",0,1,1,1,0,0,0,1,0,1,1,2,3,"John Steinbeck","J.D. Salinger","F. Scott Fitzgerald","Ray Bradbury","Charles Dickens","J.K. Rowling","Ernest Hemingway","White / Caucasian","Woman",71,0,1,38
+"treat","high",1,1,0,1,1,1,1,0,0,4,1,2,1,"Jane Austen","Ernest Hemingway","Zadie Smith","Nathaniel Hawthorne","Maya Angelou","Isabel Allende","Sylvia Plath","Hispanic / Latinx","Woman",23,0,0,38
+"control","med",0,1,1,1,0,0,0,0,1,2,0,2,2,"Jane Austen","J.K. Rowling","Ray Bradbury","F. Scott Fitzgerald","Ernest Hemingway","Michael Crichton","John Steinbeck","White / Caucasian","Woman",54,0,1,38
+"treat","med",1,1,0,1,1,1,0,0,0,3,2,3,1,"Sylvia Plath","F. Scott Fitzgerald","Oscar Wilde","Virginia Woolf","Jane Austen","Michael Crichton","Zadie Smith","White / Caucasian","Woman",30,0,1,38
+"treat","low",1,1,0,1,1,0,0,0,1,1,1,1,2,"J.K. Rowling","Michael Crichton","Cormac McCarthy","Neil Gaiman","Ernest Hemingway","Kurt Vonnegut","John Steinbeck","White / Caucasian","Man",49,1,1,38
+"treat","high",1,1,0,1,1,0,1,0,0,0,1,3,4,"Charles Dickens","F. Scott Fitzgerald","Michael Crichton","Ernest Hemingway","Ray Bradbury","John Steinbeck","George Orwell","White / Caucasian","Man",36,1,1,38
+"treat","high",1,1,0,1,1,0,1,0,0,4,2,3,3,"Joyce Carol Oates","Sylvia Plath","Lucy Maud","Jane Austen","Charles Dickens","Nathaniel Hawthorne","Flann O'Brien","White / Caucasian","Woman",37,0,1,38
+"treat","low",1,1,0,1,1,0,0,0,0,1,3,0,0,"Gabriel Garcia Marquez","Neil Gaiman","George Orwell","Flann O'Brien","Albert Camus","J.K. Rowling","J.D. Salinger","White / Caucasian","Man",51,1,1,38
+"control","high",0,1,1,1,0,0,0,1,0,2,2,2,2,"John Steinbeck","George Orwell","Victor Hugo","Joyce Carol Oates","Ernest Hemingway","Jane Austen","F. Scott Fitzgerald","White / Caucasian","Woman",54,0,1,38
+"treat","med",1,0,1,1,1,0,0,0,1,2,4,3,2,"George Orwell","Michael Crichton","Charles Dickens","Sylvia Plath","Virginia Woolf","Oscar Wilde","John Steinbeck","White / Caucasian","Woman",37,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,1,1,1,1,"Jane Austen","Gabriel Garcia Marquez","F. Scott Fitzgerald","Flann O'Brien","Kevin Wilson","John Steinbeck","J.D. Salinger","Black or African American","Woman",40,0,0,38
+"control","low",0,1,1,1,0,0,1,0,0,3,0,2,1,"John Steinbeck","Ernest Hemingway","Jane Austen","F. Scott Fitzgerald","J.K. Rowling","Zadie Smith","George Orwell","White / Caucasian","Woman",52,0,1,38
+"treat","high",1,1,1,0,1,1,0,1,1,3,2,1,2,"Jane Austen","Ernest Hemingway","Maya Angelou","Ray Bradbury","Sylvia Plath","Kurt Vonnegut","Lucy Maud","White / Caucasian","Woman",44,0,1,38
+"treat","high",1,0,1,1,1,0,1,1,1,1,1,2,3,"F. Scott Fitzgerald","Ernest Hemingway","John Steinbeck","Kurt Vonnegut","Ray Bradbury","Maya Angelou","Charles Dickens","White / Caucasian","Man",33,1,1,38
+"treat","low",1,1,0,1,1,0,0,0,0,3,1,1,0,"Zadie Smith","J.K. Rowling","Jane Austen","F. Scott Fitzgerald","George Orwell","Gabriel Garcia Marquez","Antoine de Saint-Exupéry","Black or African American","Woman",27,0,0,38
+"treat","low",1,0,1,1,1,0,0,1,0,2,1,1,1,"George Orwell","F. Scott Fitzgerald","Jane Austen","Zadie Smith","Antoine de Saint-Exupéry","John Steinbeck","Ernest Hemingway","Hispanic / Latinx","Woman",28,0,0,38
+"control","med",0,1,1,1,0,0,0,0,1,3,1,2,3,"Ray Bradbury","Gabriel Garcia Marquez","Jane Austen","Joyce Carol Oates","Virginia Woolf","Charles Dickens","Kurt Vonnegut","White / Caucasian","Man",31,1,1,38
+"treat","high",1,1,1,0,1,0,0,0,1,2,4,2,2,"George Orwell","Oscar Wilde","Charles Dickens","Maya Angelou","Jane Austen","Kurt Vonnegut","Ray Bradbury","White / Caucasian","Woman",23,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,0,1,2,2,"Kurt Vonnegut","John Steinbeck","George Orwell","J.D. Salinger","Ernest Hemingway","Nathaniel Hawthorne","Gabriel Garcia Marquez","White / Caucasian","Man",63,1,1,38
+"control","med",0,1,1,1,0,0,1,0,0,2,1,2,2,"Oscar Wilde","George Saunders","Jane Austen","Joyce Carol Oates","Ray Bradbury","Nathaniel Hawthorne","Flann O'Brien","White / Caucasian","Man",42,1,1,38
+"treat","high",1,1,0,1,1,0,0,1,0,2,2,0,3,"George Orwell","Michael Crichton","Ray Bradbury","Kurt Vonnegut","J.K. Rowling","Sylvia Plath","F. Scott Fitzgerald","White / Caucasian","Man",41,1,1,38
+"treat","med",1,1,1,0,1,0,0,0,0,1,0,3,3,"Ray Bradbury","Virginia Woolf","Kurt Vonnegut","Nathaniel Hawthorne","F. Scott Fitzgerald","John Steinbeck","J.D. Salinger","Asian / Pacific Islander","Woman",50,0,0,38
+"control","med",0,1,1,1,0,1,0,0,0,0,1,3,3,"Nathaniel Hawthorne","Charles Dickens","F. Scott Fitzgerald","Ray Bradbury","John Steinbeck","J.D. Salinger","Jane Austen","White / Caucasian","Man",55,1,1,38
+"treat","low",1,0,1,1,1,0,1,0,0,0,1,0,1,"Gabriel Garcia Marquez","George Orwell","Kurt Vonnegut","J.D. Salinger","Kevin Wilson","Kazuo Ishiguro","Neil Gaiman","White / Caucasian","Woman",44,0,1,38
+"control","med",0,1,1,1,0,0,0,0,1,1,2,2,0,"Oscar Wilde","Ernest Hemingway","Jane Austen","George Orwell","George Saunders","Antoine de Saint-Exupéry","Michael Crichton","White / Caucasian","Man",39,1,1,38
+"treat","low",1,1,1,0,1,0,0,1,0,2,1,0,2,"J.K. Rowling","Kurt Vonnegut","Cormac McCarthy","Michael Crichton","George Orwell","Jane Austen","F. Scott Fitzgerald","White / Caucasian","Man",55,1,1,38
+"control","low",0,1,1,1,0,0,0,0,0,1,1,1,1,"Ernest Hemingway","Kurt Vonnegut","Jane Austen","George Orwell","Cormac McCarthy","Anthony Doerr","Kevin Wilson","White / Caucasian","Man",34,1,1,38
+"control","low",0,1,1,1,0,0,0,0,0,0,0,2,1,"Antoine de Saint-Exupéry","John Steinbeck","Ernest Hemingway","Nathaniel Hawthorne","Anthony Doerr","J.D. Salinger","Edward Upward","White / Caucasian","Woman",51,0,1,38
+"control","high",0,1,1,1,0,1,0,1,1,2,2,4,1,"J.K. Rowling","F. Scott Fitzgerald","Ernest Hemingway","Charles Dickens","Maya Angelou","Nathaniel Hawthorne","Lucy Maud","Black or African American","Woman",38,0,0,38
+"control","high",0,1,1,1,0,0,0,0,1,2,2,1,1,"J.K. Rowling","John Steinbeck","Jane Austen","Neil Gaiman","F. Scott Fitzgerald","George Orwell","Michael Crichton","Asian / Pacific Islander","Woman",50,0,0,38
+"control","med",0,1,1,1,0,0,0,1,0,0,2,1,3,"George Orwell","Kurt Vonnegut","John Steinbeck","Ray Bradbury","J.D. Salinger","Oscar Wilde","Ernest Hemingway","White / Caucasian","Man",32,1,1,38
+"control","high",0,1,1,1,0,1,1,0,0,3,2,4,0,"Sylvia Plath","F. Scott Fitzgerald","Virginia Woolf","Oscar Wilde","Jane Austen","Ernest Hemingway","Maya Angelou","White / Caucasian","Woman",34,0,1,38
+"treat","med",1,1,1,0,1,1,0,0,0,2,1,0,4,"Kurt Vonnegut","Albert Camus","John Steinbeck","Joyce Carol Oates","Sylvia Plath","Ray Bradbury","Jane Austen","White / Caucasian","Man",35,1,1,38
+"control","low",0,1,1,1,0,0,0,0,1,1,0,3,1,"John Steinbeck","Nathaniel Hawthorne","Kevin Wilson","Jane Austen","Ernest Hemingway","F. Scott Fitzgerald","Michael Crichton","White / Caucasian","Woman",24,0,1,38
+"treat","high",1,1,1,0,1,0,0,0,1,3,1,3,2,"Charles Dickens","F. Scott Fitzgerald","Isabel Allende","Ernest Hemingway","Jane Austen","Zadie Smith","Ray Bradbury","White / Caucasian","Woman",44,0,1,38
+"treat","high",1,0,1,1,1,1,0,0,0,5,1,2,3,"J.K. Rowling","Isabel Allende","Nathaniel Hawthorne","Maya Angelou","Joyce Carol Oates","Lucy Maud","Jane Austen","White / Caucasian","Woman",49,0,1,38
+"treat","med",1,0,1,1,1,0,0,0,0,0,2,3,2,"F. Scott Fitzgerald","George Orwell","Ray Bradbury","Oscar Wilde","John Steinbeck","Ernest Hemingway","J.D. Salinger","White / Caucasian","Man",46,1,1,38
+"control","high",0,1,1,1,0,0,0,1,0,3,2,2,1,"Jane Austen","John Steinbeck","Maya Angelou","Oscar Wilde","J.K. Rowling","F. Scott Fitzgerald","Nathaniel Hawthorne","White / Caucasian","Woman",38,0,1,38
+"control","high",0,1,1,1,0,0,0,0,1,2,2,4,3,"F. Scott Fitzgerald","Isabel Allende","Joyce Carol Oates","Victor Hugo","Charles Dickens","Ernest Hemingway","John Steinbeck","White / Caucasian","Woman",46,0,1,38
+"treat","low",1,0,1,1,1,0,0,0,1,3,0,1,1,"J.K. Rowling","Nathaniel Hawthorne","Zadie Smith","Jane Austen","Kazuo Ishiguro","John Steinbeck","Kurt Vonnegut","Black or African American","Woman",42,0,0,38
+"treat","med",1,1,1,0,1,0,0,1,0,2,2,2,2,"Michael Crichton","Jane Austen","George Orwell","J.K. Rowling","Nathaniel Hawthorne","Charles Dickens","Ernest Hemingway","White / Caucasian","Man",36,1,1,38
+"treat","med",1,0,1,1,1,0,0,0,1,2,2,1,1,"Sylvia Plath","Ernest Hemingway","Albert Camus","Kurt Vonnegut","George Orwell","J.K. Rowling","Ray Bradbury","Asian / Pacific Islander","Man",28,1,0,38
+"treat","med",1,1,1,0,1,1,0,0,1,0,0,1,2,"George Saunders","Ray Bradbury","Albert Camus","Nathaniel Hawthorne","John Steinbeck","Gabriel Garcia Marquez","Joyce Carol Oates","White / Caucasian","Woman",48,0,1,38
+"control","high",0,1,1,1,0,0,0,0,1,0,2,4,2,"Ernest Hemingway","Nathaniel Hawthorne","F. Scott Fitzgerald","Charles Dickens","George Orwell","Michael Crichton","Ray Bradbury","White / Caucasian","Man",43,1,1,38
+"control","med",0,1,1,1,0,0,0,0,1,2,2,1,2,"J.K. Rowling","Charles Dickens","George Orwell","Antoine de Saint-Exupéry","Jane Austen","Ray Bradbury","Michael Crichton","White / Caucasian","Woman",51,0,1,38
+"control","low",0,1,1,1,0,0,0,1,0,2,0,0,2,"Jane Austen","Cormac McCarthy","J.K. Rowling","J.D. Salinger","Kurt Vonnegut","Michael Crichton","F. Scott Fitzgerald","White / Caucasian","Man",36,1,1,38
+"control","low",0,1,1,1,0,0,0,0,0,2,1,2,0,"Ernest Hemingway","Jane Austen","George Orwell","Zadie Smith","Nathaniel Hawthorne","Gabriel Garcia Marquez","J.D. Salinger","Black or African American","Woman",43,0,0,38
+"control","low",0,1,1,1,0,0,0,0,1,2,1,1,0,"Albert Camus","J.D. Salinger","George Orwell","J.K. Rowling","Ernest Hemingway","Zadie Smith","Kurt Vonnegut","Black or African American","Man",49,1,0,38
+"control","low",0,1,1,1,0,0,0,0,1,2,0,1,1,"Cormac McCarthy","Jane Austen","J.K. Rowling","F. Scott Fitzgerald","Michael Crichton","J.D. Salinger","John Steinbeck","White / Caucasian","Woman",31,0,1,38
+"treat","low",1,0,1,1,1,1,0,0,0,1,0,2,2,"J.K. Rowling","Cormac McCarthy","F. Scott Fitzgerald","Ernest Hemingway","John Steinbeck","Michael Crichton","Jane Austen","White / Caucasian","Woman",73,0,1,38
+"treat","high",1,1,1,0,1,1,0,1,1,3,2,0,2,"Ray Bradbury","J.K. Rowling","Neil Gaiman","Jane Austen","Sylvia Plath","Michael Crichton","Lucy Maud","White / Caucasian","Woman",31,0,1,38
+"treat","high",1,1,1,0,1,1,1,0,0,2,2,1,2,"F. Scott Fitzgerald","J.K. Rowling","Kurt Vonnegut","Sylvia Plath","Michael Crichton","George Orwell","Maya Angelou","White / Caucasian","Woman",25,0,1,38
+"treat","low",1,1,0,1,1,1,0,0,0,1,1,1,2,"Ernest Hemingway","Gabriel Garcia Marquez","George Orwell","Jane Austen","Kurt Vonnegut","John Steinbeck","Zadie Smith","White / Caucasian","Man",75,1,1,38
+"treat","low",1,0,1,1,1,0,0,0,0,1,1,2,2,"Kurt Vonnegut","John Steinbeck","Ernest Hemingway","Jane Austen","George Orwell","Nathaniel Hawthorne","George Saunders","White / Caucasian","Woman",68,0,1,38
+"treat","low",1,1,1,0,1,1,0,0,0,1,0,2,2,"F. Scott Fitzgerald","J.K. Rowling","Kurt Vonnegut","Ernest Hemingway","Michael Crichton","J.D. Salinger","Jane Austen","White / Caucasian","Man",51,1,1,38
+"control","low",0,1,1,1,0,0,0,0,1,2,0,1,1,"Zadie Smith","Jane Austen","Kurt Vonnegut","Ernest Hemingway","Gabriel Garcia Marquez","Kazuo Ishiguro","Michael Crichton","White / Caucasian","Man",55,1,1,38
+"treat","low",1,1,1,0,1,0,0,0,0,1,1,2,2,"George Orwell","Michael Crichton","F. Scott Fitzgerald","John Steinbeck","Jane Austen","Nathaniel Hawthorne","Antoine de Saint-Exupéry","White / Caucasian","Man",61,1,1,38
+"treat","high",1,1,1,0,1,0,0,0,1,3,2,0,3,"Michael Crichton","Ray Bradbury","Maya Angelou","Zadie Smith","George Orwell","Isabel Allende","John Steinbeck","White / Caucasian","Woman",60,0,1,38
+"control","med",0,1,1,1,0,1,1,0,0,3,0,0,2,"Jane Austen","J.K. Rowling","J.D. Salinger","Ray Bradbury","Michael Crichton","Zadie Smith","Sylvia Plath","White / Caucasian","Man",40,1,1,38
+"treat","high",1,1,1,0,1,1,1,0,0,1,1,1,3,"John Steinbeck","J.K. Rowling","Ray Bradbury","Ernest Hemingway","George Orwell","Michael Crichton","Maya Angelou","White / Caucasian","Another gender not listed here:",35,0,1,38
+"treat","med",1,0,1,1,1,1,1,0,0,2,1,1,1,"J.D. Salinger","Joyce Carol Oates","Antoine de Saint-Exupéry","Gabriel Garcia Marquez","Virginia Woolf","Neil Gaiman","Sylvia Plath","White / Caucasian","Woman",42,0,1,38
+"treat","low",1,1,0,1,1,0,0,0,0,0,1,1,3,"Kurt Vonnegut","George Orwell","Ernest Hemingway","Michael Crichton","Cormac McCarthy","John Steinbeck","Kevin Wilson","White / Caucasian","Man",41,1,1,38
+"control","low",0,1,1,1,0,0,0,0,0,1,0,1,1,"J.K. Rowling","George Saunders","F. Scott Fitzgerald","John Steinbeck","Daniel Mason","Gabriel Garcia Marquez","Anthony Veasna So","Hispanic / Latinx","Man",39,1,0,38
+"treat","med",1,1,1,0,1,0,1,1,1,2,1,3,0,"Virginia Woolf","Jane Austen","Albert Camus","George Orwell","Ernest Hemingway","F. Scott Fitzgerald","Charles Dickens","Asian / Pacific Islander","Woman",24,0,0,38
+"control","low",0,1,1,1,0,0,0,0,0,2,1,1,1,"George Orwell","John Steinbeck","F. Scott Fitzgerald","J.K. Rowling","Jane Austen","J.D. Salinger","Anthony Veasna So","White / Caucasian","Woman",46,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,1,1,1,2,"George Orwell","J.D. Salinger","J.K. Rowling","F. Scott Fitzgerald","Kurt Vonnegut","Michael Crichton","Edward Upward","White / Caucasian","Man",28,1,1,38
+"treat","low",1,1,0,1,1,0,0,0,0,0,1,0,3,"Kurt Vonnegut","Albert Camus","Neil Gaiman","Cormac McCarthy","John Steinbeck","Michael Crichton","Gabriel Garcia Marquez","White / Caucasian","Man",35,1,1,38
+"control","low",0,1,1,1,0,0,1,0,0,0,0,1,0,"Anthony Veasna So","George Saunders","Daniel Mason","J.D. Salinger","Edward Upward","Nathaniel Hawthorne","Neil Gaiman","White / Caucasian","Woman",48,0,1,38
+"treat","med",1,1,1,0,1,1,0,0,0,2,1,1,4,"John Steinbeck","Joyce Carol Oates","Sylvia Plath","Ray Bradbury","Kurt Vonnegut","Nathaniel Hawthorne","Jane Austen","White / Caucasian","Woman",40,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,2,1,2,0,"Ernest Hemingway","George Orwell","J.D. Salinger","J.K. Rowling","F. Scott Fitzgerald","Jane Austen","Cormac McCarthy","Asian / Pacific Islander","Man",31,1,0,38
+"control","med",0,1,1,1,0,0,0,0,0,2,2,3,2,"Virginia Woolf","F. Scott Fitzgerald","J.D. Salinger","Ray Bradbury","Charles Dickens","Sylvia Plath","Gabriel Garcia Marquez","Asian / Pacific Islander","Man",30,1,0,38
+"control","low",0,1,1,1,0,0,0,0,1,1,0,1,2,"John Steinbeck","Jane Austen","Gabriel Garcia Marquez","Kurt Vonnegut","Kazuo Ishiguro","Ernest Hemingway","Michael Crichton","Hispanic / Latinx","Woman",29,0,0,38
+"control","low",0,1,1,1,0,0,0,1,0,1,1,1,0,"Ernest Hemingway","Anthony Doerr","Jane Austen","Cormac McCarthy","George Orwell","Antoine de Saint-Exupéry","F. Scott Fitzgerald","Hispanic / Latinx","Woman",23,0,0,38
+"control","med",0,1,1,1,0,0,0,0,1,2,1,5,1,"Jane Austen","Virginia Woolf","F. Scott Fitzgerald","Ernest Hemingway","Charles Dickens","Nathaniel Hawthorne","John Steinbeck","White / Caucasian","Woman",38,0,1,38
+"control","high",0,1,1,1,0,0,0,0,1,1,2,3,3,"Kurt Vonnegut","Charles Dickens","F. Scott Fitzgerald","John Steinbeck","Maya Angelou","Ernest Hemingway","Ray Bradbury","Asian / Pacific Islander","Man",35,1,0,38
+"treat","med",1,1,1,0,1,0,1,1,1,3,0,1,4,"Kurt Vonnegut","J.K. Rowling","Joyce Carol Oates","Ray Bradbury","John Steinbeck","Virginia Woolf","Charles Dickens","White / Caucasian","Man",49,1,1,38
+"treat","low",1,0,1,1,1,0,0,1,0,1,0,1,2,"Cormac McCarthy","Ernest Hemingway","J.D. Salinger","John Steinbeck","Jane Austen","Kurt Vonnegut","F. Scott Fitzgerald","White / Caucasian","Man",35,1,1,38
+"treat","low",1,0,1,1,1,0,0,0,0,1,1,0,2,"Flann O'Brien","Michael Crichton","Edward Upward","George Saunders","John Steinbeck","Jane Austen","Kevin Wilson","Asian / Pacific Islander","Man",22,1,0,38
+"control","high",0,1,1,1,0,1,1,0,0,3,2,4,2,"Lucy Maud","Ernest Hemingway","Oscar Wilde","J.K. Rowling","Jane Austen","Jorge Luis Borges","Maya Angelou","White / Caucasian","Woman",66,0,1,38
+"treat","low",1,1,1,0,1,0,0,1,0,1,1,2,1,"F. Scott Fitzgerald","J.D. Salinger","Jane Austen","George Orwell","Ernest Hemingway","John Steinbeck","Nathaniel Hawthorne","White / Caucasian","Man",35,1,1,38
+"treat","low",1,1,1,0,1,0,0,0,0,2,1,2,1,"J.K. Rowling","F. Scott Fitzgerald","Michael Crichton","Ernest Hemingway","George Orwell","Jane Austen","Edward Upward","White / Caucasian","Man",38,1,1,38
+"control","med",0,1,1,1,0,0,0,1,0,1,2,1,3,"J.K. Rowling","Ray Bradbury","J.D. Salinger","Michael Crichton","George Orwell","Charles Dickens","Ernest Hemingway","White / Caucasian","Woman",72,0,1,38
+"control","high",0,1,1,1,0,0,0,0,1,0,2,3,2,"Oscar Wilde","George Orwell","Ernest Hemingway","F. Scott Fitzgerald","Ray Bradbury","Michael Crichton","Kurt Vonnegut","Asian / Pacific Islander","Man",23,1,0,38
+"control","med",0,1,1,1,0,1,0,0,1,2,0,3,1,"J.K. Rowling","Michael Crichton","F. Scott Fitzgerald","Nathaniel Hawthorne","J.D. Salinger","Virginia Woolf","Joyce Carol Oates","White / Caucasian","Man",37,1,1,38
+"treat","med",1,1,1,0,1,0,0,0,1,2,2,1,2,"F. Scott Fitzgerald","George Orwell","Zadie Smith","Michael Crichton","Sylvia Plath","John Steinbeck","Kurt Vonnegut","White / Caucasian","Woman",40,0,1,38
+"control","high",0,1,1,1,0,0,0,1,0,2,4,3,1,"Maya Angelou","George Orwell","Charles Dickens","J.K. Rowling","Nathaniel Hawthorne","Victor Hugo","F. Scott Fitzgerald","Black or African American","Woman",39,0,0,38
+"control","high",0,1,1,1,0,1,0,0,0,0,1,3,3,"Ernest Hemingway","John Steinbeck","Ray Bradbury","Kurt Vonnegut","F. Scott Fitzgerald","Victor Hugo","Jane Austen","Hispanic / Latinx","Man",38,1,0,38
+"treat","low",1,1,1,0,1,0,1,0,0,2,0,3,0,"Nathaniel Hawthorne","J.D. Salinger","F. Scott Fitzgerald","Jane Austen","Ernest Hemingway","J.K. Rowling","Neil Gaiman","White / Caucasian","Woman",35,0,1,38
+"treat","med",1,1,1,0,1,1,0,1,0,3,4,1,0,"Neil Gaiman","Oscar Wilde","George Orwell","Jane Austen","Zadie Smith","Sylvia Plath","Virginia Woolf","Black or African American","Woman",24,0,0,38
+"control","high",0,1,1,1,0,0,0,0,1,1,2,4,2,"Ernest Hemingway","Charles Dickens","F. Scott Fitzgerald","Oscar Wilde","John Steinbeck","Jane Austen","Kurt Vonnegut","White / Caucasian","Man",73,1,1,38
+"treat","high",1,1,1,0,1,1,0,1,0,2,4,3,1,"Charles Dickens","Oscar Wilde","Ernest Hemingway","Jane Austen","Maya Angelou","George Orwell","Virginia Woolf","White / Caucasian","Woman",62,0,1,38
+"control","low",0,1,1,1,0,0,0,1,0,0,1,2,2,"F. Scott Fitzgerald","George Orwell","Kurt Vonnegut","J.D. Salinger","Michael Crichton","Nathaniel Hawthorne","Ernest Hemingway","White / Caucasian","Woman",53,0,1,38
+"control","med",0,1,1,1,0,0,0,0,1,2,3,1,3,"Jane Austen","George Orwell","Sylvia Plath","Ray Bradbury","John Steinbeck","Charles Dickens","Kurt Vonnegut","White / Caucasian","Woman",53,0,1,38
+"control","low",0,1,1,1,0,0,0,1,0,2,0,0,1,"Jane Austen","John Steinbeck","Antoine de Saint-Exupéry","Gabriel Garcia Marquez","Zadie Smith","Kazuo Ishiguro","Ernest Hemingway","White / Caucasian","Woman",38,0,1,38
+"treat","high",1,1,0,1,1,0,1,1,0,2,2,2,1,"Jane Austen","F. Scott Fitzgerald","Nathaniel Hawthorne","Maya Angelou","George Orwell","John Steinbeck","Victor Hugo","White / Caucasian","Woman",49,0,1,38
+"treat","med",1,1,1,0,1,0,0,1,0,2,2,0,2,"Kurt Vonnegut","Sylvia Plath","George Orwell","Zadie Smith","John Steinbeck","Gabriel Garcia Marquez","Nathaniel Hawthorne","White / Caucasian","Woman",28,0,1,38
+"treat","low",1,1,0,1,1,1,0,0,0,0,0,0,3,"John Steinbeck","Kazuo Ishiguro","Antoine de Saint-Exupéry","Edward Upward","Michael Crichton","Kurt Vonnegut","Zadie Smith","Black or African American","Man",36,1,0,38
+"treat","high",1,1,0,1,1,1,0,0,1,0,3,3,4,"F. Scott Fitzgerald","Ray Bradbury","George Orwell","Michael Crichton","Jorge Luis Borges","Charles Dickens","Isabel Allende","Hispanic / Latinx","Man",24,1,0,38
+"control","high",0,1,1,1,0,0,0,1,0,3,1,3,3,"Lucy Maud","Joyce Carol Oates","F. Scott Fitzgerald","Ray Bradbury","Jane Austen","Oscar Wilde","Ernest Hemingway","White / Caucasian","Woman",41,0,1,38
+"control","low",0,1,1,1,0,0,0,1,0,1,1,0,1,"Neil Gaiman","Daniel Mason","Michael Crichton","J.K. Rowling","J.D. Salinger","Kevin Wilson","F. Scott Fitzgerald","White / Caucasian","Man",56,1,1,38
+"control","med",0,1,1,1,0,0,0,0,1,2,1,1,1,"Jane Austen","Gabriel Garcia Marquez","Virginia Woolf","George Orwell","Albert Camus","John Steinbeck","Ray Bradbury","White / Caucasian","Woman",64,0,1,38
+"control","high",0,1,1,1,0,1,0,0,0,2,2,3,2,"J.K. Rowling","Victor Hugo","Ernest Hemingway","Neil Gaiman","Lucy Maud","Michael Crichton","Jane Austen","Black or African American","Woman",45,0,0,38
+"control","med",0,1,1,1,0,0,1,1,0,1,1,1,3,"Ray Bradbury","Michael Crichton","Kurt Vonnegut","George Orwell","J.K. Rowling","Nathaniel Hawthorne","Oscar Wilde","White / Caucasian","Woman",56,0,1,38
+"treat","low",1,0,1,1,1,0,0,1,0,2,1,1,1,"J.D. Salinger","George Orwell","John Steinbeck","Jane Austen","J.K. Rowling","F. Scott Fitzgerald","Ernest Hemingway","Asian / Pacific Islander","Man",27,1,0,38
+"treat","med",1,1,1,0,1,0,0,1,0,1,3,3,2,"Oscar Wilde","Kurt Vonnegut","George Orwell","F. Scott Fitzgerald","Charles Dickens","J.K. Rowling","Ernest Hemingway","White / Caucasian","Woman",63,0,1,38
+"control","high",0,1,1,1,0,1,0,0,1,3,1,1,2,"Maya Angelou","Virginia Woolf","Edward Upward","J.K. Rowling","Michael Crichton","John Steinbeck","Joyce Carol Oates","Hispanic / Latinx","Woman",62,0,0,38
+"treat","med",1,1,1,0,1,0,0,1,0,1,0,1,3,"F. Scott Fitzgerald","Ray Bradbury","J.D. Salinger","Kurt Vonnegut","J.K. Rowling","John Steinbeck","Ernest Hemingway","White / Caucasian","Man",50,1,1,38
+"treat","low",1,1,0,1,1,1,0,0,0,1,1,0,2,"George Orwell","Kurt Vonnegut","Albert Camus","J.D. Salinger","John Steinbeck","Jane Austen","Zadie Smith","White / Caucasian","Woman",40,0,1,38
+"control","med",0,1,1,1,0,0,1,1,0,1,0,2,2,"F. Scott Fitzgerald","Ray Bradbury","Nathaniel Hawthorne","Jane Austen","J.D. Salinger","Michael Crichton","Oscar Wilde","Asian / Pacific Islander","Man",36,1,0,38
+"treat","high",1,0,1,1,1,1,0,0,0,1,2,4,2,"Michael Crichton","Ernest Hemingway","Victor Hugo","Oscar Wilde","Virginia Woolf","Ray Bradbury","J.K. Rowling","White / Caucasian","Man",41,1,1,38
+"treat","med",1,1,1,0,1,0,0,0,1,1,2,3,1,"Charles Dickens","Albert Camus","George Orwell","Gabriel Garcia Marquez","Ernest Hemingway","Virginia Woolf","John Steinbeck","White / Caucasian","Man",57,1,1,38
+"control","med",0,1,1,1,0,0,0,0,0,2,1,2,1,"Jane Austen","Nathaniel Hawthorne","John Steinbeck","J.K. Rowling","George Orwell","F. Scott Fitzgerald","J.D. Salinger","White / Caucasian","Man",31,1,1,38
+"control","med",0,1,1,1,0,1,1,0,0,3,2,2,2,"Zadie Smith","Jane Austen","J.K. Rowling","Michael Crichton","Oscar Wilde","Charles Dickens","Sylvia Plath","Black or African American","Woman",55,0,0,38
+"control","med",0,1,1,1,0,1,0,1,0,1,1,1,6,"Charles Dickens","John Steinbeck","Michael Crichton","Ray Bradbury","Joyce Carol Oates","Kurt Vonnegut","Virginia Woolf","White / Caucasian","Man",38,1,1,38
+"control","high",0,1,1,1,0,1,0,0,0,3,2,4,2,"Charles Dickens","Lucy Maud","F. Scott Fitzgerald","Maya Angelou","J.K. Rowling","Ernest Hemingway","Jane Austen","White / Caucasian","Man",45,1,1,38
+"treat","med",1,1,0,1,1,0,0,0,1,2,0,2,3,"Nathaniel Hawthorne","John Steinbeck","F. Scott Fitzgerald","Kurt Vonnegut","Joyce Carol Oates","Jane Austen","Michael Crichton","White / Caucasian","Woman",63,0,1,38
+"treat","high",1,1,1,0,1,1,0,0,0,3,3,3,2,"Ernest Hemingway","Joyce Carol Oates","Jorge Luis Borges","Sylvia Plath","F. Scott Fitzgerald","Maya Angelou","Jane Austen","White / Caucasian","Woman",24,0,1,38
+"control","high",0,1,1,1,0,0,1,1,1,3,0,1,3,"J.K. Rowling","Isabel Allende","Jane Austen","F. Scott Fitzgerald","John Steinbeck","Michael Crichton","Charles Dickens","White / Caucasian","Woman",35,0,1,38
+"control","high",0,1,1,1,0,1,0,0,1,4,1,2,1,"Zadie Smith","Maya Angelou","Ernest Hemingway","Isabel Allende","F. Scott Fitzgerald","Jane Austen","Joyce Carol Oates","Black or African American","Woman",34,0,0,38
+"control","med",0,1,1,1,0,0,0,0,1,1,2,2,3,"George Orwell","Charles Dickens","Ray Bradbury","Michael Crichton","F. Scott Fitzgerald","Jane Austen","John Steinbeck","White / Caucasian","Man",59,1,1,38
+"control","high",0,1,1,1,0,0,0,0,1,4,2,2,3,"Charles Dickens","Jane Austen","Maya Angelou","Virginia Woolf","Michael Crichton","Isabel Allende","Ray Bradbury","White / Caucasian","Man",27,1,1,38
+"control","med",0,1,1,1,0,1,0,0,0,3,1,1,2,"Jane Austen","Flann O'Brien","J.K. Rowling","Ernest Hemingway","Joyce Carol Oates","Michael Crichton","Zadie Smith","White / Caucasian","Woman",38,0,1,38
+"control","high",0,1,1,1,0,0,1,1,1,0,2,2,2,"Ernest Hemingway","George Orwell","F. Scott Fitzgerald","Kurt Vonnegut","Michael Crichton","Neil Gaiman","Charles Dickens","White / Caucasian","Man",38,1,1,38
+"control","low",0,1,1,1,0,0,1,0,0,2,0,1,2,"F. Scott Fitzgerald","Kazuo Ishiguro","Jane Austen","John Steinbeck","J.K. Rowling","Michael Crichton","George Orwell","Asian / Pacific Islander","Man",29,1,0,38
+"control","high",0,1,1,1,0,1,1,0,0,1,4,3,2,"Sylvia Plath","George Orwell","Oscar Wilde","Charles Dickens","Ray Bradbury","Nathaniel Hawthorne","Maya Angelou","White / Caucasian","Woman",51,0,1,38
+"treat","high",1,1,1,0,1,0,0,1,0,3,4,3,1,"Sylvia Plath","Charles Dickens","Ernest Hemingway","J.K. Rowling","Maya Angelou","Oscar Wilde","Nathaniel Hawthorne","White / Caucasian","Woman",51,0,1,38
+"treat","low",1,0,1,1,1,0,0,0,0,2,1,1,1,"Michael Crichton","Jane Austen","J.K. Rowling","Ernest Hemingway","Gabriel Garcia Marquez","Neil Gaiman","Kevin Wilson","White / Caucasian","Woman",50,0,1,38
+"treat","med",1,1,0,1,1,0,0,0,1,0,2,1,1,"Neil Gaiman","Ray Bradbury","George Orwell","Gabriel Garcia Marquez","J.D. Salinger","F. Scott Fitzgerald","Kurt Vonnegut","White / Caucasian","Woman",33,0,1,38
+"control","med",0,1,1,1,0,0,0,0,1,1,2,4,1,"Ray Bradbury","George Orwell","Virginia Woolf","Ernest Hemingway","Oscar Wilde","F. Scott Fitzgerald","John Steinbeck","Black or African American","Woman",47,0,0,38
+"treat","high",1,1,0,1,1,0,0,1,0,3,1,1,2,"Maya Angelou","Jane Austen","J.K. Rowling","Ray Bradbury","F. Scott Fitzgerald","Michael Crichton","Nathaniel Hawthorne","Asian / Pacific Islander","Woman",27,0,0,38
+"treat","med",1,0,1,1,1,0,0,1,0,1,3,4,1,"Oscar Wilde","Ernest Hemingway","J.K. Rowling","George Orwell","Charles Dickens","Nathaniel Hawthorne","F. Scott Fitzgerald","White / Caucasian","Man",43,1,1,38
+"control","high",0,1,1,1,0,1,0,1,1,2,3,4,1,"Jane Austen","Charles Dickens","Nathaniel Hawthorne","Maya Angelou","F. Scott Fitzgerald","Victor Hugo","Lucy Maud","Black or African American","Woman",32,0,0,38
+"control","high",0,1,1,1,0,1,0,1,1,3,1,0,3,"John Steinbeck","Jane Austen","Zadie Smith","Joyce Carol Oates","George Orwell","Kurt Vonnegut","Lucy Maud","Hispanic / Latinx","Woman",26,0,0,38
+"treat","low",1,1,1,0,1,1,0,0,0,0,1,2,2,"Ernest Hemingway","J.D. Salinger","F. Scott Fitzgerald","George Orwell","John Steinbeck","Michael Crichton","J.K. Rowling","White / Caucasian","Woman",69,0,1,38
+"control","med",0,1,1,1,0,0,1,1,0,1,1,4,2,"J.D. Salinger","Ernest Hemingway","Charles Dickens","F. Scott Fitzgerald","Virginia Woolf","John Steinbeck","Oscar Wilde","White / Caucasian","Woman",50,0,1,38
+"treat","low",1,1,0,1,1,0,0,1,0,3,1,2,0,"Jane Austen","Nathaniel Hawthorne","J.K. Rowling","Zadie Smith","F. Scott Fitzgerald","George Orwell","Ernest Hemingway","Hispanic / Latinx","Woman",36,0,0,38
+"treat","high",1,0,1,1,1,1,1,0,0,4,2,3,2,"Jane Austen","Charles Dickens","Lucy Maud","George Orwell","Virginia Woolf","J.K. Rowling","Maya Angelou","White / Caucasian","Man",50,1,1,38
+"control","high",0,1,1,1,0,1,0,0,0,4,2,3,1,"Maya Angelou","J.K. Rowling","Ernest Hemingway","Jane Austen","Virginia Woolf","Charles Dickens","Zadie Smith","Black or African American","Woman",51,0,0,38
+"treat","high",1,0,1,1,1,0,1,1,1,4,3,2,2,"Maya Angelou","Lucy Maud","Sylvia Plath","Zadie Smith","Ray Bradbury","Victor Hugo","Charles Dickens","White / Caucasian","Man",56,1,1,38
+"treat","high",1,1,0,1,1,1,0,1,0,2,4,1,2,"Kurt Vonnegut","Maya Angelou","Victor Hugo","George Orwell","John Steinbeck","Sylvia Plath","Virginia Woolf","White / Caucasian","Man",70,1,1,38
+"control","low",0,1,1,1,0,0,0,1,0,1,1,1,2,"George Orwell","F. Scott Fitzgerald","John Steinbeck","Albert Camus","Michael Crichton","J.K. Rowling","Nathaniel Hawthorne","Hispanic / Latinx","Man",42,1,0,38
+"treat","med",1,1,0,1,1,0,0,1,0,1,2,1,3,"George Orwell","Kurt Vonnegut","Jane Austen","Charles Dickens","J.D. Salinger","Ray Bradbury","Ernest Hemingway","White / Caucasian","Man",69,1,1,38
+"treat","low",1,0,1,1,1,0,0,0,1,2,1,1,1,"Zadie Smith","Jane Austen","Anthony Doerr","F. Scott Fitzgerald","Michael Crichton","George Orwell","John Steinbeck","White / Caucasian","Woman",31,0,1,38
+"treat","low",1,1,0,1,1,0,0,0,1,1,1,1,1,"John Steinbeck","Jane Austen","Ernest Hemingway","Gabriel Garcia Marquez","George Orwell","Anthony Doerr","Kurt Vonnegut","White / Caucasian","Man",54,1,1,38
+"control","med",0,1,1,1,0,0,0,1,0,1,2,2,2,"George Orwell","F. Scott Fitzgerald","Michael Crichton","Gabriel Garcia Marquez","Charles Dickens","J.K. Rowling","Ernest Hemingway","White / Caucasian","Man",36,1,1,38
+"control","high",0,1,1,1,0,0,1,1,1,3,2,3,2,"Oscar Wilde","John Steinbeck","Ernest Hemingway","Sylvia Plath","Isabel Allende","Virginia Woolf","Jorge Luis Borges","White / Caucasian","Man",26,1,1,38
+"control","high",0,1,1,1,0,1,0,1,0,3,3,0,2,"Ray Bradbury","Kurt Vonnegut","Zadie Smith","Flann O'Brien","Sylvia Plath","Maya Angelou","Virginia Woolf","White / Caucasian","Woman",42,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,2,0,2,1,"J.K. Rowling","Ernest Hemingway","F. Scott Fitzgerald","Jane Austen","John Steinbeck","Kazuo Ishiguro","J.D. Salinger","Asian / Pacific Islander","Man",35,1,0,38
+"control","low",0,1,1,1,0,0,0,0,0,2,1,2,1,"Jane Austen","Nathaniel Hawthorne","J.K. Rowling","F. Scott Fitzgerald","Michael Crichton","Neil Gaiman","Kevin Wilson","White / Caucasian","Man",26,1,1,38
+"treat","low",1,1,1,0,1,0,0,0,1,2,0,0,1,"J.K. Rowling","Kurt Vonnegut","Albert Camus","Jane Austen","Antoine de Saint-Exupéry","Gabriel Garcia Marquez","Michael Crichton","Black or African American","Man",47,1,0,38
+"treat","high",1,1,1,0,1,0,0,0,1,4,3,1,2,"Maya Angelou","J.K. Rowling","Neil Gaiman","Zadie Smith","Joyce Carol Oates","Jorge Luis Borges","Michael Crichton","White / Caucasian","Woman",41,0,1,38
+"control","med",0,1,1,1,0,0,0,0,1,2,2,1,2,"Charles Dickens","J.K. Rowling","Neil Gaiman","Zadie Smith","J.D. Salinger","Michael Crichton","Kurt Vonnegut","Black or African American","Man",63,1,0,38
+"treat","high",1,0,1,1,1,0,1,1,1,3,1,3,2,"J.K. Rowling","Michael Crichton","Ernest Hemingway","Nathaniel Hawthorne","Maya Angelou","Lucy Maud","Charles Dickens","White / Caucasian","Man",58,1,1,38
+"treat","low",1,0,1,1,1,0,0,0,1,1,2,1,1,"Albert Camus","Neil Gaiman","Ernest Hemingway","J.K. Rowling","George Orwell","Kurt Vonnegut","Michael Crichton","White / Caucasian","Man",30,1,1,38
+"treat","low",1,0,1,1,1,0,0,1,0,1,1,0,2,"George Orwell","John Steinbeck","Jane Austen","Gabriel Garcia Marquez","Kazuo Ishiguro","Kurt Vonnegut","Nathaniel Hawthorne","Hispanic / Latinx","Man",43,1,0,38
+"treat","low",1,1,0,1,1,0,0,1,0,3,0,1,1,"J.D. Salinger","Zadie Smith","Ernest Hemingway","John Steinbeck","J.K. Rowling","Jane Austen","F. Scott Fitzgerald","Black or African American","Woman",44,0,0,38
+"control","low",0,1,1,1,0,0,0,0,0,2,1,0,0,"Anthony Veasna So","Neil Gaiman","Zadie Smith","Gabriel Garcia Marquez","Jane Austen","Antoine de Saint-Exupéry","Kevin Wilson","White / Caucasian","Man",49,1,1,38
+"treat","low",1,0,1,1,1,0,0,0,0,1,1,2,2,"Ernest Hemingway","J.K. Rowling","Kurt Vonnegut","Neil Gaiman","Michael Crichton","Nathaniel Hawthorne","Cormac McCarthy","White / Caucasian","Man",39,1,1,38
+"control","med",0,1,1,1,0,1,0,0,0,2,2,1,3,"John Steinbeck","J.D. Salinger","Jane Austen","Ray Bradbury","Charles Dickens","Sylvia Plath","Zadie Smith","White / Caucasian","Woman",60,0,1,38
+"treat","high",1,1,1,0,1,0,0,0,1,2,2,3,1,"F. Scott Fitzgerald","J.K. Rowling","Charles Dickens","George Orwell","Ernest Hemingway","Jane Austen","John Steinbeck","Asian / Pacific Islander","Man",40,1,0,38
+"treat","high",1,1,0,1,1,0,1,1,0,4,1,1,2,"Isabel Allende","Maya Angelou","Nathaniel Hawthorne","J.K. Rowling","John Steinbeck","Jane Austen","Victor Hugo","Hispanic / Latinx","Woman",53,0,0,38
+"treat","high",1,1,0,1,1,0,0,1,0,2,3,2,1,"George Orwell","Ernest Hemingway","Oscar Wilde","John Steinbeck","Maya Angelou","J.K. Rowling","F. Scott Fitzgerald","Hispanic / Latinx","Man",30,1,0,38
+"control","high",0,1,1,1,0,0,0,1,0,1,3,3,2,"F. Scott Fitzgerald","Charles Dickens","J.K. Rowling","Kurt Vonnegut","Oscar Wilde","George Orwell","Ernest Hemingway","White / Caucasian","Woman",62,0,1,38
+"control","med",0,1,1,1,0,0,0,0,1,2,2,2,2,"F. Scott Fitzgerald","John Steinbeck","J.D. Salinger","Sylvia Plath","Zadie Smith","Charles Dickens","Michael Crichton","White / Caucasian","Man",38,1,1,38
+"control","low",0,1,1,1,0,0,0,0,0,2,1,0,2,"John Steinbeck","Michael Crichton","Jane Austen","George Orwell","J.D. Salinger","Zadie Smith","Antoine de Saint-Exupéry","White / Caucasian","Woman",42,0,1,38
+"treat","med",1,1,1,0,1,0,0,1,0,3,2,2,0,"Gabriel Garcia Marquez","George Orwell","Jane Austen","Virginia Woolf","Ernest Hemingway","Sylvia Plath","Nathaniel Hawthorne","Hispanic / Latinx","Woman",27,0,0,38
+"control","low",0,1,1,1,0,0,0,0,1,2,0,2,1,"J.K. Rowling","Jane Austen","Ernest Hemingway","Nathaniel Hawthorne","J.D. Salinger","John Steinbeck","Michael Crichton","White / Caucasian","Woman",37,0,1,38
+"treat","high",1,1,1,0,1,0,1,1,0,3,3,2,2,"John Steinbeck","Charles Dickens","Ernest Hemingway","Maya Angelou","Sylvia Plath","Jane Austen","Oscar Wilde","White / Caucasian","Man",46,1,1,38
+"treat","med",1,0,1,1,1,0,1,1,0,1,2,2,3,"George Orwell","Charles Dickens","Ray Bradbury","F. Scott Fitzgerald","John Steinbeck","Jane Austen","Oscar Wilde","White / Caucasian","Man",32,1,1,38
+"control","med",0,1,1,1,0,0,0,1,0,2,2,0,2,"Kurt Vonnegut","Neil Gaiman","Jane Austen","Ray Bradbury","George Orwell","J.K. Rowling","Nathaniel Hawthorne","White / Caucasian","Woman",34,0,1,38
+"treat","med",1,1,1,0,1,1,0,0,0,1,3,3,2,"John Steinbeck","Oscar Wilde","J.D. Salinger","F. Scott Fitzgerald","Charles Dickens","Sylvia Plath","Jane Austen","White / Caucasian","Man",53,1,1,38
+"control","med",0,1,1,1,0,0,0,0,1,2,2,1,3,"Jane Austen","Michael Crichton","J.K. Rowling","George Orwell","Charles Dickens","John Steinbeck","Ray Bradbury","White / Caucasian","Man",70,1,1,38
+"treat","high",1,1,0,1,1,1,1,0,0,1,1,1,3,"J.K. Rowling","John Steinbeck","Ernest Hemingway","George Orwell","Kurt Vonnegut","Ray Bradbury","Sylvia Plath","White / Caucasian","Man",63,1,1,38
+"control","low",0,1,1,1,0,0,0,0,0,1,1,0,1,"Michael Crichton","Neil Gaiman","Albert Camus","J.K. Rowling","Edward Upward","J.D. Salinger","Daniel Mason","White / Caucasian","Woman",50,0,1,38
+"control","high",0,1,1,1,0,0,0,1,0,3,3,2,1,"George Orwell","Maya Angelou","Virginia Woolf","Jane Austen","Kurt Vonnegut","Victor Hugo","F. Scott Fitzgerald","Asian / Pacific Islander","Man",33,1,0,38
+"treat","low",1,0,1,1,1,0,0,0,0,2,1,2,1,"Jane Austen","Zadie Smith","John Steinbeck","F. Scott Fitzgerald","Neil Gaiman","Ernest Hemingway","George Saunders","White / Caucasian","Woman",39,0,1,38
+"treat","low",1,1,1,0,1,0,0,0,1,1,1,1,1,"Ernest Hemingway","George Orwell","J.K. Rowling","Kurt Vonnegut","J.D. Salinger","Antoine de Saint-Exupéry","John Steinbeck","White / Caucasian","Woman",43,0,1,38
+"control","high",0,1,1,1,0,0,1,0,0,1,3,2,5,"Joyce Carol Oates","George Orwell","Michael Crichton","Charles Dickens","Jorge Luis Borges","John Steinbeck","Neil Gaiman","White / Caucasian","Woman",46,0,1,38
+"treat","med",1,1,0,1,1,1,0,1,0,2,1,2,4,"F. Scott Fitzgerald","Joyce Carol Oates","Ray Bradbury","Charles Dickens","John Steinbeck","Jane Austen","Virginia Woolf","Black or African American","Woman",72,0,0,38
+"control","med",0,1,1,1,0,0,0,0,0,5,1,2,1,"F. Scott Fitzgerald","Joyce Carol Oates","Zadie Smith","Sylvia Plath","Virginia Woolf","Jane Austen","Gabriel Garcia Marquez","Asian / Pacific Islander","Man",72,1,0,38
+"control","high",0,1,1,1,0,0,1,1,1,2,1,2,1,"Ray Bradbury","Nathaniel Hawthorne","George Orwell","F. Scott Fitzgerald","J.K. Rowling","Jane Austen","Charles Dickens","White / Caucasian","Man",28,1,1,38
+"treat","med",1,0,1,1,1,1,0,0,0,2,1,2,4,"J.K. Rowling","F. Scott Fitzgerald","Joyce Carol Oates","Michael Crichton","Charles Dickens","John Steinbeck","Zadie Smith","White / Caucasian","Woman",42,0,1,38
+"treat","low",1,0,1,1,1,0,0,1,0,2,1,0,1,"Gabriel Garcia Marquez","George Orwell","Zadie Smith","John Steinbeck","J.K. Rowling","Edward Upward","F. Scott Fitzgerald","White / Caucasian","Man",37,1,1,38
+"treat","med",1,1,1,0,1,0,0,0,1,0,1,1,3,"George Orwell","Ray Bradbury","J.D. Salinger","John Steinbeck","Ernest Hemingway","Kurt Vonnegut","Michael Crichton","White / Caucasian","Man",39,1,1,38
+"control","med",0,1,1,1,0,0,0,0,1,2,1,4,2,"Ernest Hemingway","Charles Dickens","F. Scott Fitzgerald","Virginia Woolf","Michael Crichton","Jane Austen","Kurt Vonnegut","White / Caucasian","Man",79,1,1,38
+"treat","low",1,1,1,0,1,0,0,0,0,1,1,0,1,"George Saunders","Gabriel Garcia Marquez","Michael Crichton","J.K. Rowling","J.D. Salinger","Neil Gaiman","Kevin Wilson","Black or African American","Woman",62,0,0,38
+"control","high",0,1,1,1,0,1,0,0,0,1,4,1,2,"George Orwell","Ray Bradbury","Michael Crichton","Neil Gaiman","Oscar Wilde","Maya Angelou","J.K. Rowling","White / Caucasian","Man",39,1,1,38
+"control","low",0,1,1,1,0,0,0,1,0,1,1,2,1,"George Orwell","F. Scott Fitzgerald","Michael Crichton","Nathaniel Hawthorne","Jane Austen","Cormac McCarthy","Ernest Hemingway","White / Caucasian","Woman",34,0,1,38
+"treat","med",1,0,1,1,1,0,0,0,0,4,2,1,1,"Sylvia Plath","Jane Austen","George Orwell","Ray Bradbury","Zadie Smith","Virginia Woolf","Gabriel Garcia Marquez","White / Caucasian","Woman",24,0,1,38
+"treat","med",1,1,1,0,1,0,0,0,0,3,3,2,3,"Oscar Wilde","John Steinbeck","Sylvia Plath","Charles Dickens","Zadie Smith","Joyce Carol Oates","J.D. Salinger","White / Caucasian","Man",60,1,1,38
+"treat","med",1,1,0,1,1,1,0,0,0,0,2,2,3,"George Orwell","Michael Crichton","F. Scott Fitzgerald","Charles Dickens","J.D. Salinger","John Steinbeck","Jane Austen","White / Caucasian","Man",48,1,1,38
+"treat","high",1,1,1,0,1,1,1,0,0,3,2,2,2,"J.K. Rowling","F. Scott Fitzgerald","Neil Gaiman","Joyce Carol Oates","Charles Dickens","Jane Austen","Maya Angelou","Hispanic / Latinx","Woman",38,0,0,38
+"treat","high",1,1,1,0,1,1,0,0,0,6,2,1,3,"Lucy Maud","Isabel Allende","Maya Angelou","Zadie Smith","Joyce Carol Oates","Sylvia Plath","J.K. Rowling","White / Caucasian","Non-binary",48,0,1,38
+"treat","high",1,1,1,0,1,0,0,0,1,3,3,2,0,"Ernest Hemingway","George Orwell","Sylvia Plath","J.K. Rowling","F. Scott Fitzgerald","Maya Angelou","John Steinbeck","White / Caucasian","Man",57,1,1,38
+"control","low",0,1,1,1,0,0,0,0,1,2,1,1,0,"Jane Austen","Gabriel Garcia Marquez","Zadie Smith","George Orwell","Nathaniel Hawthorne","Kazuo Ishiguro","John Steinbeck","White / Caucasian","Woman",52,0,1,38
+"treat","high",1,1,1,0,1,0,0,0,1,5,1,2,3,"Sylvia Plath","Isabel Allende","Zadie Smith","Joyce Carol Oates","Lucy Maud","F. Scott Fitzgerald","John Steinbeck","White / Caucasian","Woman",45,0,1,38
+"control","high",0,1,1,1,0,1,0,1,1,1,3,2,1,"Jane Austen","Ernest Hemingway","Neil Gaiman","Victor Hugo","George Orwell","John Steinbeck","Lucy Maud","White / Caucasian","Man",33,1,1,38
+"treat","med",1,1,1,0,1,0,0,0,1,3,1,2,3,"Ray Bradbury","Michael Crichton","Virginia Woolf","F. Scott Fitzgerald","Joyce Carol Oates","Sylvia Plath","John Steinbeck","White / Caucasian","Woman",39,0,1,38
+"treat","low",1,1,1,0,1,0,1,0,0,1,0,1,1,"Anthony Veasna So","Zadie Smith","F. Scott Fitzgerald","Kazuo Ishiguro","Michael Crichton","Edward Upward","Flann O'Brien","Black or African American","Man",37,1,0,38
+"control","low",0,1,1,1,0,0,0,0,0,1,0,0,0,"Zadie Smith","Kazuo Ishiguro","Anthony Doerr","Daniel Mason","Kevin Wilson","Anthony Veasna So","George Saunders","White / Caucasian","Man",50,1,1,38
+"control","low",0,1,1,1,0,1,0,0,0,2,1,2,1,"Jane Austen","Nathaniel Hawthorne","George Orwell","John Steinbeck","F. Scott Fitzgerald","Zadie Smith","J.K. Rowling","Asian / Pacific Islander","Man",29,1,0,38
+"control","med",0,1,1,1,0,0,0,0,1,1,1,2,3,"Charles Dickens","John Steinbeck","J.D. Salinger","F. Scott Fitzgerald","Michael Crichton","J.K. Rowling","Ray Bradbury","White / Caucasian","Man",38,1,1,38
+"control","low",0,1,1,1,0,0,0,0,0,3,1,1,1,"J.K. Rowling","George Orwell","Zadie Smith","Michael Crichton","Jane Austen","Ernest Hemingway","Gabriel Garcia Marquez","Black or African American","Man",42,1,0,38
+"control","low",0,1,1,1,0,0,1,0,0,1,1,2,1,"George Orwell","F. Scott Fitzgerald","Jane Austen","Michael Crichton","Antoine de Saint-Exupéry","Nathaniel Hawthorne","Neil Gaiman","White / Caucasian","Woman",37,0,1,38
+"control","med",0,1,1,1,0,1,1,0,0,2,2,2,1,"Charles Dickens","Jane Austen","Ernest Hemingway","J.D. Salinger","J.K. Rowling","George Orwell","Sylvia Plath","White / Caucasian","Woman",58,0,1,38
+"treat","low",1,1,0,1,1,1,0,0,0,0,1,1,1,"Albert Camus","Ernest Hemingway","J.D. Salinger","George Orwell","Edward Upward","John Steinbeck","Jane Austen","White / Caucasian","Man",57,1,1,38
+"control","high",0,1,1,1,0,1,0,1,0,3,3,3,3,"Charles Dickens","Maya Angelou","Zadie Smith","John Steinbeck","Oscar Wilde","Lucy Maud","Virginia Woolf","White / Caucasian","Woman",47,0,1,38
+"control","med",0,1,1,1,0,0,0,0,1,2,2,2,1,"Gabriel Garcia Marquez","Kurt Vonnegut","Sylvia Plath","J.D. Salinger","Virginia Woolf","Oscar Wilde","John Steinbeck","White / Caucasian","Woman",27,0,1,38
+"control","high",0,1,1,1,0,1,0,0,1,5,1,1,3,"Jane Austen","Lucy Maud","Sylvia Plath","Joyce Carol Oates","J.K. Rowling","Michael Crichton","Isabel Allende","Hispanic / Latinx","Woman",33,0,0,38
+"control","low",0,1,1,1,0,1,0,0,0,1,0,2,1,"Anthony Veasna So","Albert Camus","F. Scott Fitzgerald","J.K. Rowling","Nathaniel Hawthorne","John Steinbeck","Jane Austen","White / Caucasian","Woman",48,0,1,38
+"treat","med",1,1,1,0,1,0,0,0,1,1,1,4,2,"Jane Austen","Ernest Hemingway","F. Scott Fitzgerald","Nathaniel Hawthorne","Charles Dickens","Ray Bradbury","John Steinbeck","Asian / Pacific Islander","Man",30,1,0,38
+"control","med",0,1,1,1,0,0,0,0,0,3,1,2,2,"Nathaniel Hawthorne","Jane Austen","J.K. Rowling","Charles Dickens","Zadie Smith","John Steinbeck","Edward Upward","Black or African American","Woman",51,0,0,38
+"treat","high",1,0,1,1,1,0,0,1,0,2,3,3,1,"Lucy Maud","J.K. Rowling","Oscar Wilde","George Orwell","Neil Gaiman","F. Scott Fitzgerald","Ernest Hemingway","White / Caucasian","Woman",44,0,1,38
+"control","low",0,1,1,1,0,0,0,0,1,1,0,2,1,"Michael Crichton","J.D. Salinger","Ernest Hemingway","Zadie Smith","Nathaniel Hawthorne","Cormac McCarthy","Kurt Vonnegut","White / Caucasian","Woman",54,0,1,38
+"treat","med",1,1,1,0,1,0,0,1,0,2,2,1,2,"John Steinbeck","Sylvia Plath","Charles Dickens","J.D. Salinger","Gabriel Garcia Marquez","Jane Austen","F. Scott Fitzgerald","White / Caucasian","Man",36,1,1,38
+"treat","low",1,1,1,0,1,1,0,0,0,1,0,2,1,"Albert Camus","Ernest Hemingway","Jane Austen","John Steinbeck","F. Scott Fitzgerald","Gabriel Garcia Marquez","J.K. Rowling","White / Caucasian","Man",38,1,1,38
+"control","low",0,1,1,1,0,1,0,0,0,1,2,2,0,"J.K. Rowling","George Orwell","F. Scott Fitzgerald","Ernest Hemingway","Cormac McCarthy","Neil Gaiman","Jane Austen","Asian / Pacific Islander","Man",36,1,0,38
+"treat","med",1,0,1,1,1,0,0,1,0,3,1,1,3,"Virginia Woolf","Jane Austen","Sylvia Plath","Kurt Vonnegut","Ray Bradbury","John Steinbeck","Ernest Hemingway","White / Caucasian","Man",70,1,1,38
+"treat","low",1,1,0,1,1,0,0,0,0,0,1,2,1,"J.D. Salinger","F. Scott Fitzgerald","Ernest Hemingway","Albert Camus","Kurt Vonnegut","Neil Gaiman","Anthony Doerr","White / Caucasian","Woman",73,0,1,38
+"control","med",0,1,1,1,0,1,1,0,0,2,2,3,1,"Nathaniel Hawthorne","George Orwell","Jane Austen","Joyce Carol Oates","Ernest Hemingway","Oscar Wilde","Sylvia Plath","Hispanic / Latinx","Woman",57,0,0,38
+"treat","low",1,1,0,1,1,0,0,1,0,0,2,1,2,"Neil Gaiman","George Orwell","Kurt Vonnegut","John Steinbeck","George Saunders","F. Scott Fitzgerald","Ernest Hemingway","American Indian or Alaskan Native","Another gender not listed here:",29,0,0,38
+"treat","high",1,1,1,0,1,0,0,1,0,0,1,1,4,"John Steinbeck","Kurt Vonnegut","George Orwell","Michael Crichton","Ray Bradbury","Nathaniel Hawthorne","Ernest Hemingway","Hispanic / Latinx","Man",46,1,0,38
+"treat","high",1,1,1,0,1,0,0,1,0,3,3,1,2,"George Orwell","Sylvia Plath","John Steinbeck","Virginia Woolf","Kurt Vonnegut","Maya Angelou","Ernest Hemingway","Black or African American","Woman",33,0,0,38
+"treat","high",1,1,1,0,1,0,0,1,0,2,3,2,2,"George Orwell","Victor Hugo","J.K. Rowling","John Steinbeck","Charles Dickens","Jane Austen","Ernest Hemingway","White / Caucasian","Woman",36,0,1,38
+"treat","med",1,1,1,0,1,0,0,0,1,6,1,1,1,"Zadie Smith","J.K. Rowling","Jane Austen","Sylvia Plath","Virginia Woolf","Joyce Carol Oates","Michael Crichton","Black or African American","Woman",40,0,0,38
+"treat","low",1,1,0,1,1,0,0,0,1,1,1,2,0,"George Orwell","Jane Austen","F. Scott Fitzgerald","J.D. Salinger","Cormac McCarthy","Ernest Hemingway","John Steinbeck","White / Caucasian","Woman",47,0,1,38
+"treat","low",1,0,1,1,1,1,0,0,0,1,0,3,1,"J.K. Rowling","John Steinbeck","Ernest Hemingway","Nathaniel Hawthorne","F. Scott Fitzgerald","J.D. Salinger","Jane Austen","Hispanic / Latinx","Man",36,1,0,38
+"control","low",0,1,1,1,0,0,1,0,0,1,0,2,1,"F. Scott Fitzgerald","J.D. Salinger","Jane Austen","Kurt Vonnegut","Anthony Veasna So","Nathaniel Hawthorne","George Orwell","White / Caucasian","Woman",40,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,1,1,1,1,"George Orwell","Michael Crichton","J.K. Rowling","Ernest Hemingway","Cormac McCarthy","J.D. Salinger","Edward Upward","White / Caucasian","Man",48,1,1,38
+"control","low",0,1,1,1,0,0,0,1,0,2,1,0,0,"Anthony Doerr","Kevin Wilson","J.K. Rowling","Jane Austen","Neil Gaiman","J.D. Salinger","Nathaniel Hawthorne","White / Caucasian","Woman",28,0,1,38
+"control","med",0,1,1,1,0,0,0,0,0,3,2,1,1,"Sylvia Plath","J.K. Rowling","Jane Austen","Antoine de Saint-Exupéry","Kurt Vonnegut","Oscar Wilde","J.D. Salinger","White / Caucasian","Woman",79,0,1,38
+"control","high",0,1,1,1,0,0,0,0,1,2,3,2,2,"Maya Angelou","Charles Dickens","Jane Austen","George Orwell","Michael Crichton","F. Scott Fitzgerald","John Steinbeck","White / Caucasian","Woman",61,0,1,38
+"control","high",0,1,1,1,0,0,1,1,0,3,2,1,2,"Michael Crichton","Lucy Maud","J.K. Rowling","Flann O'Brien","George Orwell","Zadie Smith","Victor Hugo","White / Caucasian","Woman",52,0,1,38
+"treat","med",1,1,1,0,1,0,1,0,0,4,1,3,0,"Zadie Smith","J.K. Rowling","Jane Austen","Nathaniel Hawthorne","Virginia Woolf","Oscar Wilde","Neil Gaiman","Black or African American","Man",40,1,0,38
+"control","med",0,1,1,1,0,0,0,0,1,1,3,4,1,"George Orwell","George Saunders","Oscar Wilde","Virginia Woolf","Charles Dickens","Ernest Hemingway","John Steinbeck","White / Caucasian","Man",70,1,1,38
+"control","high",0,1,1,1,0,0,1,1,0,2,1,2,2,"J.K. Rowling","Michael Crichton","Nathaniel Hawthorne","Maya Angelou","Ernest Hemingway","John Steinbeck","Victor Hugo","Black or African American","Woman",20,0,0,38
+"control","med",0,1,1,1,0,0,1,0,0,1,2,2,3,"Ray Bradbury","Flann O'Brien","F. Scott Fitzgerald","Kurt Vonnegut","J.K. Rowling","Charles Dickens","George Orwell","White / Caucasian","Man",54,1,1,38
+"control","low",0,1,1,1,0,0,0,0,0,2,1,1,1,"John Steinbeck","Jane Austen","Zadie Smith","George Orwell","F. Scott Fitzgerald","J.D. Salinger","Anthony Veasna So","White / Caucasian","Woman",30,0,1,38
+"treat","high",1,0,1,1,1,0,1,0,0,2,4,1,2,"Kurt Vonnegut","Maya Angelou","Sylvia Plath","John Steinbeck","Oscar Wilde","George Orwell","Neil Gaiman","Hispanic / Latinx","Woman",36,0,0,38
+"treat","low",1,0,1,1,1,0,0,1,0,1,1,2,2,"George Orwell","F. Scott Fitzgerald","Michael Crichton","J.K. Rowling","John Steinbeck","Ernest Hemingway","Nathaniel Hawthorne","Black or African American","Man",59,1,0,38
+"treat","med",1,1,1,0,1,1,0,0,0,0,1,1,2,"Gabriel Garcia Marquez","Albert Camus","George Orwell","John Steinbeck","F. Scott Fitzgerald","Ray Bradbury","Jane Austen","White / Caucasian","Man",40,1,1,38
+"control","high",0,1,1,1,0,0,1,0,0,0,2,3,3,"Ray Bradbury","F. Scott Fitzgerald","Michael Crichton","Neil Gaiman","Ernest Hemingway","Charles Dickens","George Orwell","Black or African American","Man",43,1,0,38
+"control","med",0,1,1,1,0,0,0,0,1,1,2,4,2,"Ernest Hemingway","Oscar Wilde","Charles Dickens","J.K. Rowling","Nathaniel Hawthorne","John Steinbeck","Kurt Vonnegut","White / Caucasian","Man",50,1,1,38
+"control","med",0,1,1,1,0,1,0,0,0,3,2,1,1,"Sylvia Plath","Zadie Smith","Oscar Wilde","Antoine de Saint-Exupéry","Joyce Carol Oates","J.D. Salinger","Jane Austen","White / Caucasian","Woman",57,0,1,38
+"control","high",0,1,1,1,0,1,0,0,0,1,1,1,3,"Kurt Vonnegut","F. Scott Fitzgerald","J.K. Rowling","George Orwell","Ray Bradbury","Michael Crichton","Jane Austen","Black or African American","Man",26,1,0,38
+"treat","low",1,1,1,0,1,0,0,0,0,1,2,0,0,"Antoine de Saint-Exupéry","Kevin Wilson","Neil Gaiman","J.K. Rowling","Flann O'Brien","Cormac McCarthy","George Saunders","Hispanic / Latinx","Man",33,1,0,38
+"treat","med",1,0,1,1,1,1,0,1,0,2,2,0,1,"George Saunders","Gabriel Garcia Marquez","Michael Crichton","Sylvia Plath","J.K. Rowling","George Orwell","Virginia Woolf","White / Caucasian","Man",52,1,1,38
+"treat","med",1,1,0,1,1,0,0,0,0,1,1,2,2,"Jane Austen","Michael Crichton","F. Scott Fitzgerald","Nathaniel Hawthorne","George Orwell","John Steinbeck","J.D. Salinger","White / Caucasian","Woman",62,0,1,38
+"treat","high",1,0,1,1,1,0,0,1,0,0,2,1,4,"George Orwell","Michael Crichton","Oscar Wilde","Ray Bradbury","Kurt Vonnegut","John Steinbeck","Ernest Hemingway","White / Caucasian","Man",57,1,1,38
+"treat","high",1,1,1,0,1,1,0,0,0,2,1,1,2,"Michael Crichton","John Steinbeck","Zadie Smith","F. Scott Fitzgerald","Neil Gaiman","J.K. Rowling","Jane Austen","White / Caucasian","Woman",42,0,1,38
+"control","high",0,1,1,1,0,1,0,0,0,2,3,3,1,"Charles Dickens","Maya Angelou","Jane Austen","George Orwell","Ernest Hemingway","F. Scott Fitzgerald","Zadie Smith","Black or African American","Man",27,1,0,38
+"control","low",0,1,1,1,0,0,0,0,0,1,1,2,2,"George Orwell","J.K. Rowling","Nathaniel Hawthorne","John Steinbeck","Michael Crichton","Ernest Hemingway","Anthony Doerr","White / Caucasian","Woman",45,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,1,1,2,1,"Jane Austen","George Orwell","John Steinbeck","Nathaniel Hawthorne","J.D. Salinger","F. Scott Fitzgerald","Cormac McCarthy","Black or African American","Woman",66,0,0,38
+"control","med",0,1,1,1,0,0,0,1,0,3,2,2,0,"Jane Austen","George Orwell","Neil Gaiman","Nathaniel Hawthorne","Virginia Woolf","J.K. Rowling","Ernest Hemingway","White / Caucasian","Man",45,1,1,38
+"control","med",0,1,1,1,0,0,0,0,0,2,2,4,0,"F. Scott Fitzgerald","Oscar Wilde","Virginia Woolf","George Orwell","J.K. Rowling","Ernest Hemingway","Gabriel Garcia Marquez","Black or African American","Man",44,1,0,38
+"treat","med",1,1,0,1,1,0,1,1,0,2,2,2,1,"Charles Dickens","Jane Austen","J.D. Salinger","Nathaniel Hawthorne","George Orwell","Zadie Smith","Oscar Wilde","White / Caucasian","Woman",32,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,1,1,0,1,"Michael Crichton","Cormac McCarthy","Gabriel Garcia Marquez","Kazuo Ishiguro","Neil Gaiman","J.K. Rowling","Daniel Mason","White / Caucasian","Woman",61,0,1,38
+"treat","high",1,1,1,0,1,0,0,0,1,4,0,2,5,"Lucy Maud","Isabel Allende","Joyce Carol Oates","John Steinbeck","Ray Bradbury","Virginia Woolf","Michael Crichton","White / Caucasian","Woman",40,0,1,38
+"treat","high",1,1,0,1,1,1,0,1,1,2,3,1,3,"Zadie Smith","Isabel Allende","John Steinbeck","Flann O'Brien","George Orwell","Charles Dickens","Lucy Maud","White / Caucasian","Woman",42,0,1,38
+"control","med",0,1,1,1,0,0,1,0,0,1,0,1,3,"Kurt Vonnegut","Michael Crichton","J.D. Salinger","Ernest Hemingway","John Steinbeck","J.K. Rowling","George Orwell","White / Caucasian","Man",34,1,1,38
+"control","high",0,1,1,1,0,0,1,1,0,3,2,0,3,"Zadie Smith","Kurt Vonnegut","Ray Bradbury","Maya Angelou","Sylvia Plath","John Steinbeck","Oscar Wilde","White / Caucasian","Woman",31,0,1,38
+"control","low",0,1,1,1,0,0,0,1,0,2,1,2,1,"Ernest Hemingway","Jane Austen","F. Scott Fitzgerald","George Orwell","Zadie Smith","John Steinbeck","Nathaniel Hawthorne","White / Caucasian","Woman",33,0,1,38
+"treat","high",1,1,1,0,1,0,1,1,0,2,1,3,2,"Ray Bradbury","Lucy Maud","Ernest Hemingway","Jane Austen","George Orwell","F. Scott Fitzgerald","Oscar Wilde","White / Caucasian","Man",55,1,1,38
+"treat","low",1,1,1,0,1,0,0,0,0,2,0,2,2,"J.K. Rowling","John Steinbeck","Jane Austen","Nathaniel Hawthorne","Michael Crichton","F. Scott Fitzgerald","Antoine de Saint-Exupéry","White / Caucasian","Woman",70,0,1,38
+"control","high",0,1,1,1,0,0,0,0,1,5,2,0,3,"Zadie Smith","Michael Crichton","Maya Angelou","Sylvia Plath","Isabel Allende","Joyce Carol Oates","Ray Bradbury","White / Caucasian","Woman",67,0,1,38
+"treat","low",1,1,1,0,1,0,0,1,0,1,1,1,1,"F. Scott Fitzgerald","J.D. Salinger","Anthony Veasna So","John Steinbeck","George Orwell","Jane Austen","Ernest Hemingway","White / Caucasian","Man",57,1,1,38
+"treat","med",1,1,1,0,1,1,0,0,0,3,1,1,2,"Jane Austen","George Orwell","John Steinbeck","J.K. Rowling","Virginia Woolf","Michael Crichton","Zadie Smith","White / Caucasian","Woman",43,0,1,38
+"treat","low",1,1,0,1,1,0,0,0,0,0,1,2,1,"George Orwell","Michael Crichton","J.D. Salinger","Ernest Hemingway","Cormac McCarthy","F. Scott Fitzgerald","Kazuo Ishiguro","White / Caucasian","Man",29,1,1,38
+"control","med",0,1,1,1,0,1,0,0,0,2,3,0,1,"Zadie Smith","Gabriel Garcia Marquez","Sylvia Plath","George Orwell","Ray Bradbury","Neil Gaiman","Jane Austen","White / Caucasian","Man",38,1,1,38
+"treat","med",1,0,1,1,1,0,1,0,0,3,1,3,2,"Charles Dickens","Jane Austen","Virginia Woolf","J.K. Rowling","Nathaniel Hawthorne","Kurt Vonnegut","Flann O'Brien","White / Caucasian","Woman",63,0,1,38
+"control","low",0,1,1,1,0,0,0,1,0,1,1,0,1,"Jane Austen","Gabriel Garcia Marquez","George Orwell","Kazuo Ishiguro","John Steinbeck","Anthony Doerr","Nathaniel Hawthorne","White / Caucasian","Woman",47,0,1,38
+"treat","low",1,0,1,1,1,0,1,0,0,2,0,0,0,"J.K. Rowling","Zadie Smith","Anthony Doerr","Daniel Mason","Edward Upward","Anthony Veasna So","Neil Gaiman","Black or African American","Man",26,1,0,38
+"treat","high",1,1,0,1,1,0,0,1,0,3,2,1,4,"Isabel Allende","Maya Angelou","John Steinbeck","Michael Crichton","George Orwell","Lucy Maud","Ernest Hemingway","Asian / Pacific Islander","Woman",44,0,0,38
+"control","high",0,1,1,1,0,1,0,0,0,3,2,0,3,"John Steinbeck","J.K. Rowling","Neil Gaiman","Kurt Vonnegut","Maya Angelou","Joyce Carol Oates","Jane Austen","White / Caucasian","Woman",43,0,1,38
+"control","low",0,1,1,1,0,0,0,1,0,0,1,1,2,"Cormac McCarthy","Kurt Vonnegut","George Orwell","Albert Camus","F. Scott Fitzgerald","John Steinbeck","Ernest Hemingway","Asian / Pacific Islander","Man",26,1,0,38
+"treat","high",1,1,0,1,1,0,1,0,0,3,3,3,1,"F. Scott Fitzgerald","J.K. Rowling","Maya Angelou","Oscar Wilde","Jane Austen","Charles Dickens","George Orwell","Hispanic / Latinx","Woman",39,0,0,38
+"control","med",0,1,1,1,0,0,1,1,1,1,2,0,3,"Ray Bradbury","George Orwell","Neil Gaiman","Michael Crichton","J.K. Rowling","John Steinbeck","Charles Dickens","White / Caucasian","Woman",54,0,1,38
+"control","high",0,1,1,1,0,1,0,0,0,2,3,4,2,"Oscar Wilde","Ernest Hemingway","Charles Dickens","Sylvia Plath","Michael Crichton","Virginia Woolf","Jane Austen","Hispanic / Latinx","Woman",25,0,0,38
+"control","high",0,1,1,1,0,1,0,0,1,2,4,3,1,"Sylvia Plath","F. Scott Fitzgerald","Nathaniel Hawthorne","Maya Angelou","George Orwell","Charles Dickens","Joyce Carol Oates","White / Caucasian","Woman",57,0,1,38
+"treat","med",1,1,1,0,1,1,0,0,0,1,3,3,1,"Ernest Hemingway","Charles Dickens","J.K. Rowling","Gabriel Garcia Marquez","George Orwell","Oscar Wilde","Jane Austen","White / Caucasian","Man",49,1,1,38
+"control","med",0,1,1,1,0,1,0,0,1,1,3,1,2,"Ray Bradbury","John Steinbeck","George Orwell","Gabriel Garcia Marquez","Sylvia Plath","Oscar Wilde","Joyce Carol Oates","White / Caucasian","Man",33,1,1,38
+"treat","low",1,1,1,0,1,0,0,0,0,2,1,2,1,"J.K. Rowling","John Steinbeck","Ernest Hemingway","Jane Austen","F. Scott Fitzgerald","Flann O'Brien","Daniel Mason","White / Caucasian","Woman",47,0,1,38
+"treat","low",1,1,1,0,1,0,0,0,0,3,0,0,0,"Daniel Mason","Zadie Smith","Anthony Doerr","Jane Austen","J.K. Rowling","Gabriel Garcia Marquez","Albert Camus","White / Caucasian","Woman",50,0,1,38
+"treat","med",1,1,0,1,1,0,0,1,0,2,1,2,3,"Charles Dickens","Jane Austen","Michael Crichton","J.K. Rowling","John Steinbeck","Nathaniel Hawthorne","Ernest Hemingway","White / Caucasian","Man",52,1,1,38
+"treat","high",1,0,1,1,1,0,1,1,0,0,3,3,3,"Ray Bradbury","Michael Crichton","Oscar Wilde","Ernest Hemingway","Charles Dickens","Neil Gaiman","Victor Hugo","White / Caucasian","Man",39,1,1,38
+"treat","med",1,1,1,0,1,1,0,0,0,0,2,2,3,"George Orwell","Ray Bradbury","Charles Dickens","Gabriel Garcia Marquez","Nathaniel Hawthorne","Kurt Vonnegut","Jane Austen","White / Caucasian","Man",22,1,1,38
+"control","high",0,1,1,1,0,0,0,1,0,3,2,2,3,"Ernest Hemingway","Isabel Allende","Maya Angelou","Victor Hugo","Joyce Carol Oates","John Steinbeck","Nathaniel Hawthorne","White / Caucasian","Woman",24,0,1,38
+"control","med",0,1,1,1,0,0,0,1,0,1,2,1,2,"Michael Crichton","Ray Bradbury","J.K. Rowling","Neil Gaiman","Oscar Wilde","Albert Camus","Ernest Hemingway","White / Caucasian","Woman",60,0,1,38
+"treat","high",1,1,1,0,1,1,0,1,1,2,1,2,2,"Jane Austen","Nathaniel Hawthorne","Sylvia Plath","Ray Bradbury","Kurt Vonnegut","F. Scott Fitzgerald","Lucy Maud","White / Caucasian","Woman",36,0,1,38
+"control","low",0,1,1,1,0,0,0,0,0,3,1,1,0,"J.K. Rowling","Daniel Mason","Zadie Smith","Ernest Hemingway","Jane Austen","George Orwell","Kevin Wilson","White / Caucasian","Man",37,1,1,38
