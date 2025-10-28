@@ -104,9 +104,7 @@ extract_regression_estimates <- function(model) {
 }
 ```
 
-\newpage
 
-## Read Data
 
 ```{r include=FALSE}
 # Set this to TRUE if you have API access, FALSE if using CSV

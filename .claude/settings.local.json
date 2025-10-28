@@ -15,7 +15,8 @@
       "Bash(mv:*)",
       "Bash(Rscript:*)",
       "Bash(python:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(pdftotext:*)"
     ],
     "deny": [],
     "ask": []
