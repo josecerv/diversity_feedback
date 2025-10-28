@@ -874,6 +874,329 @@ saveRDS(pilot_estimates, file = "pilot_estimates.rds")
 
 ```
 
+\newpage
+
+## Deep Dive: Base Rates and Selection Patterns
+
+### Actual Female Selection Rates in First 6 Choices
+
+```{r echo=TRUE, results='markup'}
+cat("=== ACTUAL FEMALE SELECTION RATES IN FIRST 6 CHOICES ===\n\n")
+
+# Overall summary
+cat("Overall Statistics:\n")
+cat("Mean number of women selected (out of 6):", round(mean(d0$base_gender), 2), "\n")
+cat("Mean percentage of women selected:", round(mean(d0$base_gender)/6 * 100, 2), "%\n")
+cat("SD:", round(sd(d0$base_gender), 2), "\n\n")
+
+# By base condition
+cat("By Base Condition:\n")
+base_rates_summary <- d0 |>
+  group_by(base_condition) |>
+  summarise(
+    n = n(),
+    mean_count = round(mean(base_gender), 2),
+    mean_pct = round(mean(base_gender)/6 * 100, 2),
+    sd_count = round(sd(base_gender), 2),
+    median_count = median(base_gender),
+    min_count = min(base_gender),
+    max_count = max(base_gender)
+  )
+
+print(base_rates_summary)
+
+# Check if high base leads to > 50% women
+cat("\n--- Checking if High Base leads to >50% women selected ---\n")
+d0_high_summary <- d0 |>
+  filter(base_condition == "high") |>
+  summarise(
+    pct_with_majority_women = round(mean(base_gender > 3) * 100, 2),
+    pct_with_half_or_more = round(mean(base_gender >= 3) * 100, 2)
+  )
+
+cat("In HIGH base condition:\n")
+cat("  % with >50% women (4+ out of 6):", d0_high_summary$pct_with_majority_women, "%\n")
+cat("  % with 50% or more women (3+ out of 6):", d0_high_summary$pct_with_half_or_more, "%\n")
+
+# Distribution of base_gender by base_condition
+cat("\n--- Distribution of women selected in first 6 choices ---\n")
+distribution <- d0 |>
+  group_by(base_condition, base_gender) |>
+  summarise(n = n(), .groups = "drop") |>
+  group_by(base_condition) |>
+  mutate(pct = round(n/sum(n) * 100, 1)) |>
+  arrange(base_condition, base_gender)
+
+print(distribution)
+```
+
+\newpage
+
+### What Feedback is Being Shown
+
+```{r echo=TRUE, results='markup'}
+cat("=== FEEDBACK SHOWN TO PARTICIPANTS ===\n\n")
+
+# Who gets what feedback
+cat("Feedback Distribution:\n")
+feedback_summary <- d0 |>
+  summarise(
+    n_gender_feedback = sum(gender_feedback),
+    n_poets_shown = sum(poets_shown),
+    n_oldies_shown = sum(oldies_shown),
+    n_books_shown = sum(books_shown),
+    pct_gender = round(mean(gender_feedback) * 100, 1),
+    pct_poets = round(mean(poets_shown) * 100, 1),
+    pct_oldies = round(mean(oldies_shown) * 100, 1),
+    pct_books = round(mean(books_shown) * 100, 1)
+  )
+
+cat("Gender feedback (treatment):", feedback_summary$n_gender_feedback,
+    "(", feedback_summary$pct_gender, "%)\n")
+cat("Poets feedback shown:", feedback_summary$n_poets_shown,
+    "(", feedback_summary$pct_poets, "%)\n")
+cat("Oldies feedback shown:", feedback_summary$n_oldies_shown,
+    "(", feedback_summary$pct_oldies, "%)\n")
+cat("Books feedback shown:", feedback_summary$n_books_shown,
+    "(", feedback_summary$pct_books, "%)\n\n")
+
+# By base condition
+cat("Feedback by Base Condition:\n")
+feedback_by_base <- d0 |>
+  group_by(base_condition) |>
+  summarise(
+    n = n(),
+    pct_gender = round(mean(gender_feedback) * 100, 1),
+    pct_poets = round(mean(poets_shown) * 100, 1),
+    pct_oldies = round(mean(oldies_shown) * 100, 1),
+    pct_books = round(mean(books_shown) * 100, 1)
+  )
+
+print(feedback_by_base)
+
+# Crosstab: who gets gender feedback AND which other attribute feedback
+cat("\n--- Among those with Gender Feedback, which other attribute? ---\n")
+gender_and_other <- d0 |>
+  filter(gender_feedback == 1) |>
+  summarise(
+    n = n(),
+    n_poets = sum(poets_shown),
+    n_oldies = sum(oldies_shown),
+    n_books = sum(books_shown),
+    pct_poets = round(mean(poets_shown) * 100, 1),
+    pct_oldies = round(mean(oldies_shown) * 100, 1),
+    pct_books = round(mean(books_shown) * 100, 1)
+  )
+
+print(gender_and_other)
+```
+
+\newpage
+
+### Comparative Selection Rates Across All Attributes
+
+```{r echo=TRUE, results='markup'}
+cat("=== BASE RATES OF ALL FOUR ATTRIBUTES IN FIRST 6 SELECTIONS ===\n\n")
+
+# Overall across all conditions
+cat("Overall Statistics (all base conditions combined):\n")
+overall_attrs <- d0 |>
+  summarise(
+    mean_women = round(mean(base_gender), 2),
+    mean_poets = round(mean(base_poets), 2),
+    mean_oldies = round(mean(base_oldies), 2),
+    mean_books = round(mean(base_books), 2),
+    pct_women = round(mean(base_gender)/6 * 100, 1),
+    pct_poets = round(mean(base_poets)/6 * 100, 1),
+    pct_oldies = round(mean(base_oldies)/6 * 100, 1),
+    pct_books = round(mean(base_books)/6 * 100, 1)
+  )
+
+print(overall_attrs)
+
+cat("\n--- By Base Condition ---\n")
+by_base <- d0 |>
+  group_by(base_condition) |>
+  summarise(
+    n = n(),
+    women_pct = round(mean(base_gender)/6 * 100, 1),
+    poets_pct = round(mean(base_poets)/6 * 100, 1),
+    oldies_pct = round(mean(base_oldies)/6 * 100, 1),
+    books_pct = round(mean(base_books)/6 * 100, 1)
+  )
+
+print(by_base)
+
+cat("\n--- 7th Selection Rates by Attribute and Base Condition ---\n")
+seventh_selection <- d0 |>
+  group_by(base_condition) |>
+  summarise(
+    n = n(),
+    pct_select_woman = round(mean(female_pick) * 100, 1),
+    pct_select_poet = round(mean(poets_pick) * 100, 1),
+    pct_select_oldies = round(mean(oldies_pick) * 100, 1),
+    pct_select_books = round(mean(books_pick) * 100, 1)
+  )
+
+print(seventh_selection)
+```
+
+\newpage
+
+### Which Attribute Wins When Multiple are Underrepresented?
+
+```{r echo=TRUE, results='markup'}
+cat("=== ATTRIBUTE PRIORITIZATION ANALYSIS ===\n\n")
+cat("When multiple attributes are underrepresented, which gets selected for 7th pick?\n\n")
+
+# Create underrepresentation indicators (below 50%)
+d0 <- d0 |>
+  mutate(
+    women_underrep = as.numeric(base_gender < 3),
+    poets_underrep = as.numeric(base_poets < 3),
+    oldies_underrep = as.numeric(base_oldies < 3),
+    books_underrep = as.numeric(base_books < 3),
+    num_underrep = women_underrep + poets_underrep + oldies_underrep + books_underrep
+  )
+
+# Summary of underrepresentation
+cat("Distribution of number of underrepresented attributes:\n")
+underrep_dist <- d0 |>
+  group_by(num_underrep) |>
+  summarise(n = n(), pct = round(n/nrow(d0) * 100, 1))
+
+print(underrep_dist)
+
+# When women are underrepresented vs not
+cat("\n--- 7th Selection when Women ARE underrepresented (<50%) ---\n")
+when_women_underrep <- d0 |>
+  filter(women_underrep == 1) |>
+  summarise(
+    n = n(),
+    pct_select_woman = round(mean(female_pick) * 100, 1),
+    pct_select_poet = round(mean(poets_pick) * 100, 1),
+    pct_select_oldies = round(mean(oldies_pick) * 100, 1),
+    pct_select_books = round(mean(books_pick) * 100, 1)
+  )
+
+print(when_women_underrep)
+
+cat("\n--- 7th Selection when Women are NOT underrepresented (>=50%) ---\n")
+when_women_not_underrep <- d0 |>
+  filter(women_underrep == 0) |>
+  summarise(
+    n = n(),
+    pct_select_woman = round(mean(female_pick) * 100, 1),
+    pct_select_poet = round(mean(poets_pick) * 100, 1),
+    pct_select_oldies = round(mean(oldies_pick) * 100, 1),
+    pct_select_books = round(mean(books_pick) * 100, 1)
+  )
+
+print(when_women_not_underrep)
+
+# Most underrepresented attribute analysis
+cat("\n--- Which attribute is MOST underrepresented? ---\n")
+d0 <- d0 |>
+  mutate(
+    most_underrep = case_when(
+      base_gender < pmin(base_poets, base_oldies, base_books) ~ "women",
+      base_poets < pmin(base_gender, base_oldies, base_books) ~ "poets",
+      base_oldies < pmin(base_gender, base_poets, base_books) ~ "oldies",
+      base_books < pmin(base_gender, base_poets, base_oldies) ~ "books",
+      TRUE ~ "tie"
+    )
+  )
+
+most_underrep_dist <- d0 |>
+  group_by(most_underrep) |>
+  summarise(n = n(), pct = round(n/nrow(d0) * 100, 1))
+
+cat("Distribution of which attribute is most underrepresented:\n")
+print(most_underrep_dist)
+
+# When each attribute is most underrepresented, what gets selected?
+cat("\n--- When WOMEN are most underrepresented, 7th selection: ---\n")
+d0 |> filter(most_underrep == "women") |>
+  summarise(
+    n = n(),
+    pct_woman = round(mean(female_pick) * 100, 1),
+    pct_poet = round(mean(poets_pick) * 100, 1),
+    pct_oldies = round(mean(oldies_pick) * 100, 1),
+    pct_books = round(mean(books_pick) * 100, 1)
+  ) |> print()
+
+cat("\n--- When POETS are most underrepresented, 7th selection: ---\n")
+d0 |> filter(most_underrep == "poets") |>
+  summarise(
+    n = n(),
+    pct_woman = round(mean(female_pick) * 100, 1),
+    pct_poet = round(mean(poets_pick) * 100, 1),
+    pct_oldies = round(mean(oldies_pick) * 100, 1),
+    pct_books = round(mean(books_pick) * 100, 1)
+  ) |> print()
+
+cat("\n--- When OLDIES are most underrepresented, 7th selection: ---\n")
+d0 |> filter(most_underrep == "oldies") |>
+  summarise(
+    n = n(),
+    pct_woman = round(mean(female_pick) * 100, 1),
+    pct_poet = round(mean(poets_pick) * 100, 1),
+    pct_oldies = round(mean(oldies_pick) * 100, 1),
+    pct_books = round(mean(books_pick) * 100, 1)
+  ) |> print()
+
+cat("\n--- When BOOKS are most underrepresented, 7th selection: ---\n")
+d0 |> filter(most_underrep == "books") |>
+  summarise(
+    n = n(),
+    pct_woman = round(mean(female_pick) * 100, 1),
+    pct_poet = round(mean(poets_pick) * 100, 1),
+    pct_oldies = round(mean(oldies_pick) * 100, 1),
+    pct_books = round(mean(books_pick) * 100, 1)
+  ) |> print()
+```
+
+\newpage
+
+### Treatment Effect by Level of Underrepresentation
+
+```{r echo=TRUE, results='markup'}
+cat("=== TREATMENT EFFECT CONDITIONAL ON UNDERREPRESENTATION ===\n\n")
+
+# Among those who received GENDER feedback
+cat("--- Among those who received GENDER feedback ---\n\n")
+
+cat("When women ARE underrepresented (<50%):\n")
+r_gender_underrep <- d0 |>
+  filter(women_underrep == 1) |>
+  lm(female_pick ~ gender_feedback, data = _)
+
+robust_summary(r_gender_underrep)
+
+cat("\nWhen women are NOT underrepresented (>=50%):\n")
+r_gender_not_underrep <- d0 |>
+  filter(women_underrep == 0) |>
+  lm(female_pick ~ gender_feedback, data = _)
+
+robust_summary(r_gender_not_underrep)
+
+# Compare means
+cat("\n--- Mean selection rates ---\n")
+d0 |>
+  group_by(women_underrep, gender_feedback) |>
+  summarise(
+    n = n(),
+    pct_select_woman = round(mean(female_pick) * 100, 1)
+  ) |>
+  print()
+
+# Interaction model
+cat("\n--- Interaction: Gender Feedback x Women Underrepresented ---\n")
+r_interaction_underrep <- lm(female_pick ~ gender_feedback * women_underrep, data = d0)
+robust_summary(r_interaction_underrep)
+robust_confint(r_interaction_underrep)
+```
+
 
 ## Figure - Simple Effects by Base Condition
 
