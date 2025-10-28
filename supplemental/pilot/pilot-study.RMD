@@ -1,5 +1,5 @@
 ---
-title: "Pilot Study - 2x2 Design (Cond x Base)"
+title: "Pilot Study - 2x3 Design (Cond x Base)"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document:
@@ -114,7 +114,7 @@ USE_API <- T
 if(USE_API) {
   ## Pull directly from Qualtrics API
   qual_data <- fetch_survey(surveyID='SV_dpbDBoF9oHm8TXw',  # Pilot Study ID
-                            start_date = "2025-01-01",
+                            start_date = "2025-10-27",
                      force_request = T)
 } else {
   # Read the processed data directly from CSV
@@ -123,32 +123,28 @@ if(USE_API) {
 }
 
 # Define the categories based on the JavaScript feedback code
-# Low base categories (6 authors each)
+# Low base categories (3 authors each) - SetA
 categories_low <- list(
-  women = c('Zadie Smith','J.K. Rowling','Jane Austen',
-            'Joyce Carol Oates','Sylvia Plath','Virginia Woolf'),
-  poets = c('Charles Dickens','George Orwell','Joyce Carol Oates',
-            'Nathaniel Hawthorne','Sylvia Plath','Virginia Woolf'),
-  oldies = c('Charles Dickens','Ernest Hemingway','Nathaniel Hawthorne',
-             'F. Scott Fitzgerald','Virginia Woolf','Oscar Wilde'),
-  books = c('Charles Dickens','J.K. Rowling','John Steinbeck',
-            'Joyce Carol Oates','Michael Crichton','Ray Bradbury')
+  women = c('Zadie Smith','J.K. Rowling','Jane Austen'),
+  poets = c('George Orwell','Flann O\'Brien','Neil Gaiman'),
+  oldies = c('Ernest Hemingway','Nathaniel Hawthorne','F. Scott Fitzgerald'),
+  books = c('John Steinbeck','Michael Crichton','Kurt Vonnegut')
 )
 
-# High base categories (12 authors each)
+# Medium base categories (6 authors each) - SetB
+categories_med <- list(
+  women = c('Zadie Smith','J.K. Rowling','Jane Austen','Joyce Carol Oates','Sylvia Plath','Virginia Woolf'),
+  poets = c('Charles Dickens','George Orwell','Sylvia Plath','Flann O\'Brien','Neil Gaiman','Oscar Wilde'),
+  oldies = c('Charles Dickens','Ernest Hemingway','Nathaniel Hawthorne','F. Scott Fitzgerald','Virginia Woolf','Oscar Wilde'),
+  books = c('Charles Dickens','John Steinbeck','Joyce Carol Oates','Michael Crichton','Ray Bradbury','Kurt Vonnegut')
+)
+
+# High base categories (9 authors each) - SetC
 categories_high <- list(
-  women = c('Zadie Smith','Lucy Maud','Margaret Atwood','Maya Angelou',
-            'Sylvia Plath','Joyce Carol Oates','Virginia Woolf',
-            'Isabel Allende','Ayn Rand','Jane Austen','J.K. Rowling','Anya Seton'),
-  poets = c('Charles Dickens','Neil Gaiman','George Orwell','Herman Melville',
-            'Jorge Luis Borges','Lucy Maud','Margaret Atwood','Maya Angelou',
-            'Sylvia Plath','Joyce Carol Oates','Virginia Woolf','Victor Hugo'),
-  oldies = c('Charles Dickens','Ernest Hemingway','Herman Melville','Jorge Luis Borges',
-             'Lucy Maud','Jack London','Virginia Woolf','Victor Hugo',
-             'James Joyce','J.R.R. Tolkien','Oscar Wilde','Rudyard Kipling'),
-  books = c('Charles Dickens','Herman Melville','Jorge Luis Borges','Lucy Maud',
-            'Jack London','Margaret Atwood','Joyce Carol Oates','Isabel Allende',
-            'J.R.R. Tolkien','Rudyard Kipling','J.K. Rowling','Anya Seton')
+  women = c('Zadie Smith','J.K. Rowling','Jane Austen','Maya Angelou','Joyce Carol Oates','Sylvia Plath','Lucy Maud','Isabel Allende','Virginia Woolf'),
+  poets = c('Charles Dickens','Victor Hugo','George Orwell','Maya Angelou','Sylvia Plath','Flann O\'Brien','Jorge Luis Borges','Neil Gaiman','Oscar Wilde'),
+  oldies = c('Charles Dickens','Ernest Hemingway','Victor Hugo','Nathaniel Hawthorne','Lucy Maud','F. Scott Fitzgerald','Jorge Luis Borges','Virginia Woolf','Oscar Wilde'),
+  books = c('Charles Dickens','John Steinbeck','Joyce Carol Oates','Lucy Maud','Isabel Allende','Jorge Luis Borges','Ray Bradbury','Kurt Vonnegut','Michael Crichton')
 )
 
 if(USE_API) {
@@ -158,9 +154,6 @@ if(USE_API) {
     mutate(
       # Extract base condition from embedded data
       base_condition = tolower(base),
-
-      # Determine which categories to use based on base condition
-      categories_to_use = if_else(base_condition == "high", "high", "low"),
 
       # Gender feedback detection (cond == "treat")
       gender_feedback = as.numeric(cond == "treat"),
@@ -216,6 +209,37 @@ if(USE_API) {
                               d0$`choice-4`[i] %in% categories_high$books,
                               d0$`choice-5`[i] %in% categories_high$books,
                               d0$`choice-6`[i] %in% categories_high$books)
+    } else if(d0$base_condition[i] == "med") {
+      d0$female_pick[i] <- as.numeric(d0$`choice-7`[i] %in% categories_med$women)
+      d0$poets_pick[i] <- as.numeric(d0$`choice-7`[i] %in% categories_med$poets)
+      d0$oldies_pick[i] <- as.numeric(d0$`choice-7`[i] %in% categories_med$oldies)
+      d0$books_pick[i] <- as.numeric(d0$`choice-7`[i] %in% categories_med$books)
+
+      # Calculate base counts for initial selections
+      d0$base_gender[i] <- sum(d0$`choice-1`[i] %in% categories_med$women,
+                               d0$`choice-2`[i] %in% categories_med$women,
+                               d0$`choice-3`[i] %in% categories_med$women,
+                               d0$`choice-4`[i] %in% categories_med$women,
+                               d0$`choice-5`[i] %in% categories_med$women,
+                               d0$`choice-6`[i] %in% categories_med$women)
+      d0$base_poets[i] <- sum(d0$`choice-1`[i] %in% categories_med$poets,
+                              d0$`choice-2`[i] %in% categories_med$poets,
+                              d0$`choice-3`[i] %in% categories_med$poets,
+                              d0$`choice-4`[i] %in% categories_med$poets,
+                              d0$`choice-5`[i] %in% categories_med$poets,
+                              d0$`choice-6`[i] %in% categories_med$poets)
+      d0$base_oldies[i] <- sum(d0$`choice-1`[i] %in% categories_med$oldies,
+                               d0$`choice-2`[i] %in% categories_med$oldies,
+                               d0$`choice-3`[i] %in% categories_med$oldies,
+                               d0$`choice-4`[i] %in% categories_med$oldies,
+                               d0$`choice-5`[i] %in% categories_med$oldies,
+                               d0$`choice-6`[i] %in% categories_med$oldies)
+      d0$base_books[i] <- sum(d0$`choice-1`[i] %in% categories_med$books,
+                              d0$`choice-2`[i] %in% categories_med$books,
+                              d0$`choice-3`[i] %in% categories_med$books,
+                              d0$`choice-4`[i] %in% categories_med$books,
+                              d0$`choice-5`[i] %in% categories_med$books,
+                              d0$`choice-6`[i] %in% categories_med$books)
     } else {
       d0$female_pick[i] <- as.numeric(d0$`choice-7`[i] %in% categories_low$women)
       d0$poets_pick[i] <- as.numeric(d0$`choice-7`[i] %in% categories_low$poets)
@@ -285,7 +309,7 @@ if(USE_API) {
 \hline
 \texttt{cond} & Treatment condition (control or treat). \\
 \hline
-\texttt{base\_condition} & Base condition (low = 6 authors per category, high = 12 authors per category). \\
+\texttt{base\_condition} & Base condition (low = 3 authors, med = 6 authors, high = 9 authors per category). \\
 \hline
 \texttt{gender\_feedback} & Binary indicator of whether participant was in treatment condition (cond = treat). \\
 \hline
@@ -401,30 +425,44 @@ d0 |>
 
 ## Primary Analysis
 
-### Low Base Condition (6 authors per category)
+### Low Base Condition (3 authors per category)
 
 ```{r echo=TRUE, results='markup'}
 # Create condition-specific datasets
 d0_low <- d0 |> filter(base_condition == "low")
+d0_med <- d0 |> filter(base_condition == "med")
 d0_high <- d0 |> filter(base_condition == "high")
 
 # Effect of gender feedback in low base condition
 r_low <- lm(female_pick ~ gender_feedback, data=d0_low)
 
-cat("Effect in Low Base Condition (6 authors per category):\n")
+cat("Effect in Low Base Condition (3 authors per category):\n")
 robust_summary(r_low)
 robust_confint(r_low)
 ```
 
 \newpage
 
-### High Base Condition (12 authors per category)
+### Medium Base Condition (6 authors per category)
+
+```{r echo=TRUE, results='markup'}
+# Effect of gender feedback in medium base condition
+r_med <- lm(female_pick ~ gender_feedback, data=d0_med)
+
+cat("Effect in Medium Base Condition (6 authors per category):\n")
+robust_summary(r_med)
+robust_confint(r_med)
+```
+
+\newpage
+
+### High Base Condition (9 authors per category)
 
 ```{r echo=TRUE, results='markup'}
 # Effect of gender feedback in high base condition
 r_high <- lm(female_pick ~ gender_feedback, data=d0_high)
 
-cat("Effect in High Base Condition (12 authors per category):\n")
+cat("Effect in High Base Condition (9 authors per category):\n")
 robust_summary(r_high)
 robust_confint(r_high)
 ```
@@ -434,10 +472,13 @@ robust_confint(r_high)
 ### Interaction Model
 
 ```{r echo=TRUE, results='markup'}
-# Full 2x2 factorial model testing interaction
-r_factorial <- lm(female_pick ~ gender_feedback * base_condition, data=d0)
+# Full 2x3 factorial model testing interaction
+# Factor base_condition with reference category
+d0$base_condition_factor <- factor(d0$base_condition, levels = c("low", "med", "high"))
 
-cat("2x2 Factorial Design: Gender Feedback x Base Condition\n")
+r_factorial <- lm(female_pick ~ gender_feedback * base_condition_factor, data=d0)
+
+cat("2x3 Factorial Design: Gender Feedback x Base Condition\n")
 robust_summary(r_factorial)
 robust_confint(r_factorial)
 
@@ -445,34 +486,53 @@ robust_confint(r_factorial)
 
 \newpage
 
-### Testing Asymmetry in Effects
+### Testing Differences in Effects Across Base Conditions
 
 ```{r echo=TRUE, results='markup'}
 # Test whether the effect of gender feedback differs significantly
-# between low and high base conditions
+# across the three base conditions
 
-# The interaction coefficient tests this directly
-interaction_coef <- coef(r_factorial)['gender_feedback:base_conditionlow']
-interaction_se <- sqrt(diag(vcovHC(r_factorial, type = "HC3")))['gender_feedback:base_conditionlow']
-interaction_t <- interaction_coef / interaction_se
-interaction_p <- 2 * pt(-abs(interaction_t), df = df.residual(r_factorial))
+# Extract interaction coefficients
+rob_sum <- robust_summary(r_factorial)
+rob_ci <- robust_confint(r_factorial)
 
-cat('\nTest of Asymmetry (Interaction Term):\n')
-cat('Difference in effects:', round(interaction_coef * 100, 2), 'percentage points\n')
-cat('Robust standard error:', round(interaction_se * 100, 2), '\n')
-cat('p-value:', round(interaction_p, 4), '\n\n')
+cat('\nInteraction Effects (relative to Low base):\n\n')
 
-if(interaction_p < 0.05) {
-  cat('The asymmetry IS statistically significant (p < 0.05).\n')
-  cat('The effect of gender feedback differs significantly between base conditions.\n')
-} else {
-  cat('The asymmetry is NOT statistically significant (p >= 0.05).\n')
+# Medium vs Low
+if('gender_feedback:base_condition_factormed' %in% rownames(rob_sum$coefficients)) {
+  interaction_coef_med <- rob_sum$coefficients['gender_feedback:base_condition_factormed', 'Estimate']
+  interaction_se_med <- rob_sum$coefficients['gender_feedback:base_condition_factormed', 'Std. Error']
+  interaction_p_med <- rob_sum$coefficients['gender_feedback:base_condition_factormed', 'Pr(>|t|)']
+
+  cat('Medium vs Low:\n')
+  cat('  Difference in effects:', round(interaction_coef_med * 100, 2), 'percentage points\n')
+  cat('  Robust standard error:', round(interaction_se_med * 100, 2), '\n')
+  cat('  p-value:', round(interaction_p_med, 4), '\n\n')
 }
+
+# High vs Low
+if('gender_feedback:base_condition_factorhigh' %in% rownames(rob_sum$coefficients)) {
+  interaction_coef_high <- rob_sum$coefficients['gender_feedback:base_condition_factorhigh', 'Estimate']
+  interaction_se_high <- rob_sum$coefficients['gender_feedback:base_condition_factorhigh', 'Std. Error']
+  interaction_p_high <- rob_sum$coefficients['gender_feedback:base_condition_factorhigh', 'Pr(>|t|)']
+
+  cat('High vs Low:\n')
+  cat('  Difference in effects:', round(interaction_coef_high * 100, 2), 'percentage points\n')
+  cat('  Robust standard error:', round(interaction_se_high * 100, 2), '\n')
+  cat('  p-value:', round(interaction_p_high, 4), '\n\n')
+}
+
+# Joint F-test for interaction terms
+library(car)
+cat('\nJoint test of interaction terms:\n')
+linearHypothesis(r_factorial, c("gender_feedback:base_condition_factormed = 0",
+                                 "gender_feedback:base_condition_factorhigh = 0"),
+                 vcov = vcovHC(r_factorial, type = "HC3"))
 ```
 
 \newpage
 
-### Visualization of 2x2 Design
+### Visualization of 2x3 Design
 
 ```{r echo=TRUE}
 library(ggplot2)
@@ -485,23 +545,38 @@ interaction_means <- d0 |>
     n = n()
   )
 
-p_2x2 <- ggplot(interaction_means, aes(x = factor(base_condition), y = mean_female * 100,
+p_2x3 <- ggplot(interaction_means, aes(x = factor(base_condition, levels = c("low", "med", "high")),
+                                       y = mean_female * 100,
                                        fill = factor(gender_feedback))) +
   geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.7) +
+  # White text inside bars (when bar is tall enough)
+  geom_text(aes(label = ifelse(mean_female * 100 > 15,
+                                paste0(sprintf("%.1f", mean_female * 100), "%"), "")),
+            position = position_dodge(width = 0.8), vjust = 1.5, size = 7, color = "white") +
+  # Black text above bars (when bar is too small for white text)
+  geom_text(aes(label = ifelse(mean_female * 100 <= 15,
+                                paste0(sprintf("%.1f", mean_female * 100), "%"), "")),
+            position = position_dodge(width = 0.8), vjust = -0.5, size = 7, color = "black") +
   geom_errorbar(aes(ymin = (mean_female - 1.96*se_female) * 100,
                     ymax = (mean_female + 1.96*se_female) * 100),
                 width = 0.2, position = position_dodge(width = 0.8)) +
-  scale_fill_manual(values = c("0" = "#990000", "1" = "#011F5B"),
+  scale_fill_manual(values = c("0" = "#011F5B", "1" = "#990000"),
                     labels = c("0" = "Control", "1" = "Gender Feedback")) +
+  scale_y_continuous(labels = function(x) paste0(x, "%"), limits = c(0, 50),
+                     breaks = seq(0, 50, 10)) +
   labs(x = "Base Condition (Category Size)",
        y = "% Selecting Female Author",
-       title = "2x2 Factorial: Gender Feedback x Base Condition",
+       title = "Gender Feedback x Base Condition",
        fill = "Treatment") +
-  scale_x_discrete(labels = c("low" = "Low\n(6 authors)", "high" = "High\n(12 authors)")) +
+  scale_x_discrete(labels = c("low" = "Low\n(3 authors)", "med" = "Medium\n(6 authors)",
+                              "high" = "High\n(9 authors)")) +
   theme_bw() +
-  theme(legend.position = "top")
+  theme(legend.position = "top",
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
 
-print(p_2x2)
+print(p_2x3)
+ggsave("Figure-Pilot-Overall.pdf", plot = p_2x3, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
 ```
 
 \newpage
@@ -525,6 +600,27 @@ summary(r_low_logit)
 # Odds ratio
 tidy_low_logit <- tidy(r_low_logit, exponentiate = TRUE, conf.int = T)
 print(tidy_low_logit)
+```
+
+\newpage
+
+### Medium Base Condition
+
+```{r echo=TRUE, results='markup'}
+## Robust to demographic controls
+r_med_demog <- lm(female_pick ~ gender_feedback + gender_code + race_code + age, data=d0_med)
+
+cat("Medium Base: With Demographic Controls\n")
+robust_summary(r_med_demog)
+robust_confint(r_med_demog)
+
+## Logistic regression
+r_med_logit <- glm(female_pick ~ gender_feedback, family = binomial, data=d0_med)
+cat("\nMedium Base: Logistic Regression Model\n")
+summary(r_med_logit)
+# Odds ratio
+tidy_med_logit <- tidy(r_med_logit, exponentiate = TRUE, conf.int = T)
+print(tidy_med_logit)
 ```
 
 \newpage
@@ -554,15 +650,15 @@ print(tidy_high_logit)
 
 ```{r echo=TRUE, results='markup'}
 ## Interaction model with demographic controls
-r_factorial_demog <- lm(female_pick ~ gender_feedback*base_condition + gender_code + race_code + age, data=d0)
+r_factorial_demog <- lm(female_pick ~ gender_feedback*base_condition_factor + gender_code + race_code + age, data=d0)
 
-cat("2x2 Factorial with Demographic Controls\n")
+cat("2x3 Factorial with Demographic Controls\n")
 robust_summary(r_factorial_demog)
 robust_confint(r_factorial_demog)
 
 ## Logistic regression with interaction
-r_factorial_logit <- glm(female_pick ~ gender_feedback*base_condition, family = binomial, data=d0)
-cat("\n2x2 Factorial: Logistic Regression Model\n")
+r_factorial_logit <- glm(female_pick ~ gender_feedback*base_condition_factor, family = binomial, data=d0)
+cat("\n2x3 Factorial: Logistic Regression Model\n")
 summary(r_factorial_logit)
 # Odds ratio
 tidy_factorial_logit <- tidy(r_factorial_logit, exponentiate = TRUE, conf.int = T)
@@ -586,6 +682,19 @@ robust_confint(r_interaction_low)
 
 \newpage
 
+### Medium Base Condition
+
+```{r echo=TRUE, results='markup'}
+## Interaction with initial women selection in medium base
+r_interaction_med <- lm(female_pick ~ gender_feedback*base_gender, data=d0_med)
+
+cat("Medium Base: Interaction with Initial Women Selection\n")
+robust_summary(r_interaction_med)
+robust_confint(r_interaction_med)
+```
+
+\newpage
+
 ### High Base Condition
 
 ```{r echo=TRUE, results='markup'}
@@ -603,7 +712,7 @@ robust_confint(r_interaction_high)
 
 ```{r echo=TRUE, results='markup'}
 ## Three-way interaction: gender_feedback x base_condition x base_gender
-r_interaction_full <- lm(female_pick ~ gender_feedback*base_condition*base_gender, data=d0)
+r_interaction_full <- lm(female_pick ~ gender_feedback*base_condition_factor*base_gender, data=d0)
 
 cat("Three-Way Interaction: Gender Feedback x Base Condition x Initial Women Selection\n")
 robust_summary(r_interaction_full)
@@ -638,6 +747,30 @@ robust_confint(r_books_low)
 
 \newpage
 
+### Medium Base Condition
+
+```{r echo=TRUE, results='markup'}
+## Poets feedback - Medium Base
+r_poets_med <- lm(poets_pick ~ poets_shown, data=d0_med)
+cat("Medium Base: Effect of Poets Feedback on Poet Selection\n")
+robust_summary(r_poets_med)
+robust_confint(r_poets_med)
+
+## Oldies (1800s) feedback - Medium Base
+r_oldies_med <- lm(oldies_pick ~ oldies_shown, data=d0_med)
+cat("\nMedium Base: Effect of 1800s Feedback on 1800s Author Selection\n")
+robust_summary(r_oldies_med)
+robust_confint(r_oldies_med)
+
+## Books (10+) feedback - Medium Base
+r_books_med <- lm(books_pick ~ books_shown, data=d0_med)
+cat("\nMedium Base: Effect of 10+ Books Feedback on 10+ Books Author Selection\n")
+robust_summary(r_books_med)
+robust_confint(r_books_med)
+```
+
+\newpage
+
 ### High Base Condition
 
 ```{r echo=TRUE, results='markup'}
@@ -666,17 +799,17 @@ robust_confint(r_books_high)
 
 ```{r echo=TRUE, results='markup'}
 ## Test if attribute feedback effects differ by base condition
-r_poets_interaction <- lm(poets_pick ~ poets_shown*base_condition, data=d0)
+r_poets_interaction <- lm(poets_pick ~ poets_shown*base_condition_factor, data=d0)
 cat("Poets x Base Condition Interaction\n")
 robust_summary(r_poets_interaction)
 robust_confint(r_poets_interaction)
 
-r_oldies_interaction <- lm(oldies_pick ~ oldies_shown*base_condition, data=d0)
+r_oldies_interaction <- lm(oldies_pick ~ oldies_shown*base_condition_factor, data=d0)
 cat("\nOldies x Base Condition Interaction\n")
 robust_summary(r_oldies_interaction)
 robust_confint(r_oldies_interaction)
 
-r_books_interaction <- lm(books_pick ~ books_shown*base_condition, data=d0)
+r_books_interaction <- lm(books_pick ~ books_shown*base_condition_factor, data=d0)
 cat("\nBooks x Base Condition Interaction\n")
 robust_summary(r_books_interaction)
 robust_confint(r_books_interaction)
@@ -690,6 +823,12 @@ poets_est_low <- extract_regression_estimates(r_poets_low)
 oldies_est_low <- extract_regression_estimates(r_oldies_low)
 books_est_low <- extract_regression_estimates(r_books_low)
 
+# For medium base condition
+gender_est_med <- extract_regression_estimates(r_med)
+poets_est_med <- extract_regression_estimates(r_poets_med)
+oldies_est_med <- extract_regression_estimates(r_oldies_med)
+books_est_med <- extract_regression_estimates(r_books_med)
+
 # For high base condition
 gender_est_high <- extract_regression_estimates(r_high)
 poets_est_high <- extract_regression_estimates(r_poets_high)
@@ -699,7 +838,7 @@ books_est_high <- extract_regression_estimates(r_books_high)
 # Create separate data frames for each condition
 pilot_estimates_low <- data.frame(
     Study = "PILOT_LOW",
-    Base_Condition = "Low (6 authors)",
+    Base_Condition = "Low (3 authors)",
     Stimuli = c("gender", "poets", "oldies", "books"),
     Estimate = c(gender_est_low$estimate, poets_est_low$estimate, oldies_est_low$estimate, books_est_low$estimate),
     SE = c(gender_est_low$se, poets_est_low$se, oldies_est_low$se, books_est_low$se),
@@ -707,9 +846,19 @@ pilot_estimates_low <- data.frame(
     CI_Upper = c(gender_est_low$ci_upper, poets_est_low$ci_upper, oldies_est_low$ci_upper, books_est_low$ci_upper)
 )
 
+pilot_estimates_med <- data.frame(
+    Study = "PILOT_MED",
+    Base_Condition = "Medium (6 authors)",
+    Stimuli = c("gender", "poets", "oldies", "books"),
+    Estimate = c(gender_est_med$estimate, poets_est_med$estimate, oldies_est_med$estimate, books_est_med$estimate),
+    SE = c(gender_est_med$se, poets_est_med$se, oldies_est_med$se, books_est_med$se),
+    CI_Lower = c(gender_est_med$ci_lower, poets_est_med$ci_lower, oldies_est_med$ci_lower, books_est_med$ci_lower),
+    CI_Upper = c(gender_est_med$ci_upper, poets_est_med$ci_upper, oldies_est_med$ci_upper, books_est_med$ci_upper)
+)
+
 pilot_estimates_high <- data.frame(
     Study = "PILOT_HIGH",
-    Base_Condition = "High (12 authors)",
+    Base_Condition = "High (9 authors)",
     Stimuli = c("gender", "poets", "oldies", "books"),
     Estimate = c(gender_est_high$estimate, poets_est_high$estimate, oldies_est_high$estimate, books_est_high$estimate),
     SE = c(gender_est_high$se, poets_est_high$se, oldies_est_high$se, books_est_high$se),
@@ -717,8 +866,8 @@ pilot_estimates_high <- data.frame(
     CI_Upper = c(gender_est_high$ci_upper, poets_est_high$ci_upper, oldies_est_high$ci_upper, books_est_high$ci_upper)
 )
 
-# Combine both
-pilot_estimates <- rbind(pilot_estimates_low, pilot_estimates_high)
+# Combine all three
+pilot_estimates <- rbind(pilot_estimates_low, pilot_estimates_med, pilot_estimates_high)
 
 # Save the estimates to an RDS file
 saveRDS(pilot_estimates, file = "pilot_estimates.rds")
@@ -728,7 +877,7 @@ saveRDS(pilot_estimates, file = "pilot_estimates.rds")
 
 ## Figure - Simple Effects by Base Condition
 
-### Low Base Condition Figure
+### Low Base Condition Figure (3 authors)
 
 ```{r echo=TRUE}
 
@@ -834,7 +983,7 @@ p_combined_low <- ggplot(df_combined_low, aes(x = Condition, y = freq*100, fill 
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of authors who...", y = "% of New Authors with the Target Attribute",
-       title = "Low Base Condition (6 authors per category)") +
+       title = "Low Base Condition (3 authors per category)") +
   theme(plot.caption = element_text(face = "italic"),
         legend.position = c(0.5, 0.95),
         legend.title = element_blank(),
@@ -862,7 +1011,132 @@ ggsave("Figure-Pilot-Low.pdf", plot = p_combined_low, width = 10, height = 8, un
 
 \newpage
 
-### High Base Condition Figure
+### Medium Base Condition Figure (6 authors)
+
+```{r echo=TRUE}
+# Get p-values from regression models for MEDIUM base condition
+p_gender_med <- robust_summary(r_med)$coefficients["gender_feedback", "Pr(>|t|)"]
+p_poets_med <- robust_summary(r_poets_med)$coefficients["poets_shown", "Pr(>|t|)"]
+p_oldies_med <- robust_summary(r_oldies_med)$coefficients["oldies_shown", "Pr(>|t|)"]
+p_books_med <- robust_summary(r_books_med)$coefficients["books_shown", "Pr(>|t|)"]
+
+# Get significance labels for MEDIUM base
+sig_gender_med <- get_sig_stars(p_gender_med)
+sig_poets_med <- get_sig_stars(p_poets_med)
+sig_oldies_med <- get_sig_stars(p_oldies_med)
+sig_books_med <- get_sig_stars(p_books_med)
+
+dfemale_plot_med <- d0_med |>
+  dplyr::select(gender_feedback, female_pick) |>
+  dplyr::group_by(gender_feedback) |>
+  dplyr::summarise(
+    n = n(),
+    freq = mean(female_pick),
+    sd = sd(female_pick) * 100,
+    se = (sd(female_pick) / sqrt(n())) * 100
+  ) |>
+  dplyr::mutate(
+    gender_feedback = case_when(
+      gender_feedback == 1 ~ "\"Treatment\"",
+      TRUE ~ "\"Control\""
+    )
+  ) |>
+  dplyr::rename(Condition = gender_feedback)
+
+dpoets_plot_med <- d0_med |>
+  dplyr::select(poets_shown, poets_pick) |>
+  dplyr::group_by(poets_shown) |>
+  dplyr::summarise(
+    n = n(),
+    freq = mean(poets_pick),
+    sd = sd(poets_pick) * 100,
+    se = (sd(poets_pick) / sqrt(n())) * 100
+  )|>
+  mutate(poets_shown = case_when(poets_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |>
+  rename(Condition = poets_shown)
+
+doldies_plot_med <- d0_med |>
+  dplyr::select(oldies_shown, oldies_pick) |>
+  dplyr::group_by(oldies_shown) |>
+  dplyr::summarise(
+    n = n(),
+    freq = mean(oldies_pick),
+    sd = sd(oldies_pick) * 100,
+    se = (sd(oldies_pick) / sqrt(n())) * 100
+  )|>
+  mutate(oldies_shown = case_when(oldies_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |>
+  rename(Condition = oldies_shown)
+
+dbooks_plot_med <- d0_med |>
+  dplyr::select(books_shown, books_pick) |>
+  dplyr::group_by(books_shown) |>
+  dplyr::summarise(
+    n = n(),
+    freq = mean(books_pick),
+    sd = sd(books_pick) * 100,
+    se = (sd(books_pick) / sqrt(n())) * 100
+  )|>
+  mutate(books_shown = case_when(books_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |>
+  rename(Condition = books_shown)
+
+## Combine plots for MEDIUM base
+df_combined_med <- bind_rows(
+  dpoets_plot_med %>% mutate(Category = "\nWrote Poetry", sig_label = sig_poets_med),
+  doldies_plot_med %>% mutate(Category = "\nBorn in 1800s", sig_label = sig_oldies_med),
+  dbooks_plot_med %>% mutate(Category = "\n10+ Books\nWritten", sig_label = sig_books_med),
+  dfemale_plot_med %>% mutate(Category = "\nWere Women", sig_label = sig_gender_med)
+, .id = "id") %>%
+  mutate(Category = factor(Category, levels = c('\nWrote Poetry', '\nBorn in 1800s', '\n10+ Books\nWritten', '\nWere Women')))
+
+p_combined_med <- ggplot(df_combined_med, aes(x = Condition, y = freq*100, fill = Condition)) +
+  geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
+  geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")),
+            position=position_dodge(width=0.7), vjust=5, size = 5, color = "white") +
+  geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
+  facet_wrap(~factor(Category, c('\nWrote Poetry', '\nBorn in 1800s', '\n10+ Books\nWritten', '\nWere Women')), nrow = 1, strip.position = "bottom") +
+   geom_segment(data = df_combined_med %>% filter(Condition == "\"Treatment\""),
+                aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5),
+                inherit.aes = FALSE) +
+   geom_text(data = df_combined_med %>% filter(Condition == "\"Treatment\""),
+             aes(x = 1.5, y = freq*100 + se + 7, label = sig_label),
+             inherit.aes = FALSE, vjust = 0, size = 5) +
+  theme_bw() +
+  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
+  scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
+  labs(x = "Feedback on % of authors who...", y = "% of New Authors with the Target Attribute",
+       title = "Medium Base Condition (6 authors per category)") +
+  theme(plot.caption = element_text(face = "italic"),
+        legend.position = c(0.5, 0.95),
+        legend.title = element_blank(),
+        legend.direction = "horizontal",
+        legend.text = element_text(size = 20),
+        legend.key.size = unit(7, 'mm'),
+        legend.background = element_rect(fill = "white"),
+        panel.grid.minor = element_blank(),
+        panel.grid = element_blank(),
+        panel.border = element_rect(fill= NA, color = "white"),
+        plot.background = element_rect(fill = "white"),
+        panel.background = element_rect(fill = "white"),
+        axis.title.x = element_text(face="bold", size = 21, vjust = 17),
+        plot.title = element_text(size = 18, hjust = 0.5),
+        axis.title.y = element_text(size = 20, color = "black"),
+        axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_text(size = 20, color = "black"),
+        strip.text = element_text(size = 20, color = "black"),
+        strip.background = element_rect(colour = "white", fill = "white"))
+
+print(p_combined_med)
+ggsave("Figure-Pilot-Med.pdf", plot = p_combined_med, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+```
+
+\newpage
+
+### High Base Condition Figure (9 authors)
 
 ```{r echo=TRUE}
 # Get p-values from regression models for HIGH base condition
@@ -959,7 +1233,7 @@ p_combined_high <- ggplot(df_combined_high, aes(x = Condition, y = freq*100, fil
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of authors who...", y = "% of New Authors with the Target Attribute",
-       title = "High Base Condition (12 authors per category)") +
+       title = "High Base Condition (9 authors per category)") +
   theme(plot.caption = element_text(face = "italic"),
         legend.position = c(0.5, 0.95),
         legend.title = element_blank(),
@@ -1036,6 +1310,57 @@ data.frame(
   `Test` = c("Gender Feedback - Poets Feedback", "Gender Feedback - Oldies Feedback", "Gender Feedback - Books Feedback"),
   `Wald Coefficient` = c(poets_coef_low, oldies_coef_low, books_coef_low),
   P_Value = c(p_value_poets_low, p_value_oldies_low, p_value_books_low),
+  row.names = 1
+)
+```
+
+\newpage
+
+### Medium Base Condition
+
+```{r results='markup'}
+cat("MEDIUM BASE CONDITION: Testing equality of attribute feedback effects\n\n")
+
+# Poets - Medium Base
+poets.eqn_med <- list(
+  poetseq = as.numeric(poets_pick) ~ poets_shown + oldies_shown + books_shown + gender_feedback - 1,
+  femaleeq = as.numeric(female_pick) ~ poets_shown + oldies_shown + books_shown + gender_feedback - 1
+)
+unrestricted_poets_med <- systemfit(poets.eqn_med, data=d0_med)
+
+# Oldies - Medium Base
+oldies.eqn_med <- list(
+  oldieseq = as.numeric(oldies_pick) ~ poets_shown + oldies_shown + books_shown + gender_feedback - 1,
+  femaleeq = as.numeric(female_pick) ~ poets_shown + oldies_shown + books_shown + gender_feedback - 1
+)
+unrestricted_oldies_med <- systemfit(oldies.eqn_med, data=d0_med)
+
+# Books - Medium Base
+books.eqn_med <- list(
+  bookseq = as.numeric(books_pick) ~ poets_shown + oldies_shown + books_shown + gender_feedback - 1,
+  femaleeq = as.numeric(female_pick) ~ poets_shown + oldies_shown + books_shown + gender_feedback - 1
+)
+unrestricted_books_med <- systemfit(books.eqn_med, data=d0_med)
+
+# Wald tests - Medium Base
+lh_result_poets_med = linearHypothesis(unrestricted_poets_med, restrict_poets)
+lh_result_oldies_med = linearHypothesis(unrestricted_oldies_med, restrict_oldies)
+lh_result_books_med = linearHypothesis(unrestricted_books_med, restrict_books)
+
+# Collecting results - Medium Base
+poets_coef_med <- lh_result_poets_med$F[2]
+oldies_coef_med <- lh_result_oldies_med$F[2]
+books_coef_med <- lh_result_books_med$F[2]
+
+p_value_poets_med = lh_result_poets_med$`Pr(>F)`[2]
+p_value_oldies_med = lh_result_oldies_med$`Pr(>F)`[2]
+p_value_books_med = lh_result_books_med$`Pr(>F)`[2]
+
+# Summary table - Medium Base
+data.frame(
+  `Test` = c("Gender Feedback - Poets Feedback", "Gender Feedback - Oldies Feedback", "Gender Feedback - Books Feedback"),
+  `Wald Coefficient` = c(poets_coef_med, oldies_coef_med, books_coef_med),
+  P_Value = c(p_value_poets_med, p_value_oldies_med, p_value_books_med),
   row.names = 1
 )
 ```
