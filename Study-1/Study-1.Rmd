@@ -1,0 +1,671 @@
+---
+title: "NPR Study"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 2
+    fig_caption: true
+header-includes:
+  \renewcommand{\contentsname}{Items}
+   \usepackage{fvextra}
+   \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+---
+
+```{r setup, include=FALSE}
+rm(list=ls())
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE,
+	results = "hide"
+)
+library(dplyr)
+library(lmtest)
+library(sandwich)
+library(systemfit)
+library(car)
+library(broom)
+library(qualtRics)
+library(knitr)
+library(rmarkdown)
+library(tidyverse)
+library(ggplot2)
+```
+
+```{r include=FALSE}
+qualtrics_api_credentials(api_key = "BJ6aDiEgtQihneCgtZycVLYjaj0ao9gYkdRkb1UZ",
+                          base_url = "yul1.qualtrics.com",
+                          install = F,
+                          overwrite = T)
+if ( (!is.null(knitr::current_input()))) {
+  if (("pdf_document" ==
+                rmarkdown::all_output_formats(knitr::current_input())[1])) {
+      stargazer_type <- "latex"
+  }
+} else {
+  stargazer_type <- "text"
+}
+
+robust_summary <- function(model) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting original model summary
+    model_summary <- summary(model)
+
+    # Updating standard errors, t-values, and p-values in the coefficients table
+    model_summary$coefficients[, "Std. Error"] <- robust_se
+    model_summary$coefficients[, "t value"] <- model_summary$coefficients[, "Estimate"] / robust_se
+    model_summary$coefficients[, "Pr(>|t|)"] <- 2 * pt(-abs(model_summary$coefficients[, "t value"]), df = model_summary$df[2], lower.tail = TRUE)
+
+    return(model_summary)
+}
+robust_confint <- function(model, level = 0.95) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting the coefficients
+    est <- coef(model)
+
+    # Calculating the critical value for the t-distribution
+    alpha <- 1 - level
+    t_crit <- qt(1 - alpha / 2, df = df.residual(model))
+
+    # Calculating the confidence intervals
+    lower <- est - t_crit * robust_se
+    upper <- est + t_crit * robust_se
+
+    # Combining into a matrix
+    confint <- cbind(lower, upper)
+    rownames(confint) <- names(est)
+    colnames(confint) <- c("2.5 %", "97.5 %")
+
+    return(confint)
+}
+extract_regression_estimates <- function(model) {
+  # Get robust summary
+  rob_sum <- robust_summary(model)
+  # Get robust confidence intervals
+  rob_ci <- robust_confint(model)
+
+  # Extract coefficient for the treatment variable (second row)
+  estimate <- rob_sum$coefficients[2, "Estimate"] * 100  # Convert to percentage points
+  se <- rob_sum$coefficients[2, "Std. Error"] * 100
+  ci_lower <- rob_ci[2, 1] * 100
+  ci_upper <- rob_ci[2, 2] * 100
+
+  return(list(
+    estimate = estimate,
+    se = se,
+    ci_lower = ci_lower,
+    ci_upper = ci_upper
+  ))
+}
+```
+
+
+
+```{r include=FALSE}
+# Set this to TRUE if you have API access, FALSE if using CSV
+USE_API <- T
+
+if(USE_API) {
+  ## Pull directly from Qualtrics API
+  qual_data <- fetch_survey(surveyID='SV_3TY7uEVc8wzS8N8',
+                            start_date = "2025-10-01",
+                     force_request = T)
+} else {
+  # Read the processed data directly from CSV
+  d0 <- read.csv('Study1.csv', check.names = F)
+  num_excluded <- unique(d0$num_excluded_total)
+}
+
+# Define the categories based on the experts
+women <- c('Emily Kwong', 'Moira Gunn', 'Brittany Luse',
+           'Zoe Kleinman', 'Davar Ardalan', 'Jane Barrett')
+
+under_50 <- c('Bobby Allyn', 'Emily Kwong', 'Paris Marx',
+              'Kevin Roose', 'Ezra Eeman')
+
+west_coast <- c('Erik Brynjolfsson', 'Moira Gunn', 'Ethan Mollick',
+                'Ed Zitron', 'Kevin Roose', 'Andrew Ng')
+
+university <- c('Erik Brynjolfsson', 'Austan Goolsbee', 'Ethan Mollick',
+                'Anton Korinek', 'Andrew Ng')
+
+if(USE_API) {
+  # Process the API data
+  d0 <- qual_data |>
+    filter(!is.na(`choice-3`), !is.na(PROLIFIC_PID)) |>
+    mutate(
+      # Treatment assignment
+      treatment = case_when(cond == "treatment" ~ 1, TRUE ~ 0),
+
+      # Set assignment (1 or 2)
+      set_num = as.numeric(set),
+
+      # Feedback detection
+      women_feedback = as.numeric(feedback_women),
+      age_feedback = as.numeric(feedback_age),
+      location_feedback = as.numeric(feedback_location),
+      university_feedback = as.numeric(feedback_university),
+
+      # Count women selected across all 3 choices
+      women_choice1 = case_when(`choice-1` %in% women ~ 1, TRUE ~ 0),
+      women_choice2 = case_when(`choice-2` %in% women ~ 1, TRUE ~ 0),
+      women_choice3 = case_when(`choice-3` %in% women ~ 1, TRUE ~ 0),
+
+      # Total women count and proportion (primary DV)
+      women_count = women_choice1 + women_choice2 + women_choice3,
+      women_proportion = women_count / 3,
+
+      # Other attribute picks
+      age_count = case_when(`choice-1` %in% under_50 ~ 1, TRUE ~ 0) +
+                  case_when(`choice-2` %in% under_50 ~ 1, TRUE ~ 0) +
+                  case_when(`choice-3` %in% under_50 ~ 1, TRUE ~ 0),
+      age_proportion = age_count / 3,
+
+      location_count = case_when(`choice-1` %in% west_coast ~ 1, TRUE ~ 0) +
+                       case_when(`choice-2` %in% west_coast ~ 1, TRUE ~ 0) +
+                       case_when(`choice-3` %in% west_coast ~ 1, TRUE ~ 0),
+      location_proportion = location_count / 3,
+
+      university_count = case_when(`choice-1` %in% university ~ 1, TRUE ~ 0) +
+                         case_when(`choice-2` %in% university ~ 1, TRUE ~ 0) +
+                         case_when(`choice-3` %in% university ~ 1, TRUE ~ 0),
+      university_proportion = university_count / 3,
+
+      # Demographics
+      gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
+      race_code = case_when(str_detect(race, "White / Caucasian") ~ 1, TRUE ~ 0)
+    ) |>
+    dplyr::select(treatment, set_num, women_feedback, age_feedback, location_feedback, university_feedback,
+                  women_count, women_proportion, age_count, age_proportion,
+                  location_count, location_proportion, university_count, university_proportion,
+                  `choice-1`:`choice-3`, race, gender, age, gender_code, race_code, cond, set)
+
+  # Calculate the number of excluded participants
+  num_excluded <- nrow(qual_data) - nrow(d0)
+
+  # Save num_excluded in d0
+  d0$num_excluded_total <- num_excluded
+
+  # Write the API-pulled data into a CSV file
+  write.csv(d0, 'Study1.csv', row.names = FALSE, quote = TRUE)
+}
+```
+
+\newpage
+
+## Variable Names
+
+\begin{table}[!htbp] \centering
+  \label{tab:variables}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Variable} & \textbf{Description} \\
+\hline
+\texttt{treatment} & Binary indicator of whether a participant was randomly assigned to treatment condition (shown women feedback). \\
+\hline
+\texttt{set\_num} & Indicator of which feedback set was shown (1 or 2, with different percentage values). \\
+\hline
+\texttt{women\_feedback} & Binary indicator of whether women feedback was shown to participant. \\
+\hline
+\texttt{women\_count} & Count of women selected across the three choices (0-3). \\
+\hline
+\texttt{women\_proportion} & Proportion of women selected (DV: ranges from 0 to 1). \\
+\hline
+\texttt{age\_feedback} & Binary indicator of whether age feedback was shown. \\
+\hline
+\texttt{age\_proportion} & Proportion of experts under 50 years old selected. \\
+\hline
+\texttt{location\_feedback} & Binary indicator of whether location feedback was shown. \\
+\hline
+\texttt{location\_proportion} & Proportion of experts based on West Coast selected. \\
+\hline
+\texttt{university\_feedback} & Binary indicator of whether university feedback was shown. \\
+\hline
+\texttt{university\_proportion} & Proportion of experts working at a university selected. \\
+\hline
+\texttt{choice-1 to choice-3} & The selected AI experts \\
+\hline
+\texttt{gender} & Self-selected gender. \\
+\hline
+\texttt{race} & Self-selected race. \\
+\hline
+\texttt{age} & Self-entered age. \\
+\hline
+\texttt{gender\_code} & Dummy code for gender (male = 1). \\
+\hline
+\texttt{race\_code} & Dummy code for race (white = 1). \\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+
+## Demographics
+
+```{r echo=FALSE, results='markup'}
+## Excluded participants
+
+cat('Excluded Participants:', num_excluded, '\n')
+
+## Gender
+
+gender_percentages <- round(prop.table(table(d0$gender)) * 100, 2)
+
+gender_df <- data.frame(
+  Percentage = gender_percentages,
+  gender = names(gender_percentages)
+)[1:2]
+
+colnames(gender_df) <- c("Percentage", "gender")
+
+print(gender_df)
+
+
+## Race
+
+race_percentages <- round(prop.table(table(d0$race)) * 100, 2)
+
+# Create the final data frame
+race_df <- data.frame(
+  Percentage = race_percentages,
+  Race = names(race_percentages)
+)[1:2]
+
+# Reorder the columns
+colnames(race_df) <- c("Percentage", "Race")
+
+# Print the data frame
+print(race_df)
+
+## Age
+
+age_summary <- d0 |>
+  dplyr::select(age) |>
+  summarize(mean_age = mean(age, na.rm = T), sd_age = sd(age, na.rm = T))
+
+age_summary
+
+## Condition Assignment
+
+cat('Treatment condition: ', round(prop.table(table(d0$treatment)) * 100, 2)[2], '%\n')
+cat('Control condition: ', round(prop.table(table(d0$treatment)) * 100, 2)[1], '%\n')
+
+## Set Assignment
+
+cat('Set 1: ', round(prop.table(table(d0$set_num)) * 100, 2)[1], '%\n')
+cat('Set 2: ', round(prop.table(table(d0$set_num)) * 100, 2)[2], '%\n')
+
+## Overall proportion of women selected
+
+cat('Mean proportion of women selected: ', round(mean(d0$women_proportion), 3), '\n')
+cat('SD proportion of women selected: ', round(sd(d0$women_proportion), 3), '\n')
+
+d0 |>
+  dplyr::select(women_proportion, treatment) |>
+  dplyr::group_by(treatment) |>
+  dplyr::summarize(mean = mean(women_proportion), sd = sd(women_proportion), n = n())
+
+t.test(women_proportion ~ treatment, data=d0)
+
+```
+
+\newpage
+
+## Primary Analysis
+
+```{r echo=TRUE, results='markup'}
+# Primary model: Effect of treatment on proportion of women selected
+# As preregistered: includes treatment (gender feedback) and Set1 indicator
+r1 <- lm(women_proportion ~ treatment + set_num, data=d0)
+
+# Display the summary with robust standard errors
+robust_summary(r1)
+robust_confint(r1)
+```
+
+\newpage
+
+## Robustness
+
+```{r echo=FALSE, results='markup'}
+
+## Which feedback was shown with gender, remove constant due to collinearity
+r2 <- lm(women_proportion ~ women_feedback + age_feedback + location_feedback + university_feedback - 1, data=d0)
+
+# Display the summary with robust standard errors
+robust_summary(r2)
+robust_confint(r2)
+
+## Dropout robustness check (PREREGISTERED)
+# For any participants who drop out after assignment to conditions but before selecting experts,
+# impute their women_proportion as the mean from the no gender feedback condition
+
+cat("\n\nDropout Robustness Check (PREREGISTERED):\n")
+cat("=========================================\n\n")
+
+# Check if there are any missing values in women_proportion among those assigned to conditions
+# (This would indicate dropouts after assignment)
+if(any(is.na(d0$women_proportion))) {
+  cat("Dropouts detected after condition assignment\n")
+
+  # Calculate mean women_proportion in control condition
+  control_mean <- mean(d0$women_proportion[d0$treatment == 0], na.rm = TRUE)
+
+  cat("Control condition mean women proportion:", control_mean, "\n")
+  cat("Number of dropouts to impute:", sum(is.na(d0$women_proportion)), "\n\n")
+
+  # Create dataset with imputed values
+  d0_imputed <- d0 |>
+    mutate(women_proportion_imputed = case_when(
+      is.na(women_proportion) ~ control_mean,
+      TRUE ~ women_proportion
+    ))
+
+  # Run primary model with imputed data
+  r5_imputed <- lm(women_proportion_imputed ~ treatment + set_num, data=d0_imputed)
+
+  cat("Primary analysis with dropout imputation:\n")
+  robust_summary(r5_imputed)
+  robust_confint(r5_imputed)
+
+} else {
+  cat("No dropouts detected after condition assignment.\n")
+  cat("All participants who were assigned to conditions completed their expert selections.\n")
+}
+```
+
+
+\newpage
+
+## Secondary Analysis: Other Attributes
+
+```{r echo=FALSE, results='markup'}
+
+## Age feedback
+r_age <- lm(age_proportion ~ age_feedback, data=d0)
+
+# Display the summary with robust standard errors
+cat("Effect of age feedback:\n")
+robust_summary(r_age)
+robust_confint(r_age)
+
+
+## Location feedback
+r_location <- lm(location_proportion ~ location_feedback, data=d0)
+
+# Display the summary with robust standard errors
+cat("\nEffect of location feedback:\n")
+robust_summary(r_location)
+robust_confint(r_location)
+
+
+## University feedback
+r_university <- lm(university_proportion ~ university_feedback, data=d0)
+
+# Display the summary with robust standard errors
+cat("\nEffect of university feedback:\n")
+robust_summary(r_university)
+robust_confint(r_university)
+
+```
+
+```{r include=FALSE}
+# Extract estimates for overall plot
+# Use r1 (preregistered model with set_num control) for women feedback
+women_est <- extract_regression_estimates(r1)
+age_est <- extract_regression_estimates(r_age)
+location_est <- extract_regression_estimates(r_location)
+university_est <- extract_regression_estimates(r_university)
+
+study1_estimates <- data.frame(
+    Study = "STUDY 1",
+    Stimuli = c("women", "age", "location", "university"),
+    Estimate = c(women_est$estimate, age_est$estimate, location_est$estimate, university_est$estimate),
+    SE = c(women_est$se, age_est$se, location_est$se, university_est$se),
+    CI_Lower = c(women_est$ci_lower, age_est$ci_lower, location_est$ci_lower, university_est$ci_lower),
+    CI_Upper = c(women_est$ci_upper, age_est$ci_upper, location_est$ci_upper, university_est$ci_upper)
+)
+
+# Save the estimates to an RDS file
+saveRDS(study1_estimates, file = "study1_estimates.rds")
+
+```
+
+\newpage
+
+## Visualization
+
+```{r echo=FALSE, fig.height=8, fig.width=10, results='markup'}
+
+# Get p-values from regression models
+p_women <- robust_summary(r1)$coefficients["treatment", "Pr(>|t|)"]
+p_age <- robust_summary(r_age)$coefficients["age_feedback", "Pr(>|t|)"]
+p_location <- robust_summary(r_location)$coefficients["location_feedback", "Pr(>|t|)"]
+p_university <- robust_summary(r_university)$coefficients["university_feedback", "Pr(>|t|)"]
+
+# Function to convert p-value to significance stars
+get_sig_stars <- function(p) {
+  if (p < 0.001) return("***")
+  else if (p < 0.01) return("**")
+  else if (p < 0.05) return("*")
+  else return("n.s.")
+}
+
+# Get significance labels
+sig_women <- get_sig_stars(p_women)
+sig_age <- get_sig_stars(p_age)
+sig_location <- get_sig_stars(p_location)
+sig_university <- get_sig_stars(p_university)
+
+# Women feedback plot
+dwomen_plot <- d0 |>
+  dplyr::select(women_feedback, women_proportion) |>
+  dplyr::group_by(women_feedback) |>
+  dplyr::summarise(
+    n = n(),
+    freq = mean(women_proportion),
+    sd = sd(women_proportion) * 100,
+    se = (sd(women_proportion) / sqrt(n())) * 100
+  ) |>
+  dplyr::mutate(
+    women_feedback = case_when(
+      women_feedback == 1 ~ "\"Treatment\"",
+      TRUE ~ "\"Control\""
+    )
+  ) |>
+  dplyr::rename(Condition = women_feedback)
+
+# Age feedback plot
+dage_plot <- d0 |>
+  dplyr::select(age_feedback, age_proportion) |>
+  dplyr::group_by(age_feedback) |>
+  dplyr::summarise(
+    n = n(),
+    freq = mean(age_proportion),
+    sd = sd(age_proportion) * 100,
+    se = (sd(age_proportion) / sqrt(n())) * 100
+  ) |>
+  mutate(age_feedback = case_when(age_feedback==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |>
+  rename(Condition = age_feedback)
+
+# Location feedback plot
+dlocation_plot <- d0 |>
+  dplyr::select(location_feedback, location_proportion) |>
+  dplyr::group_by(location_feedback) |>
+  dplyr::summarise(
+    n = n(),
+    freq = mean(location_proportion),
+    sd = sd(location_proportion) * 100,
+    se = (sd(location_proportion) / sqrt(n())) * 100
+  ) |>
+  mutate(location_feedback = case_when(location_feedback==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |>
+  rename(Condition = location_feedback)
+
+# University feedback plot
+duniversity_plot <- d0 |>
+  dplyr::select(university_feedback, university_proportion) |>
+  dplyr::group_by(university_feedback) |>
+  dplyr::summarise(
+    n = n(),
+    freq = mean(university_proportion),
+    sd = sd(university_proportion) * 100,
+    se = (sd(university_proportion) / sqrt(n())) * 100
+  ) |>
+  mutate(university_feedback = case_when(university_feedback==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |>
+  rename(Condition = university_feedback)
+
+## Combine plots
+
+df_combined <- bind_rows(
+  dage_plot %>% mutate(Category = "\nUnder 50\nYears Old", sig_label = sig_age),
+  dlocation_plot %>% mutate(Category = "\nBased on\nWest Coast", sig_label = sig_location),
+  duniversity_plot %>% mutate(Category = "\nWork at a\nUniversity", sig_label = sig_university),
+  dwomen_plot %>% mutate(Category = "\nWere Women", sig_label = sig_women)
+, .id = "id") %>%
+  mutate(Category = factor(Category, levels = c('\nUnder 50\nYears Old', '\nBased on\nWest Coast', '\nWork at a\nUniversity', '\nWere Women')))
+
+p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
+  geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
+  geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")),
+            position=position_dodge(width=0.7), vjust=5, size = 5, color = "white") +
+  geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
+  facet_wrap(~Category, nrow = 1, strip.position = "bottom") +
+   geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""),
+                aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5),
+                inherit.aes = FALSE) +
+   geom_text(data = df_combined %>% filter(Condition == "\"Treatment\""),
+             aes(x = 1.5, y = freq*100 + se + 7, label = sig_label),
+             inherit.aes = FALSE, vjust = 0, size = 5) +
+  theme_bw() +
+  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
+  scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
+  labs(x = "Feedback on % of AI experts who...", y = "% of Selected Experts with the Target Attribute",
+       title = "The Effect of Getting Feedback on Your AI Expert Selections") +
+  theme(plot.caption = element_text(face = "italic"),
+        legend.position = c(0.5, 0.95),
+        legend.title = element_blank(),
+        legend.direction = "horizontal",
+        legend.text = element_text(size = 20),
+        legend.key.size = unit(7, 'mm'),
+        legend.background = element_rect(fill = "white"),
+        panel.grid.minor = element_blank(),
+        panel.grid = element_blank(),
+        panel.border = element_rect(fill= NA, color = "white"),
+        plot.background = element_rect(fill = "white"),
+        panel.background = element_rect(fill = "white"),
+        axis.title.x = element_text(face="bold", size = 21, vjust = 17),
+        plot.title = element_blank(),
+        axis.title.y = element_text(size = 20, color = "black"),
+        axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_text(size = 20, color = "black"),
+        strip.text = element_text(size = 20, color = "black"),
+        strip.background = element_rect(colour = "white", fill = "white"))
+
+print(p_combined)
+
+# Save the plot
+ggsave("Figure-Study1.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+```
+
+\newpage
+
+## System of Simultaneous Equations
+
+```{r echo=FALSE, results='markup'}
+
+# Age
+age.eqn <- list(
+  ageeq = as.numeric(age_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1,
+  womeneq = as.numeric(women_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1
+)
+
+# Define restriction matrix
+restrict_age <- "ageeq_age_feedback - womeneq_women_feedback = 0"
+
+# Fit the system of equations with the restriction
+unrestricted_age <- systemfit(age.eqn, data=d0)
+
+# Location
+location.eqn <- list(
+  locationeq = as.numeric(location_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1,
+  womeneq = as.numeric(women_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1
+)
+
+# Define restriction matrix
+restrict_location <- "locationeq_location_feedback - womeneq_women_feedback = 0"
+
+# Fit the system of equations with the restriction
+unrestricted_location <- systemfit(location.eqn, data=d0)
+
+# University
+university.eqn <- list(
+  universityeq = as.numeric(university_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1,
+  womeneq = as.numeric(women_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1
+)
+
+# Define restriction matrix
+restrict_university <- "universityeq_university_feedback - womeneq_women_feedback = 0"
+
+# Fit the system of equations with the restriction
+unrestricted_university <- systemfit(university.eqn, data=d0)
+
+
+# Wald tests
+# Run linear hypothesis tests
+cat("Wald Tests for Cross-Equation Comparisons:\n")
+cat("==========================================\n\n")
+
+cat("Test 1: Women Feedback Effect vs. Age Feedback Effect\n")
+cat("------------------------------------------------------\n")
+lh_result_age = linearHypothesis(unrestricted_age, restrict_age)
+print(lh_result_age)
+
+cat("\n\nTest 2: Women Feedback Effect vs. Location Feedback Effect\n")
+cat("-----------------------------------------------------------\n")
+lh_result_location = linearHypothesis(unrestricted_location, restrict_location)
+print(lh_result_location)
+
+cat("\n\nTest 3: Women Feedback Effect vs. University Feedback Effect\n")
+cat("-------------------------------------------------------------\n")
+lh_result_university = linearHypothesis(unrestricted_university, restrict_university)
+print(lh_result_university)
+
+# Collecting F-statistics (Wald test statistics)
+age_fstat <- lh_result_age$F[2]
+location_fstat <- lh_result_location$F[2]
+university_fstat <- lh_result_university$F[2]
+
+# Extracting p-values
+p_value_age = lh_result_age$`Pr(>F)`[2]
+p_value_location = lh_result_location$`Pr(>F)`[2]
+p_value_university = lh_result_university$`Pr(>F)`[2]
+
+# Summary table
+cat("\n\nSummary of Wald Tests:\n")
+cat("======================\n")
+summary_table <- data.frame(
+  Test = c("Women vs. Age Feedback", "Women vs. Location Feedback", "Women vs. University Feedback"),
+  F_Statistic = round(c(age_fstat, location_fstat, university_fstat), 2),
+  P_Value = format.pval(c(p_value_age, p_value_location, p_value_university), digits = 3),
+  Significant = c(
+    ifelse(p_value_age < 0.05, "Yes", "No"),
+    ifelse(p_value_location < 0.05, "Yes", "No"),
+    ifelse(p_value_university < 0.05, "Yes", "No")
+  )
+)
+print(summary_table, row.names = FALSE)
+
+
+
+```
