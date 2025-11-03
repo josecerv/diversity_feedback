@@ -113,15 +113,15 @@ perform_simulation <- function(data) {
 
 \newpage
 
-## Read Data from Study 1,2
+## Read Data from Study 2,3
 
 
 
 ```{r echo=TRUE}
-s1a <- read.csv("Study1A.csv", check.names = F)
-s1b <- read.csv("Study1B.csv", check.names = F)
 s2A <- read.csv("Study2A.csv", check.names = F)
 s2B <- read.csv("Study2B.csv", check.names = F)
+s3A <- read.csv("Study3A.csv", check.names = F)
+s3B <- read.csv("Study3B.csv", check.names = F)
 ```
 
 ## Simulation (Table 7, S8)
@@ -170,10 +170,10 @@ perform_simulation <- function(data, study_type) {
 
 # List of datasets with their types
 datasets <- list(
-  s1a = list(data = s1a, type = "gender"),
-  s1b = list(data = s1b, type = "race"),
-  s2A = list(data = s2A, type = "gender"),
-  s2B = list(data = s2B, type = "race")
+  s2A = list(data = s2A, type = "race"),
+  s2B = list(data = s2B, type = "gender"),
+  s3A = list(data = s3A, type = "race"),
+  s3B = list(data = s3B, type = "gender")
 )
 
 # Perform simulation for each dataset
@@ -185,11 +185,11 @@ wald_tests <- map(results, "wald_test")
 robust_se <- map(results, "robust_se")
 
 # Create stargazer table
-stargazer(models$s1a, models$s1b, models$s2A, models$s2B,
+stargazer(models$s2A, models$s2B, models$s3A, models$s3B,
           type = "latex",
-          column.labels = c("Study 1A", "Study 1B", "Study 2A", "Study 2B"),
+          column.labels = c("Study 2A", "Study 2B", "Study 3A", "Study 3B"),
           model.numbers = FALSE,
-          se = list(robust_se$s1a, robust_se$s1b, robust_se$s2A, robust_se$s2B),
+          se = list(robust_se$s2A, robust_se$s2B, robust_se$s3A, robust_se$s3B),
           keep.stat = c("n", "rsq"),
           notes = "+p<0.1; *p<0.05; **p<0.01; ***p<0.001",
           notes.append = FALSE,
@@ -200,15 +200,15 @@ stargazer(models$s1a, models$s1b, models$s2A, models$s2B,
 
 # Display Wald test results
 wald_results <- map_df(wald_tests, ~data.frame(F_value = .x$F[2], p_value = .x$`Pr(>F)`[2]), .id = "Study")
-wald_results$Study <- c("Study 1A", "Study 1B", "Study 2A", "Study 2B")
+wald_results$Study <- c("Study 2A", "Study 2B", "Study 3A", "Study 3B")
 
-knitr::kable(wald_results, 
+knitr::kable(wald_results,
              caption = "Wald Test Results for All Studies",
              col.names = c("Study", "F-value", "p-value"),
              digits = 4)
 
-robust_confint(models$s1a)
-robust_confint(models$s1b)
 robust_confint(models$s2A)
 robust_confint(models$s2B)
+robust_confint(models$s3A)
+robust_confint(models$s3B)
 ```

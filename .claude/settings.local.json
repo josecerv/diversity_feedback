@@ -16,7 +16,9 @@
       "Bash(Rscript:*)",
       "Bash(python:*)",
       "Bash(cp:*)",
-      "Bash(pdftotext:*)"
+      "Bash(pdftotext:*)",
+      "Bash(git mv:*)",
+      "Bash(md5sum:*)"
     ],
     "deny": [],
     "ask": []
