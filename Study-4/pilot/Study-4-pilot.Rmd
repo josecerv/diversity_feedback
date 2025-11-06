@@ -1,0 +1,558 @@
+---
+title: "Study 4 Pilot Analysis"
+subtitle: "Context (Nursing vs Surgeon) × Representation × Gender Feedback"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 3
+    fig_caption: true
+header-includes:
+  \renewcommand{\contentsname}{Items}
+  \usepackage{fvextra}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+---
+
+```{r setup, include=FALSE}
+rm(list=ls())
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE,
+	fig.width = 10,
+	fig.height = 6
+)
+library(dplyr)
+library(lmtest)
+library(sandwich)
+library(car)
+library(broom)
+library(qualtRics)
+library(knitr)
+library(rmarkdown)
+library(tidyverse)
+library(ggplot2)
+library(kableExtra)
+```
+
+```{r include=FALSE}
+if ( (!is.null(knitr::current_input()))) {
+  if (("pdf_document" ==
+                rmarkdown::all_output_formats(knitr::current_input())[1])) {
+      stargazer_type <- "latex"
+  }
+} else {
+  stargazer_type <- "text"
+}
+
+robust_summary <- function(model) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting original model summary
+    model_summary <- summary(model)
+
+    # Updating standard errors, t-values, and p-values in the coefficients table
+    model_summary$coefficients[, "Std. Error"] <- robust_se
+    model_summary$coefficients[, "t value"] <- model_summary$coefficients[, "Estimate"] / robust_se
+    model_summary$coefficients[, "Pr(>|t|)"] <- 2 * pt(-abs(model_summary$coefficients[, "t value"]), df = model_summary$df[2], lower.tail = TRUE)
+
+    return(model_summary)
+}
+
+robust_confint <- function(model, level = 0.95) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting the coefficients
+    est <- coef(model)
+
+    # Calculating the critical value for the t-distribution
+    alpha <- 1 - level
+    t_crit <- qt(1 - alpha / 2, df = df.residual(model))
+
+    # Calculating the confidence intervals
+    lower <- est - t_crit * robust_se
+    upper <- est + t_crit * robust_se
+
+    # Combining into a matrix
+    confint <- cbind(lower, upper)
+    rownames(confint) <- names(est)
+    colnames(confint) <- c("2.5 %", "97.5 %")
+
+    return(confint)
+}
+```
+
+\newpage
+
+# Study Design Overview
+
+## Design Structure
+
+**2 × 2 × 2 Factorial Design:**
+
+1. **Context**
+   - Nursing context (women historically overrepresented)
+   - Surgeon context (women historically underrepresented)
+
+2. **Representation (Base)**
+   - Low: Women underrepresented in original selection pool
+   - High: Women overrepresented in original selection pool
+
+3. **Feedback (Condition)**
+   - Control: No gender feedback provided
+   - Treatment: Gender feedback provided
+
+**Variables:**
+- `context`: nursing / surgeon
+- `base`: low / high
+- `cond`: control / treat
+
+**Survey ID:** SV_0waqCTV9xYYUJf0
+
+\newpage
+
+## Category Definitions
+
+**Nursing Context - Low Base (Women Underrepresented):**
+- Women: Morgan Fischer, Deanna Benner, Amanda Veltri, Molly Mahler, Eliza Macken, Bailey Pierce
+- Years 15+: Deanna Benner, Molly Mahler, Carlos Miranda, Amen Ramesses
+- Leadership: Molly Mahler, Eliza Macken, Carlos Miranda, Mark Johnson, Joseph Wright, Taiwo Oluyemo, Mathew Krueger
+
+**Nursing Context - High Base (Women Overrepresented):**
+- Women: Morgan Fischer, Deanna Benner, Kathy O'Gara, Jessica Andrews, Colinda Cole-French, Eliza Macken, Margo Brown, Amanda Veltri, Madeline Travis, Elsie Jolade, Mary Roberge, Abigail Brown, Charlotte Tiley, Jasmine Humphrey, Bailey Pierce, Niki White, Molly Mahler, Alyson Solloway, Camille Barnes
+- Years 15+: Deanna Benner, Kathy O'Gara, Madeline Travis, Elsie Jolade, Molly Mahler, Carlos Miranda
+- Leadership: Colinda Cole-French, Eliza Macken, Elsie Jolade, Molly Mahler, Alyson Solloway, Carlos Miranda, Mark Johnson
+
+**Surgeon Context - Low Base (Women Underrepresented):**
+- Women: Rachel Beard, Lucy Wibbenmeyer, Crystal Alvarez, Elizabeth Arena, Karen Horvath, Carolyn Majors
+- Years 15+: Patroklos Pappas, Philip Alexander, Donald Annino, Steve Kim, Juan Castillo, Alan Cheung, David Moore, Steven Beer, John Golfinos, Daniel Lu, Laurence Yee, Brad Olberding, Abraham Shaked, Rachel Beard, Lucy Wibbenmeyer, Elizabeth Arena, Karen Horvath, Carolyn Majors
+- Leadership: Patroklos Pappas, Steve Kim, Alan Cheung, Steven Beer, John Golfinos, Laurence Yee, Abraham Shaked, Karen Horvath, Carolyn Majors
+
+**Surgeon Context - High Base (Women Overrepresented):**
+- Women: Rachel Beard, Lucy Wibbenmeyer, Crystal Alvarez, Elizabeth Arena, Karen Horvath, Carolyn Majors, Amy DeKerlegand, Anne Le, Michelle Nguyen, Katherine Albutt, Jenny Zhang, Svjetlana Lozo, Michelle Carlson, Alison Wilson, Breehan Chancellor, Nervin Fanous, Lindsey Prescher, Danelle Bertozzi, Maria Bell
+- Years 15+: Abraham Shaked, Philip Alexander, Daniel Lu, Juan Castillo, Steve Kim, Rachel Beard, Lucy Wibbenmeyer, Elizabeth Arena, Karen Horvath, Carolyn Majors, Anne Le, Svjetlana Lozo, Michelle Carlson, Alison Wilson, Breehan Chancellor, Nervin Fanous, Lindsey Prescher, Maria Bell
+- Leadership: Abraham Shaked, Steve Kim, Karen Horvath, Carolyn Majors, Anne Le, Michelle Carlson, Alison Wilson, Lindsey Prescher, Maria Bell
+
+\newpage
+
+## Read Data
+
+```{r echo=TRUE}
+# Set this to TRUE if you have API access, FALSE if using CSV
+USE_API <- TRUE
+
+if(USE_API) {
+  ## Pull directly from Qualtrics API
+  qual_data <- fetch_survey(surveyID='SV_0waqCTV9xYYUJf0',
+                     label = T,
+                     convert = F,
+                     force_request = T)
+} else {
+  # Read the processed data directly from CSV
+  d0 <- read.csv('Study-4-pilot.csv', check.names = F)
+  num_excluded <- unique(d0$num_excluded_total)
+}
+
+# Define the categories by context and base
+# Nursing context
+nursing_women_low <- c("Morgan Fischer","Deanna Benner", "Amanda Veltri", "Molly Mahler", "Eliza Macken", "Bailey Pierce")
+nursing_women_high <- c("Morgan Fischer", "Deanna Benner", "Kathy O'Gara", "Jessica Andrews", "Colinda Cole-French", "Eliza Macken", "Margo Brown", "Amanda Veltri", "Madeline Travis", "Elsie Jolade", "Mary Roberge", "Abigail Brown", "Charlotte Tiley", "Jasmine Humphrey", "Bailey Pierce", "Niki White", "Molly Mahler", "Alyson Solloway", "Camille Barnes")
+
+# Surgeon context
+surgeon_women_low <- c("Rachel Beard", "Lucy Wibbenmeyer", "Crystal Alvarez", "Elizabeth Arena", "Karen Horvath", "Carolyn Majors")
+surgeon_women_high <- c("Rachel Beard","Lucy Wibbenmeyer","Crystal Alvarez","Elizabeth Arena","Karen Horvath","Carolyn Majors","Amy DeKerlegand","Anne Le","Michelle Nguyen","Katherine Albutt","Jenny Zhang","Svjetlana Lozo","Michelle Carlson","Alison Wilson","Breehan Chancellor","Nervin Fanous","Lindsey Prescher","Danelle Bertozzi","Maria Bell")
+
+# Combine all women across contexts
+all_women <- unique(c(nursing_women_low, nursing_women_high, surgeon_women_low, surgeon_women_high))
+
+if(USE_API) {
+  d0 <- qual_data |>
+    filter(!is.na(`choice-7`), !is.na(workerId), Finished==1) |>
+    mutate(
+      # Determine female_pick based on context and base
+      female_pick = case_when(`choice-7` %in% all_women ~ 1,
+                             TRUE ~ 0),
+      # Extract context (nursing vs surgeon)
+      context = tolower(context),  # Adjust based on actual variable name
+      # Extract base (low vs high)
+      base = tolower(base),  # Adjust based on actual variable name
+      # Extract condition (control vs treat)
+      cond = tolower(cond),  # Adjust based on actual variable name
+
+      # Create numeric codes
+      surgeon_context = ifelse(context == "surgeon", 1, 0),
+      high_base = ifelse(base == "high", 1, 0),
+      gender_feedback = ifelse(cond == "treat", 1, 0),
+
+      # Calculate base selections
+      base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% all_women))
+    ) |>
+    dplyr::select(female_pick, context, base, cond, surgeon_context, high_base,
+                  gender_feedback, base_gender, `choice-1`:`choice-7`,
+                  race, gender, age)
+
+  # Calculate the number of excluded participants
+  num_excluded <- nrow(qual_data) - nrow(d0)
+
+  # Save num_excluded in d0
+  d0$num_excluded_total <- num_excluded
+
+  # Write the API-pulled data into a CSV file
+  write.csv(d0, 'Study-4-pilot.csv', row.names = FALSE, quote = TRUE)
+}
+```
+
+\newpage
+
+## Variable Names
+
+\begin{table}[!htbp] \centering
+  \label{tab:variables}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Variable} & \textbf{Description} \\
+\hline
+\texttt{context} & Context condition: nursing (women overrepresented) or surgeon (women underrepresented). \\
+\hline
+\texttt{base} & Representation in pool: low (women underrepresented) or high (women overrepresented). \\
+\hline
+\texttt{cond} & Feedback condition: control (no feedback) or treat (gender feedback). \\
+\hline
+\texttt{surgeon\_context} & Binary indicator (1 = surgeon context, 0 = nursing context). \\
+\hline
+\texttt{high\_base} & Binary indicator (1 = women overrepresented in pool, 0 = underrepresented). \\
+\hline
+\texttt{gender\_feedback} & Binary indicator (1 = gender feedback provided, 0 = control). \\
+\hline
+\texttt{female\_pick} & Binary indicator of whether participant selected a woman for their final selection. \\
+\hline
+\texttt{base\_gender} & Number of women selected in initial 6 choices (0-6). \\
+\hline
+\texttt{choice-1 to choice-7} & The selected candidates. \\
+\hline
+\texttt{gender} & Self-selected gender. \\
+\hline
+\texttt{race} & Self-selected race. \\
+\hline
+\texttt{age} & Self-entered age. \\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+## Demographics
+
+```{r results='markup'}
+## Excluded participants
+
+cat('Excluded Participants:', num_excluded, '\n\n')
+
+## Sample size
+cat('Total N:', nrow(d0), '\n\n')
+
+## Gender
+
+gender_percentages <- round(prop.table(table(d0$gender)) * 100, 2)
+
+gender_df <- data.frame(
+  Percentage = gender_percentages,
+  gender = names(gender_percentages)
+)[1:2]
+
+colnames(gender_df) <- c("Percentage", "gender")
+
+print(gender_df)
+
+## Race
+
+race_percentages <- round(prop.table(table(d0$race)) * 100, 2)
+
+race_df <- data.frame(
+  Percentage = race_percentages,
+  Race = names(race_percentages)
+)[1:2]
+
+colnames(race_df) <- c("Percentage", "Race")
+
+print(race_df)
+
+## Age
+
+age_summary <- d0 |>
+  dplyr::select(age) |>
+  summarize(mean_age = mean(age, na.rm = T), sd_age = sd(age, na.rm = T))
+
+age_summary
+
+## Cell sizes
+
+cat('\n\nCell Sizes by Condition:\n')
+cell_counts <- d0 |>
+  group_by(context, base, cond) |>
+  summarize(n = n(), .groups = "drop")
+print(cell_counts)
+
+## Initial Selections
+
+cat('\n\nMean initial women selected (out of 6):\n')
+d0 |>
+  group_by(context, base, cond) |>
+  summarize(
+    mean_base = mean(base_gender),
+    sd_base = sd(base_gender),
+    .groups = "drop"
+  )
+```
+
+\newpage
+
+# Statistical Models
+
+## Three-Way Interaction Model
+
+**Model specification:**
+
+$$\text{female\_pick} = \beta_0 + \beta_1 \text{gender\_feedback} + \beta_2 \text{high\_base} + \beta_3 \text{surgeon\_context}$$
+$$+ \beta_4 (\text{gender\_feedback} \times \text{high\_base})$$
+$$+ \beta_5 (\text{gender\_feedback} \times \text{surgeon\_context})$$
+$$+ \beta_6 (\text{high\_base} \times \text{surgeon\_context})$$
+$$+ \beta_7 (\text{gender\_feedback} \times \text{high\_base} \times \text{surgeon\_context}) + \epsilon$$
+
+```{r three-way-model, echo=TRUE, results='markup'}
+# Main model with three-way interaction
+model_3way <- lm(female_pick ~ gender_feedback * high_base * surgeon_context,
+                 data = d0)
+
+# Display the summary with robust standard errors
+cat("=== THREE-WAY INTERACTION MODEL ===\n\n")
+robust_summary(model_3way)
+robust_confint(model_3way)
+```
+
+\newpage
+
+## Separate Models by Context
+
+### Nursing Context
+
+```{r nursing-context, echo=TRUE, results='markup'}
+# Nursing context model
+model_nursing <- lm(female_pick ~ gender_feedback * high_base,
+                    data = d0 %>% filter(context == "nursing"))
+
+cat("=== NURSING CONTEXT ===\n")
+robust_summary(model_nursing)
+robust_confint(model_nursing)
+
+# Cell means
+cat("\n\nCell Means - Nursing Context:\n")
+d0 %>%
+  filter(context == "nursing") %>%
+  group_by(base, cond) %>%
+  summarise(
+    n = n(),
+    mean_female_pick = mean(female_pick),
+    se = sd(female_pick) / sqrt(n()),
+    .groups = "drop"
+  )
+```
+
+\newpage
+
+### Surgeon Context
+
+```{r surgeon-context, echo=TRUE, results='markup'}
+# Surgeon context model
+model_surgeon <- lm(female_pick ~ gender_feedback * high_base,
+                    data = d0 %>% filter(context == "surgeon"))
+
+cat("=== SURGEON CONTEXT ===\n")
+robust_summary(model_surgeon)
+robust_confint(model_surgeon)
+
+# Cell means
+cat("\n\nCell Means - Surgeon Context:\n")
+d0 %>%
+  filter(context == "surgeon") %>%
+  group_by(base, cond) %>%
+  summarise(
+    n = n(),
+    mean_female_pick = mean(female_pick),
+    se = sd(female_pick) / sqrt(n()),
+    .groups = "drop"
+  )
+```
+
+\newpage
+
+## Simple Effects Analysis
+
+### Women Underrepresented in Pool (Low Base)
+
+```{r low-base-analysis, echo=TRUE, results='markup'}
+# Model for low base (women underrepresented)
+model_low <- lm(female_pick ~ gender_feedback * surgeon_context,
+                data = d0 %>% filter(base == "low"))
+
+cat("=== WOMEN UNDERREPRESENTED (LOW BASE) ===\n")
+robust_summary(model_low)
+robust_confint(model_low)
+```
+
+### Women Overrepresented in Pool (High Base)
+
+```{r high-base-analysis, echo=TRUE, results='markup'}
+# Model for high base (women overrepresented)
+model_high <- lm(female_pick ~ gender_feedback * surgeon_context,
+                 data = d0 %>% filter(base == "high"))
+
+cat("=== WOMEN OVERREPRESENTED (HIGH BASE) ===\n")
+robust_summary(model_high)
+robust_confint(model_high)
+```
+
+\newpage
+
+# Visualizations
+
+```{r prepare-plot-data}
+# Prepare summary statistics for plotting
+summary_stats <- d0 %>%
+  group_by(context, base, cond) %>%
+  summarise(
+    n = n(),
+    mean_selection = mean(female_pick),
+    se = sd(female_pick) / sqrt(n()),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    context_label = ifelse(context == "surgeon",
+                          "Surgeon Context\n(Women Historically Underrepresented)",
+                          "Nursing Context\n(Women Historically Overrepresented)"),
+    base_label = ifelse(base == "low",
+                       "Women Underrepresented in Pool",
+                       "Women Overrepresented in Pool"),
+    feedback_label = ifelse(cond == "treat", "Treatment", "Control")
+  )
+```
+
+## Figure 1: Surgeon Context
+
+```{r fig-surgeon, fig.cap="Surgeon Context: Women's Selection by Pool Composition and Feedback", fig.height=5}
+plot_data_surgeon <- summary_stats %>%
+  filter(context == "surgeon")
+
+p_surgeon <- ggplot(plot_data_surgeon, aes(x = feedback_label, y = mean_selection * 100,
+                                            fill = feedback_label)) +
+  geom_bar(stat = "identity", width = 0.7) +
+  geom_errorbar(aes(ymin = (mean_selection - se) * 100,
+                    ymax = (mean_selection + se) * 100),
+                width = 0.2) +
+  geom_text(aes(label = sprintf("%.1f%%", mean_selection * 100)),
+            vjust = 3, size = 5, color = "white", fontface = "bold") +
+  facet_wrap(~ base_label, nrow = 1) +
+  scale_fill_manual(values = c("#990000", "#011F5B"),
+                   labels = c("No gender feedback", "Gender feedback provided")) +
+  scale_y_continuous(labels = function(x) paste0(x, "%"),
+                    limits = c(0, 100),
+                    breaks = seq(0, 100, 25)) +
+  scale_x_discrete(labels = c("Control\n(No Gender Feedback)", "Treatment\n(Gender Feedback)")) +
+  labs(
+    title = "Surgeon Context (Women Historically Underrepresented)",
+    x = "",
+    y = "% Selecting Women",
+    fill = ""
+  ) +
+  theme_bw() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal",
+    legend.text = element_text(size = 12),
+    plot.title = element_text(size = 13, face = "bold", hjust = 0.5),
+    strip.text = element_text(size = 11, face = "bold"),
+    axis.text.x = element_text(size = 11),
+    axis.text.y = element_text(size = 11),
+    axis.title.y = element_text(size = 12),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank()
+  )
+
+print(p_surgeon)
+```
+
+\newpage
+
+## Figure 2: Nursing Context
+
+```{r fig-nursing, fig.cap="Nursing Context: Women's Selection by Pool Composition and Feedback", fig.height=5}
+plot_data_nursing <- summary_stats %>%
+  filter(context == "nursing")
+
+p_nursing <- ggplot(plot_data_nursing, aes(x = feedback_label, y = mean_selection * 100,
+                                            fill = feedback_label)) +
+  geom_bar(stat = "identity", width = 0.7) +
+  geom_errorbar(aes(ymin = (mean_selection - se) * 100,
+                    ymax = (mean_selection + se) * 100),
+                width = 0.2) +
+  geom_text(aes(label = sprintf("%.1f%%", mean_selection * 100)),
+            vjust = 3, size = 5, color = "white", fontface = "bold") +
+  facet_wrap(~ base_label, nrow = 1) +
+  scale_fill_manual(values = c("#990000", "#011F5B"),
+                   labels = c("No gender feedback", "Gender feedback provided")) +
+  scale_y_continuous(labels = function(x) paste0(x, "%"),
+                    limits = c(0, 100),
+                    breaks = seq(0, 100, 25)) +
+  scale_x_discrete(labels = c("Control\n(No Gender Feedback)", "Treatment\n(Gender Feedback)")) +
+  labs(
+    title = "Nursing Context (Women Historically Overrepresented)",
+    x = "",
+    y = "% Selecting Women",
+    fill = ""
+  ) +
+  theme_bw() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal",
+    legend.text = element_text(size = 12),
+    plot.title = element_text(size = 13, face = "bold", hjust = 0.5),
+    strip.text = element_text(size = 11, face = "bold"),
+    axis.text.x = element_text(size = 11),
+    axis.text.y = element_text(size = 11),
+    axis.title.y = element_text(size = 12),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank()
+  )
+
+print(p_nursing)
+```
+
+\newpage
+
+# Summary Table
+
+```{r summary-table, results='markup'}
+summary_table <- summary_stats %>%
+  select(context, base, cond, mean_selection, se, n) %>%
+  pivot_wider(
+    names_from = cond,
+    values_from = c(mean_selection, se, n)
+  ) %>%
+  mutate(
+    Treatment_Effect = mean_selection_treat - mean_selection_control,
+    across(starts_with("mean_selection"), ~round(., 3)),
+    across(starts_with("se"), ~round(., 3)),
+    Treatment_Effect = round(Treatment_Effect, 3)
+  )
+
+kable(summary_table,
+      format = "latex",
+      booktabs = TRUE,
+      caption = "Proportion Selecting Women by Condition",
+      col.names = c("Context", "Base", "Control Mean", "Treatment Mean",
+                   "Control SE", "Treatment SE", "Control N", "Treatment N",
+                   "Effect")) %>%
+  column_spec(9, color = ifelse(summary_table$Treatment_Effect > 0, "blue", "red"))
+```
