@@ -80,11 +80,7 @@ robust_confint <- function(model, level = 0.95) {
 }
 ```
 
-\newpage
-
-## Read Data
-
-```{r echo=TRUE}
+```{r echo=FALSE, include=FALSE}
 # Set this to TRUE if you have API access, FALSE if using CSV
 USE_API <- TRUE
 
@@ -196,11 +192,7 @@ d0_female_pool <- d0 |>
 \end{tabular} 
 \end{table} 
 
-\newpage
-
-## Demographics
-
-```{r results='markup'}
+```{r echo=FALSE, include=FALSE}
 ## Excluded participants
 
 cat('Excluded Participants:', num_excluded, '\n')
@@ -276,14 +268,7 @@ t.test(base_gender/6 ~ gender_feedback, data=d0_female_pool)
 
 ```
 
-
-\newpage
-
-## Primary Analysis
-
-### Women underrepresented Pool
-
-```{r echo=TRUE, results='markup'}
+```{r echo=FALSE, include=FALSE}
 # primary model, no encouragement
 r_man <- lm(female_pick ~ gender_feedback, data=d0_male_pool)
 
@@ -293,12 +278,7 @@ robust_confint(r_man)
 
 ```
 
-\newpage
-
-
-### Men underrepresented Pool
-
-```{r echo=TRUE, results='markup'}
+```{r echo=FALSE, include=FALSE}
 # primary model, no encouragement
 r_woman <- lm(female_pick ~ gender_feedback, data=d0_female_pool)
 
@@ -310,10 +290,9 @@ robust_confint(r_woman)
 
 \newpage
 
+## Three-Way Interaction Model
 
-### Interaction by Pool
-
-```{r echo=TRUE, results='markup'}
+```{r echo=FALSE, results='markup'}
 # primary model, no encouragement
 r3 <- lm(female_pick ~ gender_feedback*male_pool, data=d0)
 
@@ -322,11 +301,8 @@ robust_summary(r3)
 robust_confint(r3)
 
 ```
-\newpage
 
-## Robustness
-
-```{r echo=TRUE, results='markup'}
+```{r echo=FALSE, include=FALSE}
 ## robust to demographic controls
 ### when women are underrepresented
 
@@ -385,9 +361,26 @@ summary(r8)
 
 \newpage
 
-## Figure 4 Code
+## Figures
 
-```{r echo=TRUE}
+```{r echo=FALSE, include=FALSE}
+# Run statistical tests to determine significance levels
+test_man <- t.test(female_pick ~ gender_feedback, data=d0_male_pool)
+test_woman <- t.test(female_pick ~ gender_feedback, data=d0_female_pool)
+
+# Function to get significance stars
+get_sig_stars <- function(p_value) {
+  if (p_value < 0.001) return("***")
+  else if (p_value < 0.01) return("**")
+  else if (p_value < 0.05) return("*")
+  else return("n.s.")
+}
+
+sig_man <- get_sig_stars(test_man$p.value)
+sig_woman <- get_sig_stars(test_woman$p.value)
+```
+
+```{r echo=FALSE, fig.width=10, fig.height=8}
 ## Man pool
 dman_plot <- d0 |> 
   filter(male_pool == 1) |> 
@@ -435,17 +428,17 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
             position=position_dodge(width=0.7), vjust=5, size = 7, color = "white", family = "Times New Roman") +
   geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
   facet_wrap(~factor(Category, c('Women Underrepresented\nin Panelist Candidate Set', 'Women Overrepresented\nin Panelist Candidate Set')), nrow = 1, strip.position = "bottom") +
-  geom_segment(data = df_combined %>% filter(Category == "Women Underrepresented\nin Panelist Candidate Set" & Condition == "Treatment"), 
-                aes(x = 1, xend = 2, y = freq*100 + se + 10, yend = freq*100 + se + 10), 
+  geom_segment(data = df_combined %>% filter(Category == "Women Underrepresented\nin Panelist Candidate Set" & Condition == "Treatment"),
+                aes(x = 1, xend = 2, y = freq*100 + se + 10, yend = freq*100 + se + 10),
                 inherit.aes = FALSE) +
-    geom_segment(data = df_combined %>% filter(Category == "Women Overrepresented\nin Panelist Candidate Set" & Condition == "Control"), 
-                aes(x = 1, xend = 2, y = freq*100 + se + 10, yend = freq*100 + se + 10), 
+    geom_segment(data = df_combined %>% filter(Category == "Women Overrepresented\nin Panelist Candidate Set" & Condition == "Control"),
+                aes(x = 1, xend = 2, y = freq*100 + se + 10, yend = freq*100 + se + 10),
                 inherit.aes = FALSE) +
-    geom_text(data = df_combined %>% filter(Category == "Women Underrepresented\nin Panelist Candidate Set" & Condition == "Treatment"), 
-                aes(x = 1.5, xend = 1.5, y = freq*100 + se + 10, yend = freq*100 + se + 10, label = "***", size = 7), 
+    geom_text(data = df_combined %>% filter(Category == "Women Underrepresented\nin Panelist Candidate Set" & Condition == "Treatment"),
+                aes(x = 1.5, xend = 1.5, y = freq*100 + se + 10, yend = freq*100 + se + 10, label = sig_man),
                 inherit.aes = FALSE, vjust = 0, family = "Times New Roman", size = 7) +
-    geom_text(data = df_combined %>% filter(Category == "Women Overrepresented\nin Panelist Candidate Set" & Condition == "Control"), 
-                aes(x = 1.5, xend = 1.5, y = freq*100 + se + 10, yend = freq*100 + se + 10, label = "***"), 
+    geom_text(data = df_combined %>% filter(Category == "Women Overrepresented\nin Panelist Candidate Set" & Condition == "Control"),
+                aes(x = 1.5, xend = 1.5, y = freq*100 + se + 10, yend = freq*100 + se + 10, label = sig_woman),
                 inherit.aes = FALSE, vjust = 0, family = "Times New Roman", size = 7) +
   theme_bw() +
   scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No gender feedback provided", "Gender feedback provided"), "") +
@@ -474,14 +467,15 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         strip.background = element_rect(colour = "white", fill = "white"))
 
 
+# Display the plot
+print(p_combined)
+
 # Save the plot with Times New Roman font
 # ggsave("../Manuscript_Figures/Figure-4.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
 
 ```
 
-## Testing Asymmetry in Effects (Response to Reviewer 3)
-
-```{r asymmetry-test}
+```{r echo=FALSE, include=FALSE}
 # Testing whether the effect of gender feedback differs significantly 
 # between women underrepresented vs overrepresented conditions
 

@@ -1,0 +1,746 @@
+"female_pick","context","base","cond","surgeon_context","high_base","gender_feedback","base_gender","choice-1","choice-2","choice-3","choice-4","choice-5","choice-6","choice-7","race","gender","age","num_excluded_total"
+1,"surgeon","high","control",1,1,0,6,"Danelle Bertozzi","Maria Bell","Alison Wilson","Elizabeth Arena","Nervin Fanous","Breehan Chancellor","Michelle Carlson","Black or African American","Man",22,91
+1,"surgeon","high","treat",1,1,1,5,"Alison Wilson","Juan Castillo","Michelle Carlson","Karen Horvath","Nervin Fanous","Lucy Wibbenmeyer","Michelle Nguyen","White / Caucasian","Man",45,91
+1,"surgeon","high","treat",1,1,1,6,"Alison Wilson","Nervin Fanous","Lucy Wibbenmeyer","Karen Horvath","Maria Bell","Michelle Carlson","Carolyn Majors","White / Caucasian","Woman",30,91
+0,"surgeon","low","control",1,0,0,1,"Lucy Wibbenmeyer","Laurence Yee","Daniel Lu","Donald Annino","Patroklos Pappas","John Golfinos","Steven Beer","Hispanic / Latinx","Man",24,91
+1,"surgeon","high","control",1,1,0,4,"Alison Wilson","Carolyn Majors","Abraham Shaked","Karen Horvath","Philip Alexander","Maria Bell","Lucy Wibbenmeyer","White / Caucasian","Man",51,91
+1,"surgeon","high","treat",1,1,1,3,"Lindsey Prescher","Daniel Lu","Nervin Fanous","Philip Alexander","Michelle Nguyen","Steve Kim","Anne Le","Black or African American","Man",27,91
+1,"surgeon","high","control",1,1,0,5,"Crystal Alvarez","Katherine Albutt","Steve Kim","Michelle Nguyen","Maria Bell","Elizabeth Arena","Breehan Chancellor","Black or African American","Woman",39,91
+1,"nursing","low","control",0,0,0,4,"Morgan Fischer","Deanna Benner","Bailey Pierce","Amanda Veltri","Zachary Krim","Stephane Pierre-Antoine","Eliza Macken","White / Caucasian","Man",46,91
+0,"nursing","high","control",0,1,0,5,"Kathy O'Gara","Margo Brown","Madeline Travis","Elsie Jolade","Carlos Miranda","Camille Barnes","Ryan McMahon","White / Caucasian","Woman",53,91
+0,"nursing","high","control",0,1,0,4,"Mark Johnson","Morgan Fischer","Alyson Solloway","Stephane Pierre","Molly Mahler","Colinda Cole-French","Carlos Miranda","White / Caucasian","Woman",32,91
+1,"nursing","high","control",0,1,0,4,"Elsie Jolade","Carlos Miranda","Molly Mahler","Kathy O'Gara","Deanna Benner","Mark Johnson","Morgan Fischer","White / Caucasian","Man",44,91
+0,"surgeon","low","treat",1,0,1,2,"David Moore","Lucy Wibbenmeyer","Abraham Shaked","John Golfinos","Hoang Nguyen","Rachel Beard","Laurence Yee","Asian / Pacific Islander","Man",28,91
+0,"nursing","low","control",0,0,0,6,"Amanda Veltri","Eliza Macken","Bailey Pierce","Molly Mahler","Morgan Fischer","Deanna Benner","Mark Johnson","American Indian or Alaskan Native","Man",27,91
+1,"surgeon","low","control",1,0,0,2,"Laurence Yee","Patroklos Pappas","Carolyn Majors","Alan Cheung","Karen Horvath","John Golfinos","Lucy Wibbenmeyer","White / Caucasian","Man",33,91
+1,"surgeon","low","treat",1,0,1,2,"Steven Beer","Laurence Yee","Karen Horvath","Patroklos Pappas","Daniel Lu","Lucy Wibbenmeyer","Carolyn Majors","White / Caucasian","Man",36,91
+1,"nursing","high","treat",0,1,1,5,"Abigail Brown","Mark Johnson","Bailey Pierce","Morgan Fischer","Elsie Jolade","Camille Barnes","Kathy O'Gara","Hispanic / Latinx","Man",35,91
+0,"surgeon","low","treat",1,0,1,3,"Carolyn Majors","Patroklos Pappas","Karen Horvath","Crystal Alvarez","Abraham Shaked","Adam Roy","Hoang Nguyen","White / Caucasian","Woman",42,91
+0,"surgeon","low","control",1,0,0,2,"Patroklos Pappas","Carolyn Majors","Laurence Yee","Karen Horvath","Alan Cheung","Abraham Shaked","Donald Annino","White / Caucasian","Man",68,91
+0,"nursing","low","control",0,0,0,3,"Molly Mahler","Carlos Miranda","Taiwo Oluyemo","Deanna Benner","Amen Ramesses","Amanda Veltri","Mark Johnson","White / Caucasian","Woman",57,91
+0,"nursing","low","treat",0,0,1,3,"Eliza Macken","Taiwo Oluyemo","Amanda Veltri","Deanna Benner","Jay Warren","Joseph Wright","Mark Johnson","Asian / Pacific Islander","Woman",25,91
+1,"nursing","high","control",0,1,0,2,"Jeremy Blount","Mark Johnson","Kathy O'Gara","Elsie Jolade","James Mangalus","Stephane Pierre","Bailey Pierce","Asian / Pacific Islander","Woman",23,91
+1,"nursing","low","treat",0,0,1,3,"Deanna Benner","Carlos Miranda","Mark Johnson","Molly Mahler","Morgan Fischer","Joseph Wright","Eliza Macken","White / Caucasian","Man",39,91
+0,"nursing","low","control",0,0,0,3,"Molly Mahler","Amanda Veltri","Deanna Benner","Dylan Guiney","Mark Johnson","Amen Ramesses","Carlos Miranda","White / Caucasian","Man",30,91
+1,"nursing","high","treat",0,1,1,4,"Kathy O'Gara","Elsie Jolade","James Mangalus","Deanna Benner","Carlos Miranda","Molly Mahler","Margo Brown","Hispanic / Latinx","Woman",62,91
+1,"surgeon","high","treat",1,1,1,4,"Michelle Nguyen","Jenny Zhang","Daniel Lu","Nervin Fanous","Anne Le","Philip Alexander","Rachel Beard","Asian / Pacific Islander","Woman",48,91
+0,"surgeon","high","treat",1,1,1,6,"Breehan Chancellor","Maria Bell","Michelle Nguyen","Nervin Fanous","Michelle Carlson","Elizabeth Arena","Steve Kim","Hispanic / Latinx","Woman",33,91
+0,"surgeon","high","control",1,1,0,3,"Abraham Shaked","Juan Castillo","Maria Bell","Philip Alexander","Carolyn Majors","Karen Horvath","Daniel Lu","White / Caucasian","Man",51,91
+1,"nursing","high","treat",0,1,1,4,"Kathy O'Gara","Elsie Jolade","Carlos Miranda","Molly Mahler","Camille Barnes","James Mangalus","Margo Brown","American Indian or Alaskan Native","Woman",43,91
+0,"nursing","low","treat",0,0,1,2,"Molly Mahler","Carlos Miranda","Amen Ramesses","Mark Johnson","Dylan Guiney","Deanna Benner","Taiwo Oluyemo","White / Caucasian","Woman",36,91
+1,"surgeon","high","treat",1,1,1,3,"Michelle Carlson","Abraham Shaked","Lucy Wibbenmeyer","Steve Kim","Alison Wilson","Juan Castillo","Amy DeKerlegand","White / Caucasian","Non-binary",48,91
+1,"nursing","high","treat",0,1,1,4,"Madeline Travis","Elsie Jolade","Carlos Miranda","Deanna Benner","Kathy O'Gara","Mark Johnson","Alyson Solloway","White / Caucasian","Woman",30,91
+1,"nursing","high","control",0,1,0,4,"Elsie Jolade","Carlos Miranda","Kathy O'Gara","Mark Johnson","Molly Mahler","Madeline Travis","Deanna Benner","Hispanic / Latinx","Woman",52,91
+1,"surgeon","low","control",1,0,0,2,"Alan Cheung","Karen Horvath","Asishana Osho","Lucy Wibbenmeyer","David Moore","John Golfinos","Carolyn Majors","White / Caucasian","Woman",33,91
+1,"nursing","high","treat",0,1,1,4,"Carlos Miranda","Elsie Jolade","Mark Johnson","Madeline Travis","Kathy O'Gara","Deanna Benner","Jasmine Humphrey","White / Caucasian","Woman",30,91
+1,"surgeon","low","treat",1,0,1,2,"Alan Cheung","Karen Horvath","Carolyn Majors","John Golfinos","Asishana Osho","Philip Alexander","Elizabeth Arena","White / Caucasian","Man",35,91
+1,"nursing","low","control",0,0,0,2,"Molly Mahler","Jay Warren","Dylan Guiney","Mark Johnson","Amanda Veltri","Brian O'Connor","Deanna Benner","Asian / Pacific Islander","Woman",44,91
+1,"nursing","high","treat",0,1,1,5,"Elsie Jolade","Kathy O'Gara","Eliza Macken","Mark Johnson","Camille Barnes","Mary Roberge","Madeline Travis","White / Caucasian","Man",31,91
+1,"nursing","low","treat",0,0,1,2,"Amanda Veltri","Zachary Krim","Jay Warren","Molly Mahler","Amen Ramesses","Mathew Krueger","Bailey Pierce","White / Caucasian","Man",39,91
+0,"nursing","low","control",0,0,0,5,"Molly Mahler","Deanna Benner","Jeremy Blount","Amanda Veltri","Eliza Macken","Morgan Fischer","Amen Ramesses","White / Caucasian","Man",63,91
+0,"nursing","low","treat",0,0,1,4,"Ryan Bresnahan","Eliza Macken","Molly Mahler","Jay Warren","Bailey Pierce","Deanna Benner","Taiwo Oluyemo","White / Caucasian","Woman",37,91
+1,"surgeon","low","control",1,0,0,1,"Juan Castillo","John Golfinos","Carolyn Majors","Philip Alexander","Steven Beer","Patroklos Pappas","Lucy Wibbenmeyer","White / Caucasian","Man",58,91
+1,"surgeon","low","treat",1,0,1,1,"Steve Kim","Elizabeth Arena","Abraham Shaked","David Moore","Laurence Yee","Steven Beer","Lucy Wibbenmeyer","White / Caucasian","Man",28,91
+1,"surgeon","low","treat",1,0,1,0,"Patroklos Pappas","Alan Cheung","John Golfinos","Abraham Shaked","Donald Annino","Laurence Yee","Karen Horvath","White / Caucasian","Man",37,91
+1,"surgeon","high","control",1,1,0,5,"Anne Le","Breehan Chancellor","Lucy Wibbenmeyer","Daniel Lu","Nervin Fanous","Rachel Beard","Jenny Zhang","White / Caucasian","Man",49,91
+1,"nursing","low","treat",0,0,1,2,"Carlos Miranda","Amen Ramesses","Mark Johnson","Deanna Benner","Molly Mahler","Joseph Wright","Amanda Veltri","White / Caucasian","Woman",62,91
+1,"nursing","low","treat",0,0,1,3,"Deanna Benner","Amen Ramesses","Amanda Veltri","Taiwo Oluyemo","Molly Mahler","Carlos Miranda","Eliza Macken","White / Caucasian","Woman",29,91
+1,"surgeon","high","control",1,1,0,4,"Michelle Carlson","Carolyn Majors","Philip Alexander","Alison Wilson","Karen Horvath","Abraham Shaked","Lucy Wibbenmeyer","White / Caucasian","Non-binary",28,91
+0,"surgeon","low","control",1,0,0,2,"Alan Cheung","Karen Horvath","Patroklos Pappas","Adam Roy","Carolyn Majors","Asishana Osho","Philip Alexander","White / Caucasian","Man",45,91
+1,"nursing","low","control",0,0,0,4,"Amanda Veltri","Carlos Miranda","Deanna Benner","Molly Mahler","Eliza Macken","Taiwo Oluyemo","Morgan Fischer","White / Caucasian","Man",65,91
+0,"surgeon","low","control",1,0,0,1,"Steven Beer","Patroklos Pappas","Elizabeth Arena","Alan Cheung","Donald Annino","Abraham Shaked","Brock Hewitt","White / Caucasian","Man",42,91
+1,"nursing","high","control",0,1,0,6,"Kathy O'Gara","Elsie Jolade","Jasmine Humphrey","Mary Roberge","Molly Mahler","Amanda Veltri","Abigail Brown","White / Caucasian","Woman",49,91
+0,"surgeon","low","control",1,0,0,2,"Steven Beer","Lucy Wibbenmeyer","Abraham Shaked","Carolyn Majors","Laurence Yee","Mikael Petrosyan","Asishana Osho","White / Caucasian","Woman",51,91
+1,"nursing","high","control",0,1,0,4,"Elsie Jolade","Kathy O'Gara","Jasmine Humphrey","Alyson Solloway","Mark Johnson","Jeremy Blount","Molly Mahler","White / Caucasian","Man",48,91
+0,"surgeon","high","control",1,1,0,3,"Nervin Fanous","Juan Castillo","Philip Alexander","Alison Wilson","Carolyn Majors","Daniel Lu","Steve Kim","Black or African American","Woman",46,91
+1,"surgeon","high","treat",1,1,1,5,"Anne Le","Nervin Fanous","Amy DeKerlegand","Daniel Lu","Jenny Zhang","Karen Horvath","Michelle Nguyen","Black or African American","Woman",24,91
+0,"nursing","low","control",0,0,0,3,"Deanna Benner","Taiwo Oluyemo","Stephane Pierre-Antoine","Molly Mahler","Mark Johnson","Amanda Veltri","Joseph Wright","Black or African American","Woman",33,91
+1,"nursing","low","control",0,0,0,3,"Molly Mahler","Deanna Benner","Joseph Wright","Amen Ramesses","Morgan Fischer","Carlos Miranda","Amanda Veltri","White / Caucasian","Man",53,91
+0,"nursing","low","treat",0,0,1,4,"Mathew Krueger","Eliza Macken","Morgan Fischer","Amanda Veltri","Dylan Guiney","Deanna Benner","Mark Johnson","White / Caucasian","Woman",59,91
+0,"surgeon","low","treat",1,0,1,1,"Juan Castillo","Elizabeth Arena","Steven Beer","Philip Alexander","Abraham Shaked","Laurence Yee","John Golfinos","White / Caucasian","Woman",37,91
+1,"surgeon","high","treat",1,1,1,5,"Maria Bell","Michelle Nguyen","Alison Wilson","Breehan Chancellor","Karen Horvath","Abraham Shaked","Lucy Wibbenmeyer","White / Caucasian","Woman",42,91
+0,"surgeon","low","treat",1,0,1,2,"Carolyn Majors","Mikael Petrosyan","Abraham Shaked","Elizabeth Arena","Steven Beer","Philip Alexander","John Golfinos","Asian / Pacific Islander","Woman",50,91
+0,"surgeon","high","control",1,1,0,3,"Steve Kim","Maria Bell","Karen Horvath","Alison Wilson","Daniel Lu","Juan Castillo","Abraham Shaked","White / Caucasian","Woman",36,91
+0,"surgeon","high","treat",1,1,1,3,"Karen Horvath","Anne Le","Abraham Shaked","Philip Alexander","Michelle Carlson","Juan Castillo","Steve Kim","White / Caucasian","Man",67,91
+1,"nursing","high","treat",0,1,1,4,"Elsie Jolade","Jasmine Humphrey","Kathy O'Gara","Mark Johnson","Carlos Miranda","Deanna Benner","Colinda Cole-French","White / Caucasian","Woman",50,91
+1,"nursing","high","treat",0,1,1,3,"Carlos Miranda","Mark Johnson","Kathy O'Gara","Elsie Jolade","Stephane Pierre","Madeline Travis","Molly Mahler","Asian / Pacific Islander","Man",23,91
+1,"surgeon","high","control",1,1,0,5,"Nervin Fanous","Michelle Nguyen","Lucy Wibbenmeyer","Steve Kim","Katherine Albutt","Karen Horvath","Carolyn Majors","Black or African American","Man",57,91
+0,"surgeon","low","control",1,0,0,0,"Daniel Lu","Laurence Yee","Steven Beer","Patroklos Pappas","Alan Cheung","John Golfinos","Abraham Shaked","Black or African American","Man",44,91
+1,"surgeon","low","control",1,0,0,2,"Carolyn Majors","Steven Beer","Juan Castillo","Lucy Wibbenmeyer","Alan Cheung","Laurence Yee","Elizabeth Arena","White / Caucasian","Man",73,91
+1,"nursing","high","treat",0,1,1,4,"Alyson Solloway","Jasmine Humphrey","Elsie Jolade","Molly Mahler","Mark Johnson","Jeremy Blount","Amanda Veltri","White / Caucasian","Woman",33,91
+1,"nursing","low","treat",0,0,1,2,"Taiwo Oluyemo","Carlos Miranda","Molly Mahler","Deanna Benner","Amen Ramesses","Joseph Wright","Amanda Veltri","White / Caucasian","Woman",51,91
+1,"nursing","high","treat",0,1,1,2,"Mark Johnson","Stephane Pierre","Carlos Miranda","Elsie Jolade","James Mangalus","Amanda Veltri","Jasmine Humphrey","Hispanic / Latinx","Man",31,91
+0,"surgeon","low","treat",1,0,1,4,"Carolyn Majors","Elizabeth Arena","Alan Cheung","Laurence Yee","Lucy Wibbenmeyer","Karen Horvath","John Golfinos","White / Caucasian","Woman",31,91
+0,"nursing","low","control",0,0,0,3,"Amanda Veltri","Molly Mahler","Joseph Wright","Taiwo Oluyemo","Deanna Benner","Mark Johnson","Ryan Bresnahan","White / Caucasian","Man",39,91
+0,"nursing","low","control",0,0,0,4,"Deanna Benner","Molly Mahler","Mark Johnson","Amen Ramesses","Amanda Veltri","Eliza Macken","Carlos Miranda","White / Caucasian","Man",35,91
+0,"surgeon","low","control",1,0,0,3,"Patroklos Pappas","Elizabeth Arena","Abraham Shaked","Carolyn Majors","Donald Annino","Karen Horvath","Alan Cheung","White / Caucasian","Man",75,91
+1,"nursing","low","control",0,0,0,3,"Carlos Miranda","Deanna Benner","Amanda Veltri","Dylan Guiney","Eliza Macken","Taiwo Oluyemo","Molly Mahler","White / Caucasian","Woman",67,91
+0,"surgeon","low","treat",1,0,1,2,"Abraham Shaked","Laurence Yee","Alan Cheung","Patroklos Pappas","Carolyn Majors","Karen Horvath","Steven Beer","White / Caucasian","Man",39,91
+0,"nursing","low","control",0,0,0,6,"Molly Mahler","Bailey Pierce","Deanna Benner","Amanda Veltri","Morgan Fischer","Eliza Macken","Thomas Horton","White / Caucasian","Woman",72,91
+1,"nursing","high","treat",0,1,1,5,"Madeline Travis","Alyson Solloway","Jasmine Humphrey","Stephane Pierre","Molly Mahler","Elsie Jolade","Kathy O'Gara","White / Caucasian","Man",56,91
+0,"nursing","low","treat",0,0,1,2,"Deanna Benner","Mark Johnson","Taiwo Oluyemo","James Mangalus","Stephane Pierre-Antoine","Amanda Veltri","Carlos Miranda","White / Caucasian","Woman",51,91
+0,"nursing","high","control",0,1,0,5,"Elsie Jolade","Carlos Miranda","Kathy O'Gara","Molly Mahler","Deanna Benner","Madeline Travis","Mark Johnson","Asian / Pacific Islander","Man",43,91
+0,"surgeon","high","control",1,1,0,5,"Alison Wilson","Philip Alexander","Breehan Chancellor","Karen Horvath","Michelle Carlson","Lucy Wibbenmeyer","Abraham Shaked","White / Caucasian","Woman",38,91
+0,"nursing","high","control",0,1,0,5,"Elsie Jolade","Kathy O'Gara","Margo Brown","Morgan Fischer","Stephane Pierre","Jasmine Humphrey","Carlos Miranda","White / Caucasian","Man",31,91
+0,"surgeon","low","treat",1,0,1,2,"Karen Horvath","Carolyn Majors","Laurence Yee","Steven Beer","Donald Annino","Juan Castillo","David Moore","White / Caucasian","Woman",37,91
+0,"surgeon","low","control",1,0,0,4,"Steve Kim","Elizabeth Arena","Rachel Beard","Carolyn Majors","Lucy Wibbenmeyer","Abraham Shaked","Daniel Lu","White / Caucasian","Man",49,91
+1,"nursing","high","control",0,1,0,4,"Carlos Miranda","Elsie Jolade","Kathy O'Gara","Mark Johnson","Madeline Travis","Deanna Benner","Molly Mahler","White / Caucasian","Woman",66,91
+1,"nursing","low","treat",0,0,1,2,"Carlos Miranda","Amen Ramesses","Molly Mahler","Mark Johnson","Deanna Benner","Taiwo Oluyemo","Amanda Veltri","Black or African American","Man",54,91
+1,"surgeon","high","control",1,1,0,4,"Maria Bell","Abraham Shaked","Michelle Nguyen","Karen Horvath","Philip Alexander","Anne Le","Nervin Fanous","White / Caucasian","Man",52,91
+0,"surgeon","high","control",1,1,0,2,"Abraham Shaked","Michelle Carlson","Lucy Wibbenmeyer","Juan Castillo","Steve Kim","Philip Alexander","Daniel Lu","White / Caucasian","Man",29,91
+0,"surgeon","low","treat",1,0,1,1,"Steven Beer","Steve Kim","John Golfinos","Rachel Beard","Juan Castillo","Patroklos Pappas","Asishana Osho","White / Caucasian","Man",50,91
+0,"nursing","low","treat",0,0,1,3,"Stephane Pierre-Antoine","Deanna Benner","Amen Ramesses","Carlos Miranda","Molly Mahler","Amanda Veltri","Mark Johnson","White / Caucasian","Man",36,91
+1,"surgeon","high","control",1,1,0,4,"Elizabeth Arena","Breehan Chancellor","Lucy Wibbenmeyer","Daniel Lu","Juan Castillo","Michelle Nguyen","Lindsey Prescher","Hispanic / Latinx","Woman",48,91
+1,"nursing","low","control",0,0,0,3,"Deanna Benner","Amanda Veltri","Jeremy Blount","Carlos Miranda","Jay Warren","Eliza Macken","Bailey Pierce","White / Caucasian","Woman",34,91
+0,"nursing","high","treat",0,1,1,5,"Deanna Benner","Jasmine Humphrey","Eliza Macken","Amanda Veltri","Colinda Cole-French","Mark Johnson","Ryan McMahon","White / Caucasian","Woman",28,91
+0,"nursing","high","treat",0,1,1,4,"Mark Johnson","Stephane Pierre","Elsie Jolade","Jasmine Humphrey","Bailey Pierce","Charlotte Tiley","Ryan McMahon","Black or African American","Woman",44,91
+0,"surgeon","high","treat",1,1,1,3,"Karen Horvath","Abraham Shaked","Lucy Wibbenmeyer","Daniel Lu","Jenny Zhang","Steve Kim","Adam Roy","Asian / Pacific Islander","Woman",50,91
+1,"surgeon","low","treat",1,0,1,1,"Carolyn Majors","Asishana Osho","Donald Annino","Laurence Yee","Steven Beer","Abraham Shaked","Lucy Wibbenmeyer","White / Caucasian","Woman",34,91
+0,"nursing","high","treat",0,1,1,4,"Deanna Benner","Carlos Miranda","Molly Mahler","Stephane Pierre","Amanda Veltri","Jasmine Humphrey","Mark Johnson","White / Caucasian","Man",47,91
+0,"nursing","high","treat",0,1,1,5,"Kathy O'Gara","Molly Mahler","Deanna Benner","Elsie Jolade","Carlos Miranda","Madeline Travis","Mark Johnson","White / Caucasian","Woman",42,91
+1,"nursing","low","control",0,0,0,2,"Molly Mahler","Amen Ramesses","Deanna Benner","Carlos Miranda","David Lopez","Thomas Horton","Eliza Macken","White / Caucasian","Woman",42,91
+0,"surgeon","high","control",1,1,0,4,"Nervin Fanous","Karen Horvath","Philip Alexander","Juan Castillo","Anne Le","Carolyn Majors","Abraham Shaked","White / Caucasian","Woman",56,91
+1,"surgeon","low","control",1,0,0,2,"Lucy Wibbenmeyer","Karen Horvath","Alan Cheung","Laurence Yee","John Golfinos","Donald Annino","Carolyn Majors","White / Caucasian","Woman",39,91
+0,"surgeon","high","treat",1,1,1,4,"Lindsey Prescher","Carolyn Majors","Juan Castillo","Daniel Lu","Alison Wilson","Karen Horvath","Abraham Shaked","White / Caucasian","Man",37,91
+0,"surgeon","low","control",1,0,0,3,"Carolyn Majors","Karen Horvath","Elizabeth Arena","Abraham Shaked","Asishana Osho","Brad Olberding","Laurence Yee","Black or African American","Woman",42,91
+0,"nursing","low","control",0,0,0,2,"Carlos Miranda","Amen Ramesses","Molly Mahler","Deanna Benner","Mark Johnson","Joseph Wright","Taiwo Oluyemo","White / Caucasian","Woman",64,91
+0,"nursing","high","treat",0,1,1,4,"Mark Johnson","Madeline Travis","Elsie Jolade","Carlos Miranda","Kathy O'Gara","Molly Mahler","Jeremy Blount","White / Caucasian","Man",47,91
+1,"surgeon","high","control",1,1,0,3,"Steve Kim","Daniel Lu","Elizabeth Arena","Jenny Zhang","Juan Castillo","Rachel Beard","Lindsey Prescher","Asian / Pacific Islander","Man",22,91
+1,"nursing","high","control",0,1,0,3,"Carlos Miranda","Mark Johnson","Jeremy Blount","Molly Mahler","Kathy O'Gara","Elsie Jolade","Jasmine Humphrey","Black or African American","Man",44,91
+1,"surgeon","low","control",1,0,0,2,"Lucy Wibbenmeyer","Steve Kim","Steven Beer","Adam Roy","Elizabeth Arena","Philip Alexander","Rachel Beard","White / Caucasian","Woman",74,91
+1,"nursing","high","control",0,1,0,4,"Amanda Veltri","Jasmine Humphrey","Carlos Miranda","Stephane Pierre","Madeline Travis","Deanna Benner","Kathy O'Gara","Black or African American","Woman",52,91
+1,"surgeon","low","treat",1,0,1,1,"John Golfinos","Laurence Yee","Abraham Shaked","Karen Horvath","Alan Cheung","Patroklos Pappas","Lucy Wibbenmeyer","White / Caucasian","Man",33,91
+0,"surgeon","high","control",1,1,0,3,"Karen Horvath","Daniel Lu","Abraham Shaked","Michelle Carlson","Juan Castillo","Maria Bell","Philip Alexander","Asian / Pacific Islander","Woman",20,91
+1,"nursing","high","control",0,1,0,6,"Amanda Veltri","Alyson Solloway","Elsie Jolade","Camille Barnes","Molly Mahler","Madeline Travis","Jessica Andrews","White / Caucasian","Man",60,91
+0,"surgeon","low","treat",1,0,1,3,"Lucy Wibbenmeyer","Carolyn Majors","Karen Horvath","Asishana Osho","Abraham Shaked","Adam Roy","Patroklos Pappas","Black or African American","Man",38,91
+0,"surgeon","low","control",1,0,0,2,"Patroklos Pappas","Laurence Yee","John Golfinos","Karen Horvath","Alan Cheung","Lucy Wibbenmeyer","Steven Beer","White / Caucasian","Woman",49,91
+1,"surgeon","high","control",1,1,0,3,"Karen Horvath","Lucy Wibbenmeyer","Philip Alexander","Michelle Carlson","Steve Kim","Abraham Shaked","Alison Wilson","Asian / Pacific Islander","Man",41,91
+0,"surgeon","high","treat",1,1,1,3,"Daniel Lu","Alison Wilson","Nervin Fanous","Philip Alexander","Karen Horvath","Juan Castillo","Abraham Shaked","White / Caucasian","Man",39,91
+0,"nursing","low","treat",0,0,1,2,"Amen Ramesses","Carlos Miranda","Deanna Benner","Mark Johnson","Molly Mahler","Joseph Wright","Taiwo Oluyemo","Black or African American","Woman",40,91
+1,"surgeon","high","control",1,1,0,3,"Abraham Shaked","Philip Alexander","Anne Le","Daniel Lu","Elizabeth Arena","Alison Wilson","Maria Bell","American Indian or Alaskan Native","Man",27,91
+0,"surgeon","low","control",1,0,0,6,"Crystal Alvarez","Lucy Wibbenmeyer","Rachel Beard","Elizabeth Arena","Carolyn Majors","Karen Horvath","Mikael Petrosyan","White / Caucasian","Man",34,91
+0,"surgeon","low","treat",1,0,1,2,"Laurence Yee","Carolyn Majors","Karen Horvath","Alan Cheung","Asishana Osho","Donald Annino","Philip Alexander","White / Caucasian","Man",37,91
+1,"surgeon","low","treat",1,0,1,2,"Elizabeth Arena","Steven Beer","Laurence Yee","Carolyn Majors","Steve Kim","Patroklos Pappas","Rachel Beard","White / Caucasian","Woman",32,91
+1,"nursing","high","control",0,1,0,6,"Elsie Jolade","Eliza Macken","Jasmine Humphrey","Madeline Travis","Molly Mahler","Camille Barnes","Mary Roberge","White / Caucasian","Woman",30,91
+1,"nursing","high","treat",0,1,1,3,"Eliza Macken","Kathy O'Gara","Colinda Cole-French","Ryan McMahon","Jeremy Blount","Stephane Pierre","Abigail Brown","White / Caucasian","Woman",26,91
+0,"nursing","high","control",0,1,0,5,"Deanna Benner","Alyson Solloway","Carlos Miranda","Molly Mahler","Madeline Travis","Kathy O'Gara","Mark Johnson","White / Caucasian","Woman",51,91
+0,"surgeon","low","control",1,0,0,2,"Laurence Yee","Karen Horvath","John Golfinos","Patroklos Pappas","Donald Annino","Lucy Wibbenmeyer","Abraham Shaked","White / Caucasian","Man",41,91
+1,"surgeon","high","treat",1,1,1,4,"Maria Bell","Abraham Shaked","Alison Wilson","Lucy Wibbenmeyer","Philip Alexander","Anne Le","Rachel Beard","White / Caucasian","Woman",34,91
+1,"surgeon","high","control",1,1,0,3,"Abraham Shaked","Michelle Carlson","Philip Alexander","Elizabeth Arena","Daniel Lu","Maria Bell","Karen Horvath","White / Caucasian","Man",35,91
+1,"surgeon","high","treat",1,1,1,3,"Philip Alexander","Maria Bell","Daniel Lu","Abraham Shaked","Elizabeth Arena","Lucy Wibbenmeyer","Alison Wilson","White / Caucasian","Woman",52,91
+0,"nursing","high","treat",0,1,1,5,"Colinda Cole-French","Camille Barnes","Elsie Jolade","Jeremy Blount","Kathy O'Gara","Charlotte Tiley","Carlos Miranda","White / Caucasian","Woman",64,91
+1,"nursing","high","control",0,1,0,5,"Stephane Pierre","Madeline Travis","Alyson Solloway","Kathy O'Gara","Deanna Benner","Jasmine Humphrey","Molly Mahler","White / Caucasian","Woman",40,91
+1,"nursing","low","control",0,0,0,2,"Deanna Benner","Carlos Miranda","Amen Ramesses","Joseph Wright","Molly Mahler","Jeremy Blount","Amanda Veltri","White / Caucasian","Woman",41,91
+0,"surgeon","high","treat",1,1,1,4,"Karen Horvath","Maria Bell","Adam Roy","Jenny Zhang","Steve Kim","Michelle Carlson","Juan Castillo","White / Caucasian","Woman",73,91
+0,"surgeon","low","control",1,0,0,3,"Laurence Yee","Crystal Alvarez","Lucy Wibbenmeyer","Patroklos Pappas","Alan Cheung","Carolyn Majors","Adam Roy","White / Caucasian","Woman",44,91
+1,"nursing","high","control",0,1,0,3,"Stephane Pierre","Carlos Miranda","Deanna Benner","Mark Johnson","Amanda Veltri","Jasmine Humphrey","Madeline Travis","Black or African American","Woman",47,91
+1,"surgeon","high","control",1,1,0,4,"Maria Bell","Philip Alexander","Karen Horvath","Alison Wilson","Lucy Wibbenmeyer","Abraham Shaked","Nervin Fanous","White / Caucasian","Woman",46,91
+0,"surgeon","high","treat",1,1,1,4,"Nervin Fanous","Anne Le","Lindsey Prescher","Philip Alexander","Juan Castillo","Michelle Carlson","Abraham Shaked","White / Caucasian","Man",56,91
+1,"surgeon","high","treat",1,1,1,3,"Karen Horvath","Alison Wilson","Michelle Carlson","Philip Alexander","Abraham Shaked","Daniel Lu","Lucy Wibbenmeyer","White / Caucasian","Woman",35,91
+1,"nursing","low","treat",0,0,1,3,"Joseph Wright","Stephane Pierre-Antoine","Mark Johnson","Deanna Benner","Molly Mahler","Eliza Macken","Amanda Veltri","White / Caucasian","Man",43,91
+0,"surgeon","low","treat",1,0,1,2,"Karen Horvath","Laurence Yee","John Golfinos","Alan Cheung","Patroklos Pappas","Lucy Wibbenmeyer","Philip Alexander","Black or African American","Man",50,91
+1,"nursing","low","treat",0,0,1,2,"Bailey Pierce","Ryan McMahon","Taiwo Oluyemo","Mark Johnson","Amen Ramesses","Amanda Veltri","Molly Mahler","White / Caucasian","Non-binary",26,91
+0,"surgeon","high","treat",1,1,1,4,"Alison Wilson","Anne Le","Nervin Fanous","Philip Alexander","Lucy Wibbenmeyer","Abraham Shaked","Daniel Lu","Asian / Pacific Islander","Man",37,91
+1,"nursing","low","treat",0,0,1,2,"Stephane Pierre-Antoine","Amanda Veltri","Matthew Brooks","Carlos Miranda","Deanna Benner","Ryan Bresnahan","Morgan Fischer","White / Caucasian","Woman",30,91
+0,"nursing","low","treat",0,0,1,5,"Amanda Veltri","Eliza Macken","Molly Mahler","Deanna Benner","Girma Mekonen","Bailey Pierce","Matthew Brooks","Asian / Pacific Islander","Woman",46,91
+1,"surgeon","high","control",1,1,0,3,"Abraham Shaked","Karen Horvath","Maria Bell","Philip Alexander","Carolyn Majors","Juan Castillo","Alison Wilson","White / Caucasian","Man",42,91
+0,"nursing","low","control",0,0,0,3,"Deanna Benner","Jeremy Blount","Amen Ramesses","Carlos Miranda","Molly Mahler","Amanda Veltri","Mark Johnson","White / Caucasian","Woman",54,91
+1,"nursing","high","control",0,1,0,5,"Alyson Solloway","Amanda Veltri","Deanna Benner","Jasmine Humphrey","Jeremy Blount","Kathy O'Gara","Eliza Macken","White / Caucasian","Woman",27,91
+1,"nursing","high","treat",0,1,1,5,"Jasmine Humphrey","Kathy O'Gara","Elsie Jolade","Deanna Benner","Molly Mahler","Carlos Miranda","Madeline Travis","White / Caucasian","Woman",30,91
+0,"surgeon","low","treat",1,0,1,2,"Alan Cheung","Philip Alexander","Karen Horvath","Abraham Shaked","John Golfinos","Carolyn Majors","Brad Olberding","Asian / Pacific Islander","Non-binary",28,91
+1,"surgeon","low","treat",1,0,1,2,"Rachel Beard","Steve Kim","Karen Horvath","Alan Cheung","Laurence Yee","Juan Castillo","Carolyn Majors","White / Caucasian","Man",43,91
+1,"nursing","high","treat",0,1,1,4,"Kathy O'Gara","Carlos Miranda","Deanna Benner","Elsie Jolade","Mark Johnson","Madeline Travis","Amanda Veltri","Asian / Pacific Islander","Woman",30,91
+0,"surgeon","high","treat",1,1,1,3,"Abraham Shaked","Juan Castillo","Philip Alexander","Anne Le","Karen Horvath","Alison Wilson","Daniel Lu","White / Caucasian","Man",57,91
+0,"nursing","low","treat",0,0,1,5,"Molly Mahler","Deanna Benner","Amanda Veltri","Eliza Macken","Bailey Pierce","Amen Ramesses","Dylan Guiney","White / Caucasian","Woman",49,91
+0,"nursing","high","treat",0,1,1,4,"Kathy O'Gara","Madeline Travis","James Mangalus","Jeremy Blount","Eliza Macken","Molly Mahler","Carlos Miranda","White / Caucasian","Woman",72,91
+0,"surgeon","low","control",1,0,0,2,"Alan Cheung","Patroklos Pappas","Laurence Yee","Karen Horvath","Abraham Shaked","Lucy Wibbenmeyer","John Golfinos","White / Caucasian","Woman",45,91
+0,"nursing","low","control",0,0,0,2,"Ryan Bresnahan","James Mangalus","Mathew Krueger","Zachary Krim","Morgan Fischer","Molly Mahler","Jay Warren","White / Caucasian","Man",22,91
+1,"surgeon","high","control",1,1,0,4,"Lucy Wibbenmeyer","Maria Bell","Abraham Shaked","Karen Horvath","Alison Wilson","Philip Alexander","Michelle Carlson","White / Caucasian","Man",51,91
+0,"surgeon","high","treat",1,1,1,4,"Elizabeth Arena","Alison Wilson","Lucy Wibbenmeyer","Abraham Shaked","Karen Horvath","Philip Alexander","Juan Castillo","White / Caucasian","Woman",45,91
+1,"surgeon","high","control",1,1,0,4,"Nervin Fanous","Maria Bell","Carolyn Majors","Lucy Wibbenmeyer","Daniel Lu","Juan Castillo","Karen Horvath","Black or African American","Woman",45,91
+1,"surgeon","low","control",1,0,0,3,"Rachel Beard","Crystal Alvarez","Sumeet Kadakia","Patroklos Pappas","Steven Beer","Lucy Wibbenmeyer","Carolyn Majors","White / Caucasian","Woman",46,91
+0,"surgeon","high","treat",1,1,1,4,"Michelle Carlson","Philip Alexander","Karen Horvath","Daniel Lu","Nervin Fanous","Alison Wilson","Abraham Shaked","White / Caucasian","Woman",35,91
+0,"nursing","low","treat",0,0,1,6,"Morgan Fischer","Amanda Veltri","Deanna Benner","Eliza Macken","Bailey Pierce","Molly Mahler","Jeremy Blount","White / Caucasian","Man",30,91
+1,"surgeon","low","treat",1,0,1,2,"Rachel Beard","Alan Cheung","Daniel Lu","Patroklos Pappas","Lucy Wibbenmeyer","Steven Beer","Carolyn Majors","Black or African American","Man",50,91
+0,"surgeon","low","control",1,0,0,5,"Crystal Alvarez","Lucy Wibbenmeyer","Carolyn Majors","Rachel Beard","Elizabeth Arena","Asishana Osho","Alan Cheung","White / Caucasian","Woman",30,91
+0,"nursing","low","treat",0,0,1,3,"Morgan Fischer","Zachary Krim","Amanda Veltri","Matthew Brooks","Bailey Pierce","Amen Ramesses","Stephane Pierre-Antoine","White / Caucasian","Woman",29,91
+0,"nursing","low","treat",0,0,1,1,"Amen Ramesses","Deanna Benner","Stephane Pierre-Antoine","Dylan Guiney","Jay Warren","Thomas Horton","Mark Johnson","Black or African American","Woman",37,91
+1,"nursing","high","control",0,1,0,3,"Camille Barnes","Mark Johnson","Madeline Travis","Jasmine Humphrey","Stephane Pierre","Carlos Miranda","Kathy O'Gara","White / Caucasian","Man",47,91
+1,"nursing","high","treat",0,1,1,4,"Madeline Travis","Amanda Veltri","Jeremy Blount","Ryan McMahon","Eliza Macken","Jessica Andrews","Molly Mahler","Black or African American","Woman",36,91
+0,"nursing","high","control",0,1,0,5,"Jasmine Humphrey","Bailey Pierce","Kathy O'Gara","Molly Mahler","Stephane Pierre","Alyson Solloway","Jeremy Blount","White / Caucasian","Man",40,91
+0,"surgeon","high","control",1,1,0,3,"Karen Horvath","Abraham Shaked","Michelle Carlson","Philip Alexander","Alison Wilson","Steve Kim","Juan Castillo","Asian / Pacific Islander","Man",34,91
+0,"surgeon","high","treat",1,1,1,5,"Crystal Alvarez","Nervin Fanous","Jenny Zhang","Abraham Shaked","Maria Bell","Breehan Chancellor","Daniel Lu","Black or African American","Woman",49,91
+0,"nursing","low","treat",0,0,1,5,"Amanda Veltri","Molly Mahler","Eliza Macken","Deanna Benner","Bailey Pierce","Amen Ramesses","Carlos Miranda","White / Caucasian","Man",60,91
+1,"nursing","low","control",0,0,0,2,"Amen Ramesses","Molly Mahler","Carlos Miranda","Deanna Benner","Mark Johnson","Joseph Wright","Morgan Fischer","White / Caucasian","Woman",37,91
+1,"surgeon","high","treat",1,1,1,5,"Karen Horvath","Carolyn Majors","Maria Bell","Alison Wilson","Abraham Shaked","Michelle Carlson","Lindsey Prescher","Black or African American","Man",28,91
+1,"nursing","low","treat",0,0,1,2,"Amen Ramesses","Carlos Miranda","Molly Mahler","Bailey Pierce","David Lopez","Dylan Guiney","Eliza Macken","White / Caucasian","Woman",37,91
+0,"nursing","high","treat",0,1,1,4,"Mark Johnson","Ryan McMahon","Alyson Solloway","Abigail Brown","Mary Roberge","Camille Barnes","Carlos Miranda","White / Caucasian","Woman",43,91
+0,"surgeon","low","treat",1,0,1,4,"Carolyn Majors","Elizabeth Arena","Lucy Wibbenmeyer","Karen Horvath","John Golfinos","Patroklos Pappas","Alan Cheung","White / Caucasian","Woman",57,91
+0,"nursing","low","control",0,0,0,4,"Deanna Benner","Molly Mahler","Carlos Miranda","Joseph Wright","Amanda Veltri","Eliza Macken","Jay Warren","White / Caucasian","Woman",57,91
+0,"nursing","high","treat",0,1,1,4,"Carlos Miranda","Amanda Veltri","Deanna Benner","Niki White","Elsie Jolade","Mark Johnson","Stephane Pierre","White / Caucasian","Woman",48,91
+1,"surgeon","high","control",1,1,0,5,"Svjetlana Lozo","Daniel Lu","Carolyn Majors","Karen Horvath","Lucy Wibbenmeyer","Michelle Carlson","Alison Wilson","White / Caucasian","Man",50,91
+1,"nursing","high","control",0,1,0,5,"Elsie Jolade","Kathy O'Gara","Jasmine Humphrey","Carlos Miranda","Madeline Travis","Camille Barnes","Niki White","Asian / Pacific Islander","Woman",27,91
+1,"nursing","high","treat",0,1,1,5,"Morgan Fischer","Charlotte Tiley","Mary Roberge","Alyson Solloway","Mark Johnson","Margo Brown","Kathy O'Gara","White / Caucasian","Man",53,91
+1,"nursing","low","treat",0,0,1,3,"Molly Mahler","Amen Ramesses","Amanda Veltri","Deanna Benner","Carlos Miranda","Joseph Wright","Eliza Macken","White / Caucasian","Man",54,91
+1,"nursing","low","control",0,0,0,3,"Jeremy Blount","Amanda Veltri","Deanna Benner","Eliza Macken","Stephane Pierre-Antoine","Amen Ramesses","Bailey Pierce","Asian / Pacific Islander","Man",40,91
+0,"surgeon","low","treat",1,0,1,2,"Patroklos Pappas","John Golfinos","Karen Horvath","Laurence Yee","Lucy Wibbenmeyer","Alan Cheung","Abraham Shaked","White / Caucasian","Man",40,91
+0,"surgeon","low","control",1,0,0,2,"Lucy Wibbenmeyer","Mikael Petrosyan","Juan Castillo","Crystal Alvarez","Alan Cheung","Steve Kim","Hoang Nguyen","White / Caucasian","Man",35,91
+0,"surgeon","low","treat",1,0,1,1,"Alan Cheung","Steve Kim","Asishana Osho","Philip Alexander","Carolyn Majors","Laurence Yee","Daniel Lu","Black or African American","Woman",27,91
+0,"surgeon","low","control",1,0,0,3,"Lucy Wibbenmeyer","Elizabeth Arena","Carolyn Majors","Daniel Lu","Juan Castillo","Adam Roy","Steven Beer","White / Caucasian","Woman",33,91
+0,"nursing","low","control",0,0,0,3,"Deanna Benner","Molly Mahler","Carlos Miranda","Taiwo Oluyemo","Amanda Veltri","Amen Ramesses","Joseph Wright","Black or African American","Man",55,91
+0,"nursing","low","control",0,0,0,4,"Jeremy Blount","Amanda Veltri","Deanna Benner","Eliza Macken","Mark Johnson","Morgan Fischer","Stephane Pierre-Antoine","Hispanic / Latinx","Woman",23,91
+0,"nursing","low","control",0,0,0,2,"Amen Ramesses","Mark Johnson","Carlos Miranda","Molly Mahler","Deanna Benner","Joseph Wright","Taiwo Oluyemo","White / Caucasian","Woman",38,91
+1,"nursing","high","control",0,1,0,5,"Elsie Jolade","Kathy O'Gara","Deanna Benner","Carlos Miranda","Molly Mahler","Madeline Travis","Eliza Macken","White / Caucasian","Man",33,91
+0,"nursing","low","treat",0,0,1,4,"Morgan Fischer","Eliza Macken","Deanna Benner","Mark Johnson","Molly Mahler","Ryan McMahon","Jeremy Blount","Black or African American","Man",34,91
+0,"surgeon","low","control",1,0,0,2,"Crystal Alvarez","Sumeet Kadakia","John Golfinos","Rachel Beard","Steven Beer","Brock Hewitt","Laurence Yee","Hispanic / Latinx","Man",30,91
+1,"surgeon","high","treat",1,1,1,6,"Breehan Chancellor","Anne Le","Maria Bell","Lindsey Prescher","Elizabeth Arena","Svjetlana Lozo","Rachel Beard","White / Caucasian","Man",39,91
+0,"surgeon","high","treat",1,1,1,3,"Elizabeth Arena","Karen Horvath","Juan Castillo","Alison Wilson","Philip Alexander","Daniel Lu","Abraham Shaked","White / Caucasian","Man",66,91
+1,"nursing","high","treat",0,1,1,4,"Jeremy Blount","Mark Johnson","Molly Mahler","Kathy O'Gara","Deanna Benner","Amanda Veltri","Jasmine Humphrey","White / Caucasian","Woman",65,91
+1,"nursing","high","control",0,1,0,3,"Jeremy Blount","Carlos Miranda","Deanna Benner","Molly Mahler","Mark Johnson","Madeline Travis","Elsie Jolade","White / Caucasian","Man",45,91
+1,"surgeon","low","treat",1,0,1,2,"Rachel Beard","Laurence Yee","Asishana Osho","Elizabeth Arena","Patroklos Pappas","Juan Castillo","Karen Horvath","Black or African American","Woman",30,91
+1,"surgeon","high","control",1,1,0,6,"Elizabeth Arena","Lucy Wibbenmeyer","Lindsey Prescher","Amy DeKerlegand","Carolyn Majors","Svjetlana Lozo","Katherine Albutt","White / Caucasian","Woman",28,91
+1,"nursing","high","control",0,1,0,4,"Elsie Jolade","Colinda Cole-French","Madeline Travis","Stephane Pierre","Molly Mahler","Mark Johnson","Kathy O'Gara","Black or African American","Man",25,91
+1,"nursing","low","control",0,0,0,2,"Carlos Miranda","Amen Ramesses","Molly Mahler","Deanna Benner","Mark Johnson","Joseph Wright","Eliza Macken","Hispanic / Latinx","Woman",39,91
+0,"nursing","low","treat",0,0,1,3,"Stephane Pierre-Antoine","Amanda Veltri","Molly Mahler","Joseph Wright","Thomas Horton","Deanna Benner","Ryan Bresnahan","Black or African American","Woman",67,91
+0,"surgeon","low","treat",1,0,1,1,"Laurence Yee","John Golfinos","Alan Cheung","Patroklos Pappas","Karen Horvath","Abraham Shaked","Donald Annino","Asian / Pacific Islander","Man",51,91
+1,"surgeon","high","control",1,1,0,4,"Karen Horvath","Daniel Lu","Maria Bell","Alison Wilson","Philip Alexander","Elizabeth Arena","Nervin Fanous","White / Caucasian","Woman",55,91
+0,"surgeon","low","treat",1,0,1,3,"Karen Horvath","Alan Cheung","Patroklos Pappas","Carolyn Majors","Laurence Yee","Lucy Wibbenmeyer","Abraham Shaked","White / Caucasian","Woman",29,91
+0,"nursing","low","treat",0,0,1,2,"Mark Johnson","Zachary Krim","Molly Mahler","Thomas Horton","Eliza Macken","Girma Mekonen","Jeremy Blount","White / Caucasian","Man",35,91
+0,"nursing","low","treat",0,0,1,2,"Girma Mekonen","Molly Mahler","Deanna Benner","Mark Johnson","Jay Warren","Mathew Krueger","Thomas Horton","Black or African American","Man",24,91
+1,"surgeon","low","control",1,0,0,2,"Carolyn Majors","Laurence Yee","Steven Beer","Daniel Lu","Patroklos Pappas","Elizabeth Arena","Crystal Alvarez","White / Caucasian","Woman",34,91
+1,"nursing","high","control",0,1,0,3,"Molly Mahler","Kathy O'Gara","Carlos Miranda","Elsie Jolade","Jeremy Blount","Mark Johnson","Jasmine Humphrey","White / Caucasian","Woman",47,91
+0,"nursing","low","control",0,0,0,3,"Morgan Fischer","Bailey Pierce","Girma Mekonen","Jay Warren","Joseph Wright","Deanna Benner","Stephane Pierre-Antoine","White / Caucasian","Man",35,91
+0,"surgeon","low","control",1,0,0,0,"Asishana Osho","Philip Alexander","David Moore","Alan Cheung","Abraham Shaked","John Golfinos","Steven Beer","Black or African American","Woman",26,91
+0,"nursing","high","control",0,1,0,4,"Carlos Miranda","Elsie Jolade","Madeline Travis","Deanna Benner","Jasmine Humphrey","Stephane Pierre","Mark Johnson","Asian / Pacific Islander","Woman",44,91
+0,"surgeon","high","treat",1,1,1,3,"Abraham Shaked","Steve Kim","Karen Horvath","Carolyn Majors","Elizabeth Arena","Juan Castillo","Daniel Lu","White / Caucasian","Woman",64,91
+0,"nursing","high","treat",0,1,1,5,"Madeline Travis","Mark Johnson","Morgan Fischer","Alyson Solloway","Elsie Jolade","Bailey Pierce","Stephane Pierre","White / Caucasian","Man",34,91
+1,"surgeon","high","treat",1,1,1,3,"Abraham Shaked","Michelle Nguyen","Alison Wilson","Philip Alexander","Anne Le","Daniel Lu","Nervin Fanous","White / Caucasian","Man",35,91
+0,"surgeon","low","treat",1,0,1,6,"Elizabeth Arena","Rachel Beard","Carolyn Majors","Karen Horvath","Lucy Wibbenmeyer","Crystal Alvarez","Abraham Shaked","Black or African American","Woman",21,91
+1,"surgeon","high","control",1,1,0,2,"Juan Castillo","Philip Alexander","Daniel Lu","Abraham Shaked","Carolyn Majors","Breehan Chancellor","Lucy Wibbenmeyer","Asian / Pacific Islander","Woman",20,91
+0,"nursing","high","treat",0,1,1,5,"Elsie Jolade","Mark Johnson","Kathy O'Gara","Molly Mahler","Deanna Benner","Alyson Solloway","Carlos Miranda","Asian / Pacific Islander","Man",46,91
+0,"nursing","high","treat",0,1,1,5,"Camille Barnes","Carlos Miranda","Molly Mahler","Elsie Jolade","Alyson Solloway","Jasmine Humphrey","Jeremy Blount","White / Caucasian","Man",44,91
+0,"surgeon","high","treat",1,1,1,5,"Anne Le","Maria Bell","Michelle Carlson","Alison Wilson","Karen Horvath","Juan Castillo","Adam Roy","White / Caucasian","Man",35,91
+0,"nursing","low","treat",0,0,1,3,"Eliza Macken","Amanda Veltri","Morgan Fischer","Jeremy Blount","Ryan Bresnahan","Mathew Krueger","Matthew Brooks","White / Caucasian","Man",47,91
+0,"surgeon","high","control",1,1,0,5,"Carolyn Majors","Maria Bell","Philip Alexander","Alison Wilson","Michelle Carlson","Lucy Wibbenmeyer","Adam Roy","White / Caucasian","Woman",29,91
+1,"surgeon","high","treat",1,1,1,3,"Abraham Shaked","Michelle Carlson","Carolyn Majors","Karen Horvath","Daniel Lu","Philip Alexander","Lucy Wibbenmeyer","White / Caucasian","Man",50,91
+1,"nursing","high","control",0,1,0,3,"Elsie Jolade","Carlos Miranda","Jeremy Blount","Mark Johnson","Kathy O'Gara","Deanna Benner","Jasmine Humphrey","White / Caucasian","Woman",55,91
+0,"surgeon","high","treat",1,1,1,5,"Michelle Carlson","Maria Bell","Philip Alexander","Alison Wilson","Anne Le","Lucy Wibbenmeyer","Abraham Shaked","White / Caucasian","Woman",55,91
+1,"nursing","high","control",0,1,0,6,"Bailey Pierce","Margo Brown","Morgan Fischer","Camille Barnes","Molly Mahler","Charlotte Tiley","Niki White","Hispanic / Latinx","Man",36,91
+1,"nursing","low","control",0,0,0,4,"Molly Mahler","Amen Ramesses","Deanna Benner","Amanda Veltri","Mark Johnson","Eliza Macken","Morgan Fischer","Asian / Pacific Islander","Man",26,91
+1,"surgeon","high","control",1,1,0,3,"Nervin Fanous","Philip Alexander","Anne Le","Daniel Lu","Karen Horvath","Steve Kim","Carolyn Majors","White / Caucasian","Non-binary",36,91
+0,"surgeon","low","treat",1,0,1,3,"Steve Kim","Lucy Wibbenmeyer","Rachel Beard","Asishana Osho","Carolyn Majors","John Golfinos","Daniel Lu","Asian / Pacific Islander","Man",36,91
+1,"nursing","high","treat",0,1,1,4,"Alyson Solloway","Madeline Travis","Mark Johnson","Molly Mahler","Carlos Miranda","Morgan Fischer","Camille Barnes","White / Caucasian","Woman",48,91
+0,"nursing","low","treat",0,0,1,3,"Molly Mahler","Carlos Miranda","Amen Ramesses","Deanna Benner","Mark Johnson","Eliza Macken","Taiwo Oluyemo","White / Caucasian","Man",56,91
+1,"surgeon","high","control",1,1,0,2,"Karen Horvath","Abraham Shaked","Adam Roy","Jenny Zhang","Philip Alexander","Daniel Lu","Lindsey Prescher","White / Caucasian","Man",36,91
+0,"nursing","low","treat",0,0,1,3,"Molly Mahler","Carlos Miranda","Bailey Pierce","Jay Warren","Amanda Veltri","Ryan Bresnahan","Stephane Pierre-Antoine","White / Caucasian","Man",38,91
+1,"surgeon","low","treat",1,0,1,2,"Hoang Nguyen","Lucy Wibbenmeyer","Steven Beer","Elizabeth Arena","Brad Olberding","Alan Cheung","Karen Horvath","White / Caucasian","Man",36,91
+1,"surgeon","low","control",1,0,0,1,"Donald Annino","Laurence Yee","Daniel Lu","Lucy Wibbenmeyer","Hoang Nguyen","Juan Castillo","Crystal Alvarez","Asian / Pacific Islander","Man",35,91
+0,"surgeon","low","control",1,0,0,0,"Abraham Shaked","Donald Annino","Alan Cheung","Patroklos Pappas","Philip Alexander","Asishana Osho","David Moore","Black or African American","Man",38,91
+1,"nursing","high","control",0,1,0,4,"Jasmine Humphrey","Colinda Cole-French","Stephane Pierre","Elsie Jolade","Ryan McMahon","Morgan Fischer","Deanna Benner","Black or African American","Woman",49,91
+0,"surgeon","low","control",1,0,0,3,"Elizabeth Arena","Lucy Wibbenmeyer","Carolyn Majors","Abraham Shaked","Philip Alexander","Juan Castillo","Patroklos Pappas","Hispanic / Latinx","Woman",50,91
+0,"nursing","low","treat",0,0,1,3,"Deanna Benner","Molly Mahler","Amen Ramesses","Mark Johnson","Carlos Miranda","Amanda Veltri","Joseph Wright","Hispanic / Latinx","Woman",33,91
+1,"nursing","high","treat",0,1,1,4,"Carlos Miranda","Madeline Travis","Eliza Macken","Molly Mahler","Elsie Jolade","Stephane Pierre","Kathy O'Gara","White / Caucasian","Man",72,91
+0,"surgeon","low","control",1,0,0,2,"Karen Horvath","John Golfinos","Abraham Shaked","Donald Annino","Laurence Yee","Carolyn Majors","Steven Beer","White / Caucasian","Man",51,91
+1,"surgeon","high","treat",1,1,1,3,"Elizabeth Arena","Karen Horvath","Philip Alexander","Carolyn Majors","Abraham Shaked","Juan Castillo","Lucy Wibbenmeyer","White / Caucasian","Man",72,91
+1,"surgeon","high","control",1,1,0,4,"Philip Alexander","Lucy Wibbenmeyer","Abraham Shaked","Karen Horvath","Alison Wilson","Michelle Carlson","Nervin Fanous","White / Caucasian","Woman",52,91
+1,"surgeon","high","control",1,1,0,2,"Philip Alexander","Juan Castillo","Abraham Shaked","Karen Horvath","Daniel Lu","Alison Wilson","Lucy Wibbenmeyer","Hispanic / Latinx","Man",37,91
+1,"surgeon","high","treat",1,1,1,3,"Maria Bell","Carolyn Majors","Juan Castillo","Steve Kim","Philip Alexander","Karen Horvath","Alison Wilson","White / Caucasian","Woman",59,91
+1,"nursing","high","treat",0,1,1,3,"Carlos Miranda","Charlotte Tiley","Jasmine Humphrey","Kathy O'Gara","Stephane Pierre","Jeremy Blount","Elsie Jolade","Hispanic / Latinx","Woman",30,91
+0,"nursing","low","control",0,0,0,2,"Carlos Miranda","Amen Ramesses","Molly Mahler","Mark Johnson","Taiwo Oluyemo","Amanda Veltri","Joseph Wright","White / Caucasian","Woman",51,91
+1,"surgeon","low","treat",1,0,1,1,"Donald Annino","David Moore","Juan Castillo","Brock Hewitt","Rachel Beard","Adam Roy","Carolyn Majors","White / Caucasian","Woman",36,91
+0,"surgeon","low","treat",1,0,1,3,"Alan Cheung","Karen Horvath","Lucy Wibbenmeyer","John Golfinos","Laurence Yee","Carolyn Majors","Philip Alexander","Black or African American","Woman",19,91
+0,"nursing","low","treat",0,0,1,6,"Bailey Pierce","Amanda Veltri","Eliza Macken","Deanna Benner","Morgan Fischer","Molly Mahler","Thomas Horton","White / Caucasian","Man",34,91
+1,"surgeon","high","treat",1,1,1,3,"Juan Castillo","Alison Wilson","Philip Alexander","Karen Horvath","Abraham Shaked","Lucy Wibbenmeyer","Maria Bell","White / Caucasian","Woman",55,91
+0,"nursing","high","treat",0,1,1,4,"Kathy O'Gara","Mark Johnson","Jeremy Blount","Elsie Jolade","Deanna Benner","Alyson Solloway","Stephane Pierre","White / Caucasian","Woman",54,91
+1,"nursing","low","treat",0,0,1,3,"Deanna Benner","Jay Warren","Amen Ramesses","Eliza Macken","Taiwo Oluyemo","Molly Mahler","Amanda Veltri","White / Caucasian","Woman",33,91
+1,"nursing","high","control",0,1,0,5,"Stephane Pierre","Elsie Jolade","Alyson Solloway","Kathy O'Gara","Camille Barnes","Madeline Travis","Morgan Fischer","White / Caucasian","Woman",60,91
+0,"nursing","low","control",0,0,0,3,"Ryan McMahon","Amanda Veltri","Matthew Brooks","Deanna Benner","Jeremy Blount","Molly Mahler","Dylan Guiney","White / Caucasian","Woman",38,91
+0,"nursing","high","treat",0,1,1,5,"Eliza Macken","Alyson Solloway","Deanna Benner","Jasmine Humphrey","Carlos Miranda","Kathy O'Gara","Stephane Pierre","Hispanic / Latinx","Man",29,91
+0,"nursing","low","control",0,0,0,1,"Thomas Horton","Girma Mekonen","Ryan Bresnahan","David Lopez","Ryan McMahon","Bailey Pierce","Dylan Guiney","Black or African American","Woman",36,91
+0,"surgeon","low","treat",1,0,1,2,"Rachel Beard","Elizabeth Arena","Daniel Lu","Asishana Osho","Abraham Shaked","Steve Kim","Steven Beer","White / Caucasian","Woman",54,91
+0,"nursing","low","control",0,0,0,4,"Molly Mahler","Deanna Benner","Carlos Miranda","Mark Johnson","Eliza Macken","Amanda Veltri","Jeremy Blount","White / Caucasian","Woman",43,91
+0,"surgeon","high","control",1,1,0,4,"Philip Alexander","Katherine Albutt","Steve Kim","Maria Bell","Crystal Alvarez","Amy DeKerlegand","Abraham Shaked","White / Caucasian","Woman",47,91
+1,"nursing","high","treat",0,1,1,5,"Jessica Andrews","Jasmine Humphrey","Kathy O'Gara","Carlos Miranda","Alyson Solloway","Molly Mahler","Deanna Benner","White / Caucasian","Woman",51,91
+0,"nursing","high","control",0,1,0,5,"Charlotte Tiley","Deanna Benner","Colinda Cole-French","Kathy O'Gara","Eliza Macken","Stephane Pierre","James Mangalus","White / Caucasian","Man",41,91
+0,"surgeon","low","control",1,0,0,1,"Karen Horvath","Daniel Lu","Alan Cheung","Adam Roy","Brad Olberding","Laurence Yee","Hoang Nguyen","Black or African American","Woman",20,91
+1,"nursing","high","control",0,1,0,6,"Mary Roberge","Amanda Veltri","Niki White","Jasmine Humphrey","Camille Barnes","Elsie Jolade","Molly Mahler","White / Caucasian","Man",31,91
+0,"surgeon","low","control",1,0,0,2,"Steven Beer","Carolyn Majors","Asishana Osho","Elizabeth Arena","Adam Roy","Hoang Nguyen","David Moore","White / Caucasian","Man",38,91
+0,"nursing","high","control",0,1,0,4,"Kathy O'Gara","Carlos Miranda","Elsie Jolade","Deanna Benner","Molly Mahler","Mark Johnson","Stephane Pierre","White / Caucasian","Woman",58,91
+1,"surgeon","low","treat",1,0,1,2,"Alan Cheung","Laurence Yee","Patroklos Pappas","Karen Horvath","John Golfinos","Lucy Wibbenmeyer","Carolyn Majors","Asian / Pacific Islander","Woman",23,91
+1,"surgeon","high","treat",1,1,1,6,"Breehan Chancellor","Alison Wilson","Lindsey Prescher","Karen Horvath","Crystal Alvarez","Carolyn Majors","Rachel Beard","White / Caucasian","Man",27,91
+1,"surgeon","low","treat",1,0,1,2,"Laurence Yee","Alan Cheung","Elizabeth Arena","Karen Horvath","John Golfinos","Patroklos Pappas","Lucy Wibbenmeyer","Hispanic / Latinx","Woman",45,91
+0,"surgeon","low","control",1,0,0,2,"Juan Castillo","Karen Horvath","Asishana Osho","Steve Kim","Alan Cheung","Carolyn Majors","John Golfinos","Black or African American","Man",40,91
+1,"nursing","high","control",0,1,0,5,"Molly Mahler","Kathy O'Gara","Carlos Miranda","Charlotte Tiley","Camille Barnes","Elsie Jolade","Bailey Pierce","White / Caucasian","Man",41,91
+0,"nursing","low","control",0,0,0,3,"Deanna Benner","Jay Warren","Mathew Krueger","Morgan Fischer","Ryan Bresnahan","Eliza Macken","Matthew Brooks","Asian / Pacific Islander","Woman",31,91
+1,"surgeon","low","control",1,0,0,2,"John Golfinos","Laurence Yee","Abraham Shaked","Carolyn Majors","Elizabeth Arena","Asishana Osho","Lucy Wibbenmeyer","White / Caucasian","Woman",63,91
+1,"surgeon","low","treat",1,0,1,2,"Daniel Lu","Brad Olberding","Lucy Wibbenmeyer","Karen Horvath","David Moore","Philip Alexander","Rachel Beard","White / Caucasian","Man",22,91
+1,"surgeon","high","control",1,1,0,0,"Juan Castillo","Steve Kim","Daniel Lu","Philip Alexander","Abraham Shaked","Adam Roy","Karen Horvath","Black or African American","Man",43,91
+1,"surgeon","high","control",1,1,0,4,"Maria Bell","Juan Castillo","Abraham Shaked","Carolyn Majors","Nervin Fanous","Michelle Carlson","Alison Wilson","Hispanic / Latinx","Woman",35,91
+0,"surgeon","low","treat",1,0,1,2,"Asishana Osho","John Golfinos","Patroklos Pappas","Steven Beer","Elizabeth Arena","Carolyn Majors","Daniel Lu","White / Caucasian","Man",38,91
+1,"nursing","low","control",0,0,0,3,"Amanda Veltri","Mark Johnson","Taiwo Oluyemo","Carlos Miranda","Deanna Benner","Molly Mahler","Morgan Fischer","White / Caucasian","Man",56,91
+1,"nursing","low","treat",0,0,1,4,"Carlos Miranda","Deanna Benner","Molly Mahler","Eliza Macken","Amanda Veltri","Jeremy Blount","Morgan Fischer","White / Caucasian","Woman",30,91
+1,"nursing","high","control",0,1,0,3,"Carlos Miranda","Elsie Jolade","Mark Johnson","Stephane Pierre","Jasmine Humphrey","Eliza Macken","Morgan Fischer","White / Caucasian","Woman",33,91
+1,"surgeon","high","treat",1,1,1,0,"Philip Alexander","Steve Kim","Adam Roy","Juan Castillo","Abraham Shaked","Daniel Lu","Breehan Chancellor","Asian / Pacific Islander","Man",50,91
+0,"surgeon","high","treat",1,1,1,5,"Carolyn Majors","Abraham Shaked","Lucy Wibbenmeyer","Crystal Alvarez","Anne Le","Breehan Chancellor","Philip Alexander","White / Caucasian","Woman",44,91
+1,"surgeon","high","control",1,1,0,4,"Maria Bell","Carolyn Majors","Philip Alexander","Lucy Wibbenmeyer","Anne Le","Juan Castillo","Karen Horvath","White / Caucasian","Woman",44,91
+1,"surgeon","high","treat",1,1,1,3,"Carolyn Majors","Karen Horvath","Maria Bell","Abraham Shaked","Steve Kim","Daniel Lu","Alison Wilson","White / Caucasian","Man",52,91
+0,"nursing","low","treat",0,0,1,2,"Carlos Miranda","Amanda Veltri","Amen Ramesses","Jay Warren","Deanna Benner","Mark Johnson","Taiwo Oluyemo","White / Caucasian","Woman",37,91
+1,"nursing","low","control",0,0,0,3,"Molly Mahler","Carlos Miranda","Deanna Benner","Mark Johnson","Amanda Veltri","Taiwo Oluyemo","Eliza Macken","Asian / Pacific Islander","Man",40,91
+1,"surgeon","low","control",1,0,0,2,"Alan Cheung","Patroklos Pappas","Karen Horvath","Abraham Shaked","Lucy Wibbenmeyer","John Golfinos","Carolyn Majors","Hispanic / Latinx","Non-binary",26,91
+1,"nursing","high","treat",0,1,1,4,"Kathy O'Gara","Mark Johnson","Jasmine Humphrey","Stephane Pierre","Alyson Solloway","Molly Mahler","Madeline Travis","White / Caucasian","Man",26,91
+0,"surgeon","low","control",1,0,0,2,"Laurence Yee","Karen Horvath","Alan Cheung","Patroklos Pappas","Asishana Osho","Lucy Wibbenmeyer","John Golfinos","Black or African American","Man",35,91
+1,"surgeon","high","treat",1,1,1,3,"Abraham Shaked","Daniel Lu","Juan Castillo","Karen Horvath","Lucy Wibbenmeyer","Nervin Fanous","Maria Bell","White / Caucasian","Woman",34,91
+0,"nursing","low","control",0,0,0,3,"Eliza Macken","Bailey Pierce","Jay Warren","Jeremy Blount","Molly Mahler","Ryan Bresnahan","Thomas Horton","White / Caucasian","Man",34,91
+0,"nursing","high","control",0,1,0,4,"Alyson Solloway","Elsie Jolade","Deanna Benner","Mark Johnson","Jasmine Humphrey","Jeremy Blount","Carlos Miranda","White / Caucasian","Woman",74,91
+1,"nursing","low","treat",0,0,1,2,"Joseph Wright","Deanna Benner","Carlos Miranda","Jay Warren","Amen Ramesses","Molly Mahler","Amanda Veltri","White / Caucasian","Man",70,91
+0,"nursing","low","treat",0,0,1,3,"Taiwo Oluyemo","Amanda Veltri","Deanna Benner","Molly Mahler","Joseph Wright","Mark Johnson","Jeremy Blount","White / Caucasian","Woman",36,91
+0,"surgeon","low","control",1,0,0,1,"Laurence Yee","Abraham Shaked","John Golfinos","Patroklos Pappas","Carolyn Majors","David Moore","Alan Cheung","Asian / Pacific Islander","Man",34,91
+1,"nursing","high","control",0,1,0,5,"Molly Mahler","Alyson Solloway","Amanda Veltri","Ryan McMahon","Camille Barnes","Kathy O'Gara","Jasmine Humphrey","White / Caucasian","Woman",37,91
+1,"nursing","high","control",0,1,0,4,"Carlos Miranda","Elsie Jolade","Molly Mahler","Mark Johnson","Deanna Benner","Kathy O'Gara","Madeline Travis","White / Caucasian","Man",72,91
+0,"surgeon","low","treat",1,0,1,3,"Steven Beer","Hoang Nguyen","Elizabeth Arena","Daniel Lu","Crystal Alvarez","Karen Horvath","Alan Cheung","Hispanic / Latinx","Man",31,91
+0,"nursing","high","treat",0,1,1,6,"Mary Roberge","Madeline Travis","Deanna Benner","Morgan Fischer","Elsie Jolade","Jasmine Humphrey","Jeremy Blount","Black or African American","Man",42,91
+1,"nursing","low","treat",0,0,1,3,"Taiwo Oluyemo","Molly Mahler","Carlos Miranda","Deanna Benner","Amanda Veltri","Amen Ramesses","Bailey Pierce","White / Caucasian","Man",51,91
+0,"nursing","low","control",0,0,0,2,"Jeremy Blount","Stephane Pierre-Antoine","Ryan Bresnahan","Zachary Krim","Bailey Pierce","Molly Mahler","Jay Warren","White / Caucasian","Woman",52,91
+1,"surgeon","low","treat",1,0,1,2,"Lucy Wibbenmeyer","Patroklos Pappas","Karen Horvath","Adam Roy","Juan Castillo","Alan Cheung","Carolyn Majors","White / Caucasian","Woman",42,91
+1,"surgeon","high","treat",1,1,1,4,"Nervin Fanous","Jenny Zhang","Steve Kim","Lucy Wibbenmeyer","Daniel Lu","Anne Le","Maria Bell","Black or African American","Man",64,91
+1,"surgeon","low","control",1,0,0,2,"Alan Cheung","Lucy Wibbenmeyer","David Moore","Elizabeth Arena","Donald Annino","Juan Castillo","Carolyn Majors","White / Caucasian","Man",49,91
+1,"nursing","high","treat",0,1,1,6,"Morgan Fischer","Margo Brown","Molly Mahler","Camille Barnes","Bailey Pierce","Alyson Solloway","Eliza Macken","Hispanic / Latinx","Woman",35,91
+0,"nursing","low","control",0,0,0,2,"Molly Mahler","Dylan Guiney","Deanna Benner","Carlos Miranda","Mark Johnson","Amen Ramesses","Taiwo Oluyemo","White / Caucasian","Man",45,91
+1,"surgeon","low","control",1,0,0,2,"Brad Olberding","Lucy Wibbenmeyer","David Moore","Alan Cheung","Karen Horvath","Abraham Shaked","Elizabeth Arena","White / Caucasian","Woman",74,91
+1,"surgeon","high","treat",1,1,1,3,"Juan Castillo","Lucy Wibbenmeyer","Daniel Lu","Abraham Shaked","Alison Wilson","Rachel Beard","Karen Horvath","White / Caucasian","Woman",64,91
+1,"surgeon","low","treat",1,0,1,2,"Crystal Alvarez","Karen Horvath","Steven Beer","Abraham Shaked","Donald Annino","John Golfinos","Carolyn Majors","White / Caucasian","Woman",37,91
+0,"surgeon","high","control",1,1,0,2,"Steve Kim","Abraham Shaked","Philip Alexander","Elizabeth Arena","Juan Castillo","Alison Wilson","Daniel Lu","Hispanic / Latinx","Man",31,91
+0,"surgeon","low","control",1,0,0,2,"Elizabeth Arena","David Moore","Steven Beer","Carolyn Majors","Brad Olberding","Patroklos Pappas","Mikael Petrosyan","White / Caucasian","Woman",32,91
+1,"nursing","high","treat",0,1,1,5,"Carlos Miranda","Jasmine Humphrey","Molly Mahler","Kathy O'Gara","Madeline Travis","Elsie Jolade","Deanna Benner","White / Caucasian","Man",66,91
+1,"surgeon","high","control",1,1,0,4,"Karen Horvath","Alison Wilson","Carolyn Majors","Anne Le","Daniel Lu","Philip Alexander","Breehan Chancellor","White / Caucasian","Man",34,91
+0,"nursing","low","control",0,0,0,2,"Amen Ramesses","Deanna Benner","Bailey Pierce","Thomas Horton","Carlos Miranda","Jay Warren","Dylan Guiney","White / Caucasian","Woman",68,91
+0,"nursing","high","treat",0,1,1,5,"Kathy O'Gara","Jeremy Blount","Elsie Jolade","Molly Mahler","Deanna Benner","Charlotte Tiley","Carlos Miranda","White / Caucasian","Man",28,91
+0,"nursing","low","control",0,0,0,3,"Carlos Miranda","Molly Mahler","Deanna Benner","Mark Johnson","Amanda Veltri","Amen Ramesses","Joseph Wright","Asian / Pacific Islander","Woman",43,91
+1,"nursing","high","control",0,1,0,4,"Deanna Benner","Carlos Miranda","Kathy O'Gara","Mark Johnson","Mary Roberge","Camille Barnes","Molly Mahler","White / Caucasian","Woman",69,91
+0,"nursing","high","control",0,1,0,6,"Kathy O'Gara","Molly Mahler","Deanna Benner","Jasmine Humphrey","Alyson Solloway","Eliza Macken","Mark Johnson","White / Caucasian","Man",54,91
+1,"nursing","high","treat",0,1,1,3,"Deanna Benner","Kathy O'Gara","Stephane Pierre","Carlos Miranda","Elsie Jolade","Jeremy Blount","Alyson Solloway","Black or African American","Woman",32,91
+0,"surgeon","high","control",1,1,0,4,"Maria Bell","Lucy Wibbenmeyer","Abraham Shaked","Philip Alexander","Carolyn Majors","Karen Horvath","Juan Castillo","White / Caucasian","Woman",59,91
+0,"nursing","low","control",0,0,0,4,"Molly Mahler","Mark Johnson","Joseph Wright","Deanna Benner","Amanda Veltri","Eliza Macken","Dylan Guiney","White / Caucasian","Woman",50,91
+1,"nursing","high","treat",0,1,1,3,"Kathy O'Gara","Carlos Miranda","Elsie Jolade","Mark Johnson","Stephane Pierre","Deanna Benner","Amanda Veltri","Hispanic / Latinx","Man",39,91
+1,"surgeon","high","treat",1,1,1,5,"Breehan Chancellor","Rachel Beard","Lindsey Prescher","Anne Le","Abraham Shaked","Carolyn Majors","Maria Bell","White / Caucasian","Man",37,91
+1,"surgeon","high","treat",1,1,1,4,"Karen Horvath","Michelle Carlson","Abraham Shaked","Alison Wilson","Lucy Wibbenmeyer","Philip Alexander","Carolyn Majors","White / Caucasian","Woman",36,91
+0,"nursing","low","control",0,0,0,2,"Deanna Benner","Carlos Miranda","Taiwo Oluyemo","Molly Mahler","Mark Johnson","Joseph Wright","Amen Ramesses","Hispanic / Latinx","Woman",31,91
+1,"nursing","low","treat",0,0,1,3,"Amen Ramesses","Taiwo Oluyemo","Amanda Veltri","Jay Warren","Molly Mahler","Eliza Macken","Morgan Fischer","White / Caucasian","Woman",56,91
+0,"nursing","low","treat",0,0,1,3,"Amanda Veltri","Morgan Fischer","Stephane Pierre-Antoine","Deanna Benner","Brian O'Connor","Girma Mekonen","Amen Ramesses","White / Caucasian","Woman",57,91
+0,"nursing","high","control",0,1,0,6,"Deanna Benner","Kathy O'Gara","Elsie Jolade","Morgan Fischer","Alyson Solloway","Molly Mahler","Carlos Miranda","Hispanic / Latinx","Man",65,91
+0,"nursing","high","treat",0,1,1,5,"Elsie Jolade","Carlos Miranda","Morgan Fischer","Molly Mahler","Deanna Benner","Alyson Solloway","Stephane Pierre","White / Caucasian","Woman",37,91
+0,"surgeon","low","treat",1,0,1,1,"Laurence Yee","Patroklos Pappas","Steven Beer","Lucy Wibbenmeyer","Donald Annino","Adam Roy","Abraham Shaked","White / Caucasian","Woman",20,91
+1,"surgeon","high","control",1,1,0,3,"Abraham Shaked","Steve Kim","Daniel Lu","Michelle Carlson","Alison Wilson","Crystal Alvarez","Jenny Zhang","White / Caucasian","Woman",77,91
+0,"surgeon","high","treat",1,1,1,4,"Elizabeth Arena","Breehan Chancellor","Jenny Zhang","Katherine Albutt","Daniel Lu","Philip Alexander","Abraham Shaked","White / Caucasian","Woman",40,91
+1,"nursing","low","control",0,0,0,2,"Carlos Miranda","Amanda Veltri","Molly Mahler","Joseph Wright","Dylan Guiney","Taiwo Oluyemo","Morgan Fischer","White / Caucasian","Woman",58,91
+1,"nursing","low","treat",0,0,1,2,"Mark Johnson","Deanna Benner","Carlos Miranda","Taiwo Oluyemo","Amanda Veltri","Amen Ramesses","Morgan Fischer","White / Caucasian","Woman",30,91
+1,"surgeon","high","treat",1,1,1,2,"Juan Castillo","Daniel Lu","Philip Alexander","Abraham Shaked","Breehan Chancellor","Katherine Albutt","Michelle Nguyen","White / Caucasian","Man",54,91
+1,"nursing","high","treat",0,1,1,5,"Kathy O'Gara","Jasmine Humphrey","Mark Johnson","Molly Mahler","Elsie Jolade","Alyson Solloway","Madeline Travis","White / Caucasian","Woman",46,91
+0,"nursing","low","treat",0,0,1,6,"Molly Mahler","Amanda Veltri","Deanna Benner","Eliza Macken","Morgan Fischer","Bailey Pierce","Mark Johnson","Asian / Pacific Islander","Man",72,91
+1,"nursing","high","treat",0,1,1,3,"Stephane Pierre","Jasmine Humphrey","Carlos Miranda","Amanda Veltri","Elsie Jolade","Mark Johnson","Molly Mahler","Black or African American","Woman",38,91
+1,"nursing","high","control",0,1,0,4,"Elsie Jolade","Mark Johnson","Deanna Benner","Kathy O'Gara","Jeremy Blount","Camille Barnes","Niki White","Hispanic / Latinx","Man",30,91
+1,"nursing","low","control",0,0,0,3,"Deanna Benner","Carlos Miranda","Molly Mahler","Amen Ramesses","Morgan Fischer","Taiwo Oluyemo","Amanda Veltri","White / Caucasian","Man",43,91
+0,"surgeon","low","control",1,0,0,3,"Laurence Yee","Karen Horvath","Mikael Petrosyan","Adam Roy","Crystal Alvarez","Rachel Beard","Asishana Osho","White / Caucasian","Woman",27,91
+1,"surgeon","high","treat",1,1,1,3,"Alison Wilson","Lucy Wibbenmeyer","Philip Alexander","Steve Kim","Rachel Beard","Juan Castillo","Karen Horvath","White / Caucasian","Woman",45,91
+1,"surgeon","low","treat",1,0,1,2,"Laurence Yee","John Golfinos","Patroklos Pappas","Karen Horvath","Lucy Wibbenmeyer","Alan Cheung","Carolyn Majors","Asian / Pacific Islander","Man",45,91
+0,"surgeon","high","treat",1,1,1,3,"Steve Kim","Lucy Wibbenmeyer","Abraham Shaked","Daniel Lu","Michelle Carlson","Alison Wilson","Juan Castillo","White / Caucasian","Woman",60,91
+0,"surgeon","high","control",1,1,0,4,"Philip Alexander","Adam Roy","Amy DeKerlegand","Alison Wilson","Michelle Carlson","Jenny Zhang","Abraham Shaked","Asian / Pacific Islander","Woman",40,91
+0,"surgeon","low","control",1,0,0,1,"Laurence Yee","Lucy Wibbenmeyer","Steven Beer","Daniel Lu","John Golfinos","Abraham Shaked","Alan Cheung","White / Caucasian","Woman",46,91
+1,"nursing","low","control",0,0,0,2,"Amanda Veltri","Morgan Fischer","Zachary Krim","Stephane Pierre-Antoine","Girma Mekonen","Jeremy Blount","Deanna Benner","White / Caucasian","Woman",37,91
+0,"surgeon","low","treat",1,0,1,3,"Carolyn Majors","Karen Horvath","Lucy Wibbenmeyer","Alan Cheung","Laurence Yee","Patroklos Pappas","John Golfinos","White / Caucasian","Woman",79,91
+1,"nursing","low","control",0,0,0,3,"Carlos Miranda","Stephane Pierre-Antoine","Deanna Benner","Eliza Macken","Mark Johnson","Amanda Veltri","Molly Mahler","White / Caucasian","Woman",23,91
+1,"nursing","high","control",0,1,0,4,"Elsie Jolade","Molly Mahler","Stephane Pierre","Kathy O'Gara","Carlos Miranda","Madeline Travis","Jasmine Humphrey","White / Caucasian","Man",73,91
+0,"nursing","high","control",0,1,0,5,"Jasmine Humphrey","Alyson Solloway","Molly Mahler","Deanna Benner","Mark Johnson","Elsie Jolade","Carlos Miranda","Asian / Pacific Islander","Man",35,91
+0,"surgeon","low","control",1,0,0,3,"Lucy Wibbenmeyer","Elizabeth Arena","Karen Horvath","Asishana Osho","Philip Alexander","Daniel Lu","Mikael Petrosyan","Hispanic / Latinx","Woman",41,91
+0,"surgeon","low","treat",1,0,1,2,"Alan Cheung","Patroklos Pappas","Karen Horvath","Laurence Yee","Carolyn Majors","Philip Alexander","John Golfinos","White / Caucasian","Man",26,91
+1,"surgeon","low","treat",1,0,1,2,"Donald Annino","Karen Horvath","Philip Alexander","Mikael Petrosyan","Steven Beer","Lucy Wibbenmeyer","Elizabeth Arena","White / Caucasian","Man",35,91
+0,"surgeon","low","control",1,0,0,2,"Juan Castillo","Karen Horvath","John Golfinos","Lucy Wibbenmeyer","Steven Beer","Laurence Yee","Alan Cheung","White / Caucasian","Woman",44,91
+0,"nursing","low","treat",0,0,1,3,"Deanna Benner","Ryan McMahon","Matthew Brooks","Amanda Veltri","Stephane Pierre-Antoine","Molly Mahler","Mathew Krueger","White / Caucasian","Woman",69,91
+0,"nursing","low","treat",0,0,1,2,"Mathew Krueger","Molly Mahler","Deanna Benner","Dylan Guiney","Amen Ramesses","Carlos Miranda","Mark Johnson","White / Caucasian","Woman",39,91
+0,"nursing","high","treat",0,1,1,4,"Stephane Pierre","Madeline Travis","Alyson Solloway","Carlos Miranda","Deanna Benner","Elsie Jolade","Mark Johnson","White / Caucasian","Woman",55,91
+0,"nursing","high","treat",0,1,1,5,"Jasmine Humphrey","Alyson Solloway","Kathy O'Gara","Elsie Jolade","Mark Johnson","Madeline Travis","Carlos Miranda","White / Caucasian","Woman",38,91
+1,"surgeon","high","control",1,1,0,3,"Alison Wilson","Nervin Fanous","Steve Kim","Adam Roy","Amy DeKerlegand","Daniel Lu","Michelle Carlson","Asian / Pacific Islander","Woman",26,91
+0,"surgeon","high","treat",1,1,1,3,"Nervin Fanous","Steve Kim","Alison Wilson","Abraham Shaked","Philip Alexander","Anne Le","Daniel Lu","Black or African American","Woman",48,91
+0,"nursing","low","control",0,0,0,3,"Molly Mahler","Deanna Benner","Amanda Veltri","Mark Johnson","Amen Ramesses","Carlos Miranda","Joseph Wright","White / Caucasian","Man",54,91
+1,"surgeon","low","control",1,0,0,1,"Patroklos Pappas","Alan Cheung","Laurence Yee","John Golfinos","Karen Horvath","Abraham Shaked","Lucy Wibbenmeyer","White / Caucasian","Man",28,91
+0,"nursing","low","control",0,0,0,3,"Amanda Veltri","Deanna Benner","Mark Johnson","Amen Ramesses","Dylan Guiney","Molly Mahler","Carlos Miranda","White / Caucasian","Woman",42,91
+1,"surgeon","high","control",1,1,0,6,"Elizabeth Arena","Michelle Carlson","Anne Le","Karen Horvath","Alison Wilson","Maria Bell","Nervin Fanous","White / Caucasian","Woman",35,91
+0,"surgeon","low","treat",1,0,1,2,"Steve Kim","Elizabeth Arena","David Moore","Patroklos Pappas","Brad Olberding","Crystal Alvarez","Laurence Yee","Black or African American","Man",37,91
+1,"nursing","low","control",0,0,0,4,"Eliza Macken","Bailey Pierce","Morgan Fischer","Deanna Benner","Carlos Miranda","Dylan Guiney","Molly Mahler","White / Caucasian","Man",46,91
+0,"surgeon","low","treat",1,0,1,3,"Alan Cheung","John Golfinos","Karen Horvath","Carolyn Majors","Asishana Osho","Crystal Alvarez","Laurence Yee","White / Caucasian","Man",27,91
+0,"nursing","low","treat",0,0,1,3,"Carlos Miranda","Molly Mahler","Deanna Benner","Amen Ramesses","Mark Johnson","Amanda Veltri","Jay Warren","White / Caucasian","Woman",40,91
+1,"surgeon","low","control",1,0,0,3,"Carolyn Majors","Asishana Osho","Elizabeth Arena","Lucy Wibbenmeyer","Donald Annino","Juan Castillo","Rachel Beard","White / Caucasian","Man",47,91
+0,"surgeon","low","control",1,0,0,1,"Asishana Osho","Carolyn Majors","Daniel Lu","Mikael Petrosyan","Adam Roy","Abraham Shaked","Laurence Yee","White / Caucasian","Woman",52,91
+1,"nursing","high","treat",0,1,1,4,"Mark Johnson","Kathy O'Gara","Elsie Jolade","Alyson Solloway","Jeremy Blount","Molly Mahler","Morgan Fischer","White / Caucasian","Woman",44,91
+0,"surgeon","low","treat",1,0,1,2,"Steve Kim","Steven Beer","Carolyn Majors","Lucy Wibbenmeyer","Brock Hewitt","Mikael Petrosyan","Daniel Lu","White / Caucasian","Woman",30,91
+0,"nursing","low","treat",0,0,1,2,"Deanna Benner","Carlos Miranda","Molly Mahler","Joseph Wright","Amen Ramesses","Mark Johnson","Taiwo Oluyemo","Black or African American","Woman",60,91
+1,"nursing","low","control",0,0,0,2,"Amen Ramesses","Jay Warren","Amanda Veltri","Deanna Benner","Dylan Guiney","Carlos Miranda","Molly Mahler","White / Caucasian","Woman",38,91
+1,"nursing","low","control",0,0,0,3,"Bailey Pierce","Jeremy Blount","Jay Warren","Molly Mahler","Taiwo Oluyemo","Amanda Veltri","Eliza Macken","White / Caucasian","Man",25,91
+0,"nursing","low","treat",0,0,1,3,"Jeremy Blount","Deanna Benner","Amanda Veltri","Matthew Brooks","Eliza Macken","Stephane Pierre-Antoine","Taiwo Oluyemo","White / Caucasian","Woman",31,91
+0,"surgeon","high","treat",1,1,1,3,"Michelle Nguyen","Juan Castillo","Adam Roy","Maria Bell","Philip Alexander","Carolyn Majors","Abraham Shaked","White / Caucasian","Man",69,91
+0,"nursing","high","control",0,1,0,4,"Stephane Pierre","Elsie Jolade","Madeline Travis","Abigail Brown","Jeremy Blount","Mary Roberge","Mark Johnson","White / Caucasian","Woman",33,91
+0,"nursing","low","control",0,0,0,4,"Deanna Benner","Taiwo Oluyemo","Amanda Veltri","Morgan Fischer","Dylan Guiney","Molly Mahler","Joseph Wright","Black or African American","Woman",45,91
+1,"nursing","high","control",0,1,0,4,"Elsie Jolade","Kathy O'Gara","Mark Johnson","Carlos Miranda","Deanna Benner","Molly Mahler","Madeline Travis","White / Caucasian","Woman",43,91
+0,"surgeon","high","treat",1,1,1,5,"Katherine Albutt","Alison Wilson","Svjetlana Lozo","Abraham Shaked","Michelle Carlson","Rachel Beard","Daniel Lu","Black or African American","Man",23,91
+0,"nursing","low","treat",0,0,1,2,"Deanna Benner","Carlos Miranda","Molly Mahler","Amen Ramesses","Mark Johnson","Taiwo Oluyemo","Joseph Wright","Black or African American","Woman",38,91
+1,"surgeon","high","control",1,1,0,5,"Lindsey Prescher","Alison Wilson","Abraham Shaked","Michelle Carlson","Carolyn Majors","Karen Horvath","Nervin Fanous","White / Caucasian","Woman",50,91
+1,"surgeon","high","treat",1,1,1,6,"Nervin Fanous","Alison Wilson","Maria Bell","Carolyn Majors","Karen Horvath","Michelle Carlson","Lucy Wibbenmeyer","White / Caucasian","Man",34,91
+0,"surgeon","high","control",1,1,0,4,"Lucy Wibbenmeyer","Philip Alexander","Carolyn Majors","Juan Castillo","Elizabeth Arena","Nervin Fanous","Abraham Shaked","White / Caucasian","Woman",38,91
+1,"nursing","high","treat",0,1,1,3,"Carlos Miranda","Molly Mahler","Mark Johnson","Madeline Travis","Jeremy Blount","Kathy O'Gara","Elsie Jolade","White / Caucasian","Woman",58,91
+1,"surgeon","high","control",1,1,0,4,"Danelle Bertozzi","Rachel Beard","Anne Le","Adam Roy","Steve Kim","Crystal Alvarez","Amy DeKerlegand","White / Caucasian","Man",48,91
+0,"nursing","low","treat",0,0,1,4,"Molly Mahler","Morgan Fischer","James Mangalus","Carlos Miranda","Amanda Veltri","Eliza Macken","Amen Ramesses","White / Caucasian","Woman",39,91
+0,"nursing","high","treat",0,1,1,5,"Elsie Jolade","Kathy O'Gara","Carlos Miranda","Molly Mahler","Deanna Benner","Madeline Travis","Mark Johnson","White / Caucasian","Man",58,91
+0,"nursing","high","control",0,1,0,5,"Molly Mahler","Madeline Travis","Elsie Jolade","Carlos Miranda","Kathy O'Gara","Deanna Benner","Mark Johnson","White / Caucasian","Woman",52,91
+1,"surgeon","low","control",1,0,0,2,"Karen Horvath","Lucy Wibbenmeyer","Patroklos Pappas","Alan Cheung","Laurence Yee","John Golfinos","Carolyn Majors","Black or African American","Woman",33,91
+1,"nursing","high","treat",0,1,1,5,"Elsie Jolade","Kathy O'Gara","Molly Mahler","Carlos Miranda","Deanna Benner","Abigail Brown","Charlotte Tiley","Black or African American","Man",27,91
+0,"surgeon","low","treat",1,0,1,2,"Abraham Shaked","Lucy Wibbenmeyer","Crystal Alvarez","Asishana Osho","Donald Annino","Laurence Yee","John Golfinos","White / Caucasian","Man",54,91
+0,"surgeon","high","treat",1,1,1,2,"Lindsey Prescher","Daniel Lu","Juan Castillo","Breehan Chancellor","Steve Kim","Abraham Shaked","Philip Alexander","White / Caucasian","Man",45,91
+1,"surgeon","low","treat",1,0,1,2,"Carolyn Majors","Elizabeth Arena","David Moore","Daniel Lu","Hoang Nguyen","Steven Beer","Rachel Beard","White / Caucasian","Woman",32,91
+1,"surgeon","high","control",1,1,0,4,"Elizabeth Arena","Carolyn Majors","Abraham Shaked","Karen Horvath","Anne Le","Daniel Lu","Breehan Chancellor","White / Caucasian","Man",32,91
+1,"surgeon","high","control",1,1,0,2,"Philip Alexander","Abraham Shaked","Carolyn Majors","Alison Wilson","Daniel Lu","Juan Castillo","Maria Bell","White / Caucasian","Woman",38,91
+0,"surgeon","low","treat",1,0,1,2,"Steven Beer","Elizabeth Arena","Carolyn Majors","Alan Cheung","Mikael Petrosyan","Sumeet Kadakia","Patroklos Pappas","White / Caucasian","Woman",41,91
+0,"surgeon","high","treat",1,1,1,4,"Carolyn Majors","Karen Horvath","Abraham Shaked","Philip Alexander","Lucy Wibbenmeyer","Michelle Carlson","Daniel Lu","Black or African American","Woman",24,91
+0,"nursing","high","treat",0,1,1,5,"Molly Mahler","Madeline Travis","Alyson Solloway","Stephane Pierre","Deanna Benner","Elsie Jolade","Carlos Miranda","White / Caucasian","Woman",48,91
+0,"surgeon","low","treat",1,0,1,3,"Alan Cheung","Patroklos Pappas","Lucy Wibbenmeyer","Karen Horvath","Steven Beer","Carolyn Majors","John Golfinos","White / Caucasian","Woman",37,91
+0,"nursing","high","control",0,1,0,5,"Eliza Macken","Ryan McMahon","Niki White","Kathy O'Gara","Jasmine Humphrey","Elsie Jolade","Carlos Miranda","White / Caucasian","Man",33,91
+1,"nursing","high","control",0,1,0,5,"Jasmine Humphrey","Deanna Benner","Elsie Jolade","Molly Mahler","Kathy O'Gara","Jeremy Blount","Madeline Travis","Black or African American","Man",25,91
+0,"nursing","low","treat",0,0,1,4,"Amanda Veltri","Joseph Wright","Deanna Benner","Bailey Pierce","Mathew Krueger","Molly Mahler","David Lopez","Black or African American","Woman",28,91
+0,"nursing","low","control",0,0,0,3,"Dylan Guiney","Brian O'Connor","Mathew Krueger","Morgan Fischer","Molly Mahler","Deanna Benner","Mark Johnson","White / Caucasian","Woman",40,91
+0,"surgeon","low","control",1,0,0,1,"Philip Alexander","Juan Castillo","Abraham Shaked","Daniel Lu","Mikael Petrosyan","Lucy Wibbenmeyer","Patroklos Pappas","White / Caucasian","Woman",43,91
+1,"nursing","high","control",0,1,0,4,"Deanna Benner","Kathy O'Gara","Jeremy Blount","Molly Mahler","Elsie Jolade","Carlos Miranda","Alyson Solloway","White / Caucasian","Man",62,91
+1,"surgeon","high","treat",1,1,1,3,"Juan Castillo","Elizabeth Arena","Abraham Shaked","Nervin Fanous","Maria Bell","Daniel Lu","Lucy Wibbenmeyer","White / Caucasian","Man",66,91
+0,"nursing","low","control",0,0,0,3,"Amen Ramesses","Carlos Miranda","Mark Johnson","Molly Mahler","Deanna Benner","Amanda Veltri","Jeremy Blount","White / Caucasian","Woman",64,91
+0,"nursing","low","control",0,0,0,4,"Deanna Benner","Carlos Miranda","Bailey Pierce","Eliza Macken","Amanda Veltri","Amen Ramesses","Thomas Horton","White / Caucasian","Man",46,91
+1,"nursing","high","treat",0,1,1,3,"Mark Johnson","Elsie Jolade","Kathy O'Gara","Abigail Brown","James Mangalus","Stephane Pierre","Deanna Benner","White / Caucasian","Woman",49,91
+0,"surgeon","low","control",1,0,0,2,"Lucy Wibbenmeyer","Alan Cheung","John Golfinos","Abraham Shaked","Carolyn Majors","Philip Alexander","Steven Beer","White / Caucasian","Woman",56,91
+0,"surgeon","high","control",1,1,0,5,"Abraham Shaked","Maria Bell","Karen Horvath","Alison Wilson","Michelle Carlson","Lucy Wibbenmeyer","Philip Alexander","Asian / Pacific Islander","Woman",51,91
+0,"nursing","low","control",0,0,0,2,"Deanna Benner","Dylan Guiney","Jeremy Blount","Amen Ramesses","Molly Mahler","Mark Johnson","Taiwo Oluyemo","White / Caucasian","Woman",31,91
+0,"surgeon","high","treat",1,1,1,3,"Daniel Lu","Karen Horvath","Amy DeKerlegand","Michelle Nguyen","Juan Castillo","Adam Roy","Abraham Shaked","White / Caucasian","Man",34,91
+1,"nursing","high","treat",0,1,1,4,"Jasmine Humphrey","Elsie Jolade","Colinda Cole-French","Deanna Benner","Ryan McMahon","Mark Johnson","Alyson Solloway","Asian / Pacific Islander","Woman",53,91
+1,"nursing","high","control",0,1,0,6,"Alyson Solloway","Camille Barnes","Eliza Macken","Molly Mahler","Elsie Jolade","Deanna Benner","Kathy O'Gara","White / Caucasian","Woman",47,91
+1,"nursing","low","treat",0,0,1,2,"Amen Ramesses","Carlos Miranda","Molly Mahler","Taiwo Oluyemo","Joseph Wright","Deanna Benner","Amanda Veltri","Hispanic / Latinx","Woman",38,91
+1,"nursing","low","treat",0,0,1,2,"Mark Johnson","Molly Mahler","Taiwo Oluyemo","James Mangalus","Amanda Veltri","Carlos Miranda","Deanna Benner","White / Caucasian","Man",41,91
+0,"nursing","high","control",0,1,0,3,"James Mangalus","Ryan McMahon","Alyson Solloway","Molly Mahler","Jessica Andrews","Jeremy Blount","Carlos Miranda","Black or African American","Man",28,91
+1,"surgeon","high","treat",1,1,1,5,"Jenny Zhang","Abraham Shaked","Alison Wilson","Danelle Bertozzi","Anne Le","Crystal Alvarez","Katherine Albutt","White / Caucasian","Man",44,91
+0,"nursing","low","treat",0,0,1,2,"Carlos Miranda","Joseph Wright","Mark Johnson","Amen Ramesses","Molly Mahler","Deanna Benner","Dylan Guiney","White / Caucasian","Woman",25,91
+0,"nursing","low","control",0,0,0,1,"Zachary Krim","Morgan Fischer","Ryan McMahon","Mark Johnson","David Lopez","Jay Warren","Jeremy Blount","Hispanic / Latinx","Man",30,91
+0,"surgeon","low","control",1,0,0,2,"John Golfinos","Abraham Shaked","Carolyn Majors","Lucy Wibbenmeyer","Daniel Lu","David Moore","Mikael Petrosyan","White / Caucasian","Woman",54,91
+1,"surgeon","high","treat",1,1,1,6,"Karen Horvath","Michelle Nguyen","Elizabeth Arena","Lindsey Prescher","Breehan Chancellor","Carolyn Majors","Katherine Albutt","White / Caucasian","Woman",36,91
+1,"nursing","low","treat",0,0,1,1,"Taiwo Oluyemo","Jay Warren","Amen Ramesses","Dylan Guiney","Deanna Benner","Joseph Wright","Molly Mahler","Hispanic / Latinx","Man",31,91
+1,"nursing","low","control",0,0,0,2,"Dylan Guiney","Molly Mahler","Mark Johnson","Joseph Wright","Taiwo Oluyemo","Amanda Veltri","Deanna Benner","White / Caucasian","Man",47,91
+0,"nursing","high","control",0,1,0,4,"Eliza Macken","Camille Barnes","Stephane Pierre","Deanna Benner","Jeremy Blount","Elsie Jolade","James Mangalus","White / Caucasian","Man",38,91
+1,"nursing","high","treat",0,1,1,4,"Elsie Jolade","Jasmine Humphrey","Stephane Pierre","Carlos Miranda","Kathy O'Gara","Molly Mahler","Deanna Benner","White / Caucasian","Woman",28,91
+1,"surgeon","high","control",1,1,0,5,"Rachel Beard","Daniel Lu","Michelle Carlson","Maria Bell","Katherine Albutt","Lucy Wibbenmeyer","Jenny Zhang","White / Caucasian","Woman",50,91
+1,"nursing","high","treat",0,1,1,4,"Kathy O'Gara","Jasmine Humphrey","Jeremy Blount","Carlos Miranda","Deanna Benner","Abigail Brown","Morgan Fischer","Black or African American","Man",26,91
+1,"surgeon","low","treat",1,0,1,2,"Mikael Petrosyan","Lucy Wibbenmeyer","Alan Cheung","Hoang Nguyen","Karen Horvath","Adam Roy","Rachel Beard","White / Caucasian","Man",26,91
+1,"surgeon","high","control",1,1,0,5,"Daniel Lu","Elizabeth Arena","Michelle Nguyen","Lindsey Prescher","Breehan Chancellor","Carolyn Majors","Alison Wilson","White / Caucasian","Woman",44,91
+0,"nursing","high","treat",0,1,1,4,"Kathy O'Gara","Molly Mahler","Carlos Miranda","Mark Johnson","Alyson Solloway","Elsie Jolade","James Mangalus","White / Caucasian","Man",47,91
+0,"surgeon","low","treat",1,0,1,2,"Karen Horvath","Sumeet Kadakia","Abraham Shaked","John Golfinos","Carolyn Majors","Laurence Yee","Patroklos Pappas","White / Caucasian","Man",42,91
+1,"nursing","high","control",0,1,0,3,"Jasmine Humphrey","Deanna Benner","James Mangalus","Ryan McMahon","Camille Barnes","Jeremy Blount","Morgan Fischer","American Indian or Alaskan Native","Woman",52,91
+0,"surgeon","high","treat",1,1,1,4,"Rachel Beard","Anne Le","Adam Roy","Danelle Bertozzi","Katherine Albutt","Abraham Shaked","Philip Alexander","White / Caucasian","Man",48,91
+0,"surgeon","low","treat",1,0,1,1,"Laurence Yee","John Golfinos","Alan Cheung","Karen Horvath","Patroklos Pappas","Abraham Shaked","Donald Annino","White / Caucasian","Woman",64,91
+0,"surgeon","low","control",1,0,0,2,"Alan Cheung","Asishana Osho","Carolyn Majors","Steven Beer","Karen Horvath","Abraham Shaked","John Golfinos","White / Caucasian","Man",45,91
+0,"nursing","high","control",0,1,0,5,"Elsie Jolade","Niki White","Mark Johnson","Eliza Macken","Madeline Travis","Bailey Pierce","Stephane Pierre","Black or African American","Woman",49,91
+1,"surgeon","high","treat",1,1,1,4,"Daniel Lu","Nervin Fanous","Lucy Wibbenmeyer","Katherine Albutt","Michelle Carlson","Abraham Shaked","Jenny Zhang","Asian / Pacific Islander","Woman",53,91
+0,"surgeon","low","control",1,0,0,2,"Laurence Yee","Alan Cheung","John Golfinos","Karen Horvath","Brad Olberding","Carolyn Majors","Asishana Osho","American Indian or Alaskan Native","Woman",54,91
+0,"nursing","low","treat",0,0,1,3,"Carlos Miranda","Molly Mahler","Mark Johnson","Deanna Benner","Amen Ramesses","Eliza Macken","Jay Warren","White / Caucasian","Woman",45,91
+1,"surgeon","low","treat",1,0,1,2,"Carolyn Majors","Elizabeth Arena","Alan Cheung","John Golfinos","Laurence Yee","Donald Annino","Lucy Wibbenmeyer","White / Caucasian","Woman",52,91
+1,"nursing","high","treat",0,1,1,4,"Charlotte Tiley","Elsie Jolade","Stephane Pierre","Madeline Travis","Kathy O'Gara","Jeremy Blount","Deanna Benner","White / Caucasian","Woman",57,91
+0,"nursing","low","treat",0,0,1,3,"Stephane Pierre-Antoine","Mark Johnson","Eliza Macken","Bailey Pierce","Dylan Guiney","Deanna Benner","Taiwo Oluyemo","White / Caucasian","Woman",63,91
+0,"surgeon","low","control",1,0,0,2,"Philip Alexander","Steven Beer","Lucy Wibbenmeyer","Karen Horvath","Patroklos Pappas","John Golfinos","Abraham Shaked","Asian / Pacific Islander","Man",34,91
+1,"nursing","high","treat",0,1,1,4,"Carlos Miranda","Molly Mahler","Camille Barnes","Amanda Veltri","Stephane Pierre","Madeline Travis","Margo Brown","White / Caucasian","Woman",60,91
+0,"surgeon","high","control",1,1,0,4,"Abraham Shaked","Svjetlana Lozo","Nervin Fanous","Adam Roy","Karen Horvath","Lindsey Prescher","Philip Alexander","Black or African American","Man",68,91
+0,"surgeon","low","treat",1,0,1,2,"Laurence Yee","Steve Kim","Rachel Beard","Steven Beer","Asishana Osho","Karen Horvath","Alan Cheung","White / Caucasian","Woman",44,91
+0,"surgeon","low","control",1,0,0,1,"Mikael Petrosyan","Daniel Lu","David Moore","Carolyn Majors","Steven Beer","John Golfinos","Juan Castillo","Hispanic / Latinx","Man",50,91
+1,"nursing","low","treat",0,0,1,3,"Eliza Macken","Girma Mekonen","Mark Johnson","Amanda Veltri","Deanna Benner","Amen Ramesses","Molly Mahler","White / Caucasian","Woman",38,91
+1,"surgeon","high","treat",1,1,1,5,"Carolyn Majors","Lucy Wibbenmeyer","Anne Le","Svjetlana Lozo","Adam Roy","Lindsey Prescher","Amy DeKerlegand","White / Caucasian","Man",26,91
+0,"nursing","low","treat",0,0,1,2,"Molly Mahler","Carlos Miranda","Deanna Benner","Amen Ramesses","Mark Johnson","Joseph Wright","Taiwo Oluyemo","White / Caucasian","Man",25,91
+1,"nursing","high","control",0,1,0,4,"Molly Mahler","Deanna Benner","Elsie Jolade","Mark Johnson","Kathy O'Gara","Jeremy Blount","Colinda Cole-French","White / Caucasian","Man",42,91
+0,"surgeon","high","treat",1,1,1,3,"Philip Alexander","Juan Castillo","Anne Le","Karen Horvath","Nervin Fanous","Abraham Shaked","Daniel Lu","White / Caucasian","Woman",73,91
+1,"surgeon","high","control",1,1,0,3,"Karen Horvath","Michelle Carlson","Philip Alexander","Abraham Shaked","Juan Castillo","Nervin Fanous","Alison Wilson","White / Caucasian","Woman",27,91
+1,"surgeon","low","treat",1,0,1,3,"Karen Horvath","Carolyn Majors","Elizabeth Arena","Steven Beer","Asishana Osho","Hoang Nguyen","Lucy Wibbenmeyer","Black or African American","Woman",32,91
+1,"nursing","high","treat",0,1,1,5,"Deanna Benner","Alyson Solloway","Mark Johnson","Kathy O'Gara","Molly Mahler","Mary Roberge","Madeline Travis","White / Caucasian","Woman",43,91
+0,"nursing","low","control",0,0,0,4,"Morgan Fischer","Molly Mahler","Eliza Macken","Deanna Benner","Stephane Pierre-Antoine","Carlos Miranda","Joseph Wright","White / Caucasian","Man",48,91
+1,"nursing","high","control",0,1,0,5,"Amanda Veltri","Elsie Jolade","Carlos Miranda","Madeline Travis","Kathy O'Gara","Alyson Solloway","Jasmine Humphrey","White / Caucasian","Woman",51,91
+1,"surgeon","high","control",1,1,0,4,"Elizabeth Arena","Karen Horvath","Maria Bell","Daniel Lu","Anne Le","Abraham Shaked","Breehan Chancellor","Asian / Pacific Islander","Woman",46,91
+0,"surgeon","low","control",1,0,0,4,"Carolyn Majors","Daniel Lu","Sumeet Kadakia","Crystal Alvarez","Elizabeth Arena","Karen Horvath","Asishana Osho","Black or African American","Man",41,91
+1,"surgeon","high","control",1,1,0,1,"Adam Roy","Daniel Lu","Steve Kim","Abraham Shaked","Juan Castillo","Alison Wilson","Katherine Albutt","White / Caucasian","Man",55,91
+1,"nursing","low","treat",0,0,1,2,"Amanda Veltri","Amen Ramesses","Molly Mahler","Taiwo Oluyemo","Joseph Wright","Carlos Miranda","Eliza Macken","White / Caucasian","Woman",38,91
+0,"nursing","low","control",0,0,0,3,"Deanna Benner","Taiwo Oluyemo","Joseph Wright","Molly Mahler","Amanda Veltri","Jay Warren","Ryan Bresnahan","White / Caucasian","Woman",44,91
+0,"nursing","low","control",0,0,0,3,"Amanda Veltri","Deanna Benner","Carlos Miranda","Eliza Macken","Joseph Wright","Jay Warren","Stephane Pierre-Antoine","White / Caucasian","Woman",54,91
+1,"nursing","low","treat",0,0,1,4,"Eliza Macken","Deanna Benner","Amanda Veltri","Carlos Miranda","Amen Ramesses","Molly Mahler","Morgan Fischer","White / Caucasian","Woman",56,91
+1,"nursing","high","control",0,1,0,5,"Molly Mahler","Elsie Jolade","Deanna Benner","Kathy O'Gara","Mark Johnson","Jasmine Humphrey","Alyson Solloway","White / Caucasian","Man",35,91
+0,"surgeon","low","control",1,0,0,3,"Carolyn Majors","Karen Horvath","Alan Cheung","Lucy Wibbenmeyer","Laurence Yee","Patroklos Pappas","John Golfinos","White / Caucasian","Man",57,91
+1,"surgeon","low","treat",1,0,1,2,"Carolyn Majors","Alan Cheung","Asishana Osho","Mikael Petrosyan","Laurence Yee","Lucy Wibbenmeyer","Rachel Beard","Black or African American","Woman",52,91
+1,"surgeon","high","control",1,1,0,4,"Lucy Wibbenmeyer","Michelle Carlson","Abraham Shaked","Philip Alexander","Carolyn Majors","Alison Wilson","Karen Horvath","White / Caucasian","Woman",65,91
+1,"nursing","high","control",0,1,0,3,"Kathy O'Gara","Amanda Veltri","Mark Johnson","Deanna Benner","Stephane Pierre","Carlos Miranda","Jasmine Humphrey","Black or African American","Man",43,91
+0,"surgeon","low","control",1,0,0,2,"Carolyn Majors","David Moore","Alan Cheung","Donald Annino","Lucy Wibbenmeyer","Philip Alexander","Juan Castillo","White / Caucasian","Woman",69,91
+0,"surgeon","low","control",1,0,0,2,"Donald Annino","Adam Roy","Asishana Osho","Steve Kim","Rachel Beard","Crystal Alvarez","Abraham Shaked","White / Caucasian","Man",29,91
+0,"nursing","high","treat",0,1,1,4,"Kathy O'Gara","Margo Brown","Ryan McMahon","Eliza Macken","Stephane Pierre","Amanda Veltri","Jeremy Blount","White / Caucasian","Man",47,91
+0,"surgeon","low","treat",1,0,1,1,"Steven Beer","John Golfinos","Daniel Lu","Laurence Yee","Karen Horvath","Alan Cheung","Steve Kim","Hispanic / Latinx","Man",35,91
+0,"surgeon","low","treat",1,0,1,3,"Crystal Alvarez","Adam Roy","Brad Olberding","Carolyn Majors","Lucy Wibbenmeyer","Asishana Osho","Steven Beer","White / Caucasian","Man",39,91
+0,"nursing","high","treat",0,1,1,5,"Jasmine Humphrey","Carlos Miranda","Madeline Travis","Abigail Brown","Molly Mahler","Kathy O'Gara","Stephane Pierre","Hispanic / Latinx","Man",35,91
+1,"surgeon","high","control",1,1,0,3,"Adam Roy","Karen Horvath","Crystal Alvarez","Philip Alexander","Michelle Nguyen","Steve Kim","Maria Bell","White / Caucasian","Woman",25,91
+1,"surgeon","high","treat",1,1,1,4,"Alison Wilson","Philip Alexander","Nervin Fanous","Anne Le","Juan Castillo","Lucy Wibbenmeyer","Carolyn Majors","White / Caucasian","Woman",47,91
+0,"surgeon","low","control",1,0,0,3,"Rachel Beard","Brock Hewitt","Elizabeth Arena","Lucy Wibbenmeyer","Patroklos Pappas","Abraham Shaked","Alan Cheung","Black or African American","Woman",27,91
+1,"surgeon","high","treat",1,1,1,4,"Lindsey Prescher","Abraham Shaked","Philip Alexander","Anne Le","Michelle Carlson","Lucy Wibbenmeyer","Karen Horvath","White / Caucasian","Man",34,91
+1,"surgeon","high","control",1,1,0,4,"Anne Le","Maria Bell","Abraham Shaked","Philip Alexander","Michelle Carlson","Elizabeth Arena","Karen Horvath","White / Caucasian","Woman",72,91
+0,"nursing","high","control",0,1,0,5,"Elsie Jolade","Molly Mahler","Madeline Travis","Alyson Solloway","Eliza Macken","Jeremy Blount","Mark Johnson","White / Caucasian","Man",51,91
+0,"nursing","high","control",0,1,0,5,"Kathy O'Gara","Elsie Jolade","Jasmine Humphrey","Alyson Solloway","Mark Johnson","Molly Mahler","Stephane Pierre","White / Caucasian","Woman",41,91
+1,"nursing","high","control",0,1,0,4,"Kathy O'Gara","Carlos Miranda","Molly Mahler","Deanna Benner","Jasmine Humphrey","Mark Johnson","Elsie Jolade","White / Caucasian","Man",42,91
+0,"surgeon","high","treat",1,1,1,3,"Carolyn Majors","Maria Bell","Karen Horvath","Steve Kim","Abraham Shaked","Daniel Lu","Philip Alexander","White / Caucasian","Man",26,91
+0,"nursing","low","control",0,0,0,4,"Molly Mahler","Morgan Fischer","James Mangalus","Amanda Veltri","Deanna Benner","Matthew Brooks","Taiwo Oluyemo","White / Caucasian","Man",75,91
+1,"surgeon","low","control",1,0,0,3,"Elizabeth Arena","Rachel Beard","Steven Beer","David Moore","Asishana Osho","Carolyn Majors","Karen Horvath","Hispanic / Latinx","Woman",28,91
+0,"nursing","low","treat",0,0,1,3,"Mark Johnson","Amen Ramesses","Dylan Guiney","Amanda Veltri","Deanna Benner","Eliza Macken","Taiwo Oluyemo","White / Caucasian","Woman",53,91
+1,"surgeon","high","control",1,1,0,4,"Jenny Zhang","Lucy Wibbenmeyer","Maria Bell","Abraham Shaked","Karen Horvath","Juan Castillo","Michelle Carlson","Asian / Pacific Islander","Woman",32,91
+0,"surgeon","low","treat",1,0,1,1,"Hoang Nguyen","Carolyn Majors","John Golfinos","Asishana Osho","Sumeet Kadakia","Philip Alexander","Adam Roy","Black or African American","Woman",48,91
+1,"surgeon","high","control",1,1,0,4,"Daniel Lu","Lucy Wibbenmeyer","Nervin Fanous","Karen Horvath","Alison Wilson","Abraham Shaked","Anne Le","White / Caucasian","Man",33,91
+0,"nursing","low","control",0,0,0,4,"Deanna Benner","Molly Mahler","Morgan Fischer","Eliza Macken","Dylan Guiney","Carlos Miranda","Joseph Wright","White / Caucasian","Man",51,91
+1,"nursing","high","treat",0,1,1,4,"Morgan Fischer","Jeremy Blount","Alyson Solloway","Eliza Macken","Ryan McMahon","Madeline Travis","Colinda Cole-French","Black or African American","Man",43,91
+1,"surgeon","high","treat",1,1,1,5,"Svjetlana Lozo","Carolyn Majors","Karen Horvath","Maria Bell","Steve Kim","Elizabeth Arena","Rachel Beard","Asian / Pacific Islander","Man",43,91
+1,"surgeon","low","control",1,0,0,1,"Juan Castillo","John Golfinos","Lucy Wibbenmeyer","Philip Alexander","David Moore","Donald Annino","Carolyn Majors","Asian / Pacific Islander","Man",34,91
+1,"surgeon","low","treat",1,0,1,3,"Mikael Petrosyan","Abraham Shaked","Carolyn Majors","Patroklos Pappas","Lucy Wibbenmeyer","Rachel Beard","Crystal Alvarez","White / Caucasian","Man",46,91
+0,"nursing","low","treat",0,0,1,3,"James Mangalus","Deanna Benner","Morgan Fischer","Amanda Veltri","Taiwo Oluyemo","Joseph Wright","Stephane Pierre-Antoine","Asian / Pacific Islander","Woman",30,91
+0,"surgeon","low","treat",1,0,1,3,"Mikael Petrosyan","Daniel Lu","Carolyn Majors","Lucy Wibbenmeyer","Karen Horvath","Juan Castillo","John Golfinos","White / Caucasian","Woman",86,91
+0,"nursing","low","control",0,0,0,3,"Carlos Miranda","Amen Ramesses","Mathew Krueger","Eliza Macken","Molly Mahler","Deanna Benner","Joseph Wright","White / Caucasian","Woman",37,91
+1,"nursing","low","control",0,0,0,4,"Carlos Miranda","Deanna Benner","Amanda Veltri","Molly Mahler","Eliza Macken","Mark Johnson","Morgan Fischer","White / Caucasian","Man",68,91
+0,"surgeon","high","treat",1,1,1,5,"Michelle Carlson","Lucy Wibbenmeyer","Karen Horvath","Alison Wilson","Philip Alexander","Carolyn Majors","Abraham Shaked","Black or African American","Man",41,91
+1,"surgeon","high","treat",1,1,1,4,"Nervin Fanous","Anne Le","Breehan Chancellor","Daniel Lu","Abraham Shaked","Maria Bell","Michelle Nguyen","Black or African American","Woman",27,91
+1,"nursing","low","treat",0,0,1,2,"Carlos Miranda","Joseph Wright","Amanda Veltri","Mark Johnson","Taiwo Oluyemo","Deanna Benner","Molly Mahler","White / Caucasian","Woman",45,91
+1,"nursing","high","control",0,1,0,5,"Margo Brown","Mark Johnson","Morgan Fischer","Molly Mahler","Deanna Benner","Alyson Solloway","Jasmine Humphrey","White / Caucasian","Woman",57,91
+1,"nursing","low","control",0,0,0,2,"Mathew Krueger","Molly Mahler","Deanna Benner","Taiwo Oluyemo","Amen Ramesses","Jay Warren","Morgan Fischer","White / Caucasian","Man",69,91
+0,"nursing","high","treat",0,1,1,4,"Molly Mahler","Jeremy Blount","Carlos Miranda","Deanna Benner","Alyson Solloway","Elsie Jolade","Mark Johnson","Black or African American","Woman",65,91
+1,"surgeon","high","control",1,1,0,1,"Philip Alexander","Steve Kim","Abraham Shaked","Daniel Lu","Adam Roy","Alison Wilson","Michelle Carlson","White / Caucasian","Woman",48,91
+1,"nursing","high","treat",0,1,1,4,"Carlos Miranda","Molly Mahler","Kathy O'Gara","Elsie Jolade","Deanna Benner","Mark Johnson","Madeline Travis","White / Caucasian","Man",37,91
+1,"nursing","low","control",0,0,0,2,"Molly Mahler","Joseph Wright","Deanna Benner","Mark Johnson","Taiwo Oluyemo","Amen Ramesses","Amanda Veltri","White / Caucasian","Man",54,91
+0,"surgeon","low","treat",1,0,1,1,"Alan Cheung","Patroklos Pappas","Laurence Yee","Lucy Wibbenmeyer","Donald Annino","John Golfinos","Juan Castillo","White / Caucasian","Woman",52,91
+1,"nursing","high","control",0,1,0,4,"Stephane Pierre","Molly Mahler","Elsie Jolade","Carlos Miranda","Kathy O'Gara","Deanna Benner","Alyson Solloway","Asian / Pacific Islander","Woman",35,91
+0,"nursing","high","control",0,1,0,5,"Morgan Fischer","Mark Johnson","Jasmine Humphrey","Molly Mahler","Deanna Benner","Kathy O'Gara","James Mangalus","White / Caucasian","Man",86,91
+0,"surgeon","low","control",1,0,0,3,"John Golfinos","Karen Horvath","Carolyn Majors","Hoang Nguyen","Patroklos Pappas","Elizabeth Arena","Asishana Osho","White / Caucasian","Woman",25,91
+1,"nursing","low","treat",0,0,1,3,"Jay Warren","Jeremy Blount","Molly Mahler","Bailey Pierce","Taiwo Oluyemo","Eliza Macken","Amanda Veltri","Black or African American","Man",29,91
+1,"surgeon","high","control",1,1,0,4,"Maria Bell","Philip Alexander","Karen Horvath","Nervin Fanous","Abraham Shaked","Lucy Wibbenmeyer","Michelle Carlson","White / Caucasian","Man",35,91
+0,"nursing","low","control",0,0,0,3,"Carlos Miranda","Deanna Benner","Eliza Macken","Amanda Veltri","Taiwo Oluyemo","Zachary Krim","Ryan Bresnahan","White / Caucasian","Woman",39,91
+1,"nursing","high","treat",0,1,1,4,"Kathy O'Gara","Elsie Jolade","Mark Johnson","Jeremy Blount","Alyson Solloway","Colinda Cole-French","Charlotte Tiley","White / Caucasian","Man",35,91
+0,"surgeon","low","control",1,0,0,3,"Rachel Beard","Steven Beer","Karen Horvath","Carolyn Majors","Alan Cheung","Abraham Shaked","John Golfinos","White / Caucasian","Man",35,91
+1,"surgeon","high","treat",1,1,1,5,"Abraham Shaked","Carolyn Majors","Karen Horvath","Maria Bell","Nervin Fanous","Anne Le","Alison Wilson","White / Caucasian","Woman",25,91
+0,"nursing","low","treat",0,0,1,4,"Taiwo Oluyemo","Molly Mahler","Deanna Benner","Dylan Guiney","Amanda Veltri","Eliza Macken","Amen Ramesses","White / Caucasian","Woman",58,91
+0,"surgeon","low","treat",1,0,1,2,"Carolyn Majors","Asishana Osho","Juan Castillo","Crystal Alvarez","Sumeet Kadakia","Steve Kim","Steven Beer","Hispanic / Latinx","Woman",36,91
+1,"nursing","high","control",0,1,0,5,"Molly Mahler","Deanna Benner","Kathy O'Gara","Jeremy Blount","Colinda Cole-French","Alyson Solloway","Morgan Fischer","White / Caucasian","Woman",32,91
+0,"surgeon","high","control",1,1,0,4,"Alison Wilson","Lucy Wibbenmeyer","Abraham Shaked","Breehan Chancellor","Adam Roy","Jenny Zhang","Daniel Lu","White / Caucasian","Man",27,91
+1,"surgeon","high","control",1,1,0,3,"Steve Kim","Svjetlana Lozo","Abraham Shaked","Michelle Nguyen","Lindsey Prescher","Juan Castillo","Nervin Fanous","Black or African American","Man",27,91
+0,"nursing","high","treat",0,1,1,4,"James Mangalus","Stephane Pierre","Jasmine Humphrey","Elsie Jolade","Kathy O'Gara","Alyson Solloway","Carlos Miranda","White / Caucasian","Man",49,91
+0,"surgeon","low","treat",1,0,1,2,"John Golfinos","Lucy Wibbenmeyer","Karen Horvath","Donald Annino","Philip Alexander","Alan Cheung","Abraham Shaked","White / Caucasian","Woman",55,91
+0,"surgeon","low","control",1,0,0,2,"Carolyn Majors","Alan Cheung","Patroklos Pappas","Laurence Yee","Brad Olberding","Elizabeth Arena","Philip Alexander","White / Caucasian","Woman",53,91
+1,"surgeon","high","control",1,1,0,4,"Alison Wilson","Nervin Fanous","Jenny Zhang","Karen Horvath","Abraham Shaked","Adam Roy","Lucy Wibbenmeyer","White / Caucasian","Woman",62,91
+1,"surgeon","low","treat",1,0,1,3,"Rachel Beard","Daniel Lu","Alan Cheung","Karen Horvath","Hoang Nguyen","Carolyn Majors","Lucy Wibbenmeyer","Asian / Pacific Islander","Woman",32,91
+0,"nursing","low","treat",0,0,1,1,"Stephane Pierre-Antoine","Taiwo Oluyemo","Mark Johnson","James Mangalus","Brian O'Connor","Eliza Macken","Ryan McMahon","Hispanic / Latinx","Woman",33,91
+1,"nursing","low","treat",0,0,1,3,"Taiwo Oluyemo","Stephane Pierre-Antoine","Mathew Krueger","Eliza Macken","Amanda Veltri","Deanna Benner","Molly Mahler","White / Caucasian","Woman",45,91
+0,"surgeon","low","control",1,0,0,2,"Laurence Yee","John Golfinos","Karen Horvath","Patroklos Pappas","Abraham Shaked","Lucy Wibbenmeyer","Alan Cheung","Black or African American","Woman",58,91
+0,"nursing","low","treat",0,0,1,2,"Amen Ramesses","Molly Mahler","Carlos Miranda","Deanna Benner","Mark Johnson","Joseph Wright","Taiwo Oluyemo","Hispanic / Latinx","Woman",63,91
+0,"nursing","low","control",0,0,0,3,"Deanna Benner","Molly Mahler","Jay Warren","Amanda Veltri","Taiwo Oluyemo","Mark Johnson","Amen Ramesses","White / Caucasian","Man",41,91
+1,"nursing","high","control",0,1,0,4,"Elsie Jolade","Carlos Miranda","Camille Barnes","Kathy O'Gara","Mark Johnson","Deanna Benner","Jasmine Humphrey","White / Caucasian","Woman",59,91
+0,"nursing","high","control",0,1,0,4,"Alyson Solloway","Kathy O'Gara","Jeremy Blount","Stephane Pierre","Bailey Pierce","Morgan Fischer","Mark Johnson","White / Caucasian","Woman",62,91
+0,"surgeon","low","control",1,0,0,2,"Carolyn Majors","Lucy Wibbenmeyer","Patroklos Pappas","Alan Cheung","Abraham Shaked","Mikael Petrosyan","Daniel Lu","White / Caucasian","Woman",38,91
+0,"nursing","low","control",0,0,0,3,"Carlos Miranda","Molly Mahler","Taiwo Oluyemo","Morgan Fischer","Jeremy Blount","Eliza Macken","Amen Ramesses","White / Caucasian","Man",44,91
+0,"nursing","high","control",0,1,0,5,"Morgan Fischer","Mark Johnson","Jessica Andrews","Deanna Benner","Abigail Brown","Alyson Solloway","Jeremy Blount","White / Caucasian","Woman",32,91
+1,"surgeon","high","control",1,1,0,5,"Michelle Carlson","Maria Bell","Anne Le","Alison Wilson","Abraham Shaked","Carolyn Majors","Lucy Wibbenmeyer","White / Caucasian","Woman",65,91
+1,"surgeon","high","treat",1,1,1,3,"Karen Horvath","Juan Castillo","Philip Alexander","Abraham Shaked","Anne Le","Nervin Fanous","Carolyn Majors","White / Caucasian","Man",28,91
+0,"surgeon","low","control",1,0,0,1,"Karen Horvath","Alan Cheung","Hoang Nguyen","Steve Kim","Asishana Osho","John Golfinos","Laurence Yee","White / Caucasian","Woman",34,91
+0,"surgeon","low","control",1,0,0,2,"Karen Horvath","John Golfinos","Abraham Shaked","Lucy Wibbenmeyer","David Moore","Mikael Petrosyan","Laurence Yee","White / Caucasian","Man",28,91
+0,"nursing","high","treat",0,1,1,5,"Kathy O'Gara","Carlos Miranda","Elsie Jolade","Molly Mahler","Deanna Benner","Madeline Travis","Mark Johnson","White / Caucasian","Woman",46,91
+0,"nursing","low","control",0,0,0,5,"Amanda Veltri","Deanna Benner","Molly Mahler","Bailey Pierce","Taiwo Oluyemo","Eliza Macken","Girma Mekonen","White / Caucasian","Woman",39,91
+0,"nursing","low","treat",0,0,1,3,"Molly Mahler","Deanna Benner","Amanda Veltri","Amen Ramesses","Jeremy Blount","Carlos Miranda","Taiwo Oluyemo","White / Caucasian","Man",37,91
+0,"surgeon","high","treat",1,1,1,4,"Elizabeth Arena","Abraham Shaked","Danelle Bertozzi","Maria Bell","Adam Roy","Breehan Chancellor","Daniel Lu","White / Caucasian","Woman",25,91
+0,"surgeon","high","control",1,1,0,6,"Danelle Bertozzi","Lindsey Prescher","Carolyn Majors","Michelle Carlson","Alison Wilson","Maria Bell","Steve Kim","White / Caucasian","Man",35,91
+0,"surgeon","high","control",1,1,0,4,"Anne Le","Nervin Fanous","Maria Bell","Juan Castillo","Abraham Shaked","Michelle Carlson","Steve Kim","Hispanic / Latinx","Woman",36,91
+1,"nursing","high","treat",0,1,1,6,"Jasmine Humphrey","Camille Barnes","Madeline Travis","Kathy O'Gara","Alyson Solloway","Colinda Cole-French","Elsie Jolade","Hispanic / Latinx","Woman",41,91
+1,"surgeon","high","treat",1,1,1,4,"Daniel Lu","Elizabeth Arena","Adam Roy","Rachel Beard","Nervin Fanous","Katherine Albutt","Maria Bell","White / Caucasian","Woman",63,91
+1,"nursing","high","treat",0,1,1,4,"Jeremy Blount","Elsie Jolade","Mark Johnson","Molly Mahler","Kathy O'Gara","Colinda Cole-French","Deanna Benner","White / Caucasian","Woman",54,91
+1,"surgeon","high","treat",1,1,1,6,"Katherine Albutt","Breehan Chancellor","Danelle Bertozzi","Lucy Wibbenmeyer","Lindsey Prescher","Michelle Nguyen","Maria Bell","White / Caucasian","Woman",64,91
+0,"surgeon","low","control",1,0,0,2,"Carolyn Majors","Alan Cheung","David Moore","Crystal Alvarez","Asishana Osho","Mikael Petrosyan","Steven Beer","White / Caucasian","Man",46,91
+0,"nursing","low","treat",0,0,1,4,"Deanna Benner","Molly Mahler","Mark Johnson","Amanda Veltri","Girma Mekonen","Morgan Fischer","Dylan Guiney","White / Caucasian","Man",25,91
+0,"surgeon","high","treat",1,1,1,3,"Juan Castillo","Breehan Chancellor","Maria Bell","Steve Kim","Alison Wilson","Daniel Lu","Abraham Shaked","White / Caucasian","Woman",76,91
+1,"nursing","high","control",0,1,0,5,"Madeline Travis","Deanna Benner","Mark Johnson","Kathy O'Gara","Mary Roberge","Bailey Pierce","Morgan Fischer","White / Caucasian","Woman",42,91
+1,"nursing","low","treat",0,0,1,2,"Mark Johnson","Deanna Benner","Taiwo Oluyemo","Amen Ramesses","Molly Mahler","Dylan Guiney","Amanda Veltri","Black or African American","Woman",30,91
+0,"surgeon","low","control",1,0,0,2,"Patroklos Pappas","Abraham Shaked","Carolyn Majors","Alan Cheung","John Golfinos","Elizabeth Arena","Laurence Yee","White / Caucasian","Woman",27,91
+0,"surgeon","low","treat",1,0,1,2,"Laurence Yee","Carolyn Majors","Patroklos Pappas","Lucy Wibbenmeyer","Alan Cheung","Abraham Shaked","John Golfinos","White / Caucasian","Man",46,91
+0,"surgeon","high","control",1,1,0,4,"Anne Le","Lucy Wibbenmeyer","Daniel Lu","Nervin Fanous","Carolyn Majors","Abraham Shaked","Steve Kim","White / Caucasian","Man",30,91
+0,"surgeon","high","treat",1,1,1,5,"Karen Horvath","Abraham Shaked","Alison Wilson","Maria Bell","Lucy Wibbenmeyer","Michelle Carlson","Philip Alexander","Hispanic / Latinx","Woman",37,91
+0,"nursing","low","control",0,0,0,5,"Deanna Benner","Molly Mahler","Eliza Macken","Amanda Veltri","Morgan Fischer","Taiwo Oluyemo","Mathew Krueger","White / Caucasian","Man",40,91
+1,"nursing","high","treat",0,1,1,5,"Carlos Miranda","Molly Mahler","Elsie Jolade","Deanna Benner","Madeline Travis","Kathy O'Gara","Alyson Solloway","White / Caucasian","Man",49,91
+1,"surgeon","low","treat",1,0,1,3,"Carolyn Majors","Asishana Osho","Elizabeth Arena","Sumeet Kadakia","Hoang Nguyen","Rachel Beard","Lucy Wibbenmeyer","Black or African American","Woman",52,91
+0,"nursing","low","control",0,0,0,6,"Molly Mahler","Deanna Benner","Amanda Veltri","Eliza Macken","Morgan Fischer","Bailey Pierce","Amen Ramesses","White / Caucasian","Woman",64,91
+1,"nursing","high","treat",0,1,1,5,"Carlos Miranda","Deanna Benner","Elsie Jolade","Molly Mahler","Kathy O'Gara","Madeline Travis","Alyson Solloway","White / Caucasian","Woman",72,91
+0,"surgeon","low","control",1,0,0,5,"Elizabeth Arena","Karen Horvath","Asishana Osho","Rachel Beard","Lucy Wibbenmeyer","Carolyn Majors","Abraham Shaked","White / Caucasian","Man",36,91
+0,"nursing","low","control",0,0,0,3,"Amanda Veltri","Deanna Benner","Dylan Guiney","Jeremy Blount","Jay Warren","Eliza Macken","Joseph Wright","White / Caucasian","Woman",35,91
+1,"surgeon","low","control",1,0,0,0,"John Golfinos","Juan Castillo","Steven Beer","Laurence Yee","Donald Annino","Alan Cheung","Lucy Wibbenmeyer","White / Caucasian","Man",36,91
+1,"nursing","high","control",0,1,0,5,"Elsie Jolade","Deanna Benner","Molly Mahler","Mark Johnson","Kathy O'Gara","Madeline Travis","Colinda Cole-French","White / Caucasian","Man",34,91
+1,"surgeon","high","control",1,1,0,5,"Alison Wilson","Nervin Fanous","Karen Horvath","Carolyn Majors","Anne Le","Abraham Shaked","Maria Bell","White / Caucasian","Woman",33,91
+0,"surgeon","low","treat",1,0,1,3,"Rachel Beard","Juan Castillo","Daniel Lu","Lucy Wibbenmeyer","Carolyn Majors","John Golfinos","Steve Kim","White / Caucasian","Woman",72,91
+1,"nursing","low","treat",0,0,1,5,"Amanda Veltri","Deanna Benner","Molly Mahler","Eliza Macken","Matthew Brooks","Morgan Fischer","Bailey Pierce","White / Caucasian","Woman",72,91
+1,"surgeon","high","treat",1,1,1,3,"Adam Roy","Rachel Beard","Anne Le","Michelle Nguyen","Daniel Lu","Philip Alexander","Nervin Fanous","White / Caucasian","Man",59,91
+1,"nursing","high","control",0,1,0,3,"Mark Johnson","Jeremy Blount","Kathy O'Gara","Molly Mahler","Carlos Miranda","Elsie Jolade","Deanna Benner","White / Caucasian","Woman",45,91
+1,"nursing","high","treat",0,1,1,5,"Molly Mahler","Madeline Travis","Kathy O'Gara","Morgan Fischer","Ryan McMahon","Abigail Brown","Jasmine Humphrey","White / Caucasian","Man",32,91
+1,"nursing","low","treat",0,0,1,3,"Bailey Pierce","Morgan Fischer","Stephane Pierre-Antoine","Jay Warren","Eliza Macken","Zachary Krim","Molly Mahler","Black or African American","Man",47,91
+1,"nursing","high","control",0,1,0,4,"Amanda Veltri","Jeremy Blount","Jasmine Humphrey","Madeline Travis","Deanna Benner","Carlos Miranda","Kathy O'Gara","Hispanic / Latinx","Man",31,91
+0,"surgeon","low","treat",1,0,1,1,"Steve Kim","Patroklos Pappas","John Golfinos","Lucy Wibbenmeyer","Steven Beer","Laurence Yee","Daniel Lu","White / Caucasian","Woman",53,91
+1,"nursing","high","treat",0,1,1,4,"Elsie Jolade","Madeline Travis","Stephane Pierre","Jasmine Humphrey","Mark Johnson","Charlotte Tiley","Deanna Benner","Black or African American","Woman",71,91
+1,"nursing","low","treat",0,0,1,4,"Amen Ramesses","Deanna Benner","Molly Mahler","Morgan Fischer","Amanda Veltri","Carlos Miranda","Bailey Pierce","White / Caucasian","Man",62,91
+1,"surgeon","high","control",1,1,0,4,"Daniel Lu","Lucy Wibbenmeyer","Maria Bell","Abraham Shaked","Karen Horvath","Carolyn Majors","Nervin Fanous","White / Caucasian","Woman",37,91
+0,"surgeon","low","control",1,0,0,2,"John Golfinos","Patroklos Pappas","Laurence Yee","Karen Horvath","Lucy Wibbenmeyer","Alan Cheung","Abraham Shaked","White / Caucasian","Man",36,91
+1,"nursing","high","treat",0,1,1,5,"Deanna Benner","Kathy O'Gara","Carlos Miranda","Molly Mahler","Elsie Jolade","Madeline Travis","Jasmine Humphrey","Hispanic / Latinx","Man",43,91
+0,"surgeon","low","treat",1,0,1,2,"Alan Cheung","Laurence Yee","Karen Horvath","John Golfinos","Abraham Shaked","Carolyn Majors","Philip Alexander","White / Caucasian","Woman",56,91
+1,"surgeon","high","treat",1,1,1,4,"Carolyn Majors","Philip Alexander","Nervin Fanous","Maria Bell","Michelle Carlson","Abraham Shaked","Alison Wilson","White / Caucasian","Woman",26,91
+1,"nursing","high","control",0,1,0,4,"Jasmine Humphrey","Charlotte Tiley","Jeremy Blount","Eliza Macken","James Mangalus","Elsie Jolade","Kathy O'Gara","White / Caucasian","Woman",67,91
+1,"nursing","high","treat",0,1,1,4,"Morgan Fischer","Mark Johnson","Jeremy Blount","Deanna Benner","Alyson Solloway","Jasmine Humphrey","Elsie Jolade","Asian / Pacific Islander","Woman",29,91
+1,"surgeon","high","control",1,1,0,4,"Michelle Carlson","Nervin Fanous","Michelle Nguyen","Jenny Zhang","Abraham Shaked","Juan Castillo","Alison Wilson","Black or African American","Woman",38,91
+1,"surgeon","high","control",1,1,0,4,"Anne Le","Steve Kim","Nervin Fanous","Crystal Alvarez","Carolyn Majors","Adam Roy","Karen Horvath","Black or African American","Woman",42,91
+1,"surgeon","low","treat",1,0,1,4,"Asishana Osho","Carolyn Majors","Rachel Beard","Lucy Wibbenmeyer","Elizabeth Arena","Sumeet Kadakia","Karen Horvath","Black or African American","Woman",27,91
+0,"surgeon","high","treat",1,1,1,3,"Maria Bell","Karen Horvath","Daniel Lu","Steve Kim","Philip Alexander","Nervin Fanous","Juan Castillo","White / Caucasian","Woman",52,91
+0,"nursing","low","control",0,0,0,4,"Deanna Benner","Amanda Veltri","Mark Johnson","Molly Mahler","Taiwo Oluyemo","Eliza Macken","Joseph Wright","White / Caucasian","Man",56,91
+0,"surgeon","low","control",1,0,0,6,"Rachel Beard","Carolyn Majors","Elizabeth Arena","Karen Horvath","Lucy Wibbenmeyer","Crystal Alvarez","Asishana Osho","White / Caucasian","Woman",38,91
+1,"nursing","high","treat",0,1,1,5,"Kathy O'Gara","Alyson Solloway","Mark Johnson","Molly Mahler","Deanna Benner","Madeline Travis","Elsie Jolade","White / Caucasian","Woman",54,91
+0,"surgeon","high","treat",1,1,1,3,"Karen Horvath","Philip Alexander","Elizabeth Arena","Michelle Carlson","Steve Kim","Daniel Lu","Abraham Shaked","White / Caucasian","Man",53,91
+1,"nursing","low","treat",0,0,1,3,"Molly Mahler","Joseph Wright","Carlos Miranda","Jay Warren","Deanna Benner","Amanda Veltri","Bailey Pierce","White / Caucasian","Woman",52,91
+0,"nursing","low","control",0,0,0,2,"Molly Mahler","Carlos Miranda","Amen Ramesses","Mark Johnson","Deanna Benner","Joseph Wright","Taiwo Oluyemo","White / Caucasian","Woman",25,91
+1,"nursing","low","control",0,0,0,4,"Stephane Pierre-Antoine","Amanda Veltri","Eliza Macken","Deanna Benner","Molly Mahler","Amen Ramesses","Morgan Fischer","Black or African American","Woman",33,91
+1,"nursing","low","treat",0,0,1,3,"Deanna Benner","Bailey Pierce","Amanda Veltri","Ryan McMahon","Mathew Krueger","Stephane Pierre-Antoine","Morgan Fischer","White / Caucasian","Woman",51,91
+0,"nursing","low","control",0,0,0,1,"Carlos Miranda","Eliza Macken","Dylan Guiney","James Mangalus","Stephane Pierre-Antoine","Jeremy Blount","Ryan Bresnahan","White / Caucasian","Woman",54,91
+0,"surgeon","low","treat",1,0,1,3,"Elizabeth Arena","Abraham Shaked","Carolyn Majors","Asishana Osho","Mikael Petrosyan","Rachel Beard","Laurence Yee","White / Caucasian","Woman",66,91
+0,"surgeon","low","control",1,0,0,1,"David Moore","Steven Beer","Carolyn Majors","Brock Hewitt","Alan Cheung","Patroklos Pappas","Brad Olberding","White / Caucasian","Woman",51,91
+1,"nursing","low","treat",0,0,1,3,"Amen Ramesses","Jeremy Blount","Molly Mahler","Deanna Benner","Amanda Veltri","Taiwo Oluyemo","Bailey Pierce","White / Caucasian","Woman",56,91
+1,"surgeon","low","control",1,0,0,2,"Rachel Beard","Asishana Osho","Carolyn Majors","Sumeet Kadakia","John Golfinos","Laurence Yee","Elizabeth Arena","White / Caucasian","Woman",73,91
+0,"nursing","low","control",0,0,0,3,"James Mangalus","Amen Ramesses","Thomas Horton","Amanda Veltri","Bailey Pierce","Molly Mahler","Mathew Krueger","Asian / Pacific Islander","Man",32,91
+0,"surgeon","high","control",1,1,0,4,"Anne Le","Abraham Shaked","Juan Castillo","Crystal Alvarez","Maria Bell","Nervin Fanous","Daniel Lu","White / Caucasian","Woman",57,91
+0,"nursing","high","control",0,1,0,4,"Carlos Miranda","Jeremy Blount","Molly Mahler","Kathy O'Gara","Deanna Benner","Alyson Solloway","Stephane Pierre","Asian / Pacific Islander","Woman",55,91
+0,"nursing","high","treat",0,1,1,4,"Mark Johnson","Carlos Miranda","Molly Mahler","Elsie Jolade","Kathy O'Gara","Madeline Travis","Stephane Pierre","Hispanic / Latinx","Woman",28,91
+1,"surgeon","low","treat",1,0,1,2,"Patroklos Pappas","Karen Horvath","John Golfinos","Laurence Yee","Alan Cheung","Carolyn Majors","Lucy Wibbenmeyer","Black or African American","Woman",35,91
+0,"nursing","low","treat",0,0,1,2,"Mark Johnson","Deanna Benner","Taiwo Oluyemo","Molly Mahler","Amen Ramesses","Carlos Miranda","Joseph Wright","Hispanic / Latinx","Man",32,91
+1,"surgeon","low","control",1,0,0,1,"Alan Cheung","Laurence Yee","Patroklos Pappas","Karen Horvath","John Golfinos","Abraham Shaked","Lucy Wibbenmeyer","Hispanic / Latinx","Woman",33,91
+0,"nursing","high","control",0,1,0,5,"Elsie Jolade","Kathy O'Gara","Carlos Miranda","Madeline Travis","Deanna Benner","Molly Mahler","Mark Johnson","Hispanic / Latinx","Man",30,91
+1,"nursing","high","control",0,1,0,4,"Jasmine Humphrey","Jeremy Blount","Kathy O'Gara","Ryan McMahon","Amanda Veltri","Deanna Benner","Colinda Cole-French","White / Caucasian","Woman",76,91
+0,"surgeon","low","treat",1,0,1,3,"Adam Roy","Karen Horvath","Lucy Wibbenmeyer","Crystal Alvarez","Sumeet Kadakia","Laurence Yee","Daniel Lu","White / Caucasian","Woman",37,91
+1,"nursing","high","control",0,1,0,5,"Jasmine Humphrey","Mark Johnson","Niki White","Madeline Travis","Camille Barnes","Eliza Macken","Elsie Jolade","White / Caucasian","Man",28,91
+1,"nursing","low","treat",0,0,1,3,"Dylan Guiney","Carlos Miranda","Deanna Benner","Amanda Veltri","Molly Mahler","Mark Johnson","Eliza Macken","White / Caucasian","Woman",67,91
+0,"surgeon","low","control",1,0,0,1,"Asishana Osho","Elizabeth Arena","Laurence Yee","Daniel Lu","Alan Cheung","Sumeet Kadakia","John Golfinos","Black or African American","Woman",27,91
+1,"nursing","high","treat",0,1,1,5,"Elsie Jolade","Molly Mahler","Carlos Miranda","Madeline Travis","Deanna Benner","Jasmine Humphrey","Charlotte Tiley","White / Caucasian","Man",53,91
+1,"surgeon","high","treat",1,1,1,3,"Maria Bell","Steve Kim","Juan Castillo","Daniel Lu","Carolyn Majors","Anne Le","Karen Horvath","White / Caucasian","Woman",42,91
+0,"surgeon","high","control",1,1,0,5,"Jenny Zhang","Daniel Lu","Nervin Fanous","Carolyn Majors","Lucy Wibbenmeyer","Lindsey Prescher","Steve Kim","White / Caucasian","Woman",28,91
+0,"surgeon","low","treat",1,0,1,1,"Steven Beer","Donald Annino","John Golfinos","Karen Horvath","Abraham Shaked","Patroklos Pappas","Laurence Yee","White / Caucasian","Man",35,91
+1,"surgeon","high","control",1,1,0,3,"Anne Le","Nervin Fanous","Philip Alexander","Juan Castillo","Karen Horvath","Abraham Shaked","Alison Wilson","White / Caucasian","Non-binary",23,91
+1,"nursing","high","treat",0,1,1,4,"Mark Johnson","Kathy O'Gara","Carlos Miranda","Deanna Benner","Elsie Jolade","Molly Mahler","Madeline Travis","Asian / Pacific Islander","Man",37,91
+1,"surgeon","high","treat",1,1,1,3,"Alison Wilson","Karen Horvath","Abraham Shaked","Juan Castillo","Daniel Lu","Carolyn Majors","Lucy Wibbenmeyer","White / Caucasian","Woman",69,91
+1,"surgeon","high","control",1,1,0,4,"Michelle Nguyen","Breehan Chancellor","Daniel Lu","Maria Bell","Lindsey Prescher","Juan Castillo","Jenny Zhang","Asian / Pacific Islander","Man",51,91
+1,"nursing","high","control",0,1,0,3,"Stephane Pierre","Amanda Veltri","Carlos Miranda","Kathy O'Gara","Alyson Solloway","Jeremy Blount","Madeline Travis","Black or African American","Man",35,91
+0,"nursing","low","control",0,0,0,2,"Molly Mahler","Mark Johnson","Carlos Miranda","Deanna Benner","Jay Warren","Taiwo Oluyemo","Joseph Wright","White / Caucasian","Woman",38,91
+0,"surgeon","low","control",1,0,0,1,"Lucy Wibbenmeyer","Juan Castillo","Philip Alexander","Abraham Shaked","John Golfinos","Alan Cheung","Patroklos Pappas","Black or African American","Woman",51,91
+1,"nursing","low","control",0,0,0,3,"Deanna Benner","Molly Mahler","Carlos Miranda","Amen Ramesses","Taiwo Oluyemo","Eliza Macken","Amanda Veltri","White / Caucasian","Another gender not listed here:",38,91
+0,"nursing","low","treat",0,0,1,2,"Mark Johnson","Taiwo Oluyemo","Deanna Benner","Molly Mahler","James Mangalus","Dylan Guiney","Amen Ramesses","White / Caucasian","Man",64,91
+0,"surgeon","low","treat",1,0,1,2,"Elizabeth Arena","Karen Horvath","Sumeet Kadakia","Juan Castillo","Alan Cheung","Abraham Shaked","Asishana Osho","White / Caucasian","Man",69,91
+1,"nursing","high","treat",0,1,1,4,"Deanna Benner","Elsie Jolade","Carlos Miranda","Kathy O'Gara","Jeremy Blount","Molly Mahler","Madeline Travis","White / Caucasian","Woman",54,91
+1,"nursing","low","treat",0,0,1,3,"Deanna Benner","Mark Johnson","Molly Mahler","Taiwo Oluyemo","Amanda Veltri","Joseph Wright","Bailey Pierce","White / Caucasian","Man",36,91
+0,"nursing","low","control",0,0,0,3,"Taiwo Oluyemo","Amanda Veltri","Molly Mahler","Joseph Wright","Mark Johnson","Eliza Macken","Jeremy Blount","White / Caucasian","Woman",40,91
+0,"nursing","low","control",0,0,0,4,"Mark Johnson","Molly Mahler","Bailey Pierce","Morgan Fischer","Jay Warren","Deanna Benner","Carlos Miranda","White / Caucasian","Man",45,91
+1,"surgeon","high","treat",1,1,1,3,"Alison Wilson","Abraham Shaked","Carolyn Majors","Philip Alexander","Daniel Lu","Karen Horvath","Nervin Fanous","White / Caucasian","Woman",53,91
+1,"surgeon","high","control",1,1,0,6,"Michelle Nguyen","Anne Le","Nervin Fanous","Alison Wilson","Maria Bell","Michelle Carlson","Karen Horvath","Asian / Pacific Islander","Woman",39,91
+1,"surgeon","low","treat",1,0,1,1,"Philip Alexander","Lucy Wibbenmeyer","Steven Beer","John Golfinos","Laurence Yee","Alan Cheung","Karen Horvath","White / Caucasian","Man",39,91
+1,"surgeon","high","control",1,1,0,4,"Anne Le","Katherine Albutt","Danelle Bertozzi","Elizabeth Arena","Daniel Lu","Juan Castillo","Lucy Wibbenmeyer","White / Caucasian","Woman",47,91
+1,"surgeon","high","treat",1,1,1,2,"Abraham Shaked","Adam Roy","Daniel Lu","Maria Bell","Alison Wilson","Juan Castillo","Carolyn Majors","White / Caucasian","Man",47,91
+0,"surgeon","low","treat",1,0,1,3,"Carolyn Majors","Patroklos Pappas","Alan Cheung","Asishana Osho","Karen Horvath","Lucy Wibbenmeyer","Adam Roy","White / Caucasian","Woman",35,91
+0,"surgeon","low","control",1,0,0,1,"John Golfinos","Lucy Wibbenmeyer","Brad Olberding","Abraham Shaked","Asishana Osho","Hoang Nguyen","Patroklos Pappas","White / Caucasian","Man",59,91
+1,"nursing","high","control",0,1,0,5,"Jasmine Humphrey","Madeline Travis","Elsie Jolade","Molly Mahler","Carlos Miranda","Deanna Benner","Mary Roberge","White / Caucasian","Man",32,91
+0,"surgeon","low","treat",1,0,1,2,"Alan Cheung","Karen Horvath","John Golfinos","Laurence Yee","Patroklos Pappas","Carolyn Majors","Abraham Shaked","White / Caucasian","Man",50,91
+0,"nursing","high","treat",0,1,1,5,"Alyson Solloway","Kathy O'Gara","Carlos Miranda","Elsie Jolade","Molly Mahler","Deanna Benner","Mark Johnson","White / Caucasian","Man",42,91
+1,"surgeon","high","treat",1,1,1,3,"Alison Wilson","Daniel Lu","Michelle Nguyen","Philip Alexander","Abraham Shaked","Elizabeth Arena","Nervin Fanous","White / Caucasian","Woman",56,91
+0,"surgeon","low","control",1,0,0,2,"John Golfinos","Carolyn Majors","Asishana Osho","Abraham Shaked","Karen Horvath","Laurence Yee","Brock Hewitt","White / Caucasian","Woman",70,91
+1,"nursing","low","control",0,0,0,2,"Taiwo Oluyemo","Deanna Benner","Carlos Miranda","Joseph Wright","Jay Warren","Eliza Macken","Amanda Veltri","White / Caucasian","Woman",53,91
+0,"nursing","low","control",0,0,0,2,"Amen Ramesses","Taiwo Oluyemo","Molly Mahler","Jeremy Blount","Deanna Benner","Dylan Guiney","Carlos Miranda","Hispanic / Latinx","Woman",27,91
+1,"nursing","high","treat",0,1,1,4,"Stephane Pierre","Jasmine Humphrey","Abigail Brown","Kathy O'Gara","Elsie Jolade","Carlos Miranda","Niki White","White / Caucasian","Man",60,91
+0,"surgeon","low","control",1,0,0,2,"Alan Cheung","John Golfinos","Carolyn Majors","Laurence Yee","Philip Alexander","Elizabeth Arena","Steven Beer","White / Caucasian","Man",53,91
+0,"nursing","low","treat",0,0,1,5,"Bailey Pierce","Eliza Macken","Morgan Fischer","Molly Mahler","Amanda Veltri","Ryan Bresnahan","Taiwo Oluyemo","Asian / Pacific Islander","Woman",56,91
+1,"surgeon","high","control",1,1,0,2,"Daniel Lu","Steve Kim","Elizabeth Arena","Michelle Carlson","Juan Castillo","Abraham Shaked","Carolyn Majors","White / Caucasian","Man",31,91
+1,"surgeon","high","control",1,1,0,4,"Alison Wilson","Nervin Fanous","Steve Kim","Breehan Chancellor","Anne Le","Philip Alexander","Jenny Zhang","White / Caucasian","Woman",42,91
+1,"surgeon","low","treat",1,0,1,1,"Carolyn Majors","David Moore","Patroklos Pappas","Hoang Nguyen","Abraham Shaked","Daniel Lu","Lucy Wibbenmeyer","White / Caucasian","Man",31,91
+1,"nursing","low","treat",0,0,1,5,"Morgan Fischer","Bailey Pierce","Molly Mahler","Amanda Veltri","Deanna Benner","Amen Ramesses","Eliza Macken","White / Caucasian","Woman",39,91
+1,"nursing","high","control",0,1,0,6,"Camille Barnes","Amanda Veltri","Jasmine Humphrey","Charlotte Tiley","Mary Roberge","Kathy O'Gara","Alyson Solloway","Black or African American","Man",35,91
+0,"surgeon","low","treat",1,0,1,2,"Brad Olberding","Rachel Beard","Karen Horvath","Philip Alexander","Juan Castillo","Steven Beer","Donald Annino","White / Caucasian","Man",29,91
+0,"surgeon","high","treat",1,1,1,3,"Karen Horvath","Lucy Wibbenmeyer","Abraham Shaked","Michelle Carlson","Philip Alexander","Juan Castillo","Daniel Lu","Hispanic / Latinx","Woman",22,91
+0,"nursing","low","control",0,0,0,6,"Amanda Veltri","Molly Mahler","Eliza Macken","Deanna Benner","Morgan Fischer","Bailey Pierce","Dylan Guiney","White / Caucasian","Man",59,91
+1,"surgeon","high","control",1,1,0,6,"Lindsey Prescher","Anne Le","Michelle Nguyen","Crystal Alvarez","Elizabeth Arena","Svjetlana Lozo","Rachel Beard","Hispanic / Latinx","Man",26,91
+0,"surgeon","high","treat",1,1,1,4,"Lucy Wibbenmeyer","Alison Wilson","Abraham Shaked","Karen Horvath","Philip Alexander","Nervin Fanous","Juan Castillo","Black or African American","Woman",21,91
+1,"nursing","high","treat",0,1,1,5,"Stephane Pierre","Amanda Veltri","Eliza Macken","Elsie Jolade","Charlotte Tiley","Camille Barnes","Jasmine Humphrey","White / Caucasian","Non-binary",28,91
+0,"nursing","high","control",0,1,0,5,"Molly Mahler","Carlos Miranda","Kathy O'Gara","Elsie Jolade","Madeline Travis","Deanna Benner","Mark Johnson","Asian / Pacific Islander","Woman",41,91
+0,"surgeon","low","control",1,0,0,3,"Rachel Beard","Laurence Yee","Alan Cheung","Juan Castillo","Lucy Wibbenmeyer","Carolyn Majors","Steven Beer","White / Caucasian","Man",28,91
+0,"nursing","low","treat",0,0,1,5,"Morgan Fischer","Amen Ramesses","Molly Mahler","Eliza Macken","Bailey Pierce","Deanna Benner","Dylan Guiney","White / Caucasian","Man",38,91
+0,"nursing","high","treat",0,1,1,4,"Carlos Miranda","Elsie Jolade","Molly Mahler","Kathy O'Gara","Mark Johnson","Deanna Benner","Stephane Pierre","White / Caucasian","Woman",43,91
+1,"nursing","high","treat",0,1,1,3,"Deanna Benner","Kathy O'Gara","Madeline Travis","Carlos Miranda","Jeremy Blount","Stephane Pierre","Abigail Brown","White / Caucasian","Man",72,91
+1,"nursing","high","control",0,1,0,3,"Stephane Pierre","Molly Mahler","Camille Barnes","Ryan McMahon","Mark Johnson","Madeline Travis","Colinda Cole-French","White / Caucasian","Man",52,91
+0,"surgeon","low","treat",1,0,1,3,"Carolyn Majors","Alan Cheung","Donald Annino","Steven Beer","Karen Horvath","Lucy Wibbenmeyer","Laurence Yee","White / Caucasian","Woman",57,91
+0,"surgeon","low","control",1,0,0,3,"Alan Cheung","Laurence Yee","Patroklos Pappas","Lucy Wibbenmeyer","Karen Horvath","Carolyn Majors","John Golfinos","White / Caucasian","Man",44,91
+0,"surgeon","high","control",1,1,0,3,"Elizabeth Arena","Carolyn Majors","Daniel Lu","Abraham Shaked","Philip Alexander","Lucy Wibbenmeyer","Juan Castillo","White / Caucasian","Woman",41,91
+0,"surgeon","low","treat",1,0,1,3,"Carolyn Majors","Alan Cheung","Patroklos Pappas","Elizabeth Arena","Abraham Shaked","Lucy Wibbenmeyer","Philip Alexander","White / Caucasian","Woman",23,91
+0,"nursing","low","control",0,0,0,5,"Bailey Pierce","Deanna Benner","Stephane Pierre-Antoine","Molly Mahler","Amanda Veltri","Eliza Macken","Mark Johnson","White / Caucasian","Man",37,91
+1,"nursing","high","control",0,1,0,6,"Abigail Brown","Alyson Solloway","Morgan Fischer","Charlotte Tiley","Margo Brown","Mary Roberge","Deanna Benner","White / Caucasian","Man",34,91
+0,"nursing","low","treat",0,0,1,0,"David Lopez","Carlos Miranda","Zachary Krim","Dylan Guiney","Mathew Krueger","Ryan Bresnahan","Amen Ramesses","White / Caucasian","Man",26,91
+0,"surgeon","high","treat",1,1,1,5,"Katherine Albutt","Carolyn Majors","Breehan Chancellor","Abraham Shaked","Maria Bell","Karen Horvath","Philip Alexander","White / Caucasian","Woman",60,91
+1,"surgeon","high","control",1,1,0,3,"Lucy Wibbenmeyer","Nervin Fanous","Abraham Shaked","Philip Alexander","Maria Bell","Daniel Lu","Karen Horvath","White / Caucasian","Woman",37,91
+1,"surgeon","low","control",1,0,0,3,"Carolyn Majors","Elizabeth Arena","Lucy Wibbenmeyer","Patroklos Pappas","David Moore","Steven Beer","Karen Horvath","White / Caucasian","Woman",54,91
+0,"nursing","high","control",0,1,0,5,"Niki White","Colinda Cole-French","Kathy O'Gara","Alyson Solloway","Jeremy Blount","Elsie Jolade","James Mangalus","White / Caucasian","Woman",70,91
+0,"nursing","low","treat",0,0,1,2,"Ryan McMahon","Mathew Krueger","Molly Mahler","Thomas Horton","Mark Johnson","Deanna Benner","Brian O'Connor","White / Caucasian","Woman",70,91
+0,"surgeon","low","treat",1,0,1,2,"Crystal Alvarez","Laurence Yee","Asishana Osho","Sumeet Kadakia","Lucy Wibbenmeyer","John Golfinos","Juan Castillo","White / Caucasian","Woman",51,91
+0,"surgeon","high","treat",1,1,1,3,"Karen Horvath","Nervin Fanous","Philip Alexander","Daniel Lu","Abraham Shaked","Lucy Wibbenmeyer","Juan Castillo","White / Caucasian","Woman",39,91
+0,"nursing","low","control",0,0,0,2,"Mark Johnson","Taiwo Oluyemo","Amen Ramesses","Deanna Benner","Molly Mahler","Carlos Miranda","Dylan Guiney","Asian / Pacific Islander","Woman",60,91
+0,"nursing","high","treat",0,1,1,5,"Carlos Miranda","Deanna Benner","Molly Mahler","Elsie Jolade","Kathy O'Gara","Madeline Travis","Mark Johnson","White / Caucasian","Man",66,91
+0,"surgeon","low","control",1,0,0,1,"Crystal Alvarez","Juan Castillo","Donald Annino","Asishana Osho","Daniel Lu","Patroklos Pappas","Hoang Nguyen","White / Caucasian","Man",68,91
+1,"nursing","low","control",0,0,0,3,"Stephane Pierre-Antoine","Eliza Macken","Deanna Benner","Molly Mahler","Brian O'Connor","Jeremy Blount","Amanda Veltri","White / Caucasian","Woman",28,91
+1,"surgeon","high","control",1,1,0,5,"Michelle Carlson","Abraham Shaked","Svjetlana Lozo","Michelle Nguyen","Breehan Chancellor","Rachel Beard","Karen Horvath","White / Caucasian","Man",35,91
+1,"surgeon","high","treat",1,1,1,3,"Daniel Lu","Carolyn Majors","Adam Roy","Karen Horvath","Katherine Albutt","Juan Castillo","Nervin Fanous","White / Caucasian","Woman",79,91
+0,"nursing","low","treat",0,0,1,3,"Stephane Pierre-Antoine","Amanda Veltri","Morgan Fischer","Joseph Wright","Eliza Macken","Amen Ramesses","Girma Mekonen","White / Caucasian","Woman",49,91
+0,"nursing","high","treat",0,1,1,5,"Jasmine Humphrey","Deanna Benner","Elsie Jolade","Molly Mahler","Colinda Cole-French","Carlos Miranda","Jeremy Blount","Black or African American","Woman",33,91
+0,"nursing","high","control",0,1,0,5,"Carlos Miranda","Deanna Benner","Molly Mahler","Elsie Jolade","Kathy O'Gara","Madeline Travis","Mark Johnson","White / Caucasian","Woman",35,91
+1,"surgeon","low","treat",1,0,1,2,"Elizabeth Arena","John Golfinos","Alan Cheung","Steven Beer","Carolyn Majors","Donald Annino","Rachel Beard","Asian / Pacific Islander","Woman",40,91
+0,"nursing","high","control",0,1,0,5,"Alyson Solloway","Stephane Pierre","Mary Roberge","Eliza Macken","Niki White","Deanna Benner","Ryan McMahon","Asian / Pacific Islander","Man",60,91
+1,"surgeon","low","treat",1,0,1,1,"David Moore","John Golfinos","Juan Castillo","Daniel Lu","Elizabeth Arena","Asishana Osho","Rachel Beard","White / Caucasian","Man",77,91
+1,"surgeon","high","control",1,1,0,5,"Carolyn Majors","Maria Bell","Philip Alexander","Karen Horvath","Elizabeth Arena","Lucy Wibbenmeyer","Nervin Fanous","White / Caucasian","Woman",35,91
+0,"surgeon","high","treat",1,1,1,3,"Alison Wilson","Karen Horvath","Daniel Lu","Philip Alexander","Maria Bell","Abraham Shaked","Juan Castillo","White / Caucasian","Man",40,91
+1,"nursing","high","treat",0,1,1,4,"Jasmine Humphrey","Kathy O'Gara","Carlos Miranda","Mark Johnson","Eliza Macken","Deanna Benner","Camille Barnes","White / Caucasian","Man",38,91
+0,"nursing","low","control",0,0,0,2,"Mark Johnson","Carlos Miranda","Molly Mahler","Deanna Benner","Amen Ramesses","Taiwo Oluyemo","Joseph Wright","White / Caucasian","Woman",59,91
+1,"nursing","low","treat",0,0,1,3,"Eliza Macken","Stephane Pierre-Antoine","Molly Mahler","Amanda Veltri","Taiwo Oluyemo","Mathew Krueger","Morgan Fischer","White / Caucasian","Woman",34,91
+0,"surgeon","low","control",1,0,0,2,"Sumeet Kadakia","Rachel Beard","Laurence Yee","Karen Horvath","Donald Annino","John Golfinos","Juan Castillo","White / Caucasian","Woman",53,91
+0,"nursing","low","treat",0,0,1,3,"Girma Mekonen","Molly Mahler","James Mangalus","Brian O'Connor","Eliza Macken","Morgan Fischer","Mark Johnson","Black or African American","Man",41,91
+0,"surgeon","high","treat",1,1,1,3,"Philip Alexander","Nervin Fanous","Carolyn Majors","Michelle Carlson","Juan Castillo","Abraham Shaked","Daniel Lu","White / Caucasian","Woman",55,91
+0,"surgeon","low","treat",1,0,1,0,"Alan Cheung","Steve Kim","Juan Castillo","Laurence Yee","Daniel Lu","Steven Beer","John Golfinos","Black or African American","Woman",65,91
+0,"nursing","low","control",0,0,0,2,"Carlos Miranda","Molly Mahler","Mark Johnson","Deanna Benner","Amen Ramesses","Taiwo Oluyemo","Joseph Wright","White / Caucasian","Man",51,91
+1,"nursing","high","control",0,1,0,4,"Molly Mahler","Kathy O'Gara","Carlos Miranda","Elsie Jolade","Mark Johnson","Madeline Travis","Eliza Macken","White / Caucasian","Woman",28,91
+0,"nursing","low","control",0,0,0,2,"Molly Mahler","Stephane Pierre-Antoine","Mark Johnson","Joseph Wright","Taiwo Oluyemo","Deanna Benner","Carlos Miranda","White / Caucasian","Man",31,91
+1,"surgeon","low","control",1,0,0,1,"Alan Cheung","Steven Beer","Asishana Osho","Mikael Petrosyan","Rachel Beard","Steve Kim","Lucy Wibbenmeyer","White / Caucasian","Woman",54,91
+0,"nursing","low","treat",0,0,1,6,"Molly Mahler","Amanda Veltri","Morgan Fischer","Eliza Macken","Deanna Benner","Bailey Pierce","James Mangalus","Hispanic / Latinx","Woman",46,91
+0,"nursing","high","control",0,1,0,4,"Kathy O'Gara","Elsie Jolade","Molly Mahler","Alyson Solloway","Mark Johnson","Carlos Miranda","Jeremy Blount","White / Caucasian","Woman",62,91
+1,"surgeon","high","control",1,1,0,6,"Nervin Fanous","Svjetlana Lozo","Anne Le","Breehan Chancellor","Carolyn Majors","Michelle Nguyen","Alison Wilson","Black or African American","Man",39,91
+1,"nursing","high","treat",0,1,1,4,"Elsie Jolade","Kathy O'Gara","Carlos Miranda","Mark Johnson","Molly Mahler","Deanna Benner","Eliza Macken","Black or African American","Man",79,91
+1,"surgeon","high","treat",1,1,1,2,"Abraham Shaked","Maria Bell","Danelle Bertozzi","Steve Kim","Philip Alexander","Juan Castillo","Lindsey Prescher","White / Caucasian","Man",65,91
+1,"surgeon","high","control",1,1,0,4,"Philip Alexander","Carolyn Majors","Michelle Carlson","Lucy Wibbenmeyer","Nervin Fanous","Steve Kim","Karen Horvath","White / Caucasian","Woman",35,91
+0,"surgeon","low","control",1,0,0,1,"Adam Roy","Brad Olberding","Philip Alexander","Alan Cheung","Rachel Beard","Steven Beer","Daniel Lu","Hispanic / Latinx","Woman",45,91
+0,"nursing","high","treat",0,1,1,5,"Carlos Miranda","Elsie Jolade","Molly Mahler","Kathy O'Gara","Deanna Benner","Madeline Travis","Mark Johnson","White / Caucasian","Woman",49,91
+0,"nursing","low","control",0,0,0,3,"Carlos Miranda","Stephane Pierre-Antoine","Amen Ramesses","Eliza Macken","Amanda Veltri","Molly Mahler","Jay Warren","White / Caucasian","Woman",41,91
+0,"nursing","high","treat",0,1,1,4,"Amanda Veltri","James Mangalus","Carlos Miranda","Molly Mahler","Madeline Travis","Alyson Solloway","Mark Johnson","Asian / Pacific Islander","Man",27,91
+1,"surgeon","low","treat",1,0,1,2,"Karen Horvath","Patroklos Pappas","Asishana Osho","Laurence Yee","Abraham Shaked","Carolyn Majors","Lucy Wibbenmeyer","White / Caucasian","Woman",24,91
+0,"nursing","low","treat",0,0,1,2,"Jay Warren","Ryan McMahon","Morgan Fischer","Zachary Krim","Eliza Macken","Matthew Brooks","Dylan Guiney","Asian / Pacific Islander","Man",33,91
+0,"surgeon","low","treat",1,0,1,2,"Steven Beer","Patroklos Pappas","Karen Horvath","Carolyn Majors","John Golfinos","Abraham Shaked","Laurence Yee","White / Caucasian","Man",39,91
+0,"surgeon","low","control",1,0,0,3,"Karen Horvath","Rachel Beard","Asishana Osho","Alan Cheung","Lucy Wibbenmeyer","Philip Alexander","Patroklos Pappas","Asian / Pacific Islander","Man",35,91
+1,"surgeon","high","treat",1,1,1,6,"Lucy Wibbenmeyer","Karen Horvath","Anne Le","Nervin Fanous","Michelle Carlson","Maria Bell","Carolyn Majors","White / Caucasian","Man",38,91
+1,"nursing","high","control",0,1,0,4,"Kathy O'Gara","Jeremy Blount","Amanda Veltri","Molly Mahler","James Mangalus","Margo Brown","Deanna Benner","White / Caucasian","Man",38,91
+1,"surgeon","high","control",1,1,0,1,"Steve Kim","Juan Castillo","Alison Wilson","Abraham Shaked","Philip Alexander","Daniel Lu","Maria Bell","White / Caucasian","Woman",55,91
+1,"nursing","high","control",0,1,0,5,"Carlos Miranda","Elsie Jolade","Deanna Benner","Jasmine Humphrey","Madeline Travis","Kathy O'Gara","Molly Mahler","White / Caucasian","Woman",60,91
+1,"nursing","low","treat",0,0,1,4,"Deanna Benner","Carlos Miranda","Molly Mahler","Amanda Veltri","Morgan Fischer","Stephane Pierre-Antoine","Eliza Macken","White / Caucasian","Woman",47,91
+1,"surgeon","high","control",1,1,0,3,"Karen Horvath","Abraham Shaked","Maria Bell","Alison Wilson","Philip Alexander","Daniel Lu","Elizabeth Arena","White / Caucasian","Man",25,91
+0,"surgeon","low","control",1,0,0,2,"Lucy Wibbenmeyer","Laurence Yee","Philip Alexander","Alan Cheung","Karen Horvath","Daniel Lu","Patroklos Pappas","Asian / Pacific Islander","Woman",30,91
+1,"nursing","low","control",0,0,0,3,"Molly Mahler","Deanna Benner","Carlos Miranda","Amen Ramesses","Amanda Veltri","Jeremy Blount","Eliza Macken","White / Caucasian","Woman",66,91
+0,"surgeon","low","treat",1,0,1,3,"Alan Cheung","Carolyn Majors","Lucy Wibbenmeyer","Karen Horvath","John Golfinos","Steven Beer","Asishana Osho","Black or African American","Man",44,91
+1,"surgeon","high","treat",1,1,1,4,"Karen Horvath","Steve Kim","Alison Wilson","Abraham Shaked","Nervin Fanous","Breehan Chancellor","Lucy Wibbenmeyer","White / Caucasian","Woman",56,91
+1,"nursing","high","treat",0,1,1,5,"Stephane Pierre","Molly Mahler","Eliza Macken","Amanda Veltri","Madeline Travis","Colinda Cole-French","Elsie Jolade","Hispanic / Latinx","Man",40,91
+1,"surgeon","high","control",1,1,0,0,"Daniel Lu","Abraham Shaked","Steve Kim","Adam Roy","Philip Alexander","Juan Castillo","Maria Bell","Black or African American","Woman",33,91
+0,"nursing","high","control",0,1,0,5,"Madeline Travis","Elsie Jolade","Molly Mahler","Carlos Miranda","Kathy O'Gara","Deanna Benner","Mark Johnson","Hispanic / Latinx","Woman",55,91
+0,"surgeon","low","control",1,0,0,1,"Philip Alexander","Laurence Yee","John Golfinos","Alan Cheung","Karen Horvath","Patroklos Pappas","Abraham Shaked","White / Caucasian","Man",45,91
+1,"nursing","high","treat",0,1,1,3,"Elsie Jolade","Mark Johnson","Stephane Pierre","James Mangalus","Molly Mahler","Alyson Solloway","Deanna Benner","Asian / Pacific Islander","Man",44,91
+1,"surgeon","high","treat",1,1,1,3,"Nervin Fanous","Alison Wilson","Abraham Shaked","Steve Kim","Crystal Alvarez","Juan Castillo","Anne Le","White / Caucasian","Woman",64,91
