@@ -1,6 +1,6 @@
 ---
-title: "Study 4 Pilot Analysis"
-subtitle: "Context (Nursing vs Surgeon) × Representation × Gender Feedback"
+title: "Study 4 Pilot"
+subtitle: "Context (Nursing vs Surgeon) × Base Representation (High vs Low) × Gender Feedback"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document:
@@ -131,12 +131,13 @@ if(USE_API) {
       # Create numeric codes
       surgeon_context = ifelse(context == "surgeon", 1, 0),
       high_base = ifelse(base == "high", 1, 0),
+      low_base = ifelse(base == "low", 1, 0),
       gender_feedback = ifelse(cond == "treat", 1, 0),
 
       # Calculate base selections
       base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% all_women))
     ) |>
-    dplyr::select(female_pick, context, base, cond, surgeon_context, high_base,
+    dplyr::select(female_pick, context, base, cond, surgeon_context, low_base, high_base,
                   gender_feedback, base_gender, `choice-1`:`choice-7`,
                   race, gender, age)
 
@@ -254,7 +255,7 @@ d0 |>
 
 ```{r three-way-model, echo=FALSE, results='markup'}
 # Main model with three-way interaction
-model_3way <- lm(female_pick ~ gender_feedback * high_base * surgeon_context,
+model_3way <- lm(female_pick ~ gender_feedback * low_base * surgeon_context,
                  data = d0)
 
 # Display the summary with robust standard errors
@@ -265,45 +266,58 @@ robust_confint(model_3way)
 
 \newpage
 
-## Separate Models by Context
+## Separate Models by Representation Level
 
-### Nursing Context
+### Women Underrepresented in Pool (Low Base)
 
-```{r nursing-context, echo=FALSE, results='markup'}
-# Nursing context model
-model_nursing <- lm(female_pick ~ gender_feedback * high_base,
-                    data = d0 %>% filter(context == "nursing"))
+```{r low-base, echo=FALSE, results='markup'}
+# Low base model: tests if treatment effect differs by context
+model_low <- lm(female_pick ~ gender_feedback * surgeon_context,
+                data = d0 %>% filter(base == "low"))
 
-cat("=== NURSING CONTEXT ===\n")
-robust_summary(model_nursing)
-robust_confint(model_nursing)
+cat("=== WOMEN UNDERREPRESENTED IN POOL ===\n")
+cat("Model: female_pick ~ gender_feedback * surgeon_context\n\n")
+robust_summary(model_low)
+robust_confint(model_low)
 
 # Cell means
-cat("\n\nCell Means - Nursing Context:\n")
+cat("\n\nCell Means - Women Underrepresented:\n")
 d0 %>%
-  filter(context == "nursing") %>%
-  group_by(base, cond) %>%
+  filter(base == "low") %>%
+  group_by(context, cond) %>%
   summarise(
     n = n(),
-    mean_female_pick = mean(female_pick),
-    se = sd(female_pick) / sqrt(n()),
+    mean_female_pick = mean(female_pick) * 100,
+    se = sd(female_pick) / sqrt(n()) * 100,
     .groups = "drop"
   )
 ```
 
 \newpage
 
-### Surgeon Context
+### Women Overrepresented in Pool (High Base)
 
-```{r surgeon-context, echo=FALSE, results='markup'}
-# Surgeon context model
-model_surgeon <- lm(female_pick ~ gender_feedback * high_base,
-                    data = d0 %>% filter(context == "surgeon"))
+```{r high-base, echo=FALSE, results='markup'}
+# High base model: tests if treatment effect differs by context
+model_high <- lm(female_pick ~ gender_feedback * surgeon_context,
+                 data = d0 %>% filter(base == "high"))
 
-cat("=== SURGEON CONTEXT ===\n")
-robust_summary(model_surgeon)
-robust_confint(model_surgeon)
+cat("=== WOMEN OVERREPRESENTED IN POOL ===\n")
+cat("Model: female_pick ~ gender_feedback * surgeon_context\n\n")
+robust_summary(model_high)
+robust_confint(model_high)
 
+# Cell means
+cat("\n\nCell Means - Women Overrepresented:\n")
+d0 %>%
+  filter(base == "high") %>%
+  group_by(context, cond) %>%
+  summarise(
+    n = n(),
+    mean_female_pick = mean(female_pick) * 100,
+    se = sd(female_pick) / sqrt(n()) * 100,
+    .groups = "drop"
+  )
 ```
 
 \newpage
@@ -330,12 +344,51 @@ summary_stats <- d0 %>%
                        "Women Overrepresented in Pool"),
     feedback_label = ifelse(cond == "treat", "Treatment", "Control")
   )
+
+# Calculate significance for each context × base combination
+# Using a function to avoid rowwise issues
+calc_sig_test <- function(ctx, bs) {
+  subset_data <- d0 %>% filter(context == ctx, base == bs)
+  model <- lm(female_pick ~ gender_feedback, data = subset_data)
+  robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+  coef_est <- coef(model)["gender_feedback"]
+  t_stat <- coef_est / robust_se["gender_feedback"]
+  p <- 2 * pt(-abs(t_stat), df = df.residual(model))
+  return(p)
+}
+
+sig_tests <- expand.grid(
+  context = c("surgeon", "nursing"),
+  base = c("low", "high"),
+  stringsAsFactors = FALSE
+) %>%
+  mutate(
+    p_value = mapply(calc_sig_test, context, base),
+    sig_label = case_when(
+      p_value < 0.001 ~ "***",
+      p_value < 0.01 ~ "**",
+      p_value < 0.05 ~ "*",
+      p_value < 0.10 ~ "†",
+      TRUE ~ "n.s."
+    ),
+    # Match the labels used in summary_stats
+    context_label = ifelse(context == "surgeon",
+                          "Surgeon Context\n(Women Historically Underrepresented)",
+                          "Nursing Context\n(Women Historically Overrepresented)"),
+    base_label = ifelse(base == "low",
+                       "Women Underrepresented in Pool",
+                       "Women Overrepresented in Pool")
+  )
 ```
 
 ## Figure 1: Surgeon Context
 
 ```{r fig-surgeon, fig.cap="Surgeon Context: Women's Selection by Pool Composition and Feedback", fig.height=5}
 plot_data_surgeon <- summary_stats %>%
+  filter(context == "surgeon")
+
+# Get significance labels for surgeon context
+sig_surgeon <- sig_tests %>%
   filter(context == "surgeon")
 
 p_surgeon <- ggplot(plot_data_surgeon, aes(x = feedback_label, y = mean_selection * 100,
@@ -346,6 +399,10 @@ p_surgeon <- ggplot(plot_data_surgeon, aes(x = feedback_label, y = mean_selectio
                 width = 0.2) +
   geom_text(aes(label = sprintf("%.1f%%", mean_selection * 100)),
             vjust = 3, size = 5, color = "white", fontface = "bold") +
+  # Add significance annotations
+  geom_text(data = sig_surgeon,
+            aes(x = 1.5, y = 95, label = sig_label),
+            size = 6, fontface = "bold", inherit.aes = FALSE) +
   facet_wrap(~ base_label, nrow = 1) +
   scale_fill_manual(values = c("#990000", "#011F5B"),
                    labels = c("No gender feedback", "Gender feedback provided")) +
@@ -357,7 +414,8 @@ p_surgeon <- ggplot(plot_data_surgeon, aes(x = feedback_label, y = mean_selectio
     title = "Surgeon Context (Women Historically Underrepresented)",
     x = "",
     y = "% Selecting Women",
-    fill = ""
+    fill = "",
+    caption = "Significance: *** p<0.001, ** p<0.01, * p<0.05, † p<0.10, n.s. = not significant"
   ) +
   theme_bw() +
   theme(
@@ -365,6 +423,7 @@ p_surgeon <- ggplot(plot_data_surgeon, aes(x = feedback_label, y = mean_selectio
     legend.direction = "horizontal",
     legend.text = element_text(size = 12),
     plot.title = element_text(size = 13, face = "bold", hjust = 0.5),
+    plot.caption = element_text(size = 9, hjust = 0.5),
     strip.text = element_text(size = 11, face = "bold"),
     axis.text.x = element_text(size = 11),
     axis.text.y = element_text(size = 11),
@@ -384,6 +443,10 @@ print(p_surgeon)
 plot_data_nursing <- summary_stats %>%
   filter(context == "nursing")
 
+# Get significance labels for nursing context
+sig_nursing <- sig_tests %>%
+  filter(context == "nursing")
+
 p_nursing <- ggplot(plot_data_nursing, aes(x = feedback_label, y = mean_selection * 100,
                                             fill = feedback_label)) +
   geom_bar(stat = "identity", width = 0.7) +
@@ -392,6 +455,10 @@ p_nursing <- ggplot(plot_data_nursing, aes(x = feedback_label, y = mean_selectio
                 width = 0.2) +
   geom_text(aes(label = sprintf("%.1f%%", mean_selection * 100)),
             vjust = 3, size = 5, color = "white", fontface = "bold") +
+  # Add significance annotations
+  geom_text(data = sig_nursing,
+            aes(x = 1.5, y = 95, label = sig_label),
+            size = 6, fontface = "bold", inherit.aes = FALSE) +
   facet_wrap(~ base_label, nrow = 1) +
   scale_fill_manual(values = c("#990000", "#011F5B"),
                    labels = c("No gender feedback", "Gender feedback provided")) +
@@ -403,7 +470,8 @@ p_nursing <- ggplot(plot_data_nursing, aes(x = feedback_label, y = mean_selectio
     title = "Nursing Context (Women Historically Overrepresented)",
     x = "",
     y = "% Selecting Women",
-    fill = ""
+    fill = "",
+    caption = "Significance: *** p<0.001, ** p<0.01, * p<0.05, † p<0.10, n.s. = not significant"
   ) +
   theme_bw() +
   theme(
@@ -411,6 +479,7 @@ p_nursing <- ggplot(plot_data_nursing, aes(x = feedback_label, y = mean_selectio
     legend.direction = "horizontal",
     legend.text = element_text(size = 12),
     plot.title = element_text(size = 13, face = "bold", hjust = 0.5),
+    plot.caption = element_text(size = 9, hjust = 0.5),
     strip.text = element_text(size = 11, face = "bold"),
     axis.text.x = element_text(size = 11),
     axis.text.y = element_text(size = 11),
