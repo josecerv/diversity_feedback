@@ -1,0 +1,79 @@
+
+
+
+    filter, lag
+
+
+    intersect, setdiff, setequal, union
+
+
+
+
+    as.Date, as.Date.numeric
+
+
+================================================================================
+Table 2. Ordinary Least Squares (OLS) Regressions Predicting Attributes of the
+NPR AI Experts Selected in Study 1 as a Function of the Pieces of Feedback
+Participants Were Randomly Assigned to Receive on Their Initially Selected Set
+of Three Experts
+================================================================================
+
+                                                  Independent Regression Equations                        Simultaneous System of Equations
+                                                  --------------------------------    ----------------------------------------
+Dependent Variable:                                Model 1  Model 2  Model 3  Model 4     Model 5  Model 6  Model 7  Model 8
+Proportion of Experts Selected...                     Were     Were     Were  Work at        Were     Were     Were  Work at
+                                                     Women    Under Based on        a       Women    Under Based on        a
+                                                                 50     West  Univer-                   50     West  Univer-
+                                                                       Coast     sity                         Coast     sity
+--------------------------------------------------------------------------------
+Indicator for Whether Feedback                    
+was Provided on % of Original                     
+Experts That Were...                              
+
+  Women                                             0.125***                                 0.235***   0.041***    0.042**     0.026+
+                                                     (0.017)                                  (0.015)    (0.012)    (0.013)    (0.014)
+
+  Under 50 Years Old                                              0.025                        0.120***   0.073***   0.073***   0.083***
+                                                                (0.020)                         (0.019)    (0.015)    (0.017)    (0.017)
+
+  Based on West Coast                                                       0.046*               0.113***   0.060***   0.108***   0.075***
+                                                                           (0.021)                (0.019)    (0.015)    (0.016)    (0.017)
+
+  Working at a University                                                            0.063***      0.103***   0.051***   0.098***   0.106***
+                                                                                      (0.018)       (0.017)    (0.013)    (0.014)    (0.015)
+
+--------------------------------------------------------------------------------
+  Observations                                           997        997        997        997           997        997        997        997
+  R-Squared                                            0.055      0.002      0.004      0.012         0.707      0.420      0.530      0.473
+================================================================================
+
+Notes:
+This table reports the results of eight ordinary least squares (OLS) regressions
+that predict the proportion of NPR AI experts selected by participants in Study 1
+that had a given attribute (e.g., Were women? Were under 50 years old?). Model 1
+predicts the proportion of women selected with an indicator for receiving feedback
+on the % of the original experts selected that were women. Model 2 predicts the
+proportion of experts under 50 selected with an indicator for receiving feedback on
+the % of the original experts selected that were under 50. Model 3 predicts the
+proportion of experts based on the West Coast with an indicator for receiving
+feedback on the % of the original experts selected that were based on the West
+Coast. Model 4 predicts the proportion of experts working at a university with an
+indicator for receiving feedback on the % of the original experts selected that
+worked at a university.
+
+Models 5-8 were used to construct a simultaneous system of equations. All of
+these models include the following indicators as predictors: indicators for
+receiving feedback on the % of the original experts selected that (1) were women,
+(2) were under 50 years old, (3) were based on the West Coast, and (4) worked at a
+university. Model 5 predicts the proportion of women selected. Model 6 predicts the
+proportion of experts under 50 selected. Model 7 predicts the proportion of experts
+based on the West Coast. Model 8 predicts the proportion of experts working at a
+university. Models 5-8 had the constant suppressed to prevent collinearity.
+
+Standard errors reported in parentheses are estimated robustly using HC3 and are
+clustered by participant in Models 5-8.
+
++p<0.1;*p<0.05;**p<0.01;***p<0.001.
+
+================================================================================

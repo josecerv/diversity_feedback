@@ -1,0 +1,82 @@
+
+
+
+    filter, lag
+
+
+    intersect, setdiff, setequal, union
+
+
+
+
+    as.Date, as.Date.numeric
+
+
+================================================================================
+Table 2. Ordinary Least Squares (OLS) Regressions Predicting Attributes of the
+Final Film Selected in Study 1A as a Function of the Pieces of Feedback
+Participants Were Randomly Assigned to Receive on Their Initially Selected Set
+of Six Films
+================================================================================
+
+                                                  Independent Regression Equations                        Simultaneous System of Equations
+                                                  --------------------------------    ----------------------------------------
+Dependent Variable:                                Model 1  Model 2  Model 3  Model 4     Model 5  Model 6  Model 7  Model 8
+The Final Film Selected...                        Featured    Had a      Was      Was    Featured    Had a      Was      Was
+                                                   a Woman   Budget  about a Released     a Woman   Budget  about a Released
+                                                   Protag.    Above Political    After     Protag.    Above Political    After
+                                                               $40M   Leader     2010                 $40M   Leader     2010
+--------------------------------------------------------------------------------
+Indicator for Whether Feedback                    
+was Provided on % of Original                     
+Films That Were...                                
+
+  About a Woman Protagonist                         0.206***                                 0.270***    0.080**   0.205***   0.178***
+                                                     (0.028)                                  (0.028)    (0.028)    (0.030)    (0.030)
+
+  Above a Budget of $40M                                          0.020                         0.092**   0.111***    0.108**   0.216***
+                                                                (0.039)                         (0.034)    (0.032)    (0.035)    (0.035)
+
+  About a Political Leader                                                  -0.051                  0.065   0.149***     0.113*   0.184***
+                                                                           (0.036)                (0.043)    (0.041)    (0.044)    (0.044)
+
+  Released After 2010                                                                  -0.003         0.045    0.099**   0.122***   0.186***
+                                                                                      (0.062)       (0.032)    (0.030)    (0.032)    (0.032)
+
+--------------------------------------------------------------------------------
+  Observations                                          1000       1000       1000       1000          1000       1000       1000       1000
+  R-Squared                                            0.050      0.000      0.002      0.000         0.340      0.345      0.393      0.577
+================================================================================
+
+Notes:
+This table reports the results of eight ordinary least squares (OLS) regressions
+that predict whether the final film a participant selected in Study 1A had a given
+attribute (e.g., Was the film released after 2010? Was the film about a political
+leader?). Model 1 predicts the selection of a final film that featured a woman
+protagonist with an indicator for receiving feedback on the % of the original six
+films selected that were about a woman protagonist. Model 2 predicts the selection
+of a final film that had a budget above $40M with an indicator for receiving
+feedback on the % of the original six films selected with a budget above $40M.
+Model 3 predicts the selection of a final film that was about a political leader
+with an indicator for receiving feedback on the % of the original six films
+selected that were about a political leader. Model 4 predicts the selection of a
+final film that was released after 2010 with an indicator for receiving feedback
+on the % of the original six films selected that were released after 2010.
+
+Models 5-8 were used to construct a simultaneous system of equations. All of
+these models include the following indicators as predictors: indicators for
+receiving feedback on the % of the original six films selected that (1) featured
+a woman protagonist, (2) had a budget above $40M, (3) featured a political leader
+protagonist and (4) were released after 2010. Model 5 predicts the selection of
+the final film that featured a woman protagonist. Model 6 predicts the selection
+of the final film that had a budget above $40M. Model 7 predicts the selection of
+a seventh film that was about a political leader. Model 8 predicts the selection
+of a seventh film that was released after 2010. Models 5-8 had the constant
+suppressed to prevent collinearity.
+
+Standard errors reported in parentheses are estimated robustly using HC3 and are
+clustered by participant in Models 5-8.
+
++p<0.1;*p<0.05;**p<0.01;***p<0.001.
+
+================================================================================
