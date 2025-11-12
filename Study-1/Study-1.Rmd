@@ -183,7 +183,8 @@ if(USE_API) {
     dplyr::select(treatment, set_num, women_feedback, age_feedback, location_feedback, university_feedback,
                   women_count, women_proportion, age_count, age_proportion,
                   location_count, location_proportion, university_count, university_proportion,
-                  `choice-1`:`choice-3`, race, gender, age, gender_code, race_code, cond, set)
+                  `choice-1`:`choice-3`, race, gender, age, gender_code, race_code, cond, set) %>%
+    slice(1:1000) # pre-registered sample size
 
   # Calculate the number of excluded participants
   num_excluded <- nrow(qual_data) - nrow(d0)
