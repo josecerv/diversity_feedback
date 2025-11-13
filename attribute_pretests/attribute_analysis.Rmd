@@ -305,26 +305,6 @@ kable(equiv_table,
   kableExtra::column_spec(1, width = "8cm")
 ```
 
-## Interpretation
-
-```{r interpretation, results='asis'}
-# Generate interpretation text
-for(i in 1:nrow(equiv_table)) {
-  attr_short <- gsub("wrote at least one book that ", "", equiv_table$attribute[i])
-  attr_short <- gsub("wrote  books, poems or essays ", "", attr_short)
-  attr_short <- gsub("\\.$", "", attr_short)
-
-  if(equiv_table$equivalence[i] == "Yes") {
-    cat("- **", attr_short, "**: EQUIVALENT to gender (TOST p = ",
-        equiv_table$tost_p_max[i], "). Both TOST tests are significant, providing ",
-        "evidence that this attribute is practically equivalent in importance to gender.\n\n")
-  } else {
-    cat("- **", attr_short, "**: NOT EQUIVALENT to gender (TOST p = ",
-        equiv_table$tost_p_max[i], "). We cannot conclude equivalence within d = ±0.5 bounds.\n\n")
-  }
-}
-```
-
 \newpage
 
 # Summary Statistics
