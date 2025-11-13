@@ -1,0 +1,362 @@
+---
+title: "Author Attribute Importance Analysis"
+date: "September 26, 2025"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: false
+geometry: margin=1in
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(dplyr)
+library(knitr)
+library(qualtRics)
+library(TOSTER)
+
+# Set up Qualtrics API credentials
+qualtrics_api_credentials(
+  api_key = "BJ6aDiEgtQihneCgtZycVLYjaj0ao9gYkdRkb1UZ",
+  base_url = "yul1.qualtrics.com",
+  install = FALSE,
+  overwrite = TRUE
+)
+
+# Function to clean importance values
+clean_importance <- function(x) {
+  # Remove text anchors and convert to numeric
+  x <- as.character(x)
+  x <- gsub("Not at all important", "", x)
+  x <- gsub("Very important", "", x)
+  x <- gsub("[^0-9]", "", x)
+  x <- as.numeric(x)
+  return(x)
+}
+
+# Function to format p-values with significance stars
+format_pval <- function(p) {
+  if(is.na(p)) return("")
+  stars <- ifelse(p < 0.001, "***",
+                  ifelse(p < 0.01, "**",
+                         ifelse(p < 0.05, "*", "")))
+  return(stars)
+}
+```
+
+```{r load-data, include=FALSE}
+# Download survey data
+data_raw <- fetch_survey(
+  surveyID = "SV_cASPdJCJOBdOu1M",
+  verbose = FALSE
+)
+
+# Filter for September 26, 2025 and clean
+data <- data_raw %>%
+  mutate(date = as.Date(StartDate)) %>%
+  filter(date == as.Date("2025-09-26"),
+         Finished == TRUE,
+         !is.na(attribute),
+         !is.na(importance)) %>%
+  mutate(
+    importance_clean = clean_importance(importance),
+    attribute_clean = trimws(attribute)
+  ) %>%
+  filter(!is.na(importance_clean))
+
+# Calculate summary statistics for each attribute
+attribute_stats <- data %>%
+  group_by(attribute_clean) %>%
+  summarise(
+    n = n(),
+    mean = mean(importance_clean, na.rm = TRUE),
+    sd = sd(importance_clean, na.rm = TRUE),
+    .groups = "drop"
+  )
+```
+
+```{r comparison-function}
+# Function to compare one attribute against another (independent samples)
+compare_attributes <- function(data, attr1, attr2) {
+  group1 <- data %>% filter(attribute_clean == attr1) %>% pull(importance_clean)
+  group2 <- data %>% filter(attribute_clean == attr2) %>% pull(importance_clean)
+
+  # Get summary stats
+  mean1 <- mean(group1, na.rm = TRUE)
+  sd1 <- sd(group1, na.rm = TRUE)
+  n1 <- length(group1)
+
+  mean2 <- mean(group2, na.rm = TRUE)
+  sd2 <- sd(group2, na.rm = TRUE)
+  n2 <- length(group2)
+
+  # Independent samples t-test
+  ttest <- t.test(group1, group2, var.equal = FALSE)
+
+  # Cohen's d for independent samples
+  pooled_sd <- sqrt(((n1 - 1) * sd1^2 + (n2 - 1) * sd2^2) / (n1 + n2 - 2))
+  cohen_d <- (mean1 - mean2) / pooled_sd
+
+  return(list(
+    mean1 = mean1,
+    sd1 = sd1,
+    mean2 = mean2,
+    sd2 = sd2,
+    diff = mean1 - mean2,
+    t_stat = ttest$statistic,
+    p_val = ttest$p.value,
+    cohen_d = cohen_d
+  ))
+}
+
+# Function to create comparison table
+create_comparison_table <- function(data, focal_attr, exclude_attr = NULL) {
+  # Get all attributes except focal and excluded
+  all_attrs <- unique(data$attribute_clean)
+  compare_attrs <- setdiff(all_attrs, c(focal_attr, exclude_attr))
+  compare_attrs <- sort(compare_attrs)
+
+  # Get focal attribute stats
+  focal_stats <- attribute_stats %>% filter(attribute_clean == focal_attr)
+
+  # Create results table
+  results <- lapply(compare_attrs, function(attr) {
+    comp <- compare_attributes(data, focal_attr, attr)
+
+    data.frame(
+      attribute = attr,
+      focal_mean = round(comp$mean1, 2),
+      focal_sd = round(comp$sd1, 2),
+      other_mean = round(comp$mean2, 2),
+      other_sd = round(comp$sd2, 2),
+      difference = round(comp$diff, 2),
+      t_statistic = round(comp$t_stat, 2),
+      p_value = round(comp$p_val, 3),
+      sig = format_pval(comp$p_val),
+      cohen_d = round(comp$cohen_d, 2),
+      stringsAsFactors = FALSE
+    )
+  })
+
+  results_df <- do.call(rbind, results)
+
+  # Sort by p-value (descending - most similar first)
+  results_df <- results_df %>% arrange(desc(p_value))
+
+  return(results_df)
+}
+```
+
+\newpage
+
+# Table 1: Women vs. All Other Attributes (excluding Racial Minorities)
+
+```{r table1, results='asis'}
+# Create comparison table
+women_table <- create_comparison_table(
+  data = data,
+  focal_attr = "were women.",
+  exclude_attr = "were racial minorities."
+)
+
+# Format for display
+display_table <- women_table %>%
+  mutate(
+    focal_display = paste0(focal_mean, " (", focal_sd, ")"),
+    other_display = paste0(other_mean, " (", other_sd, ")")
+  ) %>%
+  select(attribute, focal_display, other_display, difference,
+         t_statistic, p_value, sig, cohen_d)
+
+# Print table
+kable(display_table,
+      col.names = c("attribute", "Women Mean (SD)", "Other Mean (SD)",
+                    "Difference", "t-statistic", "p-value", "sig", "Cohen's d"),
+      align = c("l", "r", "r", "r", "r", "r", "c", "r"),
+      format = "latex",
+      booktabs = TRUE,
+      longtable = TRUE) %>%
+  kableExtra::kable_styling(
+    latex_options = c("striped", "repeat_header"),
+    font_size = 8,
+    full_width = FALSE
+  ) %>%
+  kableExtra::column_spec(1, width = "7cm") %>%
+  kableExtra::column_spec(2:8, width = "1.2cm")
+```
+
+\newpage
+
+# Table 2: Racial Minorities vs. All Other Attributes (excluding Women)
+
+```{r table2, results='asis'}
+# Create comparison table
+race_table <- create_comparison_table(
+  data = data,
+  focal_attr = "were racial minorities.",
+  exclude_attr = "were women."
+)
+
+# Format for display
+display_table2 <- race_table %>%
+  mutate(
+    focal_display = paste0(focal_mean, " (", focal_sd, ")"),
+    other_display = paste0(other_mean, " (", other_sd, ")")
+  ) %>%
+  select(attribute, focal_display, other_display, difference,
+         t_statistic, p_value, sig, cohen_d)
+
+# Print table
+kable(display_table2,
+      col.names = c("attribute", "Race Mean (SD)", "Other Mean (SD)",
+                    "Difference", "t-statistic", "p-value", "sig", "Cohen's d"),
+      align = c("l", "r", "r", "r", "r", "r", "c", "r"),
+      format = "latex",
+      booktabs = TRUE,
+      longtable = TRUE) %>%
+  kableExtra::kable_styling(
+    latex_options = c("striped", "repeat_header"),
+    font_size = 8,
+    full_width = FALSE
+  ) %>%
+  kableExtra::column_spec(1, width = "7cm") %>%
+  kableExtra::column_spec(2:8, width = "1.2cm")
+```
+
+\newpage
+
+# Equivalence Tests for Key Attributes
+
+Lack of a significant difference does not constitute evidence of equivalence. To test whether attributes are truly equivalent in importance to gender, we conduct Two One-Sided Tests (TOST) for equivalence. We use an equivalence bound of Cohen's d = ±0.5, a commonly accepted margin for establishing practical equivalence.
+
+**Interpretation**: If both TOST p-values are < 0.05, we can conclude that the difference falls within our equivalence bounds, providing evidence that the attributes are practically equivalent in importance.
+
+```{r equivalence-tests}
+# Function to run TOST equivalence test
+run_tost <- function(data, attr1, attr2, equiv_d = 0.5) {
+  group1 <- data %>% filter(attribute_clean == attr1) %>% pull(importance_clean)
+  group2 <- data %>% filter(attribute_clean == attr2) %>% pull(importance_clean)
+
+  # Calculate pooled SD for equivalence bounds
+  n1 <- length(group1)
+  n2 <- length(group2)
+  sd1 <- sd(group1, na.rm = TRUE)
+  sd2 <- sd(group2, na.rm = TRUE)
+  pooled_sd <- sqrt(((n1 - 1) * sd1^2 + (n2 - 1) * sd2^2) / (n1 + n2 - 2))
+
+  # Set equivalence bounds in raw units
+  low_eqbound <- -equiv_d * pooled_sd
+  high_eqbound <- equiv_d * pooled_sd
+
+  # Run TOST
+  tost_result <- TOSTtwo(
+    m1 = mean(group1),
+    m2 = mean(group2),
+    sd1 = sd1,
+    sd2 = sd2,
+    n1 = n1,
+    n2 = n2,
+    low_eqbound_d = -equiv_d,
+    high_eqbound_d = equiv_d,
+    alpha = 0.05,
+    var.equal = FALSE
+  )
+
+  return(tost_result)
+}
+
+# Key attributes to test for equivalence with gender
+key_attrs <- c(
+  "wrote  books, poems or essays spanning multiple genres.",
+  "wrote at least one book that sold over 1 million copies.",
+  "wrote at least one book that remained in continuous print for over 50 years."
+)
+
+equiv_results <- lapply(key_attrs, function(attr) {
+  tost <- run_tost(data, "were women.", attr, equiv_d = 0.5)
+
+  # Extract key results
+  data.frame(
+    attribute = attr,
+    cohen_d = round(tost$dif, 3),
+    tost_p_lower = round(tost$TOST_p1, 4),
+    tost_p_upper = round(tost$TOST_p2, 4),
+    tost_p_max = round(max(tost$TOST_p1, tost$TOST_p2), 4),
+    equivalence = ifelse(max(tost$TOST_p1, tost$TOST_p2) < 0.05,
+                         "Yes", "No"),
+    stringsAsFactors = FALSE
+  )
+})
+
+equiv_table <- do.call(rbind, equiv_results)
+
+# Display equivalence test results
+kable(equiv_table,
+      col.names = c("Attribute", "Cohen's d", "TOST p (lower)",
+                    "TOST p (upper)", "TOST p (max)", "Equivalent?"),
+      align = c("l", "r", "r", "r", "r", "c"),
+      caption = "Equivalence Tests: Gender vs. Key Attributes (equivalence bound d = ±0.5)",
+      booktabs = TRUE) %>%
+  kableExtra::kable_styling(
+    latex_options = c("striped", "hold_position"),
+    font_size = 9,
+    full_width = FALSE
+  ) %>%
+  kableExtra::column_spec(1, width = "8cm")
+```
+
+## Interpretation
+
+```{r interpretation, results='asis'}
+# Generate interpretation text
+for(i in 1:nrow(equiv_table)) {
+  attr_short <- gsub("wrote at least one book that ", "", equiv_table$attribute[i])
+  attr_short <- gsub("wrote  books, poems or essays ", "", attr_short)
+  attr_short <- gsub("\\.$", "", attr_short)
+
+  if(equiv_table$equivalence[i] == "Yes") {
+    cat("- **", attr_short, "**: EQUIVALENT to gender (TOST p = ",
+        equiv_table$tost_p_max[i], "). Both TOST tests are significant, providing ",
+        "evidence that this attribute is practically equivalent in importance to gender.\n\n")
+  } else {
+    cat("- **", attr_short, "**: NOT EQUIVALENT to gender (TOST p = ",
+        equiv_table$tost_p_max[i], "). We cannot conclude equivalence within d = ±0.5 bounds.\n\n")
+  }
+}
+```
+
+\newpage
+
+# Summary Statistics
+
+```{r summary-stats}
+# Overall summary
+cat("Total valid responses:", nrow(data), "\n")
+cat("Number of unique attributes:", length(unique(data$attribute_clean)), "\n\n")
+
+# Sample size per attribute
+cat("Sample sizes per attribute:\n")
+sample_sizes <- data %>%
+  group_by(attribute_clean) %>%
+  summarise(n = n(), .groups = "drop") %>%
+  arrange(desc(n))
+
+kable(sample_sizes,
+      col.names = c("Attribute", "N"),
+      booktabs = TRUE) %>%
+  kableExtra::kable_styling(
+    latex_options = c("striped", "hold_position"),
+    font_size = 8
+  )
+```
+
+# Methods Note
+
+This analysis uses:
+
+1. **Independent samples t-tests** to compare mean importance ratings between attributes (between-subjects design)
+2. **Cohen's d** as the effect size measure (using pooled standard deviation)
+3. **TOST (Two One-Sided Tests)** procedure for equivalence testing with bounds of d = ±0.5
+4. **Welch's correction** for unequal variances in t-tests
+
+Significance levels: * p < 0.05, ** p < 0.01, *** p < 0.001

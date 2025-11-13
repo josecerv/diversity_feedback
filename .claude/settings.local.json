@@ -19,7 +19,8 @@
       "Bash(pdftotext:*)",
       "Bash(git mv:*)",
       "Bash(md5sum:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(grep:*)"
     ],
     "deny": [],
     "ask": []
