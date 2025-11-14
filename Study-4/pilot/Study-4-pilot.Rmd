@@ -93,7 +93,7 @@ robust_confint <- function(model, level = 0.95) {
 USE_API <- TRUE
 
 if(USE_API) {
-  ## Pull directly from Qualtrics API
+  ## Pull directly from Qualtrics API (force_request = T gets latest data from today 11-14-2025)
   qual_data <- fetch_survey(surveyID='SV_eysJmstT7Zxvd2K',
                      label = T,
                      convert = F,
@@ -136,28 +136,15 @@ if(USE_API) {
       # Calculate base selections (number of women selected in first 6 choices)
       base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% all_women))
     ) |>
-    # Process motivation and fairness scales
+    # Process fairness scale
     mutate(
-      across(c(I1:E3, fair1:fair3),
+      across(c(fair1:fair3),
              ~ case_when(
                . == "Strongly disagree" ~ 1, . == "Disagree" ~ 2, . == "Somewhat disagree" ~ 3,
                . == "Neither agree nor disagree" ~ 4,
                . == "Somewhat agree" ~ 5, . == "Agree" ~ 6, . == "Strongly agree" ~ 7,
                TRUE ~ NA_integer_))) |>
     mutate(
-      # Internal motivation (I1-I4)
-      internal1Z = (I1 - mean(I1, na.rm = TRUE)) / sd(I1, na.rm = TRUE),
-      internal2Z = (I2 - mean(I2, na.rm = TRUE)) / sd(I2, na.rm = TRUE),
-      internal3Z = (I3 - mean(I3, na.rm = TRUE)) / sd(I3, na.rm = TRUE),
-      internal4Z = (I4 - mean(I4, na.rm = TRUE)) / sd(I4, na.rm = TRUE),
-      internal = (internal1Z + internal2Z + internal3Z + internal4Z) / 4,
-
-      # External motivation (E1-E3)
-      external1Z = (E1 - mean(E1, na.rm = TRUE)) / sd(E1, na.rm = TRUE),
-      external2Z = (E2 - mean(E2, na.rm = TRUE)) / sd(E2, na.rm = TRUE),
-      external3Z = (E3 - mean(E3, na.rm = TRUE)) / sd(E3, na.rm = TRUE),
-      external = (external1Z + external2Z + external3Z) / 3,
-
       # Fairness scale (fair1-fair3)
       fair1Z = (fair1 - mean(fair1, na.rm = TRUE)) / sd(fair1, na.rm = TRUE),
       fair2Z = (fair2 - mean(fair2, na.rm = TRUE)) / sd(fair2, na.rm = TRUE),
@@ -167,8 +154,6 @@ if(USE_API) {
     dplyr::select(female_pick, pool, cond, women_pool, men_pool,
                   gender_feedback, base_gender, `choice-1`:`choice-7`,
                   race, gender, age,
-                  internal1Z, internal2Z, internal3Z, internal4Z, internal,
-                  external1Z, external2Z, external3Z, external,
                   fair1Z, fair2Z, fair3Z, fairness)
 
   # Calculate the number of excluded participants
@@ -215,14 +200,6 @@ qual_data$goals
 \texttt{race} & Self-selected race. \\
 \hline
 \texttt{age} & Self-entered age. \\
-\hline
-\texttt{internal1Z-4Z} & Individual standardized scale items for Internal Motivation to Respond Without Prejudice. \\
-\hline
-\texttt{external1Z-3Z} & Individual standardized scale items for External Motivation to Respond Without Prejudice. \\
-\hline
-\texttt{internal} & Aggregated scale for Internal Motivation to Respond Without Prejudice. \\
-\hline
-\texttt{external} & Aggregated scale for External Motivation to Respond Without Prejudice. \\
 \hline
 \texttt{fair1Z-3Z} & Individual standardized scale items for Fairness scale. \\
 \hline
@@ -299,17 +276,6 @@ d0 |>
 ## Cronbach's Alpha
 
 ```{r cronbach-alpha, echo=FALSE, results='markup'}
-# Calculating Cronbach's Alpha for the Internal subscale
-internal_items <- d0[, c("internal1Z", "internal2Z", "internal3Z", "internal4Z")]
-alpha_internal <- alpha(internal_items)
-
-cat("Cronbach's Alpha for Internal Subscale: ", alpha_internal$total$raw_alpha, "\n\n")
-
-# Calculating Cronbach's Alpha for the External subscale
-external_items <- d0[, c("external1Z", "external2Z", "external3Z")]
-alpha_external <- alpha(external_items)
-cat("Cronbach's Alpha for External Subscale: ", alpha_external$total$raw_alpha, "\n\n")
-
 # Calculating Cronbach's Alpha for the Fairness scale
 fairness_items <- d0[, c("fair1Z", "fair2Z", "fair3Z")]
 alpha_fairness <- alpha(fairness_items)
@@ -572,9 +538,9 @@ ggsave("Study-4-pilot-figure.pdf", plot = p_combined, width = 10, height = 8, un
 
 # Mediation Analyses
 
-## Motivation to Respond Without Prejudice
+## Fairness Scale
 
-```{r mediation-motivation, echo=FALSE, results='markup'}
+```{r mediation-fairness, echo=FALSE, results='markup'}
 # Set seed for reproducibility
 set.seed(123)
 
@@ -586,122 +552,6 @@ sobel_test <- function(med.fit, out.fit, mediator) {
   sobel_p_value <- 2 * (1 - pnorm(abs(sobel_test_statistic)))
   list(statistic = sobel_test_statistic, p_value = sobel_p_value, se = out.se)
 }
-
-cat("=======================================================\n")
-cat("MEDIATION ANALYSIS: MOTIVATION TO RESPOND WITHOUT PREJUDICE\n")
-cat("=======================================================\n\n")
-
-# -----------------------------
-# Internal Motivation Analysis
-# -----------------------------
-
-cat("--- INTERNAL MOTIVATION (I1-I4) ---\n\n")
-
-# Direct effect model
-dir.fit.internal <- lm(female_pick ~ gender_feedback, data=d0)
-
-# Mediator model
-med.fit.internal <- lm(internal ~ gender_feedback, data = d0)
-
-# Outcome model including mediator
-out.fit.internal <- lm(female_pick ~ gender_feedback + internal, data = d0)
-
-# Mediation analysis
-med.out.internal <- mediate(med.fit.internal, out.fit.internal, boot = TRUE,
-                            treat = "gender_feedback", boot.ci.type = "perc",
-                            mediator = "internal", sims = 10000)
-
-# Sensitivity analysis
-sens.out.internal <- medsens(med.out.internal, rho.by = 0.01, eps=.01,
-                             effect.type = "indirect", sims = 10000)
-
-# Sobel test for internal motivation
-sobel.internal <- sobel_test(med.fit.internal, out.fit.internal, "internal")
-
-# Print results
-cat("Sobel test for Internal Motivation:\n")
-print(sobel.internal)
-cat("\n")
-summary(med.out.internal)
-cat("\n")
-plot(sens.out.internal, main = "Sensitivity Analysis: Internal Motivation")
-
-
-# -----------------------------
-# External Motivation Analysis
-# -----------------------------
-
-cat("\n\n--- EXTERNAL MOTIVATION (E1-E3) ---\n\n")
-
-# Mediator model
-med.fit.external <- lm(external ~ gender_feedback, data = d0)
-
-# Outcome model including mediator
-out.fit.external <- lm(female_pick ~ gender_feedback + external, data = d0)
-
-# Mediation analysis
-med.out.external <- mediate(med.fit.external, out.fit.external, boot = TRUE,
-                            treat = "gender_feedback", boot.ci.type = "perc",
-                            mediator = "external", sims = 10000)
-
-# Sensitivity analysis
-sens.out.external <- medsens(med.out.external, rho.by = 0.01, eps=.01,
-                             effect.type = "indirect", sims = 10000)
-
-# Sobel test for external motivation
-sobel.external <- sobel_test(med.fit.external, out.fit.external, "external")
-
-# Print results
-cat("Sobel test for External Motivation:\n")
-print(sobel.external)
-cat("\n")
-summary(med.out.external)
-cat("\n")
-plot(sens.out.external, main = "Sensitivity Analysis: External Motivation")
-
-
-# ---------------------------------
-# Combined Multiple Mediation Model
-# ---------------------------------
-
-cat("\n\n--- COMBINED MOTIVATION MODEL (INTERNAL + EXTERNAL) ---\n\n")
-
-# Compute the correlation coefficient and p-value
-correlation_result <- cor.test(d0$internal, d0$external)
-correlation_coefficient <- correlation_result$estimate
-p_value <- correlation_result$p.value
-
-# Print the results
-cat("Correlation Between Internal and External: ", correlation_coefficient, "\n")
-cat("P-value: ", p_value, "\n\n")
-
-# Building combined outcome model with both mediators
-out.fit.combined <- lm(female_pick ~ gender_feedback + internal + external, data = d0)
-
-# Run combined mediation analyses
-med.out.combined.internal <- mediate(med.fit.internal, out.fit.combined, boot = TRUE,
-                                     treat = "gender_feedback", boot.ci.type = "perc",
-                                     mediator = "internal", sims = 10000)
-med.out.combined.external <- mediate(med.fit.external, out.fit.combined, boot = TRUE,
-                                     treat = "gender_feedback", boot.ci.type = "perc",
-                                     mediator = "external", sims = 10000)
-
-# Summarize and print the results for combined analysis
-cat("Combined Model Results:\n\n")
-cat("Internal Motivation (controlling for External):\n")
-summary(med.out.combined.internal)
-cat("\n")
-cat("External Motivation (controlling for Internal):\n")
-summary(med.out.combined.external)
-```
-
-\newpage
-
-## Fairness Scale
-
-```{r mediation-fairness, echo=FALSE, results='markup'}
-# Set seed for reproducibility
-set.seed(123)
 
 cat("=======================================================\n")
 cat("MEDIATION ANALYSIS: FAIRNESS SCALE\n")
@@ -755,60 +605,6 @@ cat("=======================================================\n\n")
 d_men <- d0 %>% filter(pool == "men")
 
 # -----------------------------
-# Internal Motivation - Men Pool
-# -----------------------------
-
-cat("--- INTERNAL MOTIVATION (I1-I4) - MEN POOL ---\n\n")
-
-# Mediator model
-med.fit.internal.men <- lm(internal ~ gender_feedback, data = d_men)
-
-# Outcome model including mediator
-out.fit.internal.men <- lm(female_pick ~ gender_feedback + internal, data = d_men)
-
-# Mediation analysis
-med.out.internal.men <- mediate(med.fit.internal.men, out.fit.internal.men, boot = TRUE,
-                                treat = "gender_feedback", boot.ci.type = "perc",
-                                mediator = "internal", sims = 10000)
-
-# Sobel test
-sobel.internal.men <- sobel_test(med.fit.internal.men, out.fit.internal.men, "internal")
-
-cat("Sobel test for Internal Motivation (Men Pool):\n")
-print(sobel.internal.men)
-cat("\n")
-summary(med.out.internal.men)
-cat("\n\n")
-
-
-# -----------------------------
-# External Motivation - Men Pool
-# -----------------------------
-
-cat("--- EXTERNAL MOTIVATION (E1-E3) - MEN POOL ---\n\n")
-
-# Mediator model
-med.fit.external.men <- lm(external ~ gender_feedback, data = d_men)
-
-# Outcome model including mediator
-out.fit.external.men <- lm(female_pick ~ gender_feedback + external, data = d_men)
-
-# Mediation analysis
-med.out.external.men <- mediate(med.fit.external.men, out.fit.external.men, boot = TRUE,
-                                treat = "gender_feedback", boot.ci.type = "perc",
-                                mediator = "external", sims = 10000)
-
-# Sobel test
-sobel.external.men <- sobel_test(med.fit.external.men, out.fit.external.men, "external")
-
-cat("Sobel test for External Motivation (Men Pool):\n")
-print(sobel.external.men)
-cat("\n")
-summary(med.out.external.men)
-cat("\n\n")
-
-
-# -----------------------------
 # Fairness - Men Pool
 # -----------------------------
 
@@ -850,60 +646,6 @@ cat("=======================================================\n\n")
 d_women <- d0 %>% filter(pool == "women")
 
 # -----------------------------
-# Internal Motivation - Women Pool
-# -----------------------------
-
-cat("--- INTERNAL MOTIVATION (I1-I4) - WOMEN POOL ---\n\n")
-
-# Mediator model
-med.fit.internal.women <- lm(internal ~ gender_feedback, data = d_women)
-
-# Outcome model including mediator
-out.fit.internal.women <- lm(female_pick ~ gender_feedback + internal, data = d_women)
-
-# Mediation analysis
-med.out.internal.women <- mediate(med.fit.internal.women, out.fit.internal.women, boot = TRUE,
-                                  treat = "gender_feedback", boot.ci.type = "perc",
-                                  mediator = "internal", sims = 10000)
-
-# Sobel test
-sobel.internal.women <- sobel_test(med.fit.internal.women, out.fit.internal.women, "internal")
-
-cat("Sobel test for Internal Motivation (Women Pool):\n")
-print(sobel.internal.women)
-cat("\n")
-summary(med.out.internal.women)
-cat("\n\n")
-
-
-# -----------------------------
-# External Motivation - Women Pool
-# -----------------------------
-
-cat("--- EXTERNAL MOTIVATION (E1-E3) - WOMEN POOL ---\n\n")
-
-# Mediator model
-med.fit.external.women <- lm(external ~ gender_feedback, data = d_women)
-
-# Outcome model including mediator
-out.fit.external.women <- lm(female_pick ~ gender_feedback + external, data = d_women)
-
-# Mediation analysis
-med.out.external.women <- mediate(med.fit.external.women, out.fit.external.women, boot = TRUE,
-                                  treat = "gender_feedback", boot.ci.type = "perc",
-                                  mediator = "external", sims = 10000)
-
-# Sobel test
-sobel.external.women <- sobel_test(med.fit.external.women, out.fit.external.women, "external")
-
-cat("Sobel test for External Motivation (Women Pool):\n")
-print(sobel.external.women)
-cat("\n")
-summary(med.out.external.women)
-cat("\n\n")
-
-
-# -----------------------------
 # Fairness - Women Pool
 # -----------------------------
 
@@ -932,154 +674,6 @@ summary(med.out.fairness.women)
 \newpage
 
 # Moderated Mediation: Formal Test of Pool Differences
-
-## Internal Motivation
-
-```{r moderated-mediation-internal, echo=FALSE, results='markup'}
-# Set seed for reproducibility
-set.seed(123)
-
-cat("=======================================================\n")
-cat("MODERATED MEDIATION: INTERNAL MOTIVATION\n")
-cat("Testing if pool composition moderates the mediation effect\n")
-cat("=======================================================\n\n")
-
-# Model with interactions to test moderated mediation
-# a path: Does pool moderate feedback -> internal?
-mod_med_a_internal <- lm(internal ~ gender_feedback * women_pool, data = d0)
-
-# b path: Does pool moderate internal -> outcome (controlling for feedback)?
-mod_med_b_internal <- lm(female_pick ~ gender_feedback * women_pool + internal * women_pool, data = d0)
-
-cat("--- Path A: Feedback → Internal (moderated by pool) ---\n")
-robust_summary(mod_med_a_internal)
-cat("\n\n")
-
-cat("--- Path B: Internal → Outcome (moderated by pool, controlling for feedback) ---\n")
-robust_summary(mod_med_b_internal)
-cat("\n\n")
-
-# Calculate indirect effects for each pool
-# Men pool (women_pool = 0)
-a_men <- coef(mod_med_a_internal)["gender_feedback"]
-b_men <- coef(mod_med_b_internal)["internal"]
-indirect_men <- a_men * b_men
-
-# Women pool (women_pool = 1)
-a_women <- coef(mod_med_a_internal)["gender_feedback"] + coef(mod_med_a_internal)["gender_feedback:women_pool"]
-b_women <- coef(mod_med_b_internal)["internal"] + coef(mod_med_b_internal)["women_pool:internal"]
-indirect_women <- a_women * b_women
-
-# Index of moderated mediation (difference in indirect effects)
-index_modmed_internal <- indirect_women - indirect_men
-
-cat("--- INDIRECT EFFECTS ---\n")
-cat("Indirect effect (Men Pool, women underrepresented): ", round(indirect_men, 4), "\n")
-cat("Indirect effect (Women Pool, women overrepresented): ", round(indirect_women, 4), "\n")
-cat("\nIndex of Moderated Mediation: ", round(index_modmed_internal, 4), "\n")
-cat("(Difference between women pool and men pool indirect effects)\n\n")
-
-# Bootstrap confidence interval for index of moderated mediation
-boot_modmed_internal <- function(data, indices) {
-  d <- data[indices,]
-  m1 <- lm(internal ~ gender_feedback * women_pool, data = d)
-  m2 <- lm(female_pick ~ gender_feedback * women_pool + internal * women_pool, data = d)
-
-  a_men <- coef(m1)["gender_feedback"]
-  b_men <- coef(m2)["internal"]
-  a_women <- coef(m1)["gender_feedback"] + coef(m1)["gender_feedback:women_pool"]
-  b_women <- coef(m2)["internal"] + coef(m2)["women_pool:internal"]
-
-  return((a_women * b_women) - (a_men * b_men))
-}
-
-library(boot)
-boot_results_internal <- boot(data = d0, statistic = boot_modmed_internal, R = 10000)
-boot_ci_internal <- boot.ci(boot_results_internal, type = "perc")
-
-cat("Bootstrap 95% CI for Index of Moderated Mediation:\n")
-print(boot_ci_internal)
-cat("\n")
-
-if (boot_ci_internal$percent[4] > 0 | boot_ci_internal$percent[5] < 0) {
-  cat("INTERPRETATION: The mediation effect DIFFERS significantly between pools.\n")
-} else {
-  cat("INTERPRETATION: The mediation effect does NOT differ significantly between pools.\n")
-  cat("(Consistent with your theory that motivation mediates in both pools)\n")
-}
-```
-
-\newpage
-
-## External Motivation
-
-```{r moderated-mediation-external, echo=FALSE, results='markup'}
-# Set seed for reproducibility
-set.seed(123)
-
-cat("=======================================================\n")
-cat("MODERATED MEDIATION: EXTERNAL MOTIVATION\n")
-cat("Testing if pool composition moderates the mediation effect\n")
-cat("=======================================================\n\n")
-
-# Model with interactions
-mod_med_a_external <- lm(external ~ gender_feedback * women_pool, data = d0)
-mod_med_b_external <- lm(female_pick ~ gender_feedback * women_pool + external * women_pool, data = d0)
-
-cat("--- Path A: Feedback → External (moderated by pool) ---\n")
-robust_summary(mod_med_a_external)
-cat("\n\n")
-
-cat("--- Path B: External → Outcome (moderated by pool, controlling for feedback) ---\n")
-robust_summary(mod_med_b_external)
-cat("\n\n")
-
-# Calculate indirect effects
-a_men <- coef(mod_med_a_external)["gender_feedback"]
-b_men <- coef(mod_med_b_external)["external"]
-indirect_men <- a_men * b_men
-
-a_women <- coef(mod_med_a_external)["gender_feedback"] + coef(mod_med_a_external)["gender_feedback:women_pool"]
-b_women <- coef(mod_med_b_external)["external"] + coef(mod_med_b_external)["women_pool:external"]
-indirect_women <- a_women * b_women
-
-index_modmed_external <- indirect_women - indirect_men
-
-cat("--- INDIRECT EFFECTS ---\n")
-cat("Indirect effect (Men Pool, women underrepresented): ", round(indirect_men, 4), "\n")
-cat("Indirect effect (Women Pool, women overrepresented): ", round(indirect_women, 4), "\n")
-cat("\nIndex of Moderated Mediation: ", round(index_modmed_external, 4), "\n\n")
-
-# Bootstrap CI
-boot_modmed_external <- function(data, indices) {
-  d <- data[indices,]
-  m1 <- lm(external ~ gender_feedback * women_pool, data = d)
-  m2 <- lm(female_pick ~ gender_feedback * women_pool + external * women_pool, data = d)
-
-  a_men <- coef(m1)["gender_feedback"]
-  b_men <- coef(m2)["external"]
-  a_women <- coef(m1)["gender_feedback"] + coef(m1)["gender_feedback:women_pool"]
-  b_women <- coef(m2)["external"] + coef(m2)["women_pool:external"]
-
-  return((a_women * b_women) - (a_men * b_men))
-}
-
-boot_results_external <- boot(data = d0, statistic = boot_modmed_external, R = 10000)
-boot_ci_external <- boot.ci(boot_results_external, type = "perc")
-
-cat("Bootstrap 95% CI for Index of Moderated Mediation:\n")
-print(boot_ci_external)
-cat("\n")
-
-if (boot_ci_external$percent[4] > 0 | boot_ci_external$percent[5] < 0) {
-  cat("INTERPRETATION: The mediation effect DIFFERS significantly between pools.\n")
-} else {
-  cat("INTERPRETATION: The mediation effect does NOT differ significantly between pools.\n")
-  cat("(Consistent with your theory that motivation mediates in both pools)\n")
-}
-```
-
-\newpage
 
 ## Fairness Scale
 
