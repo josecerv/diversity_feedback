@@ -1,6 +1,6 @@
 ---
 title: "Study 4 Pilot"
-subtitle: "2x2 Base Rate (20% vs 80% Women) × Feedback (Control vs Treatment)"
+subtitle: "2x2 Pool (Women vs Men) × Feedback (Control vs Treatment)"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document:
@@ -100,10 +100,10 @@ USE_API <- TRUE
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
-  qual_data <- fetch_survey(surveyID='SV_23LXrPc8hyt0hHo',
+  qual_data <- fetch_survey(surveyID='SV_eysJmstT7Zxvd2K',
                      label = T,
                      convert = F,
-                     start_date = "2025-11-17",
+                     start_date = "2025-11-18",
                      force_request = T)
 } else {
   # Read the processed data directly from CSV
@@ -111,64 +111,87 @@ if(USE_API) {
   num_excluded <- unique(d0$num_excluded_total)
 }
 
-# Define the categories based on the experts (from Study 1 - NPR experts)
-women <- c('Emily Kwong', 'Moira Gunn', 'Brittany Luse',
-           'Zoe Kleinman', 'Davar Ardalan', 'Jane Barrett')
+# Define the categories based on the CEO/Founder stimuli
+women <- c("Whitney Wolfe Herd (Founder of Bumble)",
+           "Leah Busque (Founder of TaskRabbit)",
+           "Melanie Perkins (Founder of Canva)",
+           "Julia Hartz (Co-founder of EventBrite)",
+           "Arianna Huffington (Co-founder of Huffington Post)",
+           "Anne Wojcicki (CEO of 23andMe)",
+           "Corie Barry (CEO of Best Buy)",
+           "Safra Katz (CEO of Oracle)",
+           "Mary Barra (CEO of General Motors)",
+           "Tory Burch (Founder of Tory Burch)",
+           "Sara Blakely (Founder of Spanx)",
+           "Oprah Winfrey (Founder of OWN)",
+           "Bobbi Brown (Founder of Bobbi Brown Cosmetics)",
+           "Jane Fraser (CEO of Citigroup)",
+           "Rosalind Brewer (CEO of Walgreens)",
+           "Karen Lynch (CEO of CVS Health)",
+           "Carol Tomé (CEO of UPS)",
+           "Indra Nooyi (Former CEO of PepsiCo)")
 
-under_50 <- c('Bobby Allyn', 'Emily Kwong', 'Paris Marx',
-              'Kevin Roose', 'Ezra Eeman')
+men <- c("Larry Page (Co-founder of Google)",
+         "Mark Zuckerberg (Co-founder of Facebook)",
+         "Bill Gates (Co-founder of Microsoft)",
+         "Jeff Bezos (Founder of Amazon)",
+         "Tim Cook (CEO of Apple)",
+         "Sundar Pichai (CEO of Alphabet Inc.)",
+         "Satya Nadella (CEO of Microsoft)",
+         "Jensen Huang (CEO of NVIDIA)",
+         "Andy Jassy (CEO of Amazon)",
+         "Daymond John (Founder of FUBU)",
+         "Phil Knight (Co-founder of Nike)",
+         "Howard Schultz (Founder of Starbucks)",
+         "Michael Bloomberg (Co-founder of Bloomberg LP)",
+         "Richard Branson (Founder of Virgin Group)",
+         "Warren Buffett (CEO of Berkshire Hathaway)",
+         "Jamie Dimon (CEO of JPMorgan Chase)",
+         "Brian Moynihan (CEO of Bank of America)",
+         "Lloyd Blankfein (Former CEO of Goldman Sachs)")
 
-west_coast <- c('Erik Brynjolfsson', 'Moira Gunn', 'Ethan Mollick',
-                'Ed Zitron', 'Kevin Roose', 'Andrew Ng')
-
-university <- c('Erik Brynjolfsson', 'Austan Goolsbee', 'Ethan Mollick',
-                'Anton Korinek', 'Andrew Ng')
+technologists <- c("Whitney Wolfe Herd", "Leah Busque", "Melanie Perkins",
+                   "Julia Hartz", "Arianna Huffington",
+                   "Anne Wojcicki", "Corie Barry", "Safra Katz", "Mary Barra",
+                   "Larry Page", "Mark Zuckerberg", "Bill Gates", "Jeff Bezos",
+                   "Tim Cook", "Sundar Pichai", "Satya Nadella", "Jensen Huang", "Andy Jassy")
 
 if(USE_API) {
   # Process the API data
   d0 <- qual_data |>
-    filter(!is.na(`choice-3`), !is.na(PROLIFIC_PID), Finished==1) |>
+    filter(!is.na(`choice-6`), !is.na(PROLIFIC_PID), Finished==1) |>
     mutate(
       # Treatment assignment (control vs treatment)
-      treatment = case_when(cond == "treatment" ~ 1, TRUE ~ 0),
+      treatment = case_when(cond == "treat" ~ 1, TRUE ~ 0),
 
-      # Base rate assignment (low 20% vs high 80%)
-      base_rate_high = case_when(base_rate == "high" ~ 1, TRUE ~ 0),
+      # Pool assignment (women vs men pool)
+      women_pool = case_when(pool == "women" ~ 1, TRUE ~ 0),
 
-      # Feedback detection (embedded data variables from Qualtrics)
-      women_feedback = as.numeric(feedback_women),
-      age_feedback = as.numeric(feedback_age),
-      location_feedback = as.numeric(feedback_location),
-      university_feedback = as.numeric(feedback_university),
-
-      # Count women selected across all 3 choices
+      # Count women selected across all 6 choices
       women_choice1 = case_when(`choice-1` %in% women ~ 1, TRUE ~ 0),
       women_choice2 = case_when(`choice-2` %in% women ~ 1, TRUE ~ 0),
       women_choice3 = case_when(`choice-3` %in% women ~ 1, TRUE ~ 0),
+      women_choice4 = case_when(`choice-4` %in% women ~ 1, TRUE ~ 0),
+      women_choice5 = case_when(`choice-5` %in% women ~ 1, TRUE ~ 0),
+      women_choice6 = case_when(`choice-6` %in% women ~ 1, TRUE ~ 0),
 
       # Total women count and proportion (primary DV)
-      women_count = women_choice1 + women_choice2 + women_choice3,
-      women_proportion = women_count / 3,
+      women_count = women_choice1 + women_choice2 + women_choice3 +
+                    women_choice4 + women_choice5 + women_choice6,
+      women_proportion = women_count / 6,
 
-      # Other attribute picks
-      age_count = case_when(`choice-1` %in% under_50 ~ 1, TRUE ~ 0) +
-                  case_when(`choice-2` %in% under_50 ~ 1, TRUE ~ 0) +
-                  case_when(`choice-3` %in% under_50 ~ 1, TRUE ~ 0),
-      age_proportion = age_count / 3,
-
-      location_count = case_when(`choice-1` %in% west_coast ~ 1, TRUE ~ 0) +
-                       case_when(`choice-2` %in% west_coast ~ 1, TRUE ~ 0) +
-                       case_when(`choice-3` %in% west_coast ~ 1, TRUE ~ 0),
-      location_proportion = location_count / 3,
-
-      university_count = case_when(`choice-1` %in% university ~ 1, TRUE ~ 0) +
-                         case_when(`choice-2` %in% university ~ 1, TRUE ~ 0) +
-                         case_when(`choice-3` %in% university ~ 1, TRUE ~ 0),
-      university_proportion = university_count / 3
+      # Count technologists selected
+      tech_count = case_when(`choice-1` %in% technologists ~ 1, TRUE ~ 0) +
+                   case_when(`choice-2` %in% technologists ~ 1, TRUE ~ 0) +
+                   case_when(`choice-3` %in% technologists ~ 1, TRUE ~ 0) +
+                   case_when(`choice-4` %in% technologists ~ 1, TRUE ~ 0) +
+                   case_when(`choice-5` %in% technologists ~ 1, TRUE ~ 0) +
+                   case_when(`choice-6` %in% technologists ~ 1, TRUE ~ 0),
+      tech_proportion = tech_count / 6
     ) |>
-    # Process motivation scales (I1-I3, E1-E4)
+    # Process motivation scales (I1-I4 for internal, E1-E3 for external)
     mutate(
-      across(c(I1, I2, I3, E1, E2, E3, E4),
+      across(c(I1, I2, I3, I4, E1, E2, E3),
              ~ case_when(
                . == "Strongly disagree" ~ 1, . == "Disagree" ~ 2, . == "Somewhat disagree" ~ 3,
                . == "Neither agree nor disagree" ~ 4,
@@ -183,18 +206,18 @@ if(USE_API) {
                . == "Somewhat agree" ~ 5, . == "Agree" ~ 6, . == "Strongly agree" ~ 7,
                TRUE ~ NA_integer_))) |>
     mutate(
-      # Internal motivation scale (I1-I3) - standardized
+      # Internal motivation scale (I1-I4) - standardized
       I1Z = (I1 - mean(I1, na.rm = TRUE)) / sd(I1, na.rm = TRUE),
       I2Z = (I2 - mean(I2, na.rm = TRUE)) / sd(I2, na.rm = TRUE),
       I3Z = (I3 - mean(I3, na.rm = TRUE)) / sd(I3, na.rm = TRUE),
-      internal_motiv = (I1Z + I2Z + I3Z) / 3,
+      I4Z = (I4 - mean(I4, na.rm = TRUE)) / sd(I4, na.rm = TRUE),
+      internal_motiv = (I1Z + I2Z + I3Z + I4Z) / 4,
 
-      # External motivation scale (E1-E4) - standardized
+      # External motivation scale (E1-E3) - standardized
       E1Z = (E1 - mean(E1, na.rm = TRUE)) / sd(E1, na.rm = TRUE),
       E2Z = (E2 - mean(E2, na.rm = TRUE)) / sd(E2, na.rm = TRUE),
       E3Z = (E3 - mean(E3, na.rm = TRUE)) / sd(E3, na.rm = TRUE),
-      E4Z = (E4 - mean(E4, na.rm = TRUE)) / sd(E4, na.rm = TRUE),
-      external_motiv = (E1Z + E2Z + E3Z + E4Z) / 4,
+      external_motiv = (E1Z + E2Z + E3Z) / 3,
 
       # Fairness scale (fair1-fair3) - standardized
       fair1Z = (fair1 - mean(fair1, na.rm = TRUE)) / sd(fair1, na.rm = TRUE),
@@ -202,13 +225,11 @@ if(USE_API) {
       fair3Z = (fair3 - mean(fair3, na.rm = TRUE)) / sd(fair3, na.rm = TRUE),
       fairness = (fair1Z + fair2Z + fair3Z) / 3
     ) |>
-    dplyr::select(treatment, base_rate_high, cond, base_rate,
-                  women_feedback, age_feedback, location_feedback, university_feedback,
-                  women_count, women_proportion, age_count, age_proportion,
-                  location_count, location_proportion, university_count, university_proportion,
-                  `choice-1`:`choice-3`, race, gender, age,
-                  I1, I2, I3, E1, E2, E3, E4,
-                  I1Z, I2Z, I3Z, E1Z, E2Z, E3Z, E4Z,
+    dplyr::select(treatment, women_pool, cond, pool,
+                  women_count, women_proportion, tech_count, tech_proportion,
+                  `choice-1`:`choice-6`, race, gender, age,
+                  I1, I2, I3, I4, E1, E2, E3,
+                  I1Z, I2Z, I3Z, I4Z, E1Z, E2Z, E3Z,
                   internal_motiv, external_motiv,
                   fair1, fair2, fair3, fair1Z, fair2Z, fair3Z, fairness)
 
@@ -233,33 +254,23 @@ if(USE_API) {
 \hline
 \textbf{Variable} & \textbf{Description} \\
 \hline
-\texttt{treatment} & Binary indicator of whether a participant was randomly assigned to treatment condition (shown women feedback). \\
+\texttt{treatment} & Binary indicator of whether a participant was randomly assigned to treatment condition (1 = treat, 0 = control). \\
 \hline
-\texttt{base\_rate\_high} & Binary indicator of base rate condition (1 = high/80\% women, 0 = low/20\% women). \\
+\texttt{women\_pool} & Binary indicator of pool condition (1 = women pool/75\% women, 0 = men pool/25\% women). \\
 \hline
-\texttt{women\_feedback} & Binary indicator of whether women feedback was shown to participant. \\
-\hline
-\texttt{women\_count} & Count of women selected across the three choices (0-3). \\
+\texttt{women\_count} & Count of women selected across the six choices (0-6). \\
 \hline
 \texttt{women\_proportion} & Proportion of women selected (DV: ranges from 0 to 1). \\
 \hline
-\texttt{age\_feedback} & Binary indicator of whether age feedback was shown. \\
+\texttt{tech\_count} & Count of technologists selected across the six choices (0-6). \\
 \hline
-\texttt{age\_proportion} & Proportion of experts under 50 years old selected. \\
+\texttt{tech\_proportion} & Proportion of technologists selected. \\
 \hline
-\texttt{location\_feedback} & Binary indicator of whether location feedback was shown. \\
+\texttt{choice-1 to choice-6} & The selected CEOs/Founders \\
 \hline
-\texttt{location\_proportion} & Proportion of experts based on West Coast selected. \\
+\texttt{internal\_motiv} & Aggregated Internal Motivation scale (mean of I1Z-I4Z). \\
 \hline
-\texttt{university\_feedback} & Binary indicator of whether university feedback was shown. \\
-\hline
-\texttt{university\_proportion} & Proportion of experts working at a university selected. \\
-\hline
-\texttt{choice-1 to choice-3} & The selected AI experts \\
-\hline
-\texttt{internal\_motiv} & Aggregated Internal Motivation scale (mean of I1Z-I3Z). \\
-\hline
-\texttt{external\_motiv} & Aggregated External Motivation scale (mean of E1Z-E4Z). \\
+\texttt{external\_motiv} & Aggregated External Motivation scale (mean of E1Z-E3Z). \\
 \hline
 \texttt{fairness} & Aggregated Fairness scale (mean of fair1Z-fair3Z). \\
 \hline
@@ -326,7 +337,7 @@ age_summary
 
 cat('\n\nCell Sizes by Condition:\n')
 cell_counts <- d0 |>
-  group_by(base_rate, cond) |>
+  group_by(pool, cond) |>
   summarize(n = n(), .groups = "drop")
 print(cell_counts)
 
@@ -336,8 +347,8 @@ cat('\n\nMean proportion of women selected: ', round(mean(d0$women_proportion), 
 cat('SD proportion of women selected: ', round(sd(d0$women_proportion), 3), '\n\n')
 
 d0 |>
-  dplyr::select(women_proportion, cond, base_rate) |>
-  dplyr::group_by(cond, base_rate) |>
+  dplyr::select(women_proportion, cond, pool) |>
+  dplyr::group_by(cond, pool) |>
   dplyr::summarize(mean = mean(women_proportion), sd = sd(women_proportion), n = n(), .groups = "drop")
 ```
 
@@ -348,13 +359,13 @@ d0 |>
 ```{r cronbach-alpha, echo=FALSE, results='markup'}
 # Calculating Cronbach's Alpha for the scales
 
-# Internal Motivation (I1-I3)
-internal_items <- d0[, c("I1Z", "I2Z", "I3Z")]
+# Internal Motivation (I1-I4)
+internal_items <- d0[, c("I1Z", "I2Z", "I3Z", "I4Z")]
 alpha_internal <- alpha(internal_items)
 cat("Cronbach's Alpha for Internal Motivation Scale: ", alpha_internal$total$raw_alpha, "\n\n")
 
-# External Motivation (E1-E4)
-external_items <- d0[, c("E1Z", "E2Z", "E3Z", "E4Z")]
+# External Motivation (E1-E3)
+external_items <- d0[, c("E1Z", "E2Z", "E3Z")]
 alpha_external <- alpha(external_items)
 cat("Cronbach's Alpha for External Motivation Scale: ", alpha_external$total$raw_alpha, "\n\n")
 
@@ -369,18 +380,18 @@ cat("Cronbach's Alpha for Fairness Scale: ", alpha_fairness$total$raw_alpha, "\n
 ## Primary Analysis: 2x2 Factorial ANOVA
 
 ```{r primary-analysis, echo=FALSE, results='markup'}
-# 2x2 ANOVA: Treatment × Base Rate
-model_2x2 <- lm(women_proportion ~ treatment * base_rate_high, data = d0)
+# 2x2 ANOVA: Treatment × Pool
+model_2x2 <- lm(women_proportion ~ treatment * women_pool, data = d0)
 
 cat("=== 2x2 FACTORIAL ANOVA ===\n")
-cat("Model: women_proportion ~ treatment * base_rate_high\n\n")
+cat("Model: women_proportion ~ treatment * women_pool\n\n")
 robust_summary(model_2x2)
 robust_confint(model_2x2)
 
 # Cell means
 cat("\n\nCell Means:\n")
 d0 |>
-  group_by(cond, base_rate) |>
+  group_by(cond, pool) |>
   summarise(
     n = n(),
     mean_women_prop = mean(women_proportion) * 100,
@@ -391,24 +402,24 @@ d0 |>
 
 \newpage
 
-## Simple Effects by Base Rate
+## Simple Effects by Pool
 
-### Low Base Rate (20% Women)
+### Men Pool (25% Women)
 
-```{r low-base-rate, echo=FALSE, results='markup'}
-# Low base rate model: main effect of treatment
-model_low <- lm(women_proportion ~ treatment,
-                data = d0 %>% filter(base_rate_high == 0))
+```{r men-pool, echo=FALSE, results='markup'}
+# Men pool model: main effect of treatment
+model_men <- lm(women_proportion ~ treatment,
+                data = d0 %>% filter(women_pool == 0))
 
-cat("=== LOW BASE RATE (20% WOMEN) ===\n")
+cat("=== MEN POOL (25% WOMEN) ===\n")
 cat("Model: women_proportion ~ treatment\n\n")
-robust_summary(model_low)
-robust_confint(model_low)
+robust_summary(model_men)
+robust_confint(model_men)
 
 # Cell means
-cat("\n\nCell Means - Low Base Rate:\n")
+cat("\n\nCell Means - Men Pool:\n")
 d0 %>%
-  filter(base_rate_high == 0) %>%
+  filter(women_pool == 0) %>%
   group_by(cond) %>%
   summarise(
     n = n(),
@@ -420,22 +431,22 @@ d0 %>%
 
 \newpage
 
-### High Base Rate (80% Women)
+### Women Pool (75% Women)
 
-```{r high-base-rate, echo=FALSE, results='markup'}
-# High base rate model: main effect of treatment
-model_high <- lm(women_proportion ~ treatment,
-                 data = d0 %>% filter(base_rate_high == 1))
+```{r women-pool, echo=FALSE, results='markup'}
+# Women pool model: main effect of treatment
+model_women <- lm(women_proportion ~ treatment,
+                 data = d0 %>% filter(women_pool == 1))
 
-cat("=== HIGH BASE RATE (80% WOMEN) ===\n")
+cat("=== WOMEN POOL (75% WOMEN) ===\n")
 cat("Model: women_proportion ~ treatment\n\n")
-robust_summary(model_high)
-robust_confint(model_high)
+robust_summary(model_women)
+robust_confint(model_women)
 
 # Cell means
-cat("\n\nCell Means - High Base Rate:\n")
+cat("\n\nCell Means - Women Pool:\n")
 d0 %>%
-  filter(base_rate_high == 1) %>%
+  filter(women_pool == 1) %>%
   group_by(cond) %>%
   summarise(
     n = n(),
@@ -447,25 +458,25 @@ d0 %>%
 
 \newpage
 
-## Wald Test: Comparing Treatment Effects Across Base Rates
+## Wald Test: Comparing Treatment Effects Across Pools
 
 ```{r wald-test, echo=FALSE, results='markup'}
-cat("=== WALD TEST: DIFFERENCE IN TREATMENT EFFECTS BETWEEN BASE RATES ===\n\n")
+cat("=== WALD TEST: DIFFERENCE IN TREATMENT EFFECTS BETWEEN POOLS ===\n\n")
 
-# Calculate treatment effects for each base rate
-# Low base rate: just the treatment coefficient
-effect_low <- coef(model_low)["treatment"]
-se_low <- sqrt(diag(vcovHC(model_low, type = "HC3")))["treatment"]
+# Calculate treatment effects for each pool
+# Men pool: just the treatment coefficient
+effect_men <- coef(model_men)["treatment"]
+se_men <- sqrt(diag(vcovHC(model_men, type = "HC3")))["treatment"]
 
-# High base rate: just the treatment coefficient
-effect_high <- coef(model_high)["treatment"]
-se_high <- sqrt(diag(vcovHC(model_high, type = "HC3")))["treatment"]
+# Women pool: just the treatment coefficient
+effect_women <- coef(model_women)["treatment"]
+se_women <- sqrt(diag(vcovHC(model_women, type = "HC3")))["treatment"]
 
 # Calculate difference in treatment effects
-diff_effects <- effect_low - effect_high
+diff_effects <- effect_men - effect_women
 
 # Standard error of the difference (assuming independence)
-se_diff <- sqrt(se_low^2 + se_high^2)
+se_diff <- sqrt(se_men^2 + se_women^2)
 
 # Wald test statistic
 wald_stat <- diff_effects / se_diff
@@ -478,10 +489,10 @@ ci_lower <- diff_effects - 1.96 * se_diff
 ci_upper <- diff_effects + 1.96 * se_diff
 
 # Print results
-cat("Treatment Effect (Low Base Rate 20%):  ", sprintf("%.4f", effect_low),
-    " (SE = ", sprintf("%.4f", se_low), ")\n", sep = "")
-cat("Treatment Effect (High Base Rate 80%): ", sprintf("%.4f", effect_high),
-    " (SE = ", sprintf("%.4f", se_high), ")\n\n", sep = "")
+cat("Treatment Effect (Men Pool 25%):   ", sprintf("%.4f", effect_men),
+    " (SE = ", sprintf("%.4f", se_men), ")\n", sep = "")
+cat("Treatment Effect (Women Pool 75%): ", sprintf("%.4f", effect_women),
+    " (SE = ", sprintf("%.4f", se_women), ")\n\n", sep = "")
 
 cat("Difference in Treatment Effects: ", sprintf("%.4f", diff_effects), "\n", sep = "")
 cat("Standard Error of Difference:    ", sprintf("%.4f", se_diff), "\n", sep = "")
@@ -491,23 +502,23 @@ cat("95% CI for Difference:           [", sprintf("%.4f", ci_lower), ", ",
     sprintf("%.4f", ci_upper), "]\n\n", sep = "")
 
 if (p_value < 0.001) {
-  cat("INTERPRETATION: The treatment effect is SIGNIFICANTLY different between base rates (p < 0.001).\n")
+  cat("INTERPRETATION: The treatment effect is SIGNIFICANTLY different between pools (p < 0.001).\n")
   cat("This supports the reversal hypothesis: gender feedback has opposite effects\n")
   cat("depending on whether women are under- or over-represented.\n")
 } else if (p_value < 0.01) {
-  cat("INTERPRETATION: The treatment effect is SIGNIFICANTLY different between base rates (p < 0.01).\n")
+  cat("INTERPRETATION: The treatment effect is SIGNIFICANTLY different between pools (p < 0.01).\n")
   cat("This supports the reversal hypothesis: gender feedback has opposite effects\n")
   cat("depending on whether women are under- or over-represented.\n")
 } else if (p_value < 0.05) {
-  cat("INTERPRETATION: The treatment effect is SIGNIFICANTLY different between base rates (p < 0.05).\n")
+  cat("INTERPRETATION: The treatment effect is SIGNIFICANTLY different between pools (p < 0.05).\n")
   cat("This supports the reversal hypothesis: gender feedback has opposite effects\n")
   cat("depending on whether women are under- or over-represented.\n")
 } else {
-  cat("INTERPRETATION: The treatment effect does NOT significantly differ between base rates (p >= 0.05).\n")
+  cat("INTERPRETATION: The treatment effect does NOT significantly differ between pools (p >= 0.05).\n")
 }
 
-cat("\nNote: This Wald test formally tests whether the treatment effect at low base rate\n")
-cat("is significantly different from the treatment effect at high base rate.\n")
+cat("\nNote: This Wald test formally tests whether the treatment effect at men pool\n")
+cat("is significantly different from the treatment effect at women pool.\n")
 cat("The test uses robust (HC3) standard errors.\n")
 ```
 
@@ -515,12 +526,12 @@ cat("The test uses robust (HC3) standard errors.\n")
 
 # Visualization
 
-## Interaction Plot: Treatment × Base Rate
+## Interaction Plot: Treatment × Pool
 
-```{r fig-interaction, fig.cap="Effect of Gender Feedback by Base Rate Condition", fig.width=10, fig.height=8, echo=FALSE}
+```{r fig-interaction, fig.cap="Effect of Gender Feedback by Pool Condition", fig.width=10, fig.height=8, echo=FALSE}
 # Run statistical tests to determine significance levels
-test_low <- t.test(women_proportion ~ treatment, data=d0 %>% filter(base_rate_high == 0))
-test_high <- t.test(women_proportion ~ treatment, data=d0 %>% filter(base_rate_high == 1))
+test_men <- t.test(women_proportion ~ treatment, data=d0 %>% filter(women_pool == 0))
+test_women <- t.test(women_proportion ~ treatment, data=d0 %>% filter(women_pool == 1))
 
 # Function to get significance stars
 get_sig_stars <- function(p_value) {
@@ -530,12 +541,12 @@ get_sig_stars <- function(p_value) {
   else return("n.s.")
 }
 
-sig_low <- get_sig_stars(test_low$p.value)
-sig_high <- get_sig_stars(test_high$p.value)
+sig_men <- get_sig_stars(test_men$p.value)
+sig_women <- get_sig_stars(test_women$p.value)
 
-# Prepare plot data for low base rate (20% women)
-dlow_plot <- d0 %>%
-  filter(base_rate_high == 0) %>%
+# Prepare plot data for men pool (25% women)
+dmen_plot <- d0 %>%
+  filter(women_pool == 0) %>%
   dplyr::select(treatment, women_proportion) %>%
   group_by(treatment) %>%
   dplyr::summarise(
@@ -548,9 +559,9 @@ dlow_plot <- d0 %>%
                           TRUE ~ "Control")) %>%
   rename(Condition = treatment)
 
-# Prepare plot data for high base rate (80% women)
-dhigh_plot <- d0 %>%
-  filter(base_rate_high == 1) %>%
+# Prepare plot data for women pool (75% women)
+dwomen_plot <- d0 %>%
+  filter(women_pool == 1) %>%
   dplyr::select(treatment, women_proportion) %>%
   group_by(treatment) %>%
   dplyr::summarise(
@@ -565,10 +576,10 @@ dhigh_plot <- d0 %>%
 
 # Combine into single dataframe
 df_combined <- bind_rows(
-  dlow_plot %>% mutate(Category = "Low Base Rate\n(20% Women)"),
-  dhigh_plot %>% mutate(Category = "High Base Rate\n(80% Women)")
+  dmen_plot %>% mutate(Category = "Women Underrepresented\n(Men Pool)"),
+  dwomen_plot %>% mutate(Category = "Women Overrepresented\n(Women Pool)")
 , .id = "id") %>%
-  mutate(Category = factor(Category, levels = c('Low Base Rate\n(20% Women)', 'High Base Rate\n(80% Women)')))
+  mutate(Category = factor(Category, levels = c('Women Underrepresented\n(Men Pool)', 'Women Overrepresented\n(Women Pool)')))
 
 # Create combined plot
 p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
@@ -577,17 +588,17 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
             position=position_dodge(width=0.7), vjust=5, size = 7, color = "white") +
   geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
   facet_wrap(~Category, nrow = 1, strip.position = "bottom") +
-  geom_segment(data = df_combined %>% filter(Category == "Low Base Rate\n(20% Women)" & Condition == "Treatment"),
+  geom_segment(data = df_combined %>% filter(Category == "Women Underrepresented\n(Men Pool)" & Condition == "Treatment"),
                 aes(x = 1, xend = 2, y = freq*100 + se + 10, yend = freq*100 + se + 10),
                 inherit.aes = FALSE) +
-  geom_segment(data = df_combined %>% filter(Category == "High Base Rate\n(80% Women)" & Condition == "Control"),
+  geom_segment(data = df_combined %>% filter(Category == "Women Overrepresented\n(Women Pool)" & Condition == "Control"),
                 aes(x = 1, xend = 2, y = freq*100 + se + 10, yend = freq*100 + se + 10),
                 inherit.aes = FALSE) +
-  geom_text(data = df_combined %>% filter(Category == "Low Base Rate\n(20% Women)" & Condition == "Treatment"),
-                aes(x = 1.5, y = freq*100 + se + 10, label = sig_low),
+  geom_text(data = df_combined %>% filter(Category == "Women Underrepresented\n(Men Pool)" & Condition == "Treatment"),
+                aes(x = 1.5, y = freq*100 + se + 10, label = sig_men),
                 inherit.aes = FALSE, vjust = 0, size = 7) +
-  geom_text(data = df_combined %>% filter(Category == "High Base Rate\n(80% Women)" & Condition == "Control"),
-                aes(x = 1.5, y = freq*100 + se + 10, label = sig_high),
+  geom_text(data = df_combined %>% filter(Category == "Women Overrepresented\n(Women Pool)" & Condition == "Control"),
+                aes(x = 1.5, y = freq*100 + se + 10, label = sig_women),
                 inherit.aes = FALSE, vjust = 0, size = 7) +
   theme_bw() +
   scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No gender feedback provided", "Gender feedback provided"), "") +
@@ -625,9 +636,9 @@ ggsave("Study-4-pilot-figure.pdf", plot = p_combined, width = 10, height = 8, un
 
 # Conditional Mediation Analyses
 
-## Mediation in Low Base Rate (20% Women)
+## Mediation in Men Pool (Women Underrepresented)
 
-```{r mediation-low-base, echo=FALSE, results='markup'}
+```{r mediation-men-pool, echo=FALSE, results='markup'}
 # Set seed for reproducibility
 set.seed(123)
 
@@ -641,191 +652,191 @@ sobel_test <- function(med.fit, out.fit, mediator) {
 }
 
 cat("=======================================================\n")
-cat("CONDITIONAL MEDIATION: LOW BASE RATE (20% WOMEN)\n")
+cat("CONDITIONAL MEDIATION: MEN POOL (WOMEN UNDERREPRESENTED)\n")
 cat("=======================================================\n\n")
 
-# Filter data for low base rate only
-d_low <- d0 %>% filter(base_rate_high == 0)
+# Filter data for men pool only
+d_men <- d0 %>% filter(women_pool == 0)
 
 # -----------------------------
-# Internal Motivation - Low Base Rate
+# Internal Motivation - Men Pool
 # -----------------------------
 
-cat("--- INTERNAL MOTIVATION - LOW BASE RATE ---\n\n")
+cat("--- INTERNAL MOTIVATION - MEN POOL ---\n\n")
 
 # Mediator model
-med.fit.internal.low <- lm(internal_motiv ~ treatment, data = d_low)
-summary(med.fit.internal.low)
+med.fit.internal.men <- lm(internal_motiv ~ treatment, data = d_men)
+summary(med.fit.internal.men)
 
 # Outcome model including mediator
-out.fit.internal.low <- lm(women_proportion ~ treatment + internal_motiv, data = d_low)
+out.fit.internal.men <- lm(women_proportion ~ treatment + internal_motiv, data = d_men)
 
 # Mediation analysis
-med.out.internal.low <- mediate(med.fit.internal.low, out.fit.internal.low, boot = TRUE,
+med.out.internal.men <- mediate(med.fit.internal.men, out.fit.internal.men, boot = TRUE,
                                 treat = "treatment", boot.ci.type = "perc",
                                 mediator = "internal_motiv", sims = 10000)
 
 # Sobel test
-sobel.internal.low <- sobel_test(med.fit.internal.low, out.fit.internal.low, "internal_motiv")
+sobel.internal.men <- sobel_test(med.fit.internal.men, out.fit.internal.men, "internal_motiv")
 
-cat("Sobel test for Internal Motivation (Low Base Rate):\n")
-print(sobel.internal.low)
+cat("Sobel test for Internal Motivation (Men Pool):\n")
+print(sobel.internal.men)
 cat("\n")
-summary(med.out.internal.low)
+summary(med.out.internal.men)
 
 cat("\n\n")
 
 # -----------------------------
-# External Motivation - Low Base Rate
+# External Motivation - Men Pool
 # -----------------------------
 
-cat("--- EXTERNAL MOTIVATION - LOW BASE RATE ---\n\n")
+cat("--- EXTERNAL MOTIVATION - MEN POOL ---\n\n")
 
 # Mediator model
-med.fit.external.low <- lm(external_motiv ~ treatment, data = d_low)
-summary(med.fit.external.low)
+med.fit.external.men <- lm(external_motiv ~ treatment, data = d_men)
+summary(med.fit.external.men)
 
 # Outcome model including mediator
-out.fit.external.low <- lm(women_proportion ~ treatment + external_motiv, data = d_low)
+out.fit.external.men <- lm(women_proportion ~ treatment + external_motiv, data = d_men)
 
 # Mediation analysis
-med.out.external.low <- mediate(med.fit.external.low, out.fit.external.low, boot = TRUE,
+med.out.external.men <- mediate(med.fit.external.men, out.fit.external.men, boot = TRUE,
                                 treat = "treatment", boot.ci.type = "perc",
                                 mediator = "external_motiv", sims = 10000)
 
 # Sobel test
-sobel.external.low <- sobel_test(med.fit.external.low, out.fit.external.low, "external_motiv")
+sobel.external.men <- sobel_test(med.fit.external.men, out.fit.external.men, "external_motiv")
 
-cat("Sobel test for External Motivation (Low Base Rate):\n")
-print(sobel.external.low)
+cat("Sobel test for External Motivation (Men Pool):\n")
+print(sobel.external.men)
 cat("\n")
-summary(med.out.external.low)
+summary(med.out.external.men)
 
 cat("\n\n")
 
 # -----------------------------
-# Fairness - Low Base Rate
+# Fairness - Men Pool
 # -----------------------------
 
-cat("--- FAIRNESS SCALE - LOW BASE RATE ---\n\n")
+cat("--- FAIRNESS SCALE - MEN POOL ---\n\n")
 
 # Mediator model
-med.fit.fairness.low <- lm(fairness ~ treatment, data = d_low)
-summary(med.fit.fairness.low)
+med.fit.fairness.men <- lm(fairness ~ treatment, data = d_men)
+summary(med.fit.fairness.men)
 
 # Outcome model including mediator
-out.fit.fairness.low <- lm(women_proportion ~ treatment + fairness, data = d_low)
+out.fit.fairness.men <- lm(women_proportion ~ treatment + fairness, data = d_men)
 
 # Mediation analysis
-med.out.fairness.low <- mediate(med.fit.fairness.low, out.fit.fairness.low, boot = TRUE,
+med.out.fairness.men <- mediate(med.fit.fairness.men, out.fit.fairness.men, boot = TRUE,
                                 treat = "treatment", boot.ci.type = "perc",
                                 mediator = "fairness", sims = 10000)
 
 # Sobel test
-sobel.fairness.low <- sobel_test(med.fit.fairness.low, out.fit.fairness.low, "fairness")
+sobel.fairness.men <- sobel_test(med.fit.fairness.men, out.fit.fairness.men, "fairness")
 
-cat("Sobel test for Fairness (Low Base Rate):\n")
-print(sobel.fairness.low)
+cat("Sobel test for Fairness (Men Pool):\n")
+print(sobel.fairness.men)
 cat("\n")
-summary(med.out.fairness.low)
+summary(med.out.fairness.men)
 ```
 
 \newpage
 
-## Mediation in High Base Rate (80% Women)
+## Mediation in Women Pool (Women Overrepresented)
 
-```{r mediation-high-base, echo=FALSE, results='markup'}
+```{r mediation-women-pool, echo=FALSE, results='markup'}
 # Set seed for reproducibility
 set.seed(123)
 
 cat("=======================================================\n")
-cat("CONDITIONAL MEDIATION: HIGH BASE RATE (80% WOMEN)\n")
+cat("CONDITIONAL MEDIATION: WOMEN POOL (WOMEN OVERREPRESENTED)\n")
 cat("=======================================================\n\n")
 
-# Filter data for high base rate only
-d_high <- d0 %>% filter(base_rate_high == 1)
+# Filter data for women pool only
+d_women <- d0 %>% filter(women_pool == 1)
 
 # -----------------------------
-# Internal Motivation - High Base Rate
+# Internal Motivation - Women Pool
 # -----------------------------
 
-cat("--- INTERNAL MOTIVATION - HIGH BASE RATE ---\n\n")
+cat("--- INTERNAL MOTIVATION - WOMEN POOL ---\n\n")
 
 # Mediator model
-med.fit.internal.high <- lm(internal_motiv ~ treatment, data = d_high)
-summary(med.fit.internal.high)
+med.fit.internal.women <- lm(internal_motiv ~ treatment, data = d_women)
+summary(med.fit.internal.women)
 
 # Outcome model including mediator
-out.fit.internal.high <- lm(women_proportion ~ treatment + internal_motiv, data = d_high)
+out.fit.internal.women <- lm(women_proportion ~ treatment + internal_motiv, data = d_women)
 
 # Mediation analysis
-med.out.internal.high <- mediate(med.fit.internal.high, out.fit.internal.high, boot = TRUE,
+med.out.internal.women <- mediate(med.fit.internal.women, out.fit.internal.women, boot = TRUE,
                                  treat = "treatment", boot.ci.type = "perc",
                                  mediator = "internal_motiv", sims = 10000)
 
 # Sobel test
-sobel.internal.high <- sobel_test(med.fit.internal.high, out.fit.internal.high, "internal_motiv")
+sobel.internal.women <- sobel_test(med.fit.internal.women, out.fit.internal.women, "internal_motiv")
 
-cat("Sobel test for Internal Motivation (High Base Rate):\n")
-print(sobel.internal.high)
+cat("Sobel test for Internal Motivation (Women Pool):\n")
+print(sobel.internal.women)
 cat("\n")
-summary(med.out.internal.high)
+summary(med.out.internal.women)
 
 cat("\n\n")
 
 # -----------------------------
-# External Motivation - High Base Rate
+# External Motivation - Women Pool
 # -----------------------------
 
-cat("--- EXTERNAL MOTIVATION - HIGH BASE RATE ---\n\n")
+cat("--- EXTERNAL MOTIVATION - WOMEN POOL ---\n\n")
 
 # Mediator model
-med.fit.external.high <- lm(external_motiv ~ treatment, data = d_high)
-summary(med.fit.external.high)
+med.fit.external.women <- lm(external_motiv ~ treatment, data = d_women)
+summary(med.fit.external.women)
 
 # Outcome model including mediator
-out.fit.external.high <- lm(women_proportion ~ treatment + external_motiv, data = d_high)
+out.fit.external.women <- lm(women_proportion ~ treatment + external_motiv, data = d_women)
 
 # Mediation analysis
-med.out.external.high <- mediate(med.fit.external.high, out.fit.external.high, boot = TRUE,
+med.out.external.women <- mediate(med.fit.external.women, out.fit.external.women, boot = TRUE,
                                  treat = "treatment", boot.ci.type = "perc",
                                  mediator = "external_motiv", sims = 10000)
 
 # Sobel test
-sobel.external.high <- sobel_test(med.fit.external.high, out.fit.external.high, "external_motiv")
+sobel.external.women <- sobel_test(med.fit.external.women, out.fit.external.women, "external_motiv")
 
-cat("Sobel test for External Motivation (High Base Rate):\n")
-print(sobel.external.high)
+cat("Sobel test for External Motivation (Women Pool):\n")
+print(sobel.external.women)
 cat("\n")
-summary(med.out.external.high)
+summary(med.out.external.women)
 
 cat("\n\n")
 
 # -----------------------------
-# Fairness - High Base Rate
+# Fairness - Women Pool
 # -----------------------------
 
-cat("--- FAIRNESS SCALE - HIGH BASE RATE ---\n\n")
+cat("--- FAIRNESS SCALE - WOMEN POOL ---\n\n")
 
 # Mediator model
-med.fit.fairness.high <- lm(fairness ~ treatment, data = d_high)
-summary(med.fit.fairness.high)
+med.fit.fairness.women <- lm(fairness ~ treatment, data = d_women)
+summary(med.fit.fairness.women)
 
 # Outcome model including mediator
-out.fit.fairness.high <- lm(women_proportion ~ treatment + fairness, data = d_high)
+out.fit.fairness.women <- lm(women_proportion ~ treatment + fairness, data = d_women)
 
 # Mediation analysis
-med.out.fairness.high <- mediate(med.fit.fairness.high, out.fit.fairness.high, boot = TRUE,
+med.out.fairness.women <- mediate(med.fit.fairness.women, out.fit.fairness.women, boot = TRUE,
                                  treat = "treatment", boot.ci.type = "perc",
                                  mediator = "fairness", sims = 10000)
 
 # Sobel test
-sobel.fairness.high <- sobel_test(med.fit.fairness.high, out.fit.fairness.high, "fairness")
+sobel.fairness.women <- sobel_test(med.fit.fairness.women, out.fit.fairness.women, "fairness")
 
-cat("Sobel test for Fairness (High Base Rate):\n")
-print(sobel.fairness.high)
+cat("Sobel test for Fairness (Women Pool):\n")
+print(sobel.fairness.women)
 cat("\n")
-summary(med.out.fairness.high)
+summary(med.out.fairness.women)
 ```
 
 \newpage
