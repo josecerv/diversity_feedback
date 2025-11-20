@@ -34,8 +34,6 @@ library(tidyverse)
 library(ggplot2)
 library(kableExtra)
 library(psych)
-library(mediation)
-library(boot)
 ```
 
 ```{r include=FALSE}
@@ -100,10 +98,10 @@ USE_API <- TRUE
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
-  qual_data <- fetch_survey(surveyID='SV_eysJmstT7Zxvd2K',
+  qual_data <- fetch_survey(surveyID='SV_2f6hIXCPIwAylDw',
                      label = T,
                      convert = F,
-                     start_date = "2025-11-18",
+                     start_date = "2025-11-20",
                      force_request = T)
 } else {
   # Read the processed data directly from CSV
@@ -116,20 +114,20 @@ women <- c("Whitney Wolfe Herd (Founder of Bumble)",
            "Leah Busque (Founder of TaskRabbit)",
            "Melanie Perkins (Founder of Canva)",
            "Julia Hartz (Co-founder of EventBrite)",
-           "Arianna Huffington (Co-founder of Huffington Post)",
-           "Anne Wojcicki (CEO of 23andMe)",
-           "Corie Barry (CEO of Best Buy)",
-           "Safra Katz (CEO of Oracle)",
-           "Mary Barra (CEO of General Motors)",
-           "Tory Burch (Founder of Tory Burch)",
+           "Arianna Huffington (Founder of Thrive Global)",
+           "Lisa Su (CEO of AMD)",
+           "Linda Yaccarino (CEO of X)",
+           "Kate Johnson (CEO of Lumen Technologies)",
+           "Christine Leahy (CEO of CDW)",
+           "Kendra Scott (Founder of Kendra Scott)",
            "Sara Blakely (Founder of Spanx)",
            "Oprah Winfrey (Founder of OWN)",
-           "Bobbi Brown (Founder of Bobbi Brown Cosmetics)",
+           "Jessica Alba (Founder of The Honest Company)",
            "Jane Fraser (CEO of Citigroup)",
-           "Rosalind Brewer (CEO of Walgreens)",
-           "Karen Lynch (CEO of CVS Health)",
+           "Mary Barra (CEO of General Motors)",
+           "Gail Boudreaux (CEO of Elevance Health)",
            "Carol Tomé (CEO of UPS)",
-           "Indra Nooyi (Former CEO of PepsiCo)")
+           "Michele Buck (CEO of Hershey)")
 
 men <- c("Larry Page (Co-founder of Google)",
          "Mark Zuckerberg (Co-founder of Facebook)",
@@ -152,7 +150,7 @@ men <- c("Larry Page (Co-founder of Google)",
 
 technologists <- c("Whitney Wolfe Herd", "Leah Busque", "Melanie Perkins",
                    "Julia Hartz", "Arianna Huffington",
-                   "Anne Wojcicki", "Corie Barry", "Safra Katz", "Mary Barra",
+                   "Lisa Su", "Linda Yaccarino", "Kate Johnson", "Christine Leahy",
                    "Larry Page", "Mark Zuckerberg", "Bill Gates", "Jeff Bezos",
                    "Tim Cook", "Sundar Pichai", "Satya Nadella", "Jensen Huang", "Andy Jassy")
 
@@ -176,49 +174,9 @@ if(USE_API) {
       # Tech and founder classifications
       tech_pick = case_when(`choice-7` %in% technologists ~ 1, TRUE ~ 0)
     ) |>
-    # Process motivation scales (I1-I4 for internal, E1-E3 for external)
-    mutate(
-      across(c(I1, I2, I3, I4, E1, E2, E3),
-             ~ case_when(
-               . == "Strongly disagree" ~ 1, . == "Disagree" ~ 2, . == "Somewhat disagree" ~ 3,
-               . == "Neither agree nor disagree" ~ 4,
-               . == "Somewhat agree" ~ 5, . == "Agree" ~ 6, . == "Strongly agree" ~ 7,
-               TRUE ~ NA_integer_))) |>
-    # Process fairness scale (fair1-fair3)
-    mutate(
-      across(c(fair1, fair2, fair3),
-             ~ case_when(
-               . == "Strongly disagree" ~ 1, . == "Disagree" ~ 2, . == "Somewhat disagree" ~ 3,
-               . == "Neither agree nor disagree" ~ 4,
-               . == "Somewhat agree" ~ 5, . == "Agree" ~ 6, . == "Strongly agree" ~ 7,
-               TRUE ~ NA_integer_))) |>
-    mutate(
-      # Internal motivation scale (I1-I4) - standardized
-      I1Z = (I1 - mean(I1, na.rm = TRUE)) / sd(I1, na.rm = TRUE),
-      I2Z = (I2 - mean(I2, na.rm = TRUE)) / sd(I2, na.rm = TRUE),
-      I3Z = (I3 - mean(I3, na.rm = TRUE)) / sd(I3, na.rm = TRUE),
-      I4Z = (I4 - mean(I4, na.rm = TRUE)) / sd(I4, na.rm = TRUE),
-      internal_motiv = (I1Z + I2Z + I3Z + I4Z) / 4,
-
-      # External motivation scale (E1-E3) - standardized
-      E1Z = (E1 - mean(E1, na.rm = TRUE)) / sd(E1, na.rm = TRUE),
-      E2Z = (E2 - mean(E2, na.rm = TRUE)) / sd(E2, na.rm = TRUE),
-      E3Z = (E3 - mean(E3, na.rm = TRUE)) / sd(E3, na.rm = TRUE),
-      external_motiv = (E1Z + E2Z + E3Z) / 3,
-
-      # Fairness scale (fair1-fair3) - standardized
-      fair1Z = (fair1 - mean(fair1, na.rm = TRUE)) / sd(fair1, na.rm = TRUE),
-      fair2Z = (fair2 - mean(fair2, na.rm = TRUE)) / sd(fair2, na.rm = TRUE),
-      fair3Z = (fair3 - mean(fair3, na.rm = TRUE)) / sd(fair3, na.rm = TRUE),
-      fairness = (fair1Z + fair2Z + fair3Z) / 3
-    ) |>
     dplyr::select(treatment, women_pool, cond, pool,
                   female_pick, base_gender, tech_pick,
-                  `choice-1`:`choice-7`, race, gender, age,
-                  I1, I2, I3, I4, E1, E2, E3,
-                  I1Z, I2Z, I3Z, I4Z, E1Z, E2Z, E3Z,
-                  internal_motiv, external_motiv,
-                  fair1, fair2, fair3, fair1Z, fair2Z, fair3Z, fairness)
+                  `choice-1`:`choice-7`, race, gender, age)
 
   # Calculate the number of excluded participants
   num_excluded <- nrow(qual_data) - nrow(d0)
@@ -252,12 +210,6 @@ if(USE_API) {
 \texttt{tech\_pick} & Binary indicator of whether the 7th selection is a technologist. \\
 \hline
 \texttt{choice-1 to choice-7} & The selected CEOs/Founders (choices 1-6 are initial, choice-7 is final DV) \\
-\hline
-\texttt{internal\_motiv} & Aggregated Internal Motivation scale (mean of I1Z-I4Z). \\
-\hline
-\texttt{external\_motiv} & Aggregated External Motivation scale (mean of E1Z-E3Z). \\
-\hline
-\texttt{fairness} & Aggregated Fairness scale (mean of fair1Z-fair3Z). \\
 \hline
 \texttt{gender} & Self-selected gender. \\
 \hline
@@ -349,36 +301,13 @@ d0 |>
 
 \newpage
 
-## Cronbach's Alpha
-
-```{r cronbach-alpha, echo=FALSE, results='markup'}
-# Calculating Cronbach's Alpha for the scales
-
-# Internal Motivation (I1-I4)
-internal_items <- d0[, c("I1Z", "I2Z", "I3Z", "I4Z")]
-alpha_internal <- alpha(internal_items)
-cat("Cronbach's Alpha for Internal Motivation Scale: ", alpha_internal$total$raw_alpha, "\n\n")
-
-# External Motivation (E1-E3)
-external_items <- d0[, c("E1Z", "E2Z", "E3Z")]
-alpha_external <- alpha(external_items)
-cat("Cronbach's Alpha for External Motivation Scale: ", alpha_external$total$raw_alpha, "\n\n")
-
-# Fairness (fair1-fair3)
-fairness_items <- d0[, c("fair1Z", "fair2Z", "fair3Z")]
-alpha_fairness <- alpha(fairness_items)
-cat("Cronbach's Alpha for Fairness Scale: ", alpha_fairness$total$raw_alpha, "\n\n")
-```
-
-\newpage
-
-## Primary Analysis: 2x2 Factorial ANOVA
+## Primary Analysis: 2x2 Interaction
 
 ```{r primary-analysis, echo=FALSE, results='markup'}
 # 2x2 ANOVA: Treatment × Pool
 model_2x2 <- lm(female_pick ~ treatment * women_pool, data = d0)
 
-cat("=== 2x2 FACTORIAL ANOVA ===\n")
+cat("=== 2x2 Interaction ===\n")
 cat("Model: female_pick ~ treatment * women_pool\n\n")
 robust_summary(model_2x2)
 robust_confint(model_2x2)
@@ -585,26 +514,6 @@ cat("Wald Statistic (z):              ", sprintf("%.4f", wald_stat), "\n", sep =
 cat("P-value (two-tailed):            ", sprintf("%.4f", p_value), "\n", sep = "")
 cat("95% CI for Difference:           [", sprintf("%.4f", ci_lower), ", ",
     sprintf("%.4f", ci_upper), "]\n\n", sep = "")
-
-if (p_value < 0.001) {
-  cat("INTERPRETATION: The treatment effect is SIGNIFICANTLY different between pools (p < 0.001).\n")
-  cat("This supports the reversal hypothesis: gender feedback has opposite effects\n")
-  cat("depending on whether women are under- or over-represented.\n")
-} else if (p_value < 0.01) {
-  cat("INTERPRETATION: The treatment effect is SIGNIFICANTLY different between pools (p < 0.01).\n")
-  cat("This supports the reversal hypothesis: gender feedback has opposite effects\n")
-  cat("depending on whether women are under- or over-represented.\n")
-} else if (p_value < 0.05) {
-  cat("INTERPRETATION: The treatment effect is SIGNIFICANTLY different between pools (p < 0.05).\n")
-  cat("This supports the reversal hypothesis: gender feedback has opposite effects\n")
-  cat("depending on whether women are under- or over-represented.\n")
-} else {
-  cat("INTERPRETATION: The treatment effect does NOT significantly differ between pools (p >= 0.05).\n")
-}
-
-cat("\nNote: This Wald test formally tests whether the treatment effect at men pool\n")
-cat("is significantly different from the treatment effect at women pool.\n")
-cat("The test uses robust (HC3) standard errors.\n")
 ```
 
 \newpage
@@ -719,662 +628,174 @@ ggsave("Study-4-pilot-figure.pdf", plot = p_combined, width = 10, height = 8, un
 
 \newpage
 
-# Conditional Mediation Analyses
+# Robustness Checks
 
-## Mediation in Men Pool (Women Underrepresented)
+## Logistic Regression Analyses
 
-```{r mediation-men-pool, echo=FALSE, results='markup'}
-# Set seed for reproducibility
-set.seed(123)
-
-# Define function for Sobel Test
-sobel_test <- function(med.fit, out.fit, mediator) {
-  med.se <- sqrt(diag(vcovHC(med.fit)))[mediator]
-  out.se <- sqrt(diag(vcovHC(out.fit)))[mediator]
-  sobel_test_statistic <- coef(out.fit)[mediator] / sqrt(vcovHC(out.fit)[mediator, mediator])
-  sobel_p_value <- 2 * (1 - pnorm(abs(sobel_test_statistic)))
-  list(statistic = sobel_test_statistic, p_value = sobel_p_value, se = out.se)
-}
-
+```{r logistic-regressions, echo=FALSE, results='markup'}
 cat("=======================================================\n")
-cat("CONDITIONAL MEDIATION: MEN POOL (WOMEN UNDERREPRESENTED)\n")
+cat("ROBUSTNESS CHECK: LOGISTIC REGRESSION ANALYSES\n")
 cat("=======================================================\n\n")
 
-# Filter data for men pool only
-d_men <- d0 %>% filter(women_pool == 0)
+# H1 Test: Men Pool (Women Underrepresented) Only
+cat("--- H1 TEST: MEN POOL (WOMEN UNDERREPRESENTED) ONLY ---\n\n")
+logit_men <- glm(female_pick ~ treatment,
+                 data = d0 %>% filter(women_pool == 0),
+                 family = binomial(link = "logit"))
+summary(logit_men)
 
-# -----------------------------
-# Internal Motivation - Men Pool
-# -----------------------------
-
-cat("--- INTERNAL MOTIVATION - MEN POOL ---\n\n")
-
-# Mediator model
-med.fit.internal.men <- lm(internal_motiv ~ treatment, data = d_men)
-summary(med.fit.internal.men)
-
-# Outcome model including mediator
-out.fit.internal.men <- lm(female_pick ~ treatment + internal_motiv, data = d_men)
-
-# Mediation analysis
-med.out.internal.men <- mediate(med.fit.internal.men, out.fit.internal.men, boot = TRUE,
-                                treat = "treatment", boot.ci.type = "perc",
-                                mediator = "internal_motiv", sims = 10000)
-
-# Sobel test
-sobel.internal.men <- sobel_test(med.fit.internal.men, out.fit.internal.men, "internal_motiv")
-
-cat("Sobel test for Internal Motivation (Men Pool):\n")
-print(sobel.internal.men)
-cat("\n")
-summary(med.out.internal.men)
+# Odds ratios and 95% CIs
+cat("\n\nOdds Ratios and 95% CIs:\n")
+exp(cbind(OR = coef(logit_men), confint(logit_men)))
 
 cat("\n\n")
 
-# -----------------------------
-# External Motivation - Men Pool
-# -----------------------------
+# H1 & H2 Test: Full 2x2 Interaction
+cat("--- H1 & H2 TEST: FULL 2x2 INTERACTION ---\n\n")
+logit_2x2 <- glm(female_pick ~ treatment * women_pool,
+                 data = d0,
+                 family = binomial(link = "logit"))
+summary(logit_2x2)
 
-cat("--- EXTERNAL MOTIVATION - MEN POOL ---\n\n")
-
-# Mediator model
-med.fit.external.men <- lm(external_motiv ~ treatment, data = d_men)
-summary(med.fit.external.men)
-
-# Outcome model including mediator
-out.fit.external.men <- lm(female_pick ~ treatment + external_motiv, data = d_men)
-
-# Mediation analysis
-med.out.external.men <- mediate(med.fit.external.men, out.fit.external.men, boot = TRUE,
-                                treat = "treatment", boot.ci.type = "perc",
-                                mediator = "external_motiv", sims = 10000)
-
-# Sobel test
-sobel.external.men <- sobel_test(med.fit.external.men, out.fit.external.men, "external_motiv")
-
-cat("Sobel test for External Motivation (Men Pool):\n")
-print(sobel.external.men)
-cat("\n")
-summary(med.out.external.men)
-
-cat("\n\n")
-
-# -----------------------------
-# Fairness - Men Pool
-# -----------------------------
-
-cat("--- FAIRNESS SCALE - MEN POOL ---\n\n")
-
-# Mediator model
-med.fit.fairness.men <- lm(fairness ~ treatment, data = d_men)
-summary(med.fit.fairness.men)
-
-# Outcome model including mediator
-out.fit.fairness.men <- lm(female_pick ~ treatment + fairness, data = d_men)
-
-# Mediation analysis
-med.out.fairness.men <- mediate(med.fit.fairness.men, out.fit.fairness.men, boot = TRUE,
-                                treat = "treatment", boot.ci.type = "perc",
-                                mediator = "fairness", sims = 10000)
-
-# Sobel test
-sobel.fairness.men <- sobel_test(med.fit.fairness.men, out.fit.fairness.men, "fairness")
-
-cat("Sobel test for Fairness (Men Pool):\n")
-print(sobel.fairness.men)
-cat("\n")
-summary(med.out.fairness.men)
+# Odds ratios and 95% CIs
+cat("\n\nOdds Ratios and 95% CIs:\n")
+exp(cbind(OR = coef(logit_2x2), confint(logit_2x2)))
 ```
 
 \newpage
 
-## Mediation in Women Pool (Women Overrepresented)
+## Models with Demographic Controls
 
-```{r mediation-women-pool, echo=FALSE, results='markup'}
-# Set seed for reproducibility
-set.seed(123)
-
+```{r demographic-controls, echo=FALSE, results='markup'}
 cat("=======================================================\n")
-cat("CONDITIONAL MEDIATION: WOMEN POOL (WOMEN OVERREPRESENTED)\n")
+cat("ROBUSTNESS CHECK: MODELS WITH DEMOGRAPHIC CONTROLS\n")
 cat("=======================================================\n\n")
 
-# Filter data for women pool only
-d_women <- d0 %>% filter(women_pool == 1)
-
-# -----------------------------
-# Internal Motivation - Women Pool
-# -----------------------------
-
-cat("--- INTERNAL MOTIVATION - WOMEN POOL ---\n\n")
-
-# Mediator model
-med.fit.internal.women <- lm(internal_motiv ~ treatment, data = d_women)
-summary(med.fit.internal.women)
-
-# Outcome model including mediator
-out.fit.internal.women <- lm(female_pick ~ treatment + internal_motiv, data = d_women)
-
-# Mediation analysis
-med.out.internal.women <- mediate(med.fit.internal.women, out.fit.internal.women, boot = TRUE,
-                                 treat = "treatment", boot.ci.type = "perc",
-                                 mediator = "internal_motiv", sims = 10000)
-
-# Sobel test
-sobel.internal.women <- sobel_test(med.fit.internal.women, out.fit.internal.women, "internal_motiv")
-
-cat("Sobel test for Internal Motivation (Women Pool):\n")
-print(sobel.internal.women)
-cat("\n")
-summary(med.out.internal.women)
-
-cat("\n\n")
-
-# -----------------------------
-# External Motivation - Women Pool
-# -----------------------------
-
-cat("--- EXTERNAL MOTIVATION - WOMEN POOL ---\n\n")
-
-# Mediator model
-med.fit.external.women <- lm(external_motiv ~ treatment, data = d_women)
-summary(med.fit.external.women)
-
-# Outcome model including mediator
-out.fit.external.women <- lm(female_pick ~ treatment + external_motiv, data = d_women)
-
-# Mediation analysis
-med.out.external.women <- mediate(med.fit.external.women, out.fit.external.women, boot = TRUE,
-                                 treat = "treatment", boot.ci.type = "perc",
-                                 mediator = "external_motiv", sims = 10000)
-
-# Sobel test
-sobel.external.women <- sobel_test(med.fit.external.women, out.fit.external.women, "external_motiv")
-
-cat("Sobel test for External Motivation (Women Pool):\n")
-print(sobel.external.women)
-cat("\n")
-summary(med.out.external.women)
-
-cat("\n\n")
-
-# -----------------------------
-# Fairness - Women Pool
-# -----------------------------
-
-cat("--- FAIRNESS SCALE - WOMEN POOL ---\n\n")
-
-# Mediator model
-med.fit.fairness.women <- lm(fairness ~ treatment, data = d_women)
-summary(med.fit.fairness.women)
-
-# Outcome model including mediator
-out.fit.fairness.women <- lm(female_pick ~ treatment + fairness, data = d_women)
-
-# Mediation analysis
-med.out.fairness.women <- mediate(med.fit.fairness.women, out.fit.fairness.women, boot = TRUE,
-                                 treat = "treatment", boot.ci.type = "perc",
-                                 mediator = "fairness", sims = 10000)
-
-# Sobel test
-sobel.fairness.women <- sobel_test(med.fit.fairness.women, out.fit.fairness.women, "fairness")
-
-cat("Sobel test for Fairness (Women Pool):\n")
-print(sobel.fairness.women)
-cat("\n")
-summary(med.out.fairness.women)
-```
-
-\newpage
-
-## Summary: Mediation Results for Women Pool (Overrepresented)
-
-```{r mediation-summary-women, echo=FALSE, results='markup'}
-cat("=======================================================\n")
-cat("MEDIATION SUMMARY: WOMEN POOL (OVERREPRESENTED)\n")
-cat("=======================================================\n\n")
-
-# Internal Motivation
-cat("INTERNAL MOTIVATION\n")
-cat("* Indirect Effect (ACME): ", sprintf("%.4f", med.out.internal.women$d0), "\n", sep = "")
-cat("* 95% CI: [", sprintf("%.4f", med.out.internal.women$d0.ci[1]), ", ",
-    sprintf("%.4f", med.out.internal.women$d0.ci[2]), "]\n", sep = "")
-cat("* p-value: ", sprintf("%.4f", med.out.internal.women$d0.p), "\n\n", sep = "")
-
-# External Motivation
-cat("EXTERNAL MOTIVATION\n")
-cat("* Indirect Effect (ACME): ", sprintf("%.4f", med.out.external.women$d0), "\n", sep = "")
-cat("* 95% CI: [", sprintf("%.4f", med.out.external.women$d0.ci[1]), ", ",
-    sprintf("%.4f", med.out.external.women$d0.ci[2]), "]\n", sep = "")
-cat("* p-value: ", sprintf("%.4f", med.out.external.women$d0.p), "\n\n", sep = "")
-
-# Fairness
-cat("FAIRNESS\n")
-cat("* Indirect Effect (ACME): ", sprintf("%.4f", med.out.fairness.women$d0), "\n", sep = "")
-cat("* 95% CI: [", sprintf("%.4f", med.out.fairness.women$d0.ci[1]), ", ",
-    sprintf("%.4f", med.out.fairness.women$d0.ci[2]), "]\n", sep = "")
-cat("* p-value: ", sprintf("%.4f", med.out.fairness.women$d0.p), "\n", sep = "")
-```
-
-\newpage
-
-# Individual Item Analysis
-
-## Sanity Check: Descriptive Statistics for Individual Items
-
-```{r individual-items-descriptives, echo=FALSE, results='markup'}
-cat("=======================================================\n")
-cat("DESCRIPTIVE STATISTICS: INDIVIDUAL SCALE ITEMS\n")
-cat("=======================================================\n\n")
-
-# Filter for overrepresented pool (women pool)
-d_overrep <- d0 %>% filter(women_pool == 1)
-
-cat("SAMPLE: OVERREPRESENTED POOL (WOMEN POOL) ONLY\n")
-cat("N = ", nrow(d_overrep), "\n\n")
-
-# Internal Motivation Items
-cat("--- INTERNAL MOTIVATION ITEMS ---\n\n")
-internal_items <- c("I1", "I2", "I3", "I4")
-for(item in internal_items) {
-  cat(item, ":\n")
-  cat("  Overall: M = ", sprintf("%.2f", mean(d_overrep[[item]], na.rm = TRUE)),
-      ", SD = ", sprintf("%.2f", sd(d_overrep[[item]], na.rm = TRUE)), "\n", sep = "")
-
-  # By condition
-  by_cond <- d_overrep %>%
-    group_by(cond) %>%
-    summarise(M = mean(.data[[item]], na.rm = TRUE),
-              SD = sd(.data[[item]], na.rm = TRUE),
-              .groups = "drop")
-
-  cat("  Control:   M = ", sprintf("%.2f", by_cond$M[by_cond$cond == "control"]),
-      ", SD = ", sprintf("%.2f", by_cond$SD[by_cond$cond == "control"]), "\n", sep = "")
-  cat("  Treatment: M = ", sprintf("%.2f", by_cond$M[by_cond$cond == "treat"]),
-      ", SD = ", sprintf("%.2f", by_cond$SD[by_cond$cond == "treat"]), "\n\n", sep = "")
-}
-
-# External Motivation Items
-cat("\n--- EXTERNAL MOTIVATION ITEMS ---\n\n")
-external_items <- c("E1", "E2", "E3")
-for(item in external_items) {
-  cat(item, ":\n")
-  cat("  Overall: M = ", sprintf("%.2f", mean(d_overrep[[item]], na.rm = TRUE)),
-      ", SD = ", sprintf("%.2f", sd(d_overrep[[item]], na.rm = TRUE)), "\n", sep = "")
-
-  # By condition
-  by_cond <- d_overrep %>%
-    group_by(cond) %>%
-    summarise(M = mean(.data[[item]], na.rm = TRUE),
-              SD = sd(.data[[item]], na.rm = TRUE),
-              .groups = "drop")
-
-  cat("  Control:   M = ", sprintf("%.2f", by_cond$M[by_cond$cond == "control"]),
-      ", SD = ", sprintf("%.2f", by_cond$SD[by_cond$cond == "control"]), "\n", sep = "")
-  cat("  Treatment: M = ", sprintf("%.2f", by_cond$M[by_cond$cond == "treat"]),
-      ", SD = ", sprintf("%.2f", by_cond$SD[by_cond$cond == "treat"]), "\n\n", sep = "")
-}
-
-# Fairness Items
-cat("\n--- FAIRNESS ITEMS ---\n\n")
-fairness_items <- c("fair1", "fair2", "fair3")
-for(item in fairness_items) {
-  cat(item, ":\n")
-  cat("  Overall: M = ", sprintf("%.2f", mean(d_overrep[[item]], na.rm = TRUE)),
-      ", SD = ", sprintf("%.2f", sd(d_overrep[[item]], na.rm = TRUE)), "\n", sep = "")
-
-  # By condition
-  by_cond <- d_overrep %>%
-    group_by(cond) %>%
-    summarise(M = mean(.data[[item]], na.rm = TRUE),
-              SD = sd(.data[[item]], na.rm = TRUE),
-              .groups = "drop")
-
-  cat("  Control:   M = ", sprintf("%.2f", by_cond$M[by_cond$cond == "control"]),
-      ", SD = ", sprintf("%.2f", by_cond$SD[by_cond$cond == "control"]), "\n", sep = "")
-  cat("  Treatment: M = ", sprintf("%.2f", by_cond$M[by_cond$cond == "treat"]),
-      ", SD = ", sprintf("%.2f", by_cond$SD[by_cond$cond == "treat"]), "\n\n", sep = "")
-}
-```
-
-\newpage
-
-## Individual Item Mediation: Overrepresented Pool Only
-
-```{r individual-items-mediation, echo=FALSE, results='markup'}
-# Set seed for reproducibility
-set.seed(123)
-
-cat("=======================================================\n")
-cat("INDIVIDUAL ITEM MEDIATION ANALYSIS\n")
-cat("OVERREPRESENTED POOL (WOMEN POOL) ONLY\n")
-cat("=======================================================\n\n")
-
-# Filter for overrepresented pool (women pool) and create standardized items
-d_overrep <- d0 %>%
-  filter(women_pool == 1) %>%
+# Create demographic control variables
+d0_controls <- d0 %>%
   mutate(
-    I1_itemz = (I1 - mean(I1, na.rm = TRUE)) / sd(I1, na.rm = TRUE),
-    I2_itemz = (I2 - mean(I2, na.rm = TRUE)) / sd(I2, na.rm = TRUE),
-    I3_itemz = (I3 - mean(I3, na.rm = TRUE)) / sd(I3, na.rm = TRUE),
-    I4_itemz = (I4 - mean(I4, na.rm = TRUE)) / sd(I4, na.rm = TRUE),
-    E1_itemz = (E1 - mean(E1, na.rm = TRUE)) / sd(E1, na.rm = TRUE),
-    E2_itemz = (E2 - mean(E2, na.rm = TRUE)) / sd(E2, na.rm = TRUE),
-    E3_itemz = (E3 - mean(E3, na.rm = TRUE)) / sd(E3, na.rm = TRUE),
-    fair1_itemz = (fair1 - mean(fair1, na.rm = TRUE)) / sd(fair1, na.rm = TRUE),
-    fair2_itemz = (fair2 - mean(fair2, na.rm = TRUE)) / sd(fair2, na.rm = TRUE),
-    fair3_itemz = (fair3 - mean(fair3, na.rm = TRUE)) / sd(fair3, na.rm = TRUE)
+    # Binary gender indicator: man (=1) vs. not-man (=0)
+    man = case_when(gender == "Man" ~ 1, TRUE ~ 0),
+
+    # Binary race indicator: White (=1) vs. non-White (=0)
+    white = case_when(race == "White" ~ 1, TRUE ~ 0),
+
+    # Missing indicators
+    gender_missing = case_when(is.na(gender) ~ 1, TRUE ~ 0),
+    race_missing = case_when(is.na(race) ~ 1, TRUE ~ 0),
+    age_missing = case_when(is.na(age) ~ 1, TRUE ~ 0),
+
+    # Impute missing values with 0 for regression
+    man = ifelse(is.na(man), 0, man),
+    white = ifelse(is.na(white), 0, white),
+    age_clean = ifelse(is.na(age), 0, age)
   )
 
-cat("N = ", nrow(d_overrep), "\n\n")
+cat("Demographic Variable Summary:\n")
+cat("Man (1=Man, 0=Not-Man): ", sprintf("%.1f%%", mean(d0_controls$man, na.rm=T) * 100), "\n")
+cat("White (1=White, 0=Non-White): ", sprintf("%.1f%%", mean(d0_controls$white, na.rm=T) * 100), "\n")
+cat("Age (mean): ", sprintf("%.2f", mean(d0_controls$age, na.rm=T)), "\n\n")
 
-# Initialize results list
-mediation_results <- list()
+cat("Missing Data:\n")
+cat("Gender missing: ", sum(d0_controls$gender_missing), "\n")
+cat("Race missing: ", sum(d0_controls$race_missing), "\n")
+cat("Age missing: ", sum(d0_controls$age_missing), "\n\n")
 
-# Internal Motivation Items
-cat("\n\n")
-cat("=====================================================\n")
-cat("INTERNAL MOTIVATION ITEMS\n")
-cat("=====================================================\n\n")
+# Primary model with demographic controls
+cat("--- PRIMARY MODEL WITH DEMOGRAPHIC CONTROLS ---\n")
+cat("Model: female_pick ~ treatment * women_pool + man + white + age + missing indicators\n\n")
 
-# I1
-cat("---------------------------------------\n")
-cat("Internal Motivation Item 1 (I1)\n")
-cat("---------------------------------------\n\n")
-med.fit.I1 <- lm(I1_itemz ~ treatment, data = d_overrep)
-out.fit.I1 <- lm(female_pick ~ treatment + I1_itemz, data = d_overrep)
-cat("Step 1: Treatment -> I1\n")
-cat("Coefficient: ", sprintf("%.4f", coef(med.fit.I1)["treatment"]),
-    ", p = ", sprintf("%.4f", summary(med.fit.I1)$coefficients["treatment", "Pr(>|t|)"]), "\n\n", sep = "")
-cat("Step 2: I1 -> Female Pick (controlling for treatment)\n")
-cat("Coefficient: ", sprintf("%.4f", coef(out.fit.I1)["I1_itemz"]),
-    ", p = ", sprintf("%.4f", summary(out.fit.I1)$coefficients["I1_itemz", "Pr(>|t|)"]), "\n\n", sep = "")
-med.out.I1 <- mediate(med.fit.I1, out.fit.I1, treat = "treatment", mediator = "I1_itemz",
-                      boot = TRUE, sims = 10000, boot.ci.type = "perc")
-sobel.I1 <- coef(out.fit.I1)["I1_itemz"] / sqrt(vcovHC(out.fit.I1)["I1_itemz", "I1_itemz"])
-cat("MEDIATION RESULTS:\n")
-cat("* Indirect Effect (ACME): ", sprintf("%.4f", med.out.I1$d0), "\n", sep = "")
-cat("* 95% CI: [", sprintf("%.4f", med.out.I1$d0.ci[1]), ", ", sprintf("%.4f", med.out.I1$d0.ci[2]), "]\n", sep = "")
-cat("* p-value: ", sprintf("%.4f", med.out.I1$d0.p), "\n", sep = "")
-cat("* Sobel test: z = ", sprintf("%.4f", sobel.I1), "\n\n", sep = "")
-mediation_results[[1]] <- list(item = "I1", label = "Internal Motivation Item 1",
-                                acme = med.out.I1$d0, acme_ci_lower = med.out.I1$d0.ci[1],
-                                acme_ci_upper = med.out.I1$d0.ci[2], acme_p = med.out.I1$d0.p,
-                                sobel_z = sobel.I1, sobel_p = 2 * (1 - pnorm(abs(sobel.I1))),
-                                direct_effect = med.out.I1$z0, total_effect = med.out.I1$tau.coef,
-                                prop_mediated = med.out.I1$n0,
-                                path_a = coef(med.fit.I1)["treatment"],
-                                path_a_p = summary(med.fit.I1)$coefficients["treatment", "Pr(>|t|)"],
-                                path_b = coef(out.fit.I1)["I1_itemz"],
-                                path_b_p = summary(out.fit.I1)$coefficients["I1_itemz", "Pr(>|t|)"])
+model_2x2_controls <- lm(female_pick ~ treatment * women_pool +
+                          man + white + age_clean +
+                          gender_missing + race_missing + age_missing,
+                        data = d0_controls)
 
-# I2
-cat("---------------------------------------\n")
-cat("Internal Motivation Item 2 (I2)\n")
-cat("---------------------------------------\n\n")
-med.fit.I2 <- lm(I2_itemz ~ treatment, data = d_overrep)
-out.fit.I2 <- lm(female_pick ~ treatment + I2_itemz, data = d_overrep)
-cat("Step 1: Treatment -> I2: ", sprintf("%.4f", coef(med.fit.I2)["treatment"]),
-    ", p = ", sprintf("%.4f", summary(med.fit.I2)$coefficients["treatment", "Pr(>|t|)"]), "\n", sep = "")
-cat("Step 2: I2 -> Female Pick: ", sprintf("%.4f", coef(out.fit.I2)["I2_itemz"]),
-    ", p = ", sprintf("%.4f", summary(out.fit.I2)$coefficients["I2_itemz", "Pr(>|t|)"]), "\n\n", sep = "")
-med.out.I2 <- mediate(med.fit.I2, out.fit.I2, treat = "treatment", mediator = "I2_itemz",
-                      boot = TRUE, sims = 10000, boot.ci.type = "perc")
-sobel.I2 <- coef(out.fit.I2)["I2_itemz"] / sqrt(vcovHC(out.fit.I2)["I2_itemz", "I2_itemz"])
-cat("ACME: ", sprintf("%.4f", med.out.I2$d0), " [", sprintf("%.4f", med.out.I2$d0.ci[1]), ", ",
-    sprintf("%.4f", med.out.I2$d0.ci[2]), "], p = ", sprintf("%.4f", med.out.I2$d0.p), "\n\n", sep = "")
-mediation_results[[2]] <- list(item = "I2", label = "Internal Motivation Item 2",
-                                acme = med.out.I2$d0, acme_ci_lower = med.out.I2$d0.ci[1],
-                                acme_ci_upper = med.out.I2$d0.ci[2], acme_p = med.out.I2$d0.p,
-                                sobel_z = sobel.I2, sobel_p = 2 * (1 - pnorm(abs(sobel.I2))),
-                                direct_effect = med.out.I2$z0, total_effect = med.out.I2$tau.coef,
-                                prop_mediated = med.out.I2$n0,
-                                path_a = coef(med.fit.I2)["treatment"],
-                                path_a_p = summary(med.fit.I2)$coefficients["treatment", "Pr(>|t|)"],
-                                path_b = coef(out.fit.I2)["I2_itemz"],
-                                path_b_p = summary(out.fit.I2)$coefficients["I2_itemz", "Pr(>|t|)"])
-
-# I3
-cat("---------------------------------------\n")
-cat("Internal Motivation Item 3 (I3)\n")
-cat("---------------------------------------\n\n")
-med.fit.I3 <- lm(I3_itemz ~ treatment, data = d_overrep)
-out.fit.I3 <- lm(female_pick ~ treatment + I3_itemz, data = d_overrep)
-med.out.I3 <- mediate(med.fit.I3, out.fit.I3, treat = "treatment", mediator = "I3_itemz",
-                      boot = TRUE, sims = 10000, boot.ci.type = "perc")
-sobel.I3 <- coef(out.fit.I3)["I3_itemz"] / sqrt(vcovHC(out.fit.I3)["I3_itemz", "I3_itemz"])
-cat("ACME: ", sprintf("%.4f", med.out.I3$d0), ", p = ", sprintf("%.4f", med.out.I3$d0.p), "\n\n", sep = "")
-mediation_results[[3]] <- list(item = "I3", label = "Internal Motivation Item 3",
-                                acme = med.out.I3$d0, acme_ci_lower = med.out.I3$d0.ci[1],
-                                acme_ci_upper = med.out.I3$d0.ci[2], acme_p = med.out.I3$d0.p,
-                                sobel_z = sobel.I3, sobel_p = 2 * (1 - pnorm(abs(sobel.I3))),
-                                direct_effect = med.out.I3$z0, total_effect = med.out.I3$tau.coef,
-                                prop_mediated = med.out.I3$n0,
-                                path_a = coef(med.fit.I3)["treatment"],
-                                path_a_p = summary(med.fit.I3)$coefficients["treatment", "Pr(>|t|)"],
-                                path_b = coef(out.fit.I3)["I3_itemz"],
-                                path_b_p = summary(out.fit.I3)$coefficients["I3_itemz", "Pr(>|t|)"])
-
-# I4
-cat("---------------------------------------\n")
-cat("Internal Motivation Item 4 (I4)\n")
-cat("---------------------------------------\n\n")
-med.fit.I4 <- lm(I4_itemz ~ treatment, data = d_overrep)
-out.fit.I4 <- lm(female_pick ~ treatment + I4_itemz, data = d_overrep)
-med.out.I4 <- mediate(med.fit.I4, out.fit.I4, treat = "treatment", mediator = "I4_itemz",
-                      boot = TRUE, sims = 10000, boot.ci.type = "perc")
-sobel.I4 <- coef(out.fit.I4)["I4_itemz"] / sqrt(vcovHC(out.fit.I4)["I4_itemz", "I4_itemz"])
-cat("ACME: ", sprintf("%.4f", med.out.I4$d0), ", p = ", sprintf("%.4f", med.out.I4$d0.p), "\n\n", sep = "")
-mediation_results[[4]] <- list(item = "I4", label = "Internal Motivation Item 4",
-                                acme = med.out.I4$d0, acme_ci_lower = med.out.I4$d0.ci[1],
-                                acme_ci_upper = med.out.I4$d0.ci[2], acme_p = med.out.I4$d0.p,
-                                sobel_z = sobel.I4, sobel_p = 2 * (1 - pnorm(abs(sobel.I4))),
-                                direct_effect = med.out.I4$z0, total_effect = med.out.I4$tau.coef,
-                                prop_mediated = med.out.I4$n0,
-                                path_a = coef(med.fit.I4)["treatment"],
-                                path_a_p = summary(med.fit.I4)$coefficients["treatment", "Pr(>|t|)"],
-                                path_b = coef(out.fit.I4)["I4_itemz"],
-                                path_b_p = summary(out.fit.I4)$coefficients["I4_itemz", "Pr(>|t|)"])
-
-# External Motivation Items
-cat("\n\n")
-cat("=====================================================\n")
-cat("EXTERNAL MOTIVATION ITEMS\n")
-cat("=====================================================\n\n")
-
-# E1
-cat("---------------------------------------\n")
-cat("External Motivation Item 1 (E1)\n")
-cat("---------------------------------------\n\n")
-med.fit.E1 <- lm(E1_itemz ~ treatment, data = d_overrep)
-out.fit.E1 <- lm(female_pick ~ treatment + E1_itemz, data = d_overrep)
-med.out.E1 <- mediate(med.fit.E1, out.fit.E1, treat = "treatment", mediator = "E1_itemz",
-                      boot = TRUE, sims = 10000, boot.ci.type = "perc")
-sobel.E1 <- coef(out.fit.E1)["E1_itemz"] / sqrt(vcovHC(out.fit.E1)["E1_itemz", "E1_itemz"])
-cat("ACME: ", sprintf("%.4f", med.out.E1$d0), ", p = ", sprintf("%.4f", med.out.E1$d0.p), "\n\n", sep = "")
-mediation_results[[5]] <- list(item = "E1", label = "External Motivation Item 1",
-                                acme = med.out.E1$d0, acme_ci_lower = med.out.E1$d0.ci[1],
-                                acme_ci_upper = med.out.E1$d0.ci[2], acme_p = med.out.E1$d0.p,
-                                sobel_z = sobel.E1, sobel_p = 2 * (1 - pnorm(abs(sobel.E1))),
-                                direct_effect = med.out.E1$z0, total_effect = med.out.E1$tau.coef,
-                                prop_mediated = med.out.E1$n0,
-                                path_a = coef(med.fit.E1)["treatment"],
-                                path_a_p = summary(med.fit.E1)$coefficients["treatment", "Pr(>|t|)"],
-                                path_b = coef(out.fit.E1)["E1_itemz"],
-                                path_b_p = summary(out.fit.E1)$coefficients["E1_itemz", "Pr(>|t|)"])
-
-# E2
-cat("---------------------------------------\n")
-cat("External Motivation Item 2 (E2)\n")
-cat("---------------------------------------\n\n")
-med.fit.E2 <- lm(E2_itemz ~ treatment, data = d_overrep)
-out.fit.E2 <- lm(female_pick ~ treatment + E2_itemz, data = d_overrep)
-med.out.E2 <- mediate(med.fit.E2, out.fit.E2, treat = "treatment", mediator = "E2_itemz",
-                      boot = TRUE, sims = 10000, boot.ci.type = "perc")
-sobel.E2 <- coef(out.fit.E2)["E2_itemz"] / sqrt(vcovHC(out.fit.E2)["E2_itemz", "E2_itemz"])
-cat("ACME: ", sprintf("%.4f", med.out.E2$d0), ", p = ", sprintf("%.4f", med.out.E2$d0.p), "\n\n", sep = "")
-mediation_results[[6]] <- list(item = "E2", label = "External Motivation Item 2",
-                                acme = med.out.E2$d0, acme_ci_lower = med.out.E2$d0.ci[1],
-                                acme_ci_upper = med.out.E2$d0.ci[2], acme_p = med.out.E2$d0.p,
-                                sobel_z = sobel.E2, sobel_p = 2 * (1 - pnorm(abs(sobel.E2))),
-                                direct_effect = med.out.E2$z0, total_effect = med.out.E2$tau.coef,
-                                prop_mediated = med.out.E2$n0,
-                                path_a = coef(med.fit.E2)["treatment"],
-                                path_a_p = summary(med.fit.E2)$coefficients["treatment", "Pr(>|t|)"],
-                                path_b = coef(out.fit.E2)["E2_itemz"],
-                                path_b_p = summary(out.fit.E2)$coefficients["E2_itemz", "Pr(>|t|)"])
-
-# E3
-cat("---------------------------------------\n")
-cat("External Motivation Item 3 (E3)\n")
-cat("---------------------------------------\n\n")
-med.fit.E3 <- lm(E3_itemz ~ treatment, data = d_overrep)
-out.fit.E3 <- lm(female_pick ~ treatment + E3_itemz, data = d_overrep)
-med.out.E3 <- mediate(med.fit.E3, out.fit.E3, treat = "treatment", mediator = "E3_itemz",
-                      boot = TRUE, sims = 10000, boot.ci.type = "perc")
-sobel.E3 <- coef(out.fit.E3)["E3_itemz"] / sqrt(vcovHC(out.fit.E3)["E3_itemz", "E3_itemz"])
-cat("ACME: ", sprintf("%.4f", med.out.E3$d0), ", p = ", sprintf("%.4f", med.out.E3$d0.p), "\n\n", sep = "")
-mediation_results[[7]] <- list(item = "E3", label = "External Motivation Item 3",
-                                acme = med.out.E3$d0, acme_ci_lower = med.out.E3$d0.ci[1],
-                                acme_ci_upper = med.out.E3$d0.ci[2], acme_p = med.out.E3$d0.p,
-                                sobel_z = sobel.E3, sobel_p = 2 * (1 - pnorm(abs(sobel.E3))),
-                                direct_effect = med.out.E3$z0, total_effect = med.out.E3$tau.coef,
-                                prop_mediated = med.out.E3$n0,
-                                path_a = coef(med.fit.E3)["treatment"],
-                                path_a_p = summary(med.fit.E3)$coefficients["treatment", "Pr(>|t|)"],
-                                path_b = coef(out.fit.E3)["E3_itemz"],
-                                path_b_p = summary(out.fit.E3)$coefficients["E3_itemz", "Pr(>|t|)"])
-
-# Fairness Items
-cat("\n\n")
-cat("=====================================================\n")
-cat("FAIRNESS ITEMS\n")
-cat("=====================================================\n\n")
-
-# fair1
-cat("---------------------------------------\n")
-cat("Fairness Item 1 (fair1)\n")
-cat("---------------------------------------\n\n")
-med.fit.fair1 <- lm(fair1_itemz ~ treatment, data = d_overrep)
-out.fit.fair1 <- lm(female_pick ~ treatment + fair1_itemz, data = d_overrep)
-med.out.fair1 <- mediate(med.fit.fair1, out.fit.fair1, treat = "treatment", mediator = "fair1_itemz",
-                         boot = TRUE, sims = 10000, boot.ci.type = "perc")
-sobel.fair1 <- coef(out.fit.fair1)["fair1_itemz"] / sqrt(vcovHC(out.fit.fair1)["fair1_itemz", "fair1_itemz"])
-cat("ACME: ", sprintf("%.4f", med.out.fair1$d0), ", p = ", sprintf("%.4f", med.out.fair1$d0.p), "\n\n", sep = "")
-mediation_results[[8]] <- list(item = "fair1", label = "Fairness Item 1",
-                                acme = med.out.fair1$d0, acme_ci_lower = med.out.fair1$d0.ci[1],
-                                acme_ci_upper = med.out.fair1$d0.ci[2], acme_p = med.out.fair1$d0.p,
-                                sobel_z = sobel.fair1, sobel_p = 2 * (1 - pnorm(abs(sobel.fair1))),
-                                direct_effect = med.out.fair1$z0, total_effect = med.out.fair1$tau.coef,
-                                prop_mediated = med.out.fair1$n0,
-                                path_a = coef(med.fit.fair1)["treatment"],
-                                path_a_p = summary(med.fit.fair1)$coefficients["treatment", "Pr(>|t|)"],
-                                path_b = coef(out.fit.fair1)["fair1_itemz"],
-                                path_b_p = summary(out.fit.fair1)$coefficients["fair1_itemz", "Pr(>|t|)"])
-
-# fair2
-cat("---------------------------------------\n")
-cat("Fairness Item 2 (fair2)\n")
-cat("---------------------------------------\n\n")
-med.fit.fair2 <- lm(fair2_itemz ~ treatment, data = d_overrep)
-out.fit.fair2 <- lm(female_pick ~ treatment + fair2_itemz, data = d_overrep)
-med.out.fair2 <- mediate(med.fit.fair2, out.fit.fair2, treat = "treatment", mediator = "fair2_itemz",
-                         boot = TRUE, sims = 10000, boot.ci.type = "perc")
-sobel.fair2 <- coef(out.fit.fair2)["fair2_itemz"] / sqrt(vcovHC(out.fit.fair2)["fair2_itemz", "fair2_itemz"])
-cat("ACME: ", sprintf("%.4f", med.out.fair2$d0), ", p = ", sprintf("%.4f", med.out.fair2$d0.p), "\n\n", sep = "")
-mediation_results[[9]] <- list(item = "fair2", label = "Fairness Item 2",
-                                acme = med.out.fair2$d0, acme_ci_lower = med.out.fair2$d0.ci[1],
-                                acme_ci_upper = med.out.fair2$d0.ci[2], acme_p = med.out.fair2$d0.p,
-                                sobel_z = sobel.fair2, sobel_p = 2 * (1 - pnorm(abs(sobel.fair2))),
-                                direct_effect = med.out.fair2$z0, total_effect = med.out.fair2$tau.coef,
-                                prop_mediated = med.out.fair2$n0,
-                                path_a = coef(med.fit.fair2)["treatment"],
-                                path_a_p = summary(med.fit.fair2)$coefficients["treatment", "Pr(>|t|)"],
-                                path_b = coef(out.fit.fair2)["fair2_itemz"],
-                                path_b_p = summary(out.fit.fair2)$coefficients["fair2_itemz", "Pr(>|t|)"])
-
-# fair3
-cat("---------------------------------------\n")
-cat("Fairness Item 3 (fair3)\n")
-cat("---------------------------------------\n\n")
-med.fit.fair3 <- lm(fair3_itemz ~ treatment, data = d_overrep)
-out.fit.fair3 <- lm(female_pick ~ treatment + fair3_itemz, data = d_overrep)
-med.out.fair3 <- mediate(med.fit.fair3, out.fit.fair3, treat = "treatment", mediator = "fair3_itemz",
-                         boot = TRUE, sims = 10000, boot.ci.type = "perc")
-sobel.fair3 <- coef(out.fit.fair3)["fair3_itemz"] / sqrt(vcovHC(out.fit.fair3)["fair3_itemz", "fair3_itemz"])
-cat("ACME: ", sprintf("%.4f", med.out.fair3$d0), ", p = ", sprintf("%.4f", med.out.fair3$d0.p), "\n\n", sep = "")
-mediation_results[[10]] <- list(item = "fair3", label = "Fairness Item 3",
-                                 acme = med.out.fair3$d0, acme_ci_lower = med.out.fair3$d0.ci[1],
-                                 acme_ci_upper = med.out.fair3$d0.ci[2], acme_p = med.out.fair3$d0.p,
-                                 sobel_z = sobel.fair3, sobel_p = 2 * (1 - pnorm(abs(sobel.fair3))),
-                                 direct_effect = med.out.fair3$z0, total_effect = med.out.fair3$tau.coef,
-                                 prop_mediated = med.out.fair3$n0,
-                                 path_a = coef(med.fit.fair3)["treatment"],
-                                 path_a_p = summary(med.fit.fair3)$coefficients["treatment", "Pr(>|t|)"],
-                                 path_b = coef(out.fit.fair3)["fair3_itemz"],
-                                 path_b_p = summary(out.fit.fair3)$coefficients["fair3_itemz", "Pr(>|t|)"])
-
-# Store results for summary table
-saveRDS(mediation_results, file = "individual_mediation_results.rds")
+robust_summary(model_2x2_controls)
+robust_confint(model_2x2_controls)
 ```
 
 \newpage
 
-## Summary Table: All Individual Items
+## Dropout Sensitivity Analyses
 
-```{r individual-items-summary-table, echo=FALSE, results='markup'}
+```{r dropout-sensitivity, echo=FALSE, results='markup'}
 cat("=======================================================\n")
-cat("SUMMARY: INDIVIDUAL ITEM MEDIATION RESULTS\n")
-cat("OVERREPRESENTED POOL (WOMEN POOL) ONLY\n")
+cat("ROBUSTNESS CHECK: DROPOUT SENSITIVITY ANALYSES\n")
 cat("=======================================================\n\n")
 
-# Load results
-mediation_results <- readRDS("individual_mediation_results.rds")
+# Note: For the pilot, we need to check if there are any dropouts
+# Dropouts are participants who were assigned to condition but didn't select a 7th panelist
 
-# Create summary data frame
-summary_df <- data.frame(
-  Item = sapply(mediation_results, function(x) x$item),
-  Label = sapply(mediation_results, function(x) x$label),
-  Path_a = sapply(mediation_results, function(x) sprintf("%.4f", x$path_a)),
-  Path_a_p = sapply(mediation_results, function(x) sprintf("%.4f", x$path_a_p)),
-  Path_b = sapply(mediation_results, function(x) sprintf("%.4f", x$path_b)),
-  Path_b_p = sapply(mediation_results, function(x) sprintf("%.4f", x$path_b_p)),
-  ACME = sapply(mediation_results, function(x) sprintf("%.4f", x$acme)),
-  ACME_CI = sapply(mediation_results, function(x)
-    paste0("[", sprintf("%.4f", x$acme_ci_lower), ", ", sprintf("%.4f", x$acme_ci_upper), "]")),
-  ACME_p = sapply(mediation_results, function(x) sprintf("%.4f", x$acme_p)),
-  Sobel_z = sapply(mediation_results, function(x) sprintf("%.4f", x$sobel_z)),
-  Sobel_p = sapply(mediation_results, function(x) sprintf("%.4f", x$sobel_p)),
-  Prop_Med = sapply(mediation_results, function(x) sprintf("%.4f", x$prop_mediated))
-)
+# Check for dropouts in the original qual_data
+if(USE_API & exists("qual_data")) {
+  # Count participants who finished but are missing choice-7
+  dropouts_missing_choice7 <- qual_data %>%
+    filter(Finished == 1, is.na(`choice-7`)) %>%
+    nrow()
 
-# Add significance markers
-summary_df$Sig <- sapply(mediation_results, function(x) {
-  p <- x$acme_p
-  if (p < 0.001) return("***")
-  else if (p < 0.01) return("**")
-  else if (p < 0.05) return("*")
-  else return("")
-})
+  # Count participants who didn't finish
+  dropouts_not_finished <- qual_data %>%
+    filter(Finished != 1) %>%
+    nrow()
 
-cat("Path a = Treatment -> Mediator\n")
-cat("Path b = Mediator -> Outcome (controlling for treatment)\n")
-cat("ACME = Average Causal Mediation Effect (Indirect Effect)\n")
-cat("Prop_Med = Proportion of total effect mediated\n\n")
+  total_dropouts <- dropouts_missing_choice7 + dropouts_not_finished
 
-print(summary_df, row.names = FALSE)
+  cat("Dropout Summary:\n")
+  cat("Participants who finished but didn't select choice-7: ", dropouts_missing_choice7, "\n")
+  cat("Participants who didn't finish: ", dropouts_not_finished, "\n")
+  cat("Total dropouts after assignment: ", total_dropouts, "\n\n")
 
-cat("\n\nSIGNIFICANT MEDIATORS (p < 0.05):\n")
-sig_mediators <- summary_df[summary_df$Sig != "", ]
-if (nrow(sig_mediators) > 0) {
-  print(sig_mediators[, c("Item", "Label", "ACME", "ACME_p", "Sig")], row.names = FALSE)
+  if(total_dropouts > 0) {
+    cat("Running sensitivity analyses...\n\n")
+
+    # Scenario 1: Assume all dropouts chose a man
+    cat("--- SCENARIO 1: ASSUME DROPOUTS CHOSE MAN ---\n\n")
+    d0_dropout_man <- qual_data %>%
+      filter(!is.na(PROLIFIC_PID), Finished==1) %>%
+      mutate(
+        treatment = case_when(cond == "treat" ~ 1, TRUE ~ 0),
+        women_pool = case_when(pool == "women" ~ 1, TRUE ~ 0),
+        # If choice-7 is missing, code as man (0)
+        female_pick = case_when(
+          is.na(`choice-7`) ~ 0,
+          `choice-7` %in% women ~ 1,
+          TRUE ~ 0
+        )
+      )
+
+    model_dropout_man <- lm(female_pick ~ treatment * women_pool, data = d0_dropout_man)
+    cat("Model: female_pick ~ treatment * women_pool\n\n")
+    robust_summary(model_dropout_man)
+    robust_confint(model_dropout_man)
+
+    cat("\n\n")
+
+    # Scenario 2: Assume all dropouts chose a woman
+    cat("--- SCENARIO 2: ASSUME DROPOUTS CHOSE WOMAN ---\n\n")
+    d0_dropout_woman <- qual_data %>%
+      filter(!is.na(PROLIFIC_PID), Finished==1) %>%
+      mutate(
+        treatment = case_when(cond == "treat" ~ 1, TRUE ~ 0),
+        women_pool = case_when(pool == "women" ~ 1, TRUE ~ 0),
+        # If choice-7 is missing, code as woman (1)
+        female_pick = case_when(
+          is.na(`choice-7`) ~ 1,
+          `choice-7` %in% women ~ 1,
+          TRUE ~ 0
+        )
+      )
+
+    model_dropout_woman <- lm(female_pick ~ treatment * women_pool, data = d0_dropout_woman)
+    cat("Model: female_pick ~ treatment * women_pool\n\n")
+    robust_summary(model_dropout_woman)
+    robust_confint(model_dropout_woman)
+
+  } else {
+    cat("No dropouts detected after assignment to condition.\n")
+    cat("Sensitivity analyses not needed.\n")
+  }
 } else {
-  cat("None of the individual items show significant mediation.\n")
+  cat("Note: Dropout sensitivity analysis requires API data (qual_data).\n")
+  cat("If using CSV mode, please check for dropouts manually.\n")
 }
-
-cat("\n\nSTRONGEST MEDIATORS (by absolute ACME value):\n")
-summary_df$ACME_abs <- abs(sapply(mediation_results, function(x) x$acme))
-top_mediators <- summary_df[order(-summary_df$ACME_abs), ][1:3, ]
-print(top_mediators[, c("Item", "Label", "ACME", "ACME_p", "Sig")], row.names = FALSE)
 ```
-
-\newpage
