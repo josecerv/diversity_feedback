@@ -362,8 +362,8 @@ year_est <- extract_regression_estimates(r_year)
 duration_est <- extract_regression_estimates(r_duration)
 
 # Combine into a data frame
-study2B_estimates <- data.frame(
-    Study = "STUDY 2B",
+study2A_estimates <- data.frame(
+    Study = "STUDY 2A",
     Stimuli = c("race", "budget", "year", "duration"),
     Estimate = c(race_est$estimate, budget_est$estimate, year_est$estimate, duration_est$estimate),
     SE = c(race_est$se, budget_est$se, year_est$se, duration_est$se),
@@ -372,7 +372,7 @@ study2B_estimates <- data.frame(
 )
 
 # Save the estimates to an RDS file
-#saveRDS(study2B_estimates, file = "../Manuscript_Figures/figure3-estimates/study2B_estimates.rds")
+saveRDS(study2A_estimates, file = "../Manuscript_Figures/figure4-estimates/study2A_estimates.rds")
 
 ```
 
@@ -383,57 +383,57 @@ study2B_estimates <- data.frame(
 ```{r echo=TRUE}
 ##### race
 
-d_race_plot <- d0 |> 
-  select(race_feedback, race_pick) |> 
-  group_by(race_feedback) |> 
+d_race_plot <- d0 |>
+  dplyr::select(race_feedback, race_pick) |>
+  group_by(race_feedback) |>
   dplyr::summarise(
-    n = n(),  
-    freq = mean(race_pick),  
-    sd = sd(race_pick) * 100, 
-    se = (sd(race_pick) / sqrt(n())) * 100  
-  ) |> 
+    n = n(),
+    freq = mean(race_pick),
+    sd = sd(race_pick) * 100,
+    se = (sd(race_pick) / sqrt(n())) * 100
+  ) |>
   mutate(race_feedback = case_when(race_feedback==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = race_feedback)
 
 ##### budget
 
 
-d_budget_plot <- d0 |> 
-  select(budget_shown, budget_pick) |> 
-  group_by(budget_shown) |> 
+d_budget_plot <- d0 |>
+  dplyr::select(budget_shown, budget_pick) |>
+  group_by(budget_shown) |>
   dplyr::summarise(
-    n = n(),  
-    freq = mean(budget_pick),  
-    sd = sd(budget_pick) * 100, 
-    se = (sd(budget_pick) / sqrt(n())) * 100  
-  ) |> 
+    n = n(),
+    freq = mean(budget_pick),
+    sd = sd(budget_pick) * 100,
+    se = (sd(budget_pick) / sqrt(n())) * 100
+  ) |>
   mutate(budget_shown = case_when(budget_shown==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = budget_shown)
 
 
 ##### year
 
-d_year_plot <- d0 |> 
-  select(year_shown, year_pick) |> 
-  group_by(year_shown) |> 
+d_year_plot <- d0 |>
+  dplyr::select(year_shown, year_pick) |>
+  group_by(year_shown) |>
   dplyr::summarise(
-    n = n(),  
-    freq = mean(year_pick),  
-    sd = sd(year_pick) * 100, 
-    se = (sd(year_pick) / sqrt(n())) * 100  
-  ) |> 
+    n = n(),
+    freq = mean(year_pick),
+    sd = sd(year_pick) * 100,
+    se = (sd(year_pick) / sqrt(n())) * 100
+  ) |>
   mutate(year_shown = case_when(year_shown==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = year_shown)
 
 
 #### duration
 
 
-d_duration_plot <- d0 |> 
-  select(duration_shown, duration_pick) |> 
+d_duration_plot <- d0 |>
+  dplyr::select(duration_shown, duration_pick) |> 
   group_by(duration_shown) |> 
   dplyr::summarise(
     n = n(),  
@@ -474,7 +474,7 @@ p_combined_B <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Cond
             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 12, yend = freq*100 + se + 12, label = "+"),
             inherit.aes = FALSE, vjust = 0, size = 7) +
   theme_bw() +
-  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of films that were...", y = "% of Final Films Selected with the Target Attribute",
@@ -500,10 +500,12 @@ p_combined_B <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Cond
         strip.text = element_text(size = 20, color = "black", family = "Times New Roman"),
         strip.background = element_rect(colour = "white", fill = "white"))
 
-#p_combined_B
-# Save the plot as an R object so we can re-load it later
-#saveRDS(p_combined_B, file = "p_combined_B.rds")
+print(p_combined_B)
 
+# Save the plot
+ggsave("Figure-Study2A.pdf", plot = p_combined_B, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("Figure-Study2A.png", plot = p_combined_B, width = 10, height = 8, units = "in", dpi = 600)
+saveRDS(p_combined_B, file = "p_combined_B.rds")
 
 ```
 

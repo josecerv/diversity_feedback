@@ -547,10 +547,10 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
              aes(x = 1.5, y = freq*100 + se + 7, label = sig_label),
              inherit.aes = FALSE, vjust = 0, size = 5) +
   theme_bw() +
-  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
-  labs(x = "Feedback on % of AI experts who...", y = "% of Selected Experts with the Target Attribute",
+  labs(x = "Feedback on % of experts who...", y = "% of Selected Experts with the Target Attribute",
        title = "The Effect of Getting Feedback on Your AI Expert Selections") +
   theme(plot.caption = element_text(face = "italic"),
         legend.position = c(0.5, 0.95),
@@ -577,6 +577,7 @@ print(p_combined)
 
 # Save the plot
 ggsave("Figure-Study1.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("Figure-Study1.png", plot = p_combined, width = 10, height = 8, units = "in", dpi = 600)
 ```
 
 \newpage

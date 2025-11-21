@@ -352,7 +352,7 @@ study5_estimates <- data.frame(
 )
 
 # Save the estimates to an RDS file
-saveRDS(study5_estimates, file = "../Manuscript_Figures/figure3-estimates/study5_estimates.rds")
+saveRDS(study5_estimates, file = "../Manuscript_Figures/figure4-estimates/study5_estimates.rds")
 
 ```
 
@@ -449,7 +449,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"),
             inherit.aes = FALSE, vjust = 0, family = "Times New Roman", size = 6) +
   theme_bw() +
-  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of biographies that...", y = "% of Final Biographies with the Target Attribute",
@@ -475,10 +475,11 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         axis.text.y = element_text(size = 16, color = "black", family = "Times New Roman"),
         strip.text = element_text(size = 16, color = "black", family = "Times New Roman"),
         strip.background = element_rect(colour = "white", fill = "white"))
+print(p_combined)
 
-
-# Save the plot with Times New Roman font
-ggsave("../Manuscript_Figures/Figure-6.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+# Save the plot
+ggsave("Figure-Study5.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("Figure-Study5.png", plot = p_combined, width = 10, height = 8, units = "in", dpi = 600)
 
 ```
 

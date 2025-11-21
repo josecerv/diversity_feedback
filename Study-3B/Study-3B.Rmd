@@ -560,7 +560,7 @@ print(party_means)
 p_party_interaction <- ggplot(party_means, aes(x = poli_party, y = mean_female_pick * 100,
                                                 fill = factor(gender_feedback))) +
   geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.7) +
-  scale_fill_manual(values = c("0" = "#990000", "1" = "#011F5B"),
+  scale_fill_manual(values = c("0" = "#011F5B", "1" = "#990000"),
                     labels = c("0" = "Control", "1" = "Gender Feedback")) +
   labs(x = "Political Party",
        y = "% Selecting Female Author",
@@ -609,8 +609,8 @@ classic_est <- extract_regression_estimates(r_classic)
 sold30m_est <- extract_regression_estimates(r_sold30m)
 forms_est <- extract_regression_estimates(r_forms)
 
-study3A_estimates <- data.frame(
-    Study = "STUDY 3A",
+study3B_estimates <- data.frame(
+    Study = "STUDY 3B",
     Stimuli = c("gender", "classic", "sold30m", "forms"),
     Estimate = c(gender_est$estimate, classic_est$estimate, sold30m_est$estimate, forms_est$estimate),
     SE = c(gender_est$se, classic_est$se, sold30m_est$se, forms_est$se),
@@ -619,7 +619,7 @@ study3A_estimates <- data.frame(
 )
 
 # Save the estimates to an RDS file
-saveRDS(study3A_estimates, file = "study3A_estimates.rds")
+saveRDS(study3B_estimates, file = "../Manuscript_Figures/figure4-estimates/study3B_estimates.rds")
 
 ```
 
@@ -838,7 +838,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
              aes(x = 1.5, y = freq*100 + se + 7, label = sig_label),
              inherit.aes = FALSE, vjust = 0, size = 5) +
   theme_bw() +
-  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of authors who...", y = "% of New Authors with the Target Attribute",title = "The Effect of Getting Feedback on Your Author Selections") +
@@ -863,9 +863,11 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         strip.text = element_text(size = 20, color = "black"),
         strip.background = element_rect(colour = "white", fill = "white"))
 
-#p_combined
-# Save the plot with Times New Roman font
-ggsave("Figure-S1.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+print(p_combined)
+
+# Save the plot
+ggsave("Figure-Study3B.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("Figure-Study3B.png", plot = p_combined, width = 10, height = 8, units = "in", dpi = 600)
 ```
 
 

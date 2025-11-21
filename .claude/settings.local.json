@@ -21,7 +21,10 @@
       "Bash(md5sum:*)",
       "Bash(cat:*)",
       "Bash(grep:*)",
-      "Bash(tee:*)"
+      "Bash(tee:*)",
+      "Bash(git rm:*)",
+      "Bash(nul)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []

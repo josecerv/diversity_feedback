@@ -157,8 +157,8 @@ if(USE_API) {
                              TRUE ~ 0),
       gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
       race_code = case_when(race=="White / Caucasian" ~ 1, TRUE ~ 0),
-      base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% women))) |> 
-    select(gender_feedback:poli_pick, gender, base_gender, `choice-1`:`choice-7`, race,age, gender_code, race_code) |> 
+      base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% women))) |>
+    dplyr::select(gender_feedback:poli_pick, gender, base_gender, `choice-1`:`choice-7`, race,age, gender_code, race_code) |>
     slice(1:1000) # pre-registered sample size
   
   # Calculate the number of excluded participants
@@ -367,8 +367,8 @@ year_est <- extract_regression_estimates(r_year)
 poli_est <- extract_regression_estimates(r_poli)
 
 # Combine into a data frame
-study2A_estimates <- data.frame(
-    Study = "STUDY 2A",
+study2B_estimates <- data.frame(
+    Study = "STUDY 2B",
     Stimuli = c("gender", "budget", "year", "political"),
     Estimate = c(gender_est$estimate, budget_est$estimate, year_est$estimate, poli_est$estimate),
     SE = c(gender_est$se, budget_est$se, year_est$se, poli_est$se),
@@ -377,7 +377,7 @@ study2A_estimates <- data.frame(
 )
 
 # Save the estimates to an RDS file
-saveRDS(study2A_estimates, file = "../Manuscript_Figures/figure3-estimates/study2A_estimates.rds")
+saveRDS(study2B_estimates, file = "../Manuscript_Figures/figure4-estimates/study2B_estimates.rds")
 
 ```
 
@@ -386,57 +386,57 @@ saveRDS(study2A_estimates, file = "../Manuscript_Figures/figure3-estimates/study
 ```{r echo=TRUE}
 ##### female
 
-dfemale_plot <- d0 |> 
-  select(gender_feedback, female_pick) |> 
-  group_by(gender_feedback) |> 
+dfemale_plot <- d0 |>
+  dplyr::select(gender_feedback, female_pick) |>
+  group_by(gender_feedback) |>
   dplyr::summarise(
-    n = n(),  
-    freq = mean(female_pick),  
-    sd = sd(female_pick) * 100, 
-    se = (sd(female_pick) / sqrt(n())) * 100  
-  ) |> 
+    n = n(),
+    freq = mean(female_pick),
+    sd = sd(female_pick) * 100,
+    se = (sd(female_pick) / sqrt(n())) * 100
+  ) |>
   mutate(gender_feedback = case_when(gender_feedback==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = gender_feedback)
 
 ##### budget
 
 
-dbudget_plot <- d0 |> 
-  select(budget_shown, budget_pick) |> 
-  group_by(budget_shown) |> 
+dbudget_plot <- d0 |>
+  dplyr::select(budget_shown, budget_pick) |>
+  group_by(budget_shown) |>
   dplyr::summarise(
-    n = n(),  
-    freq = mean(budget_pick),  
-    sd = sd(budget_pick) * 100, 
-    se = (sd(budget_pick) / sqrt(n())) * 100  
-  ) |> 
+    n = n(),
+    freq = mean(budget_pick),
+    sd = sd(budget_pick) * 100,
+    se = (sd(budget_pick) / sqrt(n())) * 100
+  ) |>
   mutate(budget_shown = case_when(budget_shown==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = budget_shown)
 
 
 ##### year
 
-dyear_plot <- d0 |> 
-  select(year_shown, year_pick) |> 
-  group_by(year_shown) |> 
+dyear_plot <- d0 |>
+  dplyr::select(year_shown, year_pick) |>
+  group_by(year_shown) |>
   dplyr::summarise(
-    n = n(),  
-    freq = mean(year_pick),  
-    sd = sd(year_pick) * 100, 
-    se = (sd(year_pick) / sqrt(n())) * 100  
-  ) |> 
+    n = n(),
+    freq = mean(year_pick),
+    sd = sd(year_pick) * 100,
+    se = (sd(year_pick) / sqrt(n())) * 100
+  ) |>
   mutate(year_shown = case_when(year_shown==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = year_shown)
 
 
 #### political leader
 
 
-dpoli_plot <- d0 |> 
-  select(poli_shown, poli_pick) |> 
+dpoli_plot <- d0 |>
+  dplyr::select(poli_shown, poli_pick) |> 
   group_by(poli_shown) |> 
   dplyr::summarise(
     n = n(),  
@@ -479,7 +479,7 @@ p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq * 100, fill = Co
             aes(x = 1.5, y = freq * 100 + se + 9, label = "***"),
             inherit.aes = FALSE, vjust = 0, size = 7, family = "Times New Roman") +
   theme_bw() +
-  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x, "%"), limits = c(0, 100)) +
   scale_x_discrete(labels = c("Control" = "Not\nShown", "Treatment" = "Shown")) +
   labs(x = "Feedback on % of films that were...", y = "% of Final Films Selected with the Target Attribute", 
@@ -505,8 +505,11 @@ p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq * 100, fill = Co
         strip.text = element_text(size = 20, color = "black", family = "Times New Roman"),
         strip.background = element_rect(colour = "white", fill = "white"))
   
-#p_combined_A
-# Save the plot as an R object so we can re-load it later
+print(p_combined_A)
+
+# Save the plot
+ggsave("Figure-Study2B.pdf", plot = p_combined_A, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("Figure-Study2B.png", plot = p_combined_A, width = 10, height = 8, units = "in", dpi = 600)
 saveRDS(p_combined_A, file = "p_combined_A.rds")
 
 ```

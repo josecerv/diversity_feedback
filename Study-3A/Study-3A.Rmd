@@ -450,7 +450,7 @@ oldies_est <- extract_regression_estimates(r_oldies)
 poets_est <- extract_regression_estimates(r_poets)
 books_est <- extract_regression_estimates(r_books)
 
-study2B_estimates <- data.frame(
+study3A_estimates <- data.frame(
     Study = "STUDY 3A",
     Stimuli = c("race", "oldies", "poets", "books"),
     Estimate = c(race_est$estimate, oldies_est$estimate, poets_est$estimate, books_est$estimate),
@@ -458,9 +458,9 @@ study2B_estimates <- data.frame(
     CI_Lower = c(race_est$ci_lower, oldies_est$ci_lower, poets_est$ci_lower, books_est$ci_lower),
     CI_Upper = c(race_est$ci_upper, oldies_est$ci_upper, poets_est$ci_upper, books_est$ci_upper)
 )
-getwd()
+
 # Save the estimates to an RDS file
-saveRDS(study2B_estimates, file = "../Manuscript_Figures/figure3-estimates/study3A_estimates.rds")
+saveRDS(study3A_estimates, file = "../Manuscript_Figures/figure4-estimates/study3A_estimates.rds")
 
 ```
 
@@ -672,7 +672,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
              aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
              inherit.aes = FALSE, vjust = 0, size = 5) +
   theme_bw() +
-  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,95)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of authors who...", y = "% of New Authors with the Target Attribute",
@@ -698,9 +698,11 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         strip.text = element_text(size = 20, color = "black"),
         strip.background = element_rect(colour = "white", fill = "white"))
 
-#p_combined
-# Save the plot with Times New Roman font
-# ggsave("../Supplemental Studies/Supplemental_Figures/Figure-S2.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+print(p_combined)
+
+# Save the plot
+ggsave("Figure-Study3A.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("Figure-Study3A.png", plot = p_combined, width = 10, height = 8, units = "in", dpi = 600)
 ```
 
 \newpage
