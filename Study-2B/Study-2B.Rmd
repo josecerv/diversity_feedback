@@ -455,12 +455,12 @@ loadfonts(device = "pdf")
 
 # Your data-binding code
 df_combined <- bind_rows(
-  dbudget_plot %>% mutate(Category = "\nAbove a\n$40M Budget"),
+  dbudget_plot %>% mutate(Category = "\nMade for a\nBudget of >$40M"),
   dyear_plot %>% mutate(Category = "\nReleased After\n2010"),
   dpoli_plot %>% mutate(Category = "\nAbout a\nPolitical leader"),
   dfemale_plot %>% mutate(Category = "\nAbout a \nWoman Protagonist")
 , .id = "id") %>%
-  mutate(Category = factor(Category, levels = c('\nAbove a\n$40M Budget', '\nReleased After\n2010', '\nAbout a\nPolitical leader', '\nAbout a \nWoman Protagonist')))
+  mutate(Category = factor(Category, levels = c('\nMade for a\nBudget of >$40M', '\nReleased After\n2010', '\nAbout a\nPolitical leader', '\nAbout a \nWoman Protagonist')))
 
 # Create the plot
 p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq * 100, fill = Condition)) +
@@ -468,11 +468,11 @@ p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq * 100, fill = Co
   geom_text(aes(label = paste0(sprintf("%.1f", freq * 100), "%")), 
             position = position_dodge(width = 0.7), vjust = 5, size = 7, color = "white", family = "Times New Roman") +
   geom_errorbar(aes(ymin = freq * 100 - se, ymax = freq * 100 + se), width = .1, position = position_dodge(width = 0.7)) +
-  facet_wrap(~factor(Category, c('\nAbove a\n$40M Budget', '\nReleased After\n2010', '\nAbout a\nPolitical leader', '\nAbout a \nWoman Protagonist')), nrow = 1, strip.position = "bottom") +
+  facet_wrap(~factor(Category, c('\nMade for a\nBudget of >$40M', '\nReleased After\n2010', '\nAbout a\nPolitical leader', '\nAbout a \nWoman Protagonist')), nrow = 1, strip.position = "bottom") +
   geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""),
                aes(x = 1, xend = 2, y = freq * 100 + se + 7, yend = freq * 100 + se + 7),
                inherit.aes = FALSE) +
-  geom_text(data = df_combined %>% filter(Category %in% c('\nAbove a\n$40M Budget', '\nReleased After\n2010', '\nAbout a\nPolitical leader') & Condition == "\"Treatment\""),
+  geom_text(data = df_combined %>% filter(Category %in% c('\nMade for a\nBudget of >$40M', '\nReleased After\n2010', '\nAbout a\nPolitical leader') & Condition == "\"Treatment\""),
             aes(x = 1.5, y = freq * 100 + se + 9, label = "n.s."),
             inherit.aes = FALSE, vjust = 0, size = 7, family = "Times New Roman") +
   geom_text(data = df_combined %>% filter(Category == '\nAbout a \nWoman Protagonist' & Condition == "\"Treatment\""),

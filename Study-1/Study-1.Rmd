@@ -527,12 +527,12 @@ duniversity_plot <- d0 |>
 ## Combine plots
 
 df_combined <- bind_rows(
-  dage_plot %>% mutate(Category = "\nUnder 50\nYears Old", sig_label = sig_age),
-  dlocation_plot %>% mutate(Category = "\nBased on\nWest Coast", sig_label = sig_location),
-  duniversity_plot %>% mutate(Category = "\nWork at a\nUniversity", sig_label = sig_university),
-  dwomen_plot %>% mutate(Category = "\nWere Women", sig_label = sig_women)
+  dage_plot %>% mutate(Category = "\n<50 Years Old", sig_label = sig_age),
+  dlocation_plot %>% mutate(Category = "\nBased on the\nWest Coast\nof the U.S.", sig_label = sig_location),
+  duniversity_plot %>% mutate(Category = "\nEmployed at\na University", sig_label = sig_university),
+  dwomen_plot %>% mutate(Category = "\nWomen", sig_label = sig_women)
 , .id = "id") %>%
-  mutate(Category = factor(Category, levels = c('\nUnder 50\nYears Old', '\nBased on\nWest Coast', '\nWork at a\nUniversity', '\nWere Women')))
+  mutate(Category = factor(Category, levels = c('\n<50 Years Old', '\nBased on the\nWest Coast\nof the U.S.', '\nEmployed at\na University', '\nWomen')))
 
 p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
   geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
@@ -550,7 +550,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
   scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
-  labs(x = "Feedback on % of experts who...", y = "% of Selected Experts with the Target Attribute",
+  labs(x = "Feedback on % of Experts Who Were...", y = "% of Selected Experts with the Target Attribute",
        title = "The Effect of Getting Feedback on Your AI Expert Selections") +
   theme(plot.caption = element_text(face = "italic"),
         legend.position = c(0.5, 0.95),
@@ -564,7 +564,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         panel.border = element_rect(fill= NA, color = "white"),
         plot.background = element_rect(fill = "white"),
         panel.background = element_rect(fill = "white"),
-        axis.title.x = element_text(face="bold", size = 21, vjust = 17),
+        axis.title.x = element_text(face="bold", size = 21, vjust = 22),
         plot.title = element_blank(),
         axis.title.y = element_text(size = 20, color = "black"),
         axis.text.x = element_blank(),
@@ -576,8 +576,8 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
 print(p_combined)
 
 # Save the plot
-ggsave("Figure-Study1.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
-ggsave("Figure-Study1.png", plot = p_combined, width = 10, height = 8, units = "in", dpi = 600)
+ggsave("Figure-Study1.pdf", plot = p_combined, width = 10, height = 9, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("Figure-Study1.png", plot = p_combined, width = 10, height = 9, units = "in", dpi = 600)
 ```
 
 \newpage

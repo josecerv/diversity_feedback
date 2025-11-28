@@ -577,10 +577,10 @@ dwomen_plot <- d0 %>%
 
 # Combine into single dataframe
 df_combined <- bind_rows(
-  dmen_plot %>% mutate(Category = "Women Underrepresented\n(Men Pool)"),
-  dwomen_plot %>% mutate(Category = "Women Overrepresented\n(Women Pool)")
+  dmen_plot %>% mutate(Category = "Women Underrepresented\nin Candidate Set"),
+  dwomen_plot %>% mutate(Category = "Women Overrepresented\nin Candidate Set")
 , .id = "id") %>%
-  mutate(Category = factor(Category, levels = c('Women Underrepresented\n(Men Pool)', 'Women Overrepresented\n(Women Pool)')))
+  mutate(Category = factor(Category, levels = c('Women Underrepresented\nin Candidate Set', 'Women Overrepresented\nin Candidate Set')))
 
 # Create combined plot
 p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
@@ -589,16 +589,16 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
             position=position_dodge(width=0.7), vjust=5, size = 7, color = "white") +
   geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
   facet_wrap(~Category, nrow = 1, strip.position = "bottom") +
-  geom_segment(data = df_combined %>% filter(Category == "Women Underrepresented\n(Men Pool)" & Condition == "Treatment"),
+  geom_segment(data = df_combined %>% filter(Category == "Women Underrepresented\nin Candidate Set" & Condition == "Treatment"),
                 aes(x = 1, xend = 2, y = freq*100 + se + 10, yend = freq*100 + se + 10),
                 inherit.aes = FALSE) +
-  geom_segment(data = df_combined %>% filter(Category == "Women Overrepresented\n(Women Pool)" & Condition == "Control"),
+  geom_segment(data = df_combined %>% filter(Category == "Women Overrepresented\nin Candidate Set" & Condition == "Control"),
                 aes(x = 1, xend = 2, y = freq*100 + se + 10, yend = freq*100 + se + 10),
                 inherit.aes = FALSE) +
-  geom_text(data = df_combined %>% filter(Category == "Women Underrepresented\n(Men Pool)" & Condition == "Treatment"),
+  geom_text(data = df_combined %>% filter(Category == "Women Underrepresented\nin Candidate Set" & Condition == "Treatment"),
                 aes(x = 1.5, y = freq*100 + se + 10, label = sig_men),
                 inherit.aes = FALSE, vjust = 0, size = 7) +
-  geom_text(data = df_combined %>% filter(Category == "Women Overrepresented\n(Women Pool)" & Condition == "Control"),
+  geom_text(data = df_combined %>% filter(Category == "Women Overrepresented\nin Candidate Set" & Condition == "Control"),
                 aes(x = 1.5, y = freq*100 + se + 10, label = sig_women),
                 inherit.aes = FALSE, vjust = 0, size = 7) +
   theme_bw() +

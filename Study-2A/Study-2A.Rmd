@@ -448,23 +448,23 @@ d_duration_plot <- d0 |>
 ## Combine plots
 
 df_combined <- bind_rows(
-  d_budget_plot %>% mutate(Category = "\nAbove a\n$40M Budget"),
+  d_budget_plot %>% mutate(Category = "\nMade for a\nBudget of >$40M"),
   d_year_plot %>% mutate(Category = "\nReleased After\n2010"),
   d_duration_plot %>% mutate(Category = "\nOver Two Hours"),
   d_race_plot %>% mutate(Category = "\nAbout a Racial\nMinority Protagonist")
-, .id = "id") %>% 
-  mutate(Category = factor(Category, levels = c('\nAbove a\n$40M Budget', '\nReleased After\n2010', '\nOver Two Hours', '\nAbout a Racial\nMinority Protagonist')))
+, .id = "id") %>%
+  mutate(Category = factor(Category, levels = c('\nMade for a\nBudget of >$40M', '\nReleased After\n2010', '\nOver Two Hours', '\nAbout a Racial\nMinority Protagonist')))
 
 p_combined_B <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
   geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
   geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")), 
             position=position_dodge(width=0.7), vjust=3, size = 7, color = "white", family = "Times New Roman") +
   geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
-  facet_wrap(~factor(Category, c('\nAbove a\n$40M Budget', '\nReleased After\n2010', '\nOver Two Hours', '\nAbout a Racial\nMinority Protagonist')), nrow = 1, strip.position = "bottom") +
+  facet_wrap(~factor(Category, c('\nMade for a\nBudget of >$40M', '\nReleased After\n2010', '\nOver Two Hours', '\nAbout a Racial\nMinority Protagonist')), nrow = 1, strip.position = "bottom") +
   geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""),
                aes(x = 1, xend = 2, y = freq*100 + se + 10, yend = freq*100 + se + 10),
                inherit.aes = FALSE) +
-  geom_text(data = df_combined %>% filter(Category %in% c('\nAbove a\n$40M Budget',  '\nReleased After\n2010') & Condition == "\"Treatment\""),
+  geom_text(data = df_combined %>% filter(Category %in% c('\nMade for a\nBudget of >$40M',  '\nReleased After\n2010') & Condition == "\"Treatment\""),
             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 12, yend = freq*100 + se + 12, label = "n.s."),
             inherit.aes = FALSE, vjust = 0, size = 7) +
   geom_text(data = df_combined %>% filter(Category %in% c('\nAbout a Racial\nMinority Protagonist') & Condition == "\"Treatment\""),
