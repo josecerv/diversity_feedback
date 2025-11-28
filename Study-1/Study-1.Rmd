@@ -586,61 +586,43 @@ ggsave("Figure-Study1.png", plot = p_combined, width = 10, height = 9, units = "
 
 ```{r echo=FALSE, results='markup'}
 
-# Age
-age.eqn <- list(
-  ageeq = as.numeric(age_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1,
-  womeneq = as.numeric(women_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1
+# Fit a single SUR system with all four equations
+# Each equation predicts its own proportion from its own feedback
+sur.eqn <- list(
+  womeneq = women_proportion ~ women_feedback + set_num,
+  ageeq = age_proportion ~ age_feedback + set_num,
+  locationeq = location_proportion ~ location_feedback + set_num,
+  universityeq = university_proportion ~ university_feedback + set_num
 )
 
-# Define restriction matrix
-restrict_age <- "ageeq_age_feedback - womeneq_women_feedback = 0"
+# Fit the system using SUR (accounts for cross-equation error correlation)
+sur_model <- systemfit(sur.eqn, method = "SUR", data = d0)
 
-# Fit the system of equations with the restriction
-unrestricted_age <- systemfit(age.eqn, data=d0)
+# Display SUR coefficients (should match individual OLS closely)
+cat("SUR Model Coefficients:\n")
+cat("=======================\n")
+cat("Women feedback effect:", round(coef(sur_model)["womeneq_women_feedback"], 4), "\n")
+cat("Age feedback effect:", round(coef(sur_model)["ageeq_age_feedback"], 4), "\n")
+cat("Location feedback effect:", round(coef(sur_model)["locationeq_location_feedback"], 4), "\n")
+cat("University feedback effect:", round(coef(sur_model)["universityeq_university_feedback"], 4), "\n")
 
-# Location
-location.eqn <- list(
-  locationeq = as.numeric(location_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1,
-  womeneq = as.numeric(women_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1
-)
-
-# Define restriction matrix
-restrict_location <- "locationeq_location_feedback - womeneq_women_feedback = 0"
-
-# Fit the system of equations with the restriction
-unrestricted_location <- systemfit(location.eqn, data=d0)
-
-# University
-university.eqn <- list(
-  universityeq = as.numeric(university_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1,
-  womeneq = as.numeric(women_proportion) ~ women_feedback + age_feedback + location_feedback + university_feedback + set_num - 1
-)
-
-# Define restriction matrix
-restrict_university <- "universityeq_university_feedback - womeneq_women_feedback = 0"
-
-# Fit the system of equations with the restriction
-unrestricted_university <- systemfit(university.eqn, data=d0)
-
-
-# Wald tests
-# Run linear hypothesis tests
-cat("Wald Tests for Cross-Equation Comparisons:\n")
+# Wald tests for cross-equation comparisons
+cat("\n\nWald Tests for Cross-Equation Comparisons:\n")
 cat("==========================================\n\n")
 
 cat("Test 1: Women Feedback Effect vs. Age Feedback Effect\n")
 cat("------------------------------------------------------\n")
-lh_result_age = linearHypothesis(unrestricted_age, restrict_age)
+lh_result_age <- linearHypothesis(sur_model, "womeneq_women_feedback - ageeq_age_feedback = 0")
 print(lh_result_age)
 
 cat("\n\nTest 2: Women Feedback Effect vs. Location Feedback Effect\n")
 cat("-----------------------------------------------------------\n")
-lh_result_location = linearHypothesis(unrestricted_location, restrict_location)
+lh_result_location <- linearHypothesis(sur_model, "womeneq_women_feedback - locationeq_location_feedback = 0")
 print(lh_result_location)
 
 cat("\n\nTest 3: Women Feedback Effect vs. University Feedback Effect\n")
 cat("-------------------------------------------------------------\n")
-lh_result_university = linearHypothesis(unrestricted_university, restrict_university)
+lh_result_university <- linearHypothesis(sur_model, "womeneq_women_feedback - universityeq_university_feedback = 0")
 print(lh_result_university)
 
 # Collecting F-statistics (Wald test statistics)
@@ -649,9 +631,9 @@ location_fstat <- lh_result_location$F[2]
 university_fstat <- lh_result_university$F[2]
 
 # Extracting p-values
-p_value_age = lh_result_age$`Pr(>F)`[2]
-p_value_location = lh_result_location$`Pr(>F)`[2]
-p_value_university = lh_result_university$`Pr(>F)`[2]
+p_value_age <- lh_result_age$`Pr(>F)`[2]
+p_value_location <- lh_result_location$`Pr(>F)`[2]
+p_value_university <- lh_result_university$`Pr(>F)`[2]
 
 # Summary table
 cat("\n\nSummary of Wald Tests:\n")
