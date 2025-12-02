@@ -2,7 +2,7 @@
 title: "Study 3B"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
-  pdf_document:
+  pdf_document: 
     toc: yes
     toc_depth: 2
     fig_caption: true
@@ -29,16 +29,12 @@ library(broom)
 library(qualtRics)
 library(knitr)
 library(rmarkdown)
-library(tidyverse)
-library(psych)
-library(mediation)
+library(ggplot2)
+library(grid)
+library(extrafont)
 ```
 
 ```{r include=FALSE}
-qualtrics_api_credentials(api_key = "BJ6aDiEgtQihneCgtZycVLYjaj0ao9gYkdRkb1UZ",
-                          base_url = "yul1.qualtrics.com",
-                          install = F,
-                          overwrite = T)
 if ( (!is.null(knitr::current_input()))) {
   if (("pdf_document" ==
                 rmarkdown::all_output_formats(knitr::current_input())[1])) {
@@ -89,13 +85,13 @@ extract_regression_estimates <- function(model) {
   rob_sum <- robust_summary(model)
   # Get robust confidence intervals
   rob_ci <- robust_confint(model)
-
+  
   # Extract coefficient for the treatment variable (second row)
   estimate <- rob_sum$coefficients[2, "Estimate"] * 100  # Convert to percentage points
   se <- rob_sum$coefficients[2, "Std. Error"] * 100
   ci_lower <- rob_ci[2, 1] * 100
   ci_upper <- rob_ci[2, 2] * 100
-
+  
   return(list(
     estimate = estimate,
     se = se,
@@ -103,20 +99,25 @@ extract_regression_estimates <- function(model) {
     ci_upper = ci_upper
   ))
 }
+
+
 ```
 
 \newpage
 
 ## Read Data
 
+
 ```{r echo=TRUE}
 # Set this to TRUE if you have API access, FALSE if using CSV
-USE_API <- T
+USE_API <- FALSE
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
-  qual_data <- fetch_survey(surveyID='SV_8vM8mfohSNgdTxQ',  # New Study ID
-                            start_date = "2025-10-06",
+  qual_data <- fetch_survey(surveyID='SV_3y2GHRkJ8RpoNka',
+                     label = T,
+                     convert = F,
+                     start_date = "2023-10-31",
                      force_request = T)
 } else {
   # Read the processed data directly from CSV
@@ -124,108 +125,48 @@ if(USE_API) {
   num_excluded <- unique(d0$num_excluded_total)
 }
 
-# Define the categories based on the JavaScript feedback code
-women <- c('Zadie Smith', 'Isabel Allende', 'Jane Austen',
-           'Joyce Carol Oates', 'Lucy Maud', 'Sylvia Plath')
-
-multi_genre <- c('Herman Melville', 'Joyce Carol Oates', 'Cormac McCarthy', 'Ray Bradbury',
-                 'Kurt Vonnegut', 'George Orwell', 'Isabel Allende', 'Gabriel Garcia Marquez',
-                 'Lucy Maud', 'Neil Gaiman', 'J.R.R. Tolkien')
-
-sold_30m <- c('Charles Dickens', 'Gabriel Garcia Marquez', 'George Orwell', 'Isabel Allende',
-              'J.D. Salinger', 'J.R.R. Tolkien', 'Lucy Maud', 'F. Scott Fitzgerald')
-
-classic_50plus <- c('Jane Austen', 'Charles Dickens', 'Herman Melville', 'Nathaniel Hawthorne',
-                    'Jack London', 'J.D. Salinger', 'F. Scott Fitzgerald', 'Ernest Hemingway',
-                    'John Steinbeck', 'George Orwell', 'J.R.R. Tolkien', 'Lucy Maud',
-                    'Ray Bradbury', 'Kurt Vonnegut', 'Gabriel Garcia Marquez',
-                    'Michael Crichton', 'Sylvia Plath')
+# Define movie categories
+women <- c('On The Basis of Sex', 'Marie Antoinette', 'The Iron Lady', 'Judy', 'Coco Before Chanel', 'Rooney')
+budget <- c('Oppenheimer', 'Moneyball', 'JFK', 'Braveheart', 'Lincoln', 'A Beautiful Mind', 'The Aviator', 'Marie Antoinette')
+year <- c('A Beautiful Day in the Neighborhood', 'Oppenheimer', 'Moneyball', 'The Imitation Game', 'Tolkien', 'Jobs', 'J. Edgar', 'Hitchcock', 'Lincoln', 'The Darkest Hour', 'Judy', 'The Iron Lady', 'On The Basis of Sex')
+poli <- c('JFK', 'Braveheart', 'J. Edgar', 'Nixon', 'Lincoln', 'W. A Life Misunderstood', 'The Darkest Hour', 'The Iron Lady', 'On The Basis of Sex', 'Marie Antoinette')
 
 if(USE_API) {
-  # Process the API data with new category definitions
-  d0 <- qual_data |>
-    filter(!is.na(`choice-7`), !is.na(PROLIFIC_PID)) |>
+  d0 <- qual_data |> 
+    filter(!is.na(`choice-7`), !is.na(workerId), Finished==1) |> 
     mutate(
-      # Gender feedback detection
-      gender_feedback = as.numeric(grepl("were women", feedbackItem1) |
-                    grepl("were women", feedbackItem2) |
-                    grepl("were women", feedbackItem3)),
-
-      # Attribute feedback detection based on JavaScript code
-      forms_shown = as.numeric(grepl("spanning multiple genres", feedbackItem1) |
-                   grepl("spanning multiple genres", feedbackItem2) |
-                   grepl("spanning multiple genres", feedbackItem3)),
-
-      sold30m_shown = as.numeric(grepl("30M\\+ copies sold", feedbackItem1) |
-                     grepl("30M\\+ copies sold", feedbackItem2) |
-                     grepl("30M\\+ copies sold", feedbackItem3)),
-
-      classic_shown = as.numeric(grepl("remained in continuous print for over 50 years", feedbackItem1) |
-                     grepl("remained in continuous print for over 50 years", feedbackItem2) |
-                     grepl("remained in continuous print for over 50 years", feedbackItem3)),
-
-      # Picks based on categories
-      female_pick = case_when(`choice-7` %in% women ~ 1, TRUE ~ 0),
-      forms_pick = case_when(`choice-7` %in% multi_genre ~ 1, TRUE ~ 0),
-      sold30m_pick = case_when(`choice-7` %in% sold_30m ~ 1, TRUE ~ 0),
-      classic_pick = case_when(`choice-7` %in% classic_50plus ~ 1, TRUE ~ 0),
-
-      # Demographics
+      gender_feedback = as.numeric(grepl("feature a female protagonist", feedbackItem1) |
+                    grepl("feature a female protagonist", feedbackItem2) |
+                    grepl("feature a female protagonist", feedbackItem3)),
+      budget_shown = as.numeric(grepl("had a big budget \\(>\\$40 million\\)", feedbackItem1) |
+                    grepl("had a big budget \\(>\\$40 million\\)", feedbackItem2) |
+                    grepl("had a big budget \\(>\\$40 million\\)", feedbackItem3)),
+      year_shown = as.numeric(grepl("were released after 2010", feedbackItem1) |
+                  grepl("were released after 2010", feedbackItem2) |
+                  grepl("were released after 2010", feedbackItem3)),
+      poli_shown = as.numeric(grepl("feature a political leader", feedbackItem1) |
+                   grepl("feature a political leader", feedbackItem2) |
+                   grepl("feature a political leader", feedbackItem3)),
+      female_pick = case_when(`choice-7` %in% women ~ 1,
+                             TRUE ~ 0),
+      budget_pick = case_when(`choice-7` %in% budget ~ 1,
+                             TRUE ~ 0),
+      year_pick = case_when(`choice-7` %in% year ~ 1,
+                             TRUE ~ 0),
+      poli_pick = case_when(`choice-7` %in% poli ~ 1,
+                             TRUE ~ 0),
       gender_code = case_when(gender=="Man" ~ 1, TRUE ~ 0),
-      race_code = case_when(str_detect(race, "White / Caucasian") ~ 1, TRUE ~ 0),
-
-      # Process political ideology (1-7 scale)
-      poli_numeric = case_when(
-        poli == "1Extremely liberal" ~ 1,
-        poli == "2Liberal" ~ 2,
-        poli == "3Slightly liberal" ~ 3,
-        poli == "4Moderate; middle of the road" ~ 4,
-        poli == "5Slightly conservative" ~ 5,
-        poli == "6Conservative" ~ 6,
-        poli == "7Extremely conservative" ~ 7,
-        TRUE ~ NA_integer_
-      ),
-
-      # Center political ideology for interaction
-      poli_centered = poli_numeric - 4,  # Center at moderate (4)
-
-      # Process political party affiliation
-      party_democrat = case_when(poli_party == "Democrat" ~ 1, TRUE ~ 0),
-      party_independent = case_when(poli_party == "Independent" ~ 1, TRUE ~ 0),
-      party_republican = case_when(poli_party == "Republican" ~ 1, TRUE ~ 0),
-
-      base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% women))
-    ) |>
-    mutate(
-      across(c(I1:E3),
-             ~ case_when(
-               . == "Strongly disagree" ~ 1, . == "Disagree" ~ 2, . == "Somewhat disagree" ~ 3,
-               . == "Neither agree nor disagree" ~ 4, . == "Somewhat agree" ~ 5, . == "Agree" ~ 6,
-               . == "Strongly agree" ~ 7, TRUE ~ NA_integer_))) |>
-    mutate(
-      internal1Z = (I1 - mean(I1, na.rm = TRUE)) / sd(I1, na.rm = TRUE),
-      internal2Z = (I2 - mean(I2, na.rm = TRUE)) / sd(I2, na.rm = TRUE),
-      internal3Z = (I3 - mean(I3, na.rm = TRUE)) / sd(I3, na.rm = TRUE),
-      internal4Z = (I4 - mean(I4, na.rm = TRUE)) / sd(I4, na.rm = TRUE),
-      internal = (internal1Z + internal2Z + internal3Z + internal4Z) / 4,
-      external1Z = (E1 - mean(E1, na.rm = TRUE)) / sd(E1, na.rm = TRUE),
-      external2Z = (E2 - mean(E2, na.rm = TRUE)) / sd(E2, na.rm = TRUE),
-      external3Z = (E3 - mean(E3, na.rm = TRUE)) / sd(E3, na.rm = TRUE),
-      external = (external1Z + external2Z + external3Z) / 3
-    ) |>
-    dplyr::select(gender_feedback, forms_shown, sold30m_shown, classic_shown,
-                  female_pick, forms_pick, sold30m_pick, classic_pick, base_gender, `choice-1`:`choice-7`,
-                  race, gender, age, gender_code, race_code, poli, poli_numeric, poli_centered,
-                  poli_party, party_democrat, party_independent, party_republican,
-                  internal1Z:external) |>
+      race_code = case_when(race=="White / Caucasian" ~ 1, TRUE ~ 0),
+      base_gender = rowSums(across(`choice-1`:`choice-6`, ~ . %in% women))) |>
+    dplyr::select(gender_feedback:poli_pick, gender, base_gender, `choice-1`:`choice-7`, race,age, gender_code, race_code) |>
     slice(1:1000) # pre-registered sample size
-
+  
   # Calculate the number of excluded participants
   num_excluded <- nrow(qual_data) - nrow(d0)
 
   # Save num_excluded in d0
   d0$num_excluded_total <- num_excluded  # As a column
-
+    
   # Write the API-pulled data into a CSV file
   write.csv(d0, 'Study3B.csv', row.names = FALSE, quote = TRUE)
 }
@@ -235,25 +176,31 @@ if(USE_API) {
 
 ## Variable Names
 
-\begin{table}[!htbp] \centering
-  \label{tab:variables}
-\begin{tabular}{|l|p{10cm}|}
-\hline
-\textbf{Variable} & \textbf{Description} \\
-\hline
+\begin{table}[!htbp] \centering 
+  \label{tab:variables} 
+\begin{tabular}{|l|p{10cm}|} 
+\hline 
+\textbf{Variable} & \textbf{Description} \\ 
+\hline 
 \texttt{gender\_feedback} & Binary indicator of whether a participant was randomly assigned to gender feedback condition. \\
 \hline
-\texttt{female\_pick} & Binary indicator of whether a participant selected a female author for their seventh selection \\
+\texttt{female\_pick} & Binary indicator of whether a participant selected a biopic with a female protagonist for their seventh selection. \\
 \hline
-\texttt{forms\_pick} & Binary indicator of whether a participant selected an author who wrote in multiple genres for their seventh selection. \\
+\texttt{budget\_shown} & Binary indicator of whether a participant was randomly assigned to receive budget feedback. \\
 \hline
-\texttt{sold30m\_pick} & Binary indicator of whether a participant selected an author with at least one book with 30M+ copies sold for their seventh selection. \\
+\texttt{budget\_pick} & Binary indicator of whether a participant selected a film with a big budget for their seventh selection. \\
 \hline
-\texttt{classic\_pick} & Binary indicator of whether a participant selected an author with a book in print for $50+$ years for their seventh selection. \\
+\texttt{year\_shown} & Binary indicator of whether a participant was randomly assigned to receive film year feedback. \\
 \hline
-\texttt{base\_gender} & Count of the number of female authors selected in the initial six authors. \\
+\texttt{year\_pick} & Binary indicator of whether a participant selected a film released after $2010$ for their seventh selection. \\
 \hline
-\texttt{choice-1 to choice-7} & The selected authors \\
+\texttt{poli\_shown} & Binary indicator of whether a participant was randomly assigned to receive political leader feedback \\
+\hline
+\texttt{poli\_pick} & Binary indicator of whether a participant selected a film with a political protagonist for their seventh selection. \\
+\hline
+\texttt{base\_gender} & Count of the number of films with female protagonists selected in the initial six films. \\
+\hline
+\texttt{choice-1 to choice-7} & The selected films \\
 \hline
 \texttt{gender} & Self-selected gender. \\
 \hline
@@ -261,35 +208,14 @@ if(USE_API) {
 \hline
 \texttt{age} & Self-entered age. \\
 \hline
-\texttt{poli} & Political ideology on 7-point scale (1 = extremely liberal, 7 = extremely conservative). \\
-\hline
-\texttt{poli\_centered} & Centered political ideology (0 = moderate). \\
-\hline
-\texttt{poli\_party} & Political party affiliation (Democrat, Republican, Independent). \\
-\hline
-\texttt{party\_democrat} & Indicator for Democrat party affiliation. \\
-\hline
-\texttt{party\_independent} & Indicator for Independent party affiliation. \\
-\hline
-\texttt{party\_republican} & Indicator for Republican party affiliation (reference category). \\
-\hline
 \texttt{gender\_code} & Dummy code for gender (male = 1). \\
 \hline
 \texttt{race\_code} & Dummy code for race (white = 1). \\
 \hline
-\texttt{internal1Z-4Z} & Individual standardized scale items for Internal Motivation to Respond Without Prejudice. \\
-\hline
-\texttt{external1Z-3Z} & Individual standardized scale items for External Motivation to Respond Without Prejudice. \\
-\hline
-\texttt{internal} & Aggregated scale items for Internal Motivation to Respond Without Prejudice. \\
-\hline
-\texttt{external} & Aggregated scale items for External Motivation to Respond Without Prejudice. \\
-\hline
-\end{tabular}
-\end{table}
+\end{tabular} 
+\end{table} 
 
 \newpage
-
 
 ## Demographics
 
@@ -314,50 +240,21 @@ print(gender_df)
 
 ## Race
 
-
 race_percentages <- round(prop.table(table(d0$race)) * 100, 2)
 
-# Create the final data frame
 race_df <- data.frame(
   Percentage = race_percentages,
   Race = names(race_percentages)
 )[1:2]
 
-# Reorder the columns
 colnames(race_df) <- c("Percentage", "Race")
 
-# Print the data frame
 print(race_df)
 
 ## Age
 
-age_summary <- d0 |>
-  dplyr::select(age) |>
-  summarize(mean_age = mean(age, na.rm = T), sd_age = sd(age, na.rm = T))
-
-age_summary
-
-## Political Ideology
-
-poli_summary <- d0 |>
-  dplyr::select(poli_numeric) |>
-  summarize(mean_poli = mean(poli_numeric, na.rm = T), sd_poli = sd(poli_numeric, na.rm = T))
-
-cat('Mean Political Ideology (1-7 scale): ', round(poli_summary$mean_poli, 2), '\n')
-cat('SD Political Ideology: ', round(poli_summary$sd_poli, 2), '\n')
-
-## Political Party
-
-party_percentages <- round(prop.table(table(d0$poli_party)) * 100, 2)
-
-party_df <- data.frame(
-  Percentage = party_percentages,
-  Party = names(party_percentages)
-)[1:2]
-
-colnames(party_df) <- c("Percentage", "Party")
-
-print(party_df)
+cat('Mean (age): ', round(mean(d0$age), 2))
+cat('SD (age): ',round(sd(d0$age), 2))
 
 ## Initial Selections
 
@@ -369,31 +266,12 @@ cat('SD (num of initial women selected): ',round(sd(d0$base_gender), 2))
 cat('Percentage (initial women selected): ', round(mean(d0$base_gender), 2)/6)
 cat('SD (initial women selected): ',round(sd(d0$base_gender), 2)/6)
 
-d0 |>
-  dplyr::select(base_gender, gender_feedback) |>
-  dplyr::group_by(gender_feedback) |>
+d0 |> 
+  dplyr::select(base_gender, gender_feedback) |> 
+  dplyr::group_by(gender_feedback) |> 
   dplyr::summarize(mean = mean(base_gender/6))
 
 t.test(base_gender/6 ~ gender_feedback, data=d0)
-
-```
-
-\newpage
-
-## Cronbach's Alpha
-
-```{r echo=TRUE, message=FALSE, results='markup'}
-# Calculating Cronbach's Alpha for the Internal subscale
-internal_items <- d0[, c("internal1Z", "internal2Z", "internal3Z", "internal4Z")]
-alpha_internal <- alpha(internal_items)
-
-cat("Cronbach's Alpha for Internal Subscale: ", alpha_internal$total$raw_alpha, "\n")
-
-# Calculating Cronbach's Alpha for the External subscale
-external_items <- d0[, c("external1Z", "external2Z", "external3Z")]
-alpha_external <- alpha(external_items)
-cat("Cronbach's Alpha for External Subscale: ", alpha_external$total$raw_alpha, "\n")
-
 ```
 
 \newpage
@@ -404,9 +282,10 @@ cat("Cronbach's Alpha for External Subscale: ", alpha_external$total$raw_alpha, 
 # primary model
 r1 <- lm(female_pick ~ gender_feedback, data=d0)
 
-# Display the summary with robust standard errors
+# robust standard errors
 robust_summary(r1)
 robust_confint(r1)
+
 ```
 
 \newpage
@@ -415,10 +294,10 @@ robust_confint(r1)
 
 ```{r echo=TRUE, results='markup'}
 
-## which feedback was shown with gender, remove constant due to collinearity
-r2 <- lm(female_pick ~ gender_feedback + classic_shown + sold30m_shown + forms_shown - 1, data=d0)
+## which feedback was shown with gender, remove constant due to ollinearity
+r2 <- lm(female_pick ~ gender_feedback + budget_shown + year_shown + poli_shown - 1, data=d0)
 
-# Display the summary with robust standard errors
+# Display the robust_summary with robust standard errors
 robust_summary(r2)
 robust_confint(r2)
 
@@ -426,22 +305,50 @@ robust_confint(r2)
 
 r3 <- lm(female_pick ~ gender_feedback + gender_code + race_code + age, data=d0)
 
-# Display the summary with robust standard errors
+# Display the robust_summary with robust standard errors
 robust_summary(r3)
 robust_confint(r3)
 
 ## logistic regression
 # Fit the logistic regression model
 r4 <- glm(female_pick ~ gender_feedback, family = binomial, data=d0)
-summary(r4)
+
 # Odds ratio
 tidy_r4 <- tidy(r4, exponentiate = TRUE, conf.int = T)
 print(tidy_r4)
+summary(r4)
 ```
 
-## Interaction Analysis
+\newpage
+
+## Secondary Analysis
+
 
 ```{r echo=TRUE, results='markup'}
+## budget feedback
+r_budget <- lm(budget_pick ~ budget_shown, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r_budget)
+robust_confint(r_budget)
+
+
+## year feedback
+r_year <- lm(year_pick ~ year_shown, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r_year)
+robust_confint(r_year)
+
+
+## poli feedback
+r_poli <- lm(poli_pick ~ poli_shown, data=d0)
+
+
+# Display the robust_summary with robust standard errors
+robust_summary(r_poli)
+robust_confint(r_poli)
+
 ## interaction of base gender
 # primary model
 r_interaction <- lm(female_pick ~ gender_feedback*base_gender, data=d0)
@@ -452,170 +359,21 @@ robust_summary(r_interaction)
 
 ```
 
-\newpage
-
-## Moderation by Political Ideology
-
-```{r echo=TRUE, results='markup'}
-# Test for moderation by political ideology
-r_poli_moderation <- lm(female_pick ~ gender_feedback * poli_centered, data=d0)
-
-# Display the summary with robust standard errors
-cat("Moderation by Political Ideology\n")
-robust_summary(r_poli_moderation)
-robust_confint(r_poli_moderation)
-
-# Simple slopes analysis at different levels of political ideology
-# Liberal (1 SD below mean, approximately liberal)
-liberal_slope <- coef(r_poli_moderation)["gender_feedback"] +
-                 coef(r_poli_moderation)["gender_feedback:poli_centered"] * (-2)
-
-# Moderate (at mean, centered = 0)
-moderate_slope <- coef(r_poli_moderation)["gender_feedback"]
-
-# Conservative (1 SD above mean, approximately conservative)
-conservative_slope <- coef(r_poli_moderation)["gender_feedback"] +
-                      coef(r_poli_moderation)["gender_feedback:poli_centered"] * (2)
-
-cat("\n\nSimple Slopes Analysis:\n")
-cat("Effect of gender feedback for liberals (ideology = 2): ", round(liberal_slope * 100, 2), "%\n")
-cat("Effect of gender feedback for moderates (ideology = 4): ", round(moderate_slope * 100, 2), "%\n")
-cat("Effect of gender feedback for conservatives (ideology = 6): ", round(conservative_slope * 100, 2), "%\n")
-
-# Visualization of interaction
-library(ggplot2)
-# Create prediction data
-pred_data <- expand.grid(
-  gender_feedback = c(0, 1),
-  poli_centered = seq(-3, 3, by = 0.5)  # From very liberal to very conservative
-)
-pred_data$female_pick <- predict(r_poli_moderation, newdata = pred_data)
-pred_data$poli_label <- pred_data$poli_centered + 4  # Convert back to 1-7 scale
-
-# Plot interaction
-p_interaction <- ggplot(pred_data, aes(x = poli_label, y = female_pick * 100,
-                                       color = factor(gender_feedback))) +
-  geom_line(size = 1.2) +
-  scale_color_manual(values = c("0" = "#990000", "1" = "#011F5B"),
-                     labels = c("0" = "Control", "1" = "Gender Feedback")) +
-  scale_x_continuous(breaks = 1:7,
-                     labels = c("Extremely\nLiberal", "Liberal", "Slightly\nLiberal",
-                               "Moderate", "Slightly\nConservative", "Conservative",
-                               "Extremely\nConservative")) +
-  labs(x = "Political Ideology",
-       y = "% Selecting Female Author",
-       title = "Moderation by Political Ideology",
-       color = "Condition") +
-  theme_bw() +
-  theme(legend.position = "top",
-        axis.text.x = element_text(angle = 45, hjust = 1))
-
-print(p_interaction)
-```
-
-\newpage
-
-## Moderation by Political Party
-
-```{r echo=TRUE, results='markup'}
-# Test for moderation by political party affiliation
-# Republican is the reference category
-r_party_moderation <- lm(female_pick ~ gender_feedback * party_democrat +
-                                      gender_feedback * party_independent, data=d0)
-
-# Display the summary with robust standard errors
-cat("Moderation by Political Party Affiliation\n")
-robust_summary(r_party_moderation)
-robust_confint(r_party_moderation)
-
-# Simple effects analysis for each party
-# Effect for Republicans (reference category)
-republican_effect <- coef(r_party_moderation)["gender_feedback"]
-
-# Effect for Democrats
-democrat_effect <- coef(r_party_moderation)["gender_feedback"] +
-                   coef(r_party_moderation)["gender_feedback:party_democrat"]
-
-# Effect for Independents
-independent_effect <- coef(r_party_moderation)["gender_feedback"] +
-                      coef(r_party_moderation)["gender_feedback:party_independent"]
-
-cat("\n\nSimple Effects Analysis:\n")
-cat("Effect of gender feedback for Republicans: ", round(republican_effect * 100, 2), "%\n")
-cat("Effect of gender feedback for Democrats: ", round(democrat_effect * 100, 2), "%\n")
-cat("Effect of gender feedback for Independents: ", round(independent_effect * 100, 2), "%\n")
-
-# Compute means for each group and condition
-party_means <- d0 |>
-  group_by(poli_party, gender_feedback) |>
-  summarize(
-    mean_female_pick = mean(female_pick, na.rm = TRUE),
-    n = n()
-  ) |>
-  filter(!is.na(poli_party))
-
-print(party_means)
-
-# Visualization of interaction
-p_party_interaction <- ggplot(party_means, aes(x = poli_party, y = mean_female_pick * 100,
-                                                fill = factor(gender_feedback))) +
-  geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.7) +
-  scale_fill_manual(values = c("0" = "#011F5B", "1" = "#990000"),
-                    labels = c("0" = "Control", "1" = "Gender Feedback")) +
-  labs(x = "Political Party",
-       y = "% Selecting Female Author",
-       title = "Moderation by Political Party Affiliation",
-       fill = "Condition") +
-  theme_bw() +
-  theme(legend.position = "top")
-
-print(p_party_interaction)
-```
-
-\newpage
-
-## Secondary Analysis
-
-```{r}
-## classic feedback
-r_classic <- lm(classic_pick ~ classic_shown, data=d0)
-
-# Display the robust_summary with robust standard errors
-robust_summary(r_classic)
-robust_confint(r_classic)
-
-
-## sold 30M+ copies feedback
-r_sold30m <- lm(sold30m_pick ~ sold30m_shown, data=d0)
-
-# Display the robust_summary with robust standard errors
-robust_summary(r_sold30m)
-robust_confint(r_sold30m)
-
-
-## forms (multi-genre) feedback
-r_forms <- lm(forms_pick ~ forms_shown, data=d0)
-
-# Display the robust_summary with robust standard errors
-robust_summary(r_forms)
-robust_confint(r_forms)
-
-```
-
 ```{r include=FALSE}
 # Extract estimates for overall plot
 gender_est <- extract_regression_estimates(r1)
-classic_est <- extract_regression_estimates(r_classic)
-sold30m_est <- extract_regression_estimates(r_sold30m)
-forms_est <- extract_regression_estimates(r_forms)
+budget_est <- extract_regression_estimates(r_budget)
+year_est <- extract_regression_estimates(r_year)
+poli_est <- extract_regression_estimates(r_poli)
 
+# Combine into a data frame
 study3B_estimates <- data.frame(
-    Study = "STUDY 3B",
-    Stimuli = c("gender", "classic", "sold30m", "forms"),
-    Estimate = c(gender_est$estimate, classic_est$estimate, sold30m_est$estimate, forms_est$estimate),
-    SE = c(gender_est$se, classic_est$se, sold30m_est$se, forms_est$se),
-    CI_Lower = c(gender_est$ci_lower, classic_est$ci_lower, sold30m_est$ci_lower, forms_est$ci_lower),
-    CI_Upper = c(gender_est$ci_upper, classic_est$ci_upper, sold30m_est$ci_upper, forms_est$ci_upper)
+    Study = "STUDY 2B",
+    Stimuli = c("gender", "budget", "year", "political"),
+    Estimate = c(gender_est$estimate, budget_est$estimate, year_est$estimate, poli_est$estimate),
+    SE = c(gender_est$se, budget_est$se, year_est$se, poli_est$se),
+    CI_Lower = c(gender_est$ci_lower, budget_est$ci_lower, year_est$ci_lower, poli_est$ci_lower),
+    CI_Upper = c(gender_est$ci_upper, budget_est$ci_upper, year_est$ci_upper, poli_est$ci_upper)
 )
 
 # Save the estimates to an RDS file
@@ -623,230 +381,114 @@ saveRDS(study3B_estimates, file = "../Manuscript_Figures/figure4-estimates/study
 
 ```
 
-\newpage
-
-
-## Mediation
-
-```{r results='markup'}
-# Set seed for reproducibility
-set.seed(123)
-
-# Define function for Sobel Test
-sobel_test <- function(med.fit, out.fit, mediator) {
-  med.se <- sqrt(diag(vcovHC(med.fit)))[mediator]
-  out.se <- sqrt(diag(vcovHC(out.fit)))[mediator]
-  sobel_test_statistic <- coef(out.fit)[mediator] / sqrt(vcovHC(out.fit)[mediator, mediator])
-  sobel_p_value <- 2 * (1 - pnorm(abs(sobel_test_statistic)))
-  list(statistic = sobel_test_statistic, p_value = sobel_p_value, se = out.se)
-}
-
-# -----------------------------
-# Internal Motivation Analysis
-# -----------------------------
-
-# Direct effect model
-dir.fit.internal <- lm(female_pick ~ gender_feedback, data=d0)
-
-# Mediator model
-med.fit.internal <- lm(internal ~ gender_feedback, data = d0)
-
-# Outcome model including mediator
-out.fit.internal <- lm(female_pick ~ gender_feedback + internal, data = d0)
-
-# Mediation analysis
-med.out.internal <- mediate(med.fit.internal, out.fit.internal, boot = TRUE,
-                            treat = "gender_feedback", boot.ci.type = "perc", mediator = "internal", sims = 10000)
-
-# Sensitivity analysis
-sens.out.internal <- medsens(med.out.internal, rho.by = 0.01, eps=.01, effect.type = "indirect", sims = 10000)
-
-# Sobel test for internal motivation
-sobel.internal <- sobel_test(med.fit.internal, out.fit.internal, "internal")
-
-# Print and visualize results for internal motivation
-cat("Sobel test for Internal Motivation\n")
-print(sobel.internal)
-summary(med.out.internal)
-plot(sens.out.internal)
-
-# -----------------------------
-# External Motivation Analysis
-# -----------------------------
-
-# Mediator model
-med.fit.external <- lm(external ~ gender_feedback, data = d0)
-
-# Outcome model including mediator
-out.fit.external <- lm(female_pick ~ gender_feedback + external, data = d0)
-
-# Mediation analysis
-med.out.external <- mediate(med.fit.external, out.fit.external, boot = TRUE,
-                            treat = "gender_feedback", boot.ci.type = "perc", mediator = "external", sims = 10000)
-
-# Sensitivity analysis
-sens.out.external <- medsens(med.out.external, rho.by = 0.01, eps=.01, effect.type = "indirect", sims = 10000)
-
-# Sobel test for external motivation
-sobel.external <- sobel_test(med.fit.external, out.fit.external, "external")
-
-# Print and visualize results for external motivation
-cat("Sobel test for External Motivation\n")
-print(sobel.external)
-summary(med.out.external)
-plot(sens.out.external)
-
-# ---------------------------------
-# Combined Multiple Mediation Model
-# ---------------------------------
-
-# Compute the correlation coefficient and p-value
-correlation_result <- cor.test(d0$internal, d0$external)
-correlation_coefficient <- correlation_result$estimate
-p_value <- correlation_result$p.value
-
-# Print the results
-cat("Correlation Between Internal and External: ", correlation_coefficient, "\n")
-cat("P-value: ", p_value, "\n")
-
-# Building combined outcome model with both mediators
-out.fit.combined <- lm(female_pick ~ gender_feedback + internal + external, data = d0)
-
-# Run combined mediation analyses
-med.out.combined.internal <- mediate(med.fit.internal, out.fit.combined, boot = TRUE,
-                                     treat = "gender_feedback", boot.ci.type = "perc", mediator = "internal", sims = 10000)
-med.out.combined.external <- mediate(med.fit.external, out.fit.combined, boot = TRUE,
-                                     treat = "gender_feedback", boot.ci.type = "perc", mediator = "external", sims = 10000)
-
-# Summarize and print the results for combined analysis
-cat("Combined Multiple Mediation Model Results\n")
-summary(med.out.combined.internal)
-summary(med.out.combined.external)
-
-
-```
-
-## Figure S1 Code
+## Figure 2A Code
 
 ```{r echo=TRUE}
-
-# Get p-values from regression models
-p_gender <- robust_summary(r1)$coefficients["gender_feedback", "Pr(>|t|)"]
-p_sold30m <- robust_summary(r_sold30m)$coefficients["sold30m_shown", "Pr(>|t|)"]
-p_forms <- robust_summary(r_forms)$coefficients["forms_shown", "Pr(>|t|)"]
-p_classic <- robust_summary(r_classic)$coefficients["classic_shown", "Pr(>|t|)"]
-
-# Function to convert p-value to significance stars
-get_sig_stars <- function(p) {
-  if (p < 0.001) return("***")
-  else if (p < 0.01) return("**")
-  else if (p < 0.05) return("*")
-  else return("n.s.")
-}
-
-# Get significance labels
-sig_gender <- get_sig_stars(p_gender)
-sig_sold30m <- get_sig_stars(p_sold30m)
-sig_forms <- get_sig_stars(p_forms)
-sig_classic <- get_sig_stars(p_classic)
+##### female
 
 dfemale_plot <- d0 |>
   dplyr::select(gender_feedback, female_pick) |>
-  dplyr::group_by(gender_feedback) |>
+  group_by(gender_feedback) |>
   dplyr::summarise(
     n = n(),
     freq = mean(female_pick),
     sd = sd(female_pick) * 100,
     se = (sd(female_pick) / sqrt(n())) * 100
   ) |>
-  dplyr::mutate(
-    gender_feedback = case_when(
-      gender_feedback == 1 ~ "\"Treatment\"",
-      TRUE ~ "\"Control\""
-    )
+  mutate(gender_feedback = case_when(gender_feedback==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |>
+  rename(Condition = gender_feedback)
+
+##### budget
+
+
+dbudget_plot <- d0 |>
+  dplyr::select(budget_shown, budget_pick) |>
+  group_by(budget_shown) |>
+  dplyr::summarise(
+    n = n(),
+    freq = mean(budget_pick),
+    sd = sd(budget_pick) * 100,
+    se = (sd(budget_pick) / sqrt(n())) * 100
   ) |>
-  dplyr::rename(Condition = gender_feedback)
+  mutate(budget_shown = case_when(budget_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |>
+  rename(Condition = budget_shown)
 
 
-##### sold 30M+
+##### year
 
-dsold30m_plot <- d0 |>
-  dplyr::select(sold30m_shown, sold30m_pick) |>
-  dplyr::group_by(sold30m_shown) |>
+dyear_plot <- d0 |>
+  dplyr::select(year_shown, year_pick) |>
+  group_by(year_shown) |>
   dplyr::summarise(
     n = n(),
-    freq = mean(sold30m_pick),
-    sd = sd(sold30m_pick) * 100,
-    se = (sd(sold30m_pick) / sqrt(n())) * 100
-  )|>
-  mutate(sold30m_shown = case_when(sold30m_shown==1 ~ "\"Treatment\"",
+    freq = mean(year_pick),
+    sd = sd(year_pick) * 100,
+    se = (sd(year_pick) / sqrt(n())) * 100
+  ) |>
+  mutate(year_shown = case_when(year_shown==1 ~ "\"Treatment\"",
                           TRUE ~ "\"Control\"")) |>
-  rename(Condition = sold30m_shown)
+  rename(Condition = year_shown)
 
 
-##### forms
+#### political leader
 
-dforms_plot <- d0 |>
-  dplyr::select(forms_shown, forms_pick) |>
-  dplyr::group_by(forms_shown) |>
+
+dpoli_plot <- d0 |>
+  dplyr::select(poli_shown, poli_pick) |> 
+  group_by(poli_shown) |> 
   dplyr::summarise(
-    n = n(),
-    freq = mean(forms_pick),
-    sd = sd(forms_pick) * 100,
-    se = (sd(forms_pick) / sqrt(n())) * 100
-  )|>
-  mutate(forms_shown = case_when(forms_shown==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |>
-  rename(Condition = forms_shown)
-
-
-#### classic
-
-dclassic_plot <- d0 |>
-  dplyr::select(classic_shown, classic_pick) |>
-  dplyr::group_by(classic_shown) |>
-  dplyr::summarise(
-    n = n(),
-    freq = mean(classic_pick),
-    sd = sd(classic_pick) * 100,
-    se = (sd(classic_pick) / sqrt(n())) * 100
-  )|>
-  mutate(classic_shown = case_when(classic_shown==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |>
-  rename(Condition = classic_shown)
+    n = n(),  
+    freq = mean(poli_pick),  
+    sd = sd(poli_pick) * 100, 
+    se = (sd(poli_pick) / sqrt(n())) * 100  
+  ) |> 
+  mutate(poli_shown = case_when(poli_shown==1 ~ "\"Treatment\"",
+                          TRUE ~ "\"Control\"")) |> 
+  rename(Condition = poli_shown)
 
 ## Combine plots
 
-df_combined <- bind_rows(
-  dforms_plot %>% mutate(Category = "\nWrote Multiple\nGenres", sig_label = sig_forms),
-  dsold30m_plot %>% mutate(Category = "\n30M+ Copies\nSold", sig_label = sig_sold30m),
-  dclassic_plot %>% mutate(Category = "\n50+ Years\nin Print", sig_label = sig_classic),
-  dfemale_plot %>% mutate(Category = "\nWere Women", sig_label = sig_gender)
-, .id = "id") %>%
-  mutate(Category = factor(Category, levels = c('\nWrote Multiple\nGenres', '\n30M+ Copies\nSold', '\n50+ Years\nin Print', '\nWere Women')))
+# Load the Times New Roman font
+loadfonts(device = "pdf")
 
-p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
-  geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
-  geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")),
-            position=position_dodge(width=0.7), vjust=5, size = 5, color = "white") +
-  geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
-  facet_wrap(~factor(Category, c('\nWrote Multiple\nGenres', '\n30M+ Copies\nSold', '\n50+ Years\nin Print', '\nWere Women')), nrow = 1, strip.position = "bottom") +
-   geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""),
-                aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5),
-                inherit.aes = FALSE) +
-   geom_text(data = df_combined %>% filter(Condition == "\"Treatment\""),
-             aes(x = 1.5, y = freq*100 + se + 7, label = sig_label),
-             inherit.aes = FALSE, vjust = 0, size = 5) +
+# Your data-binding code
+df_combined <- bind_rows(
+  dbudget_plot %>% mutate(Category = "\nMade for a\nBudget of >$40M"),
+  dyear_plot %>% mutate(Category = "\nReleased After\n2010"),
+  dpoli_plot %>% mutate(Category = "\nAbout a\nPolitical leader"),
+  dfemale_plot %>% mutate(Category = "\nAbout a \nWoman Protagonist")
+, .id = "id") %>%
+  mutate(Category = factor(Category, levels = c('\nMade for a\nBudget of >$40M', '\nReleased After\n2010', '\nAbout a\nPolitical leader', '\nAbout a \nWoman Protagonist')))
+
+# Create the plot
+p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq * 100, fill = Condition)) +
+  geom_bar(stat = "identity", width = 0.85, position = position_dodge(width = 0.7)) +
+  geom_text(aes(label = paste0(sprintf("%.1f", freq * 100), "%")), 
+            position = position_dodge(width = 0.7), vjust = 5, size = 7, color = "white", family = "Times New Roman") +
+  geom_errorbar(aes(ymin = freq * 100 - se, ymax = freq * 100 + se), width = .1, position = position_dodge(width = 0.7)) +
+  facet_wrap(~factor(Category, c('\nMade for a\nBudget of >$40M', '\nReleased After\n2010', '\nAbout a\nPolitical leader', '\nAbout a \nWoman Protagonist')), nrow = 1, strip.position = "bottom") +
+  geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""),
+               aes(x = 1, xend = 2, y = freq * 100 + se + 7, yend = freq * 100 + se + 7),
+               inherit.aes = FALSE) +
+  geom_text(data = df_combined %>% filter(Category %in% c('\nMade for a\nBudget of >$40M', '\nReleased After\n2010', '\nAbout a\nPolitical leader') & Condition == "\"Treatment\""),
+            aes(x = 1.5, y = freq * 100 + se + 9, label = "n.s."),
+            inherit.aes = FALSE, vjust = 0, size = 7, family = "Times New Roman") +
+  geom_text(data = df_combined %>% filter(Category == '\nAbout a \nWoman Protagonist' & Condition == "\"Treatment\""),
+            aes(x = 1.5, y = freq * 100 + se + 9, label = "***"),
+            inherit.aes = FALSE, vjust = 0, size = 7, family = "Times New Roman") +
   theme_bw() +
   scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
-  scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
-  scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
-  labs(x = "Feedback on % of authors who...", y = "% of New Authors with the Target Attribute",title = "The Effect of Getting Feedback on Your Author Selections") +
-  theme(plot.caption = element_text(face = "italic"),
-        legend.position = c(0.5, 0.95),
+  scale_y_continuous(labels = function(x) paste0(x, "%"), limits = c(0, 100)) +
+  scale_x_discrete(labels = c("Control" = "Not\nShown", "Treatment" = "Shown")) +
+  labs(x = "Feedback on % of films that were...", y = "% of Final Films Selected with the Target Attribute", 
+       title = "The Effect of Getting Feedback on Your Biopic Selections") +
+  theme(plot.caption = element_text(face = "italic", family = "Times New Roman"),
+        legend.position = c(0.5, 0.85),
         legend.title = element_blank(),
         legend.direction = "horizontal",
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 20, family = "Times New Roman"),
         legend.key.size = unit(7, 'mm'),
         legend.background = element_rect(fill = "white"),
         panel.grid.minor = element_blank(),
@@ -854,91 +496,98 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         panel.border = element_rect(fill= NA, color = "white"),
         plot.background = element_rect(fill = "white"),
         panel.background = element_rect(fill = "white"),
-        axis.title.x = element_text(face="bold", size = 21, vjust = 17),
+        axis.title.x = element_text(face="bold", size = 22, vjust = 17, family = "Times New Roman"),
         plot.title = element_blank(),
-        axis.title.y = element_text(size = 20, color = "black"),
+        axis.title.y = element_text(size = 20, color = "black", family = "Times New Roman"),
         axis.text.x = element_blank(),
         axis.ticks = element_blank(),
-        axis.text.y = element_text(size = 20, color = "black"),
-        strip.text = element_text(size = 20, color = "black"),
+        axis.text.y = element_text(size = 20, color = "black", family = "Times New Roman"),
+        strip.text = element_text(size = 20, color = "black", family = "Times New Roman"),
         strip.background = element_rect(colour = "white", fill = "white"))
-
-print(p_combined)
+  
+print(p_combined_A)
 
 # Save the plot
-ggsave("Figure-Study3B.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
-ggsave("Figure-Study3B.png", plot = p_combined, width = 10, height = 8, units = "in", dpi = 600)
+ggsave("Figure-Study2B.pdf", plot = p_combined_A, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("Figure-Study2B.png", plot = p_combined_A, width = 10, height = 8, units = "in", dpi = 600)
+saveRDS(p_combined_A, file = "p_combined_A.rds")
+
 ```
 
+\newpage
 
-## System of Simultaneous Equations
+## System of Equations
 
-```{r results='markup'}
-# sold30m
+```{r echo=FALSE, results='markup'}
+#SYSTEM OF SIMULTANEOUS
 
-sold30m.eqn <- list(
-  sold30meq = as.numeric(sold30m_pick) ~ sold30m_shown + forms_shown + classic_shown + gender_feedback - 1,
-  femaleeq = as.numeric(female_pick) ~ sold30m_shown + forms_shown + classic_shown + gender_feedback - 1
+# Budget
+summary(lm(as.numeric(female_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1, data=d0))
+budget.eqn <- list(
+  budgeteq = as.numeric(budget_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1,
+  femaleeq = as.numeric(female_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1
 )
 
 # Define restriction matrix
-restrict_sold30m <- "sold30meq_sold30m_shown - femaleeq_gender_feedback = 0"
+restrict_budget <- "budgeteq_budget_shown - femaleeq_gender_feedback = 0"
 
 # Fit the system of equations with the restriction
-unrestricted_sold30m <- systemfit(sold30m.eqn, data=d0)
+unrestricted_budget <- systemfit(budget.eqn, data=d0)
+#summary(unrestricted_budget)
 
-# forms
 
-forms.eqn <- list(
-  formseq = as.numeric(forms_pick) ~ sold30m_shown + forms_shown + classic_shown + gender_feedback - 1,
-  femaleeq = as.numeric(female_pick) ~ sold30m_shown + forms_shown + classic_shown + gender_feedback - 1
+# Year
+
+year.eqn <- list(
+  yeareq = as.numeric(year_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1,
+  femaleeq = as.numeric(female_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1
 )
 
 # Define restriction matrix
-restrict_forms <- "formseq_forms_shown - femaleeq_gender_feedback = 0"
+restrict_year <- "yeareq_year_shown - femaleeq_gender_feedback = 0"
 
 # Fit the system of equations with the restriction
-unrestricted_forms <- systemfit(forms.eqn, data=d0)
+unrestricted_year <- systemfit(year.eqn, data=d0)
+#summary(unrestricted_year)
 
-# classic
+# Poli
 
-classic.eqn <- list(
-  classiceq = as.numeric(classic_pick) ~ sold30m_shown + forms_shown + classic_shown + gender_feedback - 1,
-  femaleeq = as.numeric(female_pick) ~ sold30m_shown + forms_shown + classic_shown + gender_feedback - 1
+poli.eqn <- list(
+  polieq = as.numeric(poli_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1,
+  femaleeq = as.numeric(female_pick) ~ gender_feedback + budget_shown + year_shown + poli_shown - 1
 )
 
 # Define restriction matrix
-restrict_classic <- "classiceq_classic_shown - femaleeq_gender_feedback = 0"
+restrict_poli <- "polieq_poli_shown - femaleeq_gender_feedback = 0"
 
 # Fit the system of equations with the restriction
-unrestricted_classic <- systemfit(classic.eqn, data=d0)
+unrestricted_poli <- systemfit(poli.eqn, data=d0)
+#summary(unrestricted_poli)
 
 
 # wald tests
 # Run linear hypothesis tests
-lh_result_sold30m = linearHypothesis(unrestricted_sold30m, restrict_sold30m)
-lh_result_forms = linearHypothesis(unrestricted_forms, restrict_forms)
-lh_result_classic = linearHypothesis(unrestricted_classic, restrict_classic)
+lh_result_budget = linearHypothesis(unrestricted_budget, restrict_budget)
+lh_result_year = linearHypothesis(unrestricted_year, restrict_year)
+lh_result_poli = linearHypothesis(unrestricted_poli, restrict_poli)
 
 
+# Collecting coefficient values and standard errors for the new variables
+budget_coef <- lh_result_budget$F[2]
+year_coef <- lh_result_year$F[2]
+poli_coef <- lh_result_poli$F[2]
 
-# Collecting coefficient values and standard errors
-sold30m_coef <- lh_result_sold30m$F[2]
-forms_coef <- lh_result_forms$F[2]
-classic_coef <- lh_result_classic$F[2]
+# Extracting p-values for the new variables
+p_value_budget = lh_result_budget$`Pr(>F)`[2]
+p_value_year = lh_result_year$`Pr(>F)`[2]
+p_value_poli = lh_result_poli$`Pr(>F)`[2]
 
-
-# Extracting p-values
-p_value_sold30m = lh_result_sold30m$`Pr(>F)`[2]
-p_value_forms = lh_result_forms$`Pr(>F)`[2]
-p_value_classic = lh_result_classic$`Pr(>F)`[2]
-
-# Include p-values in the summary table
+# Include p-values in the summary table for the new variables
 data.frame(
-  `Test` = c("Gender Feedback - Sold30M Feedback", "Gender Feedback - Forms Feedback", "Gender Feedback - Classic Feedback"),
-  `Wald Coefficient` = c(sold30m_coef, forms_coef, classic_coef),
-  P_Value = c(p_value_sold30m, p_value_forms, p_value_classic),
-  row.names = 1
+  `Test` = c("Female Feedback - Budget", "Female Feedback - Year", "Female Feedback - Political"),
+  `Wald Coefficient` = c(budget_coef, year_coef, poli_coef),
+  P_Value = c(p_value_budget, p_value_year, p_value_poli),
+  row.names = NULL  # Set row.names to NULL to remove the index
 )
 
 ```

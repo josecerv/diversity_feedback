@@ -3,13 +3,13 @@ library(cowplot)
 library(patchwork)
 
 # Read in each ggplot object
-# Study 2A on top (labeled A)
-p_combined_2A <- readRDS("./Study-2A/p_combined_B.rds")
-# Study 2B on bottom (labeled B)
-p_combined_2B <- readRDS("./Study-2B/p_combined_A.rds")
+# Study 3A on top (labeled A)
+p_combined_3A <- readRDS("./Study-3A/p_combined_B.rds")
+# Study 3B on bottom (labeled B)
+p_combined_3B <- readRDS("./Study-3B/p_combined_A.rds")
 
 # Add theme modification to adjust tag position, size, and make bold
-p_combined_2A <- p_combined_2A +
+p_combined_3A <- p_combined_3A +
   labs(tag = "A") +
   theme(
     plot.tag.position = c(.15, .91),
@@ -20,7 +20,7 @@ p_combined_2A <- p_combined_2A +
     )
   )
 
-p_combined_2B <- p_combined_2B +
+p_combined_3B <- p_combined_3B +
   labs(tag = "B") +
   theme(
     plot.tag.position = c(.15, .91),
@@ -31,8 +31,8 @@ p_combined_2B <- p_combined_2B +
     )
   )
 
-# 2A on top, 2B on bottom
-final_plot <- p_combined_2A / p_combined_2B
+# 3A on top, 3B on bottom
+final_plot <- p_combined_3A / p_combined_3B
 
 # Save to PDF (now Figure 3)
 ggsave("./Manuscript_Figures/Figure-3.pdf", family = "Times New Roman", plot = final_plot, device=cairo_pdf, width = 14, height = 19)

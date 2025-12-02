@@ -14,17 +14,17 @@ loadfonts(device = "pdf")
 estimate_path <- paste0(getwd(), "/Manuscript_Figures/figure4-estimates/")
 
 # Read in the estimates from the .Rds files
-study2A_estimates <- readRDS(paste0(estimate_path, "study2A_estimates.rds"))
-study2B_estimates <- readRDS(paste0(estimate_path, "study2B_estimates.rds"))
+study2_estimates <- readRDS(paste0(estimate_path, "study2_estimates.rds"))
 study3A_estimates <- readRDS(paste0(estimate_path, "study3A_estimates.rds"))
 study3B_estimates <- readRDS(paste0(estimate_path, "study3B_estimates.rds"))
-study5_estimates <- readRDS(paste0(estimate_path, "study5_estimates.rds"))
+study4A_estimates <- readRDS(paste0(estimate_path, "study4A_estimates.rds"))
+study4B_estimates <- readRDS(paste0(estimate_path, "study4B_estimates.rds"))
 
 # Combine all estimates into a single data frame
-data <- bind_rows(study2A_estimates, study2B_estimates, study3A_estimates, study3B_estimates, study5_estimates)
+data <- bind_rows(study2_estimates, study3A_estimates, study3B_estimates, study4A_estimates, study4B_estimates)
 
 # Update the study order
-study_order <- c('STUDY 2A', 'STUDY 2B', 'STUDY 3A', 'STUDY 3B', 'STUDY 5')
+study_order <- c('STUDY 2', 'STUDY 3A', 'STUDY 3B', 'STUDY 4A', 'STUDY 4B')
 
 # Ensure that 'Study' and 'Stimuli' are factors with the correct order
 data$Study <- factor(data$Study, levels = study_order)
@@ -68,7 +68,7 @@ plot_data <- bind_rows(
   orange_data %>% dplyr::select(Study, Estimate, CI_Lower, CI_Upper, Stimuli, y_pos_orange) %>%
     rename(y_pos = y_pos_orange) %>%
     mutate(Type = 'Race and Gender Feedback'),
-  avg_data %>% dplyr::select(Study, Estimate = Avg_Estimate, CI_Lower = Avg_CI_Lower, 
+  avg_data %>% dplyr::select(Study, Estimate = Avg_Estimate, CI_Lower = Avg_CI_Lower,
                       CI_Upper = Avg_CI_Upper, y_pos = y_pos_avg) %>%
     mutate(Type = 'Averaged Other Feedback'),
   non_orange_data %>% dplyr::select(Study, Estimate, CI_Lower, CI_Upper, y_pos = y_pos_non_orange) %>%
@@ -102,7 +102,7 @@ p_orange <- ggplot(plot_data_orange, aes(x = Estimate, y = y_pos)) +
   geom_segment(aes(x = CI_Lower, xend = CI_Upper, y = y_pos, yend = y_pos), color = "#990000", size = 1) +
   geom_point(fill = "#990000", shape = 21, size = 10, stroke = 1, color = "black") +
   scale_x_continuous(
-    breaks = seq(-15, 30, by = 5), 
+    breaks = seq(-15, 30, by = 5),
     limits = c(-15, 30)
   ) +
   scale_y_continuous(
