@@ -24,7 +24,10 @@
       "Bash(tee:*)",
       "Bash(git rm:*)",
       "Bash(nul)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "WebFetch(domain:github.com)",
+      "mcp__gemini-cli__ask-gemini",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

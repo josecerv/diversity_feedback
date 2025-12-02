@@ -170,8 +170,9 @@ display_table <- women_table %>%
 
 # Print table
 kable(display_table,
-      col.names = c("attribute", "Women Mean (SD)", "Other Mean (SD)",
-                    "Difference", "t-statistic", "p-value", "sig", "Cohen's d"),
+      row.names = FALSE,
+      col.names = c("Attribute", "Women Mean (SD)", "Other Mean (SD)",
+                    "Difference", "t", "p-value", "sig", "Cohen's d"),
       align = c("l", "r", "r", "r", "r", "r", "c", "r"),
       format = "latex",
       booktabs = TRUE,
@@ -208,8 +209,9 @@ display_table2 <- race_table %>%
 
 # Print table
 kable(display_table2,
-      col.names = c("attribute", "Race Mean (SD)", "Other Mean (SD)",
-                    "Difference", "t-statistic", "p-value", "sig", "Cohen's d"),
+      row.names = FALSE,
+      col.names = c("Attribute", "Race Mean (SD)", "Other Mean (SD)",
+                    "Difference", "t", "p-value", "sig", "Cohen's d"),
       align = c("l", "r", "r", "r", "r", "r", "c", "r"),
       format = "latex",
       booktabs = TRUE,

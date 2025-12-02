@@ -352,7 +352,7 @@ study2_estimates <- data.frame(
 )
 
 # Save the estimates to an RDS file
-saveRDS(study2_estimates, file = "../Manuscript_Figures/figure4-estimates/study2_estimates.rds")
+saveRDS(study2_estimates, file = "../Manuscript_Figures/figure2-estimates/study2_estimates.rds")
 
 ```
 

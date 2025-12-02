@@ -34,6 +34,6 @@ p_combined_3B <- p_combined_3B +
 # 3A on top, 3B on bottom
 final_plot <- p_combined_3A / p_combined_3B
 
-# Save to PDF (now Figure 3)
-ggsave("./Manuscript_Figures/Figure-3.pdf", family = "Times New Roman", plot = final_plot, device=cairo_pdf, width = 14, height = 19)
-ggsave("./Manuscript_Figures/Figure-3.png", plot = final_plot, width = 14, height = 19, dpi = 600)
+# Save to PDF (Figure 5)
+ggsave("./Manuscript_Figures/Figure-5.pdf", family = "Times New Roman", plot = final_plot, device=cairo_pdf, width = 14, height = 19)
+ggsave("./Manuscript_Figures/Figure-5.png", plot = final_plot, width = 14, height = 19, dpi = 600)
