@@ -98,10 +98,10 @@ USE_API <- TRUE
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
-  qual_data <- fetch_survey(surveyID='SV_2f6hIXCPIwAylDw',
+  qual_data <- fetch_survey(surveyID='SV_czIz0pd2J1emErs',
                      label = T,
                      convert = F,
-                     start_date = "2025-11-20",
+                     start_date = "2025-12-02",
                      force_request = T)
 } else {
   # Read the processed data directly from CSV
@@ -630,8 +630,8 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
 print(p_combined)
 
 # Save the plot
-ggsave("Figure-Study4.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
-ggsave("Figure-Study4.png", plot = p_combined, width = 10, height = 8, units = "in", dpi = 600)
+ggsave("Figure-Study5.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("Figure-Study5.png", plot = p_combined, width = 10, height = 8, units = "in", dpi = 600)
 ```
 
 \newpage
