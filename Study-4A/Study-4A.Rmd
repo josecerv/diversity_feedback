@@ -701,8 +701,8 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
 print(p_combined)
 
 # Save the plot
-ggsave("Figure-Study3A.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
-ggsave("Figure-Study3A.png", plot = p_combined, width = 10, height = 8, units = "in", dpi = 600)
+ggsave("Figure-Study4A.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("Figure-Study4A.png", plot = p_combined, width = 10, height = 8, units = "in", dpi = 600)
 ```
 
 \newpage

@@ -31,6 +31,15 @@ library(knitr)
 library(rmarkdown)
 library(ggplot2)
 library(grid)
+library(extrafont)
+
+# Load and register Times New Roman font
+# Only run font_import() once - it takes a while
+if (!("Times New Roman" %in% fonts())) {
+  font_import(pattern = "times", prompt = FALSE)
+}
+loadfonts(device = "win", quiet = TRUE)
+loadfonts(device = "pdf", quiet = TRUE)
 ```
 
 ```{r include=FALSE}
@@ -444,10 +453,10 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
                inherit.aes = FALSE) +
   geom_text(data = df_combined %>% filter(Category %in% c('\nWere Over \n500 Pages', '\nFeatured an\nEntertainer', '\nWere Written in\nthe Past 25 Years') & Condition == "\"Treatment\""),
             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."),
-            inherit.aes = FALSE, vjust = 0, family = "Times New Roman", size = 6) +
+            inherit.aes = FALSE, vjust = 0, family = "Times New Roman", size = 5) +
   geom_text(data = df_combined %>% filter(Category %in% c('\nFeatured a\nWoman') & Condition == "\"Treatment\""),
             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"),
-            inherit.aes = FALSE, vjust = 0, family = "Times New Roman", size = 6) +
+            inherit.aes = FALSE, vjust = 0, family = "Times New Roman", size = 5) +
   theme_bw() +
   scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
@@ -459,7 +468,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         legend.position = c(0.5, 0.95),
         legend.title = element_blank(),
         legend.direction = "horizontal",
-        legend.text = element_text(size = 16, family = "Times New Roman"),
+        legend.text = element_text(size = 20, family = "Times New Roman"),
         legend.key.size = unit(7, 'mm'),
         legend.background = element_rect(fill = "white"),
         panel.grid.minor = element_blank(),
@@ -467,19 +476,22 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         panel.border = element_rect(fill= NA, color = "white"),
         plot.background = element_rect(fill = "white"),
         panel.background = element_rect(fill = "white"),
-        axis.title.x = element_text(face="bold", size = 16, vjust = 19, family = "Times New Roman"),
+        axis.title.x = element_text(face="bold", size = 21, vjust = 22, family = "Times New Roman"),
         plot.title = element_blank(),
-        axis.title.y = element_text(size = 16, color = "black", family = "Times New Roman"),
+        axis.title.y = element_text(size = 20, color = "black", family = "Times New Roman"),
         axis.text.x = element_blank(),
         axis.ticks = element_blank(),
-        axis.text.y = element_text(size = 16, color = "black", family = "Times New Roman"),
-        strip.text = element_text(size = 16, color = "black", family = "Times New Roman"),
+        axis.text.y = element_text(size = 20, color = "black", family = "Times New Roman"),
+        strip.text = element_text(size = 20, color = "black", family = "Times New Roman", margin = margin(t = 20)),
         strip.background = element_rect(colour = "white", fill = "white"))
 print(p_combined)
 
-# Save the plot
-ggsave("Figure-Study5.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
-ggsave("Figure-Study5.png", plot = p_combined, width = 10, height = 8, units = "in", dpi = 600)
+# Save the plot with Times New Roman font
+# PDF export using cairo_pdf for proper font embedding
+ggsave("Figure-Study2.pdf", plot = p_combined, width = 10, height = 9, units = "in", device = cairo_pdf, family = "Times New Roman")
+
+# PNG export - use type="cairo" for Windows to properly render Times New Roman
+ggsave("Figure-Study2.png", plot = p_combined, width = 10, height = 9, units = "in", dpi = 600, type = "cairo")
 
 ```
 

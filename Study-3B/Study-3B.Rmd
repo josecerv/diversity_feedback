@@ -508,8 +508,8 @@ p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq * 100, fill = Co
 print(p_combined_A)
 
 # Save the plot
-ggsave("Figure-Study2B.pdf", plot = p_combined_A, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
-ggsave("Figure-Study2B.png", plot = p_combined_A, width = 10, height = 8, units = "in", dpi = 600)
+ggsave("Figure-Study3B.pdf", plot = p_combined_A, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+ggsave("Figure-Study3B.png", plot = p_combined_A, width = 10, height = 8, units = "in", dpi = 600)
 saveRDS(p_combined_A, file = "p_combined_A.rds")
 
 ```
