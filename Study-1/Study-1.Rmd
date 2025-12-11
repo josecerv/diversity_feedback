@@ -190,7 +190,7 @@ if(USE_API) {
       race_code = case_when(str_detect(race, "White / Caucasian") ~ 1, TRUE ~ 0)
     ) |>
     dplyr::select(treatment, set_num, women_feedback, age_feedback, location_feedback, university_feedback,
-                  women_count, women_proportion, age_count, age_proportion,
+                  women_count, women_proportion, women_choice3, age_count, age_proportion,
                   location_count, location_proportion, university_count, university_proportion,
                   `choice-1`:`choice-3`, race, gender, age, gender_code, race_code, cond, set) %>%
     slice(1:1000) # pre-registered sample size
@@ -343,15 +343,38 @@ robust_confint(r1)
 
 ## Robustness
 
-```{r echo=FALSE, results='markup'}
+```{r echo=TRUE, results='markup'}
 
-## Which feedback was shown with gender, remove constant due to collinearity
+## Model 2: Which feedback was shown with women, remove constant due to collinearity
 r2 <- lm(women_proportion ~ women_feedback + age_feedback + location_feedback + university_feedback - 1, data=d0)
 
 # Display the summary with robust standard errors
 robust_summary(r2)
 robust_confint(r2)
 
+## Model 3: Robust to demographic controls
+r3 <- lm(women_proportion ~ women_feedback + gender_code + race_code + age, data=d0)
+
+# Display the robust_summary with robust standard errors
+robust_summary(r3)
+robust_confint(r3)
+
+## logistic regression
+# Fit the logistic regression model using the third (final) choice
+r4 <- glm(women_choice3 ~ women_feedback, family = binomial, data=d0)
+
+# Odds ratio
+tidy_r4 <- tidy(r4, exponentiate = TRUE, conf.int = T)
+print(tidy_r4)
+summary(r4)
+```
+
+
+\newpage
+
+## Dropout Robustness Check
+
+```{r echo=FALSE, results='markup'}
 ## Dropout robustness check (PREREGISTERED)
 # For any participants who drop out after assignment to conditions but before selecting experts,
 # impute their women_proportion as the mean from the no gender feedback condition
@@ -591,6 +614,9 @@ ggsave("Figure-Study1.pdf", plot = p_combined, width = 10, height = 9, units = "
 
 # PNG export - use type="cairo" for Windows to properly render Times New Roman
 ggsave("Figure-Study1.png", plot = p_combined, width = 10, height = 9, units = "in", dpi = 600, type = "cairo")
+
+# Save RDS for combined figure
+saveRDS(p_combined, file = "p_combined_study1.rds")
 ```
 
 \newpage

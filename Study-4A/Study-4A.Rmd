@@ -32,6 +32,15 @@ library(rmarkdown)
 library(tidyverse)
 library(psych)
 library(mediation)
+library(ggplot2)
+library(extrafont)
+
+# Load and register Times New Roman font
+if (!("Times New Roman" %in% fonts())) {
+  font_import(pattern = "times", prompt = FALSE)
+}
+loadfonts(device = "win", quiet = TRUE)
+loadfonts(device = "pdf", quiet = TRUE)
 ```
 
 ```{r include=FALSE}
@@ -655,33 +664,33 @@ df_combined <- bind_rows(
 
 p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
   geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
-  geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")), 
-            position=position_dodge(width=0.7), vjust=5, size = 5, color = "white") +
+  geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")),
+            position=position_dodge(width=0.7), vjust=5, size = 5, color = "white", family = "Times New Roman") +
   geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
   facet_wrap(~factor(Category, c('\nWrote Poetry', '\nWrote > 10 books', '\nWere Born\nin the 1800s', '\nWere Racial\nMinorities')), nrow = 1, strip.position = "bottom") +
-   geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""), 
-                aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5), 
+   geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""),
+                aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5),
                 inherit.aes = FALSE) +
-   geom_text(data = df_combined %>% filter(Category %in% c('\nWrote > 10 books') & Condition == "\"Treatment\""), 
-             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."), 
-             inherit.aes = FALSE, vjust = 0, size = 5) +
-    geom_text(data = df_combined %>% filter(Category %in% c('\nWrote Poetry', '\nWere Born\nin the 1800s') & Condition == "\"Treatment\""), 
-             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "+"), 
-             inherit.aes = FALSE, vjust = 0, size = 5) +
-   geom_text(data = df_combined %>% filter(Category == '\nWere Racial\nMinorities' & Condition == "\"Treatment\""), 
-             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
-             inherit.aes = FALSE, vjust = 0, size = 5) +
+   geom_text(data = df_combined %>% filter(Category %in% c('\nWrote > 10 books') & Condition == "\"Treatment\""),
+             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."),
+             inherit.aes = FALSE, vjust = 0, size = 5, family = "Times New Roman") +
+    geom_text(data = df_combined %>% filter(Category %in% c('\nWrote Poetry', '\nWere Born\nin the 1800s') & Condition == "\"Treatment\""),
+             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "+"),
+             inherit.aes = FALSE, vjust = 0, size = 5, family = "Times New Roman") +
+   geom_text(data = df_combined %>% filter(Category == '\nWere Racial\nMinorities' & Condition == "\"Treatment\""),
+             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"),
+             inherit.aes = FALSE, vjust = 0, size = 5, family = "Times New Roman") +
   theme_bw() +
   scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,95)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of authors who...", y = "% of New Authors with the Target Attribute",
-       caption = 'Note: Error Bars are SEs', title = "The Effect of Getting Feedback on Your Author Selections") +
-  theme(plot.caption = element_text(face = "italic"),
+       title = "The Effect of Getting Feedback on Your Author Selections") +
+  theme(plot.caption = element_text(face = "italic", family = "Times New Roman"),
         legend.position = c(0.5, 0.95),
         legend.title = element_blank(),
         legend.direction = "horizontal",
-        legend.text = element_text(size = 20),
+        legend.text = element_text(size = 20, family = "Times New Roman"),
         legend.key.size = unit(7, 'mm'),
         legend.background = element_rect(fill = "white"),
         panel.grid.minor = element_blank(),
@@ -689,16 +698,19 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         panel.border = element_rect(fill= NA, color = "white"),
         plot.background = element_rect(fill = "white"),
         panel.background = element_rect(fill = "white"),
-        axis.title.x = element_text(face="bold", size = 21, vjust = 17),
+        axis.title.x = element_text(face="bold", size = 21, vjust = 17, family = "Times New Roman"),
         plot.title = element_blank(),
-        axis.title.y = element_text(size = 20, color = "black"),
+        axis.title.y = element_text(size = 20, color = "black", family = "Times New Roman"),
         axis.text.x = element_blank(),
         axis.ticks = element_blank(),
-        axis.text.y = element_text(size = 20, color = "black"),
-        strip.text = element_text(size = 20, color = "black"),
+        axis.text.y = element_text(size = 20, color = "black", family = "Times New Roman"),
+        strip.text = element_text(size = 20, color = "black", family = "Times New Roman"),
         strip.background = element_rect(colour = "white", fill = "white"))
 
 print(p_combined)
+
+# Save plot object as RDS for manuscript figure combination
+saveRDS(p_combined, file = "p_combined_study4A.rds")
 
 # Save the plot
 ggsave("Figure-Study4A.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")

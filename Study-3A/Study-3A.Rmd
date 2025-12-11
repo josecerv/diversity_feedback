@@ -30,6 +30,8 @@ library(qualtRics)
 library(knitr)
 library(rmarkdown)
 library(ggplot2)
+library(grid)
+library(extrafont)
 ```
 
 ```{r include=FALSE}
@@ -447,6 +449,9 @@ d_duration_plot <- d0 |>
 
 ## Combine plots
 
+# Load the Times New Roman font
+loadfonts(device = "pdf")
+
 df_combined <- bind_rows(
   d_budget_plot %>% mutate(Category = "\nMade for a\nBudget of >$40M"),
   d_year_plot %>% mutate(Category = "\nReleased After\n2010"),
@@ -480,7 +485,7 @@ p_combined_B <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Cond
   labs(x = "Feedback on % of films that were...", y = "% of Final Films Selected with the Target Attribute",
        title = "The Effect of Getting Feedback on Your Biopic Selections") +
   theme(plot.caption = element_text(face = "italic", family = "Times New Roman"),
-        legend.position = "none",
+        legend.position = c(0.5, 0.85),
         legend.title = element_blank(),
         legend.direction = "horizontal",
         legend.text = element_text(size = 20, family = "Times New Roman"),

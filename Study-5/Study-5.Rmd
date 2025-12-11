@@ -99,10 +99,10 @@ USE_API <- TRUE
 
 if(USE_API) {
   ## Pull directly from Qualtrics API (new survey with mechanism scales)
-  qual_data <- fetch_survey(surveyID='SV_czIz0pd2J1emErs',
+  qual_data <- fetch_survey(surveyID='SV_06V9Nrg8gROA9JI',
                      label = T,
                      convert = F,
-                     start_date = "2025-12-02",
+                     start_date = "2025-12-09",
                      force_request = T)
 } else {
   # Read the processed data directly from CSV
@@ -221,7 +221,8 @@ if(USE_API) {
                   `choice-1`:`choice-7`, race, gender, age,
                   fair1_num, fair2_num, fair3_num, fairness,
                   I1_num, I2_num, I3_num, I4_num, internal_motivation,
-                  E1_num, E2_num, E3_num, external_motivation)
+                  E1_num, E2_num, E3_num, external_motivation) |>
+    slice(1:1200)  # Pre-registered sample size
 
   # Calculate the number of excluded participants
   num_excluded <- nrow(qual_data) - nrow(d0)
@@ -887,6 +888,241 @@ summary_table <- data.frame(
 )
 
 print(summary_table)
+
+cat("\nACME = Average Causal Mediation Effect (indirect effect)\n")
+cat("CI = 95% Percentile Bootstrap Confidence Interval\n")
+```
+
+\newpage
+
+## Mediation Analysis: Women Underrepresented Pool
+
+```{r mediation-analysis-underrep, echo=TRUE, results='markup'}
+# Set seed for reproducibility
+set.seed(456)
+
+# Filter to women underrepresented pool only (men pool, 25% women)
+d_men_pool <- d0 |> filter(men_pool == 1, !is.na(fairness))
+
+cat("=======================================================\n")
+cat("MEDIATION ANALYSIS: WOMEN UNDERREPRESENTED POOL\n")
+cat("=======================================================\n\n")
+
+cat("Sample size for mediation analysis:", nrow(d_men_pool), "\n\n")
+
+# -----------------------------
+# Fairness Analysis
+# -----------------------------
+
+# Direct effect model
+dir.fit.fairness.underrep <- lm(female_pick ~ treatment, data = d_men_pool)
+
+# Mediator model (a path)
+med.fit.fairness.underrep <- lm(fairness ~ treatment, data = d_men_pool)
+
+# Outcome model including mediator (b path)
+out.fit.fairness.underrep <- lm(female_pick ~ treatment + fairness, data = d_men_pool)
+
+# Mediation analysis using Imai's mediation package
+med.out.fairness.underrep <- mediate(med.fit.fairness.underrep, out.fit.fairness.underrep, boot = TRUE,
+                            treat = "treatment", boot.ci.type = "perc", mediator = "fairness", sims = 10000)
+
+# Sensitivity analysis
+sens.out.fairness.underrep <- medsens(med.out.fairness.underrep, rho.by = 0.01, eps = .01, effect.type = "indirect", sims = 10000)
+
+# Sobel test for fairness
+sobel.fairness.underrep <- sobel_test(med.fit.fairness.underrep, out.fit.fairness.underrep, "fairness")
+
+# Print and visualize results for fairness
+cat("\n--- FAIRNESS MEDIATION ---\n\n")
+cat("Sobel test for Fairness\n")
+print(sobel.fairness.underrep)
+summary(med.out.fairness.underrep)
+plot(sens.out.fairness.underrep)
+
+# -----------------------------
+# Internal Motivation Analysis
+# -----------------------------
+
+# Mediator model (a path)
+med.fit.internal.underrep <- lm(internal_motivation ~ treatment, data = d_men_pool)
+
+# Outcome model including mediator (b path)
+out.fit.internal.underrep <- lm(female_pick ~ treatment + internal_motivation, data = d_men_pool)
+
+# Mediation analysis
+med.out.internal.underrep <- mediate(med.fit.internal.underrep, out.fit.internal.underrep, boot = TRUE,
+                            treat = "treatment", boot.ci.type = "perc", mediator = "internal_motivation", sims = 10000)
+
+# Sensitivity analysis
+sens.out.internal.underrep <- medsens(med.out.internal.underrep, rho.by = 0.01, eps = .01, effect.type = "indirect", sims = 10000)
+
+# Sobel test for internal motivation
+sobel.internal.underrep <- sobel_test(med.fit.internal.underrep, out.fit.internal.underrep, "internal_motivation")
+
+# Print and visualize results for internal motivation
+cat("\n--- INTERNAL MOTIVATION MEDIATION ---\n\n")
+cat("Sobel test for Internal Motivation\n")
+print(sobel.internal.underrep)
+summary(med.out.internal.underrep)
+plot(sens.out.internal.underrep)
+
+# -----------------------------
+# External Motivation Analysis
+# -----------------------------
+
+# Mediator model (a path)
+med.fit.external.underrep <- lm(external_motivation ~ treatment, data = d_men_pool)
+
+# Outcome model including mediator (b path)
+out.fit.external.underrep <- lm(female_pick ~ treatment + external_motivation, data = d_men_pool)
+
+# Mediation analysis
+med.out.external.underrep <- mediate(med.fit.external.underrep, out.fit.external.underrep, boot = TRUE,
+                            treat = "treatment", boot.ci.type = "perc", mediator = "external_motivation", sims = 10000)
+
+# Sensitivity analysis
+sens.out.external.underrep <- medsens(med.out.external.underrep, rho.by = 0.01, eps = .01, effect.type = "indirect", sims = 10000)
+
+# Sobel test for external motivation
+sobel.external.underrep <- sobel_test(med.fit.external.underrep, out.fit.external.underrep, "external_motivation")
+
+# Print and visualize results for external motivation
+cat("\n--- EXTERNAL MOTIVATION MEDIATION ---\n\n")
+cat("Sobel test for External Motivation\n")
+print(sobel.external.underrep)
+summary(med.out.external.underrep)
+plot(sens.out.external.underrep)
+
+# ---------------------------------
+# Combined Multiple Mediation Model
+# ---------------------------------
+
+# Compute the correlation coefficient and p-value between mediators
+cat("\n--- MEDIATOR CORRELATIONS ---\n\n")
+cor_fair_int.underrep <- cor.test(d_men_pool$fairness, d_men_pool$internal_motivation)
+cor_fair_ext.underrep <- cor.test(d_men_pool$fairness, d_men_pool$external_motivation)
+cor_int_ext.underrep <- cor.test(d_men_pool$internal_motivation, d_men_pool$external_motivation)
+
+cat("Correlation (Fairness, Internal):", round(cor_fair_int.underrep$estimate, 3), "p =", round(cor_fair_int.underrep$p.value, 4), "\n")
+cat("Correlation (Fairness, External):", round(cor_fair_ext.underrep$estimate, 3), "p =", round(cor_fair_ext.underrep$p.value, 4), "\n")
+cat("Correlation (Internal, External):", round(cor_int_ext.underrep$estimate, 3), "p =", round(cor_int_ext.underrep$p.value, 4), "\n\n")
+
+# Building combined outcome model with all mediators
+out.fit.combined.underrep <- lm(female_pick ~ treatment + fairness + internal_motivation + external_motivation, data = d_men_pool)
+
+# Run combined mediation analyses
+med.out.combined.fairness.underrep <- mediate(med.fit.fairness.underrep, out.fit.combined.underrep, boot = TRUE,
+                                     treat = "treatment", boot.ci.type = "perc", mediator = "fairness", sims = 10000)
+med.out.combined.internal.underrep <- mediate(med.fit.internal.underrep, out.fit.combined.underrep, boot = TRUE,
+                                     treat = "treatment", boot.ci.type = "perc", mediator = "internal_motivation", sims = 10000)
+med.out.combined.external.underrep <- mediate(med.fit.external.underrep, out.fit.combined.underrep, boot = TRUE,
+                                     treat = "treatment", boot.ci.type = "perc", mediator = "external_motivation", sims = 10000)
+
+# Summarize and print the results for combined analysis
+cat("\n--- COMBINED MULTIPLE MEDIATION MODEL RESULTS ---\n\n")
+cat("Fairness (controlling for other mediators):\n")
+summary(med.out.combined.fairness.underrep)
+cat("\nInternal Motivation (controlling for other mediators):\n")
+summary(med.out.combined.internal.underrep)
+cat("\nExternal Motivation (controlling for other mediators):\n")
+summary(med.out.combined.external.underrep)
+```
+
+\newpage
+
+## Mediation Path Summary: Women Underrepresented Pool
+
+```{r path-summary-underrep, echo=FALSE, results='markup'}
+cat("=======================================================\n")
+cat("MEDIATION PATH SUMMARY: WOMEN UNDERREPRESENTED POOL\n")
+cat("=======================================================\n\n")
+
+cat("N =", nrow(d_men_pool), "\n\n")
+
+# c path (total effect)
+cat("=== TOTAL EFFECT (c path) ===\n")
+cat("Model: female_pick ~ treatment\n\n")
+robust_summary(dir.fit.fairness.underrep)
+robust_confint(dir.fit.fairness.underrep)
+
+# a paths (treatment -> mediators)
+cat("\n\n=== a PATHS (Treatment -> Mediators) ===\n\n")
+
+cat("--- Fairness ---\n")
+cat("Model: fairness ~ treatment\n")
+cat("a =", round(coef(med.fit.fairness.underrep)["treatment"], 4), "\n")
+cat("SE =", round(sqrt(diag(vcovHC(med.fit.fairness.underrep, type = "HC3")))["treatment"], 4), "\n")
+cat("p =", round(robust_summary(med.fit.fairness.underrep)$coefficients["treatment", "Pr(>|t|)"], 4), "\n\n")
+
+cat("--- Internal Motivation ---\n")
+cat("Model: internal_motivation ~ treatment\n")
+cat("a =", round(coef(med.fit.internal.underrep)["treatment"], 4), "\n")
+cat("SE =", round(sqrt(diag(vcovHC(med.fit.internal.underrep, type = "HC3")))["treatment"], 4), "\n")
+cat("p =", round(robust_summary(med.fit.internal.underrep)$coefficients["treatment", "Pr(>|t|)"], 4), "\n\n")
+
+cat("--- External Motivation ---\n")
+cat("Model: external_motivation ~ treatment\n")
+cat("a =", round(coef(med.fit.external.underrep)["treatment"], 4), "\n")
+cat("SE =", round(sqrt(diag(vcovHC(med.fit.external.underrep, type = "HC3")))["treatment"], 4), "\n")
+cat("p =", round(robust_summary(med.fit.external.underrep)$coefficients["treatment", "Pr(>|t|)"], 4), "\n")
+
+# b and c' paths (mediator -> DV controlling for treatment)
+cat("\n\n=== b PATHS (Mediator -> DV) & c' PATHS (Direct Effects) ===\n\n")
+
+cat("--- Fairness ---\n")
+cat("Model: female_pick ~ treatment + fairness\n")
+cat("b (fairness) =", round(coef(out.fit.fairness.underrep)["fairness"], 4), "\n")
+cat("SE =", round(sqrt(diag(vcovHC(out.fit.fairness.underrep, type = "HC3")))["fairness"], 4), "\n")
+cat("p =", round(robust_summary(out.fit.fairness.underrep)$coefficients["fairness", "Pr(>|t|)"], 4), "\n")
+cat("c' (direct) =", round(coef(out.fit.fairness.underrep)["treatment"], 4), "\n")
+cat("SE =", round(sqrt(diag(vcovHC(out.fit.fairness.underrep, type = "HC3")))["treatment"], 4), "\n")
+cat("p =", round(robust_summary(out.fit.fairness.underrep)$coefficients["treatment", "Pr(>|t|)"], 4), "\n\n")
+
+cat("--- Internal Motivation ---\n")
+cat("Model: female_pick ~ treatment + internal_motivation\n")
+cat("b (internal) =", round(coef(out.fit.internal.underrep)["internal_motivation"], 4), "\n")
+cat("SE =", round(sqrt(diag(vcovHC(out.fit.internal.underrep, type = "HC3")))["internal_motivation"], 4), "\n")
+cat("p =", round(robust_summary(out.fit.internal.underrep)$coefficients["internal_motivation", "Pr(>|t|)"], 4), "\n")
+cat("c' (direct) =", round(coef(out.fit.internal.underrep)["treatment"], 4), "\n")
+cat("SE =", round(sqrt(diag(vcovHC(out.fit.internal.underrep, type = "HC3")))["treatment"], 4), "\n")
+cat("p =", round(robust_summary(out.fit.internal.underrep)$coefficients["treatment", "Pr(>|t|)"], 4), "\n\n")
+
+cat("--- External Motivation ---\n")
+cat("Model: female_pick ~ treatment + external_motivation\n")
+cat("b (external) =", round(coef(out.fit.external.underrep)["external_motivation"], 4), "\n")
+cat("SE =", round(sqrt(diag(vcovHC(out.fit.external.underrep, type = "HC3")))["external_motivation"], 4), "\n")
+cat("p =", round(robust_summary(out.fit.external.underrep)$coefficients["external_motivation", "Pr(>|t|)"], 4), "\n")
+cat("c' (direct) =", round(coef(out.fit.external.underrep)["treatment"], 4), "\n")
+cat("SE =", round(sqrt(diag(vcovHC(out.fit.external.underrep, type = "HC3")))["treatment"], 4), "\n")
+cat("p =", round(robust_summary(out.fit.external.underrep)$coefficients["treatment", "Pr(>|t|)"], 4), "\n")
+
+# Summary table
+cat("\n\n=== BOOTSTRAP INDIRECT EFFECTS SUMMARY (10,000 simulations) ===\n\n")
+
+summary_table_underrep <- data.frame(
+  Mediator = c("Fairness", "Internal Motivation", "External Motivation"),
+  a_path = c(round(coef(med.fit.fairness.underrep)["treatment"], 3),
+             round(coef(med.fit.internal.underrep)["treatment"], 3),
+             round(coef(med.fit.external.underrep)["treatment"], 3)),
+  b_path = c(round(coef(out.fit.fairness.underrep)["fairness"], 3),
+             round(coef(out.fit.internal.underrep)["internal_motivation"], 3),
+             round(coef(out.fit.external.underrep)["external_motivation"], 3)),
+  ACME = c(round(med.out.fairness.underrep$d0, 4),
+           round(med.out.internal.underrep$d0, 4),
+           round(med.out.external.underrep$d0, 4)),
+  ACME_CI_lower = c(round(med.out.fairness.underrep$d0.ci[1], 4),
+                    round(med.out.internal.underrep$d0.ci[1], 4),
+                    round(med.out.external.underrep$d0.ci[1], 4)),
+  ACME_CI_upper = c(round(med.out.fairness.underrep$d0.ci[2], 4),
+                    round(med.out.internal.underrep$d0.ci[2], 4),
+                    round(med.out.external.underrep$d0.ci[2], 4)),
+  ACME_p = c(round(med.out.fairness.underrep$d0.p, 4),
+             round(med.out.internal.underrep$d0.p, 4),
+             round(med.out.external.underrep$d0.p, 4))
+)
+
+print(summary_table_underrep)
 
 cat("\nACME = Average Causal Mediation Effect (indirect effect)\n")
 cat("CI = 95% Percentile Bootstrap Confidence Interval\n")

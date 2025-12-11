@@ -465,7 +465,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
        title = "The Effect of Getting Feedback on Your Biography Selections") +
   theme(text = element_text(family = "Times New Roman"),
         plot.caption = element_text(face = "italic", family = "Times New Roman"),
-        legend.position = c(0.5, 0.95),
+        legend.position = "none",
         legend.title = element_blank(),
         legend.direction = "horizontal",
         legend.text = element_text(size = 20, family = "Times New Roman"),
@@ -493,6 +493,8 @@ ggsave("Figure-Study2.pdf", plot = p_combined, width = 10, height = 9, units = "
 # PNG export - use type="cairo" for Windows to properly render Times New Roman
 ggsave("Figure-Study2.png", plot = p_combined, width = 10, height = 9, units = "in", dpi = 600, type = "cairo")
 
+# Save RDS for combined figure
+saveRDS(p_combined, file = "p_combined_study2.rds")
 ```
 
 \newpage

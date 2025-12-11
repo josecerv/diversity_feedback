@@ -27,7 +27,9 @@
       "Bash(dir:*)",
       "WebFetch(domain:github.com)",
       "mcp__gemini-cli__ask-gemini",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(git checkout:*)",
+      "Bash(\"C:\\Program Files\\R\\R-4.5.2\\bin\\Rscript.exe\" --version)"
     ],
     "deny": [],
     "ask": []
