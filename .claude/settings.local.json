@@ -29,7 +29,10 @@
       "mcp__gemini-cli__ask-gemini",
       "Bash(find:*)",
       "Bash(git checkout:*)",
-      "Bash(\"C:\\Program Files\\R\\R-4.5.2\\bin\\Rscript.exe\" --version)"
+      "Bash(\"C:\\Program Files\\R\\R-4.5.2\\bin\\Rscript.exe\" --version)",
+      "Bash(\"C:\\Program Files\\R\\R-4.5.2\\bin\\Rscript.exe\" \"c:/Users/jcerv/Jose/diversity_feedback/base-rate-analysis/get_pool_info.R\")",
+      "Bash(\"C:\\Program Files\\R\\R-4.5.2\\bin\\Rscript.exe\" \"c:/Users/jcerv/Jose/diversity_feedback/base-rate-analysis/get_unique_choices.R\")",
+      "Bash(\"C:\\Program Files\\R\\R-4.5.2\\bin\\Rscript.exe\" \"c:/Users/jcerv/Jose/diversity_feedback/base-rate-analysis/base_rate_analysis.R\")"
     ],
     "deny": [],
     "ask": []

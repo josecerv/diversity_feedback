@@ -460,7 +460,7 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
             aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
             inherit.aes = FALSE, vjust = 0, size = 5) +
   theme_bw() +
-  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,80)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of panelists who were...", y = "% of New Panelists with the Target Identity",

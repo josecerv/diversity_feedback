@@ -32,6 +32,14 @@ library(rmarkdown)
 library(stargazer)
 library(ggplot2)
 library(gridExtra)
+library(cowplot)
+library(extrafont)
+
+# Load and register Times New Roman font
+if (!("Times New Roman" %in% fonts())) {
+  font_import(pattern = "times", prompt = FALSE)
+}
+loadfonts(device = "pdf", quiet = TRUE)
 
 ```
 
@@ -306,65 +314,65 @@ robust_summary(r_interaction)
 
 \newpage
 
-## Figure S5A Code
+## Figure S6A Code
 
 ```{r echo=TRUE}
-dgender_plot <- d0_no_encouragement |> 
-  select(gender_feedback, female) |> 
-  group_by(gender_feedback, female) |> 
-  summarise(n = n()) |> 
-  mutate(freq = n / sum(n)) |> 
-  filter(female == 1) |> 
-  mutate(sd = sqrt((freq*(1-freq))/n)*100,
-         se = case_when(gender_feedback==0 ~ coef(summary(r1))[, "Std. Error"][1]*100,
-                        TRUE ~ coef(robust_summary(r1))[, "Std. Error"][2]*100)) |> 
+dgender_plot <- d0_no_encouragement |>
+  select(gender_feedback, female) |>
+  group_by(gender_feedback) |>
+  summarise(
+    n = n(),
+    freq = mean(female),
+    sd = sd(female) * 100,
+    se = (sd(female) / sqrt(n())) * 100
+  ) |>
   mutate(gender_feedback = case_when(gender_feedback==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = gender_feedback)
 
-## dataframe for CEO information
+## dataframe for duration information
 
-dduration_plot <- d0_no_encouragement |> 
-  select(duration_shown, duration_pick) |> 
-  group_by(duration_shown, duration_pick) |> 
-  summarise(n = n()) |> 
-  mutate(freq = n / sum(n)) |> 
-  filter(duration_pick == 1) |> 
-  mutate(sd = sqrt((freq*(1-freq))/n)*100,
-         se = case_when(duration_shown==0 ~ coef(robust_summary(r_duration))[, "Std. Error"][1]*100,
-                        TRUE ~ coef(robust_summary(r_duration))[, "Std. Error"][2]*100)) |> 
+dduration_plot <- d0_no_encouragement |>
+  select(duration_shown, duration_pick) |>
+  group_by(duration_shown) |>
+  summarise(
+    n = n(),
+    freq = mean(duration_pick),
+    sd = sd(duration_pick) * 100,
+    se = (sd(duration_pick) / sqrt(n())) * 100
+  ) |>
   mutate(duration_shown = case_when(duration_shown==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = duration_shown)
 
 ## dataframe for episodes information
 
-depisodes_plot <- d0_no_encouragement |> 
-  select(episodes_shown, episodes_pick) |> 
-  group_by(episodes_shown, episodes_pick) |> 
-  summarise(n = n()) |> 
-  mutate(freq = n / sum(n)) |> 
-  filter(episodes_pick == 1) |> 
-  mutate(sd = sqrt((freq*(1-freq))/n)*100,
-         se = case_when(episodes_shown==0 ~ coef(robust_summary(r_episodes))[, "Std. Error"][1]*100,
-                        TRUE ~ coef(robust_summary(r_episodes))[, "Std. Error"][2]*100)) |> 
+depisodes_plot <- d0_no_encouragement |>
+  select(episodes_shown, episodes_pick) |>
+  group_by(episodes_shown) |>
+  summarise(
+    n = n(),
+    freq = mean(episodes_pick),
+    sd = sd(episodes_pick) * 100,
+    se = (sd(episodes_pick) / sqrt(n())) * 100
+  ) |>
   mutate(episodes_shown = case_when(episodes_shown==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = episodes_shown)
 
 ## dataframe for years information
 
-dyears_plot <- d0_no_encouragement |> 
-  select(years_shown, years_pick) |> 
-  group_by(years_shown, years_pick) |> 
-  summarise(n = n()) |> 
-  mutate(freq = n / sum(n)) |> 
-  filter(years_pick == 1) |> 
-  mutate(sd = sqrt((freq*(1-freq))/n)*100,
-         se = case_when(years_shown==0 ~ coef(robust_summary(r_years))[, "Std. Error"][1]*100,
-                        TRUE ~ coef(robust_summary(r_years))[, "Std. Error"][2]*100)) |> 
+dyears_plot <- d0_no_encouragement |>
+  select(years_shown, years_pick) |>
+  group_by(years_shown) |>
+  summarise(
+    n = n(),
+    freq = mean(years_pick),
+    sd = sd(years_pick) * 100,
+    se = (sd(years_pick) / sqrt(n())) * 100
+  ) |>
   mutate(years_shown = case_when(years_shown==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = years_shown)
 
 df_combined <- bind_rows(
@@ -377,46 +385,43 @@ df_combined <- bind_rows(
 
 p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
   geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
-  geom_text(data = df_combined %>% filter(!(Category == "\nOver 3\nHours" & Condition == "\"Control\"")), 
-          aes(label=paste0(sprintf("%.1f", freq*100),"%")), 
-          position=position_dodge(width=0.7), vjust=5, size = 4, color = "white")+
+  geom_text(data = df_combined %>% filter(!(Category == "\nOver 3\nHours" & Condition == "\"Control\"")),
+          aes(label=paste0(sprintf("%.1f", freq*100),"%")),
+          position=position_dodge(width=0.7), vjust=5, size = 5, color = "white", family = "Times New Roman")+
   geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
   facet_wrap(~factor(Category, c("\nOver 3\nHours", '\nStarted 3\nYears Ago', "\nWith Over\n300 Episodes", '\nWith Female\nHost')), nrow = 1, strip.position = "bottom") +
-  geom_segment(data = df_combined %>% filter(Category %in% c("\nOver 3\nHours", "\nWith Over\n300 Episodes", '\nWith Female\nHost') & Condition == "\"Treatment\""), 
-               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5), 
+  geom_segment(data = df_combined %>% filter(Category %in% c("\nOver 3\nHours", "\nWith Over\n300 Episodes", '\nWith Female\nHost') & Condition == "\"Treatment\""),
+               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5),
                inherit.aes = FALSE) +
-    geom_segment(data = df_combined %>% filter(Category %in% c('\nStarted 3\nYears Ago') & Condition == "\"Control\""), 
-               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5), 
+    geom_segment(data = df_combined %>% filter(Category %in% c('\nStarted 3\nYears Ago') & Condition == "\"Control\""),
+               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5),
                inherit.aes = FALSE) +
-  geom_text(data = df_combined %>% filter(Category %in% c("\nWith Over\n300 Episodes") & Condition == "\"Treatment\""), 
-            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."), 
-            inherit.aes = FALSE, vjust = 0) +
-    geom_text(data = df_combined %>% filter(Category %in% c("\nOver 3\nHours") & Condition == "\"Treatment\""), 
-            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "+"), 
-            inherit.aes = FALSE, vjust = 0) +
-    geom_text(data = df_combined %>% filter(Category %in% c('\nStarted 3\nYears Ago') & Condition == "\"Control\""), 
-            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "*"), 
-            inherit.aes = FALSE, vjust = 0) +
-  geom_text(data = df_combined %>% filter(Category == '\nWith Female\nHost' & Condition == "\"Treatment\""), 
-            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
-            inherit.aes = FALSE, vjust = 0) +
-  geom_text(data = df_combined %>% filter(Category == "\nOver 3\nHours" & Condition == "\"Control\""), 
-          aes(label = paste0(sprintf("%.1f", freq*100), "%"), 
-              x = Condition, y = freq*100 + se + 4), # offset to adjust the position
-          inherit.aes = FALSE, vjust = -0.5, size = 4, color = "black") +
-  
+  geom_text(data = df_combined %>% filter(Category %in% c("\nWith Over\n300 Episodes") & Condition == "\"Treatment\""),
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."),
+            inherit.aes = FALSE, vjust = 0, size = 5, family = "Times New Roman") +
+    geom_text(data = df_combined %>% filter(Category %in% c("\nOver 3\nHours") & Condition == "\"Treatment\""),
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "+"),
+            inherit.aes = FALSE, vjust = 0, size = 5, family = "Times New Roman") +
+    geom_text(data = df_combined %>% filter(Category %in% c('\nStarted 3\nYears Ago') & Condition == "\"Control\""),
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "*"),
+            inherit.aes = FALSE, vjust = 0, size = 5, family = "Times New Roman") +
+  geom_text(data = df_combined %>% filter(Category == '\nWith Female\nHost' & Condition == "\"Treatment\""),
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"),
+            inherit.aes = FALSE, vjust = 0, size = 5, family = "Times New Roman") +
+  geom_text(data = df_combined %>% filter(Category == "\nOver 3\nHours" & Condition == "\"Control\""),
+          aes(label = paste0(sprintf("%.1f", freq*100), "%"),
+              x = Condition, y = freq*100 + se + 4),
+          inherit.aes = FALSE, vjust = -0.5, size = 5, color = "black", family = "Times New Roman") +
   theme_bw() +
-  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,85)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
-  labs(x= "Feedback on % of podcasts...", y = "% of New Podcasts with the Target Attribute",
-       caption = 'Note: Error Bars are SEs', title = "The Effect of Getting Feedback on Your Panel's Composition") +
-  theme(plot.caption = element_text(face = "italic"),
-        legend.position = "none",
-        #legend.position = c(0.5, 0.85),
+  labs(x= "Feedback on % of podcasts...", y = "% of New Podcasts with the Target Attribute") +
+  theme(plot.caption = element_text(face = "italic", family = "Times New Roman"),
+        legend.position = c(0.5, 0.95),
         legend.title = element_blank(),
         legend.direction = "horizontal",
-        legend.text = element_text(size = 14),
+        legend.text = element_text(size = 14, family = "Times New Roman"),
         legend.key.size = unit(7, 'mm'),
         legend.background = element_rect(fill = "white"),
         panel.grid.minor = element_blank(),
@@ -424,80 +429,80 @@ p_combined_A <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Cond
         panel.border = element_rect(fill= NA, color = "white"),
         plot.background = element_rect(fill = "white"),
         panel.background = element_rect(fill = "white"),
-        axis.title.x = element_text(face="bold", size = 13, vjust = 19),
+        axis.title.x = element_text(face="bold", size = 14, vjust = 17, family = "Times New Roman"),
         plot.title = element_blank(),
-        axis.title.y = element_text(size = 14, color = "black"),
+        axis.title.y = element_text(size = 14, color = "black", family = "Times New Roman"),
         axis.text.x = element_blank(),
         axis.ticks = element_blank(),
-        axis.text.y = element_text(size = 14, color = "black"),
-        strip.text = element_text(size = 14, color = "black"),
-        strip.background = element_rect(color = "white", fill = "white"))
+        axis.text.y = element_text(size = 14, color = "black", family = "Times New Roman"),
+        strip.text = element_text(size = 14, color = "black", family = "Times New Roman"),
+        strip.background = element_rect(colour = "white", fill = "white"))
 
 #p_combined_A
 ```
 
 \newpage
 
-## Figure S5B Code
+## Figure S6B Code
 
 
 ```{r echo=TRUE}
-dgender_plot <- d0_w_encouragement |> 
-  select(gender_feedback, female) |> 
-  group_by(gender_feedback, female) |> 
-  summarise(n = n()) |> 
-  mutate(freq = n / sum(n)) |> 
-  filter(female == 1) |> 
-  mutate(sd = sqrt((freq*(1-freq))/n)*100,
-         se = case_when(gender_feedback==0 ~ coef(summary(r1))[, "Std. Error"][1]*100,
-                        TRUE ~ coef(robust_summary(r1))[, "Std. Error"][2]*100)) |> 
+dgender_plot <- d0_w_encouragement |>
+  select(gender_feedback, female) |>
+  group_by(gender_feedback) |>
+  summarise(
+    n = n(),
+    freq = mean(female),
+    sd = sd(female) * 100,
+    se = (sd(female) / sqrt(n())) * 100
+  ) |>
   mutate(gender_feedback = case_when(gender_feedback==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = gender_feedback)
 
-## dataframe for CEO information
+## dataframe for duration information
 
-dduration_plot <- d0_w_encouragement |> 
-  select(duration_shown, duration_pick) |> 
-  group_by(duration_shown, duration_pick) |> 
-  summarise(n = n()) |> 
-  mutate(freq = n / sum(n)) |> 
-  filter(duration_pick == 1) |> 
-  mutate(sd = sqrt((freq*(1-freq))/n)*100,
-         se = case_when(duration_shown==0 ~ coef(robust_summary(r_duration))[, "Std. Error"][1]*100,
-                        TRUE ~ coef(robust_summary(r_duration))[, "Std. Error"][2]*100)) |> 
+dduration_plot <- d0_w_encouragement |>
+  select(duration_shown, duration_pick) |>
+  group_by(duration_shown) |>
+  summarise(
+    n = n(),
+    freq = mean(duration_pick),
+    sd = sd(duration_pick) * 100,
+    se = (sd(duration_pick) / sqrt(n())) * 100
+  ) |>
   mutate(duration_shown = case_when(duration_shown==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = duration_shown)
 
 ## dataframe for episodes information
 
-depisodes_plot <- d0_w_encouragement |> 
-  select(episodes_shown, episodes_pick) |> 
-  group_by(episodes_shown, episodes_pick) |> 
-  summarise(n = n()) |> 
-  mutate(freq = n / sum(n)) |> 
-  filter(episodes_pick == 1) |> 
-  mutate(sd = sqrt((freq*(1-freq))/n)*100,
-         se = case_when(episodes_shown==0 ~ coef(robust_summary(r_episodes))[, "Std. Error"][1]*100,
-                        TRUE ~ coef(robust_summary(r_episodes))[, "Std. Error"][2]*100)) |> 
+depisodes_plot <- d0_w_encouragement |>
+  select(episodes_shown, episodes_pick) |>
+  group_by(episodes_shown) |>
+  summarise(
+    n = n(),
+    freq = mean(episodes_pick),
+    sd = sd(episodes_pick) * 100,
+    se = (sd(episodes_pick) / sqrt(n())) * 100
+  ) |>
   mutate(episodes_shown = case_when(episodes_shown==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = episodes_shown)
 
 ## dataframe for years information
 
-dyears_plot <- d0_w_encouragement |> 
-  select(years_shown, years_pick) |> 
-  group_by(years_shown, years_pick) |> 
-  summarise(n = n()) |> 
-  mutate(freq = n / sum(n)) |> 
-  filter(years_pick == 1) |> 
-  mutate(sd = sqrt((freq*(1-freq))/n)*100,
-         se = case_when(years_shown==0 ~ coef(robust_summary(r_years))[, "Std. Error"][1]*100,
-                        TRUE ~ coef(robust_summary(r_years))[, "Std. Error"][2]*100)) |> 
+dyears_plot <- d0_w_encouragement |>
+  select(years_shown, years_pick) |>
+  group_by(years_shown) |>
+  summarise(
+    n = n(),
+    freq = mean(years_pick),
+    sd = sd(years_pick) * 100,
+    se = (sd(years_pick) / sqrt(n())) * 100
+  ) |>
   mutate(years_shown = case_when(years_shown==1 ~ "\"Treatment\"",
-                          TRUE ~ "\"Control\"")) |> 
+                          TRUE ~ "\"Control\"")) |>
   rename(Condition = years_shown)
 
 df_combined <- bind_rows(
@@ -510,77 +515,57 @@ df_combined <- bind_rows(
 
 p_combined_B <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
   geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
-  geom_text(data = df_combined %>% filter(!(Category == "\nOver 3\nHours")), 
-          aes(label=paste0(sprintf("%.1f", freq*100),"%")), 
-          position=position_dodge(width=0.7), vjust=5, size = 4, color = "white")+
+  geom_text(data = df_combined %>% filter(!(Category == "\nOver 3\nHours")),
+          aes(label=paste0(sprintf("%.1f", freq*100),"%")),
+          position=position_dodge(width=0.7), vjust=5, size = 5, color = "white", family = "Times New Roman")+
   geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
   facet_wrap(~factor(Category, c("\nOver 3\nHours", '\nStarted 3\nYears Ago', "\nWith Over\n300 Episodes", '\nWith Female\nHost')), nrow = 1, strip.position = "bottom") +
-  geom_segment(data = df_combined %>% filter(Category %in% c("\nOver 3\nHours", "\nWith Over\n300 Episodes", '\nWith Female\nHost') & Condition == "\"Treatment\""), 
-               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5), 
+  geom_segment(data = df_combined %>% filter(Category %in% c("\nOver 3\nHours", "\nWith Over\n300 Episodes", '\nWith Female\nHost') & Condition == "\"Treatment\""),
+               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5),
                inherit.aes = FALSE) +
-    geom_segment(data = df_combined %>% filter(Category %in% c('\nStarted 3\nYears Ago') & Condition == "\"Control\""), 
-               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5), 
+    geom_segment(data = df_combined %>% filter(Category %in% c('\nStarted 3\nYears Ago') & Condition == "\"Control\""),
+               aes(x = 1, xend = 2, y = freq*100 + se + 5, yend = freq*100 + se + 5),
                inherit.aes = FALSE) +
-  geom_text(data = df_combined %>% filter(Category %in% c("\nWith Over\n300 Episodes") & Condition == "\"Treatment\""), 
-            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."), 
-            inherit.aes = FALSE, vjust = 0) +
-    geom_text(data = df_combined %>% filter(Category %in% c("\nOver 3\nHours") & Condition == "\"Treatment\""), 
-            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "*"), 
-            inherit.aes = FALSE, vjust = 0) +
-    geom_text(data = df_combined %>% filter(Category %in% c('\nStarted 3\nYears Ago') & Condition == "\"Control\""), 
-            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "*"), 
-            inherit.aes = FALSE, vjust = 0) +
-  geom_text(data = df_combined %>% filter(Category == '\nWith Female\nHost' & Condition == "\"Treatment\""), 
-            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"), 
-            inherit.aes = FALSE, vjust = 0) +
-  geom_text(data = df_combined %>% filter(Category == "\nOver 3\nHours"), 
-          aes(label = paste0(sprintf("%.1f", freq*100), "%"), 
-              x = Condition, y = 40), # offset to adjust the position
-          inherit.aes = FALSE, vjust = -0.5, size = 4, color = "black") +
-  
+  geom_text(data = df_combined %>% filter(Category %in% c("\nWith Over\n300 Episodes") & Condition == "\"Treatment\""),
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "n.s."),
+            inherit.aes = FALSE, vjust = 0, size = 5, family = "Times New Roman") +
+    geom_text(data = df_combined %>% filter(Category %in% c("\nOver 3\nHours") & Condition == "\"Treatment\""),
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 7, yend = freq*100 + se + 7, label = "*"),
+            inherit.aes = FALSE, vjust = 0, size = 5, family = "Times New Roman") +
+    geom_text(data = df_combined %>% filter(Category %in% c('\nStarted 3\nYears Ago') & Condition == "\"Control\""),
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "*"),
+            inherit.aes = FALSE, vjust = 0, size = 5, family = "Times New Roman") +
+  geom_text(data = df_combined %>% filter(Category == '\nWith Female\nHost' & Condition == "\"Treatment\""),
+            aes(x = 1.5, xend = 1.5, y = freq*100 + se + 5, yend = freq*100 + se + 5, label = "***"),
+            inherit.aes = FALSE, vjust = 0, size = 5, family = "Times New Roman") +
+  geom_text(data = df_combined %>% filter(Category == "\nOver 3\nHours"),
+          aes(label = paste0(sprintf("%.1f", freq*100), "%"),
+              x = Condition, y = 40),
+          inherit.aes = FALSE, vjust = -0.5, size = 5, color = "black", family = "Times New Roman") +
   theme_bw() +
-  scale_fill_manual(values = c("#990000", "#011F5B"), labels = c("No feedback", "Feedback provided"), "Feedback") +
+  scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,110)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
-  labs(x = "Feedback on % of podcasts...", y = "% of New Podcasts with the Target Attribute",
-       caption = 'Note: Error Bars are SEs', title = "The Effect of Getting Feedback on Your Panel's Composition") +
-  theme(plot.caption = element_text(face = "italic"),
-        legend.position = c(0.5, 0.85),
-        legend.title = element_blank(),
-        legend.direction = "horizontal",
-        legend.text = element_text(size = 12),
-        legend.key.size = unit(7, 'mm'),
-        legend.background = element_rect(fill = "white"),
+  labs(x = "Feedback on % of podcasts...", y = "% of New Podcasts with the Target Attribute") +
+  theme(plot.caption = element_text(face = "italic", family = "Times New Roman"),
+        legend.position = "none",
         panel.grid.minor = element_blank(),
         panel.grid = element_blank(),
         panel.border = element_rect(fill= NA, color = "white"),
         plot.background = element_rect(fill = "white"),
         panel.background = element_rect(fill = "white"),
-        axis.title.x = element_text(face="bold", size = 13, vjust = 19),
+        axis.title.x = element_text(face="bold", size = 14, vjust = 17, family = "Times New Roman"),
         plot.title = element_blank(),
-        axis.title.y = element_blank(),  # Remove y-axis title
+        axis.title.y = element_text(size = 14, color = "black", family = "Times New Roman"),
         axis.text.x = element_blank(),
         axis.ticks = element_blank(),
-        axis.text.y = element_blank(),  # Remove y-axis text
-        axis.ticks.y = element_blank(),  # Remove y-axis ticks
-        strip.text = element_text(size = 12, color = "black"),
-        strip.background = element_rect(color = "white", fill = "white"))
+        axis.text.y = element_text(size = 14, color = "black", family = "Times New Roman"),
+        strip.text = element_text(size = 14, color = "black", family = "Times New Roman"),
+        strip.background = element_rect(colour = "white", fill = "white"))
 
 #p_combined_B
-# Create separate plots for the labels
-label_A <- ggplot() + 
-  annotate("text", x = 0, y = 0, label = "A", size = 6, fontface = "bold") +
-  theme_void()
 
-label_B <- ggplot() + 
-  annotate("text", x = 0, y = 0, label = "B", size = 6, fontface = "bold") +
-  theme_void()
-
-# Combine the main plots and labels using grid.arrange()
-combined_plot <- grid.arrange(
-  arrangeGrob(label_A, p_combined_A, ncol = 1, heights = c(0.1, 1)),
-  arrangeGrob(label_B, p_combined_B, ncol = 1, heights = c(0.1, 1)),
-  ncol = 2
-)
-ggsave("../Supplemental_Figures/Figure-S5.pdf", combined_plot, width = 16, height = 7, units = "in", device = cairo_pdf, family = "Times New Roman")
+# Save individual plot objects as RDS for combination in figure-S6.R
+saveRDS(p_combined_A, file = "p_combined_S2B_A.rds")
+saveRDS(p_combined_B, file = "p_combined_S2B_B.rds")
 ```

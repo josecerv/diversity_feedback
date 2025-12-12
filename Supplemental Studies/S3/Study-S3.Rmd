@@ -1,0 +1,194 @@
+---
+title: "Study S3: Author Attribute Importance Pretest"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 2
+header-includes:
+  \renewcommand{\contentsname}{Items}
+   \usepackage{fvextra}
+   \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+---
+
+```{r setup, include=FALSE}
+rm(list=ls())
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE,
+	results = "hide"
+)
+library(dplyr)
+library(tidyverse)
+library(qualtRics)
+library(TOSTER)
+```
+
+```{r include=FALSE}
+qualtrics_api_credentials(api_key = "BJ6aDiEgtQihneCgtZycVLYjaj0ao9gYkdRkb1UZ",
+                          base_url = "yul1.qualtrics.com",
+                          install = F,
+                          overwrite = T)
+
+# Function to clean importance values
+clean_importance <- function(x) {
+  x <- as.character(x)
+  x <- gsub("Not at all important", "", x)
+  x <- gsub("Very important", "", x)
+  x <- gsub("[^0-9]", "", x)
+  x <- as.numeric(x)
+  return(x)
+}
+```
+
+\newpage
+
+## Read Data
+
+```{r echo=TRUE}
+# Set this to TRUE if you have API access, FALSE if using CSV
+USE_API <- TRUE
+
+if(USE_API) {
+  ## Pull directly from Qualtrics API
+  data_raw <- fetch_survey(
+    surveyID = "SV_cASPdJCJOBdOu1M",
+    verbose = FALSE
+  )
+
+  # Filter for September 26, 2025 and clean
+  d0 <- data_raw %>%
+    mutate(date = as.Date(StartDate)) %>%
+    filter(date == as.Date("2025-09-26"),
+           Finished == TRUE,
+           !is.na(attribute),
+           !is.na(importance),
+           !is.na(workerId)) %>%
+    mutate(
+      importance_clean = clean_importance(importance),
+      attribute_clean = trimws(attribute)
+    ) %>%
+    filter(!is.na(importance_clean)) %>%
+    select(workerId, attribute_clean, importance_clean, gender)
+
+  # Calculate number excluded
+  num_excluded <- nrow(data_raw %>% filter(as.Date(StartDate) == as.Date("2025-09-26"))) - nrow(d0)
+  d0$num_excluded_total <- num_excluded
+
+  # Write the API-pulled data into a CSV file
+  write.csv(d0, 'StudyS3.csv', row.names = FALSE, quote = TRUE)
+
+} else {
+  # Read the processed data directly from CSV
+  d0 <- read.csv('StudyS3.csv', check.names = FALSE)
+  num_excluded <- unique(d0$num_excluded_total)
+}
+```
+
+\newpage
+
+## Demographics
+
+```{r demographics, results='markup'}
+## Sample size
+cat('Total N:', nrow(d0), '\n')
+cat('Excluded:', num_excluded, '\n\n')
+
+## Gender
+gender_percentages <- round(prop.table(table(d0$gender)) * 100, 1)
+gender_df <- data.frame(
+  Gender = names(gender_percentages),
+  Percentage = as.numeric(gender_percentages)
+)
+print(gender_df)
+```
+
+\newpage
+
+## Analysis: Comparison to Gender
+
+```{r analysis}
+# Define focal attribute
+gender_attr <- "were women."
+
+# Get gender data
+gender_data <- d0 %>%
+  filter(attribute_clean == gender_attr) %>%
+  pull(importance_clean)
+
+gender_mean <- mean(gender_data, na.rm = TRUE)
+gender_sd <- sd(gender_data, na.rm = TRUE)
+gender_n <- length(gender_data)
+
+# Get all other attributes (excluding racial minorities for gender comparison)
+other_attrs <- d0 %>%
+  filter(attribute_clean != gender_attr,
+         attribute_clean != "were racial minorities.") %>%
+  pull(attribute_clean) %>%
+  unique()
+
+# Compare each attribute to gender
+results <- lapply(other_attrs, function(attr) {
+  attr_data <- d0 %>%
+    filter(attribute_clean == attr) %>%
+    pull(importance_clean)
+
+  attr_mean <- mean(attr_data, na.rm = TRUE)
+  attr_sd <- sd(attr_data, na.rm = TRUE)
+  attr_n <- length(attr_data)
+
+  # Independent samples t-test (Welch's)
+  t_result <- t.test(gender_data, attr_data, var.equal = FALSE)
+
+  # Cohen's d
+  pooled_sd <- sqrt(((gender_n - 1) * gender_sd^2 + (attr_n - 1) * attr_sd^2) / (gender_n + attr_n - 2))
+  cohen_d <- (gender_mean - attr_mean) / pooled_sd
+
+  # One-sided equivalence test (upper bound only - testing if attr is NOT less important)
+  tost_result <- TOSTtwo(
+    m1 = gender_mean,
+    m2 = attr_mean,
+    sd1 = gender_sd,
+    sd2 = attr_sd,
+    n1 = gender_n,
+    n2 = attr_n,
+    low_eqbound_d = -0.5,
+    high_eqbound_d = 0.5,
+    alpha = 0.05,
+    var.equal = FALSE,
+    plot = FALSE
+  )
+
+  data.frame(
+    attribute = attr,
+    attr_mean = attr_mean,
+    attr_sd = attr_sd,
+    cohen_d = cohen_d,
+    one_sided_p = tost_result$TOST_p2,
+    stringsAsFactors = FALSE
+  )
+})
+
+results_df <- do.call(rbind, results)
+
+# Sort by one-sided p (smallest first = most clearly not less important)
+results_df <- results_df %>%
+  arrange(one_sided_p)
+```
+
+```{r table-s3, results='markup'}
+# Create simple display table
+display_table <- results_df %>%
+  mutate(
+    Attribute = attribute,
+    `M (SD)` = paste0(round(attr_mean, 2), " (", round(attr_sd, 2), ")"),
+    `Cohen's d` = round(cohen_d, 2),
+    `One-sided p` = round(one_sided_p, 3)
+  ) %>%
+  select(Attribute, `M (SD)`, `Cohen's d`, `One-sided p`)
+
+cat("Gender: M =", round(gender_mean, 2), ", SD =", round(gender_sd, 2), "\n\n")
+print(display_table, row.names = FALSE)
+```
+

@@ -57,7 +57,8 @@ data <- data_raw %>%
   filter(date == as.Date("2025-09-26"),
          Finished == TRUE,
          !is.na(attribute),
-         !is.na(importance)) %>%
+         !is.na(importance),
+         !is.na(workerId)) %>%
   mutate(
     importance_clean = clean_importance(importance),
     attribute_clean = trimws(attribute)
