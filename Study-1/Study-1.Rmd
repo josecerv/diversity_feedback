@@ -316,12 +316,18 @@ cat('Set 2: ', round(prop.table(table(d0$set_num)) * 100, 2)[2], '%\n')
 cat('Mean proportion of women selected: ', round(mean(d0$women_proportion), 3), '\n')
 cat('SD proportion of women selected: ', round(sd(d0$women_proportion), 3), '\n')
 
-d0 |>
-  dplyr::select(women_proportion, treatment) |>
-  dplyr::group_by(treatment) |>
-  dplyr::summarize(mean = mean(women_proportion), sd = sd(women_proportion), n = n())
+## Test for treatment × set interaction
+interaction_model <- lm(women_proportion ~ treatment * set_num, data=d0)
+int_summary <- robust_summary(interaction_model)
 
-t.test(women_proportion ~ treatment, data=d0)
+# Extract interaction and set main effect
+int_coef <- int_summary$coefficients["treatment:set_num", "Estimate"]
+int_p <- int_summary$coefficients["treatment:set_num", "Pr(>|t|)"]
+set_coef <- int_summary$coefficients["set_num", "Estimate"]
+set_p <- int_summary$coefficients["set_num", "Pr(>|t|)"]
+
+cat(sprintf("Treatment × Set interaction: B = %.3f, p = %.3f\n", int_coef, int_p))
+cat(sprintf("Main effect of stimulus set: B = %.3f, p = %.3f\n", set_coef, set_p))
 
 ```
 
