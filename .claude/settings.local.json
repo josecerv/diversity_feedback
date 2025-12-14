@@ -32,7 +32,10 @@
       "Bash(\"C:\\Program Files\\R\\R-4.5.2\\bin\\Rscript.exe\" --version)",
       "Bash(\"C:\\Program Files\\R\\R-4.5.2\\bin\\Rscript.exe\" \"c:/Users/jcerv/Jose/diversity_feedback/base-rate-analysis/get_pool_info.R\")",
       "Bash(\"C:\\Program Files\\R\\R-4.5.2\\bin\\Rscript.exe\" \"c:/Users/jcerv/Jose/diversity_feedback/base-rate-analysis/get_unique_choices.R\")",
-      "Bash(\"C:\\Program Files\\R\\R-4.5.2\\bin\\Rscript.exe\" \"c:/Users/jcerv/Jose/diversity_feedback/base-rate-analysis/base_rate_analysis.R\")"
+      "Bash(\"C:\\Program Files\\R\\R-4.5.2\\bin\\Rscript.exe\" \"c:/Users/jcerv/Jose/diversity_feedback/base-rate-analysis/base_rate_analysis.R\")",
+      "Bash(head:*)",
+      "Bash(where Rscript:*)",
+      "Bash(git reset HEAD .claude/settings.local.json nul)"
     ],
     "deny": [],
     "ask": []
