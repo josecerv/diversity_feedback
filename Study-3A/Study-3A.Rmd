@@ -1,5 +1,5 @@
 ---
-title: "Study 3A"
+title: "Study 3A (Race Biopic)"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document: 
@@ -107,7 +107,7 @@ extract_regression_estimates <- function(model) {
 
 ```{r echo=TRUE}
 # Set this to TRUE if you have API access, FALSE if using CSV
-USE_API <- FALSE
+USE_API <- F
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
@@ -365,7 +365,7 @@ duration_est <- extract_regression_estimates(r_duration)
 
 # Combine into a data frame
 study3A_estimates <- data.frame(
-    Study = "STUDY 2A",
+    Study = "STUDY 3A",
     Stimuli = c("race", "budget", "year", "duration"),
     Estimate = c(race_est$estimate, budget_est$estimate, year_est$estimate, duration_est$estimate),
     SE = c(race_est$se, budget_est$se, year_est$se, duration_est$se),
@@ -380,7 +380,7 @@ saveRDS(study3A_estimates, file = "../Manuscript_Figures/figure2-estimates/study
 
 \newpage
 
-## Figure 2B Figure Code
+## Figure S2 Figure Code
 
 ```{r echo=TRUE}
 ##### race
@@ -505,12 +505,12 @@ p_combined_B <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Cond
         strip.text = element_text(size = 20, color = "black", family = "Times New Roman"),
         strip.background = element_rect(colour = "white", fill = "white"))
 
-print(p_combined_B)
+#print(p_combined_B)
 
-# Save the plot
-ggsave("Figure-Study3A.pdf", plot = p_combined_B, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
-ggsave("Figure-Study3A.png", plot = p_combined_B, width = 10, height = 8, units = "in", dpi = 600)
-saveRDS(p_combined_B, file = "p_combined_B.rds")
+# # Save the plot
+# ggsave("Figure-Study3A.pdf", plot = p_combined_B, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+# ggsave("Figure-Study3A.png", plot = p_combined_B, width = 10, height = 8, units = "in", dpi = 600)
+# saveRDS(p_combined_B, file = "p_combined_B.rds")
 
 ```
 

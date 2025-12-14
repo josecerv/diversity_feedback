@@ -1,5 +1,5 @@
 ---
-title: "Study 4B"
+title: "Study 4B (Gender Author)"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document:
@@ -44,10 +44,6 @@ loadfonts(device = "pdf", quiet = TRUE)
 ```
 
 ```{r include=FALSE}
-qualtrics_api_credentials(api_key = "BJ6aDiEgtQihneCgtZycVLYjaj0ao9gYkdRkb1UZ",
-                          base_url = "yul1.qualtrics.com",
-                          install = F,
-                          overwrite = T)
 if ( (!is.null(knitr::current_input()))) {
   if (("pdf_document" ==
                 rmarkdown::all_output_formats(knitr::current_input())[1])) {
@@ -120,11 +116,11 @@ extract_regression_estimates <- function(model) {
 
 ```{r echo=TRUE}
 # Set this to TRUE if you have API access, FALSE if using CSV
-USE_API <- T
+USE_API <- F
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
-  qual_data <- fetch_survey(surveyID='SV_8vM8mfohSNgdTxQ',  # New Study ID
+  qual_data <- fetch_survey(surveyID='SV_8vM8mfohSNgdTxQ',  
                             start_date = "2025-10-06",
                      force_request = T)
 } else {
@@ -619,7 +615,7 @@ sold30m_est <- extract_regression_estimates(r_sold30m)
 forms_est <- extract_regression_estimates(r_forms)
 
 study4B_estimates <- data.frame(
-    Study = "STUDY 3B",
+    Study = "STUDY 4B",
     Stimuli = c("gender", "classic", "sold30m", "forms"),
     Estimate = c(gender_est$estimate, classic_est$estimate, sold30m_est$estimate, forms_est$estimate),
     SE = c(gender_est$se, classic_est$se, sold30m_est$se, forms_est$se),
@@ -735,7 +731,7 @@ summary(med.out.combined.external)
 
 ```
 
-## Figure S1 Code
+## Figure S3B Code
 
 ```{r echo=TRUE}
 
@@ -873,16 +869,17 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         strip.text = element_text(size = 20, color = "black", family = "Times New Roman"),
         strip.background = element_rect(colour = "white", fill = "white"))
 
-print(p_combined)
-
-# Save plot object as RDS for manuscript figure combination
-saveRDS(p_combined, file = "p_combined_study4B.rds")
-
-# Save the plot
-ggsave("Figure-Study4B.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
-ggsave("Figure-Study4B.png", plot = p_combined, width = 10, height = 8, units = "in", dpi = 600)
+# print(p_combined)
+# 
+# # Save plot object as RDS for manuscript figure combination
+# saveRDS(p_combined, file = "p_combined_study4B.rds")
+# 
+# # Save the plot
+# ggsave("Figure-Study4B.pdf", plot = p_combined, width = 10, height = 8, units = "in", device = cairo_pdf, family = "Times New Roman")
+# ggsave("Figure-Study4B.png", plot = p_combined, width = 10, height = 8, units = "in", dpi = 600)
 ```
 
+\newpage
 
 ## System of Simultaneous Equations
 

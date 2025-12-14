@@ -1,5 +1,5 @@
 ---
-title: "NPR Study"
+title: "Study 1 (Gender NPR Study)"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document:
@@ -43,10 +43,7 @@ loadfonts(device = "pdf", quiet = TRUE)
 ```
 
 ```{r include=FALSE}
-qualtrics_api_credentials(api_key = "BJ6aDiEgtQihneCgtZycVLYjaj0ao9gYkdRkb1UZ",
-                          base_url = "yul1.qualtrics.com",
-                          install = F,
-                          overwrite = T)
+
 if ( (!is.null(knitr::current_input()))) {
   if (("pdf_document" ==
                 rmarkdown::all_output_formats(knitr::current_input())[1])) {
@@ -378,50 +375,6 @@ summary(r4)
 
 \newpage
 
-## Dropout Robustness Check
-
-```{r echo=FALSE, results='markup'}
-## Dropout robustness check (PREREGISTERED)
-# For any participants who drop out after assignment to conditions but before selecting experts,
-# impute their women_proportion as the mean from the no gender feedback condition
-
-cat("\n\nDropout Robustness Check (PREREGISTERED):\n")
-cat("=========================================\n\n")
-
-# Check if there are any missing values in women_proportion among those assigned to conditions
-# (This would indicate dropouts after assignment)
-if(any(is.na(d0$women_proportion))) {
-  cat("Dropouts detected after condition assignment\n")
-
-  # Calculate mean women_proportion in control condition
-  control_mean <- mean(d0$women_proportion[d0$treatment == 0], na.rm = TRUE)
-
-  cat("Control condition mean women proportion:", control_mean, "\n")
-  cat("Number of dropouts to impute:", sum(is.na(d0$women_proportion)), "\n\n")
-
-  # Create dataset with imputed values
-  d0_imputed <- d0 |>
-    mutate(women_proportion_imputed = case_when(
-      is.na(women_proportion) ~ control_mean,
-      TRUE ~ women_proportion
-    ))
-
-  # Run primary model with imputed data
-  r5_imputed <- lm(women_proportion_imputed ~ treatment + set_num, data=d0_imputed)
-
-  cat("Primary analysis with dropout imputation:\n")
-  robust_summary(r5_imputed)
-  robust_confint(r5_imputed)
-
-} else {
-  cat("No dropouts detected after condition assignment.\n")
-  cat("All participants who were assigned to conditions completed their expert selections.\n")
-}
-```
-
-
-\newpage
-
 ## Secondary Analysis: Other Attributes
 
 ```{r echo=FALSE, results='markup'}
@@ -478,7 +431,7 @@ saveRDS(study1_estimates, file = "study1_estimates.rds")
 
 \newpage
 
-## Visualization
+## Figure 3A
 
 ```{r echo=FALSE, fig.height=8, fig.width=10, results='markup'}
 
@@ -612,14 +565,14 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         strip.background = element_rect(colour = "white", fill = "white"),
         text = element_text(family = "Times New Roman"))
 
-print(p_combined)
+#print(p_combined)
 
 # Save the plot with Times New Roman font
 # PDF export using cairo_pdf for proper font embedding
-ggsave("Figure-Study1.pdf", plot = p_combined, width = 10, height = 9, units = "in", device = cairo_pdf, family = "Times New Roman")
+# ggsave("Figure-Study1.pdf", plot = p_combined, width = 10, height = 9, units = "in", device = cairo_pdf, family = "Times New Roman")
 
-# PNG export - use type="cairo" for Windows to properly render Times New Roman
-ggsave("Figure-Study1.png", plot = p_combined, width = 10, height = 9, units = "in", dpi = 600, type = "cairo")
+# # PNG export - use type="cairo" for Windows to properly render Times New Roman
+# ggsave("Figure-Study1.png", plot = p_combined, width = 10, height = 9, units = "in", dpi = 600, type = "cairo")
 
 # Save RDS for combined figure
 saveRDS(p_combined, file = "p_combined_study1.rds")
@@ -694,7 +647,4 @@ summary_table <- data.frame(
   )
 )
 print(summary_table, row.names = FALSE)
-
-
-
 ```

@@ -32,6 +32,7 @@ library(grid)
 library(extrafont)
 library(stargazer)
 library(tidyverse)
+library(pander)
 ```
 
 ```{r include=FALSE}
@@ -124,7 +125,7 @@ s4A <- read.csv("Study4A.csv", check.names = F)
 s4B <- read.csv("Study4B.csv", check.names = F)
 ```
 
-## Simulation (Table 7, S8)
+## Simulation (Table S12, S14)
 
 ```{r, results="asis"}
 perform_simulation <- function(data, study_type) {
@@ -207,8 +208,8 @@ knitr::kable(wald_results,
              col.names = c("Study", "F-value", "p-value"),
              digits = 4)
 
-robust_confint(models$s3A)
-robust_confint(models$s3B)
-robust_confint(models$s4A)
-robust_confint(models$s4B)
+robust_confint(models$s3A) |> pander()
+robust_confint(models$s3B) |> pander()
+robust_confint(models$s4A) |> pander()
+robust_confint(models$s4B) |> pander()
 ```

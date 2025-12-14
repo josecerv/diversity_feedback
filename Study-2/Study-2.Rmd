@@ -1,5 +1,5 @@
 ---
-title: "Study 2"
+title: "Study 2 (Gender Biography)"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document: 
@@ -116,7 +116,7 @@ extract_regression_estimates <- function(model) {
 
 ```{r echo=TRUE}
 # Set this to TRUE if you have API access, FALSE if using CSV
-USE_API <- FALSE
+USE_API <- F
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
@@ -352,7 +352,7 @@ year_est <- extract_regression_estimates(r_year)
 entertainer_est <- extract_regression_estimates(r_entertainer)
 
 study2_estimates <- data.frame(
-    Study = "STUDY 5",
+    Study = "STUDY 2",
     Stimuli = c("gender", "pages", "years", "entertainer"),
     Estimate = c(gender_est$estimate, pages_est$estimate, year_est$estimate, entertainer_est$estimate),
     SE = c(gender_est$se, pages_est$se, year_est$se, entertainer_est$se),
@@ -367,7 +367,7 @@ saveRDS(study2_estimates, file = "../Manuscript_Figures/figure2-estimates/study2
 
 \newpage
 
-## Figure 6 Code
+## Figure 3B Code
 
 ```{r echo=TRUE}
 dfemale_plot <- d0 |> 
@@ -484,14 +484,14 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         axis.text.y = element_text(size = 20, color = "black", family = "Times New Roman"),
         strip.text = element_text(size = 20, color = "black", family = "Times New Roman", margin = margin(t = 20)),
         strip.background = element_rect(colour = "white", fill = "white"))
-print(p_combined)
+#print(p_combined)
 
 # Save the plot with Times New Roman font
 # PDF export using cairo_pdf for proper font embedding
-ggsave("Figure-Study2.pdf", plot = p_combined, width = 10, height = 9, units = "in", device = cairo_pdf, family = "Times New Roman")
-
-# PNG export - use type="cairo" for Windows to properly render Times New Roman
-ggsave("Figure-Study2.png", plot = p_combined, width = 10, height = 9, units = "in", dpi = 600, type = "cairo")
+# ggsave("Figure-Study2.pdf", plot = p_combined, width = 10, height = 9, units = "in", device = cairo_pdf, family = "Times New Roman")
+# 
+# # PNG export - use type="cairo" for Windows to properly render Times New Roman
+# ggsave("Figure-Study2.png", plot = p_combined, width = 10, height = 9, units = "in", dpi = 600, type = "cairo")
 
 # Save RDS for combined figure
 saveRDS(p_combined, file = "p_combined_study2.rds")
