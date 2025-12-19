@@ -1,15 +1,15 @@
 ---
 title: "Study 5 (Gender 2x2 Business Panel)"
-date: '`r format(Sys.Date(), "%B %d, %Y")`'
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
 output:
   pdf_document:
     toc: yes
     toc_depth: 3
     fig_caption: true
 header-includes:
-  \renewcommand{\contentsname}{Items}
-  \usepackage{fvextra}
-  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  - \renewcommand{\contentsname}{Items}
+  - \usepackage{fvextra}
+  - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 ---
 
 ```{r setup, include=FALSE}
@@ -89,7 +89,7 @@ robust_confint <- function(model, level = 0.95) {
 
 ```{r include=FALSE}
 # Set this to TRUE if you have API access, FALSE if using CSV
-USE_API <- F
+USE_API <- FALSE
 
 if(USE_API) {
   ## Pull directly from Qualtrics API (new survey with mechanism scales)

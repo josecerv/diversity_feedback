@@ -1,15 +1,15 @@
 ---
 title: "Study 1 (Gender NPR Study)"
-date: '`r format(Sys.Date(), "%B %d, %Y")`'
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
 output:
   pdf_document:
     toc: yes
     toc_depth: 2
     fig_caption: true
 header-includes:
-  \renewcommand{\contentsname}{Items}
-   \usepackage{fvextra}
-   \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  - \renewcommand{\contentsname}{Items}
+  - \usepackage{fvextra}
+  - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 ---
 
 ```{r setup, include=FALSE}
@@ -33,13 +33,23 @@ library(tidyverse)
 library(ggplot2)
 library(extrafont)
 
-# Load and register Times New Roman font
-# Only run font_import() once - it takes a while
-if (!("Times New Roman" %in% fonts())) {
-  font_import(pattern = "times", prompt = FALSE)
-}
-loadfonts(device = "win", quiet = TRUE)
-loadfonts(device = "pdf", quiet = TRUE)
+# Load and register Times New Roman font (with fallback for systems without it)
+# This is wrapped in tryCatch to prevent errors on systems where fonts aren't available
+tryCatch({
+  if (!("Times New Roman" %in% fonts())) {
+    font_import(pattern = "times", prompt = FALSE)
+  }
+  # Load fonts based on OS
+  if (.Platform$OS.type == "windows") {
+    loadfonts(device = "win", quiet = TRUE)
+  }
+  loadfonts(device = "pdf", quiet = TRUE)
+}, error = function(e) {
+  message("Note: Could not load Times New Roman font. Using default fonts.")
+})
+
+# Set font variable with fallback - use throughout document for consistency
+plot_font <- if ("Times New Roman" %in% fonts()) "Times New Roman" else "sans"
 ```
 
 ```{r include=FALSE}
@@ -114,7 +124,7 @@ extract_regression_estimates <- function(model) {
 
 ```{r include=FALSE}
 # Set this to TRUE if you have API access, FALSE if using CSV
-USE_API <- T
+USE_API <- FALSE
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
@@ -187,7 +197,7 @@ if(USE_API) {
       race_code = case_when(str_detect(race, "White / Caucasian") ~ 1, TRUE ~ 0)
     ) |>
     dplyr::select(treatment, set_num, women_feedback, age_feedback, location_feedback, university_feedback,
-                  women_count, women_proportion, women_choice3, age_count, age_proportion,
+                  women_count, women_proportion, age_count, age_proportion,
                   location_count, location_proportion, university_count, university_proportion,
                   `choice-1`:`choice-3`, race, gender, age, gender_code, race_code, cond, set) %>%
     slice(1:1000) # pre-registered sample size
@@ -361,15 +371,6 @@ r3 <- lm(women_proportion ~ women_feedback + gender_code + race_code + age, data
 # Display the robust_summary with robust standard errors
 robust_summary(r3)
 robust_confint(r3)
-
-## logistic regression
-# Fit the logistic regression model using the third (final) choice
-r4 <- glm(women_choice3 ~ women_feedback, family = binomial, data=d0)
-
-# Odds ratio
-tidy_r4 <- tidy(r4, exponentiate = TRUE, conf.int = T)
-print(tidy_r4)
-summary(r4)
 ```
 
 
@@ -528,7 +529,7 @@ df_combined <- bind_rows(
 p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condition)) +
   geom_bar(stat="identity", width = 0.85, position = position_dodge(width = 0.7)) +
   geom_text(aes(label=paste0(sprintf("%.1f", freq*100),"%")),
-            position=position_dodge(width=0.7), vjust=5, size = 5, color = "white", family = "Times New Roman") +
+            position=position_dodge(width=0.7), vjust=5, size = 5, color = "white", family = plot_font) +
   geom_errorbar(aes(ymin=freq*100-se, ymax=freq*100+se), width = .1, position = position_dodge(width = 0.7)) +
   facet_wrap(~Category, nrow = 1, strip.position = "bottom") +
    geom_segment(data = df_combined %>% filter(Condition == "\"Treatment\""),
@@ -536,18 +537,18 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
                 inherit.aes = FALSE) +
    geom_text(data = df_combined %>% filter(Condition == "\"Treatment\""),
              aes(x = 1.5, y = freq*100 + se + 7, label = sig_label),
-             inherit.aes = FALSE, vjust = 0, size = 5, family = "Times New Roman") +
+             inherit.aes = FALSE, vjust = 0, size = 5, family = plot_font) +
   theme_bw() +
   scale_fill_manual(values = c("#011F5B", "#990000"), labels = c("No feedback provided", "Feedback provided"), "Feedback") +
   scale_y_continuous(labels = function(x) paste0(x,"%"), limits = c(0,100)) +
   scale_x_discrete(labels = c("\"Control\"" = "Not\nShown", "\"Treatment\"" = "Shown")) +
   labs(x = "Feedback on % of Experts Who Were...", y = "% of Selected Experts with the Target Attribute",
        title = "The Effect of Getting Feedback on Your AI Expert Selections") +
-  theme(plot.caption = element_text(face = "italic", family = "Times New Roman"),
+  theme(plot.caption = element_text(face = "italic", family = plot_font),
         legend.position = c(0.5, 0.95),
         legend.title = element_blank(),
         legend.direction = "horizontal",
-        legend.text = element_text(size = 20, family = "Times New Roman"),
+        legend.text = element_text(size = 20, family = plot_font),
         legend.key.size = unit(7, 'mm'),
         legend.background = element_rect(fill = "white"),
         panel.grid.minor = element_blank(),
@@ -555,23 +556,23 @@ p_combined <- ggplot(df_combined, aes(x = Condition, y = freq*100, fill = Condit
         panel.border = element_rect(fill= NA, color = "white"),
         plot.background = element_rect(fill = "white"),
         panel.background = element_rect(fill = "white"),
-        axis.title.x = element_text(face="bold", size = 21, vjust = 22, family = "Times New Roman"),
+        axis.title.x = element_text(face="bold", size = 21, vjust = 22, family = plot_font),
         plot.title = element_blank(),
-        axis.title.y = element_text(size = 20, color = "black", family = "Times New Roman"),
+        axis.title.y = element_text(size = 20, color = "black", family = plot_font),
         axis.text.x = element_blank(),
         axis.ticks = element_blank(),
-        axis.text.y = element_text(size = 20, color = "black", family = "Times New Roman"),
-        strip.text = element_text(size = 20, color = "black", family = "Times New Roman"),
+        axis.text.y = element_text(size = 20, color = "black", family = plot_font),
+        strip.text = element_text(size = 20, color = "black", family = plot_font),
         strip.background = element_rect(colour = "white", fill = "white"),
-        text = element_text(family = "Times New Roman"))
+        text = element_text(family = plot_font))
 
 #print(p_combined)
 
-# Save the plot with Times New Roman font
+# Save the plot (uses plot_font which defaults to Times New Roman if available)
 # PDF export using cairo_pdf for proper font embedding
-# ggsave("Figure-Study1.pdf", plot = p_combined, width = 10, height = 9, units = "in", device = cairo_pdf, family = "Times New Roman")
+# ggsave("Figure-Study1.pdf", plot = p_combined, width = 10, height = 9, units = "in", device = cairo_pdf, family = plot_font)
 
-# # PNG export - use type="cairo" for Windows to properly render Times New Roman
+# # PNG export - use type="cairo" for Windows to properly render fonts
 # ggsave("Figure-Study1.png", plot = p_combined, width = 10, height = 9, units = "in", dpi = 600, type = "cairo")
 
 # Save RDS for combined figure

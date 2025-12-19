@@ -1,15 +1,15 @@
 ---
 title: "Study 3B (Gender Biopic)"
-date: '`r format(Sys.Date(), "%B %d, %Y")`'
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
 output:
-  pdf_document: 
+  pdf_document:
     toc: yes
     toc_depth: 2
     fig_caption: true
 header-includes:
-  \renewcommand{\contentsname}{Items}
-   \usepackage{fvextra}
-   \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  - \renewcommand{\contentsname}{Items}
+  - \usepackage{fvextra}
+  - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 ---
 
 ```{r setup, include=FALSE}
@@ -32,6 +32,24 @@ library(rmarkdown)
 library(ggplot2)
 library(grid)
 library(extrafont)
+
+# Load and register Times New Roman font (with fallback for systems without it)
+# This is wrapped in tryCatch to prevent errors on systems where fonts aren't available
+tryCatch({
+  if (!("Times New Roman" %in% fonts())) {
+    font_import(pattern = "times", prompt = FALSE)
+  }
+  # Load fonts based on OS
+  if (.Platform$OS.type == "windows") {
+    loadfonts(device = "win", quiet = TRUE)
+  }
+  loadfonts(device = "pdf", quiet = TRUE)
+}, error = function(e) {
+  message("Note: Could not load Times New Roman font. Using default fonts.")
+})
+
+# Set font variable with fallback - use throughout document for consistency
+plot_font <- if ("Times New Roman" %in% fonts()) "Times New Roman" else "sans"
 ```
 
 ```{r include=FALSE}
@@ -110,7 +128,7 @@ extract_regression_estimates <- function(model) {
 
 ```{r echo=TRUE}
 # Set this to TRUE if you have API access, FALSE if using CSV
-USE_API <- F
+USE_API <- FALSE
 
 if(USE_API) {
   ## Pull directly from Qualtrics API
