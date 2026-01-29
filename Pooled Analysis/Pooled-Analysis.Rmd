@@ -1,0 +1,284 @@
+---
+title: "Pooled Analysis: Interaction Effects and Mini Meta-Analysis"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 3
+    fig_caption: true
+header-includes:
+  - \renewcommand{\contentsname}{Items}
+  - \usepackage{fvextra}
+  - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+---
+
+```{r setup, include=FALSE}
+rm(list=ls())
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE,
+	fig.width = 10,
+	fig.height = 6
+)
+library(dplyr)
+library(lmtest)
+library(sandwich)
+library(car)
+library(broom)
+library(knitr)
+library(rmarkdown)
+library(tidyverse)
+library(ggplot2)
+library(kableExtra)
+library(metafor)
+```
+
+```{r include=FALSE}
+if ( (!is.null(knitr::current_input()))) {
+  if (("pdf_document" ==
+                rmarkdown::all_output_formats(knitr::current_input())[1])) {
+      stargazer_type <- "latex"
+  }
+} else {
+  stargazer_type <- "text"
+}
+
+robust_summary <- function(model) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting original model summary
+    model_summary <- summary(model)
+
+    # Updating standard errors, t-values, and p-values in the coefficients table
+    model_summary$coefficients[, "Std. Error"] <- robust_se
+    model_summary$coefficients[, "t value"] <- model_summary$coefficients[, "Estimate"] / robust_se
+    model_summary$coefficients[, "Pr(>|t|)"] <- 2 * pt(-abs(model_summary$coefficients[, "t value"]), df = model_summary$df[2], lower.tail = TRUE)
+
+    return(model_summary)
+}
+
+robust_confint <- function(model, level = 0.95) {
+    # Calculating robust standard errors
+    robust_se <- sqrt(diag(vcovHC(model, type = "HC3")))
+
+    # Getting the coefficients
+    est <- coef(model)
+
+    # Calculating the critical value for the t-distribution
+    alpha <- 1 - level
+    t_crit <- qt(1 - alpha / 2, df = df.residual(model))
+
+    # Calculating the confidence intervals
+    lower <- est - t_crit * robust_se
+    upper <- est + t_crit * robust_se
+
+    # Combining into a matrix
+    confint <- cbind(lower, upper)
+    rownames(confint) <- names(est)
+    colnames(confint) <- c("2.5 %", "97.5 %")
+
+    return(confint)
+}
+
+# Function to get robust standard errors for meta-analysis
+robust_se_meta <- function(model) {
+  sqrt(diag(vcovHC(model, type = "HC3")))
+}
+```
+
+\newpage
+
+
+# Table 4: Interaction Effects by Study
+
+```{r load-data, echo=FALSE, results='markup'}
+# ============================================
+# Load data from all studies
+# ============================================
+
+# Study 2: Gender (Biography Field Experiment)
+d2 <- read.csv('Study2.csv', check.names = FALSE)
+
+# Study 3A: Race (Biopic Film)
+d3a <- read.csv('Study3A.csv', check.names = FALSE)
+
+# Study 3B: Gender (Biopic Film)
+d3b <- read.csv('Study3B.csv', check.names = FALSE)
+
+# Study 4A: Race (Author Selection)
+d4a <- read.csv('Study4A.csv', check.names = FALSE)
+
+# Study 4B: Gender (Author Selection)
+d4b <- read.csv('Study4B.csv', check.names = FALSE)
+
+cat("Sample sizes:\n")
+cat("Study 2 (Gender Biography): N =", nrow(d2), "\n")
+cat("Study 3A (Race Biopic): N =", nrow(d3a), "\n")
+cat("Study 3B (Gender Biopic): N =", nrow(d3b), "\n")
+cat("Study 4A (Race Author): N =", nrow(d4a), "\n")
+cat("Study 4B (Gender Author): N =", nrow(d4b), "\n")
+```
+
+\newpage
+
+## Study 2: Gender (Biography Field Experiment)
+
+```{r study2-interaction, echo=FALSE, results='markup'}
+cat("=======================================================\n")
+cat("STUDY 2: GENDER × BASE SELECTIONS INTERACTION\n")
+cat("=======================================================\n\n")
+
+cat("Model: female_pick ~ gender_feedback * base_gender\n\n")
+
+model_s2 <- lm(female_pick ~ gender_feedback * base_gender, data = d2)
+robust_summary(model_s2)
+robust_confint(model_s2)
+
+# Extract for Table 4
+rob_se_s2 <- robust_se_meta(model_s2)
+coef_s2 <- coef(model_s2)["gender_feedback:base_gender"]
+se_s2 <- rob_se_s2["gender_feedback:base_gender"]
+```
+
+\newpage
+
+## Study 3A: Race (Biopic Film)
+
+```{r study3a-interaction, echo=FALSE, results='markup'}
+cat("=======================================================\n")
+cat("STUDY 3A: RACE × BASE SELECTIONS INTERACTION\n")
+cat("=======================================================\n\n")
+
+cat("Model: race_pick ~ race_feedback * base_race\n\n")
+
+model_s3a <- lm(race_pick ~ race_feedback * base_race, data = d3a)
+robust_summary(model_s3a)
+robust_confint(model_s3a)
+
+# Extract for Table 4
+rob_se_s3a <- robust_se_meta(model_s3a)
+coef_s3a <- coef(model_s3a)["race_feedback:base_race"]
+se_s3a <- rob_se_s3a["race_feedback:base_race"]
+```
+
+\newpage
+
+## Study 3B: Gender (Biopic Film)
+
+```{r study3b-interaction, echo=FALSE, results='markup'}
+cat("=======================================================\n")
+cat("STUDY 3B: GENDER × BASE SELECTIONS INTERACTION\n")
+cat("=======================================================\n\n")
+
+cat("Model: female_pick ~ gender_feedback * base_gender\n\n")
+
+model_s3b <- lm(female_pick ~ gender_feedback * base_gender, data = d3b)
+robust_summary(model_s3b)
+robust_confint(model_s3b)
+
+# Extract for Table 4
+rob_se_s3b <- robust_se_meta(model_s3b)
+coef_s3b <- coef(model_s3b)["gender_feedback:base_gender"]
+se_s3b <- rob_se_s3b["gender_feedback:base_gender"]
+```
+
+\newpage
+
+## Study 4A: Race (Author Selection)
+
+```{r study4a-interaction, echo=FALSE, results='markup'}
+cat("=======================================================\n")
+cat("STUDY 4A: RACE × BASE SELECTIONS INTERACTION\n")
+cat("=======================================================\n\n")
+
+cat("Model: race_pick ~ race_feedback * base_race\n\n")
+
+model_s4a <- lm(race_pick ~ race_feedback * base_race, data = d4a)
+robust_summary(model_s4a)
+robust_confint(model_s4a)
+
+# Extract for Table 4
+rob_se_s4a <- robust_se_meta(model_s4a)
+coef_s4a <- coef(model_s4a)["race_feedback:base_race"]
+se_s4a <- rob_se_s4a["race_feedback:base_race"]
+```
+
+\newpage
+
+## Study 4B: Gender (Author Selection)
+
+```{r study4b-interaction, echo=FALSE, results='markup'}
+cat("=======================================================\n")
+cat("STUDY 4B: GENDER × BASE SELECTIONS INTERACTION\n")
+cat("=======================================================\n\n")
+
+cat("Model: female_pick ~ gender_feedback * base_gender\n\n")
+
+model_s4b <- lm(female_pick ~ gender_feedback * base_gender, data = d4b)
+robust_summary(model_s4b)
+robust_confint(model_s4b)
+
+# Extract for Table 4
+rob_se_s4b <- robust_se_meta(model_s4b)
+coef_s4b <- coef(model_s4b)["gender_feedback:base_gender"]
+se_s4b <- rob_se_s4b["gender_feedback:base_gender"]
+```
+
+\newpage
+
+## Summary Table (Table 4)
+
+```{r table4-summary, echo=FALSE, results='markup'}
+# Create summary table
+table4_data <- data.frame(
+  Study = c("Study 2 (Gender)", "Study 3A (Race)", "Study 3B (Gender)",
+            "Study 4A (Race)", "Study 4B (Gender)"),
+  B = c(coef_s2, coef_s3a, coef_s3b, coef_s4a, coef_s4b),
+  SE = c(se_s2, se_s3a, se_s3b, se_s4a, se_s4b),
+  N = c(nrow(d2), nrow(d3a), nrow(d3b), nrow(d4a), nrow(d4b))
+)
+
+# Calculate t-values and p-values
+table4_data$t <- table4_data$B / table4_data$SE
+table4_data$df <- table4_data$N - 4  # 4 parameters: intercept, treatment, base, interaction
+table4_data$p <- 2 * pt(-abs(table4_data$t), df = table4_data$df)
+
+# Calculate 95% CIs
+table4_data$CI_lower <- table4_data$B - qt(0.975, df = table4_data$df) * table4_data$SE
+table4_data$CI_upper <- table4_data$B + qt(0.975, df = table4_data$df) * table4_data$SE
+
+for (i in 1:nrow(table4_data)) {
+  p_str <- ifelse(table4_data$p[i] < .001, "< .001", sprintf("= %.3f", table4_data$p[i]))
+  cat(sprintf("%s:\n  B = %.3f, SE = %.4f, t(%d) = %.2f, p %s\n  95%% CI = [%.3f, %.3f]\n\n",
+              table4_data$Study[i], table4_data$B[i], table4_data$SE[i],
+              table4_data$df[i], table4_data$t[i], p_str,
+              table4_data$CI_lower[i], table4_data$CI_upper[i]))
+}
+```
+
+\newpage
+
+# Mini Meta-Analysis of Interaction Effects
+
+
+```{r mini-meta-analysis, echo=TRUE, results='markup'}
+meta_data <- data.frame(
+  study = c("Study 2 (Gender)", "Study 3A (Race)", "Study 3B (Gender)",
+            "Study 4A (Race)", "Study 4B (Gender)"),
+  yi = c(coef_s2, coef_s3a, coef_s3b, coef_s4a, coef_s4b),
+  sei = c(se_s2, se_s3a, se_s3b, se_s4a, se_s4b),
+  ni = c(nrow(d2), nrow(d3a), nrow(d3b), nrow(d4a), nrow(d4b))
+)
+
+# ============================================
+# Random-effects meta-analysis using REML
+# ============================================
+
+meta_result <- rma(yi = yi, sei = sei, data = meta_data, method = "REML")
+
+summary(meta_result)
+```
+
+

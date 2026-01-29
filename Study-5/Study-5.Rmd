@@ -227,6 +227,11 @@ if(USE_API) {
   # Write the API-pulled data into a CSV file
   write.csv(d0, 'Study5.csv', row.names = FALSE, quote = TRUE)
 }
+
+# Create women_overrep indicator (opposite of men_pool)
+# women_overrep = 1 means women overrepresented (75% women)
+# women_overrep = 0 means women underrepresented (25% women)
+d0$women_overrep <- 1 - d0$men_pool
 ```
 
 \newpage
@@ -346,16 +351,47 @@ d0 |>
 ```{r primary-analysis, echo=FALSE, results='markup'}
 # Pre-registered analysis to test H1 and H2:
 # OLS regression predicting whether participants choose a woman as their 7th panelist
-# Predictors: (1) gender feedback condition, (2) women underrepresented pool, (3) interaction
+# Predictors: (1) gender feedback condition, (2) women overrepresented pool, (3) interaction
+# Note: We use women_overrep for interpretability (reference = underrep condition)
 # This allows testing H1 via coefficient on (1) and H2 via coefficient on (3)
 
-model_2x2 <- lm(female_pick ~ treatment * men_pool, data = d0)
+# Create binary variables for controls
+d0 <- d0 %>%
+  mutate(
+    female_participant = ifelse(gender == "Woman", 1, 0),
+    white_participant = ifelse(race == "White / Caucasian", 1, 0)
+  )
 
-cat("=== 2x2 Interaction: Treatment × Women Underrepresented Pool ===\n")
-cat("Model: female_pick ~ treatment * men_pool\n")
-cat("(men_pool: 1 = women underrepresented, 0 = women overrepresented)\n\n")
+cat("=== 2x2 Interaction: Treatment × Women Overrepresented Pool ===\n")
+cat("(women_overrep: 1 = women overrepresented/75%, 0 = women underrepresented/25%)\n\n")
+
+# Model 5: Without controls
+cat("--- MODEL 5: OLS WITHOUT CONTROLS ---\n")
+cat("Model: female_pick ~ treatment * women_overrep\n\n")
+model_2x2 <- lm(female_pick ~ treatment * women_overrep, data = d0)
 robust_summary(model_2x2)
 robust_confint(model_2x2)
+
+# Model 6: With demographic controls
+cat("\n\n--- MODEL 6: OLS WITH DEMOGRAPHIC CONTROLS ---\n")
+cat("Model: female_pick ~ treatment * women_overrep + female_participant + white_participant + age\n\n")
+
+model_2x2_controls <- lm(female_pick ~ treatment * women_overrep + female_participant + white_participant + age,
+                          data = d0)
+robust_summary(model_2x2_controls)
+robust_confint(model_2x2_controls)
+
+# Logistic regression robustness check
+cat("\n\n--- LOGISTIC REGRESSION ROBUSTNESS CHECK ---\n")
+cat("Model: female_pick ~ treatment * women_overrep (logit)\n\n")
+
+logit_2x2 <- glm(female_pick ~ treatment * women_overrep, data = d0, family = binomial)
+summary(logit_2x2)
+
+cat("\nLogit with controls:\n")
+logit_2x2_controls <- glm(female_pick ~ treatment * women_overrep + female_participant + white_participant + age,
+                          data = d0, family = binomial)
+summary(logit_2x2_controls)
 
 # Cell means
 cat("\n\nCell Means:\n")
@@ -376,14 +412,43 @@ d0 |>
 ### Women Underrepresented Pool (25% Women)
 
 ```{r men-pool, echo=FALSE, results='markup'}
+# Create binary variables for controls (used throughout)
+d0_underrep <- d0 %>%
+  filter(men_pool == 1) %>%
+  mutate(
+    female_participant = ifelse(gender == "Woman", 1, 0),
+    white_participant = ifelse(race == "White / Caucasian", 1, 0)
+  )
+
 # Women underrepresented pool: main effect of treatment
-model_men <- lm(female_pick ~ treatment,
-                data = d0 %>% filter(men_pool == 1))
+model_men <- lm(female_pick ~ treatment, data = d0_underrep)
 
 cat("=== WOMEN UNDERREPRESENTED POOL (MEN POOL, 25% WOMEN) ===\n")
+cat("--- MODEL 1: OLS WITHOUT CONTROLS ---\n")
 cat("Model: female_pick ~ treatment\n\n")
 robust_summary(model_men)
 robust_confint(model_men)
+
+# Model 2: With demographic controls
+cat("\n\n--- MODEL 2: OLS WITH DEMOGRAPHIC CONTROLS ---\n")
+cat("Model: female_pick ~ treatment + female_participant + white_participant + age\n\n")
+
+model_men_controls <- lm(female_pick ~ treatment + female_participant + white_participant + age,
+                         data = d0_underrep)
+robust_summary(model_men_controls)
+robust_confint(model_men_controls)
+
+# Logistic regression robustness check
+cat("\n\n--- LOGISTIC REGRESSION ROBUSTNESS CHECK ---\n")
+cat("Model: female_pick ~ treatment (logit)\n\n")
+
+logit_men <- glm(female_pick ~ treatment, data = d0_underrep, family = binomial)
+summary(logit_men)
+
+cat("\nLogit with controls:\n")
+logit_men_controls <- glm(female_pick ~ treatment + female_participant + white_participant + age,
+                          data = d0_underrep, family = binomial)
+summary(logit_men_controls)
 
 # Cell means
 cat("\n\nCell Means - Women Underrepresented Pool:\n")
@@ -403,15 +468,43 @@ d0 %>%
 ### Women Overrepresented Pool (75% Women)
 
 ```{r women-pool, echo=FALSE, results='markup'}
+# Create binary variables for controls
+d0_overrep <- d0 %>%
+  filter(men_pool == 0) %>%
+  mutate(
+    female_participant = ifelse(gender == "Woman", 1, 0),
+    white_participant = ifelse(race == "White / Caucasian", 1, 0)
+  )
+
 cat("=== WOMEN OVERREPRESENTED POOL (WOMEN POOL, 75% WOMEN) ===\n\n")
 
-# Main effect model
-cat("--- MAIN EFFECT MODEL ---\n")
+# Model 3: Main effect model
+cat("--- MODEL 3: OLS WITHOUT CONTROLS ---\n")
 cat("Model: female_pick ~ treatment\n\n")
-model_women <- lm(female_pick ~ treatment,
-                 data = d0 %>% filter(men_pool == 0))
+model_women <- lm(female_pick ~ treatment, data = d0_overrep)
 robust_summary(model_women)
 robust_confint(model_women)
+
+# Model 4: With demographic controls
+cat("\n\n--- MODEL 4: OLS WITH DEMOGRAPHIC CONTROLS ---\n")
+cat("Model: female_pick ~ treatment + female_participant + white_participant + age\n\n")
+
+model_women_controls <- lm(female_pick ~ treatment + female_participant + white_participant + age,
+                           data = d0_overrep)
+robust_summary(model_women_controls)
+robust_confint(model_women_controls)
+
+# Logistic regression robustness check
+cat("\n\n--- LOGISTIC REGRESSION ROBUSTNESS CHECK ---\n")
+cat("Model: female_pick ~ treatment (logit)\n\n")
+
+logit_women <- glm(female_pick ~ treatment, data = d0_overrep, family = binomial)
+summary(logit_women)
+
+cat("\nLogit with controls:\n")
+logit_women_controls <- glm(female_pick ~ treatment + female_participant + white_participant + age,
+                            data = d0_overrep, family = binomial)
+summary(logit_women_controls)
 
 # Cell means by treatment
 cat("\n\nCell Means by Treatment:\n")
@@ -429,10 +522,12 @@ d0 %>%
 
 \newpage
 
-## Wald Test: Comparing Treatment Effects Across Pools
+## Wald Test: Comparing Treatment Effect Magnitudes Across Pools
 
 ```{r wald-test, echo=FALSE, results='markup'}
-cat("=== WALD TEST: DIFFERENCE IN TREATMENT EFFECTS BETWEEN POOLS ===\n\n")
+cat("=== WALD TEST: EQUAL MAGNITUDE OF TREATMENT EFFECTS ===\n\n")
+cat("Testing H0: B_underrep + B_overrep = 0\n")
+cat("(i.e., treatment effects are equal in magnitude but opposite in direction)\n\n")
 
 # Calculate treatment effects for each pool
 # Men pool: just the treatment coefficient
@@ -443,34 +538,38 @@ se_men <- sqrt(diag(vcovHC(model_men, type = "HC3")))["treatment"]
 effect_women <- coef(model_women)["treatment"]
 se_women <- sqrt(diag(vcovHC(model_women, type = "HC3")))["treatment"]
 
-# Calculate difference in treatment effects
-diff_effects <- effect_men - effect_women
+# Calculate SUM of treatment effects (tests equal magnitude with opposite signs)
+# If effects are equal in magnitude but opposite in direction, sum should equal 0
+sum_effects <- effect_men + effect_women
 
-# Standard error of the difference (assuming independence)
-se_diff <- sqrt(se_men^2 + se_women^2)
+# Standard error of the sum (assuming independence)
+se_sum <- sqrt(se_men^2 + se_women^2)
 
 # Wald test statistic
-wald_stat <- diff_effects / se_diff
+wald_stat <- sum_effects / se_sum
 
 # P-value (two-tailed)
 p_value <- 2 * (1 - pnorm(abs(wald_stat)))
 
-# 95% CI for the difference
-ci_lower <- diff_effects - 1.96 * se_diff
-ci_upper <- diff_effects + 1.96 * se_diff
+# 95% CI for the sum
+ci_lower <- sum_effects - 1.96 * se_sum
+ci_upper <- sum_effects + 1.96 * se_sum
 
 # Print results
-cat("Treatment Effect (Men Pool 25%):   ", sprintf("%.4f", effect_men),
+cat("Treatment Effect (Underrep Pool): ", sprintf("%.4f", effect_men),
     " (SE = ", sprintf("%.4f", se_men), ")\n", sep = "")
-cat("Treatment Effect (Women Pool 75%): ", sprintf("%.4f", effect_women),
+cat("Treatment Effect (Overrep Pool):  ", sprintf("%.4f", effect_women),
     " (SE = ", sprintf("%.4f", se_women), ")\n\n", sep = "")
 
-cat("Difference in Treatment Effects: ", sprintf("%.4f", diff_effects), "\n", sep = "")
-cat("Standard Error of Difference:    ", sprintf("%.4f", se_diff), "\n", sep = "")
-cat("Wald Statistic (z):              ", sprintf("%.4f", wald_stat), "\n", sep = "")
-cat("P-value (two-tailed):            ", sprintf("%.4f", p_value), "\n", sep = "")
-cat("95% CI for Difference:           [", sprintf("%.4f", ci_lower), ", ",
+cat("Sum of Treatment Effects:         ", sprintf("%.4f", sum_effects), "\n", sep = "")
+cat("Standard Error of Sum:            ", sprintf("%.4f", se_sum), "\n", sep = "")
+cat("Wald Statistic (z):               ", sprintf("%.4f", wald_stat), "\n", sep = "")
+cat("P-value (two-tailed):             ", sprintf("%.4f", p_value), "\n", sep = "")
+cat("95% CI for Sum:                   [", sprintf("%.4f", ci_lower), ", ",
     sprintf("%.4f", ci_upper), "]\n\n", sep = "")
+
+cat("Interpretation: A non-significant p-value indicates the treatment effects\n")
+cat("are approximately equal in magnitude (opposite in direction).\n")
 ```
 
 \newpage
@@ -922,5 +1021,6 @@ summary(med.out.combined.internal.underrep)
 cat("\nExternal Motivation (controlling for other mediators):\n")
 summary(med.out.combined.external.underrep)
 ```
+
 
 

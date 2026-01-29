@@ -306,6 +306,41 @@ robust_confint(r_robust)
 
 \newpage
 
+## Interaction Analysis (for Table 4)
+
+This analysis tests whether the number of women initially selected moderates the effect of gender feedback. Note: Uses raw count (0-6) to match scaling of other studies.
+
+```{r echo=TRUE, results='markup'}
+# Interaction model for Table 4
+# Uses raw count (base_gender: 0-6) to match other studies' scaling
+model_interaction <- lm(female_pick ~ gender_feedback * base_gender, data=d0)
+
+# Robust standard errors
+cat("=== Interaction Model (Table 4) ===\n")
+robust_summary(model_interaction)
+robust_confint(model_interaction)
+
+# Extract specific statistics for manuscript
+interaction_sum <- robust_summary(model_interaction)
+interaction_ci <- robust_confint(model_interaction)
+
+# Get interaction term statistics
+interaction_coef <- interaction_sum$coefficients["gender_feedback:base_gender", ]
+interaction_ci_vals <- interaction_ci["gender_feedback:base_gender", ]
+
+cat("\n=== Statistics for Manuscript ===\n")
+cat("Interaction coefficient (B):", round(interaction_coef["Estimate"], 3), "\n")
+cat("SE:", round(interaction_coef["Std. Error"], 3), "\n")
+cat("95% CI: [", round(interaction_ci_vals[1], 3), ", ", round(interaction_ci_vals[2], 3), "]\n")
+cat("t-value:", round(interaction_coef["t value"], 2), "\n")
+cat("p-value:", round(interaction_coef["Pr(>|t|)"], 3), "\n")
+cat("df:", df.residual(model_interaction), "\n")
+cat("N:", nrow(d0), "\n")
+cat("R-squared:", round(summary(model_interaction)$r.squared, 3), "\n")
+```
+
+\newpage
+
 ## Robustness
 
 ```{r echo=TRUE, results='markup'}

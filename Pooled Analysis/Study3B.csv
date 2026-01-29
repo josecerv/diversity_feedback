@@ -1,0 +1,1001 @@
+"gender_feedback","budget_shown","year_shown","poli_shown","female_pick","budget_pick","year_pick","poli_pick","gender","base_gender","choice-1","choice-2","choice-3","choice-4","choice-5","choice-6","choice-7","race","age","gender_code","race_code","num_excluded_total"
+0,1,1,1,0,1,1,0,"Man",3,"Amadeus","The Iron Lady","Marie Antoinette","Coco Before Chanel","The Imitation Game","Hitchcock","Moneyball","White / Caucasian",25,1,1,127
+0,1,1,1,0,1,1,0,"Woman",3,"Capote","On The Basis of Sex","Hitchcock","Judy","Marie Antoinette","Amadeus","Oppenheimer","Black or African American",30,0,0,127
+1,0,1,1,0,0,0,0,"Woman",1,"Chaplin","Jobs","Lincoln","Oppenheimer","Coco Before Chanel","The Imitation Game","Amadeus","White / Caucasian",28,0,1,127
+1,1,1,0,1,0,0,0,"Man",2,"A Beautiful Day in the Neighborhood","Judy","On The Basis of Sex","Capote","A Beautiful Mind","Amadeus","Coco Before Chanel","White / Caucasian",44,1,1,127
+1,1,1,0,1,0,1,1,"Man",1,"A Beautiful Mind","Braveheart","The Imitation Game","Tolkien","Moneyball","Coco Before Chanel","On The Basis of Sex","White / Caucasian",29,1,1,127
+1,1,1,0,0,1,1,1,"Man",1,"The Doors","Braveheart","Marie Antoinette","Oppenheimer","JFK","Nixon","Lincoln","White / Caucasian",56,1,1,127
+0,1,1,1,0,1,1,0,"Woman",2,"The Doors","Jobs","Judy","Marie Antoinette","Nixon","The Darkest Hour","Moneyball","White / Caucasian",36,0,1,127
+1,1,1,0,1,0,0,0,"Man",1,"The Imitation Game","Braveheart","Oppenheimer","Jobs","The Darkest Hour","On The Basis of Sex","Coco Before Chanel","Asian / Pacific Islander",33,1,0,127
+0,1,1,1,0,0,1,0,"Man",1,"Lincoln","Jobs","Chaplin","Coco Before Chanel","J. Edgar","The Aviator","The Imitation Game","Black or African American",38,1,0,127
+0,1,1,1,0,0,0,0,"Man",0,"Lincoln","Amadeus","Oppenheimer","Braveheart","Tolkien","Moneyball","The Doors","White / Caucasian",35,1,1,127
+1,1,1,0,0,0,1,0,"Woman",2,"Lincoln","The Iron Lady","Hitchcock","J. Edgar","Amadeus","On The Basis of Sex","The Imitation Game","White / Caucasian",63,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Lincoln","Oppenheimer","The Aviator","A Beautiful Day in the Neighborhood","The Darkest Hour","J. Edgar","Jobs","White / Caucasian",35,1,1,127
+1,0,1,1,0,0,1,0,"Man",1,"The Iron Lady","The Doors","Braveheart","Moneyball","Nixon","Oppenheimer","Jobs","White / Caucasian",26,1,1,127
+0,1,1,1,1,0,1,1,"Woman",0,"Nixon","A Beautiful Mind","Tolkien","The Darkest Hour","Oppenheimer","The Doors","On The Basis of Sex","White / Caucasian",41,0,1,127
+1,0,1,1,0,0,0,0,"Man",0,"A Beautiful Day in the Neighborhood","Moneyball","Jobs","The Aviator","W. A Life Misunderstood","Amadeus","Chaplin","White / Caucasian",49,1,1,127
+1,1,1,0,0,1,1,1,"Man",0,"The Doors","The Darkest Hour","Hitchcock","Nixon","J. Edgar","W. A Life Misunderstood","Lincoln","White / Caucasian",34,1,1,127
+0,1,1,1,0,1,0,1,"Man",0,"Braveheart","Lincoln","The Doors","The Aviator","Oppenheimer","Jobs","JFK","White / Caucasian",30,1,1,127
+1,1,1,0,0,0,1,0,"Man",1,"On The Basis of Sex","Amadeus","A Beautiful Mind","W. A Life Misunderstood","A Beautiful Day in the Neighborhood","The Doors","Hitchcock","White / Caucasian",67,1,1,127
+1,0,1,1,0,0,0,1,"Woman",2,"Coco Before Chanel","Lincoln","Oppenheimer","Judy","Jobs","The Aviator","W. A Life Misunderstood","White / Caucasian",36,0,1,127
+0,1,1,1,1,0,1,1,"Man",0,"Oppenheimer","The Imitation Game","J. Edgar","The Darkest Hour","Lincoln","A Beautiful Mind","On The Basis of Sex","White / Caucasian",56,1,1,127
+0,1,1,1,0,1,1,1,"Man",1,"The Iron Lady","The Doors","Capote","Braveheart","Nixon","W. A Life Misunderstood","Lincoln","White / Caucasian",45,1,1,127
+1,0,1,1,0,1,1,1,"Man",2,"The Iron Lady","W. A Life Misunderstood","On The Basis of Sex","Nixon","The Darkest Hour","J. Edgar","Lincoln","White / Caucasian",37,1,1,127
+0,1,1,1,0,0,0,1,"Woman",2,"Lincoln","Jobs","On The Basis of Sex","The Doors","Marie Antoinette","Chaplin","Nixon","White / Caucasian",34,0,1,127
+0,1,1,1,1,0,1,1,"Man",1,"The Doors","Lincoln","Amadeus","Judy","Nixon","The Darkest Hour","The Iron Lady","White / Caucasian",46,1,1,127
+1,0,1,1,0,0,1,0,"Woman",1,"Braveheart","The Imitation Game","Lincoln","J. Edgar","Moneyball","On The Basis of Sex","Jobs","White / Caucasian",39,0,1,127
+0,1,1,1,0,0,1,0,"Man",1,"A Beautiful Day in the Neighborhood","Braveheart","The Imitation Game","W. A Life Misunderstood","On The Basis of Sex","Oppenheimer","Jobs","White / Caucasian",39,1,1,127
+1,0,1,1,0,1,1,0,"Woman",1,"Jobs","Chaplin","A Beautiful Day in the Neighborhood","Marie Antoinette","Amadeus","The Doors","Moneyball","White / Caucasian",46,0,1,127
+1,0,1,1,0,0,1,0,"Woman",2,"Oppenheimer","Lincoln","The Darkest Hour","On The Basis of Sex","Judy","The Imitation Game","A Beautiful Day in the Neighborhood","White / Caucasian",29,0,1,127
+1,0,1,1,0,0,1,0,"Man",0,"The Imitation Game","Lincoln","Chaplin","Oppenheimer","Hitchcock","Amadeus","Tolkien","Asian / Pacific Islander",31,1,0,127
+1,1,0,1,1,0,1,1,"Woman",1,"Marie Antoinette","Tolkien","Hitchcock","Oppenheimer","A Beautiful Day in the Neighborhood","Lincoln","On The Basis of Sex","White / Caucasian",41,0,1,127
+1,1,1,0,0,1,0,0,"Man",1,"Lincoln","A Beautiful Mind","A Beautiful Day in the Neighborhood","Oppenheimer","The Iron Lady","Braveheart","The Aviator","Asian / Pacific Islander",36,1,0,127
+0,1,1,1,0,0,0,0,"Woman",1,"Tolkien","The Imitation Game","Lincoln","Amadeus","A Beautiful Day in the Neighborhood","Judy","The Doors","White / Caucasian",51,0,1,127
+0,1,1,1,0,1,1,0,"Man",2,"Lincoln","Hitchcock","On The Basis of Sex","A Beautiful Day in the Neighborhood","A Beautiful Mind","Judy","Oppenheimer","White / Caucasian",34,1,1,127
+1,0,1,1,1,0,1,1,"Man",0,"Chaplin","Moneyball","Braveheart","Capote","A Beautiful Mind","W. A Life Misunderstood","The Iron Lady","White / Caucasian",35,1,1,127
+1,1,1,0,1,0,1,0,"Man",2,"Jobs","A Beautiful Mind","Lincoln","Marie Antoinette","Oppenheimer","The Iron Lady","Judy","White / Caucasian",28,1,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Braveheart","Lincoln","Jobs","A Beautiful Mind","On The Basis of Sex","A Beautiful Day in the Neighborhood","The Imitation Game","White / Caucasian",38,1,1,127
+0,1,1,1,0,0,1,0,"Woman",2,"Nixon","The Iron Lady","W. A Life Misunderstood","Coco Before Chanel","JFK","The Darkest Hour","The Imitation Game","White / Caucasian",51,0,1,127
+0,1,1,1,0,1,1,1,"Woman",3,"The Darkest Hour","Tolkien","Coco Before Chanel","On The Basis of Sex","Jobs","Marie Antoinette","Lincoln","White / Caucasian",30,0,1,127
+0,1,1,1,0,0,1,0,"Man",1,"The Darkest Hour","A Beautiful Mind","Jobs","W. A Life Misunderstood","The Iron Lady","The Doors","A Beautiful Day in the Neighborhood","White / Caucasian",34,1,1,127
+1,1,1,0,0,1,0,0,"Man",0,"Lincoln","The Doors","Oppenheimer","Amadeus","A Beautiful Day in the Neighborhood","Braveheart","The Aviator","Asian / Pacific Islander",37,1,0,127
+1,0,1,1,0,1,0,1,"Man",2,"Oppenheimer","Braveheart","A Beautiful Day in the Neighborhood","Marie Antoinette","Judy","The Doors","JFK","White / Caucasian",40,1,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Jobs","Coco Before Chanel","Oppenheimer","Braveheart","Tolkien","The Aviator","A Beautiful Day in the Neighborhood","White / Caucasian",44,1,1,127
+1,0,1,1,1,0,1,0,"Man",0,"Chaplin","Hitchcock","Tolkien","Jobs","Braveheart","Lincoln","Judy","White / Caucasian",40,1,1,127
+1,1,0,1,1,1,0,1,"Woman",0,"Hitchcock","The Imitation Game","A Beautiful Day in the Neighborhood","Amadeus","Nixon","Jobs","Marie Antoinette","White / Caucasian",40,0,1,127
+0,1,1,1,0,0,0,0,"Man",0,"The Aviator","A Beautiful Mind","Oppenheimer","A Beautiful Day in the Neighborhood","The Doors","Lincoln","Chaplin","White / Caucasian",47,1,1,127
+1,1,1,0,1,1,0,1,"Woman",3,"On The Basis of Sex","Coco Before Chanel","A Beautiful Day in the Neighborhood","Judy","Jobs","Lincoln","Marie Antoinette","White / Caucasian",26,0,1,127
+1,0,1,1,0,1,0,1,"Man",1,"J. Edgar","Oppenheimer","Lincoln","A Beautiful Day in the Neighborhood","Nixon","On The Basis of Sex","Braveheart","Hispanic / Latinx",31,1,0,127
+1,0,1,1,1,1,0,1,"Woman",2,"Coco Before Chanel","Nixon","Hitchcock","The Iron Lady","The Doors","A Beautiful Mind","Marie Antoinette","White / Caucasian",51,0,1,127
+0,1,1,1,0,0,1,0,"Man",2,"Oppenheimer","On The Basis of Sex","A Beautiful Day in the Neighborhood","Jobs","The Doors","Coco Before Chanel","Tolkien","Hispanic / Latinx",31,1,0,127
+0,1,1,1,1,0,0,0,"Woman",1,"A Beautiful Day in the Neighborhood","On The Basis of Sex","Amadeus","Hitchcock","Chaplin","The Doors","Coco Before Chanel","Black or African American",30,0,0,127
+0,1,1,1,0,1,1,0,"Man",1,"Jobs","A Beautiful Mind","Lincoln","Marie Antoinette","A Beautiful Day in the Neighborhood","Oppenheimer","Moneyball","Hispanic / Latinx",27,1,0,127
+1,1,0,1,1,0,1,1,"Man",0,"Jobs","Lincoln","Capote","Hitchcock","The Aviator","Moneyball","The Iron Lady","Asian / Pacific Islander",49,1,0,127
+0,1,1,1,0,1,1,1,"Woman",2,"Amadeus","On The Basis of Sex","Chaplin","Oppenheimer","Braveheart","Judy","Lincoln","White / Caucasian",30,0,1,127
+0,1,1,1,0,1,0,0,"Woman",3,"A Beautiful Day in the Neighborhood","Judy","Oppenheimer","Braveheart","On The Basis of Sex","Marie Antoinette","A Beautiful Mind","Black or African American",31,0,0,127
+0,1,1,1,0,0,1,0,"Man",1,"Lincoln","Amadeus","Oppenheimer","On The Basis of Sex","Nixon","The Imitation Game","Jobs","Asian / Pacific Islander",52,1,0,127
+1,1,1,0,1,0,1,1,"Woman",1,"Braveheart","Hitchcock","A Beautiful Mind","The Imitation Game","Coco Before Chanel","Oppenheimer","On The Basis of Sex","White / Caucasian",27,0,1,127
+0,1,1,1,0,1,0,0,"Woman",2,"On The Basis of Sex","The Iron Lady","Oppenheimer","Lincoln","J. Edgar","Nixon","A Beautiful Mind","White / Caucasian",46,0,1,127
+0,1,1,1,0,0,0,0,"Man",1,"Amadeus","Braveheart","Oppenheimer","The Iron Lady","Lincoln","A Beautiful Day in the Neighborhood","The Doors","White / Caucasian",46,1,1,127
+1,1,1,0,1,0,0,0,"Woman",1,"The Doors","Nixon","Braveheart","Chaplin","Jobs","Judy","Coco Before Chanel","White / Caucasian",49,0,1,127
+1,1,1,0,0,0,1,0,"Man",0,"Hitchcock","Lincoln","The Aviator","A Beautiful Day in the Neighborhood","Chaplin","Jobs","The Imitation Game","White / Caucasian",46,1,1,127
+1,1,1,0,0,0,1,0,"Man",0,"The Doors","Moneyball","A Beautiful Day in the Neighborhood","W. A Life Misunderstood","Braveheart","The Aviator","Tolkien","White / Caucasian",45,1,1,127
+1,1,1,0,1,0,1,0,"Man",0,"A Beautiful Day in the Neighborhood","JFK","The Imitation Game","The Doors","Braveheart","Lincoln","Judy","White / Caucasian",43,1,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Oppenheimer","On The Basis of Sex","Lincoln","The Imitation Game","The Darkest Hour","J. Edgar","A Beautiful Day in the Neighborhood","Asian / Pacific Islander",37,1,0,127
+0,1,1,1,0,1,1,0,"Woman",0,"A Beautiful Mind","JFK","Amadeus","Lincoln","The Aviator","Nixon","Moneyball","White / Caucasian",56,0,1,127
+0,1,1,1,0,0,1,1,"Woman",0,"The Doors","The Imitation Game","Hitchcock","Moneyball","JFK","Oppenheimer","The Darkest Hour","White / Caucasian",31,0,1,127
+1,1,1,0,1,0,1,0,"Man",0,"Amadeus","Oppenheimer","Lincoln","Capote","Moneyball","Jobs","Judy","White / Caucasian",58,1,1,127
+1,1,1,0,1,0,1,0,"Woman",1,"Tolkien","The Aviator","The Iron Lady","The Doors","Braveheart","A Beautiful Day in the Neighborhood","Judy","White / Caucasian",56,0,1,127
+1,0,1,1,0,1,0,1,"Man",0,"Jobs","Tolkien","Oppenheimer","A Beautiful Day in the Neighborhood","A Beautiful Mind","Moneyball","Braveheart","White / Caucasian",38,1,1,127
+0,1,1,1,0,1,0,0,"Woman",1,"Amadeus","A Beautiful Day in the Neighborhood","Hitchcock","JFK","On The Basis of Sex","Chaplin","The Aviator","Black or African American",52,0,0,127
+0,1,1,1,0,0,0,0,"Man",3,"Amadeus","Marie Antoinette","The Aviator","Capote","Judy","Coco Before Chanel","Chaplin","White / Caucasian",33,1,1,127
+1,0,1,1,0,0,0,1,"Man",0,"The Aviator","J. Edgar","Chaplin","The Imitation Game","Capote","Tolkien","W. A Life Misunderstood","Black or African American",27,1,0,127
+0,1,1,1,0,0,0,0,"Man",0,"Oppenheimer","The Doors","JFK","Braveheart","Lincoln","Hitchcock","Amadeus","White / Caucasian",45,1,1,127
+1,1,1,0,1,1,0,1,"Man",0,"Jobs","Lincoln","Oppenheimer","The Imitation Game","A Beautiful Mind","The Aviator","Marie Antoinette","White / Caucasian",43,1,1,127
+1,1,1,0,0,0,1,0,"Man",1,"Tolkien","Lincoln","J. Edgar","Braveheart","On The Basis of Sex","The Darkest Hour","A Beautiful Day in the Neighborhood","White / Caucasian",57,1,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"Oppenheimer","Braveheart","A Beautiful Day in the Neighborhood","Marie Antoinette","A Beautiful Mind","The Aviator","Jobs","White / Caucasian",35,0,1,127
+0,1,1,1,0,1,1,1,"Woman",0,"A Beautiful Day in the Neighborhood","Hitchcock","The Aviator","Tolkien","Jobs","J. Edgar","Lincoln","White / Caucasian",67,0,1,127
+0,1,1,1,0,1,0,0,"Woman",2,"Oppenheimer","Judy","A Beautiful Day in the Neighborhood","The Doors","Tolkien","Marie Antoinette","The Aviator","White / Caucasian",49,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Oppenheimer","Jobs","Chaplin","Moneyball","Lincoln","JFK","Tolkien","White / Caucasian",28,1,1,127
+0,1,1,1,0,1,1,1,"Woman",0,"The Darkest Hour","Braveheart","The Aviator","Oppenheimer","A Beautiful Day in the Neighborhood","The Imitation Game","Lincoln","White / Caucasian",40,0,1,127
+0,1,1,1,0,0,1,0,"Man",2,"The Darkest Hour","The Imitation Game","Amadeus","Judy","Marie Antoinette","A Beautiful Mind","A Beautiful Day in the Neighborhood","Hispanic / Latinx",42,1,0,127
+1,0,1,1,0,1,0,1,"Woman",0,"Capote","Chaplin","Hitchcock","J. Edgar","Jobs","Amadeus","JFK","Black or African American",36,0,0,127
+0,1,1,1,0,0,1,0,"Woman",1,"Jobs","Chaplin","The Aviator","Marie Antoinette","Amadeus","Braveheart","The Imitation Game","Hispanic / Latinx",29,0,0,127
+0,1,1,1,1,0,1,1,"Man",1,"The Doors","The Aviator","Tolkien","The Iron Lady","Lincoln","Moneyball","On The Basis of Sex","White / Caucasian",28,1,1,127
+1,1,1,0,1,0,1,1,"Man",0,"Braveheart","The Aviator","Jobs","The Doors","Moneyball","W. A Life Misunderstood","On The Basis of Sex","White / Caucasian",28,1,1,127
+1,1,1,0,1,0,1,1,"Man",0,"Braveheart","Tolkien","Amadeus","Oppenheimer","The Aviator","The Darkest Hour","On The Basis of Sex","White / Caucasian",37,1,1,127
+0,1,1,1,0,1,0,0,"Woman",0,"Oppenheimer","Jobs","Hitchcock","The Imitation Game","The Aviator","Tolkien","A Beautiful Mind","White / Caucasian",40,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"The Aviator","Jobs","JFK","Oppenheimer","Capote","A Beautiful Mind","Tolkien","Asian / Pacific Islander",50,1,0,127
+1,1,1,0,0,0,0,0,"Woman",0,"Hitchcock","The Aviator","Jobs","The Doors","JFK","A Beautiful Day in the Neighborhood","Chaplin","White / Caucasian",33,0,1,127
+1,0,1,1,1,0,1,1,"Man",0,"Lincoln","Oppenheimer","Braveheart","The Imitation Game","Jobs","Tolkien","The Iron Lady","White / Caucasian",44,1,1,127
+1,0,1,1,1,1,0,1,"Man",0,"The Aviator","Braveheart","Oppenheimer","Chaplin","A Beautiful Day in the Neighborhood","A Beautiful Mind","Marie Antoinette","Black or African American",26,1,0,127
+0,1,1,1,1,0,0,0,"Woman",1,"Hitchcock","On The Basis of Sex","Oppenheimer","A Beautiful Day in the Neighborhood","The Darkest Hour","A Beautiful Mind","Coco Before Chanel","Asian / Pacific Islander",39,0,0,127
+1,1,1,0,0,1,0,0,"Woman",1,"Judy","Amadeus","Moneyball","A Beautiful Day in the Neighborhood","Hitchcock","Jobs","A Beautiful Mind","White / Caucasian",24,0,1,127
+0,1,1,1,0,1,0,0,"Woman",1,"Lincoln","Jobs","The Doors","Marie Antoinette","Oppenheimer","A Beautiful Day in the Neighborhood","A Beautiful Mind","White / Caucasian",26,0,1,127
+0,1,1,1,0,0,0,0,"Woman",1,"A Beautiful Day in the Neighborhood","On The Basis of Sex","The Imitation Game","Moneyball","The Darkest Hour","Lincoln","Amadeus","Asian / Pacific Islander",45,0,0,127
+0,1,1,1,0,1,1,1,"Woman",0,"A Beautiful Mind","The Aviator","The Imitation Game","The Doors","Oppenheimer","Tolkien","Lincoln","White / Caucasian",50,0,1,127
+0,1,1,1,0,1,0,1,"Man",2,"Braveheart","The Doors","Lincoln","Oppenheimer","On The Basis of Sex","Judy","JFK","White / Caucasian",55,1,1,127
+1,1,0,1,0,0,0,0,"Woman",3,"Judy","Oppenheimer","On The Basis of Sex","Nixon","Braveheart","The Iron Lady","Chaplin","Black or African American",23,0,0,127
+0,1,1,1,0,0,0,1,"Man",1,"The Doors","Braveheart","Judy","W. A Life Misunderstood","Lincoln","A Beautiful Mind","Nixon","White / Caucasian",33,1,1,127
+0,1,1,1,0,0,0,0,"Man",1,"The Darkest Hour","Chaplin","Hitchcock","On The Basis of Sex","Lincoln","J. Edgar","The Doors","Black or African American",45,1,0,127
+1,1,1,0,1,0,1,1,"Man",0,"Lincoln","Amadeus","A Beautiful Mind","Chaplin","Oppenheimer","Jobs","The Iron Lady","White / Caucasian",66,1,1,127
+0,1,1,1,1,0,1,1,"Woman",0,"Oppenheimer","The Aviator","Tolkien","Jobs","A Beautiful Day in the Neighborhood","The Doors","The Iron Lady","White / Caucasian",58,0,1,127
+0,1,1,1,1,0,0,0,"Woman",2,"Tolkien","On The Basis of Sex","The Imitation Game","Amadeus","A Beautiful Day in the Neighborhood","Judy","Coco Before Chanel","White / Caucasian",32,0,1,127
+0,1,1,1,0,1,1,0,"Man",0,"Hitchcock","Chaplin","Lincoln","Amadeus","A Beautiful Day in the Neighborhood","J. Edgar","Oppenheimer","White / Caucasian",60,1,1,127
+1,0,1,1,1,0,0,0,"Man",1,"Lincoln","A Beautiful Day in the Neighborhood","Tolkien","Moneyball","On The Basis of Sex","A Beautiful Mind","Coco Before Chanel","White / Caucasian",53,1,1,127
+1,0,1,1,0,0,0,0,"Woman",1,"Moneyball","Lincoln","The Doors","Marie Antoinette","Hitchcock","A Beautiful Day in the Neighborhood","Amadeus","White / Caucasian",45,0,1,127
+0,1,1,1,0,0,0,0,"Man",1,"Lincoln","Braveheart","Judy","Hitchcock","A Beautiful Day in the Neighborhood","Chaplin","Amadeus","White / Caucasian",41,1,1,127
+0,1,1,1,0,0,0,1,"Man",0,"A Beautiful Mind","The Aviator","The Imitation Game","Jobs","Lincoln","The Darkest Hour","Nixon","White / Caucasian",73,1,1,127
+1,0,1,1,1,1,0,1,"Woman",2,"On The Basis of Sex","A Beautiful Day in the Neighborhood","Oppenheimer","Judy","Lincoln","Jobs","Marie Antoinette","White / Caucasian",54,0,1,127
+1,0,1,1,1,0,1,1,"Man",0,"Lincoln","Braveheart","The Aviator","The Doors","Jobs","Amadeus","On The Basis of Sex","Black or African American",47,1,0,127
+1,0,1,1,0,0,1,0,"Man",1,"The Imitation Game","J. Edgar","JFK","The Darkest Hour","On The Basis of Sex","Moneyball","Tolkien","Asian / Pacific Islander",27,1,0,127
+0,1,1,1,0,0,1,0,"Man",1,"Lincoln","A Beautiful Day in the Neighborhood","On The Basis of Sex","The Imitation Game","JFK","Amadeus","Tolkien","White / Caucasian",46,1,1,127
+1,0,1,1,0,0,0,1,"Woman",3,"A Beautiful Day in the Neighborhood","Coco Before Chanel","The Doors","Jobs","Marie Antoinette","On The Basis of Sex","W. A Life Misunderstood","White / Caucasian",34,0,1,127
+1,0,1,1,1,0,0,0,"Man",1,"On The Basis of Sex","Tolkien","A Beautiful Day in the Neighborhood","Lincoln","The Imitation Game","Jobs","Coco Before Chanel","White / Caucasian",37,1,1,127
+0,1,1,1,0,0,1,0,"Man",0,"A Beautiful Mind","Braveheart","The Doors","Oppenheimer","Moneyball","The Imitation Game","Jobs","White / Caucasian",37,1,1,127
+0,1,1,1,1,0,0,0,"Man",1,"The Aviator","Marie Antoinette","Nixon","The Doors","Oppenheimer","J. Edgar","Coco Before Chanel","White / Caucasian",51,1,1,127
+1,1,1,0,0,1,0,1,"Woman",2,"A Beautiful Day in the Neighborhood","Amadeus","The Doors","On The Basis of Sex","Chaplin","Judy","JFK","White / Caucasian",45,0,1,127
+0,1,1,1,1,0,1,1,"Man",0,"A Beautiful Day in the Neighborhood","The Imitation Game","Amadeus","Oppenheimer","Tolkien","J. Edgar","The Iron Lady","Black or African American",29,1,0,127
+1,1,1,0,0,1,1,0,"Woman",1,"The Doors","Braveheart","Jobs","The Aviator","A Beautiful Mind","Marie Antoinette","Moneyball","White / Caucasian",39,0,1,127
+0,1,1,1,1,0,1,1,"Man",1,"Braveheart","Chaplin","Coco Before Chanel","W. A Life Misunderstood","Amadeus","Oppenheimer","On The Basis of Sex","White / Caucasian",56,1,1,127
+1,1,1,0,1,0,0,0,"Woman",1,"Marie Antoinette","Braveheart","Tolkien","A Beautiful Mind","Chaplin","Amadeus","Coco Before Chanel","Black or African American",36,0,0,127
+0,1,1,1,1,0,1,1,"Man",0,"Oppenheimer","J. Edgar","The Darkest Hour","W. A Life Misunderstood","The Aviator","Lincoln","On The Basis of Sex","White / Caucasian",37,1,1,127
+1,0,1,1,0,0,0,0,"Man",2,"Tolkien","Hitchcock","Coco Before Chanel","Chaplin","A Beautiful Mind","On The Basis of Sex","Capote","Black or African American",47,1,0,127
+1,1,1,0,0,0,1,0,"Man",2,"A Beautiful Day in the Neighborhood","The Iron Lady","Oppenheimer","On The Basis of Sex","Moneyball","Jobs","Tolkien","Hispanic / Latinx",44,1,0,127
+1,0,1,1,1,0,1,0,"Woman",1,"Nixon","Jobs","Hitchcock","The Aviator","The Doors","Marie Antoinette","Judy","White / Caucasian",72,0,1,127
+0,1,1,1,0,0,1,1,"Woman",0,"The Imitation Game","Jobs","A Beautiful Day in the Neighborhood","JFK","Tolkien","Chaplin","J. Edgar","White / Caucasian",43,0,1,127
+1,1,1,0,0,0,1,0,"Woman",3,"A Beautiful Mind","W. A Life Misunderstood","Marie Antoinette","Jobs","Coco Before Chanel","Judy","Hitchcock","White / Caucasian",50,0,1,127
+1,0,1,1,0,0,1,0,"Man",0,"Capote","J. Edgar","W. A Life Misunderstood","Moneyball","Oppenheimer","The Darkest Hour","Jobs","White / Caucasian",28,1,1,127
+0,1,1,1,1,0,1,1,"Man",0,"The Imitation Game","A Beautiful Day in the Neighborhood","The Doors","Tolkien","Oppenheimer","Jobs","On The Basis of Sex","White / Caucasian",57,1,1,127
+0,1,1,1,1,1,0,1,"Woman",2,"Oppenheimer","A Beautiful Day in the Neighborhood","Tolkien","Chaplin","Coco Before Chanel","Judy","Marie Antoinette","Asian / Pacific Islander",28,0,0,127
+1,0,1,1,0,0,1,0,"Woman",1,"Jobs","Marie Antoinette","W. A Life Misunderstood","Tolkien","J. Edgar","Nixon","A Beautiful Day in the Neighborhood","White / Caucasian",40,0,1,127
+1,0,1,1,1,0,1,0,"Woman",0,"Braveheart","The Darkest Hour","Moneyball","Amadeus","Lincoln","A Beautiful Day in the Neighborhood","Judy","White / Caucasian",32,0,1,127
+1,1,1,0,1,0,0,0,"Woman",1,"A Beautiful Mind","The Aviator","Oppenheimer","Jobs","Marie Antoinette","A Beautiful Day in the Neighborhood","Coco Before Chanel","White / Caucasian",46,0,1,127
+0,1,1,1,0,1,1,1,"Man",1,"The Darkest Hour","A Beautiful Day in the Neighborhood","The Imitation Game","On The Basis of Sex","The Doors","Jobs","Lincoln","White / Caucasian",66,1,1,127
+1,1,1,0,0,1,1,0,"Man",0,"Oppenheimer","Braveheart","Amadeus","The Doors","Lincoln","JFK","Moneyball","White / Caucasian",42,1,1,127
+1,0,1,1,0,0,1,1,"Woman",0,"Tolkien","W. A Life Misunderstood","A Beautiful Day in the Neighborhood","Jobs","Lincoln","Hitchcock","J. Edgar","Black or African American",44,0,0,127
+0,1,1,1,0,1,0,1,"Man",0,"Amadeus","The Aviator","Moneyball","Nixon","JFK","The Imitation Game","Braveheart","White / Caucasian",37,1,1,127
+1,1,1,0,1,0,0,0,"Man",1,"Marie Antoinette","Chaplin","Hitchcock","Tolkien","A Beautiful Day in the Neighborhood","The Imitation Game","Coco Before Chanel","White / Caucasian",30,1,1,127
+0,1,1,1,0,1,0,0,"Man",0,"Oppenheimer","The Aviator","Jobs","The Doors","The Imitation Game","Amadeus","A Beautiful Mind","White / Caucasian",29,1,1,127
+1,0,1,1,0,0,1,0,"Woman",2,"Oppenheimer","Judy","Capote","Jobs","The Iron Lady","Nixon","A Beautiful Day in the Neighborhood","White / Caucasian",52,0,1,127
+1,1,1,0,1,1,0,1,"Woman",1,"Jobs","Moneyball","A Beautiful Day in the Neighborhood","W. A Life Misunderstood","The Aviator","On The Basis of Sex","Marie Antoinette","White / Caucasian",48,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"J. Edgar","Lincoln","Oppenheimer","The Darkest Hour","Jobs","Moneyball","Tolkien","White / Caucasian",42,1,1,127
+0,1,1,1,0,0,1,0,"Woman",2,"Jobs","Marie Antoinette","Judy","Chaplin","Hitchcock","Nixon","A Beautiful Day in the Neighborhood","White / Caucasian",30,0,1,127
+0,1,1,1,0,0,0,0,"Man",1,"JFK","The Aviator","Marie Antoinette","Moneyball","Lincoln","Amadeus","Chaplin","White / Caucasian",47,1,1,127
+1,1,1,0,1,0,0,0,"Man",0,"A Beautiful Day in the Neighborhood","The Darkest Hour","Lincoln","Chaplin","Jobs","Oppenheimer","Coco Before Chanel","White / Caucasian",56,1,1,127
+1,0,1,1,1,0,1,0,"Man",0,"A Beautiful Day in the Neighborhood","Tolkien","Hitchcock","Braveheart","Jobs","Lincoln","Judy","White / Caucasian",48,1,1,127
+0,1,1,1,0,0,1,0,"Man",2,"A Beautiful Day in the Neighborhood","Oppenheimer","Lincoln","Judy","Chaplin","On The Basis of Sex","Tolkien","White / Caucasian",58,1,1,127
+1,1,1,0,0,0,0,1,"Man",0,"A Beautiful Day in the Neighborhood","Lincoln","Amadeus","Hitchcock","Oppenheimer","Braveheart","Nixon","White / Caucasian",54,1,1,127
+1,0,1,1,1,0,0,0,"Man",0,"Chaplin","Amadeus","Oppenheimer","A Beautiful Day in the Neighborhood","The Darkest Hour","Moneyball","Coco Before Chanel","White / Caucasian",28,1,1,127
+0,1,1,1,1,0,1,1,"Woman",2,"Lincoln","Chaplin","Marie Antoinette","Coco Before Chanel","Oppenheimer","The Darkest Hour","On The Basis of Sex","White / Caucasian",29,0,1,127
+0,1,1,1,1,0,1,1,"Man",0,"Jobs","The Aviator","A Beautiful Mind","A Beautiful Day in the Neighborhood","Oppenheimer","Lincoln","On The Basis of Sex","White / Caucasian",55,1,1,127
+0,1,1,1,0,0,1,0,"Man",2,"The Doors","Coco Before Chanel","Hitchcock","The Darkest Hour","Lincoln","On The Basis of Sex","Jobs","Black or African American",30,1,0,127
+0,1,1,1,0,0,0,0,"Man",1,"The Imitation Game","A Beautiful Mind","Braveheart","Lincoln","Jobs","Marie Antoinette","Chaplin","Asian / Pacific Islander",59,1,0,127
+1,1,1,0,0,0,1,0,"Man",2,"On The Basis of Sex","W. A Life Misunderstood","Amadeus","Tolkien","Marie Antoinette","J. Edgar","The Imitation Game","White / Caucasian",43,1,1,127
+0,1,1,1,1,0,1,1,"Man",1,"Tolkien","Oppenheimer","Lincoln","A Beautiful Day in the Neighborhood","Judy","Braveheart","On The Basis of Sex","White / Caucasian",36,1,1,127
+0,1,1,1,0,1,1,0,"Man",2,"A Beautiful Day in the Neighborhood","On The Basis of Sex","Amadeus","Coco Before Chanel","Lincoln","The Darkest Hour","Moneyball","White / Caucasian",43,1,1,127
+0,1,1,1,0,1,1,0,"Woman",2,"The Aviator","Jobs","Coco Before Chanel","The Imitation Game","On The Basis of Sex","Lincoln","Oppenheimer","White / Caucasian",29,0,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Lincoln","J. Edgar","Oppenheimer","On The Basis of Sex","JFK","Tolkien","Hitchcock","Hispanic / Latinx",59,1,0,127
+1,1,1,0,0,0,1,0,"Man",2,"Oppenheimer","The Imitation Game","The Darkest Hour","Marie Antoinette","Tolkien","Coco Before Chanel","Hitchcock","White / Caucasian",43,1,1,127
+0,1,1,1,1,1,0,1,"Woman",3,"On The Basis of Sex","Lincoln","Jobs","Judy","The Iron Lady","Hitchcock","Marie Antoinette","Black or African American",54,0,0,127
+1,1,1,0,0,0,1,0,"Woman",3,"Coco Before Chanel","Hitchcock","Judy","Marie Antoinette","Jobs","W. A Life Misunderstood","Tolkien","White / Caucasian",31,0,1,127
+0,1,1,1,0,0,0,0,"Woman",3,"A Beautiful Day in the Neighborhood","Coco Before Chanel","Oppenheimer","The Iron Lady","Moneyball","On The Basis of Sex","Amadeus","White / Caucasian",61,0,1,127
+0,1,1,1,0,0,1,0,"Man",2,"On The Basis of Sex","Braveheart","Amadeus","The Iron Lady","The Darkest Hour","Lincoln","Jobs","White / Caucasian",54,1,1,127
+1,0,1,1,1,0,1,1,"Man",1,"Nixon","Amadeus","Braveheart","Marie Antoinette","Oppenheimer","Capote","On The Basis of Sex","White / Caucasian",42,1,1,127
+1,1,0,1,1,0,0,0,"Man",2,"Jobs","A Beautiful Day in the Neighborhood","Judy","W. A Life Misunderstood","Tolkien","On The Basis of Sex","Coco Before Chanel","White / Caucasian",28,1,1,127
+1,1,1,0,1,1,0,1,"Woman",0,"The Imitation Game","Moneyball","Capote","Hitchcock","The Doors","Amadeus","Marie Antoinette","White / Caucasian",56,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Lincoln","The Aviator","Moneyball","Oppenheimer","Jobs","Hitchcock","The Imitation Game","Black or African American",51,1,0,127
+1,1,1,0,0,0,1,1,"Woman",1,"J. Edgar","Tolkien","On The Basis of Sex","Jobs","Hitchcock","Lincoln","The Darkest Hour","White / Caucasian",39,0,1,127
+0,1,1,1,0,0,0,0,"Woman",0,"Braveheart","Lincoln","Tolkien","A Beautiful Day in the Neighborhood","The Darkest Hour","W. A Life Misunderstood","Amadeus","White / Caucasian",67,0,1,127
+0,1,1,1,0,0,1,0,"Woman",2,"Tolkien","A Beautiful Day in the Neighborhood","A Beautiful Mind","The Iron Lady","Marie Antoinette","The Darkest Hour","The Imitation Game","White / Caucasian",53,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Lincoln","The Darkest Hour","A Beautiful Day in the Neighborhood","A Beautiful Mind","The Imitation Game","Braveheart","Jobs","White / Caucasian",45,1,1,127
+1,1,1,0,1,0,1,1,"Woman",0,"JFK","Braveheart","Nixon","Lincoln","J. Edgar","W. A Life Misunderstood","The Iron Lady","White / Caucasian",47,0,1,127
+1,1,1,0,0,0,1,0,"Man",0,"Lincoln","A Beautiful Day in the Neighborhood","The Darkest Hour","Moneyball","Amadeus","Chaplin","Jobs","White / Caucasian",52,1,1,127
+1,1,1,0,0,0,0,0,"Woman",1,"Moneyball","The Aviator","Braveheart","Tolkien","The Iron Lady","Jobs","Amadeus","White / Caucasian",58,0,1,127
+0,1,1,1,0,1,1,0,"Man",0,"The Imitation Game","Braveheart","Moneyball","JFK","The Doors","Tolkien","Oppenheimer","White / Caucasian",50,1,1,127
+1,1,1,0,0,0,1,0,"Man",0,"Jobs","The Doors","Lincoln","Oppenheimer","A Beautiful Day in the Neighborhood","J. Edgar","The Imitation Game","White / Caucasian",43,1,1,127
+0,1,1,1,0,0,1,0,"Woman",2,"A Beautiful Mind","Jobs","A Beautiful Day in the Neighborhood","On The Basis of Sex","Judy","Oppenheimer","The Imitation Game","White / Caucasian",41,0,1,127
+1,1,1,0,0,0,1,1,"Man",0,"Jobs","A Beautiful Mind","Tolkien","Amadeus","The Imitation Game","The Aviator","J. Edgar","White / Caucasian",65,1,1,127
+1,1,1,0,0,1,0,0,"Woman",3,"Jobs","A Beautiful Day in the Neighborhood","Marie Antoinette","Coco Before Chanel","Judy","J. Edgar","The Aviator","White / Caucasian",45,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Oppenheimer","The Doors","A Beautiful Mind","Jobs","Lincoln","Capote","A Beautiful Day in the Neighborhood","White / Caucasian",40,1,1,127
+0,1,1,1,1,0,1,1,"Woman",1,"A Beautiful Day in the Neighborhood","Lincoln","The Imitation Game","Marie Antoinette","Chaplin","Tolkien","The Iron Lady","White / Caucasian",37,0,1,127
+0,1,1,1,0,0,0,1,"Man",0,"Lincoln","Oppenheimer","Amadeus","Chaplin","The Darkest Hour","Braveheart","Nixon","White / Caucasian",44,1,1,127
+1,1,1,0,0,0,0,0,"Man",3,"The Darkest Hour","On The Basis of Sex","Judy","Marie Antoinette","Oppenheimer","JFK","Amadeus","White / Caucasian",44,1,1,127
+1,0,1,1,0,1,1,0,"Man",1,"Oppenheimer","Lincoln","On The Basis of Sex","A Beautiful Day in the Neighborhood","Jobs","Tolkien","Moneyball","Asian / Pacific Islander",46,1,0,127
+1,1,0,1,0,1,0,0,"Man",2,"Coco Before Chanel","Jobs","Nixon","A Beautiful Day in the Neighborhood","Hitchcock","Judy","The Aviator","White / Caucasian",60,1,1,127
+0,1,1,1,0,0,0,0,"Man",3,"Moneyball","Marie Antoinette","Judy","The Doors","Braveheart","On The Basis of Sex","Chaplin","White / Caucasian",41,1,1,127
+0,1,1,1,0,1,1,1,"Man",0,"The Imitation Game","Jobs","Oppenheimer","J. Edgar","A Beautiful Day in the Neighborhood","The Aviator","Lincoln","Black or African American",27,1,0,127
+0,1,1,1,0,1,0,0,"Man",0,"The Imitation Game","Braveheart","Tolkien","Jobs","Oppenheimer","The Doors","The Aviator","Asian / Pacific Islander",33,1,0,127
+0,1,1,1,0,0,1,0,"Man",2,"A Beautiful Mind","Judy","W. A Life Misunderstood","Moneyball","The Doors","Coco Before Chanel","Tolkien","Black or African American",27,1,0,127
+1,1,1,0,0,0,0,0,"Woman",2,"Moneyball","Marie Antoinette","Coco Before Chanel","Lincoln","J. Edgar","The Doors","Chaplin","White / Caucasian",33,0,1,127
+1,0,1,1,0,0,1,1,"Woman",1,"Lincoln","W. A Life Misunderstood","Oppenheimer","On The Basis of Sex","The Imitation Game","A Beautiful Day in the Neighborhood","J. Edgar","White / Caucasian",37,0,1,127
+0,1,1,1,0,0,1,0,"Woman",2,"The Iron Lady","On The Basis of Sex","Oppenheimer","The Darkest Hour","Lincoln","Jobs","A Beautiful Day in the Neighborhood","White / Caucasian",30,0,1,127
+1,1,1,0,0,1,1,1,"Man",0,"Capote","The Aviator","Oppenheimer","JFK","A Beautiful Mind","Moneyball","Lincoln","White / Caucasian",37,1,1,127
+1,0,1,1,0,0,1,0,"Woman",1,"Chaplin","Marie Antoinette","Lincoln","The Aviator","Oppenheimer","A Beautiful Mind","A Beautiful Day in the Neighborhood","White / Caucasian",42,0,1,127
+1,1,1,0,0,1,1,0,"Woman",1,"Amadeus","Chaplin","Braveheart","The Iron Lady","Lincoln","The Imitation Game","Oppenheimer","White / Caucasian",45,0,1,127
+1,0,1,1,0,1,0,0,"Man",0,"A Beautiful Day in the Neighborhood","Oppenheimer","Moneyball","JFK","The Imitation Game","J. Edgar","The Aviator","White / Caucasian",39,1,1,127
+0,1,1,1,0,1,0,0,"Woman",2,"Jobs","Hitchcock","Judy","J. Edgar","On The Basis of Sex","Lincoln","The Aviator","White / Caucasian",65,0,1,127
+1,1,0,1,0,1,1,0,"Woman",1,"Hitchcock","The Aviator","Jobs","On The Basis of Sex","Nixon","J. Edgar","Oppenheimer","White / Caucasian",78,0,1,127
+0,1,1,1,0,0,0,0,"Man",2,"Jobs","Hitchcock","A Beautiful Day in the Neighborhood","Marie Antoinette","The Imitation Game","On The Basis of Sex","Amadeus","White / Caucasian",32,1,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Moneyball","On The Basis of Sex","The Darkest Hour","A Beautiful Day in the Neighborhood","Jobs","Lincoln","Tolkien","White / Caucasian",47,1,1,127
+1,0,1,1,1,0,1,1,"Woman",0,"W. A Life Misunderstood","J. Edgar","Tolkien","A Beautiful Mind","Lincoln","The Imitation Game","On The Basis of Sex","White / Caucasian",58,0,1,127
+1,0,1,1,0,1,0,1,"Woman",0,"A Beautiful Day in the Neighborhood","Lincoln","W. A Life Misunderstood","J. Edgar","Tolkien","Chaplin","Braveheart","White / Caucasian",34,0,1,127
+1,1,1,0,1,0,0,0,"Man",0,"Lincoln","Jobs","Tolkien","The Aviator","Hitchcock","A Beautiful Day in the Neighborhood","Coco Before Chanel","Hispanic / Latinx",29,1,0,127
+1,0,1,1,1,0,1,1,"Woman",0,"Jobs","Lincoln","Oppenheimer","Chaplin","Tolkien","W. A Life Misunderstood","On The Basis of Sex","Asian / Pacific Islander",38,0,0,127
+0,1,1,1,0,1,0,0,"Woman",1,"Jobs","On The Basis of Sex","Capote","Tolkien","W. A Life Misunderstood","The Doors","The Aviator","Black or African American",24,0,0,127
+1,1,1,0,1,0,0,0,"Woman",0,"The Aviator","Lincoln","Braveheart","The Darkest Hour","Hitchcock","Amadeus","Coco Before Chanel","White / Caucasian",44,0,1,127
+1,1,0,1,0,1,0,0,"Man",1,"Hitchcock","Lincoln","Oppenheimer","Braveheart","Tolkien","Marie Antoinette","A Beautiful Mind","White / Caucasian",32,1,1,127
+0,1,1,1,1,0,1,1,"Man",0,"J. Edgar","Chaplin","Jobs","Lincoln","Oppenheimer","The Darkest Hour","On The Basis of Sex","White / Caucasian",31,1,1,127
+1,1,0,1,1,0,1,1,"Woman",1,"Hitchcock","The Doors","Lincoln","Chaplin","Judy","A Beautiful Day in the Neighborhood","On The Basis of Sex","White / Caucasian",41,0,1,127
+1,1,1,0,0,0,0,0,"Man",0,"Oppenheimer","Jobs","Amadeus","Hitchcock","Chaplin","Lincoln","The Doors","White / Caucasian",69,1,1,127
+1,0,1,1,0,0,1,1,"Woman",2,"Tolkien","JFK","Marie Antoinette","Hitchcock","Lincoln","Coco Before Chanel","J. Edgar","White / Caucasian",72,0,1,127
+1,0,1,1,1,0,1,0,"Man",0,"Amadeus","Chaplin","Oppenheimer","JFK","Lincoln","Braveheart","Judy","White / Caucasian",70,1,1,127
+0,1,1,1,0,0,0,0,"Woman",1,"Lincoln","The Aviator","A Beautiful Day in the Neighborhood","Hitchcock","Judy","Chaplin","Capote","White / Caucasian",47,0,1,127
+0,1,1,1,1,0,1,1,"Man",1,"The Iron Lady","Oppenheimer","Lincoln","The Imitation Game","A Beautiful Mind","Braveheart","On The Basis of Sex","Asian / Pacific Islander",38,1,0,127
+0,1,1,1,1,0,0,0,"Woman",0,"A Beautiful Day in the Neighborhood","Jobs","Moneyball","A Beautiful Mind","Hitchcock","JFK","Coco Before Chanel","White / Caucasian",50,0,1,127
+1,1,1,0,0,1,0,0,"Woman",2,"Jobs","Oppenheimer","Lincoln","On The Basis of Sex","The Imitation Game","Judy","The Aviator","White / Caucasian",37,0,1,127
+1,1,0,1,1,1,0,1,"Man",1,"Amadeus","A Beautiful Day in the Neighborhood","The Aviator","A Beautiful Mind","Moneyball","On The Basis of Sex","Marie Antoinette","White / Caucasian",37,1,1,127
+0,1,1,1,0,1,0,1,"Man",0,"Amadeus","Chaplin","The Doors","Tolkien","A Beautiful Day in the Neighborhood","Hitchcock","JFK","White / Caucasian",42,1,1,127
+0,1,1,1,1,0,1,1,"Woman",1,"Chaplin","A Beautiful Mind","On The Basis of Sex","The Imitation Game","W. A Life Misunderstood","Jobs","The Iron Lady","White / Caucasian",44,0,1,127
+1,0,1,1,1,0,1,0,"Man",0,"Lincoln","Chaplin","Oppenheimer","Braveheart","The Imitation Game","Capote","Judy","White / Caucasian",36,1,1,127
+1,1,1,0,1,0,1,0,"Man",1,"Capote","Braveheart","Hitchcock","A Beautiful Day in the Neighborhood","Oppenheimer","The Iron Lady","Judy","White / Caucasian",46,1,1,127
+0,1,1,1,0,0,0,1,"Woman",1,"Coco Before Chanel","Oppenheimer","The Aviator","Jobs","Tolkien","The Imitation Game","W. A Life Misunderstood","Asian / Pacific Islander",37,0,0,127
+1,0,1,1,1,0,1,0,"Man",3,"Hitchcock","J. Edgar","The Imitation Game","Marie Antoinette","On The Basis of Sex","Coco Before Chanel","Judy","White / Caucasian",58,1,1,127
+1,1,1,0,0,0,1,0,"Man",2,"A Beautiful Day in the Neighborhood","Oppenheimer","Marie Antoinette","Jobs","Judy","Capote","Tolkien","White / Caucasian",34,1,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Hitchcock","Judy","The Darkest Hour","Lincoln","A Beautiful Day in the Neighborhood","A Beautiful Mind","Jobs","White / Caucasian",48,1,1,127
+1,1,1,0,1,0,1,1,"Man",0,"Braveheart","Hitchcock","The Imitation Game","Amadeus","A Beautiful Day in the Neighborhood","The Aviator","The Iron Lady","White / Caucasian",63,1,1,127
+1,1,1,0,1,0,1,1,"Man",1,"Tolkien","Chaplin","Lincoln","Moneyball","Amadeus","Coco Before Chanel","On The Basis of Sex","White / Caucasian",33,1,1,127
+0,1,1,1,1,0,0,0,"Man",0,"Capote","A Beautiful Mind","The Darkest Hour","J. Edgar","Lincoln","Oppenheimer","Coco Before Chanel","White / Caucasian",40,1,1,127
+0,1,1,1,0,0,1,1,"Woman",2,"The Iron Lady","Lincoln","Oppenheimer","A Beautiful Day in the Neighborhood","Chaplin","Coco Before Chanel","The Darkest Hour","White / Caucasian",44,0,1,127
+1,1,1,0,1,1,0,1,"Woman",2,"Capote","On The Basis of Sex","Chaplin","A Beautiful Day in the Neighborhood","JFK","The Iron Lady","Marie Antoinette","White / Caucasian",38,0,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Chaplin","The Aviator","Braveheart","Capote","Marie Antoinette","JFK","Hitchcock","Hispanic / Latinx",64,1,0,127
+1,0,1,1,1,0,1,1,"Man",1,"Lincoln","A Beautiful Day in the Neighborhood","On The Basis of Sex","The Imitation Game","Jobs","The Darkest Hour","The Iron Lady","White / Caucasian",40,1,1,127
+1,0,1,1,0,0,0,0,"Woman",1,"Oppenheimer","J. Edgar","Marie Antoinette","Lincoln","The Doors","Chaplin","Amadeus","Hispanic / Latinx",43,0,0,127
+0,1,1,1,0,0,1,1,"Woman",2,"Marie Antoinette","Lincoln","Nixon","The Doors","The Iron Lady","The Darkest Hour","J. Edgar","White / Caucasian",52,0,1,127
+1,0,1,1,0,0,1,1,"Man",0,"Lincoln","Oppenheimer","Moneyball","A Beautiful Mind","Braveheart","A Beautiful Day in the Neighborhood","The Darkest Hour","White / Caucasian",29,1,1,127
+1,0,1,1,0,1,1,0,"Man",3,"Nixon","A Beautiful Mind","Judy","The Iron Lady","Coco Before Chanel","JFK","Oppenheimer","White / Caucasian",62,1,1,127
+0,1,1,1,0,0,0,0,"Woman",1,"On The Basis of Sex","A Beautiful Day in the Neighborhood","J. Edgar","Oppenheimer","Jobs","JFK","Amadeus","White / Caucasian",46,0,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Marie Antoinette","W. A Life Misunderstood","Lincoln","Braveheart","Moneyball","A Beautiful Mind","Jobs","White / Caucasian",45,1,1,127
+1,0,1,1,0,0,0,0,"Woman",2,"Amadeus","On The Basis of Sex","Capote","A Beautiful Day in the Neighborhood","Judy","Tolkien","The Doors","White / Caucasian",37,0,1,127
+1,1,0,1,0,1,0,0,"Man",0,"Moneyball","Lincoln","A Beautiful Day in the Neighborhood","Braveheart","Oppenheimer","A Beautiful Mind","The Aviator","White / Caucasian",37,1,1,127
+0,1,1,1,1,0,0,0,"Woman",1,"Oppenheimer","Lincoln","A Beautiful Mind","Tolkien","On The Basis of Sex","Jobs","Coco Before Chanel","Asian / Pacific Islander",42,0,0,127
+0,1,1,1,0,0,1,0,"Woman",2,"The Imitation Game","Judy","Marie Antoinette","JFK","Nixon","The Doors","Tolkien","Asian / Pacific Islander",40,0,0,127
+1,0,1,1,1,0,0,0,"Woman",1,"Jobs","Moneyball","The Doors","A Beautiful Day in the Neighborhood","On The Basis of Sex","The Aviator","Coco Before Chanel","White / Caucasian",52,0,1,127
+1,0,1,1,1,0,1,0,"Man",0,"Chaplin","Jobs","Oppenheimer","W. A Life Misunderstood","The Aviator","Braveheart","Judy","Black or African American",30,1,0,127
+0,1,1,1,1,0,1,1,"Woman",2,"Amadeus","Lincoln","The Doors","Coco Before Chanel","Hitchcock","Marie Antoinette","On The Basis of Sex","Black or African American",70,0,0,127
+1,1,0,1,1,0,1,0,"Man",1,"Moneyball","A Beautiful Mind","Amadeus","Marie Antoinette","The Imitation Game","Oppenheimer","Judy","White / Caucasian",36,1,1,127
+1,1,1,0,1,1,0,1,"Non-binary",2,"Capote","The Imitation Game","Lincoln","Judy","A Beautiful Day in the Neighborhood","On The Basis of Sex","Marie Antoinette","White / Caucasian",35,0,1,127
+1,1,0,1,1,0,0,0,"Man",0,"Lincoln","The Darkest Hour","Braveheart","Oppenheimer","A Beautiful Day in the Neighborhood","Chaplin","Coco Before Chanel","White / Caucasian",72,1,1,127
+0,1,1,1,0,1,0,0,"Woman",2,"The Darkest Hour","Jobs","Lincoln","Marie Antoinette","Oppenheimer","On The Basis of Sex","The Aviator","Black or African American",34,0,0,127
+0,1,1,1,1,0,1,0,"Man",1,"Oppenheimer","On The Basis of Sex","Hitchcock","Lincoln","A Beautiful Day in the Neighborhood","Jobs","Judy","White / Caucasian",36,1,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Oppenheimer","The Aviator","JFK","Moneyball","Marie Antoinette","Amadeus","Jobs","White / Caucasian",23,1,1,127
+1,1,1,0,1,0,1,1,"Man",1,"Oppenheimer","Jobs","A Beautiful Day in the Neighborhood","Judy","Tolkien","Lincoln","On The Basis of Sex","White / Caucasian",30,1,1,127
+1,0,1,1,0,0,0,0,"Woman",3,"On The Basis of Sex","Coco Before Chanel","Chaplin","Marie Antoinette","Jobs","The Imitation Game","The Doors","Asian / Pacific Islander",46,0,0,127
+1,1,1,0,0,0,1,0,"Woman",1,"The Imitation Game","J. Edgar","Hitchcock","Capote","Tolkien","Marie Antoinette","Jobs","White / Caucasian",34,0,1,127
+1,0,1,1,0,1,1,1,"Man",2,"Hitchcock","Marie Antoinette","Jobs","Judy","The Doors","A Beautiful Day in the Neighborhood","Lincoln","White / Caucasian",56,1,1,127
+0,1,1,1,1,1,0,1,"Woman",1,"A Beautiful Day in the Neighborhood","A Beautiful Mind","Jobs","The Iron Lady","Oppenheimer","The Darkest Hour","Marie Antoinette","White / Caucasian",33,0,1,127
+0,1,1,1,0,0,0,0,"Woman",1,"The Aviator","Chaplin","Jobs","Braveheart","Tolkien","Marie Antoinette","The Doors","White / Caucasian",49,0,1,127
+1,1,1,0,0,0,1,0,"Man",2,"Judy","The Doors","The Aviator","The Imitation Game","The Darkest Hour","The Iron Lady","A Beautiful Day in the Neighborhood","White / Caucasian",70,1,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"A Beautiful Day in the Neighborhood","Lincoln","J. Edgar","Nixon","On The Basis of Sex","The Darkest Hour","Hitchcock","White / Caucasian",62,0,1,127
+1,1,1,0,1,0,1,0,"Woman",0,"Lincoln","The Aviator","Braveheart","The Doors","A Beautiful Day in the Neighborhood","Jobs","Judy","White / Caucasian",36,0,1,127
+0,1,1,1,0,0,0,0,"Woman",1,"Nixon","The Iron Lady","J. Edgar","Jobs","Hitchcock","Lincoln","Chaplin","White / Caucasian",58,0,1,127
+1,1,1,0,1,0,1,1,"Woman",1,"Judy","A Beautiful Day in the Neighborhood","Lincoln","A Beautiful Mind","The Imitation Game","The Doors","On The Basis of Sex","Black or African American",32,0,0,127
+0,1,1,1,0,0,1,0,"Man",1,"A Beautiful Day in the Neighborhood","Braveheart","The Doors","Marie Antoinette","Lincoln","Oppenheimer","Tolkien","White / Caucasian",37,1,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Amadeus","Oppenheimer","Lincoln","JFK","Jobs","W. A Life Misunderstood","A Beautiful Day in the Neighborhood","White / Caucasian",49,1,1,127
+0,1,1,1,1,0,1,1,"Man",2,"On The Basis of Sex","Judy","Oppenheimer","Hitchcock","Lincoln","Nixon","The Iron Lady","White / Caucasian",39,1,1,127
+1,1,0,1,1,0,1,0,"Man",0,"Chaplin","Lincoln","A Beautiful Day in the Neighborhood","Capote","Amadeus","W. A Life Misunderstood","Judy","White / Caucasian",29,1,1,127
+1,0,1,1,1,0,1,0,"Man",1,"The Imitation Game","Amadeus","A Beautiful Day in the Neighborhood","Lincoln","Oppenheimer","On The Basis of Sex","Judy","White / Caucasian",53,1,1,127
+1,1,1,0,1,0,1,1,"Woman",3,"Marie Antoinette","Chaplin","The Doors","Amadeus","Coco Before Chanel","On The Basis of Sex","The Iron Lady","Asian / Pacific Islander",28,0,0,127
+0,1,1,1,0,0,1,0,"Man",1,"The Imitation Game","Amadeus","Coco Before Chanel","The Darkest Hour","Oppenheimer","Jobs","Tolkien","White / Caucasian",53,1,1,127
+0,1,1,1,0,0,1,1,"Man",2,"JFK","Marie Antoinette","The Doors","The Aviator","Judy","A Beautiful Day in the Neighborhood","J. Edgar","White / Caucasian",37,1,1,127
+0,1,1,1,0,0,0,0,"Man",1,"J. Edgar","Jobs","Tolkien","Moneyball","A Beautiful Mind","Coco Before Chanel","Capote","White / Caucasian",43,1,1,127
+0,1,1,1,0,0,0,0,"Man",1,"Tolkien","The Imitation Game","The Darkest Hour","A Beautiful Mind","Jobs","On The Basis of Sex","Chaplin","White / Caucasian",24,1,1,127
+1,1,1,0,0,0,0,0,"Man",0,"The Doors","Jobs","A Beautiful Day in the Neighborhood","Lincoln","Nixon","The Imitation Game","Chaplin","White / Caucasian",47,1,1,127
+0,1,1,1,0,0,1,1,"Woman",0,"Lincoln","Amadeus","Hitchcock","J. Edgar","The Aviator","JFK","The Darkest Hour","White / Caucasian",75,0,1,127
+0,1,1,1,0,0,1,0,"Woman",2,"On The Basis of Sex","Coco Before Chanel","Jobs","The Doors","Tolkien","Capote","Hitchcock","Black or African American",50,0,0,127
+1,0,1,1,0,0,0,0,"Man",2,"The Imitation Game","A Beautiful Day in the Neighborhood","Judy","Moneyball","Braveheart","Marie Antoinette","Chaplin","White / Caucasian",31,1,1,127
+0,1,1,1,0,1,1,1,"Woman",2,"On The Basis of Sex","Jobs","The Darkest Hour","W. A Life Misunderstood","The Iron Lady","Capote","Lincoln","White / Caucasian",38,0,1,127
+0,1,1,1,1,0,1,1,"Man",0,"Jobs","Chaplin","The Aviator","W. A Life Misunderstood","Lincoln","Capote","On The Basis of Sex","Black or African American",41,1,0,127
+1,0,1,1,0,1,0,0,"Woman",2,"Oppenheimer","On The Basis of Sex","A Beautiful Day in the Neighborhood","Jobs","Judy","Moneyball","A Beautiful Mind","Black or African American",38,0,0,127
+1,0,1,1,0,1,0,0,"Woman",2,"Judy","On The Basis of Sex","A Beautiful Day in the Neighborhood","J. Edgar","Capote","Chaplin","The Aviator","White / Caucasian",23,0,1,127
+0,1,1,1,0,0,1,0,"Woman",0,"Nixon","Jobs","The Aviator","W. A Life Misunderstood","The Darkest Hour","Hitchcock","Tolkien","White / Caucasian",71,0,1,127
+0,1,1,1,0,1,1,0,"Man",0,"Jobs","The Darkest Hour","Lincoln","A Beautiful Day in the Neighborhood","J. Edgar","Oppenheimer","Moneyball","White / Caucasian",34,1,1,127
+0,1,1,1,0,0,1,0,"Woman",0,"Lincoln","Braveheart","The Doors","Amadeus","The Imitation Game","Oppenheimer","A Beautiful Day in the Neighborhood","White / Caucasian",45,0,1,127
+1,1,0,1,0,1,1,0,"Man",4,"Marie Antoinette","The Doors","Coco Before Chanel","Judy","A Beautiful Day in the Neighborhood","On The Basis of Sex","Moneyball","White / Caucasian",35,1,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"The Imitation Game","On The Basis of Sex","A Beautiful Mind","Amadeus","Lincoln","Jobs","Tolkien","Black or African American",35,0,0,127
+0,1,1,1,0,0,0,0,"Man",0,"Chaplin","Hitchcock","Tolkien","Capote","A Beautiful Mind","W. A Life Misunderstood","Amadeus","White / Caucasian",20,1,1,127
+1,1,1,0,0,0,1,1,"Woman",3,"Braveheart","Nixon","On The Basis of Sex","Coco Before Chanel","Hitchcock","Marie Antoinette","J. Edgar","White / Caucasian",42,0,1,127
+0,1,1,1,0,0,0,0,"Man",0,"Braveheart","Lincoln","The Darkest Hour","A Beautiful Mind","Oppenheimer","A Beautiful Day in the Neighborhood","Amadeus","White / Caucasian",50,1,1,127
+1,1,1,0,0,0,0,0,"Woman",1,"JFK","Braveheart","Oppenheimer","Marie Antoinette","Moneyball","Lincoln","Amadeus","White / Caucasian",37,0,1,127
+1,1,1,0,1,0,0,0,"Woman",0,"The Aviator","Amadeus","Jobs","Oppenheimer","Chaplin","A Beautiful Mind","Coco Before Chanel","White / Caucasian",32,0,1,127
+1,0,1,1,1,0,1,0,"Man",0,"Oppenheimer","A Beautiful Day in the Neighborhood","Jobs","Moneyball","The Aviator","Lincoln","Judy","White / Caucasian",37,1,1,127
+1,1,1,0,0,0,1,1,"Man",0,"Jobs","Moneyball","W. A Life Misunderstood","Nixon","Lincoln","A Beautiful Day in the Neighborhood","J. Edgar","White / Caucasian",36,1,1,127
+0,1,1,1,0,0,1,0,"Woman",3,"The Imitation Game","Jobs","Coco Before Chanel","Judy","On The Basis of Sex","Oppenheimer","Tolkien","White / Caucasian",34,0,1,127
+1,0,1,1,0,0,0,0,"Woman",2,"Braveheart","J. Edgar","The Darkest Hour","Oppenheimer","Coco Before Chanel","Judy","Chaplin","Black or African American",25,0,0,127
+1,0,1,1,0,0,0,0,"Man",0,"A Beautiful Day in the Neighborhood","Lincoln","Oppenheimer","The Imitation Game","Chaplin","Tolkien","Capote","White / Caucasian",33,1,1,127
+0,1,1,1,0,1,1,1,"Man",1,"The Darkest Hour","Amadeus","Chaplin","Judy","The Doors","A Beautiful Day in the Neighborhood","Lincoln","White / Caucasian",33,1,1,127
+1,1,1,0,1,0,1,1,"Woman",1,"Lincoln","The Iron Lady","Capote","Nixon","Amadeus","A Beautiful Mind","On The Basis of Sex","White / Caucasian",59,0,1,127
+1,1,0,1,1,0,1,1,"Woman",2,"A Beautiful Day in the Neighborhood","Judy","Amadeus","The Iron Lady","Lincoln","The Aviator","On The Basis of Sex","White / Caucasian",56,0,1,127
+1,1,1,0,0,0,1,1,"Man",0,"Braveheart","The Aviator","Tolkien","The Doors","Hitchcock","The Imitation Game","J. Edgar","White / Caucasian",43,1,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"Oppenheimer","J. Edgar","The Darkest Hour","Lincoln","Marie Antoinette","A Beautiful Day in the Neighborhood","The Imitation Game","White / Caucasian",35,0,1,127
+0,1,1,1,0,0,0,0,"Man",1,"Amadeus","Hitchcock","Capote","Tolkien","Judy","The Doors","Chaplin","White / Caucasian",30,1,1,127
+0,1,1,1,0,0,0,0,"Man",2,"The Iron Lady","Jobs","Tolkien","The Doors","Judy","Oppenheimer","Amadeus","Black or African American",37,1,0,127
+1,1,1,0,1,1,0,1,"Man",0,"Lincoln","Tolkien","The Darkest Hour","Oppenheimer","The Imitation Game","Braveheart","Marie Antoinette","White / Caucasian",28,1,1,127
+1,1,1,0,1,0,1,0,"Man",1,"Jobs","The Imitation Game","Tolkien","A Beautiful Mind","On The Basis of Sex","Amadeus","Judy","White / Caucasian",64,1,1,127
+1,1,1,0,1,0,1,1,"Man",0,"Lincoln","Braveheart","The Aviator","Oppenheimer","J. Edgar","Jobs","The Iron Lady","Hispanic / Latinx",38,1,0,127
+0,1,1,1,0,1,0,0,"Man",0,"J. Edgar","Jobs","Chaplin","Oppenheimer","The Aviator","A Beautiful Day in the Neighborhood","A Beautiful Mind","Asian / Pacific Islander",27,1,0,127
+1,1,0,1,1,0,1,1,"Woman",2,"A Beautiful Day in the Neighborhood","The Aviator","Marie Antoinette","Jobs","Coco Before Chanel","Amadeus","On The Basis of Sex","White / Caucasian",46,0,1,127
+0,1,1,1,1,0,1,0,"Woman",1,"On The Basis of Sex","Moneyball","A Beautiful Mind","Oppenheimer","Jobs","A Beautiful Day in the Neighborhood","Judy","Hispanic / Latinx",35,0,0,127
+1,1,1,0,0,1,1,1,"Woman",2,"Judy","Capote","The Doors","Hitchcock","The Imitation Game","On The Basis of Sex","Lincoln","White / Caucasian",41,0,1,127
+1,1,0,1,1,0,1,1,"Man",1,"The Doors","The Imitation Game","Capote","Lincoln","Judy","Hitchcock","The Iron Lady","White / Caucasian",41,1,1,127
+0,1,1,1,0,0,0,1,"Man",1,"Lincoln","The Imitation Game","Chaplin","Capote","The Iron Lady","Hitchcock","Nixon","White / Caucasian",46,1,1,127
+1,1,1,0,1,1,0,1,"Man",1,"Oppenheimer","On The Basis of Sex","Lincoln","The Doors","Amadeus","Jobs","Marie Antoinette","White / Caucasian",66,1,1,127
+1,1,1,0,0,0,1,0,"Man",2,"Oppenheimer","The Doors","On The Basis of Sex","A Beautiful Day in the Neighborhood","Judy","Lincoln","Jobs","White / Caucasian",36,1,1,127
+0,1,1,1,1,0,1,0,"Man",0,"Oppenheimer","The Aviator","Lincoln","Tolkien","The Imitation Game","J. Edgar","Judy","Hispanic / Latinx",35,1,0,127
+0,1,1,1,0,0,0,1,"Man",3,"Judy","Coco Before Chanel","Jobs","On The Basis of Sex","Tolkien","Lincoln","Nixon","White / Caucasian",41,1,1,127
+1,1,0,1,0,1,0,0,"Man",4,"Coco Before Chanel","The Iron Lady","On The Basis of Sex","A Beautiful Day in the Neighborhood","Judy","JFK","The Aviator","White / Caucasian",43,1,1,127
+0,1,1,1,1,0,0,0,"Woman",1,"Judy","The Aviator","Jobs","Braveheart","Oppenheimer","The Doors","Coco Before Chanel","Black or African American",44,0,0,127
+0,1,1,1,0,1,0,1,"Man",4,"Marie Antoinette","The Iron Lady","Amadeus","Braveheart","Coco Before Chanel","Judy","JFK","White / Caucasian",55,1,1,127
+0,1,1,1,0,1,0,0,"Woman",2,"On The Basis of Sex","Jobs","Judy","A Beautiful Day in the Neighborhood","Oppenheimer","Moneyball","The Aviator","White / Caucasian",43,0,1,127
+0,1,1,1,0,0,1,1,"Woman",4,"Marie Antoinette","A Beautiful Day in the Neighborhood","Jobs","On The Basis of Sex","Coco Before Chanel","Judy","J. Edgar","White / Caucasian",34,0,1,127
+1,0,1,1,0,0,0,1,"Man",0,"Hitchcock","Capote","Lincoln","Chaplin","Amadeus","Braveheart","Nixon","White / Caucasian",33,1,1,127
+1,1,1,0,0,1,0,1,"Man",2,"Hitchcock","Coco Before Chanel","Marie Antoinette","Oppenheimer","Tolkien","A Beautiful Mind","Braveheart","White / Caucasian",34,1,1,127
+1,1,1,0,1,0,1,1,"Woman",1,"Nixon","Braveheart","Lincoln","The Darkest Hour","Jobs","On The Basis of Sex","The Iron Lady","White / Caucasian",62,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"A Beautiful Day in the Neighborhood","JFK","Lincoln","Oppenheimer","The Imitation Game","Braveheart","Jobs","White / Caucasian",45,1,1,127
+1,1,1,0,1,0,1,0,"Man",0,"The Darkest Hour","A Beautiful Mind","Braveheart","Chaplin","A Beautiful Day in the Neighborhood","Jobs","Judy","White / Caucasian",49,1,1,127
+0,1,1,1,1,0,1,0,"Woman",0,"Lincoln","The Doors","Tolkien","A Beautiful Day in the Neighborhood","Braveheart","The Aviator","Judy","White / Caucasian",34,0,1,127
+1,1,1,0,0,0,0,0,"Woman",0,"Oppenheimer","Tolkien","A Beautiful Day in the Neighborhood","The Doors","Braveheart","Lincoln","Chaplin","Hispanic / Latinx",32,0,0,127
+0,1,1,1,0,1,1,0,"Man",0,"The Aviator","The Imitation Game","A Beautiful Day in the Neighborhood","Jobs","Lincoln","The Darkest Hour","Moneyball","Hispanic / Latinx",31,1,0,127
+1,1,1,0,0,1,0,1,"Man",1,"Oppenheimer","Capote","The Aviator","Judy","A Beautiful Day in the Neighborhood","Lincoln","Braveheart","White / Caucasian",38,1,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Tolkien","The Imitation Game","Capote","Moneyball","A Beautiful Mind","Oppenheimer","Jobs","White / Caucasian",33,1,1,127
+1,0,1,1,0,1,1,0,"Woman",0,"Amadeus","The Aviator","A Beautiful Day in the Neighborhood","Jobs","A Beautiful Mind","The Imitation Game","Moneyball","White / Caucasian",46,0,1,127
+1,0,1,1,1,0,1,1,"Man",2,"Marie Antoinette","Coco Before Chanel","Tolkien","A Beautiful Day in the Neighborhood","Amadeus","Chaplin","On The Basis of Sex","White / Caucasian",36,1,1,127
+1,1,1,0,0,0,1,0,"Woman",1,"Capote","Moneyball","W. A Life Misunderstood","Jobs","Coco Before Chanel","JFK","Tolkien","White / Caucasian",35,0,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"Lincoln","Judy","A Beautiful Day in the Neighborhood","Braveheart","Amadeus","Chaplin","Tolkien","White / Caucasian",45,0,1,127
+1,1,1,0,0,1,0,1,"Woman",3,"A Beautiful Day in the Neighborhood","Jobs","Judy","Lincoln","On The Basis of Sex","Marie Antoinette","Braveheart","White / Caucasian",24,0,1,127
+0,1,1,1,0,0,1,1,"Woman",1,"Tolkien","On The Basis of Sex","Capote","The Doors","Hitchcock","A Beautiful Day in the Neighborhood","J. Edgar","White / Caucasian",61,0,1,127
+0,1,1,1,0,0,1,0,"Woman",2,"On The Basis of Sex","Braveheart","A Beautiful Day in the Neighborhood","Coco Before Chanel","Amadeus","Hitchcock","Tolkien","White / Caucasian",68,0,1,127
+1,1,1,0,0,0,1,0,"Woman",2,"Judy","Lincoln","Braveheart","The Doors","Marie Antoinette","J. Edgar","A Beautiful Day in the Neighborhood","White / Caucasian",35,0,1,127
+0,1,1,1,1,0,0,0,"Woman",0,"The Doors","J. Edgar","Tolkien","A Beautiful Day in the Neighborhood","Oppenheimer","The Imitation Game","Coco Before Chanel","White / Caucasian",66,0,1,127
+1,1,1,0,1,0,1,1,"Woman",0,"The Aviator","Nixon","Lincoln","Oppenheimer","The Darkest Hour","A Beautiful Day in the Neighborhood","On The Basis of Sex","White / Caucasian",55,0,1,127
+0,1,1,1,0,0,1,1,"Woman",1,"Braveheart","A Beautiful Day in the Neighborhood","Oppenheimer","Lincoln","On The Basis of Sex","Moneyball","J. Edgar","Hispanic / Latinx",45,0,0,127
+0,1,1,1,1,0,1,1,"Man",1,"Nixon","The Doors","Braveheart","The Aviator","The Iron Lady","Lincoln","On The Basis of Sex","White / Caucasian",70,1,1,127
+1,0,1,1,1,1,0,1,"Woman",2,"Lincoln","Hitchcock","Judy","On The Basis of Sex","A Beautiful Day in the Neighborhood","Chaplin","Marie Antoinette","White / Caucasian",44,0,1,127
+1,1,1,0,1,0,1,1,"Man",0,"Jobs","Oppenheimer","A Beautiful Mind","Lincoln","The Darkest Hour","The Imitation Game","On The Basis of Sex","Hispanic / Latinx",38,1,0,127
+1,0,1,1,0,0,0,1,"Woman",0,"Braveheart","J. Edgar","The Darkest Hour","JFK","A Beautiful Mind","The Imitation Game","Nixon","White / Caucasian",46,0,1,127
+1,0,1,1,0,0,0,0,"Woman",1,"The Aviator","Marie Antoinette","W. A Life Misunderstood","Hitchcock","Jobs","Lincoln","Amadeus","White / Caucasian",46,0,1,127
+1,1,1,0,0,1,1,0,"Woman",1,"The Iron Lady","Hitchcock","J. Edgar","Moneyball","Chaplin","Nixon","Oppenheimer","White / Caucasian",26,0,1,127
+0,1,1,1,0,0,1,0,"Woman",3,"Hitchcock","A Beautiful Day in the Neighborhood","Judy","The Aviator","Marie Antoinette","Coco Before Chanel","Jobs","White / Caucasian",42,0,1,127
+0,1,1,1,0,1,1,0,"Woman",1,"Lincoln","Jobs","Coco Before Chanel","Amadeus","A Beautiful Mind","Chaplin","Oppenheimer","Asian / Pacific Islander",49,0,0,127
+0,1,1,1,0,0,0,0,"Woman",0,"Tolkien","JFK","The Aviator","Oppenheimer","A Beautiful Mind","Lincoln","Capote","White / Caucasian",63,0,1,127
+1,1,1,0,0,0,1,0,"Woman",1,"Hitchcock","The Aviator","A Beautiful Mind","Judy","A Beautiful Day in the Neighborhood","The Imitation Game","Tolkien","White / Caucasian",39,0,1,127
+1,1,1,0,0,1,1,1,"Woman",1,"J. Edgar","Tolkien","On The Basis of Sex","Jobs","A Beautiful Mind","JFK","Lincoln","White / Caucasian",70,0,1,127
+0,1,1,1,0,0,0,1,"Woman",1,"Tolkien","Hitchcock","A Beautiful Day in the Neighborhood","W. A Life Misunderstood","The Darkest Hour","On The Basis of Sex","Nixon","White / Caucasian",61,0,1,127
+0,1,1,1,1,1,0,1,"Woman",2,"Jobs","On The Basis of Sex","The Iron Lady","Lincoln","Amadeus","The Imitation Game","Marie Antoinette","White / Caucasian",58,0,1,127
+1,1,0,1,0,0,1,1,"Woman",2,"The Imitation Game","On The Basis of Sex","Capote","A Beautiful Day in the Neighborhood","Judy","Lincoln","The Darkest Hour","White / Caucasian",38,0,1,127
+0,1,1,1,0,0,1,1,"Man",0,"J. Edgar","Lincoln","Oppenheimer","The Aviator","A Beautiful Mind","Moneyball","The Darkest Hour","White / Caucasian",29,1,1,127
+0,1,1,1,1,0,1,1,"Woman",1,"A Beautiful Mind","The Doors","Lincoln","Marie Antoinette","JFK","Oppenheimer","The Iron Lady","White / Caucasian",53,0,1,127
+0,1,1,1,1,0,1,0,"Woman",2,"The Imitation Game","Lincoln","The Iron Lady","Tolkien","A Beautiful Day in the Neighborhood","On The Basis of Sex","Judy","White / Caucasian",36,0,1,127
+0,1,1,1,0,0,0,0,"Man",0,"J. Edgar","Braveheart","Lincoln","A Beautiful Mind","The Imitation Game","Capote","Amadeus","Black or African American",35,1,0,127
+0,1,1,1,0,0,1,1,"Man",1,"On The Basis of Sex","The Doors","Chaplin","A Beautiful Day in the Neighborhood","Moneyball","Amadeus","The Darkest Hour","White / Caucasian",49,1,1,127
+1,1,1,0,1,0,1,0,"Man",2,"Marie Antoinette","Amadeus","Chaplin","Oppenheimer","A Beautiful Day in the Neighborhood","The Iron Lady","Judy","White / Caucasian",45,1,1,127
+1,0,1,1,1,0,0,0,"Woman",2,"Lincoln","The Iron Lady","The Darkest Hour","On The Basis of Sex","Chaplin","The Imitation Game","Coco Before Chanel","White / Caucasian",40,0,1,127
+1,1,0,1,0,0,1,1,"Another gender not listed here:",0,"Nixon","A Beautiful Mind","Capote","Lincoln","Hitchcock","Tolkien","J. Edgar","American Indian or Alaskan Native",38,0,0,127
+1,1,1,0,0,0,1,0,"Man",1,"The Doors","Oppenheimer","The Aviator","A Beautiful Mind","Judy","Hitchcock","Tolkien","White / Caucasian",52,1,1,127
+0,1,1,1,0,1,0,0,"Woman",0,"Oppenheimer","Braveheart","Jobs","Tolkien","The Aviator","The Imitation Game","A Beautiful Mind","White / Caucasian",43,0,1,127
+1,0,1,1,0,0,0,0,"Man",3,"Nixon","On The Basis of Sex","Judy","Coco Before Chanel","The Darkest Hour","A Beautiful Day in the Neighborhood","Capote","White / Caucasian",36,1,1,127
+0,1,1,1,0,0,0,0,"Man",0,"A Beautiful Day in the Neighborhood","Braveheart","Jobs","Oppenheimer","Tolkien","Hitchcock","Amadeus","White / Caucasian",48,1,1,127
+0,1,1,1,0,0,1,0,"Woman",3,"Coco Before Chanel","A Beautiful Day in the Neighborhood","Judy","Marie Antoinette","Lincoln","Oppenheimer","Tolkien","White / Caucasian",40,0,1,127
+1,1,1,0,0,1,1,1,"Woman",1,"Judy","Capote","Hitchcock","A Beautiful Day in the Neighborhood","Jobs","The Doors","Lincoln","White / Caucasian",62,0,1,127
+0,1,1,1,0,0,0,1,"Man",0,"Jobs","The Darkest Hour","Lincoln","Hitchcock","Nixon","Amadeus","W. A Life Misunderstood","White / Caucasian",26,1,1,127
+0,1,1,1,0,1,1,1,"Man",1,"Judy","Nixon","Hitchcock","The Aviator","Oppenheimer","The Doors","Lincoln","White / Caucasian",64,1,1,127
+1,0,1,1,0,0,0,0,"Woman",1,"Tolkien","The Doors","A Beautiful Day in the Neighborhood","Marie Antoinette","Oppenheimer","The Imitation Game","Amadeus","White / Caucasian",56,0,1,127
+1,0,1,1,0,1,0,1,"Woman",0,"The Aviator","Nixon","Oppenheimer","Jobs","Moneyball","The Doors","Braveheart","White / Caucasian",44,0,1,127
+1,0,1,1,1,0,1,1,"Man",0,"A Beautiful Day in the Neighborhood","Lincoln","Jobs","W. A Life Misunderstood","The Darkest Hour","Nixon","The Iron Lady","White / Caucasian",30,1,1,127
+1,1,1,0,0,0,1,0,"Woman",1,"The Imitation Game","Oppenheimer","JFK","The Doors","On The Basis of Sex","Jobs","A Beautiful Day in the Neighborhood","White / Caucasian",33,0,1,127
+1,1,0,1,0,0,0,0,"Man",1,"The Iron Lady","Chaplin","Lincoln","Oppenheimer","Jobs","The Aviator","Capote","White / Caucasian",40,1,1,127
+0,1,1,1,0,1,1,0,"Man",0,"The Darkest Hour","A Beautiful Mind","Amadeus","Moneyball","Lincoln","Tolkien","Oppenheimer","Asian / Pacific Islander",52,1,0,127
+0,1,1,1,0,1,1,0,"Man",3,"J. Edgar","On The Basis of Sex","W. A Life Misunderstood","Chaplin","Marie Antoinette","Judy","Oppenheimer","White / Caucasian",52,1,1,127
+0,1,1,1,1,1,0,1,"Woman",0,"Jobs","Lincoln","A Beautiful Day in the Neighborhood","The Aviator","Moneyball","Hitchcock","Marie Antoinette","White / Caucasian",51,0,1,127
+0,1,1,1,0,1,1,1,"Woman",0,"Oppenheimer","The Imitation Game","A Beautiful Day in the Neighborhood","Tolkien","Moneyball","The Aviator","Lincoln","White / Caucasian",29,0,1,127
+0,1,1,1,1,0,0,0,"Man",1,"Lincoln","The Darkest Hour","A Beautiful Day in the Neighborhood","Jobs","Marie Antoinette","Hitchcock","Coco Before Chanel","White / Caucasian",49,1,1,127
+1,1,1,0,0,1,0,1,"Woman",2,"On The Basis of Sex","A Beautiful Day in the Neighborhood","Amadeus","Hitchcock","Judy","The Imitation Game","JFK","White / Caucasian",43,0,1,127
+1,1,1,0,0,0,0,0,"Man",3,"Marie Antoinette","Oppenheimer","On The Basis of Sex","Coco Before Chanel","Jobs","Lincoln","The Doors","White / Caucasian",46,1,1,127
+1,1,1,0,1,0,0,0,"Man",1,"The Aviator","Oppenheimer","Moneyball","Judy","Chaplin","The Doors","Coco Before Chanel","White / Caucasian",53,1,1,127
+0,1,1,1,0,1,1,1,"Man",1,"Oppenheimer","Moneyball","A Beautiful Day in the Neighborhood","The Imitation Game","Coco Before Chanel","Jobs","Lincoln","White / Caucasian",33,1,1,127
+0,1,1,1,0,0,0,0,"Woman",1,"W. A Life Misunderstood","J. Edgar","Judy","Amadeus","The Doors","Lincoln","Chaplin","White / Caucasian",45,0,1,127
+1,1,0,1,0,0,1,0,"Woman",0,"The Aviator","The Doors","A Beautiful Mind","Jobs","Hitchcock","Oppenheimer","Tolkien","White / Caucasian",66,0,1,127
+0,1,1,1,0,0,0,0,"Woman",0,"Oppenheimer","The Darkest Hour","Tolkien","Chaplin","J. Edgar","JFK","Amadeus","White / Caucasian",36,0,1,127
+0,1,1,1,0,1,0,0,"Man",0,"Braveheart","The Imitation Game","Oppenheimer","A Beautiful Day in the Neighborhood","Lincoln","Moneyball","A Beautiful Mind","White / Caucasian",53,1,1,127
+0,1,1,1,1,0,0,0,"Woman",2,"The Aviator","On The Basis of Sex","Hitchcock","Marie Antoinette","Lincoln","Tolkien","Coco Before Chanel","White / Caucasian",60,0,1,127
+0,1,1,1,0,1,0,1,"Woman",1,"Lincoln","Marie Antoinette","J. Edgar","Jobs","Amadeus","The Aviator","Braveheart","White / Caucasian",38,0,1,127
+1,1,1,0,0,0,0,0,"Non-binary",2,"Judy","Oppenheimer","The Imitation Game","Hitchcock","A Beautiful Day in the Neighborhood","Coco Before Chanel","The Doors","White / Caucasian",22,0,1,127
+1,0,1,1,1,0,1,0,"Woman",2,"A Beautiful Mind","Jobs","The Doors","Oppenheimer","On The Basis of Sex","Coco Before Chanel","Judy","White / Caucasian",43,0,1,127
+1,1,1,0,0,0,1,0,"Man",0,"A Beautiful Mind","Braveheart","Tolkien","The Doors","Lincoln","The Aviator","Jobs","White / Caucasian",59,1,1,127
+0,1,1,1,0,1,1,0,"Woman",0,"Lincoln","The Aviator","Braveheart","A Beautiful Mind","The Darkest Hour","Tolkien","Oppenheimer","White / Caucasian",50,0,1,127
+1,1,1,0,0,0,1,0,"Man",2,"A Beautiful Mind","A Beautiful Day in the Neighborhood","Judy","J. Edgar","Coco Before Chanel","Lincoln","Hitchcock","White / Caucasian",35,1,1,127
+1,1,1,0,0,0,1,1,"Woman",0,"A Beautiful Day in the Neighborhood","Oppenheimer","Capote","Amadeus","JFK","Lincoln","J. Edgar","Hispanic / Latinx",43,0,0,127
+1,1,1,0,0,0,0,0,"Woman",0,"Tolkien","Oppenheimer","A Beautiful Mind","The Imitation Game","J. Edgar","The Doors","Capote","White / Caucasian",50,0,1,127
+0,1,1,1,1,1,0,1,"Woman",1,"Moneyball","The Doors","W. A Life Misunderstood","Jobs","Coco Before Chanel","Oppenheimer","Marie Antoinette","White / Caucasian",48,0,1,127
+0,1,1,1,0,0,1,1,"Woman",0,"Oppenheimer","Moneyball","The Imitation Game","Braveheart","W. A Life Misunderstood","J. Edgar","The Darkest Hour","White / Caucasian",32,0,1,127
+1,1,0,1,1,0,0,0,"Woman",3,"Marie Antoinette","Judy","J. Edgar","A Beautiful Day in the Neighborhood","Lincoln","The Iron Lady","Coco Before Chanel","White / Caucasian",28,0,1,127
+1,1,1,0,0,0,1,0,"Man",1,"W. A Life Misunderstood","Hitchcock","Nixon","The Imitation Game","The Iron Lady","Lincoln","A Beautiful Day in the Neighborhood","White / Caucasian",39,1,1,127
+0,1,1,1,0,0,1,1,"Woman",1,"The Doors","The Imitation Game","Jobs","The Iron Lady","The Aviator","Oppenheimer","J. Edgar","White / Caucasian",71,0,1,127
+0,1,1,1,0,0,0,0,"Woman",1,"Oppenheimer","Tolkien","The Aviator","Lincoln","On The Basis of Sex","The Darkest Hour","Amadeus","White / Caucasian",59,0,1,127
+1,1,1,0,0,0,1,0,"Man",0,"Hitchcock","The Aviator","Nixon","The Doors","J. Edgar","W. A Life Misunderstood","Jobs","White / Caucasian",36,1,1,127
+0,1,1,1,1,1,0,1,"Man",0,"A Beautiful Day in the Neighborhood","Oppenheimer","Moneyball","Lincoln","Chaplin","The Imitation Game","Marie Antoinette","Hispanic / Latinx",52,1,0,127
+1,0,1,1,0,0,1,0,"Woman",1,"Lincoln","Tolkien","Capote","The Aviator","Chaplin","The Iron Lady","A Beautiful Day in the Neighborhood","Asian / Pacific Islander",33,0,0,127
+1,1,1,0,1,0,1,1,"Man",0,"Braveheart","The Aviator","Lincoln","Oppenheimer","A Beautiful Day in the Neighborhood","Moneyball","On The Basis of Sex","White / Caucasian",29,1,1,127
+0,1,1,1,0,1,1,0,"Man",2,"A Beautiful Day in the Neighborhood","A Beautiful Mind","Lincoln","Coco Before Chanel","On The Basis of Sex","Hitchcock","Moneyball","White / Caucasian",45,1,1,127
+1,1,1,0,1,0,0,0,"Man",1,"Lincoln","Oppenheimer","A Beautiful Day in the Neighborhood","Tolkien","On The Basis of Sex","The Imitation Game","Coco Before Chanel","Hispanic / Latinx",32,1,0,127
+0,1,1,1,1,1,0,1,"Woman",1,"The Aviator","Chaplin","The Iron Lady","W. A Life Misunderstood","Amadeus","A Beautiful Mind","Marie Antoinette","Black or African American",35,0,0,127
+0,1,1,1,0,1,0,1,"Man",3,"The Doors","Oppenheimer","Judy","Hitchcock","Marie Antoinette","The Iron Lady","JFK","White / Caucasian",43,1,1,127
+0,1,1,1,1,0,1,0,"Woman",2,"Oppenheimer","The Darkest Hour","Hitchcock","J. Edgar","On The Basis of Sex","Coco Before Chanel","Judy","White / Caucasian",38,0,1,127
+0,1,1,1,1,0,1,0,"Man",0,"The Imitation Game","Jobs","Tolkien","Capote","The Doors","Braveheart","Judy","White / Caucasian",54,1,1,127
+0,1,1,1,0,1,0,0,"Woman",1,"The Aviator","Jobs","Moneyball","Oppenheimer","Coco Before Chanel","Chaplin","A Beautiful Mind","White / Caucasian",36,0,1,127
+1,0,1,1,0,0,0,0,"Man",1,"Moneyball","Oppenheimer","Lincoln","The Aviator","J. Edgar","On The Basis of Sex","The Doors","White / Caucasian",34,1,1,127
+1,0,1,1,1,0,1,1,"Woman",3,"Judy","Lincoln","The Aviator","Coco Before Chanel","The Iron Lady","Jobs","On The Basis of Sex","Black or African American",62,0,0,127
+0,1,1,1,0,0,0,0,"Woman",3,"On The Basis of Sex","Nixon","Marie Antoinette","Coco Before Chanel","Lincoln","The Darkest Hour","Amadeus","White / Caucasian",26,0,1,127
+1,1,0,1,0,0,0,0,"Man",2,"Judy","Chaplin","The Imitation Game","A Beautiful Day in the Neighborhood","Oppenheimer","On The Basis of Sex","Amadeus","Black or African American",25,1,0,127
+1,1,1,0,0,1,0,1,"Man",0,"A Beautiful Mind","Braveheart","The Imitation Game","Amadeus","The Aviator","Moneyball","JFK","White / Caucasian",40,1,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Chaplin","The Aviator","The Doors","J. Edgar","The Darkest Hour","Amadeus","Hitchcock","White / Caucasian",35,1,1,127
+0,1,1,1,0,0,0,0,"Man",1,"Lincoln","Amadeus","The Aviator","Marie Antoinette","Moneyball","Tolkien","Capote","White / Caucasian",34,1,1,127
+0,1,1,1,0,1,0,0,"Woman",2,"On The Basis of Sex","Judy","Moneyball","Lincoln","Jobs","Oppenheimer","The Aviator","White / Caucasian",52,0,1,127
+1,1,1,0,1,0,0,0,"Woman",0,"Lincoln","Jobs","A Beautiful Day in the Neighborhood","Hitchcock","Tolkien","The Doors","Coco Before Chanel","White / Caucasian",68,0,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"A Beautiful Day in the Neighborhood","Jobs","Tolkien","The Doors","On The Basis of Sex","Lincoln","Hitchcock","White / Caucasian",64,0,1,127
+1,0,1,1,1,1,0,1,"Man",3,"Jobs","A Beautiful Day in the Neighborhood","The Iron Lady","Judy","On The Basis of Sex","Moneyball","Marie Antoinette","Black or African American",36,1,0,127
+0,1,1,1,0,1,1,0,"Woman",2,"Judy","A Beautiful Day in the Neighborhood","Tolkien","Hitchcock","On The Basis of Sex","Amadeus","Oppenheimer","White / Caucasian",30,0,1,127
+0,1,1,1,0,0,0,0,"Man",1,"A Beautiful Mind","Oppenheimer","The Aviator","The Imitation Game","Hitchcock","On The Basis of Sex","Capote","White / Caucasian",41,1,1,127
+1,0,1,1,0,1,0,1,"Man",1,"Tolkien","The Imitation Game","J. Edgar","A Beautiful Day in the Neighborhood","Chaplin","Marie Antoinette","Braveheart","Black or African American",25,1,0,127
+0,1,1,1,0,0,0,0,"Woman",0,"Jobs","Lincoln","Oppenheimer","A Beautiful Day in the Neighborhood","Moneyball","The Aviator","The Doors","White / Caucasian",36,0,1,127
+0,1,1,1,0,0,1,0,"Man",2,"A Beautiful Day in the Neighborhood","On The Basis of Sex","The Imitation Game","Coco Before Chanel","The Darkest Hour","A Beautiful Mind","Tolkien","White / Caucasian",36,1,1,127
+1,1,0,1,0,0,1,0,"Man",2,"A Beautiful Mind","Braveheart","Lincoln","On The Basis of Sex","The Imitation Game","The Iron Lady","Tolkien","White / Caucasian",47,1,1,127
+1,1,1,0,1,0,0,0,"Woman",2,"On The Basis of Sex","Oppenheimer","Lincoln","Judy","Tolkien","A Beautiful Day in the Neighborhood","Coco Before Chanel","White / Caucasian",35,0,1,127
+0,1,1,1,1,1,0,1,"Woman",2,"A Beautiful Day in the Neighborhood","The Iron Lady","The Doors","Judy","Oppenheimer","Nixon","Marie Antoinette","Asian / Pacific Islander",42,0,0,127
+0,1,1,1,0,1,0,1,"Woman",1,"The Aviator","The Doors","Lincoln","Marie Antoinette","Chaplin","Oppenheimer","Braveheart","White / Caucasian",31,0,1,127
+0,1,1,1,0,0,1,1,"Woman",1,"A Beautiful Mind","Oppenheimer","The Imitation Game","Coco Before Chanel","Lincoln","A Beautiful Day in the Neighborhood","J. Edgar","White / Caucasian",39,0,1,127
+1,0,1,1,0,0,0,0,"Woman",2,"Coco Before Chanel","A Beautiful Day in the Neighborhood","Marie Antoinette","Jobs","Moneyball","The Darkest Hour","Amadeus","White / Caucasian",61,0,1,127
+1,1,1,0,0,0,1,0,"Man",3,"Chaplin","The Iron Lady","The Imitation Game","A Beautiful Day in the Neighborhood","Judy","On The Basis of Sex","Jobs","White / Caucasian",32,1,1,127
+0,1,1,1,0,1,1,0,"Woman",2,"Judy","Tolkien","Braveheart","The Iron Lady","The Imitation Game","Chaplin","Oppenheimer","Black or African American",21,0,0,127
+0,1,1,1,0,1,0,0,"Woman",0,"Jobs","The Doors","Chaplin","Amadeus","Hitchcock","The Darkest Hour","The Aviator","White / Caucasian",60,0,1,127
+0,1,1,1,0,1,0,1,"Woman",2,"The Darkest Hour","The Imitation Game","Lincoln","On The Basis of Sex","The Iron Lady","JFK","Braveheart","White / Caucasian",74,0,1,127
+1,0,1,1,1,1,0,1,"Man",0,"Chaplin","Oppenheimer","Lincoln","The Darkest Hour","The Doors","JFK","Marie Antoinette","White / Caucasian",48,1,1,127
+1,1,1,0,1,1,0,1,"Man",1,"Jobs","The Iron Lady","J. Edgar","Nixon","Oppenheimer","The Darkest Hour","Marie Antoinette","White / Caucasian",37,1,1,127
+1,1,1,0,0,1,1,0,"Woman",1,"On The Basis of Sex","JFK","Hitchcock","Lincoln","Oppenheimer","Jobs","Moneyball","Hispanic / Latinx",40,0,0,127
+1,1,1,0,0,1,1,0,"Woman",2,"Jobs","A Beautiful Day in the Neighborhood","The Iron Lady","JFK","On The Basis of Sex","Capote","Oppenheimer","White / Caucasian",38,0,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"Tolkien","Marie Antoinette","Chaplin","JFK","Oppenheimer","The Doors","Hitchcock","White / Caucasian",72,0,1,127
+1,1,0,1,0,0,0,0,"Woman",0,"A Beautiful Mind","Tolkien","JFK","Chaplin","Lincoln","Jobs","Amadeus","White / Caucasian",54,0,1,127
+0,1,1,1,0,0,0,0,"Woman",1,"Amadeus","Chaplin","Marie Antoinette","Capote","Braveheart","A Beautiful Day in the Neighborhood","The Doors","White / Caucasian",44,0,1,127
+1,1,1,0,0,1,1,0,"Woman",1,"A Beautiful Day in the Neighborhood","On The Basis of Sex","Lincoln","Tolkien","Braveheart","The Imitation Game","Oppenheimer","White / Caucasian",74,0,1,127
+1,1,0,1,0,0,0,0,"Man",1,"On The Basis of Sex","Jobs","A Beautiful Day in the Neighborhood","Tolkien","The Aviator","Lincoln","Amadeus","White / Caucasian",48,1,1,127
+0,1,1,1,1,0,1,0,"Woman",2,"On The Basis of Sex","A Beautiful Day in the Neighborhood","Jobs","Coco Before Chanel","The Aviator","Amadeus","Judy","White / Caucasian",59,0,1,127
+1,0,1,1,0,0,0,1,"Man",0,"A Beautiful Day in the Neighborhood","Oppenheimer","Lincoln","Nixon","The Darkest Hour","Jobs","W. A Life Misunderstood","White / Caucasian",32,1,1,127
+1,1,1,0,0,1,1,1,"Woman",2,"Marie Antoinette","The Aviator","Amadeus","Oppenheimer","JFK","The Iron Lady","Lincoln","White / Caucasian",33,0,1,127
+1,0,1,1,0,1,0,0,"Man",2,"Hitchcock","On The Basis of Sex","Coco Before Chanel","Nixon","The Darkest Hour","J. Edgar","The Aviator","White / Caucasian",26,1,1,127
+0,1,1,1,0,1,0,0,"Man",1,"A Beautiful Day in the Neighborhood","The Darkest Hour","Braveheart","The Iron Lady","Tolkien","Lincoln","The Aviator","White / Caucasian",72,1,1,127
+1,0,1,1,1,0,1,1,"Man",0,"A Beautiful Day in the Neighborhood","Amadeus","A Beautiful Mind","The Imitation Game","Lincoln","Capote","On The Basis of Sex","White / Caucasian",64,1,1,127
+1,1,1,0,0,0,0,0,"Man",3,"A Beautiful Day in the Neighborhood","Coco Before Chanel","On The Basis of Sex","Oppenheimer","The Imitation Game","Judy","Capote","White / Caucasian",41,1,1,127
+0,1,1,1,1,0,1,0,"Woman",3,"On The Basis of Sex","Marie Antoinette","The Iron Lady","W. A Life Misunderstood","Jobs","Lincoln","Judy","White / Caucasian",35,0,1,127
+1,1,1,0,1,0,1,0,"Man",0,"Chaplin","The Doors","A Beautiful Mind","Lincoln","A Beautiful Day in the Neighborhood","Amadeus","Judy","Hispanic / Latinx",35,1,0,127
+0,1,1,1,0,0,1,0,"Man",0,"Nixon","Lincoln","Oppenheimer","Braveheart","The Darkest Hour","Jobs","A Beautiful Day in the Neighborhood","Black or African American",43,1,0,127
+0,1,1,1,0,0,0,0,"Man",0,"Chaplin","Moneyball","Amadeus","The Aviator","Capote","Braveheart","The Doors","White / Caucasian",36,1,1,127
+1,0,1,1,0,1,1,0,"Woman",0,"The Imitation Game","Jobs","Lincoln","The Aviator","Nixon","The Darkest Hour","Oppenheimer","Asian / Pacific Islander",24,0,0,127
+1,1,1,0,0,0,0,1,"Woman",2,"Tolkien","Coco Before Chanel","On The Basis of Sex","Hitchcock","J. Edgar","Jobs","W. A Life Misunderstood","White / Caucasian",43,0,1,127
+1,0,1,1,0,1,0,0,"Man",0,"Moneyball","A Beautiful Day in the Neighborhood","The Aviator","The Imitation Game","Hitchcock","Chaplin","A Beautiful Mind","White / Caucasian",35,1,1,127
+0,1,1,1,1,0,1,1,"Man",1,"Coco Before Chanel","The Aviator","The Doors","Hitchcock","The Imitation Game","W. A Life Misunderstood","The Iron Lady","White / Caucasian",56,1,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"The Imitation Game","Oppenheimer","Tolkien","JFK","Amadeus","Marie Antoinette","Hitchcock","White / Caucasian",49,0,1,127
+0,1,1,1,1,0,0,0,"Man",2,"Amadeus","Lincoln","A Beautiful Day in the Neighborhood","On The Basis of Sex","The Iron Lady","A Beautiful Mind","Coco Before Chanel","White / Caucasian",55,1,1,127
+0,1,1,1,0,0,1,1,"Woman",0,"Oppenheimer","Braveheart","The Aviator","A Beautiful Mind","A Beautiful Day in the Neighborhood","The Imitation Game","J. Edgar","White / Caucasian",49,0,1,127
+0,1,1,1,0,1,0,0,"Woman",0,"The Imitation Game","Oppenheimer","Moneyball","Jobs","Braveheart","The Darkest Hour","A Beautiful Mind","White / Caucasian",30,0,1,127
+1,1,1,0,1,0,1,1,"Man",1,"A Beautiful Mind","Capote","Braveheart","The Aviator","Judy","Nixon","On The Basis of Sex","White / Caucasian",52,1,1,127
+1,0,1,1,1,0,1,1,"Man",0,"Amadeus","Braveheart","The Doors","Nixon","The Aviator","A Beautiful Day in the Neighborhood","The Iron Lady","White / Caucasian",52,1,1,127
+1,0,1,1,0,1,0,0,"Man",0,"Oppenheimer","A Beautiful Mind","Braveheart","JFK","Amadeus","J. Edgar","The Aviator","White / Caucasian",35,1,1,127
+1,1,1,0,1,1,0,1,"Woman",2,"Oppenheimer","Coco Before Chanel","Amadeus","Tolkien","The Imitation Game","On The Basis of Sex","Marie Antoinette","White / Caucasian",35,0,1,127
+0,1,1,1,0,1,1,0,"Woman",1,"The Doors","A Beautiful Day in the Neighborhood","Lincoln","Coco Before Chanel","Jobs","Tolkien","Oppenheimer","White / Caucasian",39,0,1,127
+1,1,1,0,0,0,0,0,"Woman",2,"Judy","Chaplin","The Iron Lady","Nixon","A Beautiful Day in the Neighborhood","Lincoln","The Doors","White / Caucasian",43,0,1,127
+0,1,1,1,0,1,0,0,"Woman",2,"Moneyball","Hitchcock","Lincoln","The Imitation Game","On The Basis of Sex","The Iron Lady","A Beautiful Mind","Black or African American",46,0,0,127
+1,1,1,0,0,0,0,0,"Man",1,"On The Basis of Sex","Amadeus","A Beautiful Day in the Neighborhood","Jobs","Moneyball","Braveheart","The Doors","White / Caucasian",45,1,1,127
+1,0,1,1,0,0,0,0,"Man",0,"Braveheart","A Beautiful Mind","The Aviator","Amadeus","Oppenheimer","JFK","The Doors","White / Caucasian",46,1,1,127
+1,1,1,0,0,1,0,0,"Man",1,"Lincoln","The Doors","Marie Antoinette","Moneyball","Braveheart","The Darkest Hour","A Beautiful Mind","White / Caucasian",44,1,1,127
+1,0,1,1,1,1,0,1,"Man",0,"The Doors","Chaplin","Amadeus","Jobs","Nixon","Tolkien","Marie Antoinette","White / Caucasian",51,1,1,127
+1,1,1,0,1,0,1,1,"Woman",1,"Lincoln","The Aviator","JFK","The Imitation Game","Moneyball","Marie Antoinette","On The Basis of Sex","White / Caucasian",34,0,1,127
+0,1,1,1,1,0,1,1,"Man",2,"A Beautiful Mind","The Darkest Hour","Oppenheimer","Marie Antoinette","A Beautiful Day in the Neighborhood","Judy","On The Basis of Sex","White / Caucasian",35,1,1,127
+0,1,1,1,0,0,1,1,"Woman",1,"On The Basis of Sex","The Doors","Lincoln","A Beautiful Day in the Neighborhood","Capote","Chaplin","The Darkest Hour","White / Caucasian",68,0,1,127
+1,1,1,0,0,0,0,0,"Man",3,"On The Basis of Sex","Jobs","Coco Before Chanel","Amadeus","Judy","J. Edgar","Chaplin","Black or African American",40,1,0,127
+1,1,0,1,1,0,1,0,"Woman",2,"The Iron Lady","Marie Antoinette","The Aviator","Jobs","A Beautiful Day in the Neighborhood","Lincoln","Judy","White / Caucasian",41,0,1,127
+0,1,1,1,0,1,1,1,"Woman",3,"A Beautiful Day in the Neighborhood","Marie Antoinette","Amadeus","Oppenheimer","On The Basis of Sex","Judy","Lincoln","Black or African American",29,0,0,127
+0,1,1,1,0,1,1,0,"Woman",1,"The Imitation Game","A Beautiful Day in the Neighborhood","Moneyball","On The Basis of Sex","Chaplin","Tolkien","Oppenheimer","White / Caucasian",52,0,1,127
+1,0,1,1,0,1,0,0,"Man",1,"Braveheart","Lincoln","A Beautiful Day in the Neighborhood","Moneyball","The Iron Lady","Oppenheimer","The Aviator","American Indian or Alaskan Native",43,1,0,127
+0,1,1,1,0,1,0,1,"Man",1,"A Beautiful Day in the Neighborhood","Oppenheimer","Lincoln","Tolkien","Jobs","Judy","Braveheart","White / Caucasian",36,1,1,127
+0,1,1,1,0,0,1,1,"Non-binary",2,"Oppenheimer","Tolkien","A Beautiful Day in the Neighborhood","Judy","Marie Antoinette","Jobs","The Darkest Hour","White / Caucasian",28,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Braveheart","Moneyball","Lincoln","A Beautiful Day in the Neighborhood","A Beautiful Mind","The Imitation Game","Jobs","Black or African American",47,1,0,127
+1,1,1,0,1,0,1,1,"Man",0,"Braveheart","The Aviator","The Imitation Game","Lincoln","A Beautiful Day in the Neighborhood","Tolkien","On The Basis of Sex","White / Caucasian",41,1,1,127
+0,1,1,1,0,1,1,1,"Woman",2,"On The Basis of Sex","A Beautiful Day in the Neighborhood","The Imitation Game","Tolkien","Capote","Judy","Lincoln","White / Caucasian",51,0,1,127
+1,0,1,1,0,0,1,1,"Woman",2,"Marie Antoinette","The Doors","Braveheart","Amadeus","The Aviator","Coco Before Chanel","J. Edgar","American Indian or Alaskan Native",40,0,0,127
+1,1,1,0,0,1,0,0,"Man",0,"The Darkest Hour","JFK","Jobs","J. Edgar","A Beautiful Mind","The Doors","The Aviator","White / Caucasian",68,1,1,127
+0,1,1,1,0,0,1,1,"Woman",1,"Tolkien","Jobs","Chaplin","The Doors","Coco Before Chanel","Nixon","J. Edgar","Black or African American",29,0,0,127
+1,1,1,0,1,0,1,1,"Man",1,"J. Edgar","The Darkest Hour","Nixon","Marie Antoinette","JFK","The Aviator","The Iron Lady","White / Caucasian",34,1,1,127
+1,0,1,1,1,0,1,0,"Man",0,"Amadeus","Chaplin","The Aviator","A Beautiful Mind","Braveheart","Lincoln","Judy","White / Caucasian",45,1,1,127
+0,1,1,1,0,1,1,0,"Man",0,"A Beautiful Day in the Neighborhood","JFK","Oppenheimer","The Aviator","Braveheart","Lincoln","Moneyball","White / Caucasian",48,1,1,127
+0,1,1,1,1,0,0,0,"Woman",2,"A Beautiful Day in the Neighborhood","Jobs","On The Basis of Sex","A Beautiful Mind","Braveheart","Marie Antoinette","Coco Before Chanel","White / Caucasian",36,0,1,127
+1,1,1,0,0,1,1,1,"Woman",3,"Hitchcock","Judy","Marie Antoinette","Jobs","The Doors","The Iron Lady","Lincoln","White / Caucasian",49,0,1,127
+0,1,1,1,1,1,0,1,"Man",1,"The Aviator","A Beautiful Mind","Moneyball","Coco Before Chanel","The Doors","W. A Life Misunderstood","Marie Antoinette","White / Caucasian",47,1,1,127
+0,1,1,1,0,1,0,0,"Man",1,"Lincoln","A Beautiful Day in the Neighborhood","Oppenheimer","Moneyball","Marie Antoinette","JFK","The Aviator","White / Caucasian",38,1,1,127
+0,1,1,1,1,0,1,1,"Woman",0,"Jobs","The Imitation Game","The Doors","J. Edgar","The Aviator","A Beautiful Mind","On The Basis of Sex","White / Caucasian",65,0,1,127
+0,1,1,1,0,1,0,0,"Woman",0,"Chaplin","Hitchcock","Oppenheimer","Jobs","The Imitation Game","Tolkien","A Beautiful Mind","White / Caucasian",41,0,1,127
+0,1,1,1,0,1,0,0,"Woman",1,"Lincoln","Oppenheimer","Jobs","The Iron Lady","The Darkest Hour","The Imitation Game","A Beautiful Mind","White / Caucasian",59,0,1,127
+0,1,1,1,0,0,0,1,"Woman",2,"Oppenheimer","On The Basis of Sex","Coco Before Chanel","Lincoln","Amadeus","A Beautiful Mind","Nixon","White / Caucasian",57,0,1,127
+0,1,1,1,0,0,0,0,"Man",0,"Lincoln","Moneyball","J. Edgar","A Beautiful Day in the Neighborhood","Nixon","W. A Life Misunderstood","Chaplin","White / Caucasian",26,1,1,127
+0,1,1,1,0,0,0,0,"Man",2,"Hitchcock","Amadeus","The Doors","Marie Antoinette","Lincoln","The Iron Lady","Chaplin","White / Caucasian",54,1,1,127
+0,1,1,1,0,1,1,0,"Woman",1,"Tolkien","Marie Antoinette","A Beautiful Mind","The Doors","A Beautiful Day in the Neighborhood","Amadeus","Oppenheimer","White / Caucasian",50,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"JFK","Jobs","Chaplin","A Beautiful Mind","Oppenheimer","Braveheart","Hitchcock","Black or African American",53,1,0,127
+1,0,1,1,1,1,0,1,"Woman",1,"The Aviator","Braveheart","The Imitation Game","Amadeus","Coco Before Chanel","Tolkien","Marie Antoinette","White / Caucasian",32,0,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Braveheart","The Aviator","Moneyball","Oppenheimer","Capote","Marie Antoinette","Jobs","White / Caucasian",38,1,1,127
+0,1,1,1,1,0,1,0,"Man",3,"J. Edgar","Marie Antoinette","On The Basis of Sex","Tolkien","Coco Before Chanel","The Aviator","Judy","White / Caucasian",21,1,1,127
+0,1,1,1,0,1,1,0,"Woman",1,"JFK","Hitchcock","A Beautiful Day in the Neighborhood","On The Basis of Sex","The Imitation Game","Jobs","Oppenheimer","White / Caucasian",72,0,1,127
+1,1,1,0,0,0,1,0,"Woman",1,"Oppenheimer","Lincoln","A Beautiful Day in the Neighborhood","Judy","Capote","J. Edgar","The Imitation Game","White / Caucasian",34,0,1,127
+0,1,1,1,0,0,0,0,"Man",0,"Braveheart","Lincoln","Tolkien","The Aviator","Chaplin","Nixon","Amadeus","Asian / Pacific Islander",33,1,0,127
+1,1,0,1,0,0,1,0,"Man",1,"The Aviator","Amadeus","JFK","On The Basis of Sex","A Beautiful Mind","J. Edgar","The Imitation Game","Hispanic / Latinx",36,1,0,127
+1,1,1,0,0,1,1,0,"Woman",3,"Jobs","J. Edgar","The Darkest Hour","Coco Before Chanel","The Iron Lady","Marie Antoinette","Oppenheimer","Asian / Pacific Islander",46,0,0,127
+0,1,1,1,0,1,0,1,"Woman",1,"Lincoln","Braveheart","The Iron Lady","A Beautiful Day in the Neighborhood","Oppenheimer","The Aviator","JFK","White / Caucasian",51,0,1,127
+1,1,0,1,1,0,1,1,"Man",0,"Chaplin","Lincoln","Nixon","The Doors","The Darkest Hour","The Imitation Game","On The Basis of Sex","White / Caucasian",67,1,1,127
+1,1,1,0,1,0,1,0,"Man",1,"Jobs","Oppenheimer","A Beautiful Mind","Nixon","On The Basis of Sex","Lincoln","Judy","White / Caucasian",58,1,1,127
+0,1,1,1,1,0,0,0,"Woman",1,"Braveheart","Jobs","The Imitation Game","Hitchcock","Tolkien","On The Basis of Sex","Coco Before Chanel","White / Caucasian",58,0,1,127
+0,1,1,1,0,1,0,0,"Man",2,"Lincoln","A Beautiful Day in the Neighborhood","The Iron Lady","On The Basis of Sex","The Doors","Jobs","The Aviator","Hispanic / Latinx",55,1,0,127
+1,0,1,1,0,1,1,0,"Woman",2,"A Beautiful Day in the Neighborhood","Hitchcock","Coco Before Chanel","Tolkien","Judy","The Imitation Game","Oppenheimer","Black or African American",38,0,0,127
+0,1,1,1,0,0,0,1,"Man",0,"A Beautiful Mind","J. Edgar","Capote","Oppenheimer","W. A Life Misunderstood","JFK","Nixon","White / Caucasian",34,1,1,127
+1,1,0,1,0,0,0,0,"Man",0,"Nixon","Braveheart","Lincoln","Jobs","J. Edgar","A Beautiful Day in the Neighborhood","The Doors","White / Caucasian",38,1,1,127
+0,1,1,1,1,1,0,1,"Man",0,"Oppenheimer","Capote","The Aviator","Braveheart","A Beautiful Day in the Neighborhood","Jobs","Marie Antoinette","White / Caucasian",35,1,1,127
+1,1,1,0,1,0,1,1,"Woman",1,"A Beautiful Mind","Amadeus","Braveheart","A Beautiful Day in the Neighborhood","The Doors","Judy","On The Basis of Sex","White / Caucasian",48,0,1,127
+0,1,1,1,0,0,1,0,"Woman",2,"Oppenheimer","Hitchcock","On The Basis of Sex","Coco Before Chanel","A Beautiful Day in the Neighborhood","The Doors","Tolkien","White / Caucasian",60,0,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Amadeus","The Darkest Hour","The Aviator","Oppenheimer","Marie Antoinette","Moneyball","The Imitation Game","Asian / Pacific Islander",45,1,0,127
+1,0,1,1,1,0,0,0,"Man",1,"Jobs","The Darkest Hour","Lincoln","On The Basis of Sex","The Imitation Game","Tolkien","Coco Before Chanel","White / Caucasian",75,1,1,127
+0,1,1,1,0,1,1,0,"Man",0,"A Beautiful Day in the Neighborhood","J. Edgar","Nixon","Jobs","The Darkest Hour","The Doors","Oppenheimer","White / Caucasian",57,1,1,127
+0,1,1,1,0,0,1,1,"Woman",0,"Capote","The Imitation Game","A Beautiful Mind","W. A Life Misunderstood","Oppenheimer","Chaplin","J. Edgar","White / Caucasian",35,0,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"The Doors","A Beautiful Day in the Neighborhood","Coco Before Chanel","Oppenheimer","Lincoln","Tolkien","Jobs","White / Caucasian",45,0,1,127
+1,1,0,1,0,0,0,0,"Man",1,"Jobs","Nixon","W. A Life Misunderstood","Judy","Amadeus","The Darkest Hour","Chaplin","Black or African American",32,1,0,127
+0,1,1,1,0,1,1,0,"Man",0,"The Aviator","Jobs","A Beautiful Day in the Neighborhood","The Doors","Braveheart","Hitchcock","Moneyball","White / Caucasian",54,1,1,127
+0,1,1,1,0,1,1,0,"Woman",2,"On The Basis of Sex","A Beautiful Day in the Neighborhood","Judy","Chaplin","Tolkien","The Imitation Game","Oppenheimer","White / Caucasian",59,0,1,127
+1,1,0,1,1,0,1,1,"Man",0,"A Beautiful Mind","A Beautiful Day in the Neighborhood","Braveheart","Moneyball","Capote","Oppenheimer","On The Basis of Sex","White / Caucasian",44,1,1,127
+1,1,0,1,1,0,1,1,"Man",0,"Chaplin","Amadeus","Jobs","Nixon","The Darkest Hour","Lincoln","On The Basis of Sex","White / Caucasian",33,1,1,127
+1,0,1,1,0,0,1,0,"Man",0,"The Darkest Hour","A Beautiful Day in the Neighborhood","Lincoln","Amadeus","Oppenheimer","Hitchcock","Tolkien","White / Caucasian",45,1,1,127
+1,1,1,0,0,1,0,0,"Woman",2,"A Beautiful Day in the Neighborhood","On The Basis of Sex","J. Edgar","The Darkest Hour","Coco Before Chanel","Hitchcock","The Aviator","White / Caucasian",75,0,1,127
+1,1,0,1,0,0,0,0,"Man",1,"Tolkien","Braveheart","Marie Antoinette","The Doors","Lincoln","Jobs","Chaplin","Black or African American",36,1,0,127
+0,1,1,1,0,0,0,0,"Man",0,"The Doors","Amadeus","Oppenheimer","Capote","A Beautiful Day in the Neighborhood","Lincoln","Chaplin","Asian / Pacific Islander",27,1,0,127
+0,1,1,1,0,0,1,1,"Woman",0,"Oppenheimer","A Beautiful Day in the Neighborhood","Tolkien","Moneyball","Braveheart","Jobs","The Darkest Hour","White / Caucasian",29,0,1,127
+0,1,1,1,1,1,0,1,"Man",0,"Chaplin","The Darkest Hour","The Aviator","A Beautiful Mind","Moneyball","The Doors","Marie Antoinette","Asian / Pacific Islander",40,1,0,127
+0,1,1,1,1,0,1,1,"Woman",1,"A Beautiful Mind","Amadeus","Nixon","The Aviator","Jobs","Coco Before Chanel","The Iron Lady","White / Caucasian",42,0,1,127
+1,1,0,1,0,0,1,0,"Man",1,"A Beautiful Mind","On The Basis of Sex","Lincoln","The Imitation Game","Oppenheimer","The Darkest Hour","A Beautiful Day in the Neighborhood","Asian / Pacific Islander",68,1,0,127
+1,0,1,1,0,1,1,0,"Man",1,"Capote","A Beautiful Day in the Neighborhood","Oppenheimer","The Imitation Game","A Beautiful Mind","Marie Antoinette","Moneyball","White / Caucasian",29,1,1,127
+0,1,1,1,1,0,0,0,"Man",2,"A Beautiful Day in the Neighborhood","The Doors","Judy","Lincoln","Oppenheimer","The Iron Lady","Coco Before Chanel","White / Caucasian",52,1,1,127
+1,1,1,0,0,1,1,0,"Man",0,"Lincoln","Tolkien","Chaplin","A Beautiful Day in the Neighborhood","W. A Life Misunderstood","J. Edgar","Oppenheimer","White / Caucasian",33,1,1,127
+1,0,1,1,0,1,1,0,"Woman",1,"Oppenheimer","On The Basis of Sex","Jobs","A Beautiful Day in the Neighborhood","Tolkien","The Doors","Moneyball","White / Caucasian",44,0,1,127
+1,0,1,1,1,1,0,1,"Man",1,"Lincoln","JFK","Capote","The Iron Lady","Oppenheimer","The Aviator","Marie Antoinette","Hispanic / Latinx",51,1,0,127
+0,1,1,1,0,0,1,1,"Man",1,"The Doors","Judy","Lincoln","The Aviator","Amadeus","Nixon","J. Edgar","White / Caucasian",63,1,1,127
+0,1,1,1,0,0,1,0,"Man",2,"The Darkest Hour","Chaplin","Marie Antoinette","Jobs","The Iron Lady","The Aviator","A Beautiful Day in the Neighborhood","White / Caucasian",76,1,1,127
+1,1,1,0,0,0,1,0,"Man",0,"Braveheart","Oppenheimer","Lincoln","The Imitation Game","The Darkest Hour","JFK","Hitchcock","White / Caucasian",58,1,1,127
+0,1,1,1,0,1,0,0,"Man",1,"Tolkien","Lincoln","Hitchcock","The Doors","Marie Antoinette","Capote","The Aviator","Black or African American",57,1,0,127
+0,1,1,1,0,1,1,1,"Man",0,"Hitchcock","Moneyball","Capote","A Beautiful Mind","A Beautiful Day in the Neighborhood","The Imitation Game","Lincoln","White / Caucasian",50,1,1,127
+0,1,1,1,0,1,0,1,"Man",0,"Oppenheimer","Chaplin","Capote","The Imitation Game","The Doors","Jobs","Braveheart","White / Caucasian",35,1,1,127
+0,1,1,1,0,1,0,0,"Woman",1,"Braveheart","Marie Antoinette","A Beautiful Day in the Neighborhood","A Beautiful Mind","Nixon","Lincoln","The Aviator","White / Caucasian",37,0,1,127
+1,1,0,1,0,0,1,1,"Man",1,"Lincoln","A Beautiful Day in the Neighborhood","Braveheart","On The Basis of Sex","The Imitation Game","Hitchcock","The Darkest Hour","White / Caucasian",63,1,1,127
+1,1,0,1,0,0,1,0,"Woman",3,"The Iron Lady","Marie Antoinette","Nixon","W. A Life Misunderstood","Coco Before Chanel","Hitchcock","Jobs","White / Caucasian",48,0,1,127
+0,1,1,1,0,1,0,0,"Man",0,"Moneyball","A Beautiful Day in the Neighborhood","Hitchcock","The Aviator","The Imitation Game","Oppenheimer","A Beautiful Mind","Hispanic / Latinx",30,1,0,127
+1,1,1,0,1,0,0,0,"Woman",2,"Tolkien","The Iron Lady","The Imitation Game","Jobs","The Darkest Hour","On The Basis of Sex","Coco Before Chanel","White / Caucasian",46,0,1,127
+0,1,1,1,0,0,1,0,"Man",3,"The Doors","Marie Antoinette","The Iron Lady","A Beautiful Day in the Neighborhood","On The Basis of Sex","Amadeus","Tolkien","White / Caucasian",62,1,1,127
+1,1,0,1,1,0,1,1,"Man",0,"A Beautiful Day in the Neighborhood","Hitchcock","Tolkien","Oppenheimer","The Aviator","Capote","On The Basis of Sex","Asian / Pacific Islander",37,1,0,127
+0,1,1,1,1,0,1,0,"Woman",1,"W. A Life Misunderstood","On The Basis of Sex","Jobs","The Darkest Hour","Lincoln","Amadeus","Judy","White / Caucasian",78,0,1,127
+1,1,1,0,1,1,0,1,"Woman",1,"Coco Before Chanel","A Beautiful Day in the Neighborhood","Jobs","Capote","Nixon","The Darkest Hour","Marie Antoinette","White / Caucasian",41,0,1,127
+1,0,1,1,0,0,1,0,"Man",1,"Hitchcock","Braveheart","Nixon","Moneyball","Judy","Chaplin","Jobs","White / Caucasian",34,1,1,127
+0,1,1,1,0,0,0,0,"Woman",0,"Hitchcock","JFK","The Aviator","Jobs","Braveheart","Chaplin","Amadeus","Hispanic / Latinx",35,0,0,127
+0,1,1,1,0,1,1,1,"Man",2,"A Beautiful Day in the Neighborhood","Jobs","Amadeus","The Aviator","Coco Before Chanel","Marie Antoinette","Lincoln","White / Caucasian",33,1,1,127
+1,1,0,1,0,0,1,1,"Man",1,"Lincoln","The Imitation Game","Amadeus","Oppenheimer","The Iron Lady","Braveheart","The Darkest Hour","White / Caucasian",45,1,1,127
+1,1,1,0,1,1,0,1,"Man",0,"Oppenheimer","The Darkest Hour","Braveheart","Jobs","Amadeus","Tolkien","Marie Antoinette","White / Caucasian",30,1,1,127
+0,1,1,1,0,0,1,0,"Man",2,"Amadeus","Lincoln","A Beautiful Mind","The Iron Lady","On The Basis of Sex","JFK","Jobs","White / Caucasian",47,1,1,127
+1,1,1,0,0,0,1,1,"Man",1,"The Aviator","Oppenheimer","Marie Antoinette","Lincoln","Amadeus","Braveheart","The Darkest Hour","White / Caucasian",74,1,1,127
+1,1,0,1,0,0,1,1,"Man",2,"Braveheart","Lincoln","JFK","On The Basis of Sex","Judy","Tolkien","The Darkest Hour","White / Caucasian",50,1,1,127
+1,0,1,1,1,0,1,1,"Woman",2,"Oppenheimer","A Beautiful Day in the Neighborhood","Hitchcock","The Iron Lady","Judy","JFK","On The Basis of Sex","White / Caucasian",48,0,1,127
+1,1,1,0,0,1,0,1,"Man",0,"A Beautiful Day in the Neighborhood","The Aviator","Oppenheimer","Lincoln","Capote","J. Edgar","JFK","White / Caucasian",35,1,1,127
+1,1,1,0,1,0,0,0,"Woman",2,"The Iron Lady","On The Basis of Sex","Lincoln","Oppenheimer","Jobs","The Imitation Game","Coco Before Chanel","Black or African American",52,0,0,127
+1,1,1,0,1,1,0,1,"Woman",0,"Tolkien","The Darkest Hour","Nixon","W. A Life Misunderstood","Jobs","Hitchcock","Marie Antoinette","White / Caucasian",23,0,1,127
+0,1,1,1,0,1,1,0,"Woman",2,"Lincoln","Nixon","Jobs","Coco Before Chanel","Judy","A Beautiful Day in the Neighborhood","Oppenheimer","Black or African American",26,0,0,127
+1,1,1,0,1,0,1,0,"Man",2,"Jobs","The Aviator","Coco Before Chanel","Lincoln","Marie Antoinette","Amadeus","Judy","White / Caucasian",40,1,1,127
+0,1,1,1,0,0,1,1,"Man",0,"Oppenheimer","Hitchcock","Chaplin","A Beautiful Day in the Neighborhood","Moneyball","The Aviator","The Darkest Hour","White / Caucasian",37,1,1,127
+0,1,1,1,0,0,1,1,"Man",1,"Lincoln","The Iron Lady","Tolkien","Hitchcock","A Beautiful Day in the Neighborhood","The Darkest Hour","J. Edgar","White / Caucasian",47,1,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"The Imitation Game","Moneyball","Braveheart","On The Basis of Sex","Oppenheimer","A Beautiful Day in the Neighborhood","Jobs","White / Caucasian",34,0,1,127
+1,1,0,1,0,1,1,1,"Man",1,"A Beautiful Day in the Neighborhood","Oppenheimer","Jobs","Tolkien","On The Basis of Sex","Hitchcock","Lincoln","White / Caucasian",63,1,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"The Darkest Hour","Braveheart","On The Basis of Sex","Lincoln","Oppenheimer","A Beautiful Mind","A Beautiful Day in the Neighborhood","White / Caucasian",35,0,1,127
+0,1,1,1,0,0,1,0,"Woman",0,"A Beautiful Mind","Tolkien","Amadeus","The Imitation Game","Oppenheimer","Lincoln","Jobs","Hispanic / Latinx",28,0,0,127
+1,1,1,0,1,0,1,1,"Man",1,"The Imitation Game","Lincoln","Hitchcock","Amadeus","A Beautiful Day in the Neighborhood","Judy","The Iron Lady","White / Caucasian",55,1,1,127
+0,1,1,1,0,0,1,0,"Man",0,"JFK","Moneyball","Oppenheimer","Capote","The Darkest Hour","Chaplin","The Imitation Game","Hispanic / Latinx",43,1,0,127
+1,1,1,0,0,1,1,0,"Woman",0,"Lincoln","Braveheart","Chaplin","Jobs","The Aviator","J. Edgar","Oppenheimer","White / Caucasian",35,0,1,127
+1,1,0,1,0,0,0,0,"Man",0,"Oppenheimer","The Imitation Game","Tolkien","Chaplin","Hitchcock","Jobs","The Doors","Hispanic / Latinx",29,1,0,127
+1,1,1,0,1,0,0,0,"Woman",0,"A Beautiful Day in the Neighborhood","Amadeus","Oppenheimer","The Imitation Game","Braveheart","Jobs","Coco Before Chanel","White / Caucasian",69,0,1,127
+1,1,1,0,1,0,1,1,"Man",1,"Jobs","Lincoln","The Doors","Tolkien","The Iron Lady","The Aviator","On The Basis of Sex","Black or African American",32,1,0,127
+1,1,1,0,1,1,0,1,"Man",0,"Tolkien","The Imitation Game","Capote","Chaplin","Braveheart","Oppenheimer","Marie Antoinette","White / Caucasian",56,1,1,127
+1,0,1,1,1,0,0,0,"Woman",0,"The Aviator","Lincoln","Moneyball","Braveheart","W. A Life Misunderstood","A Beautiful Mind","Coco Before Chanel","White / Caucasian",40,0,1,127
+0,1,1,1,0,0,1,1,"Man",3,"Judy","On The Basis of Sex","Coco Before Chanel","The Aviator","Jobs","Hitchcock","The Darkest Hour","Black or African American",38,1,0,127
+0,1,1,1,1,1,0,1,"Man",1,"Oppenheimer","A Beautiful Mind","On The Basis of Sex","Chaplin","J. Edgar","The Darkest Hour","Marie Antoinette","White / Caucasian",36,1,1,127
+1,1,1,0,0,1,1,1,"Woman",2,"Oppenheimer","Marie Antoinette","Amadeus","On The Basis of Sex","A Beautiful Day in the Neighborhood","The Doors","Lincoln","White / Caucasian",47,0,1,127
+1,1,1,0,1,0,0,0,"Woman",0,"Lincoln","J. Edgar","The Aviator","W. A Life Misunderstood","The Darkest Hour","Nixon","Coco Before Chanel","Black or African American",48,0,0,127
+0,1,1,1,0,1,0,0,"Woman",1,"Jobs","Braveheart","The Iron Lady","W. A Life Misunderstood","Chaplin","Oppenheimer","A Beautiful Mind","Black or African American",37,0,0,127
+1,0,1,1,1,0,1,1,"Woman",0,"The Doors","Jobs","Oppenheimer","JFK","Amadeus","Braveheart","On The Basis of Sex","White / Caucasian",25,0,1,127
+1,1,1,0,0,1,1,0,"Man",0,"Moneyball","Amadeus","Lincoln","The Imitation Game","Jobs","Braveheart","Oppenheimer","Black or African American",26,1,0,127
+0,1,1,1,0,1,0,0,"Man",1,"A Beautiful Day in the Neighborhood","On The Basis of Sex","Amadeus","Jobs","Braveheart","The Imitation Game","A Beautiful Mind","White / Caucasian",37,1,1,127
+1,1,0,1,1,0,1,0,"Woman",0,"Moneyball","The Imitation Game","Amadeus","Hitchcock","The Darkest Hour","A Beautiful Day in the Neighborhood","Judy","White / Caucasian",32,0,1,127
+1,0,1,1,1,1,0,1,"Man",0,"The Darkest Hour","A Beautiful Day in the Neighborhood","Braveheart","Moneyball","Chaplin","The Doors","Marie Antoinette","White / Caucasian",61,1,1,127
+0,1,1,1,0,0,0,1,"Man",1,"The Imitation Game","A Beautiful Mind","The Doors","Braveheart","The Aviator","Marie Antoinette","Nixon","White / Caucasian",36,1,1,127
+1,1,1,0,1,0,1,1,"Woman",2,"Chaplin","J. Edgar","Marie Antoinette","Jobs","On The Basis of Sex","The Doors","The Iron Lady","White / Caucasian",38,0,1,127
+0,1,1,1,1,0,1,1,"Woman",2,"Braveheart","The Aviator","Coco Before Chanel","Hitchcock","Judy","Nixon","On The Basis of Sex","Black or African American",43,0,0,127
+0,1,1,1,0,0,1,0,"Man",1,"Amadeus","The Aviator","Tolkien","Braveheart","The Darkest Hour","The Iron Lady","Hitchcock","White / Caucasian",48,1,1,127
+0,1,1,1,0,1,1,0,"Man",1,"Lincoln","The Aviator","Judy","A Beautiful Day in the Neighborhood","Tolkien","Jobs","Oppenheimer","White / Caucasian",30,1,1,127
+1,0,1,1,0,1,1,0,"Woman",2,"Marie Antoinette","Amadeus","The Iron Lady","The Doors","J. Edgar","Chaplin","Oppenheimer","White / Caucasian",34,0,1,127
+1,0,1,1,0,0,0,0,"Woman",1,"On The Basis of Sex","Oppenheimer","Amadeus","Capote","A Beautiful Day in the Neighborhood","The Imitation Game","The Doors","White / Caucasian",70,0,1,127
+0,1,1,1,0,0,1,0,"Woman",0,"Moneyball","Jobs","A Beautiful Day in the Neighborhood","Capote","The Aviator","Braveheart","Tolkien","Hispanic / Latinx",32,0,0,127
+1,0,1,1,1,0,1,1,"Woman",0,"A Beautiful Day in the Neighborhood","Oppenheimer","Tolkien","Lincoln","Jobs","The Aviator","On The Basis of Sex","White / Caucasian",56,0,1,127
+0,1,1,1,0,1,1,1,"Woman",0,"The Aviator","The Doors","The Darkest Hour","A Beautiful Mind","Moneyball","Oppenheimer","Lincoln","White / Caucasian",50,0,1,127
+0,1,1,1,1,1,0,1,"Man",0,"Braveheart","Jobs","Hitchcock","The Darkest Hour","The Doors","Chaplin","Marie Antoinette","White / Caucasian",45,1,1,127
+0,1,1,1,0,0,1,1,"Woman",1,"The Aviator","On The Basis of Sex","The Darkest Hour","A Beautiful Mind","A Beautiful Day in the Neighborhood","Jobs","J. Edgar","White / Caucasian",55,0,1,127
+1,1,1,0,1,0,1,1,"Man",0,"Oppenheimer","Amadeus","The Imitation Game","Jobs","The Aviator","Lincoln","On The Basis of Sex","White / Caucasian",40,1,1,127
+1,1,1,0,1,0,0,0,"Woman",1,"Lincoln","The Darkest Hour","The Doors","The Aviator","Marie Antoinette","JFK","Coco Before Chanel","Black or African American",48,0,0,127
+1,0,1,1,0,1,1,1,"Man",0,"Jobs","A Beautiful Mind","Braveheart","JFK","The Aviator","The Darkest Hour","Lincoln","White / Caucasian",31,1,1,127
+1,0,1,1,0,0,1,1,"Man",2,"Oppenheimer","The Iron Lady","A Beautiful Day in the Neighborhood","Capote","On The Basis of Sex","Nixon","J. Edgar","White / Caucasian",50,1,1,127
+0,1,1,1,0,1,0,0,"Woman",2,"Braveheart","J. Edgar","Lincoln","Oppenheimer","On The Basis of Sex","Judy","A Beautiful Mind","Asian / Pacific Islander",48,0,0,127
+1,1,1,0,1,1,0,1,"Woman",2,"On The Basis of Sex","Braveheart","Tolkien","A Beautiful Day in the Neighborhood","Judy","Oppenheimer","Marie Antoinette","White / Caucasian",37,0,1,127
+1,1,1,0,0,0,1,1,"Man",1,"Moneyball","Tolkien","Judy","A Beautiful Mind","Braveheart","The Darkest Hour","J. Edgar","White / Caucasian",27,1,1,127
+0,1,1,1,0,0,1,0,"Woman",2,"On The Basis of Sex","A Beautiful Day in the Neighborhood","Judy","Amadeus","Oppenheimer","The Imitation Game","Tolkien","White / Caucasian",42,0,1,127
+0,1,1,1,0,0,0,0,"Woman",0,"Jobs","Lincoln","Moneyball","Hitchcock","Capote","A Beautiful Day in the Neighborhood","The Doors","Black or African American",42,0,0,127
+1,0,1,1,1,0,1,0,"Woman",0,"Lincoln","Tolkien","Chaplin","A Beautiful Day in the Neighborhood","J. Edgar","Hitchcock","Judy","White / Caucasian",58,0,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"Lincoln","The Darkest Hour","W. A Life Misunderstood","Nixon","J. Edgar","On The Basis of Sex","Hitchcock","White / Caucasian",23,0,1,127
+1,0,1,1,1,1,0,1,"Woman",3,"A Beautiful Day in the Neighborhood","On The Basis of Sex","Coco Before Chanel","Lincoln","Jobs","Judy","Marie Antoinette","Asian / Pacific Islander",29,0,0,127
+1,1,1,0,1,0,1,0,"Man",2,"On The Basis of Sex","A Beautiful Mind","Braveheart","The Imitation Game","The Iron Lady","Amadeus","Judy","Black or African American",31,1,0,127
+1,0,1,1,0,0,1,0,"Woman",0,"Lincoln","A Beautiful Day in the Neighborhood","The Doors","Amadeus","The Imitation Game","The Aviator","Jobs","White / Caucasian",46,0,1,127
+0,1,1,1,0,1,0,1,"Woman",1,"The Doors","A Beautiful Day in the Neighborhood","Amadeus","Oppenheimer","Capote","Judy","Braveheart","White / Caucasian",45,0,1,127
+0,1,1,1,1,1,0,1,"Man",0,"Braveheart","Hitchcock","The Imitation Game","Chaplin","Oppenheimer","Lincoln","Marie Antoinette","Asian / Pacific Islander",51,1,0,127
+0,1,1,1,1,1,0,1,"Woman",2,"Oppenheimer","On The Basis of Sex","Jobs","Judy","Braveheart","A Beautiful Mind","Marie Antoinette","White / Caucasian",64,0,1,127
+1,0,1,1,1,0,1,0,"Woman",2,"Marie Antoinette","On The Basis of Sex","Lincoln","A Beautiful Day in the Neighborhood","Oppenheimer","J. Edgar","Judy","White / Caucasian",57,0,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Tolkien","A Beautiful Day in the Neighborhood","Oppenheimer","Lincoln","On The Basis of Sex","Jobs","The Imitation Game","White / Caucasian",60,1,1,127
+1,1,1,0,0,1,1,1,"Man",1,"Nixon","The Aviator","A Beautiful Day in the Neighborhood","Braveheart","Marie Antoinette","The Doors","Lincoln","White / Caucasian",48,1,1,127
+0,1,1,1,0,0,1,0,"Woman",0,"Tolkien","Chaplin","Nixon","Oppenheimer","Lincoln","Hitchcock","A Beautiful Day in the Neighborhood","White / Caucasian",26,0,1,127
+0,1,1,1,0,1,0,1,"Woman",2,"The Doors","The Imitation Game","Oppenheimer","Judy","Coco Before Chanel","A Beautiful Day in the Neighborhood","Braveheart","Hispanic / Latinx",47,0,0,127
+0,1,1,1,0,1,1,0,"Man",3,"On The Basis of Sex","The Darkest Hour","Jobs","The Iron Lady","Lincoln","Marie Antoinette","Oppenheimer","White / Caucasian",67,1,1,127
+0,1,1,1,0,0,1,1,"Man",0,"Jobs","Braveheart","W. A Life Misunderstood","The Aviator","Oppenheimer","Lincoln","J. Edgar","White / Caucasian",44,1,1,127
+0,1,1,1,0,1,1,0,"Man",1,"On The Basis of Sex","W. A Life Misunderstood","Moneyball","Jobs","Nixon","Lincoln","Oppenheimer","White / Caucasian",29,1,1,127
+0,1,1,1,1,1,0,1,"Woman",1,"The Aviator","Oppenheimer","The Imitation Game","Nixon","Coco Before Chanel","The Darkest Hour","Marie Antoinette","White / Caucasian",36,0,1,127
+0,1,1,1,0,0,1,1,"Man",1,"Lincoln","Coco Before Chanel","Chaplin","Amadeus","Tolkien","The Imitation Game","The Darkest Hour","White / Caucasian",46,1,1,127
+0,1,1,1,0,1,0,0,"Woman",0,"The Doors","A Beautiful Day in the Neighborhood","Jobs","The Aviator","Braveheart","JFK","A Beautiful Mind","White / Caucasian",42,0,1,127
+0,1,1,1,1,0,1,0,"Woman",1,"Braveheart","Oppenheimer","A Beautiful Day in the Neighborhood","On The Basis of Sex","Jobs","Tolkien","Judy","White / Caucasian",33,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Braveheart","Jobs","The Doors","Tolkien","A Beautiful Day in the Neighborhood","The Aviator","Hitchcock","Black or African American",36,1,0,127
+1,1,0,1,0,1,1,1,"Man",0,"A Beautiful Mind","Oppenheimer","Braveheart","Moneyball","Capote","The Imitation Game","Lincoln","White / Caucasian",36,1,1,127
+1,0,1,1,0,0,1,0,"Man",0,"Capote","Oppenheimer","Lincoln","Braveheart","The Aviator","W. A Life Misunderstood","A Beautiful Day in the Neighborhood","White / Caucasian",34,1,1,127
+0,1,1,1,0,1,1,0,"Man",3,"On The Basis of Sex","Lincoln","Coco Before Chanel","A Beautiful Mind","Jobs","Marie Antoinette","Oppenheimer","White / Caucasian",37,1,1,127
+0,1,1,1,1,0,1,1,"Woman",3,"A Beautiful Day in the Neighborhood","Judy","Oppenheimer","Coco Before Chanel","The Iron Lady","Jobs","On The Basis of Sex","White / Caucasian",32,0,1,127
+1,1,1,0,1,1,0,1,"Woman",2,"Hitchcock","On The Basis of Sex","Chaplin","Coco Before Chanel","Amadeus","Tolkien","Marie Antoinette","White / Caucasian",40,0,1,127
+1,0,1,1,1,0,1,1,"Man",0,"Braveheart","The Imitation Game","Lincoln","Oppenheimer","The Darkest Hour","A Beautiful Mind","On The Basis of Sex","Hispanic / Latinx",30,1,0,127
+1,1,1,0,1,0,1,1,"Man",0,"The Imitation Game","The Darkest Hour","Lincoln","Capote","Oppenheimer","Amadeus","On The Basis of Sex","White / Caucasian",32,1,1,127
+0,1,1,1,0,1,0,0,"Man",0,"The Doors","Tolkien","J. Edgar","Jobs","Braveheart","Amadeus","The Aviator","White / Caucasian",51,1,1,127
+0,1,1,1,0,1,0,0,"Man",0,"Oppenheimer","The Doors","Braveheart","Lincoln","Moneyball","Jobs","The Aviator","White / Caucasian",45,1,1,127
+1,0,1,1,1,1,0,1,"Man",0,"Tolkien","Chaplin","Braveheart","A Beautiful Day in the Neighborhood","Amadeus","Lincoln","Marie Antoinette","Asian / Pacific Islander",43,1,0,127
+1,0,1,1,0,0,1,0,"Woman",0,"A Beautiful Day in the Neighborhood","The Darkest Hour","W. A Life Misunderstood","Braveheart","Oppenheimer","Nixon","Hitchcock","White / Caucasian",64,0,1,127
+0,1,1,1,0,0,0,0,"Man",0,"The Doors","A Beautiful Day in the Neighborhood","Jobs","Lincoln","Oppenheimer","Amadeus","Chaplin","White / Caucasian",47,1,1,127
+1,0,1,1,0,1,1,1,"Woman",1,"Tolkien","Oppenheimer","The Imitation Game","A Beautiful Day in the Neighborhood","Amadeus","Coco Before Chanel","Lincoln","White / Caucasian",46,0,1,127
+0,1,1,1,0,1,1,1,"Man",1,"The Doors","Hitchcock","Nixon","Moneyball","The Aviator","On The Basis of Sex","Lincoln","White / Caucasian",57,1,1,127
+0,1,1,1,1,0,1,0,"Man",1,"Amadeus","On The Basis of Sex","Capote","A Beautiful Day in the Neighborhood","W. A Life Misunderstood","Jobs","Judy","White / Caucasian",36,1,1,127
+1,1,1,0,0,1,1,1,"Man",1,"Oppenheimer","Tolkien","Coco Before Chanel","J. Edgar","A Beautiful Day in the Neighborhood","Jobs","Lincoln","White / Caucasian",63,1,1,127
+1,1,1,0,1,0,1,0,"Woman",2,"Oppenheimer","Lincoln","The Darkest Hour","Jobs","Coco Before Chanel","Marie Antoinette","Judy","White / Caucasian",21,0,1,127
+1,0,1,1,1,0,1,1,"Man",0,"A Beautiful Mind","Braveheart","Oppenheimer","Lincoln","The Aviator","J. Edgar","On The Basis of Sex","Asian / Pacific Islander",43,1,0,127
+0,1,1,1,1,0,0,0,"Woman",0,"Capote","Tolkien","The Doors","JFK","J. Edgar","The Darkest Hour","Coco Before Chanel","White / Caucasian",60,0,1,127
+0,1,1,1,0,0,1,1,"Woman",1,"Hitchcock","A Beautiful Day in the Neighborhood","Oppenheimer","The Doors","Jobs","The Iron Lady","The Darkest Hour","White / Caucasian",49,0,1,127
+1,0,1,1,0,1,0,0,"Man",0,"Oppenheimer","Amadeus","Tolkien","The Doors","Braveheart","Jobs","The Aviator","American Indian or Alaskan Native",30,1,0,127
+0,1,1,1,0,0,0,0,"Man",1,"The Imitation Game","Lincoln","Amadeus","On The Basis of Sex","Oppenheimer","A Beautiful Day in the Neighborhood","Capote","White / Caucasian",46,1,1,127
+1,1,1,0,0,1,1,1,"Woman",0,"Braveheart","Oppenheimer","A Beautiful Day in the Neighborhood","Chaplin","The Imitation Game","Jobs","Lincoln","White / Caucasian",43,0,1,127
+1,1,0,1,1,0,1,1,"Woman",1,"The Iron Lady","Oppenheimer","A Beautiful Day in the Neighborhood","Lincoln","The Darkest Hour","Amadeus","On The Basis of Sex","White / Caucasian",48,0,1,127
+1,0,1,1,0,1,1,1,"Man",0,"A Beautiful Mind","Oppenheimer","Tolkien","Hitchcock","Chaplin","J. Edgar","Lincoln","Asian / Pacific Islander",27,1,0,127
+1,0,1,1,1,1,0,1,"Man",2,"Tolkien","On The Basis of Sex","Judy","A Beautiful Day in the Neighborhood","Jobs","Chaplin","Marie Antoinette","White / Caucasian",58,1,1,127
+0,1,1,1,0,1,0,1,"Woman",1,"Moneyball","Lincoln","Oppenheimer","A Beautiful Day in the Neighborhood","Judy","The Darkest Hour","Braveheart","Asian / Pacific Islander",32,0,0,127
+1,1,0,1,0,1,0,1,"Woman",3,"On The Basis of Sex","Hitchcock","Amadeus","Lincoln","Judy","Coco Before Chanel","Braveheart","White / Caucasian",72,0,1,127
+0,1,1,1,0,1,0,0,"Woman",0,"Oppenheimer","J. Edgar","Braveheart","A Beautiful Day in the Neighborhood","Jobs","Lincoln","The Aviator","White / Caucasian",38,0,1,127
+0,1,1,1,0,1,1,1,"Woman",0,"The Aviator","The Darkest Hour","The Doors","Jobs","Nixon","Chaplin","Lincoln","White / Caucasian",54,0,1,127
+1,1,1,0,0,1,0,1,"Man",0,"A Beautiful Mind","Moneyball","Tolkien","Lincoln","The Aviator","The Imitation Game","Braveheart","Hispanic / Latinx",25,1,0,127
+0,1,1,1,0,0,0,0,"Woman",2,"A Beautiful Day in the Neighborhood","Marie Antoinette","On The Basis of Sex","Jobs","Hitchcock","Amadeus","The Doors","Asian / Pacific Islander",48,0,0,127
+1,1,0,1,1,1,0,1,"Woman",0,"JFK","Lincoln","A Beautiful Day in the Neighborhood","The Darkest Hour","Oppenheimer","Jobs","Marie Antoinette","Black or African American",32,0,0,127
+0,1,1,1,0,1,0,1,"Woman",2,"Oppenheimer","Amadeus","Marie Antoinette","The Imitation Game","Lincoln","On The Basis of Sex","Braveheart","White / Caucasian",46,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Hitchcock","The Aviator","The Imitation Game","Oppenheimer","The Doors","Chaplin","Jobs","White / Caucasian",67,1,1,127
+0,1,1,1,0,1,1,1,"Man",0,"The Imitation Game","Oppenheimer","Tolkien","Jobs","Hitchcock","A Beautiful Day in the Neighborhood","Lincoln","Black or African American",36,1,0,127
+0,1,1,1,1,0,1,1,"Woman",2,"The Doors","Lincoln","Moneyball","Marie Antoinette","Judy","Braveheart","The Iron Lady","White / Caucasian",33,0,1,127
+1,1,1,0,0,0,1,0,"Woman",2,"Oppenheimer","The Iron Lady","Tolkien","Coco Before Chanel","Jobs","J. Edgar","Hitchcock","White / Caucasian",42,0,1,127
+1,1,1,0,0,0,1,0,"Man",1,"Lincoln","The Darkest Hour","The Iron Lady","Chaplin","The Aviator","J. Edgar","Hitchcock","White / Caucasian",30,1,1,127
+0,1,1,1,0,1,0,0,"Man",0,"Oppenheimer","Braveheart","Lincoln","The Imitation Game","A Beautiful Day in the Neighborhood","Tolkien","A Beautiful Mind","Asian / Pacific Islander",33,1,0,127
+0,1,1,1,0,0,1,0,"Man",1,"The Imitation Game","Jobs","Lincoln","Amadeus","The Iron Lady","The Aviator","Tolkien","White / Caucasian",34,1,1,127
+1,0,1,1,1,0,1,0,"Man",0,"A Beautiful Day in the Neighborhood","The Doors","Capote","Oppenheimer","Braveheart","Moneyball","Judy","White / Caucasian",40,1,1,127
+1,1,0,1,0,0,1,0,"Woman",1,"On The Basis of Sex","Moneyball","Lincoln","Oppenheimer","Amadeus","A Beautiful Day in the Neighborhood","The Imitation Game","White / Caucasian",48,0,1,127
+1,1,1,0,0,1,0,0,"Man",2,"Braveheart","The Darkest Hour","A Beautiful Day in the Neighborhood","On The Basis of Sex","Moneyball","Judy","A Beautiful Mind","White / Caucasian",49,1,1,127
+0,1,1,1,0,0,0,0,"Man",0,"Moneyball","Braveheart","The Darkest Hour","Lincoln","Oppenheimer","Tolkien","Amadeus","White / Caucasian",22,1,1,127
+0,1,1,1,0,1,1,0,"Man",1,"Moneyball","Capote","A Beautiful Day in the Neighborhood","On The Basis of Sex","The Darkest Hour","A Beautiful Mind","Oppenheimer","Asian / Pacific Islander",32,1,0,127
+0,1,1,1,0,0,1,0,"Woman",1,"Oppenheimer","A Beautiful Mind","Lincoln","The Doors","On The Basis of Sex","Jobs","A Beautiful Day in the Neighborhood","Asian / Pacific Islander",48,0,0,127
+1,1,1,0,0,0,1,1,"Man",0,"Lincoln","Oppenheimer","Amadeus","Tolkien","Jobs","W. A Life Misunderstood","The Darkest Hour","Asian / Pacific Islander",25,1,0,127
+1,0,1,1,1,0,1,0,"Man",0,"The Aviator","A Beautiful Mind","JFK","J. Edgar","Oppenheimer","Lincoln","Judy","Hispanic / Latinx",51,1,0,127
+1,1,1,0,0,0,1,0,"Woman",0,"The Doors","Lincoln","The Imitation Game","A Beautiful Day in the Neighborhood","Tolkien","Hitchcock","Jobs","White / Caucasian",68,0,1,127
+1,1,1,0,0,1,1,0,"Man",2,"The Doors","The Darkest Hour","On The Basis of Sex","The Iron Lady","A Beautiful Day in the Neighborhood","Oppenheimer","Moneyball","White / Caucasian",48,1,1,127
+1,1,1,0,1,0,0,0,"Woman",1,"Marie Antoinette","A Beautiful Day in the Neighborhood","Braveheart","Oppenheimer","Hitchcock","The Imitation Game","Coco Before Chanel","Hispanic / Latinx",43,0,0,127
+1,1,1,0,0,0,0,0,"Woman",3,"On The Basis of Sex","Oppenheimer","Judy","The Iron Lady","The Imitation Game","Lincoln","Amadeus","White / Caucasian",64,0,1,127
+1,0,1,1,0,1,0,1,"Woman",3,"The Iron Lady","On The Basis of Sex","A Beautiful Mind","Nixon","W. A Life Misunderstood","Coco Before Chanel","JFK","Asian / Pacific Islander",40,0,0,127
+1,1,1,0,1,1,0,1,"Woman",1,"Judy","Jobs","The Darkest Hour","Lincoln","A Beautiful Day in the Neighborhood","Chaplin","Marie Antoinette","Asian / Pacific Islander",28,0,0,127
+1,1,1,0,0,0,1,0,"Man",1,"The Aviator","Braveheart","Moneyball","A Beautiful Day in the Neighborhood","Coco Before Chanel","Oppenheimer","Jobs","White / Caucasian",26,1,1,127
+1,0,1,1,0,0,1,1,"Woman",5,"The Iron Lady","On The Basis of Sex","Coco Before Chanel","Judy","Marie Antoinette","Oppenheimer","The Darkest Hour","White / Caucasian",36,0,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"Marie Antoinette","Lincoln","Oppenheimer","Jobs","Moneyball","A Beautiful Mind","The Imitation Game","Hispanic / Latinx",29,0,0,127
+1,1,1,0,0,0,1,0,"Woman",1,"Chaplin","Lincoln","Amadeus","On The Basis of Sex","J. Edgar","Oppenheimer","Jobs","White / Caucasian",69,0,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"A Beautiful Day in the Neighborhood","On The Basis of Sex","J. Edgar","Hitchcock","Oppenheimer","Chaplin","Tolkien","Black or African American",38,0,0,127
+0,1,1,1,0,1,0,1,"Woman",2,"A Beautiful Day in the Neighborhood","The Imitation Game","Oppenheimer","Coco Before Chanel","Marie Antoinette","Jobs","Braveheart","White / Caucasian",54,0,1,127
+0,1,1,1,0,1,0,0,"Man",0,"Moneyball","W. A Life Misunderstood","Braveheart","A Beautiful Day in the Neighborhood","Tolkien","The Imitation Game","The Aviator","White / Caucasian",29,1,1,127
+1,1,1,0,1,0,1,0,"Woman",1,"Chaplin","Tolkien","Hitchcock","A Beautiful Day in the Neighborhood","Coco Before Chanel","Jobs","Judy","White / Caucasian",70,0,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Marie Antoinette","Jobs","A Beautiful Day in the Neighborhood","Hitchcock","The Aviator","Oppenheimer","The Imitation Game","White / Caucasian",73,1,1,127
+0,1,1,1,0,0,1,1,"Man",1,"Lincoln","Tolkien","Amadeus","Marie Antoinette","The Aviator","Jobs","The Darkest Hour","White / Caucasian",51,1,1,127
+1,0,1,1,0,0,0,0,"Woman",2,"Judy","Coco Before Chanel","The Imitation Game","A Beautiful Day in the Neighborhood","Tolkien","Lincoln","The Doors","White / Caucasian",25,0,1,127
+0,1,1,1,1,0,0,0,"Woman",0,"J. Edgar","JFK","A Beautiful Mind","Moneyball","The Imitation Game","Jobs","Coco Before Chanel","Asian / Pacific Islander",48,0,0,127
+0,1,1,1,0,0,1,0,"Woman",1,"Lincoln","W. A Life Misunderstood","The Iron Lady","A Beautiful Day in the Neighborhood","Braveheart","Nixon","Jobs","White / Caucasian",67,0,1,127
+0,1,1,1,0,0,1,1,"Woman",2,"On The Basis of Sex","A Beautiful Mind","Hitchcock","Jobs","Judy","The Imitation Game","The Darkest Hour","White / Caucasian",62,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Braveheart","A Beautiful Day in the Neighborhood","Oppenheimer","The Doors","Amadeus","The Darkest Hour","Tolkien","White / Caucasian",52,1,1,127
+0,1,1,1,0,1,0,0,"Man",1,"Lincoln","Braveheart","The Doors","On The Basis of Sex","Oppenheimer","A Beautiful Mind","The Aviator","Black or African American",65,1,0,127
+0,1,1,1,0,0,0,0,"Man",2,"Amadeus","Hitchcock","The Doors","Marie Antoinette","Judy","Moneyball","Capote","White / Caucasian",53,1,1,127
+0,1,1,1,0,1,1,0,"Woman",2,"Jobs","Lincoln","W. A Life Misunderstood","On The Basis of Sex","A Beautiful Day in the Neighborhood","Judy","Oppenheimer","Black or African American",31,0,0,127
+0,1,1,1,0,1,0,1,"Woman",1,"Jobs","Lincoln","Chaplin","J. Edgar","The Aviator","Marie Antoinette","JFK","White / Caucasian",22,0,1,127
+1,1,0,1,0,0,1,0,"Man",0,"The Aviator","Hitchcock","Oppenheimer","Braveheart","A Beautiful Mind","Amadeus","The Imitation Game","Hispanic / Latinx",32,1,0,127
+1,1,1,0,1,0,1,0,"Woman",3,"Marie Antoinette","A Beautiful Day in the Neighborhood","The Iron Lady","The Imitation Game","The Darkest Hour","On The Basis of Sex","Judy","White / Caucasian",34,0,1,127
+1,0,1,1,1,1,0,1,"Man",1,"Jobs","The Imitation Game","Oppenheimer","On The Basis of Sex","A Beautiful Mind","The Darkest Hour","Marie Antoinette","White / Caucasian",61,1,1,127
+1,0,1,1,0,0,0,1,"Woman",2,"On The Basis of Sex","Oppenheimer","Hitchcock","The Iron Lady","A Beautiful Mind","The Imitation Game","W. A Life Misunderstood","White / Caucasian",67,0,1,127
+1,1,1,0,1,0,1,1,"Woman",1,"The Iron Lady","J. Edgar","Nixon","The Darkest Hour","JFK","Tolkien","On The Basis of Sex","White / Caucasian",29,0,1,127
+0,1,1,1,0,1,0,0,"Woman",1,"The Darkest Hour","Amadeus","The Aviator","Marie Antoinette","JFK","Braveheart","A Beautiful Mind","White / Caucasian",28,0,1,127
+1,1,1,0,0,1,0,0,"Man",1,"Lincoln","Judy","The Darkest Hour","The Imitation Game","A Beautiful Day in the Neighborhood","J. Edgar","The Aviator","Hispanic / Latinx",24,1,0,127
+0,1,1,1,0,0,1,0,"Woman",1,"Capote","Nixon","A Beautiful Day in the Neighborhood","A Beautiful Mind","Judy","W. A Life Misunderstood","Hitchcock","White / Caucasian",54,0,1,127
+1,0,1,1,0,1,1,1,"Woman",1,"A Beautiful Day in the Neighborhood","Jobs","On The Basis of Sex","Tolkien","Hitchcock","J. Edgar","Lincoln","White / Caucasian",37,0,1,127
+0,1,1,1,0,0,0,0,"Woman",1,"Amadeus","Tolkien","Braveheart","Oppenheimer","Judy","Chaplin","The Doors","White / Caucasian",35,0,1,127
+0,1,1,1,0,1,0,0,"Man",3,"Coco Before Chanel","The Aviator","Braveheart","The Iron Lady","On The Basis of Sex","Chaplin","A Beautiful Mind","White / Caucasian",50,1,1,127
+1,1,1,0,1,0,1,1,"Man",0,"Braveheart","Moneyball","The Aviator","A Beautiful Day in the Neighborhood","Amadeus","The Imitation Game","On The Basis of Sex","Hispanic / Latinx",51,1,0,127
+0,1,1,1,0,0,1,1,"Woman",1,"Jobs","Lincoln","Chaplin","Nixon","J. Edgar","Coco Before Chanel","The Darkest Hour","White / Caucasian",35,0,1,127
+1,1,0,1,0,1,0,0,"Woman",2,"Oppenheimer","A Beautiful Day in the Neighborhood","On The Basis of Sex","Lincoln","Judy","The Darkest Hour","A Beautiful Mind","White / Caucasian",68,0,1,127
+0,1,1,1,0,0,0,0,"Woman",0,"The Aviator","J. Edgar","Moneyball","Braveheart","Oppenheimer","Tolkien","The Doors","White / Caucasian",59,0,1,127
+1,1,1,0,0,0,1,0,"Man",2,"Tolkien","Amadeus","The Doors","A Beautiful Day in the Neighborhood","Marie Antoinette","Judy","The Imitation Game","Black or African American",30,1,0,127
+0,1,1,1,0,0,1,0,"Woman",1,"Lincoln","Marie Antoinette","Amadeus","JFK","Oppenheimer","A Beautiful Mind","A Beautiful Day in the Neighborhood","White / Caucasian",36,0,1,127
+1,1,1,0,1,0,1,0,"Woman",2,"The Iron Lady","Lincoln","The Darkest Hour","Coco Before Chanel","The Imitation Game","J. Edgar","Judy","White / Caucasian",70,0,1,127
+0,1,1,1,0,0,1,0,"Woman",5,"On The Basis of Sex","Coco Before Chanel","Marie Antoinette","Jobs","Judy","The Iron Lady","A Beautiful Day in the Neighborhood","White / Caucasian",51,0,1,127
+0,1,1,1,0,1,1,0,"Woman",2,"The Iron Lady","Marie Antoinette","The Doors","The Imitation Game","Lincoln","W. A Life Misunderstood","Oppenheimer","White / Caucasian",23,0,1,127
+1,0,1,1,0,0,0,1,"Man",0,"Braveheart","Lincoln","Oppenheimer","Hitchcock","A Beautiful Mind","JFK","W. A Life Misunderstood","Hispanic / Latinx",28,1,0,127
+1,1,1,0,0,1,0,0,"Woman",1,"Lincoln","The Imitation Game","The Darkest Hour","The Iron Lady","Jobs","A Beautiful Day in the Neighborhood","A Beautiful Mind","White / Caucasian",58,0,1,127
+0,1,1,1,0,1,1,1,"Man",0,"Braveheart","Oppenheimer","Moneyball","Jobs","The Darkest Hour","J. Edgar","Lincoln","White / Caucasian",38,1,1,127
+0,1,1,1,1,0,1,1,"Woman",1,"Lincoln","The Darkest Hour","Jobs","The Imitation Game","The Iron Lady","A Beautiful Day in the Neighborhood","On The Basis of Sex","White / Caucasian",65,0,1,127
+1,1,0,1,1,0,1,0,"Woman",0,"A Beautiful Mind","The Aviator","Braveheart","Lincoln","A Beautiful Day in the Neighborhood","Amadeus","Judy","White / Caucasian",44,0,1,127
+0,1,1,1,0,0,0,0,"Woman",3,"A Beautiful Day in the Neighborhood","On The Basis of Sex","Marie Antoinette","Jobs","Judy","Tolkien","Chaplin","White / Caucasian",54,0,1,127
+1,1,1,0,0,0,0,0,"Man",3,"Lincoln","A Beautiful Day in the Neighborhood","On The Basis of Sex","Judy","The Iron Lady","Jobs","Chaplin","White / Caucasian",26,1,1,127
+1,1,1,0,0,0,0,1,"Woman",2,"Jobs","A Beautiful Day in the Neighborhood","Marie Antoinette","Tolkien","On The Basis of Sex","W. A Life Misunderstood","Nixon","White / Caucasian",32,0,1,127
+1,1,0,1,1,0,1,1,"Woman",0,"The Imitation Game","A Beautiful Day in the Neighborhood","The Darkest Hour","Jobs","Oppenheimer","Tolkien","On The Basis of Sex","White / Caucasian",27,0,1,127
+1,1,1,0,0,0,1,0,"Man",0,"The Aviator","The Imitation Game","Tolkien","J. Edgar","Moneyball","JFK","Hitchcock","White / Caucasian",54,1,1,127
+0,1,1,1,1,0,1,1,"Woman",0,"The Aviator","The Imitation Game","Lincoln","W. A Life Misunderstood","Nixon","JFK","On The Basis of Sex","White / Caucasian",30,0,1,127
+1,1,1,0,0,0,1,0,"Woman",2,"A Beautiful Day in the Neighborhood","Marie Antoinette","Tolkien","Judy","Braveheart","Amadeus","The Imitation Game","Black or African American",58,0,0,127
+0,1,1,1,0,0,0,0,"Woman",2,"Tolkien","A Beautiful Day in the Neighborhood","Oppenheimer","Jobs","Judy","Marie Antoinette","The Doors","Asian / Pacific Islander",35,0,0,127
+0,1,1,1,1,0,1,1,"Woman",0,"Lincoln","Oppenheimer","A Beautiful Day in the Neighborhood","JFK","J. Edgar","Jobs","On The Basis of Sex","Black or African American",25,0,0,127
+0,1,1,1,1,1,0,1,"Man",2,"Coco Before Chanel","Hitchcock","Chaplin","The Iron Lady","Amadeus","The Darkest Hour","Marie Antoinette","White / Caucasian",52,1,1,127
+0,1,1,1,0,1,1,0,"Woman",2,"The Doors","Judy","The Aviator","Moneyball","On The Basis of Sex","A Beautiful Day in the Neighborhood","Oppenheimer","White / Caucasian",35,0,1,127
+0,1,1,1,0,1,1,1,"Woman",1,"Marie Antoinette","The Aviator","Moneyball","A Beautiful Mind","W. A Life Misunderstood","JFK","Lincoln","White / Caucasian",36,0,1,127
+1,1,1,0,0,0,1,0,"Woman",1,"Moneyball","Marie Antoinette","Oppenheimer","Braveheart","A Beautiful Mind","The Aviator","Tolkien","White / Caucasian",38,0,1,127
+0,1,1,1,1,0,1,1,"Woman",1,"Oppenheimer","Braveheart","Lincoln","On The Basis of Sex","Amadeus","Hitchcock","The Iron Lady","White / Caucasian",44,0,1,127
+1,1,0,1,1,1,0,1,"Man",0,"Amadeus","The Imitation Game","Braveheart","The Aviator","Jobs","Oppenheimer","Marie Antoinette","Asian / Pacific Islander",33,1,0,127
+1,0,1,1,0,0,1,0,"Woman",1,"Oppenheimer","Lincoln","Marie Antoinette","Jobs","Nixon","The Darkest Hour","Hitchcock","Asian / Pacific Islander",39,0,0,127
+0,1,1,1,0,0,1,0,"Woman",3,"On The Basis of Sex","The Doors","Judy","Coco Before Chanel","Jobs","A Beautiful Mind","Hitchcock","White / Caucasian",62,0,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"Tolkien","Amadeus","Hitchcock","Judy","JFK","Chaplin","A Beautiful Day in the Neighborhood","White / Caucasian",47,0,1,127
+1,1,1,0,1,0,0,0,"Man",2,"Oppenheimer","Tolkien","Jobs","Braveheart","The Iron Lady","On The Basis of Sex","Coco Before Chanel","Hispanic / Latinx",32,1,0,127
+1,0,1,1,1,0,1,1,"Man",0,"Nixon","Lincoln","The Darkest Hour","J. Edgar","Amadeus","JFK","On The Basis of Sex","White / Caucasian",73,1,1,127
+1,0,1,1,0,1,1,0,"Man",2,"On The Basis of Sex","Jobs","The Aviator","Tolkien","Oppenheimer","Marie Antoinette","Moneyball","White / Caucasian",39,1,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"On The Basis of Sex","The Darkest Hour","The Imitation Game","Oppenheimer","Lincoln","Braveheart","A Beautiful Day in the Neighborhood","Black or African American",75,0,0,127
+1,1,1,0,0,1,1,0,"Woman",1,"Marie Antoinette","Lincoln","The Imitation Game","Chaplin","A Beautiful Mind","The Darkest Hour","Oppenheimer","White / Caucasian",42,0,1,127
+1,1,1,0,1,1,0,1,"Woman",1,"On The Basis of Sex","A Beautiful Mind","J. Edgar","Capote","Oppenheimer","The Imitation Game","Marie Antoinette","White / Caucasian",55,0,1,127
+1,1,1,0,0,0,1,0,"Man",3,"A Beautiful Mind","Amadeus","The Iron Lady","Oppenheimer","Coco Before Chanel","Judy","Hitchcock","Black or African American",33,1,0,127
+0,1,1,1,1,0,1,0,"Woman",0,"Lincoln","Chaplin","J. Edgar","Amadeus","The Aviator","W. A Life Misunderstood","Judy","Black or African American",70,0,0,127
+1,0,1,1,0,0,1,0,"Woman",2,"On The Basis of Sex","Coco Before Chanel","The Imitation Game","The Aviator","Lincoln","Moneyball","Hitchcock","White / Caucasian",58,0,1,127
+1,0,1,1,0,1,1,0,"Man",0,"Nixon","Lincoln","J. Edgar","The Darkest Hour","Moneyball","The Imitation Game","Oppenheimer","White / Caucasian",49,1,1,127
+1,1,1,0,0,1,0,1,"Woman",4,"The Imitation Game","Coco Before Chanel","Marie Antoinette","The Iron Lady","Judy","Jobs","JFK","White / Caucasian",33,0,1,127
+0,1,1,1,0,1,0,1,"Woman",1,"Tolkien","Marie Antoinette","Oppenheimer","A Beautiful Day in the Neighborhood","Jobs","Lincoln","Braveheart","Asian / Pacific Islander",32,0,0,127
+0,1,1,1,0,1,1,1,"Woman",2,"A Beautiful Day in the Neighborhood","Judy","On The Basis of Sex","The Aviator","A Beautiful Mind","Jobs","Lincoln","White / Caucasian",62,0,1,127
+1,0,1,1,1,0,1,1,"Man",2,"The Darkest Hour","Marie Antoinette","Tolkien","Jobs","Coco Before Chanel","JFK","The Iron Lady","Black or African American",34,1,0,127
+0,1,1,1,0,0,1,0,"Woman",1,"The Doors","Chaplin","A Beautiful Day in the Neighborhood","The Imitation Game","Tolkien","Judy","Hitchcock","White / Caucasian",46,0,1,127
+0,1,1,1,0,1,0,1,"Man",0,"Oppenheimer","The Doors","JFK","Lincoln","Chaplin","A Beautiful Mind","Braveheart","Hispanic / Latinx",45,1,0,127
+1,1,1,0,0,0,0,0,"Man",0,"Jobs","Capote","W. A Life Misunderstood","Hitchcock","The Aviator","A Beautiful Day in the Neighborhood","The Doors","White / Caucasian",33,1,1,127
+1,1,1,0,1,1,0,1,"Man",1,"A Beautiful Mind","Braveheart","Amadeus","Oppenheimer","Lincoln","On The Basis of Sex","Marie Antoinette","White / Caucasian",61,1,1,127
+0,1,1,1,1,1,0,1,"Woman",1,"Judy","Hitchcock","Capote","Chaplin","Nixon","A Beautiful Mind","Marie Antoinette","Black or African American",52,0,0,127
+0,1,1,1,0,1,0,0,"Man",0,"The Imitation Game","Oppenheimer","A Beautiful Mind","Lincoln","Tolkien","JFK","The Aviator","White / Caucasian",40,1,1,127
+0,1,1,1,0,0,0,0,"Woman",2,"Amadeus","Nixon","Moneyball","Lincoln","Coco Before Chanel","Judy","Chaplin","White / Caucasian",25,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Braveheart","Oppenheimer","Lincoln","Moneyball","J. Edgar","Jobs","The Imitation Game","White / Caucasian",29,1,1,127
+0,1,1,1,0,1,1,1,"Man",1,"Braveheart","A Beautiful Day in the Neighborhood","Jobs","Tolkien","On The Basis of Sex","Oppenheimer","Lincoln","White / Caucasian",37,1,1,127
+1,0,1,1,0,0,1,1,"Man",1,"Nixon","The Aviator","Lincoln","Coco Before Chanel","A Beautiful Day in the Neighborhood","Jobs","J. Edgar","White / Caucasian",58,1,1,127
+1,0,1,1,1,0,1,1,"Man",0,"Hitchcock","Braveheart","The Doors","Tolkien","Chaplin","Lincoln","The Iron Lady","White / Caucasian",38,1,1,127
+1,1,1,0,1,1,0,1,"Man",1,"Jobs","The Doors","A Beautiful Day in the Neighborhood","Oppenheimer","Lincoln","Judy","Marie Antoinette","White / Caucasian",40,1,1,127
+1,1,1,0,0,1,1,0,"Woman",2,"A Beautiful Day in the Neighborhood","A Beautiful Mind","Jobs","Amadeus","The Iron Lady","Coco Before Chanel","Oppenheimer","Hispanic / Latinx",47,0,0,127
+1,1,1,0,0,0,1,0,"Man",2,"J. Edgar","Oppenheimer","A Beautiful Mind","On The Basis of Sex","Amadeus","Judy","Jobs","Black or African American",38,1,0,127
+0,1,1,1,0,1,0,0,"Woman",1,"Lincoln","On The Basis of Sex","A Beautiful Day in the Neighborhood","Tolkien","Oppenheimer","W. A Life Misunderstood","The Aviator","White / Caucasian",49,0,1,127
+1,1,1,0,1,0,1,1,"Woman",2,"Oppenheimer","The Imitation Game","On The Basis of Sex","Coco Before Chanel","A Beautiful Day in the Neighborhood","A Beautiful Mind","The Iron Lady","White / Caucasian",52,0,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"Tolkien","Moneyball","W. A Life Misunderstood","Marie Antoinette","Lincoln","J. Edgar","Hitchcock","White / Caucasian",39,0,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"J. Edgar","On The Basis of Sex","Jobs","The Doors","Hitchcock","Lincoln","Tolkien","White / Caucasian",62,0,1,127
+0,1,1,1,0,1,1,1,"Man",0,"Jobs","W. A Life Misunderstood","The Aviator","J. Edgar","A Beautiful Mind","Braveheart","Lincoln","White / Caucasian",26,1,1,127
+1,1,1,0,0,0,1,0,"Woman",1,"Oppenheimer","Marie Antoinette","Amadeus","Hitchcock","Tolkien","The Imitation Game","A Beautiful Day in the Neighborhood","White / Caucasian",72,0,1,127
+0,1,1,1,1,0,1,1,"Non-binary",2,"Capote","On The Basis of Sex","Judy","The Imitation Game","Lincoln","Hitchcock","The Iron Lady","White / Caucasian",42,0,1,127
+1,0,1,1,0,0,1,0,"Woman",1,"Nixon","Chaplin","Judy","Hitchcock","Lincoln","The Doors","A Beautiful Day in the Neighborhood","Hispanic / Latinx",25,0,0,127
+1,1,1,0,0,0,1,0,"Man",2,"The Imitation Game","Lincoln","Moneyball","The Darkest Hour","Coco Before Chanel","The Iron Lady","A Beautiful Day in the Neighborhood","White / Caucasian",39,1,1,127
+1,0,1,1,1,1,0,1,"Man",1,"Moneyball","Jobs","The Doors","Braveheart","A Beautiful Day in the Neighborhood","Coco Before Chanel","Marie Antoinette","Black or African American",29,1,0,127
+0,1,1,1,0,1,0,1,"Woman",1,"Jobs","The Doors","Oppenheimer","J. Edgar","On The Basis of Sex","The Aviator","JFK","White / Caucasian",48,0,1,127
+0,1,1,1,0,0,0,0,"Non-binary",3,"Oppenheimer","A Beautiful Day in the Neighborhood","Coco Before Chanel","The Imitation Game","Judy","Marie Antoinette","The Doors","White / Caucasian",30,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"The Imitation Game","Lincoln","The Darkest Hour","J. Edgar","Amadeus","JFK","A Beautiful Day in the Neighborhood","White / Caucasian",41,1,1,127
+0,1,1,1,0,1,0,0,"Man",1,"Lincoln","Oppenheimer","A Beautiful Day in the Neighborhood","Marie Antoinette","The Imitation Game","The Aviator","A Beautiful Mind","White / Caucasian",44,1,1,127
+0,1,1,1,0,0,0,0,"Woman",1,"On The Basis of Sex","A Beautiful Day in the Neighborhood","The Imitation Game","Braveheart","J. Edgar","Jobs","The Doors","White / Caucasian",39,0,1,127
+0,1,1,1,0,0,0,0,"Woman",2,"Hitchcock","Coco Before Chanel","A Beautiful Day in the Neighborhood","Oppenheimer","Jobs","On The Basis of Sex","The Doors","White / Caucasian",50,0,1,127
+0,1,1,1,0,1,0,1,"Woman",1,"Judy","The Doors","Nixon","Oppenheimer","Jobs","W. A Life Misunderstood","JFK","White / Caucasian",40,0,1,127
+1,1,1,0,1,0,1,1,"Man",0,"Moneyball","A Beautiful Day in the Neighborhood","Jobs","The Imitation Game","Oppenheimer","Lincoln","On The Basis of Sex","Asian / Pacific Islander",33,1,0,127
+0,1,1,1,0,1,1,0,"Man",1,"Jobs","Hitchcock","Chaplin","A Beautiful Mind","The Doors","Marie Antoinette","Oppenheimer","White / Caucasian",69,1,1,127
+1,1,1,0,0,0,1,0,"Woman",0,"Capote","A Beautiful Mind","Chaplin","Amadeus","Tolkien","The Doors","Hitchcock","Hispanic / Latinx",44,0,0,127
+1,0,1,1,1,0,1,1,"Woman",2,"On The Basis of Sex","Judy","The Doors","Tolkien","W. A Life Misunderstood","Nixon","The Iron Lady","White / Caucasian",66,0,1,127
+0,1,1,1,1,0,1,0,"Man",1,"A Beautiful Day in the Neighborhood","Coco Before Chanel","Oppenheimer","Tolkien","Lincoln","Jobs","Judy","White / Caucasian",26,1,1,127
+1,1,1,0,0,0,0,0,"Woman",0,"A Beautiful Day in the Neighborhood","Tolkien","Jobs","The Doors","Braveheart","Moneyball","Chaplin","White / Caucasian",41,0,1,127
+0,1,1,1,0,1,1,0,"Woman",2,"Marie Antoinette","Coco Before Chanel","Moneyball","Lincoln","Braveheart","A Beautiful Mind","Oppenheimer","White / Caucasian",32,0,1,127
+0,1,1,1,1,0,1,0,"Woman",0,"The Darkest Hour","Tolkien","The Doors","A Beautiful Mind","The Aviator","Capote","Judy","White / Caucasian",34,0,1,127
+1,1,1,0,0,0,1,1,"Man",1,"On The Basis of Sex","Lincoln","Jobs","A Beautiful Day in the Neighborhood","Braveheart","Moneyball","The Darkest Hour","White / Caucasian",48,1,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Oppenheimer","On The Basis of Sex","The Aviator","The Doors","Hitchcock","Chaplin","A Beautiful Day in the Neighborhood","White / Caucasian",39,1,1,127
+0,1,1,1,0,1,0,0,"Woman",1,"Amadeus","The Darkest Hour","Lincoln","A Beautiful Day in the Neighborhood","Braveheart","Coco Before Chanel","A Beautiful Mind","White / Caucasian",59,0,1,127
+0,1,1,1,0,0,1,0,"Man",2,"On The Basis of Sex","The Iron Lady","Tolkien","The Darkest Hour","Lincoln","Amadeus","Jobs","White / Caucasian",68,1,1,127
+1,1,1,0,1,1,0,1,"Woman",0,"Lincoln","The Imitation Game","Braveheart","A Beautiful Day in the Neighborhood","JFK","Oppenheimer","Marie Antoinette","White / Caucasian",40,0,1,127
+1,1,1,0,0,0,0,1,"Man",0,"The Aviator","Oppenheimer","The Darkest Hour","Moneyball","Amadeus","Lincoln","Nixon","White / Caucasian",45,1,1,127
+0,1,1,1,0,0,0,0,"Man",1,"The Doors","The Imitation Game","Oppenheimer","JFK","Moneyball","On The Basis of Sex","Amadeus","White / Caucasian",36,1,1,127
+1,1,1,0,0,0,0,0,"Man",2,"On The Basis of Sex","Lincoln","Oppenheimer","Amadeus","Jobs","Marie Antoinette","Capote","White / Caucasian",32,1,1,127
+0,1,1,1,0,0,1,0,"Woman",0,"A Beautiful Day in the Neighborhood","The Darkest Hour","Braveheart","The Imitation Game","Amadeus","Oppenheimer","Jobs","White / Caucasian",63,0,1,127
+1,0,1,1,0,0,0,0,"Man",2,"Oppenheimer","Lincoln","Marie Antoinette","The Doors","A Beautiful Day in the Neighborhood","Coco Before Chanel","Chaplin","White / Caucasian",50,1,1,127
+1,1,0,1,1,0,1,1,"Man",0,"Amadeus","Braveheart","Jobs","A Beautiful Mind","Lincoln","Chaplin","On The Basis of Sex","Asian / Pacific Islander",34,1,0,127
+0,1,1,1,1,0,1,0,"Man",2,"On The Basis of Sex","Oppenheimer","Moneyball","Hitchcock","Jobs","Coco Before Chanel","Judy","White / Caucasian",32,1,1,127
+0,1,1,1,1,0,0,0,"Man",2,"On The Basis of Sex","Lincoln","A Beautiful Day in the Neighborhood","Capote","Braveheart","Marie Antoinette","Coco Before Chanel","White / Caucasian",48,1,1,127
+1,1,1,0,0,1,1,1,"Woman",3,"Amadeus","Capote","Marie Antoinette","Hitchcock","Coco Before Chanel","Judy","Lincoln","Black or African American",33,0,0,127
+1,0,1,1,1,1,0,1,"Woman",0,"Oppenheimer","The Aviator","A Beautiful Mind","Lincoln","The Darkest Hour","The Imitation Game","Marie Antoinette","White / Caucasian",29,0,1,127
+1,1,1,0,0,1,1,0,"Woman",1,"Hitchcock","On The Basis of Sex","The Imitation Game","Jobs","A Beautiful Day in the Neighborhood","The Doors","Moneyball","White / Caucasian",39,0,1,127
+0,1,1,1,0,0,1,0,"Man",3,"Marie Antoinette","Braveheart","Judy","Coco Before Chanel","Amadeus","Hitchcock","Tolkien","Black or African American",31,1,0,127
+0,1,1,1,0,1,1,0,"Man",1,"The Iron Lady","Nixon","Hitchcock","Chaplin","Lincoln","The Imitation Game","Oppenheimer","Black or African American",41,1,0,127
+1,1,1,0,0,0,1,1,"Man",2,"Tolkien","The Imitation Game","Hitchcock","Chaplin","Coco Before Chanel","On The Basis of Sex","The Darkest Hour","White / Caucasian",53,1,1,127
+0,1,1,1,0,0,1,0,"Man",2,"J. Edgar","Hitchcock","On The Basis of Sex","The Doors","Judy","Nixon","Tolkien","White / Caucasian",36,1,1,127
+1,1,0,1,1,0,1,1,"Woman",2,"Judy","Jobs","Tolkien","The Imitation Game","Amadeus","On The Basis of Sex","The Iron Lady","White / Caucasian",58,0,1,127
+1,0,1,1,0,1,1,0,"Woman",1,"Lincoln","Amadeus","The Aviator","A Beautiful Day in the Neighborhood","On The Basis of Sex","The Doors","Moneyball","White / Caucasian",67,0,1,127
+1,1,1,0,0,1,0,0,"Woman",3,"The Doors","Marie Antoinette","A Beautiful Mind","Coco Before Chanel","Jobs","Judy","The Aviator","Hispanic / Latinx",42,0,0,127
+0,1,1,1,0,0,0,0,"Man",0,"A Beautiful Day in the Neighborhood","J. Edgar","Tolkien","Hitchcock","Braveheart","The Imitation Game","Amadeus","White / Caucasian",49,1,1,127
+1,0,1,1,0,0,0,0,"Woman",2,"On The Basis of Sex","The Darkest Hour","Lincoln","Hitchcock","A Beautiful Day in the Neighborhood","The Iron Lady","Chaplin","White / Caucasian",51,0,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"Lincoln","Judy","The Darkest Hour","Capote","Oppenheimer","A Beautiful Day in the Neighborhood","Hitchcock","White / Caucasian",34,0,1,127
+1,1,1,0,0,0,0,1,"Man",0,"Jobs","The Imitation Game","Oppenheimer","A Beautiful Day in the Neighborhood","Tolkien","Nixon","W. A Life Misunderstood","Asian / Pacific Islander",27,1,0,127
+1,0,1,1,1,0,1,1,"Man",0,"A Beautiful Day in the Neighborhood","Hitchcock","J. Edgar","A Beautiful Mind","Braveheart","Amadeus","On The Basis of Sex","White / Caucasian",44,1,1,127
+1,1,1,0,0,1,1,0,"Man",2,"Coco Before Chanel","Jobs","Oppenheimer","The Iron Lady","Hitchcock","A Beautiful Day in the Neighborhood","Moneyball","Black or African American",42,1,0,127
+0,1,1,1,0,1,0,0,"Woman",0,"Lincoln","Chaplin","Jobs","The Imitation Game","J. Edgar","Nixon","A Beautiful Mind","White / Caucasian",56,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Lincoln","The Doors","Moneyball","Oppenheimer","Amadeus","Hitchcock","A Beautiful Day in the Neighborhood","Black or African American",37,1,0,127
+1,0,1,1,1,0,1,1,"Man",0,"Lincoln","The Imitation Game","Jobs","Oppenheimer","A Beautiful Mind","Chaplin","The Iron Lady","Asian / Pacific Islander",68,1,0,127
+1,0,1,1,0,1,0,0,"Man",0,"Jobs","A Beautiful Mind","The Doors","Oppenheimer","Hitchcock","Tolkien","The Aviator","White / Caucasian",63,1,1,127
+0,1,1,1,0,0,0,0,"Woman",2,"Lincoln","The Imitation Game","The Iron Lady","On The Basis of Sex","Oppenheimer","The Darkest Hour","Amadeus","White / Caucasian",58,0,1,127
+0,1,1,1,0,1,1,0,"Woman",1,"A Beautiful Day in the Neighborhood","Lincoln","Tolkien","Jobs","On The Basis of Sex","The Darkest Hour","Oppenheimer","White / Caucasian",38,0,1,127
+0,1,1,1,0,0,0,1,"Woman",2,"Moneyball","A Beautiful Mind","Amadeus","Nixon","Judy","Marie Antoinette","W. A Life Misunderstood","White / Caucasian",32,0,1,127
+1,0,1,1,0,1,1,0,"Man",0,"Braveheart","Nixon","Tolkien","Amadeus","Oppenheimer","Lincoln","Moneyball","White / Caucasian",51,1,1,127
+1,1,1,0,0,0,1,0,"Man",1,"A Beautiful Day in the Neighborhood","J. Edgar","Amadeus","The Imitation Game","JFK","The Iron Lady","Tolkien","White / Caucasian",34,1,1,127
+0,1,1,1,0,0,0,0,"Woman",1,"Tolkien","Judy","The Aviator","The Imitation Game","A Beautiful Day in the Neighborhood","Jobs","Chaplin","White / Caucasian",34,0,1,127
+1,0,1,1,0,1,0,1,"Woman",1,"On The Basis of Sex","A Beautiful Mind","A Beautiful Day in the Neighborhood","Amadeus","The Imitation Game","Chaplin","Braveheart","White / Caucasian",55,0,1,127
+0,1,1,1,0,0,1,0,"Man",1,"Amadeus","The Doors","Chaplin","Braveheart","Lincoln","Judy","The Imitation Game","White / Caucasian",33,1,1,127
+1,0,1,1,0,0,1,1,"Woman",2,"Braveheart","On The Basis of Sex","The Iron Lady","Capote","A Beautiful Day in the Neighborhood","Lincoln","The Darkest Hour","White / Caucasian",56,0,1,127
+1,0,1,1,1,0,0,0,"Woman",0,"Moneyball","Lincoln","Hitchcock","Jobs","Chaplin","The Darkest Hour","Coco Before Chanel","Asian / Pacific Islander",35,0,0,127
+0,1,1,1,1,0,1,0,"Man",3,"Coco Before Chanel","Oppenheimer","Jobs","Tolkien","Marie Antoinette","On The Basis of Sex","Judy","White / Caucasian",62,1,1,127
+0,1,1,1,0,0,1,0,"Woman",3,"Lincoln","Chaplin","Judy","Jobs","Marie Antoinette","Coco Before Chanel","Tolkien","White / Caucasian",64,0,1,127
+1,0,1,1,0,0,1,0,"Man",1,"Oppenheimer","J. Edgar","The Doors","Braveheart","The Darkest Hour","Judy","A Beautiful Day in the Neighborhood","White / Caucasian",41,1,1,127
+1,1,0,1,0,1,0,0,"Woman",1,"The Imitation Game","J. Edgar","JFK","Oppenheimer","On The Basis of Sex","The Darkest Hour","A Beautiful Mind","White / Caucasian",66,0,1,127
+0,1,1,1,0,1,0,0,"Man",1,"A Beautiful Day in the Neighborhood","Moneyball","The Imitation Game","Hitchcock","Lincoln","On The Basis of Sex","The Aviator","Black or African American",52,1,0,127
+1,1,1,0,0,0,0,0,"Man",0,"The Aviator","Nixon","A Beautiful Mind","Hitchcock","The Darkest Hour","Lincoln","Chaplin","White / Caucasian",30,1,1,127
+1,1,0,1,0,1,1,1,"Woman",1,"A Beautiful Day in the Neighborhood","The Doors","On The Basis of Sex","Oppenheimer","Amadeus","Braveheart","Lincoln","White / Caucasian",36,0,1,127
+1,1,1,0,0,1,0,0,"Woman",1,"Oppenheimer","Coco Before Chanel","Moneyball","Braveheart","The Imitation Game","Jobs","The Aviator","Hispanic / Latinx",29,0,0,127
+0,1,1,1,0,1,0,0,"Man",0,"Chaplin","The Imitation Game","A Beautiful Day in the Neighborhood","Oppenheimer","Lincoln","A Beautiful Mind","The Aviator","American Indian or Alaskan Native",47,1,0,127
+0,1,1,1,0,0,1,0,"Man",1,"The Darkest Hour","Marie Antoinette","Hitchcock","A Beautiful Day in the Neighborhood","Jobs","Moneyball","The Imitation Game","White / Caucasian",31,1,1,127
+0,1,1,1,0,0,0,0,"Man",1,"Oppenheimer","A Beautiful Day in the Neighborhood","The Doors","Chaplin","Jobs","On The Basis of Sex","Amadeus","Black or African American",43,1,0,127
+0,1,1,1,0,0,1,0,"Woman",0,"Amadeus","Braveheart","A Beautiful Day in the Neighborhood","Oppenheimer","Tolkien","Lincoln","Jobs","White / Caucasian",55,0,1,127
+1,1,1,0,0,0,1,1,"Man",0,"Moneyball","Jobs","A Beautiful Mind","A Beautiful Day in the Neighborhood","Oppenheimer","Braveheart","The Darkest Hour","White / Caucasian",36,1,1,127
+1,0,1,1,0,0,1,0,"Man",2,"Marie Antoinette","The Aviator","Moneyball","Oppenheimer","On The Basis of Sex","Braveheart","Hitchcock","White / Caucasian",40,1,1,127
+1,1,1,0,1,1,0,1,"Woman",1,"Jobs","On The Basis of Sex","Lincoln","J. Edgar","A Beautiful Day in the Neighborhood","Amadeus","Marie Antoinette","White / Caucasian",38,0,1,127
+0,1,1,1,0,0,1,1,"Man",0,"The Aviator","Hitchcock","A Beautiful Day in the Neighborhood","Jobs","Lincoln","Braveheart","J. Edgar","White / Caucasian",42,1,1,127
+1,1,1,0,1,1,0,1,"Man",1,"Tolkien","The Iron Lady","The Aviator","A Beautiful Day in the Neighborhood","Braveheart","Oppenheimer","Marie Antoinette","Hispanic / Latinx",36,1,0,127
+1,1,0,1,0,1,1,0,"Man",0,"Jobs","A Beautiful Mind","The Aviator","Amadeus","Braveheart","JFK","Moneyball","White / Caucasian",33,1,1,127
+1,1,0,1,1,1,0,1,"Woman",2,"The Iron Lady","Capote","On The Basis of Sex","Jobs","Hitchcock","The Darkest Hour","Marie Antoinette","White / Caucasian",50,0,1,127
+0,1,1,1,0,1,0,0,"Man",0,"Braveheart","Lincoln","A Beautiful Mind","Tolkien","The Darkest Hour","Capote","The Aviator","White / Caucasian",42,1,1,127
+0,1,1,1,0,1,1,1,"Man",0,"Jobs","The Doors","Amadeus","Chaplin","Tolkien","Oppenheimer","Lincoln","White / Caucasian",40,1,1,127
+0,1,1,1,0,0,0,0,"Man",2,"Lincoln","A Beautiful Mind","The Aviator","The Iron Lady","Moneyball","Judy","Chaplin","White / Caucasian",25,1,1,127
+1,0,1,1,0,1,1,1,"Non-binary",2,"A Beautiful Day in the Neighborhood","The Doors","Chaplin","Judy","Coco Before Chanel","Moneyball","Lincoln","Hispanic / Latinx",26,0,0,127
+0,1,1,1,0,1,1,0,"Woman",2,"On The Basis of Sex","Judy","The Aviator","Moneyball","Braveheart","Chaplin","Oppenheimer","White / Caucasian",54,0,1,127
+1,1,1,0,1,0,1,0,"Woman",1,"A Beautiful Day in the Neighborhood","A Beautiful Mind","On The Basis of Sex","The Imitation Game","Oppenheimer","The Doors","Judy","White / Caucasian",59,0,1,127
+0,1,1,1,1,1,0,1,"Man",1,"The Doors","On The Basis of Sex","Lincoln","The Imitation Game","Tolkien","A Beautiful Day in the Neighborhood","Marie Antoinette","White / Caucasian",29,1,1,127
+1,1,1,0,0,1,0,1,"Woman",1,"Coco Before Chanel","The Aviator","The Darkest Hour","Moneyball","Lincoln","Nixon","JFK","White / Caucasian",26,0,1,127
+0,1,1,1,0,0,0,0,"Man",0,"The Imitation Game","Moneyball","Braveheart","A Beautiful Mind","JFK","Jobs","Capote","White / Caucasian",33,1,1,127
+0,1,1,1,0,1,1,1,"Woman",2,"On The Basis of Sex","Amadeus","Nixon","Tolkien","A Beautiful Day in the Neighborhood","Judy","Lincoln","White / Caucasian",51,0,1,127
+1,0,1,1,1,0,1,1,"Man",1,"The Darkest Hour","Chaplin","Oppenheimer","The Imitation Game","A Beautiful Day in the Neighborhood","Judy","On The Basis of Sex","White / Caucasian",76,1,1,127
+1,0,1,1,0,1,1,1,"Man",1,"Jobs","Oppenheimer","Tolkien","The Imitation Game","Hitchcock","On The Basis of Sex","Lincoln","White / Caucasian",35,1,1,127
+0,1,1,1,1,1,0,1,"Woman",1,"Hitchcock","Judy","Oppenheimer","Braveheart","The Doors","Lincoln","Marie Antoinette","White / Caucasian",64,0,1,127
+0,1,1,1,1,0,1,1,"Woman",1,"The Imitation Game","Hitchcock","Braveheart","The Doors","Judy","The Darkest Hour","The Iron Lady","White / Caucasian",42,0,1,127
+1,1,1,0,0,0,1,0,"Man",0,"Lincoln","Moneyball","Amadeus","A Beautiful Day in the Neighborhood","Jobs","A Beautiful Mind","The Imitation Game","White / Caucasian",35,1,1,127
+1,1,1,0,1,1,0,1,"Man",1,"Oppenheimer","Jobs","Moneyball","Tolkien","Amadeus","Coco Before Chanel","Marie Antoinette","White / Caucasian",71,1,1,127
+1,0,1,1,0,0,0,0,"Woman",2,"The Imitation Game","Jobs","Coco Before Chanel","On The Basis of Sex","A Beautiful Day in the Neighborhood","Lincoln","Amadeus","White / Caucasian",71,0,1,127
+0,1,1,1,1,0,1,1,"Woman",2,"Tolkien","The Imitation Game","Judy","Marie Antoinette","A Beautiful Day in the Neighborhood","Amadeus","On The Basis of Sex","White / Caucasian",31,0,1,127
+1,0,1,1,1,0,1,1,"Man",1,"Oppenheimer","Lincoln","Moneyball","Amadeus","A Beautiful Day in the Neighborhood","Marie Antoinette","The Iron Lady","White / Caucasian",31,1,1,127
+0,1,1,1,1,0,1,1,"Woman",0,"Oppenheimer","Lincoln","A Beautiful Day in the Neighborhood","Amadeus","The Aviator","Braveheart","On The Basis of Sex","White / Caucasian",58,0,1,127
+1,1,1,0,0,0,1,0,"Man",1,"Hitchcock","Oppenheimer","A Beautiful Day in the Neighborhood","Lincoln","Nixon","Coco Before Chanel","Jobs","White / Caucasian",24,1,1,127
+1,1,0,1,0,1,0,0,"Woman",0,"A Beautiful Day in the Neighborhood","J. Edgar","Hitchcock","Oppenheimer","The Imitation Game","Jobs","A Beautiful Mind","White / Caucasian",38,0,1,127
+1,0,1,1,0,1,0,0,"Man",1,"Moneyball","The Imitation Game","The Aviator","Chaplin","A Beautiful Day in the Neighborhood","On The Basis of Sex","A Beautiful Mind","White / Caucasian",31,1,1,127
+0,1,1,1,0,1,0,1,"Man",0,"The Imitation Game","Lincoln","Jobs","Oppenheimer","Amadeus","The Aviator","Braveheart","Black or African American",33,1,0,127
+0,1,1,1,0,1,0,1,"Man",0,"A Beautiful Day in the Neighborhood","Oppenheimer","Braveheart","Lincoln","Amadeus","Jobs","JFK","White / Caucasian",39,1,1,127
+1,1,0,1,0,0,1,0,"Man",0,"Oppenheimer","A Beautiful Mind","The Aviator","Braveheart","The Imitation Game","A Beautiful Day in the Neighborhood","Jobs","White / Caucasian",51,1,1,127
+0,1,1,1,0,0,1,0,"Woman",3,"The Doors","On The Basis of Sex","The Iron Lady","Marie Antoinette","Hitchcock","Lincoln","A Beautiful Day in the Neighborhood","White / Caucasian",45,0,1,127
+1,1,1,0,0,0,1,0,"Man",1,"The Imitation Game","The Doors","Lincoln","Braveheart","On The Basis of Sex","Oppenheimer","A Beautiful Day in the Neighborhood","White / Caucasian",33,1,1,127
+0,1,1,1,0,0,1,0,"Woman",0,"A Beautiful Mind","Amadeus","The Imitation Game","Chaplin","A Beautiful Day in the Neighborhood","Lincoln","Jobs","White / Caucasian",40,0,1,127
+0,1,1,1,0,1,0,1,"Woman",1,"Jobs","Tolkien","The Aviator","Marie Antoinette","A Beautiful Mind","Hitchcock","Braveheart","White / Caucasian",62,0,1,127
+0,1,1,1,0,0,1,1,"Man",2,"Nixon","Lincoln","The Darkest Hour","W. A Life Misunderstood","The Iron Lady","On The Basis of Sex","J. Edgar","White / Caucasian",70,1,1,127
+0,1,1,1,0,0,0,1,"Woman",1,"Amadeus","The Darkest Hour","Judy","Oppenheimer","Lincoln","The Aviator","W. A Life Misunderstood","Asian / Pacific Islander",52,0,0,127
+0,1,1,1,0,0,1,0,"Man",1,"A Beautiful Mind","The Aviator","On The Basis of Sex","Tolkien","The Darkest Hour","Jobs","The Imitation Game","White / Caucasian",45,1,1,127
+1,1,1,0,0,1,0,1,"Woman",0,"Oppenheimer","Lincoln","Tolkien","A Beautiful Mind","Jobs","Capote","Braveheart","White / Caucasian",43,0,1,127
+0,1,1,1,0,0,0,0,"Woman",0,"Lincoln","A Beautiful Day in the Neighborhood","Capote","Amadeus","Oppenheimer","Tolkien","Chaplin","Black or African American",26,0,0,127
+0,1,1,1,0,1,0,0,"Man",0,"Hitchcock","Chaplin","The Darkest Hour","Lincoln","Capote","Tolkien","The Aviator","White / Caucasian",33,1,1,127
+1,1,1,0,1,0,1,1,"Woman",1,"Tolkien","Jobs","A Beautiful Mind","The Imitation Game","Oppenheimer","On The Basis of Sex","The Iron Lady","White / Caucasian",70,0,1,127
+0,1,1,1,0,0,0,0,"Man",1,"On The Basis of Sex","Jobs","The Imitation Game","The Doors","A Beautiful Day in the Neighborhood","The Aviator","Capote","White / Caucasian",29,1,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"Lincoln","Judy","Tolkien","Amadeus","A Beautiful Day in the Neighborhood","Chaplin","Hitchcock","White / Caucasian",42,0,1,127
+1,0,1,1,0,1,0,0,"Woman",2,"Coco Before Chanel","Jobs","Lincoln","The Iron Lady","J. Edgar","Chaplin","The Aviator","Black or African American",38,0,0,127
+1,1,1,0,1,0,0,0,"Woman",2,"Oppenheimer","On The Basis of Sex","Tolkien","The Imitation Game","Judy","A Beautiful Day in the Neighborhood","Coco Before Chanel","White / Caucasian",58,0,1,127
+0,1,1,1,0,0,0,0,"Woman",0,"Jobs","Tolkien","The Aviator","The Doors","Lincoln","Oppenheimer","Amadeus","White / Caucasian",30,0,1,127
+1,1,1,0,0,1,0,0,"Woman",1,"Oppenheimer","Jobs","Coco Before Chanel","The Darkest Hour","Chaplin","A Beautiful Day in the Neighborhood","The Aviator","White / Caucasian",36,0,1,127
+0,1,1,1,0,1,1,1,"Woman",2,"The Imitation Game","Coco Before Chanel","On The Basis of Sex","Amadeus","Oppenheimer","The Aviator","Lincoln","Black or African American",34,0,0,127
+0,1,1,1,1,0,0,0,"Woman",2,"A Beautiful Day in the Neighborhood","A Beautiful Mind","JFK","Amadeus","On The Basis of Sex","The Iron Lady","Coco Before Chanel","White / Caucasian",65,0,1,127
+1,0,1,1,0,0,1,0,"Woman",1,"A Beautiful Day in the Neighborhood","Jobs","Marie Antoinette","Amadeus","W. A Life Misunderstood","Nixon","Tolkien","White / Caucasian",23,0,1,127
+1,1,0,1,0,0,1,0,"Man",2,"On The Basis of Sex","Judy","Amadeus","Tolkien","Chaplin","Oppenheimer","A Beautiful Day in the Neighborhood","Asian / Pacific Islander",44,1,0,127
+1,1,0,1,0,0,0,0,"Woman",3,"Coco Before Chanel","A Beautiful Day in the Neighborhood","Judy","A Beautiful Mind","Jobs","On The Basis of Sex","Chaplin","Black or African American",55,0,0,127
+1,1,1,0,1,1,0,1,"Man",1,"Jobs","Lincoln","On The Basis of Sex","Braveheart","The Doors","Moneyball","Marie Antoinette","Black or African American",24,1,0,127
+1,1,1,0,1,0,0,0,"Woman",2,"On The Basis of Sex","Tolkien","A Beautiful Day in the Neighborhood","Hitchcock","Marie Antoinette","The Imitation Game","Coco Before Chanel","White / Caucasian",50,0,1,127
+1,1,1,0,0,0,1,1,"Man",1,"Braveheart","Lincoln","Oppenheimer","The Iron Lady","The Darkest Hour","Nixon","J. Edgar","White / Caucasian",42,1,1,127
+1,0,1,1,0,0,0,0,"Woman",0,"Jobs","A Beautiful Mind","Nixon","Hitchcock","The Darkest Hour","The Doors","Amadeus","White / Caucasian",60,0,1,127
+0,1,1,1,0,0,1,1,"Man",1,"The Iron Lady","Lincoln","Nixon","Jobs","The Darkest Hour","Chaplin","J. Edgar","White / Caucasian",62,1,1,127
+1,1,1,0,1,0,0,0,"Woman",0,"Tolkien","Oppenheimer","Jobs","A Beautiful Day in the Neighborhood","Lincoln","Braveheart","Coco Before Chanel","White / Caucasian",33,0,1,127
+0,1,1,1,0,1,0,0,"Woman",2,"Tolkien","Coco Before Chanel","Hitchcock","Jobs","On The Basis of Sex","Chaplin","The Aviator","White / Caucasian",55,0,1,127
+0,1,1,1,0,0,0,0,"Man",0,"Jobs","Braveheart","A Beautiful Mind","Lincoln","A Beautiful Day in the Neighborhood","Hitchcock","Capote","Asian / Pacific Islander",43,1,0,127
+0,1,1,1,0,0,1,1,"Woman",2,"Hitchcock","Coco Before Chanel","Lincoln","Capote","Marie Antoinette","J. Edgar","The Darkest Hour","White / Caucasian",23,0,1,127
+1,1,1,0,1,0,1,1,"Woman",2,"Nixon","On The Basis of Sex","Lincoln","Marie Antoinette","W. A Life Misunderstood","Jobs","The Iron Lady","White / Caucasian",59,0,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Tolkien","Oppenheimer","The Doors","Braveheart","J. Edgar","Chaplin","A Beautiful Day in the Neighborhood","White / Caucasian",34,1,1,127
+1,1,1,0,0,1,0,0,"Man",1,"JFK","On The Basis of Sex","The Imitation Game","A Beautiful Day in the Neighborhood","Jobs","Chaplin","A Beautiful Mind","White / Caucasian",41,1,1,127
+0,1,1,1,0,0,1,0,"Man",0,"Braveheart","Moneyball","A Beautiful Day in the Neighborhood","J. Edgar","A Beautiful Mind","The Darkest Hour","Tolkien","White / Caucasian",46,1,1,127
+0,1,1,1,0,0,0,0,"Man",1,"The Aviator","Jobs","Oppenheimer","Hitchcock","On The Basis of Sex","W. A Life Misunderstood","The Doors","White / Caucasian",62,1,1,127
+0,1,1,1,0,0,1,0,"Woman",1,"Oppenheimer","The Darkest Hour","Lincoln","The Aviator","J. Edgar","The Iron Lady","Tolkien","Hispanic / Latinx",25,0,0,127
+0,1,1,1,0,0,0,0,"Man",1,"On The Basis of Sex","Oppenheimer","Nixon","Lincoln","Chaplin","Braveheart","Amadeus","Asian / Pacific Islander",60,1,0,127
+1,1,1,0,1,1,0,1,"Man",1,"Chaplin","A Beautiful Mind","The Darkest Hour","The Iron Lady","The Doors","The Imitation Game","Marie Antoinette","White / Caucasian",49,1,1,127
+0,1,1,1,0,0,1,0,"Man",2,"Lincoln","On The Basis of Sex","The Doors","Oppenheimer","Moneyball","Judy","Hitchcock","White / Caucasian",51,1,1,127
+0,1,1,1,0,1,1,0,"Woman",3,"The Iron Lady","The Imitation Game","Lincoln","A Beautiful Mind","Marie Antoinette","On The Basis of Sex","Oppenheimer","Black or African American",49,0,0,127
+1,1,0,1,0,1,0,0,"Woman",2,"Lincoln","Hitchcock","Capote","Marie Antoinette","A Beautiful Day in the Neighborhood","On The Basis of Sex","A Beautiful Mind","White / Caucasian",62,0,1,127
+1,0,1,1,0,0,1,0,"Woman",3,"A Beautiful Day in the Neighborhood","On The Basis of Sex","Lincoln","Oppenheimer","Marie Antoinette","Coco Before Chanel","Tolkien","White / Caucasian",44,0,1,127
+1,1,1,0,0,1,0,1,"Man",1,"The Darkest Hour","On The Basis of Sex","Lincoln","Jobs","Oppenheimer","A Beautiful Day in the Neighborhood","Braveheart","White / Caucasian",42,1,1,127
+0,1,1,1,0,0,1,0,"Woman",4,"The Iron Lady","The Doors","On The Basis of Sex","Judy","Coco Before Chanel","JFK","Tolkien","White / Caucasian",32,0,1,127
+1,1,1,0,1,0,1,1,"Man",0,"A Beautiful Mind","Jobs","Capote","The Imitation Game","Oppenheimer","The Aviator","The Iron Lady","White / Caucasian",40,1,1,127
+0,1,1,1,0,1,0,0,"Woman",2,"Chaplin","Marie Antoinette","Judy","JFK","Oppenheimer","J. Edgar","The Aviator","White / Caucasian",67,0,1,127
+1,1,0,1,0,0,0,1,"Woman",1,"Judy","J. Edgar","Oppenheimer","Braveheart","Moneyball","Hitchcock","W. A Life Misunderstood","Black or African American",61,0,0,127
+0,1,1,1,0,1,1,0,"Woman",1,"Hitchcock","The Aviator","Marie Antoinette","Braveheart","Tolkien","The Imitation Game","Oppenheimer","White / Caucasian",55,0,1,127
+0,1,1,1,0,1,1,1,"Woman",1,"A Beautiful Day in the Neighborhood","The Iron Lady","The Darkest Hour","The Imitation Game","Jobs","The Doors","Lincoln","White / Caucasian",52,0,1,127
+0,1,1,1,0,1,0,0,"Man",2,"Tolkien","Braveheart","Judy","Jobs","The Doors","Marie Antoinette","A Beautiful Mind","White / Caucasian",47,1,1,127
+1,1,1,0,0,1,1,0,"Man",0,"The Aviator","Chaplin","Nixon","Amadeus","Hitchcock","Jobs","Oppenheimer","White / Caucasian",52,1,1,127
+0,1,1,1,0,0,1,0,"Woman",0,"The Doors","Moneyball","The Aviator","Braveheart","A Beautiful Mind","Chaplin","Jobs","White / Caucasian",58,0,1,127
+1,1,1,0,1,1,0,1,"Woman",0,"Lincoln","A Beautiful Day in the Neighborhood","Oppenheimer","The Imitation Game","The Aviator","A Beautiful Mind","Marie Antoinette","White / Caucasian",63,0,1,127
+1,0,1,1,0,0,0,0,"Man",1,"Oppenheimer","Chaplin","Lincoln","The Iron Lady","The Darkest Hour","Hitchcock","Amadeus","Hispanic / Latinx",68,1,0,127
+0,1,1,1,1,0,1,1,"Man",2,"Jobs","W. A Life Misunderstood","Judy","On The Basis of Sex","Nixon","Hitchcock","The Iron Lady","White / Caucasian",58,1,1,127
+1,1,1,0,1,0,1,1,"Man",0,"Lincoln","Oppenheimer","The Darkest Hour","Braveheart","A Beautiful Mind","Amadeus","The Iron Lady","Asian / Pacific Islander",32,1,0,127
+0,1,1,1,0,1,1,0,"Man",0,"A Beautiful Day in the Neighborhood","The Imitation Game","Lincoln","Jobs","Moneyball","A Beautiful Mind","Oppenheimer","White / Caucasian",38,1,1,127
+0,1,1,1,0,0,1,0,"Woman",2,"Capote","A Beautiful Day in the Neighborhood","Coco Before Chanel","On The Basis of Sex","A Beautiful Mind","Jobs","Hitchcock","White / Caucasian",48,0,1,127
+1,1,1,0,1,0,1,0,"Woman",2,"On The Basis of Sex","Moneyball","Amadeus","The Aviator","Marie Antoinette","The Imitation Game","Judy","Black or African American",41,0,0,127
+1,0,1,1,0,0,0,1,"Man",1,"Lincoln","Coco Before Chanel","The Doors","The Darkest Hour","The Imitation Game","Chaplin","Nixon","White / Caucasian",24,1,1,127
+1,1,1,0,0,0,1,0,"Woman",0,"Amadeus","Tolkien","Lincoln","A Beautiful Day in the Neighborhood","The Darkest Hour","The Doors","Jobs","White / Caucasian",58,0,1,127
+1,1,1,0,1,0,1,1,"Man",1,"Judy","Oppenheimer","The Doors","Capote","Jobs","Lincoln","On The Basis of Sex","White / Caucasian",67,1,1,127
+0,1,1,1,0,1,1,1,"Woman",2,"Coco Before Chanel","On The Basis of Sex","Capote","The Doors","Oppenheimer","J. Edgar","Lincoln","White / Caucasian",67,0,1,127
+1,0,1,1,0,0,0,0,"Man",0,"Moneyball","Oppenheimer","J. Edgar","The Aviator","The Imitation Game","Braveheart","The Doors","White / Caucasian",38,1,1,127
+1,1,1,0,1,0,1,1,"Woman",2,"A Beautiful Day in the Neighborhood","Braveheart","Oppenheimer","Judy","Marie Antoinette","Chaplin","The Iron Lady","White / Caucasian",51,0,1,127
+0,1,1,1,1,0,1,1,"Woman",1,"The Darkest Hour","Braveheart","Jobs","Coco Before Chanel","Capote","A Beautiful Day in the Neighborhood","On The Basis of Sex","White / Caucasian",37,0,1,127
+0,1,1,1,1,0,1,0,"Woman",1,"A Beautiful Day in the Neighborhood","Tolkien","The Darkest Hour","Amadeus","On The Basis of Sex","Jobs","Judy","White / Caucasian",44,0,1,127
+0,1,1,1,0,1,0,0,"Man",0,"Braveheart","Jobs","A Beautiful Day in the Neighborhood","Lincoln","The Darkest Hour","Oppenheimer","The Aviator","Hispanic / Latinx",31,1,0,127
+0,1,1,1,0,1,0,1,"Man",0,"The Doors","Moneyball","Oppenheimer","Chaplin","Lincoln","Jobs","JFK","White / Caucasian",41,1,1,127
+1,1,1,0,0,1,0,0,"Woman",2,"Oppenheimer","Jobs","Judy","A Beautiful Day in the Neighborhood","Marie Antoinette","The Doors","A Beautiful Mind","White / Caucasian",28,0,1,127
+1,1,1,0,1,0,1,1,"Man",1,"A Beautiful Day in the Neighborhood","The Imitation Game","Jobs","A Beautiful Mind","Oppenheimer","Coco Before Chanel","The Iron Lady","White / Caucasian",68,1,1,127
+1,1,0,1,1,0,1,1,"Man",0,"Nixon","W. A Life Misunderstood","Jobs","Lincoln","Chaplin","Oppenheimer","On The Basis of Sex","White / Caucasian",42,1,1,127
+1,1,1,0,0,1,1,0,"Woman",1,"The Doors","Capote","Hitchcock","Jobs","The Darkest Hour","Coco Before Chanel","Oppenheimer","White / Caucasian",39,0,1,127
+0,1,1,1,1,0,1,1,"Woman",1,"Coco Before Chanel","Tolkien","Oppenheimer","Hitchcock","Amadeus","Capote","The Iron Lady","White / Caucasian",38,0,1,127
+0,1,1,1,0,1,0,1,"Woman",1,"Lincoln","A Beautiful Day in the Neighborhood","The Imitation Game","Oppenheimer","Judy","The Aviator","Braveheart","White / Caucasian",38,0,1,127
+0,1,1,1,0,1,0,0,"Man",1,"Braveheart","A Beautiful Day in the Neighborhood","The Doors","JFK","Oppenheimer","The Iron Lady","A Beautiful Mind","White / Caucasian",58,1,1,127
+1,0,1,1,0,0,1,0,"Man",1,"Braveheart","Amadeus","A Beautiful Day in the Neighborhood","Chaplin","Judy","Lincoln","Tolkien","White / Caucasian",38,1,1,127
+1,0,1,1,1,0,1,1,"Man",1,"Braveheart","Tolkien","Oppenheimer","The Iron Lady","A Beautiful Day in the Neighborhood","The Darkest Hour","On The Basis of Sex","White / Caucasian",29,1,1,127
+1,1,1,0,1,0,0,0,"Woman",0,"Lincoln","A Beautiful Mind","Jobs","The Darkest Hour","Amadeus","W. A Life Misunderstood","Coco Before Chanel","White / Caucasian",53,0,1,127
+0,1,1,1,0,0,1,1,"Woman",3,"Marie Antoinette","Nixon","W. A Life Misunderstood","Coco Before Chanel","Jobs","Judy","The Darkest Hour","White / Caucasian",35,0,1,127
+1,1,1,0,0,0,0,0,"Woman",1,"Tolkien","Jobs","Marie Antoinette","A Beautiful Mind","Oppenheimer","A Beautiful Day in the Neighborhood","Chaplin","Black or African American",22,0,0,127
+1,0,1,1,0,0,0,0,"Man",0,"Nixon","Hitchcock","Oppenheimer","The Doors","W. A Life Misunderstood","JFK","Chaplin","White / Caucasian",40,1,1,127
+0,1,1,1,0,0,1,0,"Woman",3,"On The Basis of Sex","Judy","Marie Antoinette","Capote","A Beautiful Day in the Neighborhood","Amadeus","Jobs","Black or African American",34,0,0,127
+1,1,1,0,0,1,0,1,"Man",1,"On The Basis of Sex","A Beautiful Mind","Lincoln","A Beautiful Day in the Neighborhood","Amadeus","The Imitation Game","JFK","Hispanic / Latinx",44,1,0,127
+0,1,1,1,0,0,0,0,"Man",0,"Amadeus","Lincoln","Braveheart","Oppenheimer","The Aviator","The Darkest Hour","Chaplin","White / Caucasian",30,1,1,127
+0,1,1,1,0,1,1,1,"Man",0,"J. Edgar","Jobs","Oppenheimer","The Imitation Game","A Beautiful Day in the Neighborhood","The Aviator","Lincoln","White / Caucasian",63,1,1,127
+1,1,0,1,0,0,0,0,"Woman",1,"Tolkien","A Beautiful Day in the Neighborhood","Judy","Chaplin","Oppenheimer","The Aviator","The Doors","Black or African American",39,0,0,127
+0,1,1,1,1,0,1,1,"Man",1,"Judy","Oppenheimer","Chaplin","Hitchcock","J. Edgar","Jobs","The Iron Lady","White / Caucasian",30,1,1,127
+1,0,1,1,0,0,0,0,"Woman",2,"Oppenheimer","The Darkest Hour","The Imitation Game","Tolkien","The Iron Lady","Marie Antoinette","Amadeus","White / Caucasian",34,0,1,127
+1,0,1,1,0,0,0,0,"Man",2,"Tolkien","On The Basis of Sex","J. Edgar","A Beautiful Day in the Neighborhood","Marie Antoinette","Capote","The Doors","White / Caucasian",41,1,1,127
+0,1,1,1,1,0,1,1,"Woman",0,"Jobs","J. Edgar","Oppenheimer","Moneyball","W. A Life Misunderstood","The Doors","On The Basis of Sex","Hispanic / Latinx",39,0,0,127
+0,1,1,1,0,1,0,0,"Man",1,"Judy","Hitchcock","Capote","Oppenheimer","Jobs","The Doors","The Aviator","White / Caucasian",57,1,1,127
+1,0,1,1,1,0,1,1,"Woman",0,"A Beautiful Day in the Neighborhood","Nixon","Chaplin","Hitchcock","The Doors","Jobs","The Iron Lady","White / Caucasian",63,0,1,127
+1,0,1,1,0,1,1,0,"Man",4,"Judy","W. A Life Misunderstood","The Iron Lady","Chaplin","Marie Antoinette","Coco Before Chanel","Oppenheimer","Black or African American",28,1,0,127
