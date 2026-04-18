@@ -3,3 +3,13 @@
 .RData
 .Ruserdata
 .env
+
+# Build artifacts — renders, caches, intermediate pptx files
+**/__pycache__/
+Presentations/Chapter_I/build/render/
+Presentations/Chapter_I/build/_after_*.pptx
+
+# Large source decks — committed selectively; keep working copies local
+Presentations/JoseCervantez-WBL*.pptx
+Presentations/Cervantez_Chapter_III_*.pptx
+Presentations/Chapter_I/Cervantez_Chapter_I_DiversityFeedback.pdf
