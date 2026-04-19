@@ -54,9 +54,9 @@ p <- ggplot(df, aes(x = Condition, y = freq * 100, fill = Condition)) +
   geom_bar(stat = "identity", width = 0.85,
            position = position_dodge(width = 0.7)) +
   geom_text(aes(label = paste0(sprintf("%.1f", freq * 100), "%"),
-                y = pmax(freq * 100 - 6, 3)),
+                y = pmax(freq * 100 / 2, 4)),
             position = position_dodge(width = 0.7),
-            size = 9, color = "white", fontface = "bold") +
+            size = 10, color = "white", fontface = "bold") +
   geom_errorbar(aes(ymin = freq * 100 - se, ymax = freq * 100 + se),
                 width = 0.1, position = position_dodge(width = 0.7)) +
   facet_wrap(~ Category, nrow = 1, strip.position = "bottom") +
