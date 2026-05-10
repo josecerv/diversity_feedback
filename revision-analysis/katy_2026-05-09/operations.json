@@ -1,0 +1,2865 @@
+{
+  "phaseA": [
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.2lzvkynxyn62",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 41614,
+          "endIndex": 41618,
+          "text": "the "
+        }
+      ],
+      "text": "the ",
+      "agg_start": 41614,
+      "agg_end": 41618,
+      "para_context": "In this study, we sought to replicate our key findings from Study 3A about how feedback affects real selection decisions"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.2m113uvxg0zq",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 29570,
+          "endIndex": 29797,
+          "text": "by university students who were dressed in school-branded clothing and standing behind a table displaying seven books with obscured covers (see Figure S1). Following our pre-registration, participant recruitment took place from"
+        }
+      ],
+      "text": "by university students who were dressed in school-branded clothing and standing behind a table displaying seven books with obscured covers (see Figure S1). Following our pre-registration, participant recruitment took place from",
+      "agg_start": 29570,
+      "agg_end": 29797,
+      "para_context": "Participants. This study was pre-registered on AsPredicted (https://aspredicted.org/WYY_3PL). We recruited 302 pParticip"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.2m113uvxg0zq",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 29563,
+          "endIndex": 29570,
+          "text": "between"
+        }
+      ],
+      "text": "between",
+      "agg_start": 29563,
+      "agg_end": 29570,
+      "para_context": "Participants. This study was pre-registered on AsPredicted (https://aspredicted.org/WYY_3PL). We recruited 302 pParticip"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.2prnp68ksyqd",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 34350,
+          "endIndex": 34364,
+          "text": " chose a woman"
+        }
+      ],
+      "text": " chose a woman",
+      "agg_start": 34350,
+      "agg_end": 34364,
+      "para_context": "Initial selections featured women protagonists at 25.2%, slightly imbalanced across conditions (23.0% control vs. 27.3% "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.444v2jlecnvu",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 42732,
+          "endIndex": 42795,
+          "text": "(to establish our results generalize across selection set size)"
+        }
+      ],
+      "text": "(to establish our results generalize across selection set size)",
+      "agg_start": 42732,
+      "agg_end": 42795,
+      "para_context": "Procedure. The procedure in this study was nearly identical to the procedure described in Study 3A, but we changed  with"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.4zr9mli4lpcy",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 45059,
+          "endIndex": 45119,
+          "text": "ur primary predictor was an indicator for assignment to the "
+        },
+        {
+          "startIndex": 45119,
+          "endIndex": 45135,
+          "text": "gender feedback "
+        },
+        {
+          "startIndex": 45135,
+          "endIndex": 45146,
+          "text": "condition. "
+        }
+      ],
+      "text": "ur primary predictor was an indicator for assignment to the gender feedback condition. ",
+      "agg_start": 45059,
+      "agg_end": 45146,
+      "para_context": "Following our pre-registration, we ran an OLS with robust standard errors to predict whether the seventh and final biopi"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.52qzu0cq7h1p",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 41624,
+          "endIndex": 41774,
+          "text": " of the protagonists in films selected for inclusion in a Facebook advertising campaign rather than feedback about the race of the films’ protagonists"
+        }
+      ],
+      "text": " of the protagonists in films selected for inclusion in a Facebook advertising campaign rather than feedback about the race of the films’ protagonists",
+      "agg_start": 41624,
+      "agg_end": 41774,
+      "para_context": "In this study, we sought to replicate our key findings from Study 3A about how feedback affects real selection decisions"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.59zqv9un4aw4",
+      "kind": "deletion",
+      "disposition": "reject",
+      "action": "delete_and_reinsert",
+      "rationale": "Katy comment screenshot 10 — revert Study 2 F-tests rewrite to verbose original",
+      "spans": [
+        {
+          "startIndex": 46132,
+          "endIndex": 46203,
+          "text": "the percentage of initial films selected with a (1) budget above $40M ("
+        },
+        {
+          "startIndex": 46203,
+          "endIndex": 46204,
+          "text": "F"
+        },
+        {
+          "startIndex": 46204,
+          "endIndex": 46223,
+          "text": "(1, 1992) = 65.06, "
+        },
+        {
+          "startIndex": 46223,
+          "endIndex": 46224,
+          "text": "p"
+        },
+        {
+          "startIndex": 46224,
+          "endIndex": 46268,
+          "text": " < .001), (2) political leader protagonist ("
+        },
+        {
+          "startIndex": 46268,
+          "endIndex": 46269,
+          "text": "F"
+        },
+        {
+          "startIndex": 46269,
+          "endIndex": 46288,
+          "text": "(1, 1992) = 57.74, "
+        },
+        {
+          "startIndex": 46288,
+          "endIndex": 46289,
+          "text": "p"
+        },
+        {
+          "startIndex": 46289,
+          "endIndex": 46331,
+          "text": " < .001), or (3) release year after 2010 ("
+        },
+        {
+          "startIndex": 46331,
+          "endIndex": 46332,
+          "text": "F"
+        },
+        {
+          "startIndex": 46332,
+          "endIndex": 46351,
+          "text": "(1, 1992) = 12.44, "
+        },
+        {
+          "startIndex": 46351,
+          "endIndex": 46352,
+          "text": "p"
+        },
+        {
+          "startIndex": 46352,
+          "endIndex": 46618,
+          "text": " < .001) on subsequent selections of a 7th and final biopic with, respectively, a (1) budget above $40M, (2) political leader protagonist, or (3) release year after 2010 (in fact, all other types of feedback had insignificant effects on subsequent film selections).\n"
+        }
+      ],
+      "text": "the percentage of initial films selected with a (1) budget above $40M (F(1, 1992) = 65.06, p < .001), (2) political leader protagonist (F(1, 1992) = 57.74, p < .001), or (3) release year after 2010 (F(1, 1992) = 12.44, p < .001) on subsequent selections of a 7th and final biopic with, respectively, a (1) budget above $40M, (2) political leader protagonist, or (3) release year after 2010 (in fact, all other types of feedback had insignificant effects on subsequent film selections).\n",
+      "agg_start": 46132,
+      "agg_end": 46618,
+      "para_context": "As shown in Figure S2B and Table S5 (Models 5-8), and as predicted, the effect of assignment to the gender feedback cond"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.59zqv9un4aw4",
+      "kind": "insertion",
+      "disposition": "reject",
+      "action": "delete",
+      "rationale": "Katy comment screenshot 10 — revert Study 2 F-tests rewrite to verbose original",
+      "spans": [
+        {
+          "startIndex": 46086,
+          "endIndex": 46132,
+          "text": "the other three descriptive statistics shown. "
+        }
+      ],
+      "text": "the other three descriptive statistics shown. ",
+      "agg_start": 46086,
+      "agg_end": 46132,
+      "para_context": "As shown in Figure S2B and Table S5 (Models 5-8), and as predicted, the effect of assignment to the gender feedback cond"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.5g5mtqr7i1zd",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 23071,
+          "endIndex": 23072,
+          "text": "\n"
+        }
+      ],
+      "text": "\n",
+      "agg_start": 23071,
+      "agg_end": 23072,
+      "para_context": "Participants were then randomly assigned to one of two conditions: (1) the no gender feedback condition or (2) the gende"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.5iru6deycwoe",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 42258,
+          "endIndex": 42393,
+          "text": " with a few small differences. First, the set of 25 biopics participants could choose to feature in a Facebook advertisement differed —"
+        }
+      ],
+      "text": " with a few small differences. First, the set of 25 biopics participants could choose to feature in a Facebook advertisement differed —",
+      "agg_start": 42258,
+      "agg_end": 42393,
+      "para_context": "Procedure. The procedure in this study was nearly identical to the procedure described in Study 3A, but we changed  with"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.5iru6deycwoe",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 42241,
+          "endIndex": 42245,
+          "text": ", bu"
+        },
+        {
+          "startIndex": 42245,
+          "endIndex": 42258,
+          "text": "t we changed "
+        }
+      ],
+      "text": ", but we changed ",
+      "agg_start": 42241,
+      "agg_end": 42258,
+      "para_context": "Procedure. The procedure in this study was nearly identical to the procedure described in Study 3A, but we changed  with"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.5t59o1eiea75",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 45774,
+          "endIndex": 45796,
+          "text": " for robustness checks"
+        }
+      ],
+      "text": " for robustness checks",
+      "agg_start": 45774,
+      "agg_end": 45796,
+      "para_context": "Following our pre-registration, we ran an OLS with robust standard errors to predict whether the seventh and final biopi"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.684kbc9rc0k",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 23684,
+          "endIndex": 23701,
+          "text": "presented in the "
+        },
+        {
+          "startIndex": 23701,
+          "endIndex": 23719,
+          "text": "no gender feedback"
+        },
+        {
+          "startIndex": 23719,
+          "endIndex": 23730,
+          "text": " condition "
+        }
+      ],
+      "text": "presented in the no gender feedback condition ",
+      "agg_start": 23684,
+      "agg_end": 23730,
+      "para_context": "In the no gender feedback condition, participants received descriptive feedback summarizing the percentage of experts th"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.7wt7byyy3j0f",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 34264,
+          "endIndex": 34300,
+          "text": " chose a biography featuring a woman"
+        }
+      ],
+      "text": " chose a biography featuring a woman",
+      "agg_start": 34264,
+      "agg_end": 34300,
+      "para_context": "Initial selections featured women protagonists at 25.2%, slightly imbalanced across conditions (23.0% control vs. 27.3% "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.8010k6yngtyy",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 24059,
+          "endIndex": 24405,
+          "text": "We also used stimulus sampling for exactly what descriptive feedback participants received about their past sources. Participants were told that 10% (or 20%) of experts they had featured in the last three months were women, 30% (or 50%) were under 50 years old, 10% (or 70%) were based on the West Coast, and 50% (or 10%) worked at a university. "
+        }
+      ],
+      "text": "We also used stimulus sampling for exactly what descriptive feedback participants received about their past sources. Participants were told that 10% (or 20%) of experts they had featured in the last three months were women, 30% (or 50%) were under 50 years old, 10% (or 70%) were based on the West Coast, and 50% (or 10%) worked at a university. ",
+      "agg_start": 24059,
+      "agg_end": 24405,
+      "para_context": "We also used stimulus sampling for exactly what descriptive feedback participants received about their past sources. Par"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.9anxwjcff39z",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 29351,
+          "endIndex": 29352,
+          "text": "P"
+        }
+      ],
+      "text": "P",
+      "agg_start": 29351,
+      "agg_end": 29352,
+      "para_context": "Participants. This study was pre-registered on AsPredicted (https://aspredicted.org/WYY_3PL). We recruited 302 pParticip"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.9anxwjcff39z",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 29350,
+          "endIndex": 29351,
+          "text": "p"
+        }
+      ],
+      "text": "p",
+      "agg_start": 29350,
+      "agg_end": 29351,
+      "para_context": "Participants. This study was pre-registered on AsPredicted (https://aspredicted.org/WYY_3PL). We recruited 302 pParticip"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.9eiqakd7tkne",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25146,
+          "endIndex": 25157,
+          "text": "to predict "
+        }
+      ],
+      "text": "to predict ",
+      "agg_start": 25146,
+      "agg_end": 25157,
+      "para_context": "Following our pre-registration, we ran an ordinary least squares regression (OLS) predicting to predict the proportion o"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.9eiqakd7tkne",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25135,
+          "endIndex": 25146,
+          "text": "predicting "
+        }
+      ],
+      "text": "predicting ",
+      "agg_start": 25135,
+      "agg_end": 25146,
+      "para_context": "Following our pre-registration, we ran an ordinary least squares regression (OLS) predicting to predict the proportion o"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.9vwneq62s4aa",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 34431,
+          "endIndex": 34439,
+          "text": "Figure 3"
+        },
+        {
+          "startIndex": 34439,
+          "endIndex": 34441,
+          "text": "; "
+        }
+      ],
+      "text": "Figure 3; ",
+      "agg_start": 34431,
+      "agg_end": 34441,
+      "para_context": "Initial selections featured women protagonists at 25.2%, slightly imbalanced across conditions (23.0% control vs. 27.3% "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.afvpkymqax0l",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 29462,
+          "endIndex": 29470,
+          "text": "ecruited"
+        }
+      ],
+      "text": "ecruited",
+      "agg_start": 29462,
+      "agg_end": 29470,
+      "para_context": "Participants. This study was pre-registered on AsPredicted (https://aspredicted.org/WYY_3PL). We recruited 302 pParticip"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.bht9zex5gef9",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 43925,
+          "endIndex": 43926,
+          "text": " "
+        },
+        {
+          "startIndex": 43926,
+          "endIndex": 44102,
+          "text": "about their set of selected films. The two additional pieces of descriptive feedback provided were randomly drawn from the list of three descriptive statistics provided in the "
+        },
+        {
+          "startIndex": 44102,
+          "endIndex": 44120,
+          "text": "no gender feedback"
+        },
+        {
+          "startIndex": 44120,
+          "endIndex": 44430,
+          "text": " condition. After receiving (condition-dependent) descriptive feedback about the composition of their initial set of six film selections, participants selected a seventh and final film for the Facebook campaign from the original film candidate set, where their prior selections were highlighted as a reminder. "
+        }
+      ],
+      "text": " about their set of selected films. The two additional pieces of descriptive feedback provided were randomly drawn from the list of three descriptive statistics provided in the no gender feedback condition. After receiving (condition-dependent) descriptive feedback about the composition of their initial set of six film selections, participants selected a seventh and final film for the Facebook campaign from the original film candidate set, where their prior selections were highlighted as a reminder. ",
+      "agg_start": 43925,
+      "agg_end": 44430,
+      "para_context": "Just as in the prior studies, aAfter making their set of six initial film selections, participants were randomly assigne"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.bht9zex5gef9",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 43855,
+          "endIndex": 43896,
+          "text": " randomly selected from the three in the "
+        },
+        {
+          "startIndex": 43896,
+          "endIndex": 43915,
+          "text": "no gender feedback "
+        },
+        {
+          "startIndex": 43915,
+          "endIndex": 43925,
+          "text": "condition."
+        },
+        {
+          "startIndex": 44430,
+          "endIndex": 44431,
+          "text": " "
+        },
+        {
+          "startIndex": 44431,
+          "endIndex": 44479,
+          "text": "Otherwise, the study was identical to Study 3B. "
+        }
+      ],
+      "text": " randomly selected from the three in the no gender feedback condition. Otherwise, the study was identical to Study 3B. ",
+      "agg_start": 43855,
+      "agg_end": 44479,
+      "para_context": "Just as in the prior studies, aAfter making their set of six initial film selections, participants were randomly assigne"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.cignnpnqjim5",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 42583,
+          "endIndex": 42584,
+          "text": "P"
+        },
+        {
+          "startIndex": 42584,
+          "endIndex": 42605,
+          "text": " Second, participants"
+        }
+      ],
+      "text": "P Second, participants",
+      "agg_start": 42583,
+      "agg_end": 42605,
+      "para_context": "Procedure. The procedure in this study was nearly identical to the procedure described in Study 3A, but we changed  with"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.cignnpnqjim5",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 42570,
+          "endIndex": 42571,
+          "text": " "
+        },
+        {
+          "startIndex": 42571,
+          "endIndex": 42583,
+          "text": "Participants"
+        },
+        {
+          "startIndex": 42583,
+          "endIndex": 42584,
+          "text": "P"
+        }
+      ],
+      "text": " ParticipantsP",
+      "agg_start": 42570,
+      "agg_end": 42584,
+      "para_context": "Procedure. The procedure in this study was nearly identical to the procedure described in Study 3A, but we changed  with"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.cl05z5apxmns",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 31145,
+          "endIndex": 31440,
+          "text": "Participants were told that the purpose of the vote was to encourage more non-fiction reading among university community members. If participants agreed to cast a vote, they were handed an iPad with an initial screen showing them a list of 25 well-known biographical books to choose from (e.g., "
+        },
+        {
+          "startIndex": 31440,
+          "endIndex": 31502,
+          "text": "Anne Frank: The Diary of a Young Girl; Steve Jobs: A Biography"
+        },
+        {
+          "startIndex": 31502,
+          "endIndex": 31892,
+          "text": "). Above the title of each biography were a thumbnail picture of its cover and a brief description including the name of the book’s protagonist, a description of the protagonist (e.g., diarist during the Holocaust; Apple co-founder), the year the book was published, and the book’s page count (e.g., 283 pages, 656 pages). Of the biographies presented, 5 (20%) featured female protagonists."
+        }
+      ],
+      "text": "Participants were told that the purpose of the vote was to encourage more non-fiction reading among university community members. If participants agreed to cast a vote, they were handed an iPad with an initial screen showing them a list of 25 well-known biographical books to choose from (e.g., Anne Frank: The Diary of a Young Girl; Steve Jobs: A Biography). Above the title of each biography were a thumbnail picture of its cover and a brief description including the name of the book’s protagonist, a description of the protagonist (e.g., diarist during the Holocaust; Apple co-founder), the year the book was published, and the book’s page count (e.g., 283 pages, 656 pages). Of the biographies presented, 5 (20%) featured female protagonists.",
+      "agg_start": 31145,
+      "agg_end": 31892,
+      "para_context": "Procedure. Student recruiters in school-branded clothing told passersby they were conducting a quick vote on which biogr"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.cl05z5apxmns",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 30917,
+          "endIndex": 31145,
+          "text": "Participants who agreed were handed an iPad showing 25 well-known biographies, each with a cover thumbnail and a brief description (protagonist's name, role, publication year, page count); five (20%) featured women protagonists."
+        }
+      ],
+      "text": "Participants who agreed were handed an iPad showing 25 well-known biographies, each with a cover thumbnail and a brief description (protagonist's name, role, publication year, page count); five (20%) featured women protagonists.",
+      "agg_start": 30917,
+      "agg_end": 31145,
+      "para_context": "Procedure. Student recruiters in school-branded clothing told passersby they were conducting a quick vote on which biogr"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.d0a3bs5hrlpq",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 30058,
+          "endIndex": 30086,
+          "text": "(52.52% men; 44.96% women; M"
+        },
+        {
+          "startIndex": 30086,
+          "endIndex": 30090,
+          "text": "age "
+        },
+        {
+          "startIndex": 30090,
+          "endIndex": 30156,
+          "text": "= 25.11, 41.37% White, 10.79% Black, 4.68% Hispanic, 42.81% Asian)"
+        }
+      ],
+      "text": "(52.52% men; 44.96% women; Mage = 25.11, 41.37% White, 10.79% Black, 4.68% Hispanic, 42.81% Asian)",
+      "agg_start": 30058,
+      "agg_end": 30156,
+      "para_context": "Participants. This study was pre-registered on AsPredicted (https://aspredicted.org/WYY_3PL). We recruited 302 pParticip"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.d6234df3ljsq",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 41892,
+          "endIndex": 42052,
+          "text": ". Participants were based in the U.S., had a minimum 90% approval rate and at least 1,000 prior completions, and were paid $0.75 to complete a 3-minute survey ("
+        }
+      ],
+      "text": ". Participants were based in the U.S., had a minimum 90% approval rate and at least 1,000 prior completions, and were paid $0.75 to complete a 3-minute survey (",
+      "agg_start": 41892,
+      "agg_end": 42052,
+      "para_context": "Participants. As pre-registered (https://osf.io/uyn8g/), we recruited 1,000 participants on Amazon’s MTurk . Participant"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.d6234df3ljsq",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 41891,
+          "endIndex": 41892,
+          "text": " "
+        }
+      ],
+      "text": " ",
+      "agg_start": 41891,
+      "agg_end": 41892,
+      "para_context": "Participants. As pre-registered (https://osf.io/uyn8g/), we recruited 1,000 participants on Amazon’s MTurk . Participant"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.d7xlo8yqqe15",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 30552,
+          "endIndex": 30883,
+          "text": "To recruit participants, student recruiters were instructed to (truthfully) inform them that they were part of a campus group conducting a quick vote on which biographies of important figures should be displayed at the University’s business school. Books laid out on a table were there to represent how the final display would look"
+        }
+      ],
+      "text": "To recruit participants, student recruiters were instructed to (truthfully) inform them that they were part of a campus group conducting a quick vote on which biographies of important figures should be displayed at the University’s business school. Books laid out on a table were there to represent how the final display would look",
+      "agg_start": 30552,
+      "agg_end": 30883,
+      "para_context": "Procedure. Student recruiters in school-branded clothing told passersby they were conducting a quick vote on which biogr"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.d7xlo8yqqe15",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 30292,
+          "endIndex": 30552,
+          "text": "Student recruiters in school-branded clothing told passersby they were conducting a quick vote on which biographies should be displayed at the business school to encourage non-fiction reading; seven books with obscured covers on a table served as a visual prop"
+        }
+      ],
+      "text": "Student recruiters in school-branded clothing told passersby they were conducting a quick vote on which biographies should be displayed at the business school to encourage non-fiction reading; seven books with obscured covers on a table served as a visual prop",
+      "agg_start": 30292,
+      "agg_end": 30552,
+      "para_context": "Procedure. Student recruiters in school-branded clothing told passersby they were conducting a quick vote on which biogr"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.dtadgqg0mbu0",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 42606,
+          "endIndex": 42611,
+          "text": "also "
+        }
+      ],
+      "text": "also ",
+      "agg_start": 42606,
+      "agg_end": 42611,
+      "para_context": "Procedure. The procedure in this study was nearly identical to the procedure described in Study 3A, but we changed  with"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.eiwz7lkixeub",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 27564,
+          "endIndex": 27572,
+          "text": "initial "
+        }
+      ],
+      "text": "initial ",
+      "agg_start": 27564,
+      "agg_end": 27572,
+      "para_context": "Study 1 mirrored a realn actual organizational practice currently deployed by NPR practice and provides initial evidence"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.emw1usnohss1",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 23748,
+          "endIndex": 24029,
+          "text": "participants always received descriptive feedback about the percentage of experts they had selected over the past three months who were women; this feedback was presented alongside two randomly drawn pieces of feedback from the list of three descriptive statistics provided in the "
+        },
+        {
+          "startIndex": 24029,
+          "endIndex": 24047,
+          "text": "no gender feedback"
+        },
+        {
+          "startIndex": 24047,
+          "endIndex": 24058,
+          "text": " condition."
+        }
+      ],
+      "text": "participants always received descriptive feedback about the percentage of experts they had selected over the past three months who were women; this feedback was presented alongside two randomly drawn pieces of feedback from the list of three descriptive statistics provided in the no gender feedback condition.",
+      "agg_start": 23748,
+      "agg_end": 24058,
+      "para_context": "In the no gender feedback condition, participants received descriptive feedback summarizing the percentage of experts th"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.emw1usnohss1",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 23532,
+          "endIndex": 23662,
+          "text": "participants always received feedback about the percentage of past selectees who were women, presented alongside two of the three "
+        },
+        {
+          "startIndex": 23662,
+          "endIndex": 23673,
+          "text": "comparison "
+        },
+        {
+          "startIndex": 23673,
+          "endIndex": 23684,
+          "text": "statistics "
+        },
+        {
+          "startIndex": 23684,
+          "endIndex": 23701,
+          "text": "presented in the "
+        },
+        {
+          "startIndex": 23701,
+          "endIndex": 23719,
+          "text": "no gender feedback"
+        },
+        {
+          "startIndex": 23719,
+          "endIndex": 23730,
+          "text": " condition "
+        },
+        {
+          "startIndex": 23730,
+          "endIndex": 23746,
+          "text": "drawn at random."
+        },
+        {
+          "startIndex": 23747,
+          "endIndex": 23748,
+          "text": " "
+        }
+      ],
+      "text": "participants always received feedback about the percentage of past selectees who were women, presented alongside two of the three comparison statistics presented in the no gender feedback condition drawn at random. ",
+      "agg_start": 23532,
+      "agg_end": 23748,
+      "para_context": "In the no gender feedback condition, participants received descriptive feedback summarizing the percentage of experts th"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.fhdqknladir8",
+      "kind": "deletion",
+      "disposition": "reject",
+      "action": "delete_and_reinsert",
+      "rationale": "Katy comment screenshot 4 — keep procedural detail",
+      "spans": [
+        {
+          "startIndex": 32998,
+          "endIndex": 33094,
+          "text": " from the original set–where their prior selections were highlighted–to include in the display. "
+        }
+      ],
+      "text": " from the original set–where their prior selections were highlighted–to include in the display. ",
+      "agg_start": 32998,
+      "agg_end": 33094,
+      "para_context": "Participants were instructed to vote for an initial portfolio of six biographies they would recommend for the on-campus "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.fhdqknladir8",
+      "kind": "insertion",
+      "disposition": "reject",
+      "action": "delete",
+      "rationale": "Katy comment screenshot 4 — keep procedural detail",
+      "spans": [
+        {
+          "startIndex": 32997,
+          "endIndex": 32998,
+          "text": "."
+        }
+      ],
+      "text": ".",
+      "agg_start": 32997,
+      "agg_end": 32998,
+      "para_context": "Participants were instructed to vote for an initial portfolio of six biographies they would recommend for the on-campus "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.g98bcc5g3xcf",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25359,
+          "endIndex": 25371,
+          "text": "we included "
+        }
+      ],
+      "text": "we included ",
+      "agg_start": 25359,
+      "agg_end": 25371,
+      "para_context": "Following our pre-registration, we ran an ordinary least squares regression (OLS) predicting to predict the proportion o"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.hh87vwmosfe6",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 42433,
+          "endIndex": 42455,
+          "text": "in this study included"
+        }
+      ],
+      "text": "in this study included",
+      "agg_start": 42433,
+      "agg_end": 42455,
+      "para_context": "Procedure. The procedure in this study was nearly identical to the procedure described in Study 3A, but we changed  with"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.hh87vwmosfe6",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 42412,
+          "endIndex": 42433,
+          "text": "of biopics to include"
+        }
+      ],
+      "text": "of biopics to include",
+      "agg_start": 42412,
+      "agg_end": 42433,
+      "para_context": "Procedure. The procedure in this study was nearly identical to the procedure described in Study 3A, but we changed  with"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.izdau51kmiah",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 27745,
+          "endIndex": 27921,
+          "text": ". Moreover, consistent with our theorizing, feedback about other attributes of past selectees had significantly smaller effects on subsequent selections than gender feedback. \n"
+        }
+      ],
+      "text": ". Moreover, consistent with our theorizing, feedback about other attributes of past selectees had significantly smaller effects on subsequent selections than gender feedback. \n",
+      "agg_start": 27745,
+      "agg_end": 27921,
+      "para_context": "Study 1 mirrored a realn actual organizational practice currently deployed by NPR practice and provides initial evidence"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.izdau51kmiah",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 27698,
+          "endIndex": 27745,
+          "text": ", more so than feedback about other attributes."
+        }
+      ],
+      "text": ", more so than feedback about other attributes.",
+      "agg_start": 27698,
+      "agg_end": 27745,
+      "para_context": "Study 1 mirrored a realn actual organizational practice currently deployed by NPR practice and provides initial evidence"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.j4dj4r7mi9ck",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 45578,
+          "endIndex": 45752,
+          "text": "These results were robust to several alternative specifications, including controlling for participant gender, race, and age, and analyzing our data with logistic regression "
+        }
+      ],
+      "text": "These results were robust to several alternative specifications, including controlling for participant gender, race, and age, and analyzing our data with logistic regression ",
+      "agg_start": 45578,
+      "agg_end": 45752,
+      "para_context": "Following our pre-registration, we ran an OLS with robust standard errors to predict whether the seventh and final biopi"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.j6hsq5vvbdnk",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 23374,
+          "endIndex": 23383,
+          "text": "actually "
+        }
+      ],
+      "text": "actually ",
+      "agg_start": 23374,
+      "agg_end": 23383,
+      "para_context": "In the no gender feedback condition, participants received descriptive feedback summarizing the percentage of experts th"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.jmalqdoz38zw",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 42800,
+          "endIndex": 42812,
+          "text": "Finally, the"
+        }
+      ],
+      "text": "Finally, the",
+      "agg_start": 42800,
+      "agg_end": 42812,
+      "para_context": "Procedure. The procedure in this study was nearly identical to the procedure described in Study 3A, but we changed  with"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.jmalqdoz38zw",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 42797,
+          "endIndex": 42800,
+          "text": "The"
+        }
+      ],
+      "text": "The",
+      "agg_start": 42797,
+      "agg_end": 42800,
+      "para_context": "Procedure. The procedure in this study was nearly identical to the procedure described in Study 3A, but we changed  with"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.jqu0okx1iupw",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25750,
+          "endIndex": 25901,
+          "text": "These results were robust to several alternative specifications, including controlling for participant gender, race, and age (see Appendix Table S1).\u000b\t"
+        },
+        {
+          "startIndex": 26112,
+          "endIndex": 27177,
+          "text": "To formally test whether offering feedback about the percentage of past experts who were women had a larger effect on the subsequent selection of women experts than offering feedback about other attributes had on the subsequent selection of experts with those attributes, we constructed three systems of simultaneous equations (Zellner, 1962). For each system, we included a pair of equations: one modeling the effect of random assignment to receive gender feedback and one modeling the effect of random assignment to receive feedback on another expert attribute (i.e., past selectees who were under 50 years old, based on the West Coast, or worked at a university, see Table 2, Models 5-8). We then used Wald tests to compare the treatment effects estimated in the paired equations, which confirmed that the effect of assignment to the gender feedback condition on the proportion of women experts selected was significantly larger than the effects of assignment to receive descriptive feedback about the percentage of past experts who were (1) under 50 years old ("
+        },
+        {
+          "startIndex": 27177,
+          "endIndex": 27178,
+          "text": "F"
+        },
+        {
+          "startIndex": 27178,
+          "endIndex": 27196,
+          "text": "(1, 3988) = 6.63, "
+        },
+        {
+          "startIndex": 27196,
+          "endIndex": 27197,
+          "text": "p"
+        },
+        {
+          "startIndex": 27197,
+          "endIndex": 27236,
+          "text": " = .010), (2) based on the West Coast ("
+        },
+        {
+          "startIndex": 27236,
+          "endIndex": 27237,
+          "text": "F"
+        },
+        {
+          "startIndex": 27237,
+          "endIndex": 27255,
+          "text": "(1, 3988) = 8.35, "
+        },
+        {
+          "startIndex": 27255,
+          "endIndex": 27256,
+          "text": "p"
+        },
+        {
+          "startIndex": 27256,
+          "endIndex": 27297,
+          "text": " = .004), or (3) worked at a university ("
+        },
+        {
+          "startIndex": 27297,
+          "endIndex": 27298,
+          "text": "F"
+        },
+        {
+          "startIndex": 27298,
+          "endIndex": 27317,
+          "text": "(1, 3988) = 12.84, "
+        },
+        {
+          "startIndex": 27317,
+          "endIndex": 27318,
+          "text": "p"
+        },
+        {
+          "startIndex": 27318,
+          "endIndex": 27447,
+          "text": " < .001) on subsequent selections of experts with those respective attributes. This pattern of findings held across stimuli sets."
+        }
+      ],
+      "text": "These results were robust to several alternative specifications, including controlling for participant gender, race, and age (see Appendix Table S1).\u000b\tTo formally test whether offering feedback about the percentage of past experts who were women had a larger effect on the subsequent selection of women experts than offering feedback about other attributes had on the subsequent selection of experts with those attributes, we constructed three systems of simultaneous equations (Zellner, 1962). For each system, we included a pair of equations: one modeling the effect of random assignment to receive gender feedback and one modeling the effect of random assignment to receive feedback on another expert attribute (i.e., past selectees who were under 50 years old, based on the West Coast, or worked at a university, see Table 2, Models 5-8). We then used Wald tests to compare the treatment effects estimated in the paired equations, which confirmed that the effect of assignment to the gender feedback condition on the proportion of women experts selected was significantly larger than the effects of assignment to receive descriptive feedback about the percentage of past experts who were (1) under 50 years old (F(1, 3988) = 6.63, p = .010), (2) based on the West Coast (F(1, 3988) = 8.35, p = .004), or (3) worked at a university (F(1, 3988) = 12.84, p < .001) on subsequent selections of experts with those respective attributes. This pattern of findings held across stimuli sets.",
+      "agg_start": 25750,
+      "agg_end": 27447,
+      "para_context": "As shown in Figure 3A and Model 1 of Table 2, participants selected a significantly higher proportion of women experts i"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.jqu0okx1iupw",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25901,
+          "endIndex": 26102,
+          "text": "The effect was robust to demographic controls (Appendix Table S1) and was significantly larger than the effect of feedback about each of the three comparison attributes (Wald tests, all ps ≤ .010; see "
+        },
+        {
+          "startIndex": 26102,
+          "endIndex": 26109,
+          "text": "Table 2"
+        },
+        {
+          "startIndex": 26109,
+          "endIndex": 26111,
+          "text": ")."
+        }
+      ],
+      "text": "The effect was robust to demographic controls (Appendix Table S1) and was significantly larger than the effect of feedback about each of the three comparison attributes (Wald tests, all ps ≤ .010; see Table 2).",
+      "agg_start": 25901,
+      "agg_end": 26111,
+      "para_context": "As shown in Figure 3A and Model 1 of Table 2, participants selected a significantly higher proportion of women experts i"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.kfnyndxij0aj",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25353,
+          "endIndex": 25354,
+          "text": ","
+        }
+      ],
+      "text": ",",
+      "agg_start": 25353,
+      "agg_end": 25354,
+      "para_context": "Following our pre-registration, we ran an ordinary least squares regression (OLS) predicting to predict the proportion o"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.kfnyndxij0aj",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25328,
+          "endIndex": 25353,
+          "text": " as our primary predictor"
+        }
+      ],
+      "text": " as our primary predictor",
+      "agg_start": 25328,
+      "agg_end": 25353,
+      "para_context": "Following our pre-registration, we ran an ordinary least squares regression (OLS) predicting to predict the proportion o"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.kjeyx1ffwzrr",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 22193,
+          "endIndex": 22207,
+          "text": "to complete a "
+        },
+        {
+          "startIndex": 22207,
+          "endIndex": 22233,
+          "text": "3-minute survey for $0.75 "
+        }
+      ],
+      "text": "to complete a 3-minute survey for $0.75 ",
+      "agg_start": 22193,
+      "agg_end": 22233,
+      "para_context": "Participants. As pre-registered (https://osf.io/vazsm/), we recruited 1,000 participants through Prolific to complete a "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.m7kcrvwqx3wa",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 42074,
+          "endIndex": 42077,
+          "text": "; M"
+        },
+        {
+          "startIndex": 42077,
+          "endIndex": 42081,
+          "text": "age "
+        },
+        {
+          "startIndex": 42081,
+          "endIndex": 42140,
+          "text": "= 43.60; 77.9% White, 9.7% Black, 5.5% Hispanic, 6.4% Asian"
+        }
+      ],
+      "text": "; Mage = 43.60; 77.9% White, 9.7% Black, 5.5% Hispanic, 6.4% Asian",
+      "agg_start": 42074,
+      "agg_end": 42140,
+      "para_context": "Participants. As pre-registered (https://osf.io/uyn8g/), we recruited 1,000 participants on Amazon’s MTurk . Participant"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.nndi437y6f8n",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 28405,
+          "endIndex": 28739,
+          "text": "According to Harrison & List (2004, p. 1014), a framed field experiment is “one that uses participants from the specific population of interest (a nonstandard subject pool) and incorporates field context into the commodity, task, or information participants use, making the setting more realistic than a conventional lab experiment.” "
+        },
+        {
+          "startIndex": 28739,
+          "endIndex": 28983,
+          "text": "Our framed field experiment extends our prior findings by examining whether they apply in a setting where people were making real decisions with real impact on their community and were unaware that they were in a research study. Specifically, h"
+        }
+      ],
+      "text": "According to Harrison & List (2004, p. 1014), a framed field experiment is “one that uses participants from the specific population of interest (a nonstandard subject pool) and incorporates field context into the commodity, task, or information participants use, making the setting more realistic than a conventional lab experiment.” Our framed field experiment extends our prior findings by examining whether they apply in a setting where people were making real decisions with real impact on their community and were unaware that they were in a research study. Specifically, h",
+      "agg_start": 28405,
+      "agg_end": 28983,
+      "para_context": "In Study 2, we conducted a framed field experiment (Harrison & List, 2004) to extend our key findings in an in-person, r"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.nndi437y6f8n",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 28983,
+          "endIndex": 28984,
+          "text": "H"
+        }
+      ],
+      "text": "H",
+      "agg_start": 28983,
+      "agg_end": 28984,
+      "para_context": "In Study 2, we conducted a framed field experiment (Harrison & List, 2004) to extend our key findings in an in-person, r"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.ntt578f21jmk",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 33345,
+          "endIndex": 33600,
+          "text": "Prior to random assignment, participants in both conditions first selected six biographies. Of these initial selections, 25.2% featured women protagonists (these initial selections were slightly imbalanced across conditions: 23.0% of books selected in the"
+        },
+        {
+          "startIndex": 33600,
+          "endIndex": 33620,
+          "text": " no gender feedback "
+        },
+        {
+          "startIndex": 33620,
+          "endIndex": 33683,
+          "text": "condition featured women protagonists compared to 27.3% in the "
+        },
+        {
+          "startIndex": 33683,
+          "endIndex": 33698,
+          "text": "gender feedback"
+        },
+        {
+          "startIndex": 33698,
+          "endIndex": 33710,
+          "text": " condition, "
+        },
+        {
+          "startIndex": 33710,
+          "endIndex": 33711,
+          "text": "t"
+        },
+        {
+          "startIndex": 33711,
+          "endIndex": 33726,
+          "text": "(290) = -1.97, "
+        },
+        {
+          "startIndex": 33726,
+          "endIndex": 33727,
+          "text": "p"
+        },
+        {
+          "startIndex": 33727,
+          "endIndex": 33761,
+          "text": " = .050, 95% CI = [-0.086, 0.000])"
+        }
+      ],
+      "text": "Prior to random assignment, participants in both conditions first selected six biographies. Of these initial selections, 25.2% featured women protagonists (these initial selections were slightly imbalanced across conditions: 23.0% of books selected in the no gender feedback condition featured women protagonists compared to 27.3% in the gender feedback condition, t(290) = -1.97, p = .050, 95% CI = [-0.086, 0.000])",
+      "agg_start": 33345,
+      "agg_end": 33761,
+      "para_context": "Initial selections featured women protagonists at 25.2%, slightly imbalanced across conditions (23.0% control vs. 27.3% "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.ntt578f21jmk",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 33204,
+          "endIndex": 33335,
+          "text": "Initial selections featured women protagonists at 25.2%, slightly imbalanced across conditions (23.0% control vs. 27.3% treatment, "
+        },
+        {
+          "startIndex": 33335,
+          "endIndex": 33336,
+          "text": "p"
+        },
+        {
+          "startIndex": 33336,
+          "endIndex": 33345,
+          "text": " = .050)."
+        }
+      ],
+      "text": "Initial selections featured women protagonists at 25.2%, slightly imbalanced across conditions (23.0% control vs. 27.3% treatment, p = .050).",
+      "agg_start": 33204,
+      "agg_end": 33345,
+      "para_context": "Initial selections featured women protagonists at 25.2%, slightly imbalanced across conditions (23.0% control vs. 27.3% "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.ocbfoeui0e9w",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 43768,
+          "endIndex": 43810,
+          "text": ". This information was provided alongside "
+        }
+      ],
+      "text": ". This information was provided alongside ",
+      "agg_start": 43768,
+      "agg_end": 43810,
+      "para_context": "Just as in the prior studies, aAfter making their set of six initial film selections, participants were randomly assigne"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.ocbfoeui0e9w",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 43751,
+          "endIndex": 43768,
+          "text": ", in addition to "
+        }
+      ],
+      "text": ", in addition to ",
+      "agg_start": 43751,
+      "agg_end": 43768,
+      "para_context": "Just as in the prior studies, aAfter making their set of six initial film selections, participants were randomly assigne"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.os8cxmk23895",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 35538,
+          "endIndex": 36073,
+          "text": "First, we demonstrate that the effect of descriptive feedback on selection decisions persists in a field setting where participants made consequential choices affecting their community—voting on which biographies would be publicly displayed on a university campus. Second, unlike in Study 1 for which participants were told about hypothetical prior selections, participants in Study 2 made their own initial selections before receiving feedback, confirming that the effect arises even when evaluators reflect on their own past choices."
+        }
+      ],
+      "text": "First, we demonstrate that the effect of descriptive feedback on selection decisions persists in a field setting where participants made consequential choices affecting their community—voting on which biographies would be publicly displayed on a university campus. Second, unlike in Study 1 for which participants were told about hypothetical prior selections, participants in Study 2 made their own initial selections before receiving feedback, confirming that the effect arises even when evaluators reflect on their own past choices.",
+      "agg_start": 35538,
+      "agg_end": 36073,
+      "para_context": "Study 2 extends our findings in two important ways. The effect persists in a field setting where participants made conse"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.os8cxmk23895",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 35255,
+          "endIndex": 35538,
+          "text": "The effect persists in a field setting where participants made consequential community choices, and (unlike Study 1) participants received feedback about their own prior selections rather than hypothetical ones — confirming the effect arises even when reflecting on their own choices"
+        }
+      ],
+      "text": "The effect persists in a field setting where participants made consequential community choices, and (unlike Study 1) participants received feedback about their own prior selections rather than hypothetical ones — confirming the effect arises even when reflecting on their own choices",
+      "agg_start": 35255,
+      "agg_end": 35538,
+      "para_context": "Study 2 extends our findings in two important ways. The effect persists in a field setting where participants made conse"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.ouor15s4hcvw",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 22741,
+          "endIndex": 22746,
+          "text": "over "
+        }
+      ],
+      "text": "over ",
+      "agg_start": 22741,
+      "agg_end": 22746,
+      "para_context": "Procedure. Participants were told to imagine they worked as producers at NPR and were responsible for identifying and bo"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.ouor15s4hcvw",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 22737,
+          "endIndex": 22741,
+          "text": "for "
+        }
+      ],
+      "text": "for ",
+      "agg_start": 22737,
+      "agg_end": 22741,
+      "para_context": "Procedure. Participants were told to imagine they worked as producers at NPR and were responsible for identifying and bo"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.p8o5bipg2hj7",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 24659,
+          "endIndex": 24805,
+          "text": " across different industries. In this list of 25 candidates, each expert’s name, area of expertise, and institutional affiliation were displayed. "
+        }
+      ],
+      "text": " across different industries. In this list of 25 candidates, each expert’s name, area of expertise, and institutional affiliation were displayed. ",
+      "agg_start": 24659,
+      "agg_end": 24805,
+      "para_context": "After receiving descriptive feedback about the composition of their past expert selections, participants were asked to s"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.p8o5bipg2hj7",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 24657,
+          "endIndex": 24659,
+          "text": " ("
+        }
+      ],
+      "text": " (",
+      "agg_start": 24657,
+      "agg_end": 24659,
+      "para_context": "After receiving descriptive feedback about the composition of their past expert selections, participants were asked to s"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.pbaz8m22aam4",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 43334,
+          "endIndex": 43443,
+          "text": "three pieces of descriptive feedback about their initial selections. This descriptive feedback summarized the"
+        }
+      ],
+      "text": "three pieces of descriptive feedback about their initial selections. This descriptive feedback summarized the",
+      "agg_start": 43334,
+      "agg_end": 43443,
+      "para_context": "Just as in the prior studies, aAfter making their set of six initial film selections, participants were randomly assigne"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.pbaz8m22aam4",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 43316,
+          "endIndex": 43334,
+          "text": "feedback about the"
+        }
+      ],
+      "text": "feedback about the",
+      "agg_start": 43316,
+      "agg_end": 43334,
+      "para_context": "Just as in the prior studies, aAfter making their set of six initial film selections, participants were randomly assigne"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.pqc2yyy5scu7",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 27483,
+          "endIndex": 27484,
+          "text": "n"
+        }
+      ],
+      "text": "n",
+      "agg_start": 27483,
+      "agg_end": 27484,
+      "para_context": "Study 1 mirrored a realn actual organizational practice currently deployed by NPR practice and provides initial evidence"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.pqc2yyy5scu7",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 27478,
+          "endIndex": 27483,
+          "text": " real"
+        }
+      ],
+      "text": " real",
+      "agg_start": 27478,
+      "agg_end": 27483,
+      "para_context": "Study 1 mirrored a realn actual organizational practice currently deployed by NPR practice and provides initial evidence"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.pw0c9zshuhv8",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25181,
+          "endIndex": 25194,
+          "text": "participants "
+        }
+      ],
+      "text": "participants ",
+      "agg_start": 25181,
+      "agg_end": 25194,
+      "para_context": "Following our pre-registration, we ran an ordinary least squares regression (OLS) predicting to predict the proportion o"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.pxhnzrejsfup",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 44565,
+          "endIndex": 44759,
+          "text": "Prior to random assignment, participants in both conditions selected six films. Of these initial selections, 17.5% featured women protagonists (this was balanced across conditions: 17.7% in the "
+        },
+        {
+          "startIndex": 44759,
+          "endIndex": 44777,
+          "text": "no gender feedback"
+        },
+        {
+          "startIndex": 44777,
+          "endIndex": 44805,
+          "text": " condition and 17.4% in the "
+        },
+        {
+          "startIndex": 44805,
+          "endIndex": 44820,
+          "text": "gender feedback"
+        },
+        {
+          "startIndex": 44820,
+          "endIndex": 44832,
+          "text": " condition, "
+        },
+        {
+          "startIndex": 44832,
+          "endIndex": 44833,
+          "text": "t"
+        },
+        {
+          "startIndex": 44833,
+          "endIndex": 44847,
+          "text": "(997) = 0.24, "
+        },
+        {
+          "startIndex": 44847,
+          "endIndex": 44848,
+          "text": "p"
+        },
+        {
+          "startIndex": 44848,
+          "endIndex": 44882,
+          "text": " = .813, 95% CI [-0.018, 0.022]). "
+        }
+      ],
+      "text": "Prior to random assignment, participants in both conditions selected six films. Of these initial selections, 17.5% featured women protagonists (this was balanced across conditions: 17.7% in the no gender feedback condition and 17.4% in the gender feedback condition, t(997) = 0.24, p = .813, 95% CI [-0.018, 0.022]). ",
+      "agg_start": 44565,
+      "agg_end": 44882,
+      "para_context": "Prior to random assignment, participants in both conditions selected six films. Of these initial selections, 17.5% featu"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.pyi3qbjpk4h7",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 24881,
+          "endIndex": 24882,
+          "text": ")"
+        }
+      ],
+      "text": ")",
+      "agg_start": 24881,
+      "agg_end": 24882,
+      "para_context": "After receiving descriptive feedback about the composition of their past expert selections, participants were asked to s"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.qekcmor9jijr",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25416,
+          "endIndex": 25431,
+          "text": " as a covariate"
+        }
+      ],
+      "text": " as a covariate",
+      "agg_start": 25416,
+      "agg_end": 25431,
+      "para_context": "Following our pre-registration, we ran an ordinary least squares regression (OLS) predicting to predict the proportion o"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.qz68pu7wl3bg",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25242,
+          "endIndex": 25280,
+          "text": "Our primary predictor was an indicator"
+        }
+      ],
+      "text": "Our primary predictor was an indicator",
+      "agg_start": 25242,
+      "agg_end": 25280,
+      "para_context": "Following our pre-registration, we ran an ordinary least squares regression (OLS) predicting to predict the proportion o"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.qz68pu7wl3bg",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25238,
+          "endIndex": 25242,
+          "text": "with"
+        }
+      ],
+      "text": "with",
+      "agg_start": 25238,
+      "agg_end": 25242,
+      "para_context": "Following our pre-registration, we ran an ordinary least squares regression (OLS) predicting to predict the proportion o"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.rxpcar4aswjg",
+      "kind": "deletion",
+      "disposition": "reject",
+      "action": "delete_and_reinsert",
+      "rationale": "Katy comment screenshot 7 — keep demographics consistent across studies",
+      "spans": [
+        {
+          "startIndex": 22424,
+          "endIndex": 22444,
+          "text": "; 0.9% non-binary; M"
+        },
+        {
+          "startIndex": 22444,
+          "endIndex": 22447,
+          "text": "age"
+        },
+        {
+          "startIndex": 22447,
+          "endIndex": 22508,
+          "text": " = 43.80; 72.3% White, 13.2% Black, 6.5% Hispanic, 7.2% Asian"
+        }
+      ],
+      "text": "; 0.9% non-binary; Mage = 43.80; 72.3% White, 13.2% Black, 6.5% Hispanic, 7.2% Asian",
+      "agg_start": 22424,
+      "agg_end": 22508,
+      "para_context": "Participants. As pre-registered (https://osf.io/vazsm/), we recruited 1,000 participants through Prolific to complete a "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.s0pofhe9hval",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 22234,
+          "endIndex": 22402,
+          "text": "Academic. Participants were based in the U.S., had a minimum 90% approval rate and at least 1,000 prior completions, and were paid $0.75 to complete a 3-minute survey ("
+        }
+      ],
+      "text": "Academic. Participants were based in the U.S., had a minimum 90% approval rate and at least 1,000 prior completions, and were paid $0.75 to complete a 3-minute survey (",
+      "agg_start": 22234,
+      "agg_end": 22402,
+      "para_context": "Participants. As pre-registered (https://osf.io/vazsm/), we recruited 1,000 participants through Prolific to complete a "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.s0pofhe9hval",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 22233,
+          "endIndex": 22234,
+          "text": "("
+        }
+      ],
+      "text": "(",
+      "agg_start": 22233,
+      "agg_end": 22234,
+      "para_context": "Participants. As pre-registered (https://osf.io/vazsm/), we recruited 1,000 participants through Prolific to complete a "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.s2yp417s640",
+      "kind": "deletion",
+      "disposition": "reject",
+      "action": "delete_and_reinsert",
+      "rationale": "Katy comment screenshot 6 — revert to verbose original wording (preserves correct Table 3 ref)",
+      "spans": [
+        {
+          "startIndex": 34677,
+          "endIndex": 34943,
+          "text": "We found no significant effects of the impact of random assignment to receive descriptive feedback about another given biography attribute in a participant’s initial portfolio of choices on subsequent selections of biographies with that same attribute (pages > 500: "
+        },
+        {
+          "startIndex": 34943,
+          "endIndex": 34944,
+          "text": "B"
+        },
+        {
+          "startIndex": 34944,
+          "endIndex": 34977,
+          "text": " = 0.01, 95% CI = [-0.09, 0.12], "
+        },
+        {
+          "startIndex": 34977,
+          "endIndex": 34978,
+          "text": "t"
+        },
+        {
+          "startIndex": 34978,
+          "endIndex": 34992,
+          "text": "(300) = 0.24, "
+        },
+        {
+          "startIndex": 34992,
+          "endIndex": 34993,
+          "text": "p"
+        },
+        {
+          "startIndex": 34993,
+          "endIndex": 35025,
+          "text": " = .812; written past 25 years: "
+        },
+        {
+          "startIndex": 35025,
+          "endIndex": 35026,
+          "text": "B"
+        },
+        {
+          "startIndex": 35026,
+          "endIndex": 35059,
+          "text": " = 0.05, 95% CI = [-0.09, 0.18], "
+        },
+        {
+          "startIndex": 35059,
+          "endIndex": 35060,
+          "text": "t"
+        },
+        {
+          "startIndex": 35060,
+          "endIndex": 35074,
+          "text": "(300) = 0.68, "
+        },
+        {
+          "startIndex": 35074,
+          "endIndex": 35075,
+          "text": "p"
+        },
+        {
+          "startIndex": 35075,
+          "endIndex": 35106,
+          "text": " = .500; featured entertainer: "
+        },
+        {
+          "startIndex": 35106,
+          "endIndex": 35107,
+          "text": "B"
+        },
+        {
+          "startIndex": 35107,
+          "endIndex": 35140,
+          "text": " = 0.06, 95% CI = [-0.12, 0.23], "
+        },
+        {
+          "startIndex": 35140,
+          "endIndex": 35141,
+          "text": "t"
+        },
+        {
+          "startIndex": 35141,
+          "endIndex": 35155,
+          "text": "(300) = 0.64, "
+        },
+        {
+          "startIndex": 35155,
+          "endIndex": 35156,
+          "text": "p"
+        },
+        {
+          "startIndex": 35156,
+          "endIndex": 35190,
+          "text": " = .522, See Table 3 Models 2-4). "
+        }
+      ],
+      "text": "We found no significant effects of the impact of random assignment to receive descriptive feedback about another given biography attribute in a participant’s initial portfolio of choices on subsequent selections of biographies with that same attribute (pages > 500: B = 0.01, 95% CI = [-0.09, 0.12], t(300) = 0.24, p = .812; written past 25 years: B = 0.05, 95% CI = [-0.09, 0.18], t(300) = 0.68, p = .500; featured entertainer: B = 0.06, 95% CI = [-0.12, 0.23], t(300) = 0.64, p = .522, See Table 3 Models 2-4). ",
+      "agg_start": 34677,
+      "agg_end": 35190,
+      "para_context": "Consistent with Study 1, none of the three comparison-attribute feedback manipulations significantly increased subsequen"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.s2yp417s640",
+      "kind": "insertion",
+      "disposition": "reject",
+      "action": "delete",
+      "rationale": "Katy comment screenshot 6 — revert to verbose original wording (preserves correct Table 3 ref)",
+      "spans": [
+        {
+          "startIndex": 34460,
+          "endIndex": 34677,
+          "text": "Consistent with Study 1, none of the three comparison-attribute feedback manipulations significantly increased subsequent selections of biographies with that attribute (all ps ≥ .500; see Table 2 for all comparisons)."
+        }
+      ],
+      "text": "Consistent with Study 1, none of the three comparison-attribute feedback manipulations significantly increased subsequent selections of biographies with that attribute (all ps ≥ .500; see Table 2 for all comparisons).",
+      "agg_start": 34460,
+      "agg_end": 34677,
+      "para_context": "Consistent with Study 1, none of the three comparison-attribute feedback manipulations significantly increased subsequen"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.t5qgfdj45pzx",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 29332,
+          "endIndex": 29347,
+          "text": " We recruited 3"
+        },
+        {
+          "startIndex": 29347,
+          "endIndex": 29349,
+          "text": "02"
+        }
+      ],
+      "text": " We recruited 302",
+      "agg_start": 29332,
+      "agg_end": 29349,
+      "para_context": "Participants. This study was pre-registered on AsPredicted (https://aspredicted.org/WYY_3PL). We recruited 302 pParticip"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.taryvvz5zizl",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 27541,
+          "endIndex": 27550,
+          "text": " practice"
+        }
+      ],
+      "text": " practice",
+      "agg_start": 27541,
+      "agg_end": 27550,
+      "para_context": "Study 1 mirrored a realn actual organizational practice currently deployed by NPR practice and provides initial evidence"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.tr46t3o468tp",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 45813,
+          "endIndex": 45814,
+          "text": "\n"
+        },
+        {
+          "startIndex": 45814,
+          "endIndex": 45815,
+          "text": "A"
+        }
+      ],
+      "text": "\nA",
+      "agg_start": 45813,
+      "agg_end": 45815,
+      "para_context": "Following our pre-registration, we ran an OLS with robust standard errors to predict whether the seventh and final biopi"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.tr46t3o468tp",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 45798,
+          "endIndex": 45799,
+          "text": " "
+        },
+        {
+          "startIndex": 45799,
+          "endIndex": 45813,
+          "text": "In addition,  "
+        }
+      ],
+      "text": " In addition,  ",
+      "agg_start": 45798,
+      "agg_end": 45813,
+      "para_context": "Following our pre-registration, we ran an OLS with robust standard errors to predict whether the seventh and final biopi"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.ub6zmqz4ytdr",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25281,
+          "endIndex": 25285,
+          "text": "for "
+        }
+      ],
+      "text": "for ",
+      "agg_start": 25281,
+      "agg_end": 25285,
+      "para_context": "Following our pre-registration, we ran an ordinary least squares regression (OLS) predicting to predict the proportion o"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.udofpexf4psl",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 30204,
+          "endIndex": 30279,
+          "text": ", so participants were not told they were participating in a research study"
+        }
+      ],
+      "text": ", so participants were not told they were participating in a research study",
+      "agg_start": 30204,
+      "agg_end": 30279,
+      "para_context": "Participants. This study was pre-registered on AsPredicted (https://aspredicted.org/WYY_3PL). We recruited 302 pParticip"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.udofpexf4psl",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 30203,
+          "endIndex": 30204,
+          "text": "."
+        }
+      ],
+      "text": ".",
+      "agg_start": 30203,
+      "agg_end": 30204,
+      "para_context": "Participants. This study was pre-registered on AsPredicted (https://aspredicted.org/WYY_3PL). We recruited 302 pParticip"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.ug86rlhqnzxx",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25203,
+          "endIndex": 25237,
+          "text": " when picking their three experts."
+        }
+      ],
+      "text": " when picking their three experts.",
+      "agg_start": 25203,
+      "agg_end": 25237,
+      "para_context": "Following our pre-registration, we ran an ordinary least squares regression (OLS) predicting to predict the proportion o"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.ug86rlhqnzxx",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 25202,
+          "endIndex": 25203,
+          "text": ","
+        }
+      ],
+      "text": ",",
+      "agg_start": 25202,
+      "agg_end": 25203,
+      "para_context": "Following our pre-registration, we ran an ordinary least squares regression (OLS) predicting to predict the proportion o"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.vlzcfieuc3z6",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 43070,
+          "endIndex": 43071,
+          "text": "A"
+        }
+      ],
+      "text": "A",
+      "agg_start": 43070,
+      "agg_end": 43071,
+      "para_context": "Just as in the prior studies, aAfter making their set of six initial film selections, participants were randomly assigne"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.vlzcfieuc3z6",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 43039,
+          "endIndex": 43070,
+          "text": "Just as in the prior studies, a"
+        }
+      ],
+      "text": "Just as in the prior studies, a",
+      "agg_start": 43039,
+      "agg_end": 43070,
+      "para_context": "Just as in the prior studies, aAfter making their set of six initial film selections, participants were randomly assigne"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.w3oy7n1eht9r",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 27485,
+          "endIndex": 27538,
+          "text": "actual organizational practice currently deployed by "
+        }
+      ],
+      "text": "actual organizational practice currently deployed by ",
+      "agg_start": 27485,
+      "agg_end": 27538,
+      "para_context": "Study 1 mirrored a realn actual organizational practice currently deployed by NPR practice and provides initial evidence"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.wiyo7epw1vkr",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 33922,
+          "endIndex": 33948,
+          "text": " in this field experiment "
+        }
+      ],
+      "text": " in this field experiment ",
+      "agg_start": 33922,
+      "agg_end": 33948,
+      "para_context": "Initial selections featured women protagonists at 25.2%, slightly imbalanced across conditions (23.0% control vs. 27.3% "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.wiyo7epw1vkr",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 33948,
+          "endIndex": 33949,
+          "text": " "
+        }
+      ],
+      "text": " ",
+      "agg_start": 33948,
+      "agg_end": 33949,
+      "para_context": "Initial selections featured women protagonists at 25.2%, slightly imbalanced across conditions (23.0% control vs. 27.3% "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.x29hysgwnrqp",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 36203,
+          "endIndex": 36423,
+          "text": "In our next study, we move beyond testing the effect of descriptive feedback about the gender of past selectees to examine whether providing descriptive feedback about the race of past selectees produces similar results."
+        }
+      ],
+      "text": "In our next study, we move beyond testing the effect of descriptive feedback about the gender of past selectees to examine whether providing descriptive feedback about the race of past selectees produces similar results.",
+      "agg_start": 36203,
+      "agg_end": 36423,
+      "para_context": "Study 2 extends our findings in two important ways. The effect persists in a field setting where participants made conse"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.x29hysgwnrqp",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 36074,
+          "endIndex": 36077,
+          "text": "In "
+        },
+        {
+          "startIndex": 36077,
+          "endIndex": 36203,
+          "text": "the next study, we test whether providing race feedback increases selection of racial minorities in an incentivized paradigm. "
+        }
+      ],
+      "text": "In the next study, we test whether providing race feedback increases selection of racial minorities in an incentivized paradigm. ",
+      "agg_start": 36074,
+      "agg_end": 36203,
+      "para_context": "Study 2 extends our findings in two important ways. The effect persists in a field setting where participants made conse"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.xlighza3ni2b",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 29830,
+          "endIndex": 30058,
+          "text": ", as often as student recruiters were available and weather permitting. We recruited a final sample of 302 participants. Each participant was compensated with a candy bar of their choice for completing a roughly 1-minute survey "
+        },
+        {
+          "startIndex": 30058,
+          "endIndex": 30086,
+          "text": "(52.52% men; 44.96% women; M"
+        },
+        {
+          "startIndex": 30086,
+          "endIndex": 30090,
+          "text": "age "
+        },
+        {
+          "startIndex": 30090,
+          "endIndex": 30156,
+          "text": "= 25.11, 41.37% White, 10.79% Black, 4.68% Hispanic, 42.81% Asian)"
+        },
+        {
+          "startIndex": 30156,
+          "endIndex": 30157,
+          "text": "."
+        }
+      ],
+      "text": ", as often as student recruiters were available and weather permitting. We recruited a final sample of 302 participants. Each participant was compensated with a candy bar of their choice for completing a roughly 1-minute survey (52.52% men; 44.96% women; Mage = 25.11, 41.37% White, 10.79% Black, 4.68% Hispanic, 42.81% Asian).",
+      "agg_start": 29830,
+      "agg_end": 30157,
+      "para_context": "Participants. This study was pre-registered on AsPredicted (https://aspredicted.org/WYY_3PL). We recruited 302 pParticip"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.xlighza3ni2b",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 29829,
+          "endIndex": 29830,
+          "text": "."
+        }
+      ],
+      "text": ".",
+      "agg_start": 29829,
+      "agg_end": 29830,
+      "para_context": "Participants. This study was pre-registered on AsPredicted (https://aspredicted.org/WYY_3PL). We recruited 302 pParticip"
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.xwi1pe8uxnrr",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 33967,
+          "endIndex": 34028,
+          "text": "Our primary predictor was an indicator for assignment to the "
+        },
+        {
+          "startIndex": 34028,
+          "endIndex": 34044,
+          "text": "gender feedback "
+        },
+        {
+          "startIndex": 34044,
+          "endIndex": 34101,
+          "text": "condition. As shown in Figure 3B and Model 1 of Table 3, "
+        },
+        {
+          "startIndex": 34101,
+          "endIndex": 34102,
+          "text": "P"
+        },
+        {
+          "startIndex": 34102,
+          "endIndex": 34103,
+          "text": "p"
+        }
+      ],
+      "text": "Our primary predictor was an indicator for assignment to the gender feedback condition. As shown in Figure 3B and Model 1 of Table 3, Pp",
+      "agg_start": 33967,
+      "agg_end": 34103,
+      "para_context": "Initial selections featured women protagonists at 25.2%, slightly imbalanced across conditions (23.0% control vs. 27.3% "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.xwi1pe8uxnrr",
+      "kind": "insertion",
+      "disposition": "accept",
+      "action": "delete_and_reinsert",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 34101,
+          "endIndex": 34102,
+          "text": "P"
+        },
+        {
+          "startIndex": 34103,
+          "endIndex": 34104,
+          "text": "P"
+        }
+      ],
+      "text": "PP",
+      "agg_start": 34101,
+      "agg_end": 34104,
+      "para_context": "Initial selections featured women protagonists at 25.2%, slightly imbalanced across conditions (23.0% control vs. 27.3% "
+    },
+    {
+      "phase": "A",
+      "type": "indexAction",
+      "suggestion_id": "suggest.y1ly4hdf8hum",
+      "kind": "deletion",
+      "disposition": "accept",
+      "action": "delete",
+      "rationale": "default-accept",
+      "spans": [
+        {
+          "startIndex": 23662,
+          "endIndex": 23673,
+          "text": "comparison "
+        }
+      ],
+      "text": "comparison ",
+      "agg_start": 23662,
+      "agg_end": 23673,
+      "para_context": "In the no gender feedback condition, participants received descriptive feedback summarizing the percentage of experts th"
+    }
+  ],
+  "phaseB": [
+    {
+      "id": "B1_footnote_screening_criteria",
+      "type": "createFootnote",
+      "anchor_search": "Hispanic, 7.2% Asian).",
+      "anchor_position": "after",
+      "footnote_text": "We only recruited participants who were U.S. based, had a minimum 90% approval rate, and at least 1,000 prior survey completions. In all future Prolific studies reported in this manuscript, we imposed these same requirements.",
+      "rationale": "Katy R2 + screenshot 1 (footnote pattern)"
+    },
+    {
+      "id": "B2_footnote_stimulus_sampling",
+      "type": "createFootnote",
+      "anchor_search": "presented alongside two of the three statistics presented in the no gender feedback condition drawn at random",
+      "anchor_position": "after",
+      "footnote_text": "We also stimulus sampled what descriptive feedback participants received about their past sources: They were either told that 10% (or 20%) of past experts were women, that 30% (or 50%) were under 50 years old, that 10% (or 70%) were based on the West Coast, and that 50% (or 10%) worked at a university.",
+      "rationale": "Katy R6"
+    },
+    {
+      "id": "B3_restore_candidate_list",
+      "type": "replaceAllText",
+      "search": "an upcoming NPR segment on how artificial intelligence is reshaping employment (See Materials Section: Study 1 in the Appendix for complete study materials.)",
+      "replace": "an upcoming NPR segment on how artificial intelligence is reshaping employment and were provided with each candidate's name, area of expertise, and institutional affiliation. See Materials Section: Study 1 in the Appendix for complete study materials.",
+      "rationale": "Katy R5 — restore candidate-display detail"
+    },
+    {
+      "id": "B4_results_full_rewrite",
+      "type": "replaceAllText",
+      "search": "The effect was robust to demographic controls (Appendix Table S1) and was significantly larger than the effect of feedback about each of the three comparison attributes (Wald tests, all ps ≤ .010; see Table 2).",
+      "replace": "The effect was robust to controlling for participant demographics (Appendix Table S1) and was significantly larger than the effect of offering feedback on each of the three other attributes featured in this study — age (over 50), geography (located on the West Coast) and professional affiliation (university based) — on increasing selections of experts selected with the described attribute (see Appendix for a complete discussion of the systems of simultaneous equations and Wald tests employed, all ps ≤ .010; see Table 2).",
+      "rationale": "Katy R7 + R9 (Codex GPT-5 confirmed this is Katy's full green rewrite, not just the small substitution)"
+    },
+    {
+      "id": "B5_footnote_zellner",
+      "type": "createFootnote",
+      "anchor_search": "all ps ≤ .010; see Table 2).",
+      "anchor_position": "after",
+      "footnote_text": "See Appendix Section XX for a detailed description on the formal test of determining whether the effect of gender and race feedback is significantly larger than all other comparison attributes (Zellner, 1962).",
+      "rationale": "Katy R8 — XX is a placeholder for appendix section #"
+    },
+    {
+      "id": "B6_discussion_small_reverts",
+      "type": "replaceAllText",
+      "search": "Study 1 mirrored a real NPR practice and provides evidence that descriptive feedback about the gender composition of past selections increases the subsequent selection of women, more so than feedback about other attributes.",
+      "replace": "Study 1 mirrored a real organizational practice currently deployed by NPR and provides initial evidence that descriptive feedback about the gender composition of past selections can increase the subsequent selection of women, more so than feedback about other attributes.",
+      "rationale": "Katy R10"
+    },
+    {
+      "id": "B7_study2_intro_to",
+      "type": "replaceAllText",
+      "search": "to extend our key findings in an in-person",
+      "replace": "to extend our key findings to an in-person",
+      "rationale": "Katy R12"
+    },
+    {
+      "id": "B8_study2_payment_phrase",
+      "type": "replaceAllText",
+      "search": "We recruited 302 participants (52.52% men;",
+      "replace": "We recruited 302 participants to complete a 1-minute survey in exchange for a candy bar (52.52% men;",
+      "rationale": "Katy R13 — restore inline payment for Study 2"
+    },
+    {
+      "id": "B9_study2_irb_not_told",
+      "type": "replaceAllText",
+      "search": "The IRB approved a waiver of informed consent..",
+      "replace": "The IRB approved a waiver of informed consent, so participants were not told that they were participating in a research study.",
+      "rationale": "Katy R15 + screenshot 3 (CRITICAL)"
+    },
+    {
+      "id": "B10_study2_truthfully",
+      "type": "replaceAllText",
+      "search": "Student recruiters in school-branded clothing told passersby",
+      "replace": "Student recruiters in school-branded clothing (truthfully) told passersby",
+      "rationale": "Katy R16"
+    },
+    {
+      "id": "B11_study2_results_baseline",
+      "type": "replaceAllText",
+      "search": "Initial selections featured women protagonists at 25.2%, slightly imbalanced across conditions (23.0% control vs. 27.3% treatment, p = .050)..",
+      "replace": "Initial selections featured women protagonists 25.2% of the time, with a slight imbalance across conditions (23.0% control vs. 27.3% treatment, p = .050).",
+      "rationale": "Katy R18 + screenshot 8/9"
+    },
+    {
+      "id": "B12_study2_did_so",
+      "type": "replaceAllText",
+      "search": "in the gender feedback condition (35.10%) than in the no gender feedback condition (21.85%; B = 0.132,",
+      "replace": "in the gender feedback condition (35.10% did so) than in the no gender feedback condition (21.85% chose a woman; B = 0.132,",
+      "rationale": "Katy R19 + R22 + screenshot 5 (uses \\xa0 to match doc's non-breaking spaces)"
+    },
+    {
+      "id": "B14_study2_disc_race_rewrite",
+      "type": "replaceAllText",
+      "search": "we test whether providing race feedback increases selection of racial minorities in an incentivized paradigm",
+      "replace": "we test whether providing feedback about the racial composition of past selectees increases future selections of racial minorities in an incentivized experiment",
+      "rationale": "Katy R24"
+    },
+    {
+      "id": "B15_study3b_intro",
+      "type": "replaceAllText",
+      "search": "we provide descriptive feedback about gender.",
+      "replace": "we provide descriptive feedback about the gender distribution of past selectees.",
+      "rationale": "Katy R25"
+    },
+    {
+      "id": "B16_study3b_payment_demos",
+      "type": "replaceAllText",
+      "search": "1,000 participants on Amazon’s MTurk 51.0% men; 48.3% women).",
+      "replace": "1,000 participants on Amazon’s MTurk to complete a 3-minute survey for $0.75 (51.0% men; 48.3% women; Mage = 43.60; 77.9% White, 9.7% Black, 5.5% Hispanic, 6.4% Asian).",
+      "rationale": "Katy R26 — Sophia over-deleted; restore payment + demographics"
+    },
+    {
+      "id": "B17_study3b_protagonist",
+      "type": "replaceAllText",
+      "search": "(24% of the protagonist pool were women)",
+      "replace": "(so 24% of the protagonists were women)",
+      "rationale": "Katy R27"
+    },
+    {
+      "id": "B18_study3b_self_reference",
+      "type": "replaceAllText",
+      "search": "Otherwise, the study was identical to Study 3B.",
+      "replace": "Otherwise, the study was identical to Study 3A.",
+      "rationale": "Obvious typo from Sophia's deletion (study can't be identical to itself)"
+    },
+    {
+      "id": "B19_study3b_two_more",
+      "type": "replaceAllText",
+      "search": "in addition to two additional pieces of descriptive feedback",
+      "replace": "in addition to two more pieces of descriptive feedback",
+      "rationale": "Katy R30"
+    },
+    {
+      "id": "B20_study3b_baseline_balance",
+      "type": "replaceAllText",
+      "search": "Results\n\nFollowing our pre-registration, we ran an OLS with robust standard errors to predict whether the seventh and final biopic a participant selected featured a woman protagonist. OAs shown in Figure S2B and in Model 1 of Table S5,",
+      "replace": "Results\n\nOn average, 17.5% of participants' initially selected films featured female protagonists, with balance across conditions (p = 0.813; see Appendix Table/Section X). As shown in Figure S2B and in our primary, pre-registered OLS regression (Model 1 of Table S5),",
+      "rationale": "Katy R31 + R32 + screenshot 8/9"
+    },
+    {
+      "id": "B13_study2_dates",
+      "type": "replaceAllText",
+      "search": "between March 27, 2024, to May 15, 2024.",
+      "replace": "from March 27, 2024 to May 15, 2024.",
+      "rationale": "Cleanup: 'between X to Y' is ungrammatical; use 'from X to Y' (Codex GPT-5 R14)"
+    },
+    {
+      "id": "B21_cleanup_attributes_period",
+      "type": "replaceAllText",
+      "search": "more so than feedback about other attributes.In our next study,",
+      "replace": "more so than feedback about other attributes. In our next study,",
+      "rationale": "Cleanup: missing space after period (Sophia delete residue)"
+    },
+    {
+      "id": "B22_cleanup_choices_period",
+      "type": "replaceAllText",
+      "search": "even when reflecting on their own choices In the next study,",
+      "replace": "even when reflecting on their own choices. In the next study,",
+      "rationale": "Cleanup: missing period after 'choices' (Sophia delete residue)"
+    },
+    {
+      "id": "B23_cleanup_seven_period",
+      "type": "replaceAllText",
+      "search": "instead of seven . The brief description",
+      "replace": "instead of seven. The brief description",
+      "rationale": "Cleanup: stray space before period (Sophia delete residue)"
+    },
+    {
+      "id": "B24_cleanup_double_space",
+      "type": "replaceAllText",
+      "search": "but we changed  the selection set",
+      "replace": "but we changed the selection set",
+      "rationale": "Cleanup: double space (Sophia delete residue)"
+    },
+    {
+      "id": "B25_cleanup_addition_as_shown",
+      "type": "replaceAllText",
+      "search": "Table S5 Model 1). (see Appendix Table S6 for robustness checks). In addition,  s shown in Figure S2B and Table S5 (Models 5-8),",
+      "replace": "Table S5 Model 1). These results were robust to several alternative specifications, including controlling for participant gender, race, and age, and analyzing our data with logistic regression (see Appendix Table S6 for robustness checks). In addition, as shown in Figure S2B and Table S5 (Models 5-8),",
+      "rationale": "Cleanup: restore robustness sentence + fix 'In addition,  s shown' typo (Sophia delete residue, post-REJECT-59zqv9un4aw4)"
+    }
+  ],
+  "phaseC": [
+    {
+      "id": "C1",
+      "anchor_search": "We only recruited participants who were U.S. based",
+      "comment_body": "Katy's comment: Jose, cutting this level of detail means your study could not be replicated as performed, so this isn't really Kosher. You can put it in a footnote and say it just once though assuming you use the same threshold everywhere. If you would just use the same threshold, you could change the footnote to say something like \"unless otherwise stated, all other studies in this manuscript also…\" and then put other footnotes to indicate other rules."
+    },
+    {
+      "id": "C2",
+      "anchor_search": "In Study 2, we conducted a framed field experiment",
+      "comment_body": "Katy's comment: Without my additions, it's totally unclear what DV you're even measuring in the comparisons so really doesn't work. Honestly, my advice would be to leave the detailed write up in Study 1 so it appears once and then to switch to this condensed form in Study 2. I really don't like the lack of clarity here and suspect George was asking you to streamline LATER studies and avoid repetition. I can't imagine he really wants you to just wave your hands about how you found key results."
+    },
+    {
+      "id": "C3",
+      "anchor_search": "The IRB approved a waiver of informed consent",
+      "comment_body": "Katy's comment: this is critically important! (re: restoring \", so participants were not told that they were participating in a research study\")"
+    },
+    {
+      "id": "C4",
+      "anchor_search": "from the original set–where their prior selections were highlighted",
+      "comment_body": "Katy's comment: do not delete this — it's important procedural information."
+    },
+    {
+      "id": "C5",
+      "anchor_search": "(21.85% chose a woman; B = 0.132,",
+      "comment_body": "Katy's comment: without this text, the % is uninterpretable. (re: keeping the object after the percentage, e.g., \"chose a woman\")"
+    },
+    {
+      "id": "C6",
+      "anchor_search": "We found no significant effects of the impact of random assignment",
+      "comment_body": "Katy's comment: I deleted your edits as I found the original wording far clearer than the revised wording. (re: rejecting the \"As was the case in Study 1, w\" / \"Consistent with Study 1, none of the three…\" rewrite of this paragraph; original phrasing preferred.)"
+    },
+    {
+      "id": "C7",
+      "anchor_search": "Mage = 43.80; 72.3% White, 13.2% Black, 6.5% Hispanic, 7.2% Asian",
+      "comment_body": "Katy's comment: Report the same demographics each time. I don't care what they are, but be consistent."
+    },
+    {
+      "id": "C8",
+      "anchor_search": "On average, 17.5% of participants' initially selected films",
+      "comment_body": "Katy's comment: initially selected films featured female protagonists, with balance across conditions. The full stats you deleted need to be presented somewhere."
+    },
+    {
+      "id": "C9",
+      "anchor_search": "balance across conditions (p = 0.813",
+      "comment_body": "Katy's comment: This needs to be stated somewhere and is particularly weird to leave out since this was stated as an issue in a prior study so it's important to say it's balanced everywhere else!"
+    },
+    {
+      "id": "C10",
+      "anchor_search": "gender feedback condition on the likelihood of selecting a 7th film with a woman protagonist",
+      "comment_body": "Katy's comment: I would revert to the prior writeup. I don't think this rewrite is sufficiently clear and it's not much shorter. Fine to move all the specific F-tests to a table in the appendix and just say \"all p's > XX\" instead of giving each, but honestly, I think that may be creating more complexity than it's sparing the reader."
+    },
+    {
+      "id": "D1_zellner_section_number",
+      "anchor_search": "Wald tests employed, all ps ≤ .010; see Table 2).",
+      "comment_body": "Katy's comment (needs review): The Zellner Wald-test footnote I added (\"See Appendix Section XX for a detailed description on the formal test...\") has an XX placeholder. Jose: please fill in the correct appendix section number."
+    },
+    {
+      "id": "D2_baseline_appendix_section",
+      "anchor_search": "see Appendix Table/Section X",
+      "comment_body": "Katy's comment (needs review): I left an \"X\" placeholder for the appendix table/section that contains the full baseline-balance statistics. Jose: please fill in the correct table/section reference."
+    },
+    {
+      "id": "D4_study2_discussion_rewrite",
+      "anchor_search": "Study 2 extends our findings in two important ways.",
+      "comment_body": "Katy's comment (needs review): Katy's PDF green text suggests rewriting this Discussion paragraph with explicit \"First, we find that the effect persists...\" and \"Second, here participants received feedback about their own prior selections...\" structure. The exact final wording was uncertain in the cross-check. Jose: review and refine."
+    }
+  ],
+  "summary": {
+    "phase_a_count": 102,
+    "phase_a_distinct_suggestions": 66,
+    "phase_a_indexAction": 102,
+    "phase_a_delete_only": 56,
+    "phase_a_delete_and_reinsert": 46,
+    "phase_a_accept": 95,
+    "phase_a_reject": 7,
+    "phase_a_reject_sids": [
+      "suggest.59zqv9un4aw4",
+      "suggest.fhdqknladir8",
+      "suggest.rxpcar4aswjg",
+      "suggest.s2yp417s640"
+    ],
+    "phase_b_count": 25,
+    "phase_b_footnotes": 3,
+    "phase_b_replaces": 22,
+    "phase_c_count": 13
+  }
+}

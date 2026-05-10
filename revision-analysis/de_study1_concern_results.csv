@@ -1,0 +1,5 @@
+"study","attribute","n_total","main_eff_pp","main_p","inter_est","inter_p"
+"Study 1 (gender, NPR)","1: women feedback -> women pick (TARGET)",1000,12.51,0,0.0407,0.219
+"Study 1 (gender, NPR)","1: age feedback -> age pick",1000,2.57,0.1961,-0.0288,0.4696
+"Study 1 (gender, NPR)","1: location feedback -> location pick",1000,4.37,0.0341,-0.0018,0.9645
+"Study 1 (gender, NPR)","1: university feedback -> university pick",1000,6.41,3e-04,-0.0102,0.7734

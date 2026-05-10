@@ -1,0 +1,1776 @@
+--- simulated
++++ live
+@@ -0,0 +1,2 @@
++
+
++[SECTION BREAK]
+
+@@ -38 +40 @@
+-Participants. As pre-registered (https://osf.io/vazsm/), we recruited 1,000 participants through Prolific to complete a 3-minute survey for $0.75 (55.4% women; 43.7% men; 0.9% non-binary; Mage = 43.80; 72.3% White, 13.2% Black, 6.5% Hispanic, 7.2% Asian). [FOOTNOTE: We only recruited participants who were U.S. based, had a minimum 90% approval rate, and at least 1,000 prior survey completions. In all future Prolific studies reported in this manuscript, we imposed these same requirements.]
+
++Participants. As pre-registered (https://osf.io/vazsm/), we recruited 1,000 participants through Prolific to complete a 3-minute survey for $0.75 (55.4% women; 43.7% men; 0.9% non-binary; Mage = 43.80; 72.3% White, 13.2% Black, 6.5% Hispanic, 7.2% Asian).
+
+@@ -40,2 +42 @@
+-Participants were then randomly assigned to one of two conditions: (1) the no gender feedback condition or (2) the gender feedback condition. In the no gender feedback condition, participants received descriptive feedback summarizing the percentage of experts they had selected over the past three months who (1) were under 50 years old, (2) were based on the West Coast (of the United States), and (3) worked at a university. Notably, NPR has actually tracked each of these attributes of expert sources, which were deemed a priority, and displayed them to producers. In the gender feedback condition, participants always received feedback about the percentage of past selectees who were women, presented alongside two of the three statistics presented in the no gender feedback condition drawn at random [FOOTNOTE: We also stimulus sampled what descriptive feedback participants received about their past sources: They were either told that 10% (or 20%) of past experts were women, that 30% (or 50%) were under 50 years old, that 10% (or 70%) were based on the West Coast, and that 50% (or 10%) worked at a university.]. 
+
+-
+
++Participants were then randomly assigned to one of two conditions: (1) the no gender feedback condition or (2) the gender feedback condition. In the no gender feedback condition, participants received descriptive feedback summarizing the percentage of experts they had selected over the past three months who (1) were under 50 years old, (2) were based on the West Coast (of the United States), and (3) worked at a university. Notably, NPR has actually tracked each of these attributes of expert sources, which were deemed a priority, and displayed them to producers. In the gender feedback condition, participants always received feedback about the percentage of past selectees who were women, presented alongside two of the three statistics presented in the no gender feedback condition drawn at random. 
+
+@@ -48 +49 @@
+-As shown in Figure 3A and Model 1 of Table 2, participants selected a significantly higher proportion of women experts in the gender feedback condition (46.2% women experts selected) than in the no gender feedback condition (33.7% women experts selected; B = 0.125, 95% CI = [0.093, 0.157], t(997) = 7.58, p < .001). The effect was robust to controlling for participant demographics (Appendix Table S1) and was significantly larger than the effect of offering feedback on each of the three other attributes featured in this study — age (over 50), geography (located on the West Coast) and professional affiliation (university based) — on increasing selections of experts selected with the described attribute (see Appendix for a complete discussion of the systems of simultaneous equations and Wald tests employed, all ps ≤ .010; see Table 2). [FOOTNOTE: See Appendix Section XX for a detailed description on the formal test of determining whether the effect of gender and race feedback is significantly larger than all other comparison attributes (Zellner, 1962).]
+
++As shown in Figure 3A and Model 1 of Table 2, participants selected a significantly higher proportion of women experts in the gender feedback condition (46.2% women experts selected) than in the no gender feedback condition (33.7% women experts selected; B = 0.125, 95% CI = [0.093, 0.157], t(997) = 7.58, p < .001). The effect was robust to controlling for participant demographics (Appendix Table S1).	To formally test whether offering feedback about the percentage of past experts who were women had a larger effect on the subsequent selection of women experts than offering feedback about other attributes had on the subsequent selection of experts with those attributes, we constructed three systems of simultaneous equations (Zellner, 1962). For each system, we included a pair of equations: one modeling the effect of random assignment to receive gender feedback and one modeling the effect of random assignment to receive feedback on another expert attribute (i.e., past selectees who were under 50 years old, based on the West Coast, or worked at a university, see Table 2, Models 5-8). We then used Wald tests to compare the treatment effects estimated in the paired equations, which confirmed that the effect of assignment to the gender feedback condition on the proportion of women experts selected was significantly larger than the effects of assignment to receive descriptive feedback about the percentage of past experts who were (1) under 50 years old (F(1, 3988) = 6.63, p = .010), (2) based on the West Coast (F(1, 3988) = 8.35, p = .004), or (3) worked at a university (F(1, 3988) = 12.84, p < .001) on subsequent selections of experts with those respective attributes. This pattern of findings held across stimuli sets (see footnote 2). 
+
+@@ -51 +52 @@
+-------------------------------------
+
++        ------------------------------------
+
+@@ -53,0 +55 @@
++
+
+@@ -56,5 +58,5 @@
+-	In Study 2, we conducted a framed field experiment (Harrison & List, 2004) to extend our key findings to an in-person, real choice environment in which participants were not aware they were under study. Here we tested whether our key effect of descriptive feedback on selection decisions held when evaluators were making incentive-compatible choices about which prominent figures they would like to feature in a public display in their organization. 
+
+-Methods
+
+-Participants. This study was pre-registered on AsPredicted (https://aspredicted.org/WYY_3PL). We recruited 302 participants to complete a 1-minute survey in exchange for a candy bar (52.52% men; 44.96% women; Mage = 25.11, 41.37% White, 10.79% Black, 4.68% Hispanic, 42.81% Asian) in a high-traffic pedestrian area at a midsize university in the Northeastern United States from March 27, 2024 to May 15, 2024. The IRB approved a waiver of informed consent, so participants were not told that they were participating in a research study.
+
+-Procedure. Student recruiters in school-branded clothing (truthfully) told passersby they were conducting a quick vote on which biographies should be displayed at the business school to encourage non-fiction reading; seven books with obscured covers on a table served as a visual prop (see Figure S1 in the Appendix). Participants who agreed were handed an iPad showing 25 well-known biographies, each with a cover thumbnail and a brief description (protagonist's name, role, publication year, page count); five (20%) featured women protagonists.
+
+-Participants were instructed to vote for an initial portfolio of six biographies they would recommend for the on-campus display. After making their initial selections, participants were randomly assigned to either (1) the no gender feedback condition or (2) the gender feedback condition. In the no gender feedback condition, participants were presented with three pieces of descriptive feedback about their initial six book selections, specifically the percentage of biographies they had selected that (1) were over 500 pages, (2) were written in the past 25 years, and (3) featured an entertainer. In the gender feedback condition, participants always received feedback about the percentage of biographies they had selected featuring a woman protagonist alongside two additional pieces of descriptive feedback that were randomly drawn from the list of three descriptive facts provided in the no gender feedback condition. After receiving descriptive feedback about the composition of their initial selected portfolio of six biographies, participants were asked to vote for a seventh and final biography from the original set–where their prior selections were highlighted–to include in the display. 
+
++	In Study 2, we conducted a framed field experiment (Harrison & List, 2004) to extend our key findings to an in-person, real choice environment in which participants were not aware they were under study. Here we tested whether the key effect of descriptive feedback on selection decisions held when evaluators were making incentive-compatible choices about which prominent figures they would like to feature in a public display in their organization. 
+
++Methods
+
++Participants. This study was pre-registered on AsPredicted (https://aspredicted.org/WYY_3PL). We recruited 302 participants to complete a 1-minute survey in exchange for a candy bar (52.52% men; 44.96% women; Mage = 25.11, 41.37% White, 10.79% Black, 4.68% Hispanic, 42.81% Asian) in a high-traffic pedestrian area at a midsize university in the Northeastern United States between March 7 and May 15, 2024. The IRB approved a waiver of informed consent, so participants were not told that they were participating in a research study.
+
++Procedure. Student recruiters in school-branded clothing (truthfully) told passersby they were conducting a quick vote on which biographies should be displayed at the business school to encourage non-fiction reading; seven books with obscured covers on a table served as a visual prop (see Figure S1 in the Appendix). Participants who agreed were handed an iPad showing 25 well-known biographies, each with a cover thumbnail and a brief description (protagonist’s name, role, publication year, page count); five (20%) featured women protagonists.
+
++Participants were instructed to vote for an initial portfolio of six biographies they would recommend for the on-campus display. After making their initial selections, participants were randomly assigned to either (1) the no gender feedback condition or (2) the gender feedback condition. In the no gender feedback condition, participants were presented with three pieces of descriptive feedback about their initial six book selections, specifically the percentage of biographies they had selected that (1) were over 500 pages, (2) were written in the past 25 years, and (3) featured an entertainer. In the gender feedback condition, participants always received feedback about the percentage of biographies they had selected featuring a woman protagonist alongside two additional pieces of descriptive feedback that were randomly drawn from the list of three descriptive facts provided in the no gender feedback condition. After receiving descriptive feedback about the composition of their initial selected portfolio of six biographies, participants were asked to vote for a seventh and final biography.
+
+@@ -66 +68 @@
+-We found no significant effects of the impact of random assignment to receive descriptive feedback about another given biography attribute in a participant’s initial portfolio of choices on subsequent selections of biographies with that same attribute (pages > 500: B = 0.01, 95% CI = [-0.09, 0.12], t(300) = 0.24, p = .812; written past 25 years: B = 0.05, 95% CI = [-0.09, 0.18], t(300) = 0.68, p = .500; featured entertainer: B = 0.06, 95% CI = [-0.12, 0.23], t(300) = 0.64, p = .522, See Table 3 Models 2-4). 
+
++As was the case in Study 1, we found no significant effects of the impact of random assignment to receive descriptive feedback about another given biography attribute in a participant’s initial portfolio of choices on subsequent selections of biographies with that same attribute (all p’s ≥ .5; see Table 3 Models 2-4). 
+
+@@ -68 +70 @@
+-	Study 2 extends our findings in two important ways. The effect persists in a field setting where participants made consequential community choices, and (unlike Study 1) participants received feedback about their own prior selections rather than hypothetical ones — confirming the effect arises even when reflecting on their own choices. In the next study, we test whether providing feedback about the racial composition of past selectees increases future selections of racial minorities in an incentivized experiment. 
+
++	Study 2 extends our findings in two important ways. First, we find that the effect persists in a field setting where participants made consequential choices. Second, unlike Study 1, here  participants received feedback about their own prior selections rather than hypothetical decisions—confirming that the effect arises even when people reflect on their own past choices. In the next study, we test whether providing feedback about the racial composition of past selectees increases future selections of racial minorities in an incentivized experiment. 
+
+@@ -69,0 +72 @@
++
+
+@@ -84 +87 @@
+-Participants. As pre-registered (https://osf.io/uyn8g/), we recruited 1,000 participants on Amazon’s MTurk to complete a 3-minute survey for $0.75 (51.0% men; 48.3% women; Mage = 43.60; 77.9% White, 9.7% Black, 5.5% Hispanic, 6.4% Asian).
+
++Participants. As pre-registered (https://osf.io/uyn8g/), we recruited 1,000 participants on Cloudresearch to complete a 3-minute survey for $0.75 (51.0% men; 48.3% women; Mage = 43.60; 77.9% White, 9.7% Black, 5.5% Hispanic, 6.4% Asian).
+
+@@ -88,2 +91 @@
+-
+
+-On average, 17.5% of participants' initially selected films featured female protagonists, with balance across conditions (p = 0.813; see Appendix Table/Section X). As shown in Figure S2B and in our primary, pre-registered OLS regression (Model 1 of Table S5), participants were significantly more likely to choose a biopic featuring a woman protagonist as their seventh and final film in the gender feedback condition (40.64% chose a biopic with a woman protagonist) than in the no gender feedback condition (20.08% chose a biopic with a woman protagonist; B = 0.206, 95% CI = [0.150, 0.261], t(998) = 7.24, p < .001, see Table S5 Model 1). These results were robust to several alternative specifications, including controlling for participant gender, race, and age, and analyzing our data with logistic regression (see Appendix Table S6 for robustness checks). In addition, as shown in Figure S2B and Table S5 (Models 5-8), and as predicted, the effect of assignment to the gender feedback condition on the likelihood of selecting a 7th film with a woman protagonist was larger than the effect of assignment to receive descriptive feedback about the percentage of initial films selected with a (1) budget above $40M (F(1, 1992) = 65.06, p < .001), (2) political leader protagonist (F(1, 1992) = 57.74, p < .001), or (3) release year after 2010 (F(1, 1992) = 12.44, p < .001) on subsequent selections of a 7th and final biopic with, respectively, a (1) budget above $40M, (2) political leader protagonist, or (3) release year after 2010 (in fact, all other types of feedback had insignificant effects on subsequent film selections).
+
++On average, 17.5% of participants’ initially selected films featured female protagonists, with balance across conditions (p = 0.813; see Appendix Table/Section X). As shown in Figure S2B and in our primary, pre-registered OLS regression (Model 1 of Table S5), participants were significantly more likely to choose a biopic featuring a woman protagonist as their seventh and final film in the gender feedback condition (40.64% chose a biopic with a woman protagonist) than in the no gender feedback condition (20.08% chose a biopic with a woman protagonist; B = 0.206, 95% CI = [0.150, 0.261], t(998) = 7.24, p < .001, see Table S5 Model 1). These results were robust to several alternative specifications, including controlling for participant gender, race, and age, and analyzing our data with logistic regression (see Appendix Table S6 for robustness checks). In addition, as shown in Figure S2B and Table S5 (Models 5-8), and as predicted, the effect of assignment to the gender feedback condition on the likelihood of selecting a 7th film with a woman protagonist was larger than the effect of assignment to receive descriptive feedback about the percentage of initial films selected with a (1) budget above $40M (F(1, 1992) = 65.06, p < .001), (2) political leader protagonist (F(1, 1992) = 57.74, p < .001), or (3) release year after 2010 (F(1, 1992) = 12.44, p < .001) on subsequent selections of a 7th and final biopic with, respectively, a (1) budget above $40M, (2) political leader protagonist, or (3) release year after 2010 (in fact, all other types of feedback had insignificant effects on subsequent film selections).
+
+@@ -91 +93 @@
+-	Across two experiments involving incentivized decisions, we found that providing descriptive feedback about the race (Study 3A) or gender (Study 3B) of protagonists featured in past films selected for a marketing campaign significantly increased the likelihood that participants subsequently selected films featuring women or racial minorities, respectively. One possible alternative explanation for our findings is that providing participants with feedback about the race or gender of past selections signaled that we value racial or gender diversity. For example, when participants first selected films, they might have chosen based on personal preferences. But when they received descriptive feedback summarizing the attributes of their selected biopics, evaluators may have inferred that protagonist race (in Study 3A) or gender (in Study 3B) were of particular significance to the experimenter and attended to these attributes more in subsequent decisions as a result of a “demand effect” (Orne, 1962; Zizzo, 2010). If this alternative explanation were driving our effects, however, we would also expect participants to respond to the “demand effect” inherent in receiving feedback about other attributes of their selected films (e.g., feedback about a film’s budget or year of release), but we found no such patterns. 
+
++Across two experiments involving incentivized decisions, we found that providing descriptive feedback about the race (Study 3A) or gender (Study 3B) of protagonists featured in past films selected for a marketing campaign significantly increased the likelihood that participants subsequently selected films featuring women or racial minorities, respectively. One possible alternative explanation for our findings is that providing participants with feedback about the race or gender of past selections signaled that we value racial or gender diversity. For example, when participants first selected films, they might have chosen based on personal preferences. But when they received descriptive feedback summarizing the attributes of their selected biopics, evaluators may have inferred that protagonist race (in Study 3A) or gender (in Study 3B) were of particular significance to the experimenter and attended to these attributes more in subsequent decisions as a result of a “demand effect” (Orne, 1962; Zizzo, 2010). If this alternative explanation were driving our effects, however, we would also expect participants to respond to the “demand effect” inherent in receiving feedback about other attributes of their selected films (e.g., feedback about a film’s budget or year of release), but we found no such patterns. 
+
+@@ -264,4 +266,2 @@
+-Overview of Experiments
+
+-
+
+-
+
+-
+
++[TABLE START]
+
++Overview of Experiments |  |  | 
+
+@@ -269,6 +269,3 @@
+-(N)
+
+-Selection Decision
+
+-(Real Choice or Hypothetical) 
+
+-Feedback Provided on Initial Selections
+
+-(bolded items’ inclusion was randomized)
+
+-Key Findings
+
++(N) | Selection Decision
+
++(Real Choice or Hypothetical) | Feedback Provided on Initial Selections
+
++(bolded items’ inclusion was randomized) | Key Findings
+
+@@ -276,4 +273,2 @@
+-(N=1,000)
+
+-Experts to Feature in NPR Stories
+
+-(Hypothetical)
+
+-% of NPR Experts Who…
+
++(N=1,000) | Experts to Feature in NPR Stories
+
++(Hypothetical) | % of NPR Experts Who…
+
+@@ -283,2 +278 @@
+-Worked at a University
+
+-Feedback about the % of women selected previously increased future selections of women.
+
++Worked at a University | Feedback about the % of women selected previously increased future selections of women.
+
+@@ -287,4 +281,2 @@
+-(N=302)
+
+-Biographical Books to Feature in a Public Display on a University Campus
+
+-(Real Choice)
+
+-% of Biographies That…
+
++(N=302) | Biographical Books to Feature in a Public Display on a University Campus
+
++(Real Choice) | % of Biographies That…
+
+@@ -294,6 +286,2 @@
+-Featured an Entertainer
+
+-Prior results replicate in a field context with in-person participants
+
+-
+
+-
+
+-
+
+-
+
++Featured an Entertainer | Prior results replicate in a field context with in-person participants
+
++ |  |  | 
+
+@@ -301,4 +289,2 @@
+-(N=1,000)
+
+-Biographical Films to Feature in a Facebook Ad Campaign
+
+-(Real Choice)
+
+-% of Films That Were…
+
++(N=1,000) | Biographical Films to Feature in a Facebook Ad Campaign
+
++(Real Choice) | % of Films That Were…
+
+@@ -308,2 +294 @@
+-Over Two Hours Long
+
+-Feedback about the % of racial minority protagonists selected previously increased future selections of minorities.
+
++Over Two Hours Long | Feedback about the % of racial minority protagonists selected previously increased future selections of minorities.
+
+@@ -312,3 +297 @@
+-(N=1,000)
+
+-
+
+-% of Films That Were…
+
++(N=1,000) |  | % of Films That Were…
+
+@@ -318,2 +301 @@
+-About a Political Leader
+
+-Study 3A results replicated with gender as the focal feedback variable.
+
++About a Political Leader | Study 3A results replicated with gender as the focal feedback variable.
+
+@@ -321,4 +303,2 @@
+-(N=1,000)
+
+-Authors to Feature in a Library Display
+
+-(Hypothetical)
+
+-% of Authors Who…
+
++(N=1,000) | Authors to Feature in a Library Display
+
++(Hypothetical) | % of Authors Who…
+
+@@ -328,2 +308 @@
+-Were Born in the 1800s
+
+-Prior results replicated with new stimuli.
+
++Were Born in the 1800s | Prior results replicated with new stimuli.
+
+@@ -332,3 +311 @@
+-(N=1,000)
+
+-
+
+-% of Authors Who…
+
++(N=1,000) |  | % of Authors Who…
+
+@@ -338,2 +315 @@
+-Wrote at least One Book that Remained in Continuous Print for Over 50 Years
+
+-Prior results replicated with new stimuli
+
++Wrote at least One Book that Remained in Continuous Print for Over 50 Years | Prior results replicated with new stimuli
+
+@@ -342,4 +318 @@
+-
+
+-
+
+-
+
+-
+
++ |  |  | 
+
+@@ -347,3 +320 @@
+-(N=1,200)
+
+-Panelists to Include on a Hypothetical International Business Panel (Hypothetical)
+
+-% of Panelists Who Were…
+
++(N=1,200) | Panelists to Include on a Hypothetical International Business Panel (Hypothetical) | % of Panelists Who Were…
+
+@@ -352,2 +323 @@
+-Founders
+
+-Study 3B and 4B results were replicated in a new decision context.
+
++Founders | Study 3B and 4B results were replicated in a new decision context.
+
+@@ -354,0 +325 @@
++[TABLE END]
+
+@@ -360,32 +331,6 @@
+-
+
+-Independent Regression Equations
+
+-
+
+-
+
+-
+
+-
+
+-Simultaneous System of Equations
+
+-
+
+-
+
+-
+
+-Dependent Variable: % of the Final Experts Selected Who…
+
+-Were 
+
+-Women
+
+-Were Under the Age of 50
+
+-Were Based on the West Coast of the U.S.
+
+-Worked at a University
+
+-
+
+-Were 
+
+-Women
+
+-Were Under the Age of 50
+
+-Were Based on the West Coast of the U.S.
+
+-Worked at a University
+
+- 
+
+-Model 1
+
+-Model 2
+
+-Model 3
+
+-Model 4
+
+-
+
+-Model 5
+
+-Model 6
+
+-Model 7
+
+-Model 8
+
++[TABLE START]
+
++ | Independent Regression Equations |  |  |  |  | Simultaneous System of Equations |  |  | 
+
++Dependent Variable: % of the Final Experts Selected Who… | Were 
+
++Women | Were Under the Age of 50 | Were Based on the West Coast of the U.S. | Worked at a University |  | Were 
+
++Women | Were Under the Age of 50 | Were Based on the West Coast of the U.S. | Worked at a University
+
++ | Model 1 | Model 2 | Model 3 | Model 4 |  | Model 5 | Model 6 | Model 7 | Model 8
+
+@@ -394,120 +339,13 @@
+-Experts Who Were...
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-Women
+
+-0.125***
+
+-
+
+-
+
+-
+
+-
+
+-0.234***
+
+-0.041**
+
+-0.041***
+
+-0.026+
+
+-
+
+-(0.017)
+
+-
+
+-
+
+-
+
+-
+
+-(0.015)
+
+-(0.011)
+
+-(0.013)
+
+-(0.014)
+
+-Under 50 Years Old
+
+-
+
+-0.026
+
+-
+
+-
+
+-
+
+-0.119**
+
+-0.072***
+
+-0.073***
+
+-0.083***
+
+-
+
+-
+
+-(0.020)
+
+-
+
+-
+
+-
+
+-(0.019)
+
+-(0.015)
+
+-(0.017)
+
+-(0.017)
+
+-Based on the West Coast of the U.S.
+
+-
+
+-
+
+-0.045*
+
+-
+
+-
+
+-0.116***
+
+-0.061***
+
+-0.107***
+
+-0.074***
+
+-
+
+-
+
+-
+
+-(0.021)
+
+-
+
+-
+
+-(0.019)
+
+-(0.015)
+
+-(0.016)
+
+-(0.017)
+
+-Working at a University
+
+-
+
+-
+
+-
+
+-0.064***
+
+-
+
+-0.101***
+
+-0.051***
+
+-0.099**
+
+-0.107***
+
+-
+
+-
+
+-
+
+-
+
+-(0.018)
+
+-
+
+-(0.017)
+
+-(0.013)
+
+-(0.043)
+
+-(0.015)
+
+-Observations
+
+-1,000
+
+-1,000
+
+-1,000
+
+-1,000
+
+- 
+
+-1,000
+
+-1,000
+
+-1,000
+
+-1,000
+
+-R-Squared
+
+-0.054
+
+-0.002
+
+-0.004
+
+-0.012
+
+- 
+
+-0.706
+
+-0.421
+
+-0.531
+
+-0.474
+
++Experts Who Were... |  |  |  |  |  |  |  |  | 
+
++ |  |  |  |  |  |  |  |  | 
+
++Women | 0.125*** |  |  |  |  | 0.234*** | 0.041** | 0.041*** | 0.026+
+
++ | (0.017) |  |  |  |  | (0.015) | (0.011) | (0.013) | (0.014)
+
++Under 50 Years Old |  | 0.026 |  |  |  | 0.119** | 0.072*** | 0.073*** | 0.083***
+
++ |  | (0.020) |  |  |  | (0.019) | (0.015) | (0.017) | (0.017)
+
++Based on the West Coast of the U.S. |  |  | 0.045* |  |  | 0.116*** | 0.061*** | 0.107*** | 0.074***
+
++ |  |  | (0.021) |  |  | (0.019) | (0.015) | (0.016) | (0.017)
+
++Working at a University |  |  |  | 0.064*** |  | 0.101*** | 0.051*** | 0.099** | 0.107***
+
++ |  |  |  | (0.018) |  | (0.017) | (0.013) | (0.043) | (0.015)
+
++Observations | 1,000 | 1,000 | 1,000 | 1,000 |  | 1,000 | 1,000 | 1,000 | 1,000
+
++R-Squared | 0.054 | 0.002 | 0.004 | 0.012 |  | 0.706 | 0.421 | 0.531 | 0.474
+
++[TABLE END]
+
+@@ -518,78 +356,15 @@
+-Dependent Variable: The Final Biography Selected was…
+
+-About a Woman
+
+-Over 500Pages
+
+-Written in the Past 25 Years
+
+-About an Entertainer
+
+-
+
+- 
+
+-Model 1
+
+-Model 2
+
+-Model 3
+
+-Model 4
+
+-
+
+-Indicator for Whether Feedback was Provided on % of Original Biographies That Were…
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-About a Woman
+
+-0.132*
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-(0.052)
+
+-
+
+-
+
+-
+
+-
+
+-Over 500 Pages
+
+-
+
+-0.013
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-(0.054)
+
+-
+
+-
+
+-
+
+-Written in the Past 25 Years
+
+-
+
+-
+
+-0.055
+
+-
+
+-
+
+-
+
+-
+
+- 
+
+-(0.068)
+
+-
+
+-
+
+-About an Entertainer
+
+-
+
+-
+
+-
+
+-0.056
+
+-
+
+-
+
+- 
+
+- 
+
+- 
+
+-(0.087)
+
+- 
+
+-Observations
+
+-302
+
+-302
+
+-302
+
+-302
+
+-
+
+-R-Squared
+
+-0.022
+
+-0.001
+
+-0.001
+
+-0.001
+
+- 
+
++[TABLE START]
+
++Dependent Variable: The Final Biography Selected was… | About a Woman | Over 500Pages | Written in the Past 25 Years | About an Entertainer | 
+
++ | Model 1 | Model 2 | Model 3 | Model 4 | 
+
++Indicator for Whether Feedback was Provided on % of Original Biographies That Were… |  |  |  |  | 
+
++About a Woman | 0.132* |  |  |  | 
+
++ | (0.052) |  |  |  | 
+
++Over 500 Pages |  | 0.013 |  |  | 
+
++ |  | (0.054) |  |  | 
+
++Written in the Past 25 Years |  |  | 0.055 |  | 
+
++ |  |  | (0.068) |  | 
+
++About an Entertainer |  |  |  | 0.056 | 
+
++ |  |  |  | (0.087) | 
+
++Observations | 302 | 302 | 302 | 302 | 
+
++R-Squared | 0.022 | 0.001 | 0.001 | 0.001 | 
+
++[TABLE END]
+
+@@ -601,169 +376,36 @@
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-Dependent Variable: The Final Selection in the Choice Set Was...
+
+-
+
+-A Biography About a Woman(Study 2)
+
+-
+
+-A Film Featuring a Racial Minority Protagonist(Study 3A)
+
+-
+
+-A Film Featuring a Woman Protagonist(Study 3B)
+
+-
+
+-A Book by a Racial Minority Author(Study 4A)
+
+-
+
+-A Book by a Woman Author(Study 4B)
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+- 
+
+- 
+
+-
+
+-
+
+-Model 1
+
+-Model 2
+
+-Model 3
+
+-Model 4
+
+-Model 5
+
+-
+
+-Indicator for Whether Feedback was Provided on the % of Initial Selectees Who Were…
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-Women
+
+-0.291***
+
+-(0.084)
+
+-
+
+-0.297***
+
+-(0.041)
+
+-
+
+-0.188***
+
+-(0.047)
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-Racial Minorities
+
+-
+
+-0.110*
+
+-(0.046)
+
+-
+
+-0.188***(0.041)
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-% of Initial Selectees Who Were…
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-Women
+
+-0.061
+
+-(0.034)
+
+-
+
+--0.002
+
+-(0.018)
+
+-
+
+--0.010
+
+-(0.016)
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-Racial Minorities
+
+-
+
+--0.09***
+
+-(0.017)
+
+-
+
+-0.043**
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-(0.016)
+
+-
+
+-
+
+- (Indicator for Whether Feedback was Provided on the % of Initial Selectees Who Were Women) x (% of Initial Selectees Who Were Women)
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+--0.107*
+
+-(0.046)
+
+-
+
+--0.087**
+
+-(0.027)
+
+-
+
+--0.046*
+
+-(0.022)
+
+-
+
+- (Indicator for Whether Feedback was Provided on the % of Initial Selectees Who Were Racial Minorities) x (% of Initial Selectees Who Were Racial Minorities)
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+- 
+
+- -0.019
+
+-(0.026)
+
+-
+
+--0.044(0.023)
+
+-
+
+-
+
+-Observations
+
+-302
+
+-1,000
+
+-1,000
+
+-1,000
+
+-1,000
+
+-
+
+-R-Squared
+
+-0.039
+
+-0.055
+
+-0.066
+
+-0.023
+
+-0.017
+
+-
+
++[TABLE START]
+
++ |  |  |  |  | 
+
++Dependent Variable: The Final Selection in the Choice Set Was... | A Biography About a Woman(Study 2) | A Film Featuring a Racial Minority Protagonist(Study 3A) | A Film Featuring a Woman Protagonist(Study 3B) | A Book by a Racial Minority Author(Study 4A) | A Book by a Woman Author(Study 4B)
+
++ |  |  |  |  |  | 
+
++ |  |  |  |  |  | 
+
++ |  |  |  |  |  | 
+
++ | Model 1 | Model 2 | Model 3 | Model 4 | Model 5 | 
+
++Indicator for Whether Feedback was Provided on the % of Initial Selectees Who Were… |  |  |  |  |  | 
+
++Women | 0.291***
+
++(0.084) |  | 0.297***
+
++(0.041) |  | 0.188***
+
++(0.047) | 
+
++ |  |  |  |  |  | 
+
++Racial Minorities |  | 0.110*
+
++(0.046) |  | 0.188***(0.041) |  | 
+
++ |  |  |  |  |  | 
+
++% of Initial Selectees Who Were… |  |  |  |  |  | 
+
++Women | 0.061
+
++(0.034) |  | -0.002
+
++(0.018) |  | -0.010
+
++(0.016) | 
+
++ |  |  |  |  |  | 
+
++Racial Minorities |  | -0.09***
+
++(0.017) |  | 0.043** |  | 
+
++ |  |  |  | (0.016) |  | 
+
++(Indicator for Whether Feedback was Provided on the % of Initial Selectees Who Were Women) x (% of Initial Selectees Who Were Women) |  |  |  |  |  | 
+
++ | -0.107*
+
++(0.046) |  | -0.087**
+
++(0.027) |  | -0.046*
+
++(0.022) | 
+
++(Indicator for Whether Feedback was Provided on the % of Initial Selectees Who Were Racial Minorities) x (% of Initial Selectees Who Were Racial Minorities) |  |  |  |  |  | 
+
++ |  | -0.019
+
++(0.026) |  | -0.044(0.023) |  | 
+
++Observations | 302 | 1,000 | 1,000 | 1,000 | 1,000 | 
+
++R-Squared | 0.039 | 0.055 | 0.066 | 0.023 | 0.017 | 
+
++[TABLE END]
+
+@@ -774,72 +416,9 @@
+-Dependent Variable: The Final Panelist Selected was a Woman
+
+-Participants Randomly Assigned to See Women Underrepresented in the Candidate Set
+
+-
+
+-
+
+-Participants Randomly Assigned to See Women Overrepresented in the Candidate Set
+
+-
+
+-
+
+-Full Participant Sample
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+- 
+
+-Model 1
+
+-Model 2
+
+- 
+
+-Model 3
+
+-Model 4
+
+- 
+
+-Model 5
+
+-Model 6
+
+-Feedback was Provided on the % of Panelists Who Were Women
+
+-0.241***
+
+-0.236***
+
+-
+
+--0.106**
+
+--0.107**
+
+-
+
+-0.241***
+
+-0.238***
+
+-
+
+-(0.040)
+
+-(0.068)
+
+-
+
+-(0.037)
+
+-(0.037)
+
+-
+
+-(0.040)
+
+-(0.040)
+
+-Women Were Overrepresented in the Candidate Set
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-0.434***
+
+-0.435***
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-(0.037)
+
+-(0.037)
+
++[TABLE START]
+
++Dependent Variable: The Final Panelist Selected was a Woman | Participants Randomly Assigned to See Women Underrepresented in the Candidate Set |  |  | Participants Randomly Assigned to See Women Overrepresented in the Candidate Set |  |  | Full Participant Sample | 
+
++ |  |  |  |  |  |  |  | 
+
++ |  |  |  |  |  |  |  | 
+
++ | Model 1 | Model 2 |  | Model 3 | Model 4 |  | Model 5 | Model 6
+
++Feedback was Provided on the % of Panelists Who Were Women | 0.241*** | 0.236*** |  | -0.106** | -0.107** |  | 0.241*** | 0.238***
+
++ | (0.040) | (0.068) |  | (0.037) | (0.037) |  | (0.040) | (0.040)
+
++Women Were Overrepresented in the Candidate Set |  |  |  |  |  |  | 0.434*** | 0.435***
+
++ |  |  |  |  |  |  | (0.037) | (0.037)
+
+@@ -847,54 +426,7 @@
+-Panelists Who Were Women) x (Women Overrepresented)
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+--0.348***
+
+--0.346***
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-(0.054)
+
+-(0.054)
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-Controls
+
+-No
+
+-Yes
+
+- 
+
+-No
+
+-Yes
+
+- 
+
+-No
+
+-Yes
+
+-Observations
+
+-598
+
+-598
+
+-
+
+-602
+
+-602
+
+-
+
+-1,200
+
+-1,200
+
+-R-Squared
+
+-0.059
+
+-0.071
+
+- 
+
+-0.014
+
+-0.023
+
+- 
+
+-0.105
+
+-0.113
+
++Panelists Who Were Women) x (Women Overrepresented) |  |  |  |  |  |  | -0.348*** | -0.346***
+
++ |  |  |  |  |  |  | (0.054) | (0.054)
+
++ |  |  |  |  |  |  |  | 
+
++Controls | No | Yes |  | No | Yes |  | No | Yes
+
++Observations | 598 | 598 |  | 602 | 602 |  | 1,200 | 1,200
+
++R-Squared | 0.059 | 0.071 |  | 0.014 | 0.023 |  | 0.105 | 0.113
+
++[TABLE END]
+
+@@ -902,0 +435,2 @@
++
+
++[SECTION BREAK]
+
+@@ -904,114 +438,21 @@
+-Study (N)
+
+-Identity-Target Group
+
+-Effect of Identity-Target Feedback on Final Selection(s)
+
+-Comparison Attributes Provided in Descriptive Feedback
+
+-Effect of Comparison-Attribute Feedback on Whether Final Selection(s) Featured the Comparison Attribute
+
+-p-value of Wald Test Between the effect of Identity-Target Feedback and Comparison-Attribute Feedback
+
+-Study 1: Online Experiment (N = 1,000)
+
+-% of Past NPR Experts Who Were Women
+
+-+12.51***
+
+-Were Under 50 Years Old
+
+-+2.57
+
+-.010*
+
+-
+
+-
+
+-
+
+-Were Based on the West Coast of the U.S.
+
+-+4.37*
+
+-.004**
+
+-
+
+-
+
+-
+
+-Worked at a University
+
+-+6.41***
+
+-< .001***
+
+-Study 2: University Campus Field Experiment (N = 302)
+
+-% of Initial Biographies That Featured a Woman Protagonist
+
+-+13.20*
+
+-Were Over 500 Pages Long
+
+-+1.00
+
+-.129
+
+-
+
+-
+
+-
+
+-Were Written in the Past 25 Years
+
+-+5.00
+
+-.278
+
+-
+
+-
+
+-
+
+-Featured an Entertainer
+
+-+6.00
+
+-.450
+
+-Study 3A: Incentive Compatible Online Experiment (N = 1,000)
+
+-% of Initial Films That Featured a Racial Minority Protagonist
+
+-+9.38***
+
+-Were Made on a Budget Above $40 Million
+
+-−0.23
+
+-.006*
+
+-
+
+-
+
+-
+
+-Were Released After 2010
+
+-+6.54
+
+-< .001***
+
+-
+
+-
+
+-
+
+-Were Over Two Hours Long
+
+-−6.72+
+
+-.009**
+
+-Study 3B: Incentive Compatible Online Experiment (N = 1,000)
+
+-% of Initial Films That Featured a Woman Protagonist
+
+-+20.56***
+
+-Were Made on a Budget Above $40 Million
+
+-+1.98
+
+-< .001***
+
+-
+
+-
+
+-
+
+-Were Released After 2010
+
+-−0.29
+
+-< .001***
+
+-
+
+-
+
+-
+
+-Featured a Political Leader as Protagonist
+
+-−5.08
+
+-< .001***
+
+-Study 4A: Online Experiment (N = 1,000)
+
+-% of Initial Authors Who Were Racial Minorities
+
+-+13.40***
+
+-Wrote Poetry
+
+-+6.38+
+
+-.013*
+
+-
+
+-
+
+-
+
+-Authored More Than 10 Books
+
+-+0.68
+
+-.019*
+
+-
+
+-
+
+-
+
+-Were Born in the 1800s
+
+-+7.44+
+
+-.022*
+
+-Study 4B: Online Experiment (N = 1,000)
+
+-% of Initial Authors Who Were Women
+
+-+11.94***
+
+-Wrote Books, Poems, or Essays Spanning Multiple Genres
+
+-−8.22+
+
+-< .001***
+
+-
+
+-
+
+-
+
+-Wrote at Least One Book with 30 Million or More Copies Sold
+
+-+1.21
+
+-< .001***
+
+-
+
+-
+
+-
+
+-Wrote at Least One Book That Remained in Continuous Print for Over 50 Years
+
+-+2.06
+
+-.003**
+
++[TABLE START]
+
++Study (N) | Identity-Target Group | Effect of Identity-Target Feedback on Final Selection(s) | Comparison Attributes Provided in Descriptive Feedback | Effect of Comparison-Attribute Feedback on Whether Final Selection(s) Featured the Comparison Attribute | p-value of Wald Test Between the effect of Identity-Target Feedback and Comparison-Attribute Feedback
+
++Study 1: Online Experiment (N = 1,000) | % of Past NPR Experts Who Were Women | +12.51*** | Were Under 50 Years Old | +2.57 | .010*
+
++ |  |  | Were Based on the West Coast of the U.S. | +4.37* | .004**
+
++ |  |  | Worked at a University | +6.41*** | < .001***
+
++Study 2: University Campus Field Experiment (N = 302) | % of Initial Biographies That Featured a Woman Protagonist | +13.20* | Were Over 500 Pages Long | +1.00 | .129
+
++ |  |  | Were Written in the Past 25 Years | +5.00 | .278
+
++ |  |  | Featured an Entertainer | +6.00 | .450
+
++Study 3A: Incentive Compatible Online Experiment (N = 1,000) | % of Initial Films That Featured a Racial Minority Protagonist | +9.38*** | Were Made on a Budget Above $40 Million | −0.23 | .006*
+
++ |  |  | Were Released After 2010 | +6.54 | < .001***
+
++ |  |  | Were Over Two Hours Long | −6.72+ | .009**
+
++Study 3B: Incentive Compatible Online Experiment (N = 1,000) | % of Initial Films That Featured a Woman Protagonist | +20.56*** | Were Made on a Budget Above $40 Million | +1.98 | < .001***
+
++ |  |  | Were Released After 2010 | −0.29 | < .001***
+
++ |  |  | Featured a Political Leader as Protagonist | −5.08 | < .001***
+
++Study 4A: Online Experiment (N = 1,000) | % of Initial Authors Who Were Racial Minorities | +13.40*** | Wrote Poetry | +6.38+ | .013*
+
++ |  |  | Authored More Than 10 Books | +0.68 | .019*
+
++ |  |  | Were Born in the 1800s | +7.44+ | .022*
+
++Study 4B: Online Experiment (N = 1,000) | % of Initial Authors Who Were Women | +11.94*** | Wrote Books, Poems, or Essays Spanning Multiple Genres | −8.22+ | < .001***
+
++ |  |  | Wrote at Least One Book with 30 Million or More Copies Sold | +1.21 | < .001***
+
++ |  |  | Wrote at Least One Book That Remained in Continuous Print for Over 50 Years | +2.06 | .003**
+
++[TABLE END]
+
+@@ -1022,0 +464,2 @@
++
+
++[SECTION BREAK]
+

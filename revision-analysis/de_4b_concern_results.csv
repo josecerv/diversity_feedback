@@ -1,0 +1,21 @@
+"study","attribute","n_total","pool_rate","initial_mean_pct","main_eff_pp","main_p","below_n","below_eff_pp","below_p","above_n","above_eff_pp","above_p","inter_est","inter_p"
+"Study 2 (gender)","2: gender feedback -> female pick (TARGET)",302,0.2,25.11,13.25,0.0109,160,24.12,8e-04,142,0.98,0.8997,-0.1069,0.0221
+"Study 2 (gender)","2: pages feedback -> pages pick",302,0.28,11.59,1.29,0.812,257,5.06,0.3546,45,-19.44,0.3028,-0.031,0.7146
+"Study 2 (gender)","2: year feedback -> year pick",302,0.76,67.66,4.57,0.5,197,-2.85,0.7083,105,15.59,0.2023,0.0644,0.2621
+"Study 2 (gender)","2: entertainer feedback -> entertainer pick",302,0.44,26.38,5.58,0.5218,233,11.87,0.2328,69,-9.49,0.6049,-0.0907,0.1694
+"Study 3A (race)","3A: race feedback -> race pick (TARGET)",1000,0.16,16.2,9.38,4e-04,686,10.01,0.0034,314,7.07,0.0469,-0.0191,0.4651
+"Study 3A (race)","3A: budget feedback -> budget pick",1000,0.4,36.44,-0.23,0.9538,516,4.7,0.3945,484,-5.66,0.3492,-0.022,0.4927
+"Study 3A (race)","3A: year feedback -> year pick",1000,0.68,59.09,6.54,0.1322,602,3.59,0.5466,398,7.97,0.2109,0.0097,0.79
+"Study 3A (race)","3A: duration feedback -> duration pick",1000,0.76,68.19,-6.72,0.0652,727,-6.44,0.1312,273,-8.08,0.2552,-0.0105,0.7441
+"Study 3B (gender)","3B: gender feedback -> female pick (TARGET)",1000,0.24,17.55,20.56,0,700,25.13,0,300,10.28,0.0425,-0.0873,0.0014
+"Study 3B (gender)","3B: budget feedback -> budget pick",1000,0.32,35.85,1.98,0.613,308,-5.14,0.4942,692,5.23,0.2459,0.0501,0.1113
+"Study 3B (gender)","3B: year feedback -> year pick",1000,0.52,62.45,-0.29,0.9628,402,-16.47,0.0681,598,7.58,0.3373,0.0835,0.0823
+"Study 3B (gender)","3B: political feedback -> political pick",1000,0.4,35.23,-5.08,0.1558,647,-3.52,0.4317,353,-7.69,0.1987,-0.0285,0.3831
+"Study 4A (race)","4A: race feedback -> race pick (TARGET)",1000,0.32,21.77,13.4,0,613,16.61,0,387,7.58,0.1268,-0.0438,0.0547
+"Study 4A (race)","4A: books feedback -> book pick",1000,0.6,58.97,0.68,0.8424,490,-1.24,0.7903,510,3.62,0.4767,0.043,0.1811
+"Study 4A (race)","4A: oldies feedback -> oldies pick",1000,0.52,56.55,7.44,0.0505,508,9.53,0.0671,492,5.62,0.3184,-0.0228,0.4752
+"Study 4A (race)","4A: poets feedback -> poets pick",1000,0.52,45.83,6.38,0.0802,754,6.18,0.145,246,6.25,0.3845,-0.0074,0.8321
+"Study 4B (gender)","4B: gender feedback -> female pick (TARGET)",1000,0.24,25.32,11.94,1e-04,535,13.33,0.0014,465,10.2,0.0204,-0.046,0.04
+"Study 4B (gender)","4B: forms feedback -> forms pick",1000,0.44,45.18,-8.22,0.0565,431,-3.02,0.6662,569,-12.52,0.0234,-0.0594,0.0978
+"Study 4B (gender)","4B: sold30m feedback -> sold30m pick",1000,0.32,42.62,1.21,0.7639,154,8.73,0.4152,846,-0.12,0.978,-0.0302,0.4436
+"Study 4B (gender)","4B: classic feedback -> classic pick",1000,0.68,82.08,2.06,0.5812,290,1.59,0.8332,710,2.4,0.5765,0.0228,0.516

@@ -1,0 +1,3 @@
+"group","k","pooled_est","pooled_se","pooled_p","ci_lo","ci_hi","i2"
+"Target (gender / race)",5,13.55,1.903,0,9.82,17.28,50.2
+"Comparison attributes",15,0.78,1.352,0.5625,-1.87,3.43,32.7

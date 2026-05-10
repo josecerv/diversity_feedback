@@ -1,0 +1,7 @@
+"group","k","pooled_est","pooled_se","pooled_p","ci_lo","ci_hi","i2"
+"Target — At/Above-Pool subgroup",5,7.98,2.1,1e-04,3.87,12.1,0
+"Comparison — Below-Pool subgroup",15,0.82,1.686,0.6259,-2.48,4.13,16.8
+"Target — Below-Pool subgroup",5,17.04,2.865,0,11.43,22.66,63.2
+"Comparison — At/Above-Pool subgroup",15,0.45,1.833,0.8048,-3.14,4.04,21.6
+"Contrast: Overall Target - Overall Comparison",NA,12.77,2.334,0,NA,NA,NA
+"Contrast: Target(At/Above) - Comparison(Below)",NA,7.16,2.693,0.0078,NA,NA,NA

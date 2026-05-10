@@ -1,0 +1,7 @@
+"option","group","k","pooled","se","ci_lo","ci_hi","p","i2"
+"Option 2 (move-toward-pool, pp)","Target — movement toward pool",5,8.3179,2.7507,2.9266,13.7092,0.0025,67.9
+"Option 2 (move-toward-pool, pp)","Comparison — movement toward pool",15,0.4513,1.1266,-1.7567,2.6593,0.6887,0
+"Option 3 main (effect at pool, pp)","Target — feedback effect at pool",5,12.4586,1.7363,9.0556,15.8616,0,30.1
+"Option 3 main (effect at pool, pp)","Comparison — feedback effect at pool",15,0.1063,1.5206,-2.874,3.0867,0.9442,34.7
+"Option 3 interaction (feedback x gap)","Target — interaction (feedback x gap)",5,-0.3236,0.0727,-0.4661,-0.1812,0,0
+"Option 3 interaction (feedback x gap)","Comparison — interaction (feedback x gap)",15,-9e-04,0.0651,-0.1284,0.1267,0.9892,13.6

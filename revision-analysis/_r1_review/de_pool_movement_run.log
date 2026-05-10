@@ -1,0 +1,266 @@
+
+--- Study 2 (gender) : gender feedback -> female pick (TARGET) ---
+  N=302 (below=160, above=142, at=0)  pool=20.0%  init mean=25.1%
+  OPT2  move_toward_pool ~ feedback :  +14.57 pp  SE 0.057  p=0.0115  CI [3.30, 25.84]
+  OPT3  feedback at pool :              +16.32 pp  SE 0.054  p=0.0025  CI [5.79, 26.85]
+  OPT3  feedback x gap (interaction) :  -0.6414     SE 0.2788  p=0.0221  CI [-1.1900, -0.0927]
+
+--- Study 2 (gender) : pages feedback -> pages pick ---
+  N=302 (below=257, above=45, at=0)  pool=28.0%  init mean=11.6%
+  OPT2  move_toward_pool ~ feedback :  +6.77 pp  SE 0.061  p=0.2700  CI [-5.29, 18.82]
+  OPT3  feedback at pool :              -1.51 pp  SE 0.098  p=0.8774  CI [-20.76, 17.74]
+  OPT3  feedback x gap (interaction) :  -0.1861     SE 0.5085  p=0.7146  CI [-1.1868, 0.8145]
+
+--- Study 2 (gender) : year feedback -> year pick ---
+  N=302 (below=197, above=105, at=0)  pool=76.0%  init mean=67.7%
+  OPT2  move_toward_pool ~ feedback :  -6.20 pp  SE 0.068  p=0.3623  CI [-19.56, 7.17]
+  OPT3  feedback at pool :              +7.41 pp  SE 0.078  p=0.3428  CI [-7.94, 22.75]
+  OPT3  feedback x gap (interaction) :  +0.3866     SE 0.3441  p=0.2621  CI [-0.2906, 1.0639]
+
+--- Study 2 (gender) : entertainer feedback -> entertainer pick ---
+  N=302 (below=233, above=69, at=0)  pool=44.0%  init mean=26.4%
+  OPT2  move_toward_pool ~ feedback :  +7.85 pp  SE 0.092  p=0.3932  CI [-10.21, 25.91]
+  OPT3  feedback at pool :              -5.21 pp  SE 0.135  p=0.7009  CI [-31.87, 21.45]
+  OPT3  feedback x gap (interaction) :  -0.5444     SE 0.3952  p=0.1694  CI [-1.3221, 0.2333]
+
+--- Study 3A (race) : race feedback -> race pick (TARGET) ---
+  N=1000 (below=686, above=314, at=0)  pool=16.0%  init mean=16.2%
+  OPT2  move_toward_pool ~ feedback :  +3.58 pp  SE 0.032  p=0.2582  CI [-2.63, 9.78]
+  OPT3  feedback at pool :              +8.84 pp  SE 0.026  p=0.0007  CI [3.77, 13.92]
+  OPT3  feedback x gap (interaction) :  -0.1339     SE 0.1832  p=0.4651  CI [-0.4934, 0.2257]
+
+--- Study 3A (race) : budget feedback -> budget pick ---
+  N=1000 (below=516, above=484, at=0)  pool=40.0%  init mean=36.4%
+  OPT2  move_toward_pool ~ feedback :  +6.02 pp  SE 0.042  p=0.1513  CI [-2.21, 14.25]
+  OPT3  feedback at pool :              -0.75 pp  SE 0.041  p=0.8569  CI [-8.88, 7.38]
+  OPT3  feedback x gap (interaction) :  -0.1537     SE 0.2240  p=0.4927  CI [-0.5933, 0.2858]
+
+--- Study 3A (race) : year feedback -> year pick ---
+  N=1000 (below=602, above=398, at=0)  pool=68.0%  init mean=59.1%
+  OPT2  move_toward_pool ~ feedback :  -1.31 pp  SE 0.043  p=0.7609  CI [-9.77, 7.15]
+  OPT3  feedback at pool :              +5.31 pp  SE 0.046  p=0.2492  CI [-3.73, 14.35]
+  OPT3  feedback x gap (interaction) :  +0.0678     SE 0.2546  p=0.7900  CI [-0.4318, 0.5674]
+
+--- Study 3A (race) : duration feedback -> duration pick ---
+  N=1000 (below=727, above=273, at=0)  pool=76.0%  init mean=68.2%
+  OPT2  move_toward_pool ~ feedback :  -0.78 pp  SE 0.041  p=0.8504  CI [-8.90, 7.34]
+  OPT3  feedback at pool :              -7.27 pp  SE 0.042  p=0.0856  CI [-15.55, 1.02]
+  OPT3  feedback x gap (interaction) :  -0.0732     SE 0.2242  p=0.7441  CI [-0.5132, 0.3668]
+
+--- Study 3B (gender) : gender feedback -> female pick (TARGET) ---
+  N=1000 (below=700, above=300, at=0)  pool=24.0%  init mean=17.5%
+  OPT2  move_toward_pool ~ feedback :  +15.24 pp  SE 0.031  p=0.0000  CI [9.13, 21.35]
+  OPT3  feedback at pool :              +17.11 pp  SE 0.029  p=0.0000  CI [11.34, 22.89]
+  OPT3  feedback x gap (interaction) :  -0.5235     SE 0.1634  p=0.0014  CI [-0.8442, -0.2028]
+
+--- Study 3B (gender) : budget feedback -> budget pick ---
+  N=1000 (below=308, above=692, at=0)  pool=32.0%  init mean=35.9%
+  OPT2  move_toward_pool ~ feedback :  -5.11 pp  SE 0.040  p=0.2021  CI [-12.97, 2.75]
+  OPT3  feedback at pool :              +1.14 pp  SE 0.040  p=0.7745  CI [-6.69, 8.97]
+  OPT3  feedback x gap (interaction) :  +0.3005     SE 0.1885  p=0.1113  CI [-0.0695, 0.6704]
+
+--- Study 3B (gender) : year feedback -> year pick ---
+  N=1000 (below=402, above=598, at=0)  pool=52.0%  init mean=62.4%
+  OPT2  move_toward_pool ~ feedback :  -9.69 pp  SE 0.061  p=0.1151  CI [-21.74, 2.37]
+  OPT3  feedback at pool :              -7.41 pp  SE 0.060  p=0.2196  CI [-19.24, 4.43]
+  OPT3  feedback x gap (interaction) :  +0.5011     SE 0.2881  p=0.0823  CI [-0.0643, 1.0664]
+
+--- Study 3B (gender) : political feedback -> political pick ---
+  N=1000 (below=647, above=353, at=0)  pool=40.0%  init mean=35.2%
+  OPT2  move_toward_pool ~ feedback :  +0.68 pp  SE 0.036  p=0.8506  CI [-6.45, 7.82]
+  OPT3  feedback at pool :              -5.78 pp  SE 0.037  p=0.1190  CI [-13.05, 1.49]
+  OPT3  feedback x gap (interaction) :  -0.1709     SE 0.1959  p=0.3831  CI [-0.5554, 0.2135]
+
+--- Study 4A (race) : race feedback -> race pick (TARGET) ---
+  N=1000 (below=613, above=387, at=0)  pool=32.0%  init mean=21.8%
+  OPT2  move_toward_pool ~ feedback :  +8.80 pp  SE 0.031  p=0.0051  CI [2.65, 14.95]
+  OPT3  feedback at pool :              +10.43 pp  SE 0.034  p=0.0021  CI [3.79, 17.07]
+  OPT3  feedback x gap (interaction) :  -0.2625     SE 0.1365  p=0.0547  CI [-0.5303, 0.0053]
+
+--- Study 4A (race) : books feedback -> book pick ---
+  N=1000 (below=490, above=510, at=0)  pool=60.0%  init mean=59.0%
+  OPT2  move_toward_pool ~ feedback :  -4.05 pp  SE 0.035  p=0.2530  CI [-11.00, 2.90]
+  OPT3  feedback at pool :              +1.85 pp  SE 0.035  p=0.5983  CI [-5.03, 8.73]
+  OPT3  feedback x gap (interaction) :  +0.2580     SE 0.1928  p=0.1811  CI [-0.1203, 0.6362]
+
+--- Study 4A (race) : oldies feedback -> oldies pick ---
+  N=1000 (below=508, above=492, at=0)  pool=52.0%  init mean=56.5%
+  OPT2  move_toward_pool ~ feedback :  +2.94 pp  SE 0.038  p=0.4442  CI [-4.60, 10.48]
+  OPT3  feedback at pool :              +8.08 pp  SE 0.039  p=0.0389  CI [0.41, 15.76]
+  OPT3  feedback x gap (interaction) :  -0.1370     SE 0.1918  p=0.4752  CI [-0.5134, 0.2394]
+
+--- Study 4A (race) : poets feedback -> poets pick ---
+  N=1000 (below=754, above=246, at=0)  pool=52.0%  init mean=45.8%
+  OPT2  move_toward_pool ~ feedback :  +2.97 pp  SE 0.036  p=0.4157  CI [-4.18, 10.12]
+  OPT3  feedback at pool :              +5.79 pp  SE 0.038  p=0.1330  CI [-1.77, 13.34]
+  OPT3  feedback x gap (interaction) :  -0.0441     SE 0.2080  p=0.8321  CI [-0.4523, 0.3641]
+
+--- Study 4B (gender) : gender feedback -> female pick (TARGET) ---
+  N=1000 (below=535, above=465, at=0)  pool=24.0%  init mean=25.3%
+  OPT2  move_toward_pool ~ feedback :  +1.80 pp  SE 0.032  p=0.5693  CI [-4.41, 8.02]
+  OPT3  feedback at pool :              +12.20 pp  SE 0.030  p=0.0001  CI [6.28, 18.12]
+  OPT3  feedback x gap (interaction) :  -0.2760     SE 0.1342  p=0.0400  CI [-0.5393, -0.0127]
+
+--- Study 4B (gender) : forms feedback -> forms pick ---
+  N=1000 (below=431, above=569, at=0)  pool=44.0%  init mean=45.2%
+  OPT2  move_toward_pool ~ feedback :  +6.09 pp  SE 0.043  p=0.1582  CI [-2.37, 14.54]
+  OPT3  feedback at pool :              -7.84 pp  SE 0.043  p=0.0712  CI [-16.36, 0.68]
+  OPT3  feedback x gap (interaction) :  -0.3562     SE 0.2150  p=0.0978  CI [-0.7781, 0.0656]
+
+--- Study 4B (gender) : sold30m feedback -> sold30m pick ---
+  N=1000 (below=154, above=846, at=0)  pool=32.0%  init mean=42.6%
+  OPT2  move_toward_pool ~ feedback :  +1.52 pp  SE 0.041  p=0.7091  CI [-6.47, 9.51]
+  OPT3  feedback at pool :              +3.15 pp  SE 0.048  p=0.5097  CI [-6.21, 12.51]
+  OPT3  feedback x gap (interaction) :  -0.1811     SE 0.2362  p=0.4436  CI [-0.6446, 0.2825]
+
+--- Study 4B (gender) : classic feedback -> classic pick ---
+  N=1000 (below=290, above=710, at=0)  pool=68.0%  init mean=82.1%
+  OPT2  move_toward_pool ~ feedback :  -0.09 pp  SE 0.042  p=0.9823  CI [-8.31, 8.12]
+  OPT3  feedback at pool :              +0.19 pp  SE 0.050  p=0.9690  CI [-9.58, 9.97]
+  OPT3  feedback x gap (interaction) :  +0.1369     SE 0.2107  p=0.5160  CI [-0.2766, 0.5504]
+
+
+===========================================================
+Pool-movement analysis: COMBINED RESULTS
+===========================================================
+             study                                attribute n_total n_below
+  Study 2 (gender)  gender feedback -> female pick (TARGET)     302     160
+  Study 2 (gender)             pages feedback -> pages pick     302     257
+  Study 2 (gender)               year feedback -> year pick     302     197
+  Study 2 (gender) entertainer feedback -> entertainer pick     302     233
+   Study 3A (race)      race feedback -> race pick (TARGET)    1000     686
+   Study 3A (race)           budget feedback -> budget pick    1000     516
+   Study 3A (race)               year feedback -> year pick    1000     602
+   Study 3A (race)       duration feedback -> duration pick    1000     727
+ Study 3B (gender)  gender feedback -> female pick (TARGET)    1000     700
+ Study 3B (gender)           budget feedback -> budget pick    1000     308
+ Study 3B (gender)               year feedback -> year pick    1000     402
+ Study 3B (gender)     political feedback -> political pick    1000     647
+   Study 4A (race)      race feedback -> race pick (TARGET)    1000     613
+   Study 4A (race)              books feedback -> book pick    1000     490
+   Study 4A (race)           oldies feedback -> oldies pick    1000     508
+   Study 4A (race)             poets feedback -> poets pick    1000     754
+ Study 4B (gender)  gender feedback -> female pick (TARGET)    1000     535
+ Study 4B (gender)             forms feedback -> forms pick    1000     431
+ Study 4B (gender)         sold30m feedback -> sold30m pick    1000     154
+ Study 4B (gender)         classic feedback -> classic pick    1000     290
+ n_above n_at pool_rate init_mean opt2_est_pp opt2_se_pp       opt2_p
+     142    0      0.20    0.2511       14.57      5.728 1.147017e-02
+      45    0      0.28    0.1159        6.77      6.126 2.700092e-01
+     105    0      0.76    0.6766       -6.20      6.792 3.622903e-01
+      69    0      0.44    0.2638        7.85      9.177 3.931863e-01
+     314    0      0.16    0.1620        3.58      3.161 2.581916e-01
+     484    0      0.40    0.3644        6.02      4.193 1.513349e-01
+     398    0      0.68    0.5909       -1.31      4.312 7.608964e-01
+     273    0      0.76    0.6819       -0.78      4.136 8.504202e-01
+     300    0      0.24    0.1755       15.24      3.114 1.146406e-06
+     692    0      0.32    0.3585       -5.11      4.005 2.021388e-01
+     598    0      0.52    0.6245       -9.69      6.142 1.150642e-01
+     353    0      0.40    0.3523        0.68      3.634 8.506215e-01
+     387    0      0.32    0.2177        8.80      3.132 5.052374e-03
+     510    0      0.60    0.5897       -4.05      3.540 2.529590e-01
+     492    0      0.52    0.5655        2.94      3.843 4.442418e-01
+     246    0      0.52    0.4583        2.97      3.645 4.157320e-01
+     465    0      0.24    0.2532        1.80      3.168 5.693155e-01
+     569    0      0.44    0.4518        6.09      4.309 1.581857e-01
+     846    0      0.32    0.4262        1.52      4.072 7.090524e-01
+     710    0      0.68    0.8208       -0.09      4.185 9.823277e-01
+ opt2_ci_lo_pp opt2_ci_hi_pp opt3_main_pp opt3_main_se_pp  opt3_main_p
+          3.30         25.84        16.32           5.351 2.499985e-03
+         -5.29         18.82        -1.51           9.780 8.774035e-01
+        -19.56          7.17         7.41           7.798 3.428196e-01
+        -10.21         25.91        -5.21          13.546 7.008904e-01
+         -2.63          9.78         8.84           2.586 6.504803e-04
+         -2.21         14.25        -0.75           4.143 8.569244e-01
+         -9.77          7.15         5.31           4.607 2.491670e-01
+         -8.90          7.34        -7.27           4.223 8.557811e-02
+          9.13         21.35        17.11           2.945 8.302253e-09
+        -12.97          2.75         1.14           3.990 7.744636e-01
+        -21.74          2.37        -7.41           6.031 2.195653e-01
+         -6.45          7.82        -5.78           3.706 1.189717e-01
+          2.65         14.95        10.43           3.384 2.109347e-03
+        -11.00          2.90         1.85           3.506 5.983004e-01
+         -4.60         10.48         8.08           3.909 3.888895e-02
+         -4.18         10.12         5.79           3.850 1.329530e-01
+         -4.41          8.02        12.20           3.015 5.589612e-05
+         -2.37         14.54        -7.84           4.340 7.117726e-02
+         -6.47          9.51         3.15           4.770 5.097237e-01
+         -8.31          8.12         0.19           4.983 9.689846e-01
+ opt3_main_ci_lo opt3_main_ci_hi opt3_inter_est opt3_inter_se opt3_inter_p
+            5.79           26.85        -0.6414        0.2788  0.022111273
+          -20.76           17.74        -0.1861        0.5085  0.714558668
+           -7.94           22.75         0.3866        0.3441  0.262114664
+          -31.87           21.45        -0.5444        0.3952  0.169392613
+            3.77           13.92        -0.1339        0.1832  0.465137342
+           -8.88            7.38        -0.1537        0.2240  0.492711156
+           -3.73           14.35         0.0678        0.2546  0.790015966
+          -15.55            1.02        -0.0732        0.2242  0.744149951
+           11.34           22.89        -0.5235        0.1634  0.001400679
+           -6.69            8.97         0.3005        0.1885  0.111295193
+          -19.24            4.43         0.5011        0.2881  0.082294898
+          -13.05            1.49        -0.1709        0.1959  0.383141251
+            3.79           17.07        -0.2625        0.1365  0.054684175
+           -5.03            8.73         0.2580        0.1928  0.181072583
+            0.41           15.76        -0.1370        0.1918  0.475235483
+           -1.77           13.34        -0.0441        0.2080  0.832053556
+            6.28           18.12        -0.2760        0.1342  0.039966200
+          -16.36            0.68        -0.3562        0.2150  0.097826064
+           -6.21           12.51        -0.1811        0.2362  0.443593095
+           -9.58            9.97         0.1369        0.2107  0.515995989
+ opt3_inter_ci_lo opt3_inter_ci_hi is_target
+          -1.1900          -0.0927      TRUE
+          -1.1868           0.8145     FALSE
+          -0.2906           1.0639     FALSE
+          -1.3221           0.2333     FALSE
+          -0.4934           0.2257      TRUE
+          -0.5933           0.2858     FALSE
+          -0.4318           0.5674     FALSE
+          -0.5132           0.3668     FALSE
+          -0.8442          -0.2028      TRUE
+          -0.0695           0.6704     FALSE
+          -0.0643           1.0664     FALSE
+          -0.5554           0.2135     FALSE
+          -0.5303           0.0053      TRUE
+          -0.1203           0.6362     FALSE
+          -0.5134           0.2394     FALSE
+          -0.4523           0.3641     FALSE
+          -0.5393          -0.0127      TRUE
+          -0.7781           0.0656     FALSE
+          -0.6446           0.2825     FALSE
+          -0.2766           0.5504     FALSE
+
+
+===========================================================
+OPTION 2  (movement-toward-pool, percentage-point pp)
+===========================================================
+                             group  k pooled     se   ci_lo   ci_hi      p   i2
+     Target — movement toward pool  5 8.3179 2.7507  2.9266 13.7092 0.0025 67.9
+ Comparison — movement toward pool 15 0.4513 1.1266 -1.7567  2.6593 0.6887  0.0
+
+
+===========================================================
+OPTION 3  (interaction coefficient: feedback x gap)
+Interaction is on the proportion scale (gap = init_rate - pool_rate)
+===========================================================
+                                     group  k  pooled     se   ci_lo   ci_hi
+     Target — interaction (feedback x gap)  5 -0.3236 0.0727 -0.4661 -0.1812
+ Comparison — interaction (feedback x gap) 15 -0.0009 0.0651 -0.1284  0.1267
+      p   i2
+ 0.0000  0.0
+ 0.9892 13.6
+
+
+===========================================================
+OPTION 3  (feedback effect AT the pool rate, pp)
+This is the predicted feedback effect when initial rate == pool.
+===========================================================
+                                group  k  pooled     se   ci_lo   ci_hi      p
+     Target — feedback effect at pool  5 12.4586 1.7363  9.0556 15.8616 0.0000
+ Comparison — feedback effect at pool 15  0.1063 1.5206 -2.8740  3.0867 0.9442
+   i2
+ 30.1
+ 34.7
+
+Saved:
+  revision-analysis/_r1_review/de_pool_movement_results.csv
+  revision-analysis/_r1_review/de_pool_movement_pools.csv

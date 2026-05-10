@@ -1,0 +1,21 @@
+"study","attribute","pool_rate","init_min","init_max","b1_at_pool_pp","b1_se_pp","b1_p","b3_inter","b3_se","b3_p","reversal_init_rate","is_target"
+"Study 2 (gender)","gender feedback -> female pick (TARGET)",0.2,0,0.833,16.32,5.351,0.002499985100646,-0.6414,0.2788,0.0221112733371517,0.454,TRUE
+"Study 2 (gender)","pages feedback -> pages pick",0.28,0,0.667,-1.51,9.78,0.877403470238264,-0.1861,0.5085,0.714558668377701,0.199,FALSE
+"Study 2 (gender)","year feedback -> year pick",0.76,0.333,1,7.41,7.798,0.342819569484859,0.3866,0.3441,0.262114663519149,0.568,FALSE
+"Study 2 (gender)","entertainer feedback -> entertainer pick",0.44,0,0.833,-5.21,13.546,0.70089037155732,-0.5444,0.3952,0.169392613159448,0.344,FALSE
+"Study 3A (race)","race feedback -> race pick (TARGET)",0.16,0,0.429,8.84,2.586,0.000650480343769308,-0.1339,0.1832,0.465137342224382,0.821,TRUE
+"Study 3A (race)","budget feedback -> budget pick",0.4,0,1,-0.75,4.143,0.8569243832237,-0.1537,0.224,0.492711155965526,0.351,FALSE
+"Study 3A (race)","year feedback -> year pick",0.68,0,1,5.31,4.607,0.249167046520214,0.0678,0.2546,0.790015966421085,-0.103,FALSE
+"Study 3A (race)","duration feedback -> duration pick",0.76,0,1,-7.27,4.223,0.0855781146717213,-0.0732,0.2242,0.744149951212246,-0.233,FALSE
+"Study 3B (gender)","gender feedback -> female pick (TARGET)",0.24,0,0.833,17.11,2.945,8.30225297485982e-09,-0.5235,0.1634,0.00140067882175002,0.567,TRUE
+"Study 3B (gender)","budget feedback -> budget pick",0.32,0,1,1.14,3.99,0.774463604556312,0.3005,0.1885,0.111295193195495,0.282,FALSE
+"Study 3B (gender)","year feedback -> year pick",0.52,0,1,-7.41,6.031,0.219565287319865,0.5011,0.2881,0.0822948978302741,0.668,FALSE
+"Study 3B (gender)","political feedback -> political pick",0.4,0,1,-5.78,3.706,0.118971739713733,-0.1709,0.1959,0.383141251237217,0.062,FALSE
+"Study 4A (race)","race feedback -> race pick (TARGET)",0.32,0,1,10.43,3.384,0.00210934689596563,-0.2625,0.1365,0.0546841750425768,0.717,TRUE
+"Study 4A (race)","books feedback -> book pick",0.6,0,1,1.85,3.506,0.5983004310044,0.258,0.1928,0.181072583234555,0.528,FALSE
+"Study 4A (race)","oldies feedback -> oldies pick",0.52,0,1,8.08,3.909,0.0388889456761594,-0.137,0.1918,0.475235482596301,1.11,FALSE
+"Study 4A (race)","poets feedback -> poets pick",0.52,0,1,5.79,3.85,0.132952955960661,-0.0441,0.208,0.832053555782131,1.832,FALSE
+"Study 4B (gender)","gender feedback -> female pick (TARGET)",0.24,0,1,12.2,3.015,5.58961215763058e-05,-0.276,0.1342,0.0399662000809347,0.682,TRUE
+"Study 4B (gender)","forms feedback -> forms pick",0.44,0,1,-7.84,4.34,0.0711772564310608,-0.3562,0.215,0.0978260639729984,0.22,FALSE
+"Study 4B (gender)","sold30m feedback -> sold30m pick",0.32,0,1,3.15,4.77,0.50972368304296,-0.1811,0.2362,0.443593095274629,0.494,FALSE
+"Study 4B (gender)","classic feedback -> classic pick",0.68,0,1,0.19,4.983,0.968984610637827,0.1369,0.2107,0.515995988624647,0.666,FALSE

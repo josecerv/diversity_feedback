@@ -1,0 +1,307 @@
+
+=================================================
+Per-study Option 3 summary (b1 at pool, b3 interaction, reversal point)
+=================================================
+             study                                attribute pool_rate init_min
+  Study 2 (gender)  gender feedback -> female pick (TARGET)      0.20    0.000
+  Study 2 (gender)             pages feedback -> pages pick      0.28    0.000
+  Study 2 (gender)               year feedback -> year pick      0.76    0.333
+  Study 2 (gender) entertainer feedback -> entertainer pick      0.44    0.000
+   Study 3A (race)      race feedback -> race pick (TARGET)      0.16    0.000
+   Study 3A (race)           budget feedback -> budget pick      0.40    0.000
+   Study 3A (race)               year feedback -> year pick      0.68    0.000
+   Study 3A (race)       duration feedback -> duration pick      0.76    0.000
+ Study 3B (gender)  gender feedback -> female pick (TARGET)      0.24    0.000
+ Study 3B (gender)           budget feedback -> budget pick      0.32    0.000
+ Study 3B (gender)               year feedback -> year pick      0.52    0.000
+ Study 3B (gender)     political feedback -> political pick      0.40    0.000
+   Study 4A (race)      race feedback -> race pick (TARGET)      0.32    0.000
+   Study 4A (race)              books feedback -> book pick      0.60    0.000
+   Study 4A (race)           oldies feedback -> oldies pick      0.52    0.000
+   Study 4A (race)             poets feedback -> poets pick      0.52    0.000
+ Study 4B (gender)  gender feedback -> female pick (TARGET)      0.24    0.000
+ Study 4B (gender)             forms feedback -> forms pick      0.44    0.000
+ Study 4B (gender)         sold30m feedback -> sold30m pick      0.32    0.000
+ Study 4B (gender)         classic feedback -> classic pick      0.68    0.000
+ init_max b1_at_pool_pp b1_se_pp         b1_p b3_inter  b3_se        b3_p
+    0.833         16.32    5.351 2.499985e-03  -0.6414 0.2788 0.022111273
+    0.667         -1.51    9.780 8.774035e-01  -0.1861 0.5085 0.714558668
+    1.000          7.41    7.798 3.428196e-01   0.3866 0.3441 0.262114664
+    0.833         -5.21   13.546 7.008904e-01  -0.5444 0.3952 0.169392613
+    0.429          8.84    2.586 6.504803e-04  -0.1339 0.1832 0.465137342
+    1.000         -0.75    4.143 8.569244e-01  -0.1537 0.2240 0.492711156
+    1.000          5.31    4.607 2.491670e-01   0.0678 0.2546 0.790015966
+    1.000         -7.27    4.223 8.557811e-02  -0.0732 0.2242 0.744149951
+    0.833         17.11    2.945 8.302253e-09  -0.5235 0.1634 0.001400679
+    1.000          1.14    3.990 7.744636e-01   0.3005 0.1885 0.111295193
+    1.000         -7.41    6.031 2.195653e-01   0.5011 0.2881 0.082294898
+    1.000         -5.78    3.706 1.189717e-01  -0.1709 0.1959 0.383141251
+    1.000         10.43    3.384 2.109347e-03  -0.2625 0.1365 0.054684175
+    1.000          1.85    3.506 5.983004e-01   0.2580 0.1928 0.181072583
+    1.000          8.08    3.909 3.888895e-02  -0.1370 0.1918 0.475235483
+    1.000          5.79    3.850 1.329530e-01  -0.0441 0.2080 0.832053556
+    1.000         12.20    3.015 5.589612e-05  -0.2760 0.1342 0.039966200
+    1.000         -7.84    4.340 7.117726e-02  -0.3562 0.2150 0.097826064
+    1.000          3.15    4.770 5.097237e-01  -0.1811 0.2362 0.443593095
+    1.000          0.19    4.983 9.689846e-01   0.1369 0.2107 0.515995989
+ reversal_init_rate is_target
+              0.454      TRUE
+              0.199     FALSE
+              0.568     FALSE
+              0.344     FALSE
+              0.821      TRUE
+              0.351     FALSE
+             -0.103     FALSE
+             -0.233     FALSE
+              0.567      TRUE
+              0.282     FALSE
+              0.668     FALSE
+              0.062     FALSE
+              0.717      TRUE
+              0.528     FALSE
+              1.110     FALSE
+              1.832     FALSE
+              0.682      TRUE
+              0.220     FALSE
+              0.494     FALSE
+              0.666     FALSE
+
+=================================================
+Predicted feedback effects at gap = -0.20 / -0.10 / 0 / +0.10 / +0.20 (pp)
+=================================================
+             study                                attribute  gap est_pp  se_pp
+  Study 2 (gender)  gender feedback -> female pick (TARGET) -0.2  29.15  8.409
+  Study 2 (gender)  gender feedback -> female pick (TARGET) -0.1  22.73  6.473
+  Study 2 (gender)  gender feedback -> female pick (TARGET)  0.0  16.32  5.351
+  Study 2 (gender)  gender feedback -> female pick (TARGET)  0.1   9.90  5.560
+  Study 2 (gender)  gender feedback -> female pick (TARGET)  0.2   3.49  6.981
+  Study 2 (gender)             pages feedback -> pages pick -0.2   2.21  5.866
+  Study 2 (gender)             pages feedback -> pages pick -0.1   0.35  6.259
+  Study 2 (gender)             pages feedback -> pages pick  0.0  -1.51  9.780
+  Study 2 (gender)             pages feedback -> pages pick  0.1  -3.37 14.277
+  Study 2 (gender)             pages feedback -> pages pick  0.2  -5.23 19.072
+  Study 2 (gender)               year feedback -> year pick -0.2  -0.32  6.541
+  Study 2 (gender)               year feedback -> year pick -0.1   3.54  6.321
+  Study 2 (gender)               year feedback -> year pick  0.0   7.41  7.798
+  Study 2 (gender)               year feedback -> year pick  0.1  11.28 10.264
+  Study 2 (gender)               year feedback -> year pick  0.2  15.14 13.174
+  Study 2 (gender) entertainer feedback -> entertainer pick -0.2   5.68  8.511
+  Study 2 (gender) entertainer feedback -> entertainer pick -0.1   0.24 10.599
+  Study 2 (gender) entertainer feedback -> entertainer pick  0.0  -5.21 13.546
+  Study 2 (gender) entertainer feedback -> entertainer pick  0.1 -10.65 16.908
+  Study 2 (gender) entertainer feedback -> entertainer pick  0.2 -16.10 20.481
+   Study 3A (race)      race feedback -> race pick (TARGET) -0.2  11.52  5.225
+   Study 3A (race)      race feedback -> race pick (TARGET) -0.1  10.18  3.693
+   Study 3A (race)      race feedback -> race pick (TARGET)  0.0   8.84  2.586
+   Study 3A (race)      race feedback -> race pick (TARGET)  0.1   7.51  2.540
+   Study 3A (race)      race feedback -> race pick (TARGET)  0.2   6.17  3.596
+   Study 3A (race)           budget feedback -> budget pick -0.2   2.33  5.509
+   Study 3A (race)           budget feedback -> budget pick -0.1   0.79  4.329
+   Study 3A (race)           budget feedback -> budget pick  0.0  -0.75  4.143
+   Study 3A (race)           budget feedback -> budget pick  0.1  -2.28  5.063
+   Study 3A (race)           budget feedback -> budget pick  0.2  -3.82  6.643
+   Study 3A (race)               year feedback -> year pick -0.2   3.96  5.606
+   Study 3A (race)               year feedback -> year pick -0.1   4.63  4.454
+   Study 3A (race)               year feedback -> year pick  0.0   5.31  4.607
+   Study 3A (race)               year feedback -> year pick  0.1   5.99  5.964
+   Study 3A (race)               year feedback -> year pick  0.2   6.67  7.929
+   Study 3A (race)       duration feedback -> duration pick -0.2  -5.80  4.307
+   Study 3A (race)       duration feedback -> duration pick -0.1  -6.54  3.628
+   Study 3A (race)       duration feedback -> duration pick  0.0  -7.27  4.223
+   Study 3A (race)       duration feedback -> duration pick  0.1  -8.00  5.706
+   Study 3A (race)       duration feedback -> duration pick  0.2  -8.73  7.572
+ Study 3B (gender)  gender feedback -> female pick (TARGET) -0.2  27.58  3.688
+ Study 3B (gender)  gender feedback -> female pick (TARGET) -0.1  22.35  2.910
+ Study 3B (gender)  gender feedback -> female pick (TARGET)  0.0  17.11  2.945
+ Study 3B (gender)  gender feedback -> female pick (TARGET)  0.1  11.88  3.771
+ Study 3B (gender)  gender feedback -> female pick (TARGET)  0.2   6.64  5.010
+ Study 3B (gender)           budget feedback -> budget pick -0.2  -4.87  6.179
+ Study 3B (gender)           budget feedback -> budget pick -0.1  -1.86  4.847
+ Study 3B (gender)           budget feedback -> budget pick  0.0   1.14  3.990
+ Study 3B (gender)           budget feedback -> budget pick  0.1   4.15  3.930
+ Study 3B (gender)           budget feedback -> budget pick  0.2   7.15  4.700
+ Study 3B (gender)               year feedback -> year pick -0.2 -17.43  9.514
+ Study 3B (gender)               year feedback -> year pick -0.1 -12.42  7.426
+ Study 3B (gender)               year feedback -> year pick  0.0  -7.41  6.031
+ Study 3B (gender)               year feedback -> year pick  0.1  -2.40  5.848
+ Study 3B (gender)               year feedback -> year pick  0.2   2.61  6.973
+ Study 3B (gender)     political feedback -> political pick -0.2  -2.36  4.647
+ Study 3B (gender)     political feedback -> political pick -0.1  -4.07  3.718
+ Study 3B (gender)     political feedback -> political pick  0.0  -5.78  3.706
+ Study 3B (gender)     political feedback -> political pick  0.1  -7.49  4.617
+ Study 3B (gender)     political feedback -> political pick  0.2  -9.20  6.048
+   Study 4A (race)      race feedback -> race pick (TARGET) -0.2  15.68  3.207
+   Study 4A (race)      race feedback -> race pick (TARGET) -0.1  13.06  3.001
+   Study 4A (race)      race feedback -> race pick (TARGET)  0.0  10.43  3.384
+   Study 4A (race)      race feedback -> race pick (TARGET)  0.1   7.81  4.197
+   Study 4A (race)      race feedback -> race pick (TARGET)  0.2   5.18  5.245
+   Study 4A (race)              books feedback -> book pick -0.2  -3.31  4.676
+   Study 4A (race)              books feedback -> book pick -0.1  -0.73  3.655
+   Study 4A (race)              books feedback -> book pick  0.0   1.85  3.506
+   Study 4A (race)              books feedback -> book pick  0.1   4.43  4.318
+   Study 4A (race)              books feedback -> book pick  0.2   7.01  5.695
+   Study 4A (race)           oldies feedback -> oldies pick -0.2  10.82  6.058
+   Study 4A (race)           oldies feedback -> oldies pick -0.1   9.45  4.724
+   Study 4A (race)           oldies feedback -> oldies pick  0.0   8.08  3.909
+   Study 4A (race)           oldies feedback -> oldies pick  0.1   6.71  3.950
+   Study 4A (race)           oldies feedback -> oldies pick  0.2   5.34  4.826
+   Study 4A (race)             poets feedback -> poets pick -0.2   6.67  4.652
+   Study 4A (race)             poets feedback -> poets pick -0.1   6.23  3.729
+   Study 4A (race)             poets feedback -> poets pick  0.0   5.79  3.850
+   Study 4A (race)             poets feedback -> poets pick  0.1   5.35  4.939
+   Study 4A (race)             poets feedback -> poets pick  0.2   4.91  6.528
+ Study 4B (gender)  gender feedback -> female pick (TARGET) -0.2  17.72  4.293
+ Study 4B (gender)  gender feedback -> female pick (TARGET) -0.1  14.96  3.458
+ Study 4B (gender)  gender feedback -> female pick (TARGET)  0.0  12.20  3.015
+ Study 4B (gender)  gender feedback -> female pick (TARGET)  0.1   9.44  3.134
+ Study 4B (gender)  gender feedback -> female pick (TARGET)  0.2   6.68  3.762
+ Study 4B (gender)             forms feedback -> forms pick -0.2  -0.71  6.390
+ Study 4B (gender)             forms feedback -> forms pick -0.1  -4.28  5.021
+ Study 4B (gender)             forms feedback -> forms pick  0.0  -7.84  4.340
+ Study 4B (gender)             forms feedback -> forms pick  0.1 -11.40  4.659
+ Study 4B (gender)             forms feedback -> forms pick  0.2 -14.96  5.816
+ Study 4B (gender)         sold30m feedback -> sold30m pick -0.2   6.77  8.291
+ Study 4B (gender)         sold30m feedback -> sold30m pick -0.1   4.96  6.338
+ Study 4B (gender)         sold30m feedback -> sold30m pick  0.0   3.15  4.770
+ Study 4B (gender)         sold30m feedback -> sold30m pick  0.1   1.34  4.061
+ Study 4B (gender)         sold30m feedback -> sold30m pick  0.2  -0.48  4.626
+ Study 4B (gender)         classic feedback -> classic pick -0.2  -2.54  8.387
+ Study 4B (gender)         classic feedback -> classic pick -0.1  -1.18  6.569
+ Study 4B (gender)         classic feedback -> classic pick  0.0   0.19  4.983
+ Study 4B (gender)         classic feedback -> classic pick  0.1   1.56  3.923
+ Study 4B (gender)         classic feedback -> classic pick  0.2   2.93  3.852
+ ci_lo_pp ci_hi_pp      p   gap_label is_target
+    12.66    45.63 0.0005 gap = -0.20      TRUE
+    10.04    35.42 0.0004 gap = -0.10      TRUE
+     5.83    26.81 0.0023 gap = +0.00      TRUE
+    -0.99    20.80 0.0749 gap = +0.10      TRUE
+   -10.19    17.17 0.6171 gap = +0.20      TRUE
+    -9.28    13.71 0.7060 gap = -0.20     FALSE
+   -11.92    12.62 0.9552 gap = -0.10     FALSE
+   -20.68    17.66 0.8773 gap = +0.00     FALSE
+   -31.35    24.61 0.8133 gap = +0.10     FALSE
+   -42.61    32.15 0.7838 gap = +0.20     FALSE
+   -13.15    12.50 0.9605 gap = -0.20     FALSE
+    -8.85    15.93 0.5752 gap = -0.10     FALSE
+    -7.87    22.69 0.3420 gap = +0.00     FALSE
+    -8.84    31.39 0.2720 gap = +0.10     FALSE
+   -10.68    40.96 0.2504 gap = +0.20     FALSE
+   -11.00    22.36 0.5046 gap = -0.20     FALSE
+   -20.54    21.01 0.9823 gap = -0.10     FALSE
+   -31.76    21.34 0.7006 gap = +0.00     FALSE
+   -43.79    22.49 0.5287 gap = +0.10     FALSE
+   -56.24    24.05 0.4319 gap = +0.20     FALSE
+     1.28    21.76 0.0274 gap = -0.20      TRUE
+     2.95    17.42 0.0058 gap = -0.10      TRUE
+     3.78    13.91 0.0006 gap = +0.00      TRUE
+     2.53    12.48 0.0031 gap = +0.10      TRUE
+    -0.88    13.22 0.0863 gap = +0.20      TRUE
+    -8.47    13.12 0.6727 gap = -0.20     FALSE
+    -7.69     9.27 0.8552 gap = -0.10     FALSE
+    -8.87     7.37 0.8569 gap = +0.00     FALSE
+   -12.21     7.64 0.6518 gap = +0.10     FALSE
+   -16.84     9.20 0.5651 gap = +0.20     FALSE
+    -7.03    14.94 0.4805 gap = -0.20     FALSE
+    -4.10    13.36 0.2982 gap = -0.10     FALSE
+    -3.72    14.34 0.2489 gap = +0.00     FALSE
+    -5.70    17.68 0.3152 gap = +0.10     FALSE
+    -8.87    22.21 0.4004 gap = +0.20     FALSE
+   -14.24     2.64 0.1778 gap = -0.20     FALSE
+   -13.65     0.58 0.0717 gap = -0.10     FALSE
+   -15.54     1.01 0.0853 gap = +0.00     FALSE
+   -19.18     3.18 0.1610 gap = +0.10     FALSE
+   -23.57     6.11 0.2489 gap = +0.20     FALSE
+    20.36    34.81 0.0000 gap = -0.20      TRUE
+    16.65    28.05 0.0000 gap = -0.10      TRUE
+    11.34    22.89 0.0000 gap = +0.00      TRUE
+     4.49    19.27 0.0016 gap = +0.10      TRUE
+    -3.18    16.46 0.1848 gap = +0.20      TRUE
+   -16.98     7.24 0.4310 gap = -0.20     FALSE
+   -11.36     7.64 0.7010 gap = -0.10     FALSE
+    -6.68     8.96 0.7744 gap = +0.00     FALSE
+    -3.56    11.85 0.2912 gap = +0.10     FALSE
+    -2.06    16.36 0.1280 gap = +0.20     FALSE
+   -36.08     1.22 0.0669 gap = -0.20     FALSE
+   -26.97     2.14 0.0944 gap = -0.10     FALSE
+   -19.23     4.41 0.2193 gap = +0.00     FALSE
+   -13.86     9.06 0.6818 gap = +0.10     FALSE
+   -11.05    16.28 0.7079 gap = +0.20     FALSE
+   -11.47     6.74 0.6110 gap = -0.20     FALSE
+   -11.36     3.21 0.2733 gap = -0.10     FALSE
+   -13.05     1.48 0.1187 gap = +0.00     FALSE
+   -16.54     1.56 0.1046 gap = +0.10     FALSE
+   -21.06     2.65 0.1281 gap = +0.20     FALSE
+     9.39    21.97 0.0000 gap = -0.20      TRUE
+     7.17    18.94 0.0000 gap = -0.10      TRUE
+     3.80    17.06 0.0021 gap = +0.00      TRUE
+    -0.42    16.03 0.0629 gap = +0.10      TRUE
+    -5.10    15.46 0.3233 gap = +0.20      TRUE
+   -12.48     5.85 0.4787 gap = -0.20     FALSE
+    -7.90     6.43 0.8412 gap = -0.10     FALSE
+    -5.02     8.72 0.5982 gap = +0.00     FALSE
+    -4.04    12.89 0.3053 gap = +0.10     FALSE
+    -4.16    18.17 0.2186 gap = +0.20     FALSE
+    -1.05    22.70 0.0740 gap = -0.20     FALSE
+     0.20    18.71 0.0453 gap = -0.10     FALSE
+     0.42    15.75 0.0386 gap = +0.00     FALSE
+    -1.03    14.46 0.0892 gap = +0.10     FALSE
+    -4.11    14.80 0.2681 gap = +0.20     FALSE
+    -2.45    15.79 0.1515 gap = -0.20     FALSE
+    -1.08    13.54 0.0947 gap = -0.10     FALSE
+    -1.76    13.33 0.1326 gap = +0.00     FALSE
+    -4.33    15.03 0.2789 gap = +0.10     FALSE
+    -7.89    17.70 0.4523 gap = +0.20     FALSE
+     9.31    26.13 0.0000 gap = -0.20      TRUE
+     8.18    21.74 0.0000 gap = -0.10      TRUE
+     6.29    18.11 0.0001 gap = +0.00      TRUE
+     3.30    15.58 0.0026 gap = +0.10      TRUE
+    -0.69    14.05 0.0757 gap = +0.20      TRUE
+   -13.24    11.81 0.9109 gap = -0.20     FALSE
+   -14.12     5.56 0.3943 gap = -0.10     FALSE
+   -16.35     0.67 0.0709 gap = +0.00     FALSE
+   -20.53    -2.27 0.0144 gap = +0.10     FALSE
+   -26.36    -3.57 0.0101 gap = +0.20     FALSE
+    -9.48    23.02 0.4144 gap = -0.20     FALSE
+    -7.47    17.38 0.4342 gap = -0.10     FALSE
+    -6.20    12.49 0.5096 gap = +0.00     FALSE
+    -6.63     9.30 0.7423 gap = +0.10     FALSE
+    -9.54     8.59 0.9182 gap = +0.20     FALSE
+   -18.98    13.89 0.7616 gap = -0.20     FALSE
+   -14.05    11.70 0.8580 gap = -0.10     FALSE
+    -9.57     9.96 0.9690 gap = +0.00     FALSE
+    -6.13     9.25 0.6903 gap = +0.10     FALSE
+    -4.62    10.48 0.4465 gap = +0.20     FALSE
+
+=================================================
+Pooled Option-3 interactions (random-effects REML)
+=================================================
+                              group  k pooled_b3     se   ci_lo   ci_hi      p
+     Target — pooled feedback x gap  5   -0.3236 0.0727 -0.4661 -0.1812 0.0000
+ Comparison — pooled feedback x gap 15   -0.0009 0.0651 -0.1284  0.1267 0.9892
+   i2
+  0.0
+ 13.6
+
+Contrast (target b3 minus comparison b3): -0.3227  SE 0.0976  z = -3.31  p = 0.00094
+
+=================================================
+Pooled predicted feedback effect across gap values (pp)
+Negative gap means initial rate below pool; positive means above.
+=================================================
+                group  k  gap pooled_pp se_pp ci_lo_pp ci_hi_pp      p   i2
+ Target (gender/race)  5 -0.2     19.60 3.190    13.35    25.85 0.0000 59.7
+           Comparison 15 -0.2      0.22 1.517    -2.76     3.19 0.8873  1.2
+ Target (gender/race)  5 -0.1     16.15 2.467    11.31    20.99 0.0000 56.6
+           Comparison 15 -0.1      0.09 1.457    -2.77     2.94 0.9526 23.9
+ Target (gender/race)  5  0.0     12.46 1.736     9.06    15.86 0.0000 30.1
+           Comparison 15  0.0      0.11 1.521    -2.87     3.09 0.9442 34.7
+ Target (gender/race)  5  0.1      8.95 1.550     5.91    11.98 0.0000  0.0
+           Comparison 15  0.1      0.27 1.674    -3.01     3.55 0.8716 34.1
+ Target (gender/race)  5  0.2      6.02 2.022     2.06     9.98 0.0029  0.0
+           Comparison 15  0.2      0.49 2.010    -3.45     4.43 0.8064 31.4
+
+Saved:
+  revision-analysis/_r1_review/de_option3_summary.csv
+  revision-analysis/_r1_review/de_option3_predicted_effects.csv
+  revision-analysis/_r1_review/de_option3_pooled_predictions.csv
+  revision-analysis/_r1_review/de_option3_predicted_effects.pdf
