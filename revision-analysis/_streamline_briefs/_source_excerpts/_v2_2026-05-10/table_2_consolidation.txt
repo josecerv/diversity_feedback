@@ -1,23 +1,0 @@
-Table 2. Effects of Random Assignment to Receive Descriptive Feedback About the Identity-Target Composition of Initial Selections Versus Descriptive Feedback About Other Initial-Selection Attributes on Subsequent Selections, Across Studies
-
-[TABLE]
-Study (N) | Identity-Target Group | Effect of Identity-Target Feedback on Final Selection(s) | Comparison Attributes Provided in Descriptive Feedback | Effect of Comparison-Attribute Feedback on Whether Final Selection(s) Featured the Comparison Attribute | p-value of Wald Test Between the effect of Identity-Target Feedback and Comparison-Attribute Feedback
-Study 1: Online Experiment (N = 1,000) | % of Past NPR Experts Who Were Women | +12.51*** | Were Under 50 Years Old | +2.57 | .010*
- |  |  | Were Based on the West Coast of the U.S. | +4.37* | .004**
- |  |  | Worked at a University | +6.41*** | < .001***
-Study 2: University Campus Field Experiment (N = 302) | % of Initial Biographies That Featured a Woman Protagonist | +13.20* | Were Over 500 Pages Long | +1.00 | .129
- |  |  | Were Written in the Past 25 Years | +5.00 | .278
- |  |  | Featured an Entertainer | +6.00 | .450
-Study 3A: Incentive Compatible Online Experiment (N = 1,000) | % of Initial Films That Featured a Racial Minority Protagonist | +9.38*** | Were Made on a Budget Above $40 Million | −0.23 | .006*
- |  |  | Were Released After 2010 | +6.54 | < .001***
- |  |  | Were Over Two Hours Long | −6.72+ | .009**
-Study 3B: Incentive Compatible Online Experiment (N = 1,000) | % of Initial Films That Featured a Woman Protagonist | +20.56*** | Were Made on a Budget Above $40 Million | +1.98 | < .001***
- |  |  | Were Released After 2010 | −0.29 | < .001***
- |  |  | Featured a Political Leader as Protagonist | −5.08 | < .001***
-Study 4A: Online Experiment (N = 1,000) | % of Initial Authors Who Were Racial Minorities | +13.40*** | Wrote Poetry | +6.38+ | .013*
- |  |  | Authored More Than 10 Books | +0.68 | .019*
- |  |  | Were Born in the 1800s | +7.44+ | .022*
-Study 4B: Online Experiment (N = 1,000) | % of Initial Authors Who Were Women | +11.94*** | Wrote Books, Poems, or Essays Spanning Multiple Genres | −8.22+ | < .001***
- |  |  | Wrote at Least One Book with 30 Million or More Copies Sold | +1.21 | < .001***
- |  |  | Wrote at Least One Book That Remained in Continuous Print for Over 50 Years | +2.06 | .003**
-[/TABLE]
