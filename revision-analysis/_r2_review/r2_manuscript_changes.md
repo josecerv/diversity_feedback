@@ -4,7 +4,9 @@ Source documents:
 - Manuscript: Gdoc `1H9jAvqG5CzQe_BksjkNmLwjLZSlAHvaEK1iyuHL23FI` (export at `manuscript_gdoc_text.txt`)
 - Response letter: Gdoc `1YBHCMwD84xC3Qw38CPEzz1iv3JKg7Mw9jTJqyZGptkI` (export at `response_letter_gdoc_text.txt`)
 
-This file converges two independent passes (`claude_second_pass.md` + `codex_second_pass.md`) into one paragraph-by-paragraph proposal. Each change shows the current manuscript text, the proposed replacement or insertion, and a note where the two passes diverged.
+This file converges two independent passes (`claude_second_pass.md` + `codex_second_pass.md`) into one paragraph-by-paragraph proposal. Each change shows the current manuscript text, the proposed replacement or insertion, the verbatim response-letter commitment that the change is fulfilling, and a note where the two passes diverged.
+
+**Verbatim convention.** Block quotes inside the "Response letter commitment" sections are reproduced exactly as they appear in `response_letter_gdoc_text.txt`, including any en-dashes, non-breaking hyphens, or curly quotes from the original Gdoc. The no-em-dash / curly-quote house-style rule applies to drafted prose only, not to quoted material.
 
 **Out of scope (deferred per JC):** the Study 4B Discussion footnote that summarizes the Table R1 / zero-initial pooled analysis. The level-of-analysis question is unresolved.
 
@@ -15,6 +17,16 @@ This file converges two independent passes (`claude_second_pass.md` + `codex_sec
 **Anchor.** Manuscript line 11, the FIT/Kluger sentence.
 **Response letter source.** Lines 35, 82.
 **Why.** Reviewer 1 asked for contemporary feedback / goal-setting citations alongside the foundational ones.
+
+### Response letter commitment
+
+From the Department Editor's summary acknowledging Reviewer 1's reference-update request (response letter line 35):
+
+> We have addressed both points. The Introduction and General Discussion now draw on more contemporary work in the feedback, goal‑setting, and social‑norms literatures (e.g., Locke & Latham, 2019; Itzchakov & Latham, 2018; Chen, Latham, & Piccolo, 2020; Schultz, Nolan, & Cialdini, 2018; Devine & Ash, 2022; Andor, Gerster, & Peters, 2020; Henry, Ferraro, & Kontoleon, 2019; Mertens & Schultz, 2021), alongside the foundational citations we retain.
+
+And from the direct Reviewer 1 reply (response letter line 82):
+
+> Thank you for pressing us on this point. We have refreshed the introduction's feedback and goals citations to draw on more recent work, including Locke and Latham (2019), Itzchakov and Latham (2018), Chen, Latham, and Piccolo (2020), Schultz, Nolan, and Cialdini (2018), and Devine and Ash (2022); and we have added applied work that the reviewer's prior comment first prompted us to incorporate (Andor, Gerster, & Peters, 2020; Henry, Ferraro, & Kontoleon, 2019; Mertens & Schultz, 2021).
 
 ### CURRENT
 > According to Feedback Intervention Theory, such feedback is often ineffective because it lacks a benchmark against which people can evaluate their past behavior and consider making a change (Kluger & DeNisi, 1996, 1998).
@@ -32,6 +44,16 @@ Both passes converged on the same wording; cite-block-only change. Body citation
 **Anchor.** Manuscript line 10, the Schultz et al. (2007) sentence.
 **Response letter source.** Lines 35, 82.
 **Why.** Same Reviewer 1 ask, focused on the social-norms strand.
+
+### Response letter commitment
+
+From the direct Reviewer 1 reply on updating Schultz alongside the classic (response letter line 80):
+
+> Thank you for this helpful suggestion. We have updated our citations so we now cite Locke and Latham (2019) alongside the classic Locke and Latham (2002) as well as Schultz, Nolan, and Cialdini (2018) alongside the classic Schultz et al. (2007). These new citations reference contemporary updates to two foundational pieces we previously cited.
+
+And from the same Reviewer 1 reply extended with applied work (response letter line 82):
+
+> We have refreshed the introduction's feedback and goals citations to draw on more recent work, including Locke and Latham (2019), Itzchakov and Latham (2018), Chen, Latham, and Piccolo (2020), Schultz, Nolan, and Cialdini (2018), and Devine and Ash (2022); and we have added applied work that the reviewer's prior comment first prompted us to incorporate (Andor, Gerster, & Peters, 2020; Henry, Ferraro, & Kontoleon, 2019; Mertens & Schultz, 2021).
 
 ### CURRENT (relevant sentence within the paragraph)
 > Similarly, Schultz et al. (2007) found that when households received feedback about their energy usage alongside an explicit injunctive norm communicating that conservation was desirable as well as a social comparison to the energy use of their neighbors, energy consumption dropped by 5.7%.
@@ -54,6 +76,16 @@ Claude vs. Codex divergence on the new sentence:
 **Response letter source.** Line 83 (Reviewer 1 reply).
 **Why.** Reviewer 1 pushed on why descriptive feedback can shift selections without a paired goal; the response letter promises an expanded theoretical framing in the Introduction.
 
+### Response letter commitment
+
+From the direct Reviewer 1 reply on the expanded theoretical framing (response letter line 83):
+
+> More importantly, we have also expanded the theoretical framing (pp. X-X) to discuss how the classical feedback literature establishes that pairing feedback with an explicit goal works, but consistent with the broader logic of this literature, feedback regulates behavior only when there is a standard against which past performance can be evaluated. Our argument is that descriptive feedback can also be effective in domains where a strong implicit standard is already entrenched, such that no explicit goal need be paired alongside it. More specifically, we discuss how feedback evoking the past treatment of women and racial minorities provides a clean test of this theory. We note that anti-discrimination law, social and reputational pressures to behave in ways that are not prejudicial, and selectors' personally held egalitarian self-image jointly sustain an entrenched injunctive norm against prejudiced selection (Plant & Devine, 1998; Crandall & Eshleman, 2003; Álvarez-Benjumea, 2023). When descriptive feedback reveals a discrepancy between this implicit standard and past behavior, we theorize that a motivation to respond without prejudice is activated even in the absence of a specific external goal.
+
+The Department Editor's summary also references this commitment (response letter line 35):
+
+> We have also expanded the Introduction's theoretical framing (pp. X‑X) to clarify why descriptive feedback can shift selection decisions about women and underrepresented minorities even without a paired explicit goal: in this setting, we argue, feedback makes prior behavior salient against an implicit injunctive norm against prejudiced selection.
+
 ### CURRENT
 > *(No existing paragraph here; the insertion sits between line 16's "People's drive to respond without prejudice..." paragraph and line 17's "We propose that when descriptive feedback reveals..." paragraph.)*
 
@@ -70,6 +102,12 @@ Both passes near-identical on this paragraph; the converged version above uses C
 **Anchor.** Insert as a NEW paragraph AFTER manuscript line 50 (Study 1 Discussion, `"Study 1 mirrored a real organizational practice currently deployed by NPR..."`) and BEFORE the `"Insert Figure 3 about here"` placeholder at line 52.
 **Response letter source.** Line 42 (DE reply on the importance post-test).
 **Why.** DE explicitly asked for this post-test; the response letter committed to incorporating it into Study 1 Discussion with exact numbers.
+
+### Response letter commitment
+
+From the Department Editor's request and our reply (response letter line 42):
+
+> RESPONSE: Thank you for this suggestion. We ran the post-test you proposed and incorporated the result into the Discussion of Study 1 (p. X). We recruited N = 300 Prolific participants and randomly assigned each to rate, on a 1 to 7 importance scale, one of the four expert-attribute statements used in Study 1's feedback manipulation, with the NPR producer framing held constant. Two of the three comparison attributes were rated significantly more important than the gender attribute ("were women"; M = 3.64, SD = 1.76, n = 76): "worked at a university" (M = 4.67, SD = 1.60; t(148.8) = −3.76, p < .001, d = −0.61) and "were under 50 years old" (M = 4.44, SD = 1.73; t(149.0) = −2.81, p = .006, d = −0.46). The third, "based on the West Coast of the United States," showed no significant difference in importance (M = 3.37, SD = 1.75; t(149.0) = 0.95, p = .343, d = +0.16). Differences in perceived importance therefore cannot account for why only feedback about gender moved subsequent selections in Study 1, consistent with our claim that descriptive feedback motivates behavior on dimensions carrying an implicit injunctive norm.
 
 ### CURRENT
 > *(No existing paragraph here; the insertion sits between the existing Study 1 Discussion paragraph and the Figure 3 placeholder.)*
@@ -88,6 +126,16 @@ Both passes used identical numbers (matching the response letter exactly). Above
 **Response letter source.** Line 80.
 **Why.** Same Reviewer 1 ask, applied to the General Discussion.
 
+### Response letter commitment
+
+From the Department Editor's summary (response letter line 35), the General Discussion is named alongside the Introduction as recipient of the contemporary-citation refresh:
+
+> The Introduction and General Discussion now draw on more contemporary work in the feedback, goal‑setting, and social‑norms literatures (e.g., Locke & Latham, 2019; Itzchakov & Latham, 2018; Chen, Latham, & Piccolo, 2020; Schultz, Nolan, & Cialdini, 2018; Devine & Ash, 2022; Andor, Gerster, & Peters, 2020; Henry, Ferraro, & Kontoleon, 2019; Mertens & Schultz, 2021), alongside the foundational citations we retain.
+
+And from the Reviewer 1 reply (response letter line 80), the Schultz 2018 reprise is added alongside the classic Schultz 2007:
+
+> We have updated our citations so we now cite Locke and Latham (2019) alongside the classic Locke and Latham (2002) as well as Schultz, Nolan, and Cialdini (2018) alongside the classic Schultz et al. (2007). These new citations reference contemporary updates to two foundational pieces we previously cited.
+
 ### CURRENT (citation block within the paragraph)
 > ...According to Feedback Intervention Theory, feedback is most effective when paired with explicit goals, standards, or explicit injunctive norms that signal a clear gap between current performance and a desired state (Kluger & DeNisi, 1996; Schultz et al., 2007)...
 
@@ -104,6 +152,16 @@ Both passes identical. Cite-block-only change; rest of the paragraph is untouche
 **Anchor.** Insert as a NEW paragraph in the Theoretical and Practical Contributions section (within manuscript line 170), AFTER the sentence ending `"an implicit injunctive norm to avoid prejudice has already been internalized by the decision-maker."` and BEFORE the closing sentence about `"focus attention on past behavior"`.
 **Response letter source.** Line 98 (Reviewer 2 reply).
 **Why.** Reviewer 2 raised the scope-condition concern; response letter commits to distinguishing the two pathways explicitly.
+
+### Response letter commitment
+
+From the Reviewer 2 reply on sharpening the theoretical contribution (response letter line 97):
+
+> Specifically, we have sought to sharpen our discussion of our theoretical contribution in the revised General Discussion (pp. X), building on the scope-condition discussion already present in the Future Directions and Limitations section.
+
+And the concrete two-pathway commitment (response letter line 98):
+
+> In particular, we now explicitly distinguish between two pathways through which descriptive feedback can change selection decisions. One pathway–the external motivation to control prejudice–should be driven both by a firm's norms but also by the fact that selection decisions are often observable to colleagues, job candidates, supervisors, and other stakeholders, and the implicit norm against prejudicial behavior is largely sustained by anti-discrimination laws, employee and customer scrutiny, and broader reputational concerns. The second pathway–internal motivation to control prejudice–by contrast, refers to selectors' personally held egalitarian beliefs and self-image as non-prejudiced decision-makers. This second pathway should not vary with organizational climate, and it is the pathway most directly supported by Study 4 (a study in which feedback was delivered privately and internal motivation to respond without prejudice mediated subsequent selections).
 
 ### CURRENT
 > *(No existing paragraph here; the insertion splits the existing line-170 paragraph in two.)*
@@ -125,6 +183,12 @@ Both passes covered the same logical structure (external pathway → internal pa
 **Response letter source.** Line 96 (Reviewer 2 reply).
 **Why.** Reviewer 2 wanted the ideology null interpreted; response letter commits to a conservative interpretation citing Kirgios et al. (2022).
 
+### Response letter commitment
+
+From the Reviewer 2 reply on political ideology and Kirgios et al. (response letter line 96):
+
+> RESPONSE: Thank you for this thoughtful comment. As you note, we did test whether political ideology moderated our effect in Study 4 and overall observed no significant interaction. While we are cautious about over-interpreting null results, the pattern is suggestive that the effect operates across partisan lines, leaving room for the external and internal motivations described above to be at work. Consistent with this interpretation, another recent study by Kirgios et al. (2022) found in a field experiment that when seeking help from city counselors, women and racial minorities benefited from explicitly naming their demographic identity in an ask just as much when contacting Republicans and Democrats, and the underlying mechanism identified was a motivation to control prejudice - the same mechanism we identify as mediating our findings. Overall, the existing empirical evidence suggests political ideology does not seem to moderate motivation to control prejudice.
+
 ### CURRENT
 > In addition, Study 4B established that the effect of gender feedback was not moderated by political ideology nor party affiliation. Finally, it ruled out the possibility that our effects were driven by perceptions of which attributes were considered most important.
 
@@ -144,6 +208,20 @@ Divergence on PLACEMENT of the new sentences:
 **Anchor.** Manuscript line 15. Replace the single sentence beginning `"And despite recent rollbacks of diversity, equity, and inclusion (DEI) policies..."` with three paragraphs.
 **Response letter source.** Line 93 (Reviewer 2 reply, DEI landscape).
 **Why.** Reviewer 2 said the paper "feels a bit dated" and asked for a fuller treatment of the current DEI landscape that also reinforces the paper's continued relevance.
+
+### Response letter commitment
+
+From the Reviewer 2 reply opener (response letter line 92):
+
+> RESPONSE: Thank you for this comment. We have updated the Introduction (pp. X) and the Discussion to situate the paper more explicitly in the current socio-political landscape with respect to DEI efforts.
+
+And the full content commitment, which supplies the canonical landscape paragraph (response letter line 93):
+
+> The revised manuscript now more thoroughly discusses the fluctuating corporate posture toward DEI over the past five years: a period in which many U.S. organizations first rapidly adopted pro-DEI rhetoric and commitments, and then many of those same organizations have since scaled back on those commitments under new political, legal, and reputational pressures. At the same time, we also acknowledge three countervailing patterns that have occurred in parallel. First, internationally, regulatory demand for transparency around demographic representation is expanding. For example, Australia's Workplace Gender Equality Amendment (Closing the Gender Pay Gap) Act 2023 mandates public reporting of firm-level gender representation and pay-gap data (Ressia, 2024); the EU Pay Transparency Directive 2023/970 requires member-state transposition by June 2026 (Mignano, 2024); and the EU Women on Boards Directive 2022/2381 establishes a 40% representation objective for the underrepresented gender on listed-company boards. Second, within the U.S., public and stakeholder sentiment has shifted more slowly than corporate and legal rhetoric. For instance a 2025 Bentley/Gallup survey reports that 69% of U.S. adults believe businesses should promote DEI (Bentley/Gallup, 2025), and anti-DEI shareholder proposals have failed at numerous prominent organizations, including Costco, Apple, Levi's, John Deere, Goldman Sachs, and others (CBS, 2025; Marketplace, 2025). Third, within corporations, many firms appear to have rebranded or reframed diversity-related work rather than dismantling it entirely. For example, Constellation Brands now uses "Inclusive Culture Team," Kohl's has shifted to "Chief Inclusion and Belonging Officer," and Nationwide and UPS have migrated toward "belonging," "respect," "fairness," or "inclusive experiences" framings (CNBC, 2025; HRGrapevine, 2025; Marketplace, 2026). Consistent with this pattern, Paradigm reports a 22% decrease in Fortune 100 references to "DEI/diversity" between 2023 and 2024 alongside a 59% increase in references to "belonging" (Paradigm, 2025).
+
+The Department Editor also flagged this in the summary (response letter line 37):
+
+> RESPONSE: We have addressed these points in the Introduction (pp. X) and General Discussion (pp. X). To avoid making the paper read as if it were written in a pre‑2024 period, we now acknowledge the recent U.S. retreat from explicit DEI rhetoric while also documenting countervailing patterns that keep the paper's central question relevant: expanded international transparency requirements, continued U.S. public and stakeholder support for corporate DEI, and firm‑level rebranding of diversity work toward "belonging," "inclusive culture," and related framings rather than wholesale dismantling.
 
 ### CURRENT (one sentence to replace)
 > And despite recent rollbacks of diversity, equity, and inclusion (DEI) policies at some organizations in the United States (Heaton, 2025), recent surveys indicate that the majority of Americans still hold favorable views about DEI (Minkin, 2024; Kidwai, 2025).
@@ -168,6 +246,12 @@ Divergence on PLACEMENT of the new sentences:
 **Response letter source.** Line 45 (DE reply on the appropriate-level question).
 **Why.** DE asked us to discuss the alternative that participants might simply use other measures appropriately in initial selections; the response letter commits to several Introduction sentences plus a Study 4 footnote (Change 10).
 
+### Response letter commitment
+
+From the Department Editor's reply on the appropriate-level alternative (response letter line 45):
+
+> In our studies, we make no assumptions about the normative or "appropriate" level for any attribute in the absence of explicit goals or prescriptions. We expect that a reputational or image concern is activated only after participants receive descriptive feedback, and only for race and gender. This fits the theoretical framing already in the paper: descriptive feedback shifts behavior on a given dimension only when that dimension carries an implicit injunctive norm that the feedback calls into question. We argue this holds for race and gender but not for the comparison attributes we test (as previously discussed in the Introduction, p. X, and General Discussion, p. X). However, we have now added several sentences to the Introduction (p. X) and as a footnote in our Discussion of Study 4 (p. X), making explicit both that descriptive feedback shifts subsequent selections only on dimensions carrying an implicit injunctive norm and that we do not assume participants' initial selections reflect any particular benchmark or "appropriate" level for the comparison attributes.
+
 ### CURRENT
 > *(No existing sentences here; this is a clarification to be inserted.)*
 
@@ -188,6 +272,14 @@ Divergence on placement:
 **Response letter source.** Line 45.
 **Why.** Companion to Change 9; the response letter explicitly committed to a clarifying footnote in Study 4 Discussion.
 
+### Response letter commitment
+
+Same Department Editor reply as Change 9 (response letter line 45) names a Study 4 Discussion footnote explicitly:
+
+> However, we have now added several sentences to the Introduction (p. X) and as a footnote in our Discussion of Study 4 (p. X), making explicit both that descriptive feedback shifts subsequent selections only on dimensions carrying an implicit injunctive norm and that we do not assume participants' initial selections reflect any particular benchmark or "appropriate" level for the comparison attributes.
+
+(Note: response letter line 46 mentions a SEPARATE Study 4 Discussion footnote summarizing the Table R1 zero-initial pooled analysis. That second footnote is intentionally out of scope for this pass.)
+
 ### CURRENT
 > *(No existing footnote here.)*
 
@@ -205,6 +297,16 @@ Both passes converged on essentially this footnote. This is NOT the Table R1 / z
 **Response letter source.** Lines 38 and 93 (closing portion of the DEI-landscape reply).
 **Why.** Response letter explicitly commits to identifying "organizational DEI climate as a limiting condition for future research" in the General Discussion.
 
+### Response letter commitment
+
+From the Department Editor's reply on theoretical scope (response letter line 38):
+
+> We have also made the theoretical scope conditions more explicit. In the revised manuscript, we acknowledge that pullbacks from explicit DEI commitments may reduce one source of pressure on decision-makers. At the same time, we explain that organizational commitments are not the only reason people may care about the demographic patterns in their selections. Anti-discrimination law, the visibility of selection decisions, employee and stakeholder expectations, broader reputational concerns, and individuals' own egalitarian commitments may all continue to make race and gender consequential in selection contexts. As a result, we now state more clearly that descriptive feedback should be most likely to matter when past selection patterns raise concerns about prejudice, and less likely to matter when those concerns are absent, muted, or explicitly rejected. Consistent with your note that an additional study is not required, and with your separate request to streamline the manuscript, we address this issue narratively rather than empirically. Our point-by-point reply to Reviewer 2 provides the supporting detail and citations, and the General Discussion now identifies organizational DEI climate as an important scope condition and direction for future research.
+
+And the closing portion of the Reviewer 2 socio-political reply (response letter line 93):
+
+> Thus, the current landscape does not simply make the paper less timely; it helps clarify when descriptive feedback should be more or less likely to matter. We now explain that descriptive feedback should be most influential when past selection patterns raise active concerns about prejudice, and less influential in contexts where those concerns are absent, muted, or explicitly rejected.
+
 ### CURRENT
 > *(No existing paragraph here.)*
 
@@ -221,6 +323,12 @@ Both passes converged on Future Directions and Limitations as the home (matching
 **Anchor.** Insert as a short new paragraph in Future Directions and Limitations near manuscript line 175.
 **Response letter source.** Line 99 (Reviewer 2 reply).
 **Why.** Response letter acknowledges that motivation to respond without prejudice is one key mechanism but not the only one; commits to noting fairness norms as a plausible additional driver, with Study 5 mechanism evidence as a precedent.
+
+### Response letter commitment
+
+From the Reviewer 2 reply on additional mechanisms (response letter line 99):
+
+> As we note in the General Discussion, we view motivation to respond without prejudice as one key mechanism we isolate, but not the only one descriptive feedback can plausibly activate. Fairness norms and broader concerns about appropriate representation may also drive the effects of feedback about past selections on future selection decisions (see also Study 5's mechanism analysis, which found that fairness concerns drive people to select men when women are overrepresented in order to reduce gender imbalance). We now describe further research probing these additional plausible mechanisms as a promising direction for future research.
 
 ### CURRENT
 > *(No existing paragraph here.)*
