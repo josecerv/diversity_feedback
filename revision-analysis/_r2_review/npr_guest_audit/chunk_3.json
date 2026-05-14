@@ -1,0 +1,266 @@
+[
+  {
+    "date": "2025-06-20",
+    "episode": "Uncovering the mysteries of the animal kingdom",
+    "role": "paleontologist",
+    "name": "Dean Lomax"
+  },
+  {
+    "date": "2025-06-20",
+    "episode": "Uncovering the mysteries of the animal kingdom",
+    "role": "biochemical engineer",
+    "name": "Saad Bhamla"
+  },
+  {
+    "date": "2025-06-20",
+    "episode": "Uncovering the mysteries of the animal kingdom",
+    "role": "herpetologist",
+    "name": "Gowri Shankar"
+  },
+  {
+    "date": "2025-06-13",
+    "episode": "Escaping the modern world and your noisy mind",
+    "role": "author",
+    "name": "Pico Iyer"
+  },
+  {
+    "date": "2025-06-13",
+    "episode": "Escaping the modern world and your noisy mind",
+    "role": "NXIVM whistleblower",
+    "name": "Sarah Edmondson"
+  },
+  {
+    "date": "2025-06-13",
+    "episode": "Escaping the modern world and your noisy mind",
+    "role": "navigator",
+    "name": "Lehua Kamalu"
+  },
+  {
+    "date": "2025-06-13",
+    "episode": "Escaping the modern world and your noisy mind",
+    "role": "screenwriter",
+    "name": "Shonda Rhimes"
+  },
+  {
+    "date": "2025-06-06",
+    "episode": "Sports psychology for everyday life",
+    "role": "former professional soccer player",
+    "name": "Abby Wambach"
+  },
+  {
+    "date": "2025-06-06",
+    "episode": "Sports psychology for everyday life",
+    "role": "cognitive scientist",
+    "name": "Sian Leah Beilock"
+  },
+  {
+    "date": "2025-06-06",
+    "episode": "Sports psychology for everyday life",
+    "role": "journalist",
+    "name": "Kate Fagan"
+  },
+  {
+    "date": "2025-06-06",
+    "episode": "Sports psychology for everyday life",
+    "role": "art historian",
+    "name": "Sarah Lewis"
+  },
+  {
+    "date": "2025-05-23",
+    "episode": "Secrets to successful teamwork",
+    "role": "activist",
+    "name": "Hajer Sharief"
+  },
+  {
+    "date": "2025-05-23",
+    "episode": "Secrets to successful teamwork",
+    "role": "social psychologist",
+    "name": "Amy Edmondson"
+  },
+  {
+    "date": "2025-05-23",
+    "episode": "Secrets to successful teamwork",
+    "role": "private equity investor",
+    "name": "Pete Stavros"
+  },
+  {
+    "date": "2025-05-16",
+    "episode": "How we experience time",
+    "role": "artist",
+    "name": "Katie Paterson"
+  },
+  {
+    "date": "2025-05-16",
+    "episode": "How we experience time",
+    "role": "cognitive neuroscientist",
+    "name": "Irena Arslanova"
+  },
+  {
+    "date": "2025-05-16",
+    "episode": "How we experience time",
+    "role": "music director",
+    "name": "Robert Franz"
+  },
+  {
+    "date": "2025-05-16",
+    "episode": "How we experience time",
+    "role": "the late-psychologist",
+    "name": "Philip Zimbardo"
+  },
+  {
+    "date": "2025-04-25",
+    "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+    "role": "social scientist",
+    "name": "Ty Tashiro"
+  },
+  {
+    "date": "2025-04-25",
+    "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+    "role": "cartoonist",
+    "name": "Liana Finck"
+  },
+  {
+    "date": "2025-04-25",
+    "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+    "role": "journalist",
+    "name": "Melissa Dahl"
+  },
+  {
+    "date": "2025-04-25",
+    "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+    "role": "relationship counselor",
+    "name": "Erin Chen"
+  },
+  {
+    "date": "2025-04-18",
+    "episode": "Biotech is about to change your world",
+    "role": "co-founder of the Human",
+    "name": "Cell Atlas Aviv Regev"
+  },
+  {
+    "date": "2025-04-18",
+    "episode": "Biotech is about to change your world",
+    "role": "physical chemist",
+    "name": "Brad Ringeisen"
+  },
+  {
+    "date": "2025-04-18",
+    "episode": "Biotech is about to change your world",
+    "role": "immunoengineer",
+    "name": "Aaron Morris"
+  },
+  {
+    "date": "2025-03-28",
+    "episode": "How the brain interprets pain \u2014 and new ways to manage it",
+    "role": "equestrian",
+    "name": "Kat Naud"
+  },
+  {
+    "date": "2025-03-28",
+    "episode": "How the brain interprets pain \u2014 and new ways to manage it",
+    "role": "researcher",
+    "name": "Amy Baxter"
+  },
+  {
+    "date": "2025-03-28",
+    "episode": "How the brain interprets pain \u2014 and new ways to manage it",
+    "role": "opioid reform advocate",
+    "name": "Cammie Wolf Rice"
+  },
+  {
+    "date": "2025-03-14",
+    "episode": "Decoding the secret messages of data, biology and music",
+    "role": "textual scientist",
+    "name": "Gregory Heyworth"
+  },
+  {
+    "date": "2025-03-14",
+    "episode": "Decoding the secret messages of data, biology and music",
+    "role": "economist",
+    "name": "Ralph Chami"
+  },
+  {
+    "date": "2025-02-28",
+    "episode": "The birds and the bees",
+    "role": "beekeeper",
+    "name": "Noah Wilson-Rich"
+  },
+  {
+    "date": "2025-02-28",
+    "episode": "The birds and the bees",
+    "role": "biologist",
+    "name": "Carin Bondar"
+  },
+  {
+    "date": "2025-02-28",
+    "episode": "The birds and the bees",
+    "role": "behavioral ecologist",
+    "name": "Marlene Zuk"
+  },
+  {
+    "date": "2025-02-28",
+    "episode": "The birds and the bees",
+    "role": "comedian",
+    "name": "Julia Sweeney"
+  },
+  {
+    "date": "2025-02-14",
+    "episode": "Retracing the steps of their ancestors",
+    "role": "author",
+    "name": "Joseph McGill Jr"
+  },
+  {
+    "date": "2025-01-31",
+    "episode": "The shocking power of tiny things",
+    "role": "microbiologist",
+    "name": "Anne Madden"
+  },
+  {
+    "date": "2025-01-31",
+    "episode": "The shocking power of tiny things",
+    "role": "cognitive scientist",
+    "name": "Lera Boroditsky"
+  },
+  {
+    "date": "2025-01-31",
+    "episode": "The shocking power of tiny things",
+    "role": "former educator",
+    "name": "YeYoon Kim"
+  },
+  {
+    "date": "2025-01-31",
+    "episode": "The shocking power of tiny things",
+    "role": "Zen Buddhist monk",
+    "name": "Bart Weetjens"
+  },
+  {
+    "date": "2025-01-17",
+    "episode": "Your brain is the next tech frontier",
+    "role": "AI ethicist",
+    "name": "Nita Farahany"
+  },
+  {
+    "date": "2025-01-17",
+    "episode": "Your brain is the next tech frontier",
+    "role": "entrepreneur",
+    "name": "Conor Russomanno"
+  },
+  {
+    "date": "2025-01-17",
+    "episode": "Your brain is the next tech frontier",
+    "role": "sous chef",
+    "name": "Kate Faulkner"
+  },
+  {
+    "date": "2025-01-03",
+    "episode": "Learning from what others leave behind ",
+    "role": "museum curator",
+    "name": "Ariana Curtis"
+  },
+  {
+    "date": "2025-01-03",
+    "episode": "Learning from what others leave behind ",
+    "role": "music curator",
+    "name": "Alexis Charpentier"
+  }
+]

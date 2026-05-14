@@ -1,0 +1,3681 @@
+{
+  "all_mentions": [
+    {
+      "date": "2026-05-08",
+      "episode": "How to mend a broken heart",
+      "role": "cardiologist",
+      "name": "Sandeep Jauhar"
+    },
+    {
+      "date": "2026-05-08",
+      "episode": "How to mend a broken heart",
+      "role": "law professor",
+      "name": "Jeannie Suk Gersen"
+    },
+    {
+      "date": "2026-05-08",
+      "episode": "How to mend a broken heart",
+      "role": "pediatric nurse",
+      "name": "Hui-wen Sato"
+    },
+    {
+      "date": "2026-05-01",
+      "episode": "How to be a \"Super Ager\" (it's not your genes)",
+      "role": "Physician",
+      "name": "Eric Topol"
+    },
+    {
+      "date": "2026-04-24",
+      "episode": "Can we preserve knowledge \u2026 forever?",
+      "role": "game designer",
+      "name": "CM Ralph"
+    },
+    {
+      "date": "2026-04-24",
+      "episode": "Can we preserve knowledge \u2026 forever?",
+      "role": "digital librarian",
+      "name": "Brewster Kayle"
+    },
+    {
+      "date": "2026-04-24",
+      "episode": "Can we preserve knowledge \u2026 forever?",
+      "role": "molecular biologist",
+      "name": "Dina Zielinksi"
+    },
+    {
+      "date": "2026-04-24",
+      "episode": "Can we preserve knowledge \u2026 forever?",
+      "role": "archeologist",
+      "name": "Chris Fisher"
+    },
+    {
+      "date": "2026-04-10",
+      "episode": "The hidden forces shaping your choices",
+      "role": "food systems expert",
+      "name": "Sarah Lake"
+    },
+    {
+      "date": "2026-04-10",
+      "episode": "The hidden forces shaping your choices",
+      "role": "infrastructure engineer",
+      "name": "Deb Chachra"
+    },
+    {
+      "date": "2026-04-10",
+      "episode": "The hidden forces shaping your choices",
+      "role": "cross-cultural psychologist",
+      "name": "Michele Gelfand"
+    },
+    {
+      "date": "2026-04-10",
+      "episode": "The hidden forces shaping your choices",
+      "role": "urban planner",
+      "name": "Jeff Speck"
+    },
+    {
+      "date": "2026-04-10",
+      "episode": "The hidden forces shaping your choices",
+      "role": "Tempe resident",
+      "name": "Ignacio Delgadillo"
+    },
+    {
+      "date": "2026-04-03",
+      "episode": "Could AI help us, not replace us?",
+      "role": "Siri co-creator",
+      "name": "Tom Gruber"
+    },
+    {
+      "date": "2026-03-27",
+      "episode": "A neuroscientist's guide to managing our emotions",
+      "role": "neuroscientist",
+      "name": "Ethan Kross"
+    },
+    {
+      "date": "2026-03-20",
+      "episode": "How does your brain perceive the world?",
+      "role": "the editorial director of TED-Ed animations",
+      "name": "Alex Rosenthal"
+    },
+    {
+      "date": "2026-03-20",
+      "episode": "How does your brain perceive the world?",
+      "role": "psychologist",
+      "name": "John Wixted"
+    },
+    {
+      "date": "2026-03-20",
+      "episode": "How does your brain perceive the world?",
+      "role": "love coach",
+      "name": "Francesca Hogi"
+    },
+    {
+      "date": "2026-03-13",
+      "episode": "Curious stories of coexistence",
+      "role": "evolutionary biologist",
+      "name": "Philip Johns"
+    },
+    {
+      "date": "2026-03-13",
+      "episode": "Curious stories of coexistence",
+      "role": "astrophysicist",
+      "name": "Avi Loeb"
+    },
+    {
+      "date": "2026-03-13",
+      "episode": "Curious stories of coexistence",
+      "role": "author",
+      "name": "Laurel Braitman"
+    },
+    {
+      "date": "2026-03-06",
+      "episode": "Getting what you want: A guide to negotiating",
+      "role": "law professor",
+      "name": "Alex Carter"
+    },
+    {
+      "date": "2026-03-06",
+      "episode": "Getting what you want: A guide to negotiating",
+      "role": "linguist",
+      "name": "Magdalena Hoeller"
+    },
+    {
+      "date": "2026-02-27",
+      "episode": "Three mothers who shaped American history",
+      "role": "author",
+      "name": "Anna Malaika Tubbs"
+    },
+    {
+      "date": "2026-02-20",
+      "episode": "Did social media break a generation \u2014 or just change it?",
+      "role": "social psychologist",
+      "name": "Jonathan Haidt"
+    },
+    {
+      "date": "2026-02-20",
+      "episode": "Did social media break a generation \u2014 or just change it?",
+      "role": "youth online safety activist",
+      "name": "Maximilian Milovidov"
+    },
+    {
+      "date": "2026-02-20",
+      "episode": "Did social media break a generation \u2014 or just change it?",
+      "role": "author",
+      "name": "Catherine Price"
+    },
+    {
+      "date": "2026-02-13",
+      "episode": "How you see yourself",
+      "role": "portrait photographer",
+      "name": "David Suh"
+    },
+    {
+      "date": "2026-02-13",
+      "episode": "How you see yourself",
+      "role": "social psychologist",
+      "name": "Dolly Chugh"
+    },
+    {
+      "date": "2026-02-13",
+      "episode": "How you see yourself",
+      "role": "journalist",
+      "name": "Elise Hu"
+    },
+    {
+      "date": "2026-02-13",
+      "episode": "How you see yourself",
+      "role": "science writer",
+      "name": "Anil Ananthaswamy"
+    },
+    {
+      "date": "2026-02-06",
+      "episode": "How to talk about peace",
+      "role": "peace activists",
+      "name": "Aqeela Sherrills"
+    },
+    {
+      "date": "2026-02-06",
+      "episode": "How to talk about peace",
+      "role": "Aziz",
+      "name": "Abu Sarah"
+    },
+    {
+      "date": "2026-01-30",
+      "episode": "The future of our memories",
+      "role": "technologist",
+      "name": "Pau Aleikum Garcia"
+    },
+    {
+      "date": "2026-01-30",
+      "episode": "The future of our memories",
+      "role": "cartoonist",
+      "name": "Amy Kurzweil"
+    },
+    {
+      "date": "2026-01-30",
+      "episode": "The future of our memories",
+      "role": "digital archaeologist",
+      "name": "Chance Coughenour"
+    },
+    {
+      "date": "2026-01-23",
+      "episode": "What can you control in this chaotic world?",
+      "role": "financial advisor",
+      "name": "Matt Pitcher"
+    },
+    {
+      "date": "2026-01-23",
+      "episode": "What can you control in this chaotic world?",
+      "role": "sociologist",
+      "name": "Anindya Kundu"
+    },
+    {
+      "date": "2026-01-23",
+      "episode": "What can you control in this chaotic world?",
+      "role": "journalist",
+      "name": "Jennifer Wallace"
+    },
+    {
+      "date": "2026-01-23",
+      "episode": "What can you control in this chaotic world?",
+      "role": "design thinking professor",
+      "name": "Bill Burnett"
+    },
+    {
+      "date": "2026-01-16",
+      "episode": "What we \u2014 and AI \u2014 can learn from nature's intelligence",
+      "role": "neuroscientist",
+      "name": "Greg Gage"
+    },
+    {
+      "date": "2026-01-16",
+      "episode": "What we \u2014 and AI \u2014 can learn from nature's intelligence",
+      "role": "computational neuroscientist",
+      "name": "Frances Chance"
+    },
+    {
+      "date": "2026-01-16",
+      "episode": "What we \u2014 and AI \u2014 can learn from nature's intelligence",
+      "role": "social psychoneuroimmunologist",
+      "name": "Keely Muscatell"
+    },
+    {
+      "date": "2026-01-16",
+      "episode": "What we \u2014 and AI \u2014 can learn from nature's intelligence",
+      "role": "environmental researcher",
+      "name": "Karen Bakker"
+    },
+    {
+      "date": "2026-01-09",
+      "episode": "The secrets in your baby's genes",
+      "role": "researcher",
+      "name": "Robert Green"
+    },
+    {
+      "date": "2026-01-02",
+      "episode": "Navigating uncertainty",
+      "role": "former medical clown",
+      "name": "Matt Wilson"
+    },
+    {
+      "date": "2026-01-02",
+      "episode": "Navigating uncertainty",
+      "role": "psychologist",
+      "name": "Jamil Zaki"
+    },
+    {
+      "date": "2026-01-02",
+      "episode": "Navigating uncertainty",
+      "role": "human rights activist",
+      "name": "Yifat Susskind"
+    },
+    {
+      "date": "2025-12-26",
+      "episode": "Who counts as a significant other?",
+      "role": "journalist",
+      "name": "Rhaina Cohen"
+    },
+    {
+      "date": "2025-12-26",
+      "episode": "Who counts as a significant other?",
+      "role": "family therapist",
+      "name": "Stephanie Yates-Anyabwile"
+    },
+    {
+      "date": "2025-12-26",
+      "episode": "Who counts as a significant other?",
+      "role": "social psychologist",
+      "name": "Bella DePaulo"
+    },
+    {
+      "date": "2025-12-19",
+      "episode": "Who is really shaping the future of AI?",
+      "role": "tech entrepreneur",
+      "name": "Alvin Wang Graylin"
+    },
+    {
+      "date": "2025-12-19",
+      "episode": "Who is really shaping the future of AI?",
+      "role": "NPR tech reporter",
+      "name": "John Ruwitch"
+    },
+    {
+      "date": "2025-12-19",
+      "episode": "Who is really shaping the future of AI?",
+      "role": "OpenAI CEO Sam Altman in conversation with TED's",
+      "name": "Chris Anderson"
+    },
+    {
+      "date": "2025-12-12",
+      "episode": "Soundtracks of our lives",
+      "role": "professor of songwriting",
+      "name": "Scarlet Keys"
+    },
+    {
+      "date": "2025-12-12",
+      "episode": "Soundtracks of our lives",
+      "role": "voice expert",
+      "name": "Rebecca Kleinberger"
+    },
+    {
+      "date": "2025-12-12",
+      "episode": "Soundtracks of our lives",
+      "role": "musician",
+      "name": "Snow Raven"
+    },
+    {
+      "date": "2025-11-14",
+      "episode": "How the creator economy is making you talk like the internet",
+      "role": "linguist",
+      "name": "Adam Aleksic"
+    },
+    {
+      "date": "2025-10-31",
+      "episode": "Move fast...and fix democracy?",
+      "role": "political consultant",
+      "name": "Bradley Tusk"
+    },
+    {
+      "date": "2025-10-31",
+      "episode": "Move fast...and fix democracy?",
+      "role": "political advisor",
+      "name": "Jennifer Pahlka"
+    },
+    {
+      "date": "2025-10-31",
+      "episode": "Move fast...and fix democracy?",
+      "role": "e-governance expert",
+      "name": "Anna Piperal"
+    },
+    {
+      "date": "2025-10-24",
+      "episode": "The great food rescue",
+      "role": "food waste expert",
+      "name": "Dana Gunders"
+    },
+    {
+      "date": "2025-10-24",
+      "episode": "The great food rescue",
+      "role": "social entrepreneur",
+      "name": "Jasmine Crowe-Houston"
+    },
+    {
+      "date": "2025-10-24",
+      "episode": "The great food rescue",
+      "role": "sustainability activist",
+      "name": "Anthony Myint"
+    },
+    {
+      "date": "2025-10-24",
+      "episode": "The great food rescue",
+      "role": "behavioral scientist",
+      "name": "Jiaying Zhao"
+    },
+    {
+      "date": "2025-10-03",
+      "episode": "How companies use AI to choose who gets hired and fired",
+      "role": "Journalist",
+      "name": "Hilke Schellmann"
+    },
+    {
+      "date": "2025-09-19",
+      "episode": "Approaches to life: Improvise, pivot or plan",
+      "role": "musician",
+      "name": "Reggie Watts"
+    },
+    {
+      "date": "2025-09-19",
+      "episode": "Approaches to life: Improvise, pivot or plan",
+      "role": "biomedical researcher",
+      "name": "Sonia Vallabh"
+    },
+    {
+      "date": "2025-09-19",
+      "episode": "Approaches to life: Improvise, pivot or plan",
+      "role": "conservationist",
+      "name": "Kristine McDivitt Tompkins"
+    },
+    {
+      "date": "2025-09-05",
+      "episode": "Are the kids alright? Part 2",
+      "role": "psychologist",
+      "name": "Lisa Damour"
+    },
+    {
+      "date": "2025-08-22",
+      "episode": "A guide to being brave in relationships",
+      "role": "podcaster",
+      "name": "Kelly Corrigan"
+    },
+    {
+      "date": "2025-08-22",
+      "episode": "A guide to being brave in relationships",
+      "role": "journalist",
+      "name": "Allison Gilbert"
+    },
+    {
+      "date": "2025-08-15",
+      "episode": "How deserted places find a second life",
+      "role": "evolutionary biologist",
+      "name": "Shane Campbell-Staton"
+    },
+    {
+      "date": "2025-08-15",
+      "episode": "How deserted places find a second life",
+      "role": "entrepreneur",
+      "name": "Garry Cooper"
+    },
+    {
+      "date": "2025-08-15",
+      "episode": "How deserted places find a second life",
+      "role": "urban renewal expert",
+      "name": "Anika Goss"
+    },
+    {
+      "date": "2025-08-15",
+      "episode": "How deserted places find a second life",
+      "role": "conservationist",
+      "name": "Alysa McCall"
+    },
+    {
+      "date": "2025-08-08",
+      "episode": "The skin we're in",
+      "role": "mechanical engineer",
+      "name": "Katherine Kuchenbecker"
+    },
+    {
+      "date": "2025-08-08",
+      "episode": "The skin we're in",
+      "role": "materials scientist",
+      "name": "Anna Maria Coclite"
+    },
+    {
+      "date": "2025-08-08",
+      "episode": "The skin we're in",
+      "role": "TV broadcaster",
+      "name": "Lee Thomas"
+    },
+    {
+      "date": "2025-08-08",
+      "episode": "The skin we're in",
+      "role": "author",
+      "name": "Kathryn Schulz"
+    },
+    {
+      "date": "2025-08-01",
+      "episode": "How to find joy and success as a late bloomer",
+      "role": "writer",
+      "name": "Doree Shafrir"
+    },
+    {
+      "date": "2025-08-01",
+      "episode": "How to find joy and success as a late bloomer",
+      "role": "anti-ageism activist",
+      "name": "Ashton Applewhite"
+    },
+    {
+      "date": "2025-08-01",
+      "episode": "How to find joy and success as a late bloomer",
+      "role": "retired educator",
+      "name": "Riley Moynes"
+    },
+    {
+      "date": "2025-07-04",
+      "episode": "The state of fashion",
+      "role": "designer",
+      "name": "Machine Dazzle"
+    },
+    {
+      "date": "2025-07-04",
+      "episode": "The state of fashion",
+      "role": "supply chain expert",
+      "name": "Aparna Mehta"
+    },
+    {
+      "date": "2025-07-04",
+      "episode": "The state of fashion",
+      "role": "journalist",
+      "name": "Amanda Mull"
+    },
+    {
+      "date": "2025-07-04",
+      "episode": "The state of fashion",
+      "role": "supermodel",
+      "name": "Cameron Russell"
+    },
+    {
+      "date": "2025-06-27",
+      "episode": "How taking a second look can change your everything",
+      "role": "artists",
+      "name": "Agnieszka Pilat"
+    },
+    {
+      "date": "2025-06-27",
+      "episode": "How taking a second look can change your everything",
+      "role": "chemical engineer",
+      "name": "Franziska Trautmann"
+    },
+    {
+      "date": "2025-06-27",
+      "episode": "How taking a second look can change your everything",
+      "role": "musician",
+      "name": "Mike Posner"
+    },
+    {
+      "date": "2025-06-20",
+      "episode": "Uncovering the mysteries of the animal kingdom",
+      "role": "paleontologist",
+      "name": "Dean Lomax"
+    },
+    {
+      "date": "2025-06-20",
+      "episode": "Uncovering the mysteries of the animal kingdom",
+      "role": "biochemical engineer",
+      "name": "Saad Bhamla"
+    },
+    {
+      "date": "2025-06-20",
+      "episode": "Uncovering the mysteries of the animal kingdom",
+      "role": "herpetologist",
+      "name": "Gowri Shankar"
+    },
+    {
+      "date": "2025-06-13",
+      "episode": "Escaping the modern world and your noisy mind",
+      "role": "author",
+      "name": "Pico Iyer"
+    },
+    {
+      "date": "2025-06-13",
+      "episode": "Escaping the modern world and your noisy mind",
+      "role": "NXIVM whistleblower",
+      "name": "Sarah Edmondson"
+    },
+    {
+      "date": "2025-06-13",
+      "episode": "Escaping the modern world and your noisy mind",
+      "role": "navigator",
+      "name": "Lehua Kamalu"
+    },
+    {
+      "date": "2025-06-13",
+      "episode": "Escaping the modern world and your noisy mind",
+      "role": "screenwriter",
+      "name": "Shonda Rhimes"
+    },
+    {
+      "date": "2025-06-06",
+      "episode": "Sports psychology for everyday life",
+      "role": "former professional soccer player",
+      "name": "Abby Wambach"
+    },
+    {
+      "date": "2025-06-06",
+      "episode": "Sports psychology for everyday life",
+      "role": "cognitive scientist",
+      "name": "Sian Leah Beilock"
+    },
+    {
+      "date": "2025-06-06",
+      "episode": "Sports psychology for everyday life",
+      "role": "journalist",
+      "name": "Kate Fagan"
+    },
+    {
+      "date": "2025-06-06",
+      "episode": "Sports psychology for everyday life",
+      "role": "art historian",
+      "name": "Sarah Lewis"
+    },
+    {
+      "date": "2025-05-23",
+      "episode": "Secrets to successful teamwork",
+      "role": "activist",
+      "name": "Hajer Sharief"
+    },
+    {
+      "date": "2025-05-23",
+      "episode": "Secrets to successful teamwork",
+      "role": "social psychologist",
+      "name": "Amy Edmondson"
+    },
+    {
+      "date": "2025-05-23",
+      "episode": "Secrets to successful teamwork",
+      "role": "private equity investor",
+      "name": "Pete Stavros"
+    },
+    {
+      "date": "2025-05-16",
+      "episode": "How we experience time",
+      "role": "artist",
+      "name": "Katie Paterson"
+    },
+    {
+      "date": "2025-05-16",
+      "episode": "How we experience time",
+      "role": "cognitive neuroscientist",
+      "name": "Irena Arslanova"
+    },
+    {
+      "date": "2025-05-16",
+      "episode": "How we experience time",
+      "role": "music director",
+      "name": "Robert Franz"
+    },
+    {
+      "date": "2025-05-16",
+      "episode": "How we experience time",
+      "role": "the late-psychologist",
+      "name": "Philip Zimbardo"
+    },
+    {
+      "date": "2025-05-02",
+      "episode": "The hidden forces shaping your choices",
+      "role": "food systems expert",
+      "name": "Sarah Lake"
+    },
+    {
+      "date": "2025-05-02",
+      "episode": "The hidden forces shaping your choices",
+      "role": "infrastructure engineer",
+      "name": "Deb Chachra"
+    },
+    {
+      "date": "2025-05-02",
+      "episode": "The hidden forces shaping your choices",
+      "role": "cross-cultural psychologist",
+      "name": "Michele Gelfand"
+    },
+    {
+      "date": "2025-05-02",
+      "episode": "The hidden forces shaping your choices",
+      "role": "urban planner",
+      "name": "Jeff Speck"
+    },
+    {
+      "date": "2025-05-02",
+      "episode": "The hidden forces shaping your choices",
+      "role": "Tempe resident",
+      "name": "Ignacio Delgadillo"
+    },
+    {
+      "date": "2025-04-25",
+      "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+      "role": "social scientist",
+      "name": "Ty Tashiro"
+    },
+    {
+      "date": "2025-04-25",
+      "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+      "role": "cartoonist",
+      "name": "Liana Finck"
+    },
+    {
+      "date": "2025-04-25",
+      "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+      "role": "journalist",
+      "name": "Melissa Dahl"
+    },
+    {
+      "date": "2025-04-25",
+      "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+      "role": "relationship counselor",
+      "name": "Erin Chen"
+    },
+    {
+      "date": "2025-04-18",
+      "episode": "Biotech is about to change your world",
+      "role": "co-founder of the Human",
+      "name": "Cell Atlas Aviv Regev"
+    },
+    {
+      "date": "2025-04-18",
+      "episode": "Biotech is about to change your world",
+      "role": "physical chemist",
+      "name": "Brad Ringeisen"
+    },
+    {
+      "date": "2025-04-18",
+      "episode": "Biotech is about to change your world",
+      "role": "immunoengineer",
+      "name": "Aaron Morris"
+    },
+    {
+      "date": "2025-04-04",
+      "episode": "How you see yourself ",
+      "role": "portrait photographer",
+      "name": "David Suh"
+    },
+    {
+      "date": "2025-04-04",
+      "episode": "How you see yourself ",
+      "role": "social psychologist",
+      "name": "Dolly Chugh"
+    },
+    {
+      "date": "2025-04-04",
+      "episode": "How you see yourself ",
+      "role": "journalist",
+      "name": "Elise Hu"
+    },
+    {
+      "date": "2025-04-04",
+      "episode": "How you see yourself ",
+      "role": "science writer",
+      "name": "Anil Ananthaswamy"
+    },
+    {
+      "date": "2025-03-28",
+      "episode": "How the brain interprets pain \u2014 and new ways to manage it",
+      "role": "equestrian",
+      "name": "Kat Naud"
+    },
+    {
+      "date": "2025-03-28",
+      "episode": "How the brain interprets pain \u2014 and new ways to manage it",
+      "role": "researcher",
+      "name": "Amy Baxter"
+    },
+    {
+      "date": "2025-03-28",
+      "episode": "How the brain interprets pain \u2014 and new ways to manage it",
+      "role": "opioid reform advocate",
+      "name": "Cammie Wolf Rice"
+    },
+    {
+      "date": "2025-03-21",
+      "episode": "Curious stories of coexistence",
+      "role": "evolutionary biologist",
+      "name": "Philip Johns"
+    },
+    {
+      "date": "2025-03-21",
+      "episode": "Curious stories of coexistence",
+      "role": "astrophysicist",
+      "name": "Avi Loeb"
+    },
+    {
+      "date": "2025-03-21",
+      "episode": "Curious stories of coexistence",
+      "role": "author",
+      "name": "Laurel Braitman"
+    },
+    {
+      "date": "2025-03-14",
+      "episode": "Decoding the secret messages of data, biology and music",
+      "role": "textual scientist",
+      "name": "Gregory Heyworth"
+    },
+    {
+      "date": "2025-03-14",
+      "episode": "Decoding the secret messages of data, biology and music",
+      "role": "economist",
+      "name": "Ralph Chami"
+    },
+    {
+      "date": "2025-03-07",
+      "episode": "A neuroscientist's guide to managing our emotions",
+      "role": "neuroscientist",
+      "name": "Ethan Kross"
+    },
+    {
+      "date": "2025-02-28",
+      "episode": "The birds and the bees",
+      "role": "beekeeper",
+      "name": "Noah Wilson-Rich"
+    },
+    {
+      "date": "2025-02-28",
+      "episode": "The birds and the bees",
+      "role": "biologist",
+      "name": "Carin Bondar"
+    },
+    {
+      "date": "2025-02-28",
+      "episode": "The birds and the bees",
+      "role": "behavioral ecologist",
+      "name": "Marlene Zuk"
+    },
+    {
+      "date": "2025-02-28",
+      "episode": "The birds and the bees",
+      "role": "comedian",
+      "name": "Julia Sweeney"
+    },
+    {
+      "date": "2025-02-21",
+      "episode": "Soundtracks of our lives",
+      "role": "professor of songwriting",
+      "name": "Scarlet Keys"
+    },
+    {
+      "date": "2025-02-21",
+      "episode": "Soundtracks of our lives",
+      "role": "voice expert",
+      "name": "Rebecca Kleinberger"
+    },
+    {
+      "date": "2025-02-21",
+      "episode": "Soundtracks of our lives",
+      "role": "musician",
+      "name": "Snow Raven"
+    },
+    {
+      "date": "2025-02-14",
+      "episode": "Retracing the steps of their ancestors",
+      "role": "author",
+      "name": "Joseph McGill Jr"
+    },
+    {
+      "date": "2025-02-07",
+      "episode": "Who counts as a significant other?",
+      "role": "journalist",
+      "name": "Rhaina Cohen"
+    },
+    {
+      "date": "2025-02-07",
+      "episode": "Who counts as a significant other?",
+      "role": "family therapist",
+      "name": "Stephanie Yates-Anyabwile"
+    },
+    {
+      "date": "2025-02-07",
+      "episode": "Who counts as a significant other?",
+      "role": "social psychologist",
+      "name": "Bella DePaulo"
+    },
+    {
+      "date": "2025-01-31",
+      "episode": "The shocking power of tiny things",
+      "role": "microbiologist",
+      "name": "Anne Madden"
+    },
+    {
+      "date": "2025-01-31",
+      "episode": "The shocking power of tiny things",
+      "role": "cognitive scientist",
+      "name": "Lera Boroditsky"
+    },
+    {
+      "date": "2025-01-31",
+      "episode": "The shocking power of tiny things",
+      "role": "former educator",
+      "name": "YeYoon Kim"
+    },
+    {
+      "date": "2025-01-31",
+      "episode": "The shocking power of tiny things",
+      "role": "Zen Buddhist monk",
+      "name": "Bart Weetjens"
+    },
+    {
+      "date": "2025-01-24",
+      "episode": "The future of our memories",
+      "role": "technologist",
+      "name": "Pau Aleikum Garcia"
+    },
+    {
+      "date": "2025-01-24",
+      "episode": "The future of our memories",
+      "role": "cartoonist",
+      "name": "Amy Kurzweil"
+    },
+    {
+      "date": "2025-01-24",
+      "episode": "The future of our memories",
+      "role": "digital archaeologist",
+      "name": "Chance Coughenour"
+    },
+    {
+      "date": "2025-01-17",
+      "episode": "Your brain is the next tech frontier",
+      "role": "AI ethicist",
+      "name": "Nita Farahany"
+    },
+    {
+      "date": "2025-01-17",
+      "episode": "Your brain is the next tech frontier",
+      "role": "entrepreneur",
+      "name": "Conor Russomanno"
+    },
+    {
+      "date": "2025-01-17",
+      "episode": "Your brain is the next tech frontier",
+      "role": "sous chef",
+      "name": "Kate Faulkner"
+    },
+    {
+      "date": "2025-01-10",
+      "episode": "Navigating uncertainty in 2025",
+      "role": "former medical clown",
+      "name": "Matt Wilson"
+    },
+    {
+      "date": "2025-01-10",
+      "episode": "Navigating uncertainty in 2025",
+      "role": "psychologist",
+      "name": "Jamil Zaki"
+    },
+    {
+      "date": "2025-01-10",
+      "episode": "Navigating uncertainty in 2025",
+      "role": "human rights activist",
+      "name": "Yifat Susskind"
+    },
+    {
+      "date": "2025-01-03",
+      "episode": "Learning from what others leave behind ",
+      "role": "museum curator",
+      "name": "Ariana Curtis"
+    },
+    {
+      "date": "2025-01-03",
+      "episode": "Learning from what others leave behind ",
+      "role": "music curator",
+      "name": "Alexis Charpentier"
+    },
+    {
+      "date": "2025-01-03",
+      "episode": "Learning from what others leave behind ",
+      "role": "artist",
+      "name": "Katie Paterson"
+    },
+    {
+      "date": "2024-12-27",
+      "episode": "Searching for paradise",
+      "role": "wildfire expert",
+      "name": "George Whitesides"
+    },
+    {
+      "date": "2024-12-27",
+      "episode": "Searching for paradise",
+      "role": "author",
+      "name": "Pico Iyer"
+    },
+    {
+      "date": "2024-12-27",
+      "episode": "Searching for paradise",
+      "role": "tech entrepreneur",
+      "name": "Ramona Pierson"
+    },
+    {
+      "date": "2024-12-13",
+      "episode": "We resist change and surprises\u2014but shock can shift our lives for the better",
+      "role": "bird truther",
+      "name": "Peter McIndoe"
+    },
+    {
+      "date": "2024-12-13",
+      "episode": "We resist change and surprises\u2014but shock can shift our lives for the better",
+      "role": "psychologist",
+      "name": "Paul Bloom"
+    },
+    {
+      "date": "2024-12-13",
+      "episode": "We resist change and surprises\u2014but shock can shift our lives for the better",
+      "role": "cognitive scientist",
+      "name": "Maya Shankar"
+    },
+    {
+      "date": "2024-12-06",
+      "episode": "The great food rescue",
+      "role": "food waste expert",
+      "name": "Dana Gunders"
+    },
+    {
+      "date": "2024-12-06",
+      "episode": "The great food rescue",
+      "role": "social entrepreneur",
+      "name": "Jasmine Crowe-Houston"
+    },
+    {
+      "date": "2024-12-06",
+      "episode": "The great food rescue",
+      "role": "sustainability activist",
+      "name": "Anthony Myint"
+    },
+    {
+      "date": "2024-12-06",
+      "episode": "The great food rescue",
+      "role": "behavioral scientist",
+      "name": "Jiaying Zhao"
+    },
+    {
+      "date": "2024-11-22",
+      "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+      "role": "social scientist",
+      "name": "Ty Tashiro"
+    },
+    {
+      "date": "2024-11-22",
+      "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+      "role": "cartoonist",
+      "name": "Liana Finck"
+    },
+    {
+      "date": "2024-11-22",
+      "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+      "role": "journalist",
+      "name": "Melissa Dahl"
+    },
+    {
+      "date": "2024-11-22",
+      "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+      "role": "relationship counselor",
+      "name": "Erin Chen"
+    },
+    {
+      "date": "2024-11-20",
+      "episode": "Making sense of the sun",
+      "role": "astrophysicist",
+      "name": "Nour Rawafi"
+    },
+    {
+      "date": "2024-11-20",
+      "episode": "Making sense of the sun",
+      "role": "fusion physicist",
+      "name": "Tammy Ma"
+    },
+    {
+      "date": "2024-11-20",
+      "episode": "Making sense of the sun",
+      "role": "renewable energy strategist",
+      "name": "Rebecca Collyer"
+    },
+    {
+      "date": "2024-11-20",
+      "episode": "Making sense of the sun",
+      "role": "science journalist",
+      "name": "David Baron"
+    },
+    {
+      "date": "2024-11-08",
+      "episode": "What we\u2014and AI\u2014can learn from nature's intelligence",
+      "role": "neuroscientist",
+      "name": "Greg Gage"
+    },
+    {
+      "date": "2024-11-08",
+      "episode": "What we\u2014and AI\u2014can learn from nature's intelligence",
+      "role": "computational neuroscientist",
+      "name": "Frances Chance"
+    },
+    {
+      "date": "2024-11-08",
+      "episode": "What we\u2014and AI\u2014can learn from nature's intelligence",
+      "role": "social psychoneuroimmunologist",
+      "name": "Keely Muscatell"
+    },
+    {
+      "date": "2024-11-08",
+      "episode": "What we\u2014and AI\u2014can learn from nature's intelligence",
+      "role": "environmental researcher",
+      "name": "Karen Bakker"
+    },
+    {
+      "date": "2024-11-01",
+      "episode": "A guide to being brave in relationships",
+      "role": "podcaster",
+      "name": "Kelly Corrigan"
+    },
+    {
+      "date": "2024-11-01",
+      "episode": "A guide to being brave in relationships",
+      "role": "journalist",
+      "name": "Allison Gilbert"
+    },
+    {
+      "date": "2024-10-25",
+      "episode": "The mysteries that lie beneath",
+      "role": "cave diver",
+      "name": "Jill Heinerth"
+    },
+    {
+      "date": "2024-10-25",
+      "episode": "The mysteries that lie beneath",
+      "role": "death care advocate",
+      "name": "Katrina Spade"
+    },
+    {
+      "date": "2024-10-25",
+      "episode": "The mysteries that lie beneath",
+      "role": "soil scientist",
+      "name": "Asmeret Asefaw Berhe"
+    },
+    {
+      "date": "2024-10-25",
+      "episode": "The mysteries that lie beneath",
+      "role": "paleontologist",
+      "name": "Nizar Ibrahim"
+    },
+    {
+      "date": "2024-10-18",
+      "episode": "Approaches to life: Improvise, pivot or plan",
+      "role": "musician",
+      "name": "Reggie Watts"
+    },
+    {
+      "date": "2024-10-18",
+      "episode": "Approaches to life: Improvise, pivot or plan",
+      "role": "biomedical researcher",
+      "name": "Sonia Vallabh"
+    },
+    {
+      "date": "2024-10-18",
+      "episode": "Approaches to life: Improvise, pivot or plan",
+      "role": "conservationist",
+      "name": "Kristine McDivitt Tompkins"
+    },
+    {
+      "date": "2024-10-11",
+      "episode": "Monday \u2014 Friday: Making the most of the workweek",
+      "role": "executive coach",
+      "name": "Anne Morriss"
+    },
+    {
+      "date": "2024-10-11",
+      "episode": "Monday \u2014 Friday: Making the most of the workweek",
+      "role": "economist",
+      "name": "Juliet Schor"
+    },
+    {
+      "date": "2024-10-11",
+      "episode": "Monday \u2014 Friday: Making the most of the workweek",
+      "role": "social psychologist",
+      "name": "Azim Shariff"
+    },
+    {
+      "date": "2024-10-11",
+      "episode": "Monday \u2014 Friday: Making the most of the workweek",
+      "role": "political scientist",
+      "name": "Margaret Levi"
+    },
+    {
+      "date": "2024-10-04",
+      "episode": "Augmenting Humans",
+      "role": "computer scientist",
+      "name": "Catie Cuan"
+    },
+    {
+      "date": "2024-10-04",
+      "episode": "Augmenting Humans",
+      "role": "biophysicist",
+      "name": "Hugh Herr"
+    },
+    {
+      "date": "2024-10-04",
+      "episode": "Augmenting Humans",
+      "role": "material scientist",
+      "name": "Anna Maria Coclite"
+    },
+    {
+      "date": "2024-10-04",
+      "episode": "Augmenting Humans",
+      "role": "biochemist",
+      "name": "Jennifer Doudna"
+    },
+    {
+      "date": "2024-09-27",
+      "episode": "The double-edged nature of parenting, mental health and artificial intelligence",
+      "role": "developmental psychologist",
+      "name": "Yuko Munakata"
+    },
+    {
+      "date": "2024-09-27",
+      "episode": "The double-edged nature of parenting, mental health and artificial intelligence",
+      "role": "entrepreneur",
+      "name": "Andy Dunn"
+    },
+    {
+      "date": "2024-09-27",
+      "episode": "The double-edged nature of parenting, mental health and artificial intelligence",
+      "role": "AI researcher",
+      "name": "Yejin Choi"
+    },
+    {
+      "date": "2024-09-20",
+      "episode": "Secrets to successful teamwork",
+      "role": "activist",
+      "name": "Hajer Sharief"
+    },
+    {
+      "date": "2024-09-20",
+      "episode": "Secrets to successful teamwork",
+      "role": "social psychologist",
+      "name": "Amy Edmondson"
+    },
+    {
+      "date": "2024-09-20",
+      "episode": "Secrets to successful teamwork",
+      "role": "private equity investor",
+      "name": "Pete Stavros"
+    },
+    {
+      "date": "2024-09-13",
+      "episode": "The hidden role of friction in our lives",
+      "role": "tribologist",
+      "name": "Jennifer Vail"
+    },
+    {
+      "date": "2024-09-13",
+      "episode": "The hidden role of friction in our lives",
+      "role": "Sierra Leone's Minister of",
+      "name": "Education David Moinina Sengeh"
+    },
+    {
+      "date": "2024-09-13",
+      "episode": "The hidden role of friction in our lives",
+      "role": "TV producer",
+      "name": "Elan Gale"
+    },
+    {
+      "date": "2024-09-06",
+      "episode": "The state of fashion",
+      "role": "designer",
+      "name": "Machine Dazzle"
+    },
+    {
+      "date": "2024-09-06",
+      "episode": "The state of fashion",
+      "role": "supply chain expert",
+      "name": "Aparna Mehta"
+    },
+    {
+      "date": "2024-09-06",
+      "episode": "The state of fashion",
+      "role": "journalist",
+      "name": "Amanda Mull"
+    },
+    {
+      "date": "2024-09-06",
+      "episode": "The state of fashion",
+      "role": "supermodel",
+      "name": "Cameron Russell"
+    },
+    {
+      "date": "2024-08-30",
+      "episode": "Unapologetically loud women who push boundaries \u2014 but not without pushback ",
+      "role": "comedian",
+      "name": "Lilly Singh"
+    },
+    {
+      "date": "2024-08-30",
+      "episode": "Unapologetically loud women who push boundaries \u2014 but not without pushback ",
+      "role": "Pussy Riot co-founder",
+      "name": "Nadya Tolokonnikova"
+    },
+    {
+      "date": "2024-08-30",
+      "episode": "Unapologetically loud women who push boundaries \u2014 but not without pushback ",
+      "role": "director",
+      "name": "Sarah Jones"
+    },
+    {
+      "date": "2024-08-23",
+      "episode": "How we repair and strengthen our most important relationships",
+      "role": "clinical psychologist",
+      "name": "Becky Kennedy"
+    },
+    {
+      "date": "2024-08-23",
+      "episode": "How we repair and strengthen our most important relationships",
+      "role": "death doula",
+      "name": "Alua Arthur"
+    },
+    {
+      "date": "2024-08-09",
+      "episode": "Going incognito, where nothing is as it seems",
+      "role": "former CIA Chief of",
+      "name": "Disguise Jonna Mendez"
+    },
+    {
+      "date": "2024-08-09",
+      "episode": "Going incognito, where nothing is as it seems",
+      "role": "artist",
+      "name": "Holly Herndon"
+    },
+    {
+      "date": "2024-07-26",
+      "episode": "Investigating true crime in the animal kingdom",
+      "role": "forensic scientist",
+      "name": "Lauren Pharr Parks"
+    },
+    {
+      "date": "2024-07-26",
+      "episode": "Investigating true crime in the animal kingdom",
+      "role": "author",
+      "name": "Mary Roach"
+    },
+    {
+      "date": "2024-07-26",
+      "episode": "Investigating true crime in the animal kingdom",
+      "role": "conservationist",
+      "name": "Megan Parker"
+    },
+    {
+      "date": "2024-07-26",
+      "episode": "Investigating true crime in the animal kingdom",
+      "role": "wildlife intelligence analyst",
+      "name": "Sarah Stoner"
+    },
+    {
+      "date": "2024-07-19",
+      "episode": "Sports psychology for everyday life",
+      "role": "former professional soccer player",
+      "name": "Abby Wambach"
+    },
+    {
+      "date": "2024-07-19",
+      "episode": "Sports psychology for everyday life",
+      "role": "cognitive scientist",
+      "name": "Sian Leah Beilock"
+    },
+    {
+      "date": "2024-07-19",
+      "episode": "Sports psychology for everyday life",
+      "role": "journalist",
+      "name": "Kate Fagan"
+    },
+    {
+      "date": "2024-07-19",
+      "episode": "Sports psychology for everyday life",
+      "role": "art historian",
+      "name": "Sarah Lewis"
+    },
+    {
+      "date": "2024-07-12",
+      "episode": "DIY: There's a problem and only you can fix it",
+      "role": "engineer",
+      "name": "Kate Stone"
+    },
+    {
+      "date": "2024-07-12",
+      "episode": "DIY: There's a problem and only you can fix it",
+      "role": "humanitarian programmer",
+      "name": "Tiffani Ashley Bell"
+    },
+    {
+      "date": "2024-07-12",
+      "episode": "DIY: There's a problem and only you can fix it",
+      "role": "youth educator",
+      "name": "Emily Pilloton-Lam"
+    },
+    {
+      "date": "2024-07-12",
+      "episode": "DIY: There's a problem and only you can fix it",
+      "role": "videographer",
+      "name": "Jack Corbett"
+    },
+    {
+      "date": "2024-07-05",
+      "episode": "What we'll eat on a warmer planet",
+      "role": "policy advisor",
+      "name": "Sam Kass"
+    },
+    {
+      "date": "2024-07-05",
+      "episode": "What we'll eat on a warmer planet",
+      "role": "farmers",
+      "name": "Jim Whitaker"
+    },
+    {
+      "date": "2024-07-05",
+      "episode": "What we'll eat on a warmer planet",
+      "role": "Jessica",
+      "name": "Whitaker Allen"
+    },
+    {
+      "date": "2024-07-05",
+      "episode": "What we'll eat on a warmer planet",
+      "role": "biotechnologist",
+      "name": "Isha Datar"
+    },
+    {
+      "date": "2024-07-05",
+      "episode": "What we'll eat on a warmer planet",
+      "role": "artist",
+      "name": "Sam Van Aken"
+    },
+    {
+      "date": "2024-06-28",
+      "episode": "Bringing abandoned places back to life",
+      "role": "evolutionary biologist",
+      "name": "Shane Campbell-Staton"
+    },
+    {
+      "date": "2024-06-28",
+      "episode": "Bringing abandoned places back to life",
+      "role": "entrepreneur",
+      "name": "Garry Cooper"
+    },
+    {
+      "date": "2024-06-28",
+      "episode": "Bringing abandoned places back to life",
+      "role": "urban renewal expert",
+      "name": "Anika Goss"
+    },
+    {
+      "date": "2024-06-28",
+      "episode": "Bringing abandoned places back to life",
+      "role": "conservationist",
+      "name": "Alysa McCall"
+    },
+    {
+      "date": "2024-06-21",
+      "episode": "What's driving generations apart\u2014and ideas to bring them together",
+      "role": "author",
+      "name": "Scott Galloway"
+    },
+    {
+      "date": "2024-06-21",
+      "episode": "What's driving generations apart\u2014and ideas to bring them together",
+      "role": "social entrepreneur",
+      "name": "Louise Mabulo"
+    },
+    {
+      "date": "2024-06-21",
+      "episode": "What's driving generations apart\u2014and ideas to bring them together",
+      "role": "advocate",
+      "name": "Derenda Schubert"
+    },
+    {
+      "date": "2024-06-21",
+      "episode": "What's driving generations apart\u2014and ideas to bring them together",
+      "role": "writer",
+      "name": "Anne Helen Petersen"
+    },
+    {
+      "date": "2024-06-14",
+      "episode": "Our oceans are in danger ... but it's not too late.",
+      "role": "Ayana",
+      "name": "Elizabeth Johnson"
+    },
+    {
+      "date": "2024-06-14",
+      "episode": "Our oceans are in danger ... but it's not too late.",
+      "role": "oceanographer",
+      "name": "Sylvia Earle"
+    },
+    {
+      "date": "2024-06-07",
+      "episode": "Pain Relief: New approaches to how we live with pain",
+      "role": "equestrian",
+      "name": "Kat Naud"
+    },
+    {
+      "date": "2024-06-07",
+      "episode": "Pain Relief: New approaches to how we live with pain",
+      "role": "researcher",
+      "name": "Amy Baxter"
+    },
+    {
+      "date": "2024-06-07",
+      "episode": "Pain Relief: New approaches to how we live with pain",
+      "role": "opioid reform advocate",
+      "name": "Cammie Wolf Rice"
+    },
+    {
+      "date": "2024-05-31",
+      "episode": "A Love Letter to the Ocean: Life, death and mating in the sea",
+      "role": "adventurer",
+      "name": "Catherine Mohr"
+    },
+    {
+      "date": "2024-05-31",
+      "episode": "A Love Letter to the Ocean: Life, death and mating in the sea",
+      "role": "marine biologists",
+      "name": "Marah Hardt"
+    },
+    {
+      "date": "2024-05-31",
+      "episode": "A Love Letter to the Ocean: Life, death and mating in the sea",
+      "role": "Ayana",
+      "name": "Elizabeth Johnson"
+    },
+    {
+      "date": "2024-05-24",
+      "episode": "They/Them, LatinX, Rigged: The history behind three words",
+      "role": "linguists",
+      "name": "Anne Curzan"
+    },
+    {
+      "date": "2024-05-24",
+      "episode": "They/Them, LatinX, Rigged: The history behind three words",
+      "role": "social psychologist",
+      "name": "Dannagal Young"
+    },
+    {
+      "date": "2024-05-24",
+      "episode": "They/Them, LatinX, Rigged: The history behind three words",
+      "role": "writer",
+      "name": "Mark Forsyth"
+    },
+    {
+      "date": "2024-05-17",
+      "episode": "The Future of Sustainability: Repair, repurpose, reimagine",
+      "role": "right-to-repair advocate",
+      "name": "Gay Gordon-Byrne"
+    },
+    {
+      "date": "2024-05-17",
+      "episode": "The Future of Sustainability: Repair, repurpose, reimagine",
+      "role": "materials scientist",
+      "name": "Andrew Dent"
+    },
+    {
+      "date": "2024-05-17",
+      "episode": "The Future of Sustainability: Repair, repurpose, reimagine",
+      "role": "technologist",
+      "name": "Jamie Beard"
+    },
+    {
+      "date": "2024-05-17",
+      "episode": "The Future of Sustainability: Repair, repurpose, reimagine",
+      "role": "animal scientist",
+      "name": "Ermias Kebreab"
+    },
+    {
+      "date": "2024-05-10",
+      "episode": "Our Tech has a Climate Problem: Here's we solve it",
+      "role": "AI researchers",
+      "name": "Sasha Luccioni"
+    },
+    {
+      "date": "2024-05-10",
+      "episode": "Our Tech has a Climate Problem: Here's we solve it",
+      "role": "climate researcher",
+      "name": "Elsa Dominish"
+    },
+    {
+      "date": "2024-05-10",
+      "episode": "Our Tech has a Climate Problem: Here's we solve it",
+      "role": "astrodynamicist",
+      "name": "Moriba Jah"
+    },
+    {
+      "date": "2024-05-03",
+      "episode": "Changing Our Minds: Why we should admit when we're wrong",
+      "role": "former GOP congressman",
+      "name": "Bob Inglis"
+    },
+    {
+      "date": "2024-05-03",
+      "episode": "Changing Our Minds: Why we should admit when we're wrong",
+      "role": "organizational psychologist",
+      "name": "Adam Grant"
+    },
+    {
+      "date": "2024-04-26",
+      "episode": "The Public Commons: Building public spaces that actually serve the public",
+      "role": "community organizer",
+      "name": "Shari Davis"
+    },
+    {
+      "date": "2024-04-26",
+      "episode": "The Public Commons: Building public spaces that actually serve the public",
+      "role": "researcher",
+      "name": "Eli Pariser"
+    },
+    {
+      "date": "2024-04-26",
+      "episode": "The Public Commons: Building public spaces that actually serve the public",
+      "role": "Wikipedia Library founder",
+      "name": "Jake Orlowitz"
+    },
+    {
+      "date": "2024-04-26",
+      "episode": "The Public Commons: Building public spaces that actually serve the public",
+      "role": "Wikipedia co-founder",
+      "name": "Jimmy Wales"
+    },
+    {
+      "date": "2024-04-26",
+      "episode": "The Public Commons: Building public spaces that actually serve the public",
+      "role": "artist",
+      "name": "Matthew Mazzotta"
+    },
+    {
+      "date": "2024-04-19",
+      "episode": "So Awkward: How to embrace the embarrassing",
+      "role": "social scientist",
+      "name": "Ty Tashiro"
+    },
+    {
+      "date": "2024-04-19",
+      "episode": "So Awkward: How to embrace the embarrassing",
+      "role": "cartoonist",
+      "name": "Liana Finck"
+    },
+    {
+      "date": "2024-04-19",
+      "episode": "So Awkward: How to embrace the embarrassing",
+      "role": "journalist",
+      "name": "Melissa Dahl"
+    },
+    {
+      "date": "2024-04-19",
+      "episode": "So Awkward: How to embrace the embarrassing",
+      "role": "relationship counselor",
+      "name": "Erin Chen"
+    },
+    {
+      "date": "2024-04-12",
+      "episode": "What's In A Face: How technology uses our faces",
+      "role": "super recognizer",
+      "name": "Yenny Seo"
+    },
+    {
+      "date": "2024-04-12",
+      "episode": "What's In A Face: How technology uses our faces",
+      "role": "Bloomberg columnist",
+      "name": "Parmy Olson"
+    },
+    {
+      "date": "2024-04-12",
+      "episode": "What's In A Face: How technology uses our faces",
+      "role": "visual researcher",
+      "name": "Mike Seymour"
+    },
+    {
+      "date": "2024-04-12",
+      "episode": "What's In A Face: How technology uses our faces",
+      "role": "investigative journalist",
+      "name": "Alison Killing"
+    },
+    {
+      "date": "2024-03-29",
+      "episode": "Animal Enigmas: Uncovering the mysteries of the animal kingdom",
+      "role": "paleontologist",
+      "name": "Dean Lomax"
+    },
+    {
+      "date": "2024-03-29",
+      "episode": "Animal Enigmas: Uncovering the mysteries of the animal kingdom",
+      "role": "biochemical engineer",
+      "name": "Saad Bhamla"
+    },
+    {
+      "date": "2024-03-29",
+      "episode": "Animal Enigmas: Uncovering the mysteries of the animal kingdom",
+      "role": "herpetologist",
+      "name": "Gowri Shankar"
+    },
+    {
+      "date": "2024-03-22",
+      "episode": "A More Walkable World: Ideas to get us moving",
+      "role": "author",
+      "name": "Vybarr Cregan-Reid"
+    },
+    {
+      "date": "2024-03-22",
+      "episode": "A More Walkable World: Ideas to get us moving",
+      "role": "computer historian",
+      "name": "Laine Nooney"
+    },
+    {
+      "date": "2024-03-22",
+      "episode": "A More Walkable World: Ideas to get us moving",
+      "role": "exercise physiologist",
+      "name": "Keith Diaz"
+    },
+    {
+      "date": "2024-03-22",
+      "episode": "A More Walkable World: Ideas to get us moving",
+      "role": "urban planner",
+      "name": "Jeff Speck"
+    },
+    {
+      "date": "2024-03-22",
+      "episode": "A More Walkable World: Ideas to get us moving",
+      "role": "activists",
+      "name": "John Francis"
+    },
+    {
+      "date": "2024-03-15",
+      "episode": "Audacious Solutions",
+      "role": "criminal justice reform activist",
+      "name": "Sheena Meade"
+    },
+    {
+      "date": "2024-03-15",
+      "episode": "Audacious Solutions",
+      "role": "child welfare advocates",
+      "name": "Sixto Cancel"
+    },
+    {
+      "date": "2024-03-15",
+      "episode": "Audacious Solutions",
+      "role": "ocean monitoring expert",
+      "name": "Tony Long"
+    },
+    {
+      "date": "2024-03-08",
+      "episode": "Natural Intelligence: What we and AI can learn from nature",
+      "role": "neuroscientist",
+      "name": "Greg Gage"
+    },
+    {
+      "date": "2024-03-08",
+      "episode": "Natural Intelligence: What we and AI can learn from nature",
+      "role": "computational neuroscientist",
+      "name": "Frances Chance"
+    },
+    {
+      "date": "2024-03-08",
+      "episode": "Natural Intelligence: What we and AI can learn from nature",
+      "role": "social psychoneuroimmunologist",
+      "name": "Keely Muscatell"
+    },
+    {
+      "date": "2024-03-08",
+      "episode": "Natural Intelligence: What we and AI can learn from nature",
+      "role": "environmental researcher",
+      "name": "Karen Bakker"
+    },
+    {
+      "date": "2024-02-23",
+      "episode": "Retracing Their Steps",
+      "role": "author",
+      "name": "Joseph McGill Jr"
+    },
+    {
+      "date": "2024-02-16",
+      "episode": "Heartache",
+      "role": "cardiologist",
+      "name": "Sandeep Jauhar"
+    },
+    {
+      "date": "2024-02-16",
+      "episode": "Heartache",
+      "role": "law professor",
+      "name": "Jeannie Suk Gersen"
+    },
+    {
+      "date": "2024-02-16",
+      "episode": "Heartache",
+      "role": "pediatric nurse",
+      "name": "Hui-wen Sato"
+    },
+    {
+      "date": "2024-02-09",
+      "episode": "Doppelgangers",
+      "role": "author",
+      "name": "Naomi Klein"
+    },
+    {
+      "date": "2024-02-09",
+      "episode": "Doppelgangers",
+      "role": "aerospace engineer",
+      "name": "Karen Willcox"
+    },
+    {
+      "date": "2024-02-02",
+      "episode": "What Leadership Looks Like",
+      "role": "executive coach",
+      "name": "Patrice Gordon"
+    },
+    {
+      "date": "2024-02-02",
+      "episode": "What Leadership Looks Like",
+      "role": "organizational psychologist",
+      "name": "Tomas Chamorro-Premuzic"
+    },
+    {
+      "date": "2024-02-02",
+      "episode": "What Leadership Looks Like",
+      "role": "former First Minister of",
+      "name": "Scotland Nicola Sturgeon"
+    },
+    {
+      "date": "2024-02-02",
+      "episode": "What Leadership Looks Like",
+      "role": "educator",
+      "name": "Shabana Basij-Rasikh"
+    },
+    {
+      "date": "2024-01-26",
+      "episode": "Brain Hacks",
+      "role": "AI ethicist",
+      "name": "Nita Farahany"
+    },
+    {
+      "date": "2024-01-26",
+      "episode": "Brain Hacks",
+      "role": "entrepreneur",
+      "name": "Conor Russomanno"
+    },
+    {
+      "date": "2024-01-26",
+      "episode": "Brain Hacks",
+      "role": "sous chef",
+      "name": "Kate Faulkner"
+    },
+    {
+      "date": "2024-01-19",
+      "episode": "Take Care",
+      "role": "attorney",
+      "name": "Diana Adams"
+    },
+    {
+      "date": "2024-01-19",
+      "episode": "Take Care",
+      "role": "inclusion advocate",
+      "name": "Sara Jones"
+    },
+    {
+      "date": "2024-01-19",
+      "episode": "Take Care",
+      "role": "comedian",
+      "name": "Bill Bernat"
+    },
+    {
+      "date": "2024-01-12",
+      "episode": "Flip the Script",
+      "role": "time management expert",
+      "name": "Laura Vanderkam"
+    },
+    {
+      "date": "2024-01-12",
+      "episode": "Flip the Script",
+      "role": "environmental data scientist",
+      "name": "Hannah Ritchie"
+    },
+    {
+      "date": "2024-01-12",
+      "episode": "Flip the Script",
+      "role": "writer",
+      "name": "Emily Esfahani Smith"
+    },
+    {
+      "date": "2024-01-05",
+      "episode": "Stay Resolved",
+      "role": "neuroscientists",
+      "name": "Wendy Suzuki"
+    },
+    {
+      "date": "2024-01-05",
+      "episode": "Stay Resolved",
+      "role": "science journalist",
+      "name": "Catherine Price"
+    },
+    {
+      "date": "2024-01-05",
+      "episode": "Stay Resolved",
+      "role": "behavioral scientist",
+      "name": "Wendy De La Rosa"
+    },
+    {
+      "date": "2024-01-05",
+      "episode": "Stay Resolved",
+      "role": "authors",
+      "name": "Pico Iyer"
+    }
+  ],
+  "unique_guests": [
+    {
+      "date": "2026-05-08",
+      "episode": "How to mend a broken heart",
+      "role": "cardiologist",
+      "name": "Sandeep Jauhar"
+    },
+    {
+      "date": "2026-05-08",
+      "episode": "How to mend a broken heart",
+      "role": "law professor",
+      "name": "Jeannie Suk Gersen"
+    },
+    {
+      "date": "2026-05-08",
+      "episode": "How to mend a broken heart",
+      "role": "pediatric nurse",
+      "name": "Hui-wen Sato"
+    },
+    {
+      "date": "2026-05-01",
+      "episode": "How to be a \"Super Ager\" (it's not your genes)",
+      "role": "Physician",
+      "name": "Eric Topol"
+    },
+    {
+      "date": "2026-04-24",
+      "episode": "Can we preserve knowledge \u2026 forever?",
+      "role": "game designer",
+      "name": "CM Ralph"
+    },
+    {
+      "date": "2026-04-24",
+      "episode": "Can we preserve knowledge \u2026 forever?",
+      "role": "digital librarian",
+      "name": "Brewster Kayle"
+    },
+    {
+      "date": "2026-04-24",
+      "episode": "Can we preserve knowledge \u2026 forever?",
+      "role": "molecular biologist",
+      "name": "Dina Zielinksi"
+    },
+    {
+      "date": "2026-04-24",
+      "episode": "Can we preserve knowledge \u2026 forever?",
+      "role": "archeologist",
+      "name": "Chris Fisher"
+    },
+    {
+      "date": "2026-04-10",
+      "episode": "The hidden forces shaping your choices",
+      "role": "food systems expert",
+      "name": "Sarah Lake"
+    },
+    {
+      "date": "2026-04-10",
+      "episode": "The hidden forces shaping your choices",
+      "role": "infrastructure engineer",
+      "name": "Deb Chachra"
+    },
+    {
+      "date": "2026-04-10",
+      "episode": "The hidden forces shaping your choices",
+      "role": "cross-cultural psychologist",
+      "name": "Michele Gelfand"
+    },
+    {
+      "date": "2026-04-10",
+      "episode": "The hidden forces shaping your choices",
+      "role": "urban planner",
+      "name": "Jeff Speck"
+    },
+    {
+      "date": "2026-04-10",
+      "episode": "The hidden forces shaping your choices",
+      "role": "Tempe resident",
+      "name": "Ignacio Delgadillo"
+    },
+    {
+      "date": "2026-04-03",
+      "episode": "Could AI help us, not replace us?",
+      "role": "Siri co-creator",
+      "name": "Tom Gruber"
+    },
+    {
+      "date": "2026-03-27",
+      "episode": "A neuroscientist's guide to managing our emotions",
+      "role": "neuroscientist",
+      "name": "Ethan Kross"
+    },
+    {
+      "date": "2026-03-20",
+      "episode": "How does your brain perceive the world?",
+      "role": "the editorial director of TED-Ed animations",
+      "name": "Alex Rosenthal"
+    },
+    {
+      "date": "2026-03-20",
+      "episode": "How does your brain perceive the world?",
+      "role": "psychologist",
+      "name": "John Wixted"
+    },
+    {
+      "date": "2026-03-20",
+      "episode": "How does your brain perceive the world?",
+      "role": "love coach",
+      "name": "Francesca Hogi"
+    },
+    {
+      "date": "2026-03-13",
+      "episode": "Curious stories of coexistence",
+      "role": "evolutionary biologist",
+      "name": "Philip Johns"
+    },
+    {
+      "date": "2026-03-13",
+      "episode": "Curious stories of coexistence",
+      "role": "astrophysicist",
+      "name": "Avi Loeb"
+    },
+    {
+      "date": "2026-03-13",
+      "episode": "Curious stories of coexistence",
+      "role": "author",
+      "name": "Laurel Braitman"
+    },
+    {
+      "date": "2026-03-06",
+      "episode": "Getting what you want: A guide to negotiating",
+      "role": "law professor",
+      "name": "Alex Carter"
+    },
+    {
+      "date": "2026-03-06",
+      "episode": "Getting what you want: A guide to negotiating",
+      "role": "linguist",
+      "name": "Magdalena Hoeller"
+    },
+    {
+      "date": "2026-02-27",
+      "episode": "Three mothers who shaped American history",
+      "role": "author",
+      "name": "Anna Malaika Tubbs"
+    },
+    {
+      "date": "2026-02-20",
+      "episode": "Did social media break a generation \u2014 or just change it?",
+      "role": "social psychologist",
+      "name": "Jonathan Haidt"
+    },
+    {
+      "date": "2026-02-20",
+      "episode": "Did social media break a generation \u2014 or just change it?",
+      "role": "youth online safety activist",
+      "name": "Maximilian Milovidov"
+    },
+    {
+      "date": "2026-02-20",
+      "episode": "Did social media break a generation \u2014 or just change it?",
+      "role": "author",
+      "name": "Catherine Price"
+    },
+    {
+      "date": "2026-02-13",
+      "episode": "How you see yourself",
+      "role": "portrait photographer",
+      "name": "David Suh"
+    },
+    {
+      "date": "2026-02-13",
+      "episode": "How you see yourself",
+      "role": "social psychologist",
+      "name": "Dolly Chugh"
+    },
+    {
+      "date": "2026-02-13",
+      "episode": "How you see yourself",
+      "role": "journalist",
+      "name": "Elise Hu"
+    },
+    {
+      "date": "2026-02-13",
+      "episode": "How you see yourself",
+      "role": "science writer",
+      "name": "Anil Ananthaswamy"
+    },
+    {
+      "date": "2026-02-06",
+      "episode": "How to talk about peace",
+      "role": "peace activists",
+      "name": "Aqeela Sherrills"
+    },
+    {
+      "date": "2026-02-06",
+      "episode": "How to talk about peace",
+      "role": "Aziz",
+      "name": "Abu Sarah"
+    },
+    {
+      "date": "2026-01-30",
+      "episode": "The future of our memories",
+      "role": "technologist",
+      "name": "Pau Aleikum Garcia"
+    },
+    {
+      "date": "2026-01-30",
+      "episode": "The future of our memories",
+      "role": "cartoonist",
+      "name": "Amy Kurzweil"
+    },
+    {
+      "date": "2026-01-30",
+      "episode": "The future of our memories",
+      "role": "digital archaeologist",
+      "name": "Chance Coughenour"
+    },
+    {
+      "date": "2026-01-23",
+      "episode": "What can you control in this chaotic world?",
+      "role": "financial advisor",
+      "name": "Matt Pitcher"
+    },
+    {
+      "date": "2026-01-23",
+      "episode": "What can you control in this chaotic world?",
+      "role": "sociologist",
+      "name": "Anindya Kundu"
+    },
+    {
+      "date": "2026-01-23",
+      "episode": "What can you control in this chaotic world?",
+      "role": "journalist",
+      "name": "Jennifer Wallace"
+    },
+    {
+      "date": "2026-01-23",
+      "episode": "What can you control in this chaotic world?",
+      "role": "design thinking professor",
+      "name": "Bill Burnett"
+    },
+    {
+      "date": "2026-01-16",
+      "episode": "What we \u2014 and AI \u2014 can learn from nature's intelligence",
+      "role": "neuroscientist",
+      "name": "Greg Gage"
+    },
+    {
+      "date": "2026-01-16",
+      "episode": "What we \u2014 and AI \u2014 can learn from nature's intelligence",
+      "role": "computational neuroscientist",
+      "name": "Frances Chance"
+    },
+    {
+      "date": "2026-01-16",
+      "episode": "What we \u2014 and AI \u2014 can learn from nature's intelligence",
+      "role": "social psychoneuroimmunologist",
+      "name": "Keely Muscatell"
+    },
+    {
+      "date": "2026-01-16",
+      "episode": "What we \u2014 and AI \u2014 can learn from nature's intelligence",
+      "role": "environmental researcher",
+      "name": "Karen Bakker"
+    },
+    {
+      "date": "2026-01-09",
+      "episode": "The secrets in your baby's genes",
+      "role": "researcher",
+      "name": "Robert Green"
+    },
+    {
+      "date": "2026-01-02",
+      "episode": "Navigating uncertainty",
+      "role": "former medical clown",
+      "name": "Matt Wilson"
+    },
+    {
+      "date": "2026-01-02",
+      "episode": "Navigating uncertainty",
+      "role": "psychologist",
+      "name": "Jamil Zaki"
+    },
+    {
+      "date": "2026-01-02",
+      "episode": "Navigating uncertainty",
+      "role": "human rights activist",
+      "name": "Yifat Susskind"
+    },
+    {
+      "date": "2025-12-26",
+      "episode": "Who counts as a significant other?",
+      "role": "journalist",
+      "name": "Rhaina Cohen"
+    },
+    {
+      "date": "2025-12-26",
+      "episode": "Who counts as a significant other?",
+      "role": "family therapist",
+      "name": "Stephanie Yates-Anyabwile"
+    },
+    {
+      "date": "2025-12-26",
+      "episode": "Who counts as a significant other?",
+      "role": "social psychologist",
+      "name": "Bella DePaulo"
+    },
+    {
+      "date": "2025-12-19",
+      "episode": "Who is really shaping the future of AI?",
+      "role": "tech entrepreneur",
+      "name": "Alvin Wang Graylin"
+    },
+    {
+      "date": "2025-12-19",
+      "episode": "Who is really shaping the future of AI?",
+      "role": "NPR tech reporter",
+      "name": "John Ruwitch"
+    },
+    {
+      "date": "2025-12-19",
+      "episode": "Who is really shaping the future of AI?",
+      "role": "OpenAI CEO Sam Altman in conversation with TED's",
+      "name": "Chris Anderson"
+    },
+    {
+      "date": "2025-12-12",
+      "episode": "Soundtracks of our lives",
+      "role": "professor of songwriting",
+      "name": "Scarlet Keys"
+    },
+    {
+      "date": "2025-12-12",
+      "episode": "Soundtracks of our lives",
+      "role": "voice expert",
+      "name": "Rebecca Kleinberger"
+    },
+    {
+      "date": "2025-12-12",
+      "episode": "Soundtracks of our lives",
+      "role": "musician",
+      "name": "Snow Raven"
+    },
+    {
+      "date": "2025-11-14",
+      "episode": "How the creator economy is making you talk like the internet",
+      "role": "linguist",
+      "name": "Adam Aleksic"
+    },
+    {
+      "date": "2025-10-31",
+      "episode": "Move fast...and fix democracy?",
+      "role": "political consultant",
+      "name": "Bradley Tusk"
+    },
+    {
+      "date": "2025-10-31",
+      "episode": "Move fast...and fix democracy?",
+      "role": "political advisor",
+      "name": "Jennifer Pahlka"
+    },
+    {
+      "date": "2025-10-31",
+      "episode": "Move fast...and fix democracy?",
+      "role": "e-governance expert",
+      "name": "Anna Piperal"
+    },
+    {
+      "date": "2025-10-24",
+      "episode": "The great food rescue",
+      "role": "food waste expert",
+      "name": "Dana Gunders"
+    },
+    {
+      "date": "2025-10-24",
+      "episode": "The great food rescue",
+      "role": "social entrepreneur",
+      "name": "Jasmine Crowe-Houston"
+    },
+    {
+      "date": "2025-10-24",
+      "episode": "The great food rescue",
+      "role": "sustainability activist",
+      "name": "Anthony Myint"
+    },
+    {
+      "date": "2025-10-24",
+      "episode": "The great food rescue",
+      "role": "behavioral scientist",
+      "name": "Jiaying Zhao"
+    },
+    {
+      "date": "2025-10-03",
+      "episode": "How companies use AI to choose who gets hired and fired",
+      "role": "Journalist",
+      "name": "Hilke Schellmann"
+    },
+    {
+      "date": "2025-09-19",
+      "episode": "Approaches to life: Improvise, pivot or plan",
+      "role": "musician",
+      "name": "Reggie Watts"
+    },
+    {
+      "date": "2025-09-19",
+      "episode": "Approaches to life: Improvise, pivot or plan",
+      "role": "biomedical researcher",
+      "name": "Sonia Vallabh"
+    },
+    {
+      "date": "2025-09-19",
+      "episode": "Approaches to life: Improvise, pivot or plan",
+      "role": "conservationist",
+      "name": "Kristine McDivitt Tompkins"
+    },
+    {
+      "date": "2025-09-05",
+      "episode": "Are the kids alright? Part 2",
+      "role": "psychologist",
+      "name": "Lisa Damour"
+    },
+    {
+      "date": "2025-08-22",
+      "episode": "A guide to being brave in relationships",
+      "role": "podcaster",
+      "name": "Kelly Corrigan"
+    },
+    {
+      "date": "2025-08-22",
+      "episode": "A guide to being brave in relationships",
+      "role": "journalist",
+      "name": "Allison Gilbert"
+    },
+    {
+      "date": "2025-08-15",
+      "episode": "How deserted places find a second life",
+      "role": "evolutionary biologist",
+      "name": "Shane Campbell-Staton"
+    },
+    {
+      "date": "2025-08-15",
+      "episode": "How deserted places find a second life",
+      "role": "entrepreneur",
+      "name": "Garry Cooper"
+    },
+    {
+      "date": "2025-08-15",
+      "episode": "How deserted places find a second life",
+      "role": "urban renewal expert",
+      "name": "Anika Goss"
+    },
+    {
+      "date": "2025-08-15",
+      "episode": "How deserted places find a second life",
+      "role": "conservationist",
+      "name": "Alysa McCall"
+    },
+    {
+      "date": "2025-08-08",
+      "episode": "The skin we're in",
+      "role": "mechanical engineer",
+      "name": "Katherine Kuchenbecker"
+    },
+    {
+      "date": "2025-08-08",
+      "episode": "The skin we're in",
+      "role": "materials scientist",
+      "name": "Anna Maria Coclite"
+    },
+    {
+      "date": "2025-08-08",
+      "episode": "The skin we're in",
+      "role": "TV broadcaster",
+      "name": "Lee Thomas"
+    },
+    {
+      "date": "2025-08-08",
+      "episode": "The skin we're in",
+      "role": "author",
+      "name": "Kathryn Schulz"
+    },
+    {
+      "date": "2025-08-01",
+      "episode": "How to find joy and success as a late bloomer",
+      "role": "writer",
+      "name": "Doree Shafrir"
+    },
+    {
+      "date": "2025-08-01",
+      "episode": "How to find joy and success as a late bloomer",
+      "role": "anti-ageism activist",
+      "name": "Ashton Applewhite"
+    },
+    {
+      "date": "2025-08-01",
+      "episode": "How to find joy and success as a late bloomer",
+      "role": "retired educator",
+      "name": "Riley Moynes"
+    },
+    {
+      "date": "2025-07-04",
+      "episode": "The state of fashion",
+      "role": "designer",
+      "name": "Machine Dazzle"
+    },
+    {
+      "date": "2025-07-04",
+      "episode": "The state of fashion",
+      "role": "supply chain expert",
+      "name": "Aparna Mehta"
+    },
+    {
+      "date": "2025-07-04",
+      "episode": "The state of fashion",
+      "role": "journalist",
+      "name": "Amanda Mull"
+    },
+    {
+      "date": "2025-07-04",
+      "episode": "The state of fashion",
+      "role": "supermodel",
+      "name": "Cameron Russell"
+    },
+    {
+      "date": "2025-06-27",
+      "episode": "How taking a second look can change your everything",
+      "role": "artists",
+      "name": "Agnieszka Pilat"
+    },
+    {
+      "date": "2025-06-27",
+      "episode": "How taking a second look can change your everything",
+      "role": "chemical engineer",
+      "name": "Franziska Trautmann"
+    },
+    {
+      "date": "2025-06-27",
+      "episode": "How taking a second look can change your everything",
+      "role": "musician",
+      "name": "Mike Posner"
+    },
+    {
+      "date": "2025-06-20",
+      "episode": "Uncovering the mysteries of the animal kingdom",
+      "role": "paleontologist",
+      "name": "Dean Lomax"
+    },
+    {
+      "date": "2025-06-20",
+      "episode": "Uncovering the mysteries of the animal kingdom",
+      "role": "biochemical engineer",
+      "name": "Saad Bhamla"
+    },
+    {
+      "date": "2025-06-20",
+      "episode": "Uncovering the mysteries of the animal kingdom",
+      "role": "herpetologist",
+      "name": "Gowri Shankar"
+    },
+    {
+      "date": "2025-06-13",
+      "episode": "Escaping the modern world and your noisy mind",
+      "role": "author",
+      "name": "Pico Iyer"
+    },
+    {
+      "date": "2025-06-13",
+      "episode": "Escaping the modern world and your noisy mind",
+      "role": "NXIVM whistleblower",
+      "name": "Sarah Edmondson"
+    },
+    {
+      "date": "2025-06-13",
+      "episode": "Escaping the modern world and your noisy mind",
+      "role": "navigator",
+      "name": "Lehua Kamalu"
+    },
+    {
+      "date": "2025-06-13",
+      "episode": "Escaping the modern world and your noisy mind",
+      "role": "screenwriter",
+      "name": "Shonda Rhimes"
+    },
+    {
+      "date": "2025-06-06",
+      "episode": "Sports psychology for everyday life",
+      "role": "former professional soccer player",
+      "name": "Abby Wambach"
+    },
+    {
+      "date": "2025-06-06",
+      "episode": "Sports psychology for everyday life",
+      "role": "cognitive scientist",
+      "name": "Sian Leah Beilock"
+    },
+    {
+      "date": "2025-06-06",
+      "episode": "Sports psychology for everyday life",
+      "role": "journalist",
+      "name": "Kate Fagan"
+    },
+    {
+      "date": "2025-06-06",
+      "episode": "Sports psychology for everyday life",
+      "role": "art historian",
+      "name": "Sarah Lewis"
+    },
+    {
+      "date": "2025-05-23",
+      "episode": "Secrets to successful teamwork",
+      "role": "activist",
+      "name": "Hajer Sharief"
+    },
+    {
+      "date": "2025-05-23",
+      "episode": "Secrets to successful teamwork",
+      "role": "social psychologist",
+      "name": "Amy Edmondson"
+    },
+    {
+      "date": "2025-05-23",
+      "episode": "Secrets to successful teamwork",
+      "role": "private equity investor",
+      "name": "Pete Stavros"
+    },
+    {
+      "date": "2025-05-16",
+      "episode": "How we experience time",
+      "role": "artist",
+      "name": "Katie Paterson"
+    },
+    {
+      "date": "2025-05-16",
+      "episode": "How we experience time",
+      "role": "cognitive neuroscientist",
+      "name": "Irena Arslanova"
+    },
+    {
+      "date": "2025-05-16",
+      "episode": "How we experience time",
+      "role": "music director",
+      "name": "Robert Franz"
+    },
+    {
+      "date": "2025-05-16",
+      "episode": "How we experience time",
+      "role": "the late-psychologist",
+      "name": "Philip Zimbardo"
+    },
+    {
+      "date": "2025-04-25",
+      "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+      "role": "social scientist",
+      "name": "Ty Tashiro"
+    },
+    {
+      "date": "2025-04-25",
+      "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+      "role": "cartoonist",
+      "name": "Liana Finck"
+    },
+    {
+      "date": "2025-04-25",
+      "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+      "role": "journalist",
+      "name": "Melissa Dahl"
+    },
+    {
+      "date": "2025-04-25",
+      "episode": "Life can be so awkward. Here's how to embrace the embarrassing",
+      "role": "relationship counselor",
+      "name": "Erin Chen"
+    },
+    {
+      "date": "2025-04-18",
+      "episode": "Biotech is about to change your world",
+      "role": "co-founder of the Human",
+      "name": "Cell Atlas Aviv Regev"
+    },
+    {
+      "date": "2025-04-18",
+      "episode": "Biotech is about to change your world",
+      "role": "physical chemist",
+      "name": "Brad Ringeisen"
+    },
+    {
+      "date": "2025-04-18",
+      "episode": "Biotech is about to change your world",
+      "role": "immunoengineer",
+      "name": "Aaron Morris"
+    },
+    {
+      "date": "2025-03-28",
+      "episode": "How the brain interprets pain \u2014 and new ways to manage it",
+      "role": "equestrian",
+      "name": "Kat Naud"
+    },
+    {
+      "date": "2025-03-28",
+      "episode": "How the brain interprets pain \u2014 and new ways to manage it",
+      "role": "researcher",
+      "name": "Amy Baxter"
+    },
+    {
+      "date": "2025-03-28",
+      "episode": "How the brain interprets pain \u2014 and new ways to manage it",
+      "role": "opioid reform advocate",
+      "name": "Cammie Wolf Rice"
+    },
+    {
+      "date": "2025-03-14",
+      "episode": "Decoding the secret messages of data, biology and music",
+      "role": "textual scientist",
+      "name": "Gregory Heyworth"
+    },
+    {
+      "date": "2025-03-14",
+      "episode": "Decoding the secret messages of data, biology and music",
+      "role": "economist",
+      "name": "Ralph Chami"
+    },
+    {
+      "date": "2025-02-28",
+      "episode": "The birds and the bees",
+      "role": "beekeeper",
+      "name": "Noah Wilson-Rich"
+    },
+    {
+      "date": "2025-02-28",
+      "episode": "The birds and the bees",
+      "role": "biologist",
+      "name": "Carin Bondar"
+    },
+    {
+      "date": "2025-02-28",
+      "episode": "The birds and the bees",
+      "role": "behavioral ecologist",
+      "name": "Marlene Zuk"
+    },
+    {
+      "date": "2025-02-28",
+      "episode": "The birds and the bees",
+      "role": "comedian",
+      "name": "Julia Sweeney"
+    },
+    {
+      "date": "2025-02-14",
+      "episode": "Retracing the steps of their ancestors",
+      "role": "author",
+      "name": "Joseph McGill Jr"
+    },
+    {
+      "date": "2025-01-31",
+      "episode": "The shocking power of tiny things",
+      "role": "microbiologist",
+      "name": "Anne Madden"
+    },
+    {
+      "date": "2025-01-31",
+      "episode": "The shocking power of tiny things",
+      "role": "cognitive scientist",
+      "name": "Lera Boroditsky"
+    },
+    {
+      "date": "2025-01-31",
+      "episode": "The shocking power of tiny things",
+      "role": "former educator",
+      "name": "YeYoon Kim"
+    },
+    {
+      "date": "2025-01-31",
+      "episode": "The shocking power of tiny things",
+      "role": "Zen Buddhist monk",
+      "name": "Bart Weetjens"
+    },
+    {
+      "date": "2025-01-17",
+      "episode": "Your brain is the next tech frontier",
+      "role": "AI ethicist",
+      "name": "Nita Farahany"
+    },
+    {
+      "date": "2025-01-17",
+      "episode": "Your brain is the next tech frontier",
+      "role": "entrepreneur",
+      "name": "Conor Russomanno"
+    },
+    {
+      "date": "2025-01-17",
+      "episode": "Your brain is the next tech frontier",
+      "role": "sous chef",
+      "name": "Kate Faulkner"
+    },
+    {
+      "date": "2025-01-03",
+      "episode": "Learning from what others leave behind ",
+      "role": "museum curator",
+      "name": "Ariana Curtis"
+    },
+    {
+      "date": "2025-01-03",
+      "episode": "Learning from what others leave behind ",
+      "role": "music curator",
+      "name": "Alexis Charpentier"
+    },
+    {
+      "date": "2024-12-27",
+      "episode": "Searching for paradise",
+      "role": "wildfire expert",
+      "name": "George Whitesides"
+    },
+    {
+      "date": "2024-12-27",
+      "episode": "Searching for paradise",
+      "role": "tech entrepreneur",
+      "name": "Ramona Pierson"
+    },
+    {
+      "date": "2024-12-13",
+      "episode": "We resist change and surprises\u2014but shock can shift our lives for the better",
+      "role": "bird truther",
+      "name": "Peter McIndoe"
+    },
+    {
+      "date": "2024-12-13",
+      "episode": "We resist change and surprises\u2014but shock can shift our lives for the better",
+      "role": "psychologist",
+      "name": "Paul Bloom"
+    },
+    {
+      "date": "2024-12-13",
+      "episode": "We resist change and surprises\u2014but shock can shift our lives for the better",
+      "role": "cognitive scientist",
+      "name": "Maya Shankar"
+    },
+    {
+      "date": "2024-11-20",
+      "episode": "Making sense of the sun",
+      "role": "astrophysicist",
+      "name": "Nour Rawafi"
+    },
+    {
+      "date": "2024-11-20",
+      "episode": "Making sense of the sun",
+      "role": "fusion physicist",
+      "name": "Tammy Ma"
+    },
+    {
+      "date": "2024-11-20",
+      "episode": "Making sense of the sun",
+      "role": "renewable energy strategist",
+      "name": "Rebecca Collyer"
+    },
+    {
+      "date": "2024-11-20",
+      "episode": "Making sense of the sun",
+      "role": "science journalist",
+      "name": "David Baron"
+    },
+    {
+      "date": "2024-10-25",
+      "episode": "The mysteries that lie beneath",
+      "role": "cave diver",
+      "name": "Jill Heinerth"
+    },
+    {
+      "date": "2024-10-25",
+      "episode": "The mysteries that lie beneath",
+      "role": "death care advocate",
+      "name": "Katrina Spade"
+    },
+    {
+      "date": "2024-10-25",
+      "episode": "The mysteries that lie beneath",
+      "role": "soil scientist",
+      "name": "Asmeret Asefaw Berhe"
+    },
+    {
+      "date": "2024-10-25",
+      "episode": "The mysteries that lie beneath",
+      "role": "paleontologist",
+      "name": "Nizar Ibrahim"
+    },
+    {
+      "date": "2024-10-11",
+      "episode": "Monday \u2014 Friday: Making the most of the workweek",
+      "role": "executive coach",
+      "name": "Anne Morriss"
+    },
+    {
+      "date": "2024-10-11",
+      "episode": "Monday \u2014 Friday: Making the most of the workweek",
+      "role": "economist",
+      "name": "Juliet Schor"
+    },
+    {
+      "date": "2024-10-11",
+      "episode": "Monday \u2014 Friday: Making the most of the workweek",
+      "role": "social psychologist",
+      "name": "Azim Shariff"
+    },
+    {
+      "date": "2024-10-11",
+      "episode": "Monday \u2014 Friday: Making the most of the workweek",
+      "role": "political scientist",
+      "name": "Margaret Levi"
+    },
+    {
+      "date": "2024-10-04",
+      "episode": "Augmenting Humans",
+      "role": "computer scientist",
+      "name": "Catie Cuan"
+    },
+    {
+      "date": "2024-10-04",
+      "episode": "Augmenting Humans",
+      "role": "biophysicist",
+      "name": "Hugh Herr"
+    },
+    {
+      "date": "2024-10-04",
+      "episode": "Augmenting Humans",
+      "role": "biochemist",
+      "name": "Jennifer Doudna"
+    },
+    {
+      "date": "2024-09-27",
+      "episode": "The double-edged nature of parenting, mental health and artificial intelligence",
+      "role": "developmental psychologist",
+      "name": "Yuko Munakata"
+    },
+    {
+      "date": "2024-09-27",
+      "episode": "The double-edged nature of parenting, mental health and artificial intelligence",
+      "role": "entrepreneur",
+      "name": "Andy Dunn"
+    },
+    {
+      "date": "2024-09-27",
+      "episode": "The double-edged nature of parenting, mental health and artificial intelligence",
+      "role": "AI researcher",
+      "name": "Yejin Choi"
+    },
+    {
+      "date": "2024-09-13",
+      "episode": "The hidden role of friction in our lives",
+      "role": "tribologist",
+      "name": "Jennifer Vail"
+    },
+    {
+      "date": "2024-09-13",
+      "episode": "The hidden role of friction in our lives",
+      "role": "Sierra Leone's Minister of",
+      "name": "Education David Moinina Sengeh"
+    },
+    {
+      "date": "2024-09-13",
+      "episode": "The hidden role of friction in our lives",
+      "role": "TV producer",
+      "name": "Elan Gale"
+    },
+    {
+      "date": "2024-08-30",
+      "episode": "Unapologetically loud women who push boundaries \u2014 but not without pushback ",
+      "role": "comedian",
+      "name": "Lilly Singh"
+    },
+    {
+      "date": "2024-08-30",
+      "episode": "Unapologetically loud women who push boundaries \u2014 but not without pushback ",
+      "role": "Pussy Riot co-founder",
+      "name": "Nadya Tolokonnikova"
+    },
+    {
+      "date": "2024-08-30",
+      "episode": "Unapologetically loud women who push boundaries \u2014 but not without pushback ",
+      "role": "director",
+      "name": "Sarah Jones"
+    },
+    {
+      "date": "2024-08-23",
+      "episode": "How we repair and strengthen our most important relationships",
+      "role": "clinical psychologist",
+      "name": "Becky Kennedy"
+    },
+    {
+      "date": "2024-08-23",
+      "episode": "How we repair and strengthen our most important relationships",
+      "role": "death doula",
+      "name": "Alua Arthur"
+    },
+    {
+      "date": "2024-08-09",
+      "episode": "Going incognito, where nothing is as it seems",
+      "role": "former CIA Chief of",
+      "name": "Disguise Jonna Mendez"
+    },
+    {
+      "date": "2024-08-09",
+      "episode": "Going incognito, where nothing is as it seems",
+      "role": "artist",
+      "name": "Holly Herndon"
+    },
+    {
+      "date": "2024-07-26",
+      "episode": "Investigating true crime in the animal kingdom",
+      "role": "forensic scientist",
+      "name": "Lauren Pharr Parks"
+    },
+    {
+      "date": "2024-07-26",
+      "episode": "Investigating true crime in the animal kingdom",
+      "role": "author",
+      "name": "Mary Roach"
+    },
+    {
+      "date": "2024-07-26",
+      "episode": "Investigating true crime in the animal kingdom",
+      "role": "conservationist",
+      "name": "Megan Parker"
+    },
+    {
+      "date": "2024-07-26",
+      "episode": "Investigating true crime in the animal kingdom",
+      "role": "wildlife intelligence analyst",
+      "name": "Sarah Stoner"
+    },
+    {
+      "date": "2024-07-12",
+      "episode": "DIY: There's a problem and only you can fix it",
+      "role": "engineer",
+      "name": "Kate Stone"
+    },
+    {
+      "date": "2024-07-12",
+      "episode": "DIY: There's a problem and only you can fix it",
+      "role": "humanitarian programmer",
+      "name": "Tiffani Ashley Bell"
+    },
+    {
+      "date": "2024-07-12",
+      "episode": "DIY: There's a problem and only you can fix it",
+      "role": "youth educator",
+      "name": "Emily Pilloton-Lam"
+    },
+    {
+      "date": "2024-07-12",
+      "episode": "DIY: There's a problem and only you can fix it",
+      "role": "videographer",
+      "name": "Jack Corbett"
+    },
+    {
+      "date": "2024-07-05",
+      "episode": "What we'll eat on a warmer planet",
+      "role": "policy advisor",
+      "name": "Sam Kass"
+    },
+    {
+      "date": "2024-07-05",
+      "episode": "What we'll eat on a warmer planet",
+      "role": "farmers",
+      "name": "Jim Whitaker"
+    },
+    {
+      "date": "2024-07-05",
+      "episode": "What we'll eat on a warmer planet",
+      "role": "Jessica",
+      "name": "Whitaker Allen"
+    },
+    {
+      "date": "2024-07-05",
+      "episode": "What we'll eat on a warmer planet",
+      "role": "biotechnologist",
+      "name": "Isha Datar"
+    },
+    {
+      "date": "2024-07-05",
+      "episode": "What we'll eat on a warmer planet",
+      "role": "artist",
+      "name": "Sam Van Aken"
+    },
+    {
+      "date": "2024-06-21",
+      "episode": "What's driving generations apart\u2014and ideas to bring them together",
+      "role": "author",
+      "name": "Scott Galloway"
+    },
+    {
+      "date": "2024-06-21",
+      "episode": "What's driving generations apart\u2014and ideas to bring them together",
+      "role": "social entrepreneur",
+      "name": "Louise Mabulo"
+    },
+    {
+      "date": "2024-06-21",
+      "episode": "What's driving generations apart\u2014and ideas to bring them together",
+      "role": "advocate",
+      "name": "Derenda Schubert"
+    },
+    {
+      "date": "2024-06-21",
+      "episode": "What's driving generations apart\u2014and ideas to bring them together",
+      "role": "writer",
+      "name": "Anne Helen Petersen"
+    },
+    {
+      "date": "2024-06-14",
+      "episode": "Our oceans are in danger ... but it's not too late.",
+      "role": "Ayana",
+      "name": "Elizabeth Johnson"
+    },
+    {
+      "date": "2024-06-14",
+      "episode": "Our oceans are in danger ... but it's not too late.",
+      "role": "oceanographer",
+      "name": "Sylvia Earle"
+    },
+    {
+      "date": "2024-05-31",
+      "episode": "A Love Letter to the Ocean: Life, death and mating in the sea",
+      "role": "adventurer",
+      "name": "Catherine Mohr"
+    },
+    {
+      "date": "2024-05-31",
+      "episode": "A Love Letter to the Ocean: Life, death and mating in the sea",
+      "role": "marine biologists",
+      "name": "Marah Hardt"
+    },
+    {
+      "date": "2024-05-24",
+      "episode": "They/Them, LatinX, Rigged: The history behind three words",
+      "role": "linguists",
+      "name": "Anne Curzan"
+    },
+    {
+      "date": "2024-05-24",
+      "episode": "They/Them, LatinX, Rigged: The history behind three words",
+      "role": "social psychologist",
+      "name": "Dannagal Young"
+    },
+    {
+      "date": "2024-05-24",
+      "episode": "They/Them, LatinX, Rigged: The history behind three words",
+      "role": "writer",
+      "name": "Mark Forsyth"
+    },
+    {
+      "date": "2024-05-17",
+      "episode": "The Future of Sustainability: Repair, repurpose, reimagine",
+      "role": "right-to-repair advocate",
+      "name": "Gay Gordon-Byrne"
+    },
+    {
+      "date": "2024-05-17",
+      "episode": "The Future of Sustainability: Repair, repurpose, reimagine",
+      "role": "materials scientist",
+      "name": "Andrew Dent"
+    },
+    {
+      "date": "2024-05-17",
+      "episode": "The Future of Sustainability: Repair, repurpose, reimagine",
+      "role": "technologist",
+      "name": "Jamie Beard"
+    },
+    {
+      "date": "2024-05-17",
+      "episode": "The Future of Sustainability: Repair, repurpose, reimagine",
+      "role": "animal scientist",
+      "name": "Ermias Kebreab"
+    },
+    {
+      "date": "2024-05-10",
+      "episode": "Our Tech has a Climate Problem: Here's we solve it",
+      "role": "AI researchers",
+      "name": "Sasha Luccioni"
+    },
+    {
+      "date": "2024-05-10",
+      "episode": "Our Tech has a Climate Problem: Here's we solve it",
+      "role": "climate researcher",
+      "name": "Elsa Dominish"
+    },
+    {
+      "date": "2024-05-10",
+      "episode": "Our Tech has a Climate Problem: Here's we solve it",
+      "role": "astrodynamicist",
+      "name": "Moriba Jah"
+    },
+    {
+      "date": "2024-05-03",
+      "episode": "Changing Our Minds: Why we should admit when we're wrong",
+      "role": "former GOP congressman",
+      "name": "Bob Inglis"
+    },
+    {
+      "date": "2024-05-03",
+      "episode": "Changing Our Minds: Why we should admit when we're wrong",
+      "role": "organizational psychologist",
+      "name": "Adam Grant"
+    },
+    {
+      "date": "2024-04-26",
+      "episode": "The Public Commons: Building public spaces that actually serve the public",
+      "role": "community organizer",
+      "name": "Shari Davis"
+    },
+    {
+      "date": "2024-04-26",
+      "episode": "The Public Commons: Building public spaces that actually serve the public",
+      "role": "researcher",
+      "name": "Eli Pariser"
+    },
+    {
+      "date": "2024-04-26",
+      "episode": "The Public Commons: Building public spaces that actually serve the public",
+      "role": "Wikipedia Library founder",
+      "name": "Jake Orlowitz"
+    },
+    {
+      "date": "2024-04-26",
+      "episode": "The Public Commons: Building public spaces that actually serve the public",
+      "role": "Wikipedia co-founder",
+      "name": "Jimmy Wales"
+    },
+    {
+      "date": "2024-04-26",
+      "episode": "The Public Commons: Building public spaces that actually serve the public",
+      "role": "artist",
+      "name": "Matthew Mazzotta"
+    },
+    {
+      "date": "2024-04-12",
+      "episode": "What's In A Face: How technology uses our faces",
+      "role": "super recognizer",
+      "name": "Yenny Seo"
+    },
+    {
+      "date": "2024-04-12",
+      "episode": "What's In A Face: How technology uses our faces",
+      "role": "Bloomberg columnist",
+      "name": "Parmy Olson"
+    },
+    {
+      "date": "2024-04-12",
+      "episode": "What's In A Face: How technology uses our faces",
+      "role": "visual researcher",
+      "name": "Mike Seymour"
+    },
+    {
+      "date": "2024-04-12",
+      "episode": "What's In A Face: How technology uses our faces",
+      "role": "investigative journalist",
+      "name": "Alison Killing"
+    },
+    {
+      "date": "2024-03-22",
+      "episode": "A More Walkable World: Ideas to get us moving",
+      "role": "author",
+      "name": "Vybarr Cregan-Reid"
+    },
+    {
+      "date": "2024-03-22",
+      "episode": "A More Walkable World: Ideas to get us moving",
+      "role": "computer historian",
+      "name": "Laine Nooney"
+    },
+    {
+      "date": "2024-03-22",
+      "episode": "A More Walkable World: Ideas to get us moving",
+      "role": "exercise physiologist",
+      "name": "Keith Diaz"
+    },
+    {
+      "date": "2024-03-22",
+      "episode": "A More Walkable World: Ideas to get us moving",
+      "role": "activists",
+      "name": "John Francis"
+    },
+    {
+      "date": "2024-03-15",
+      "episode": "Audacious Solutions",
+      "role": "criminal justice reform activist",
+      "name": "Sheena Meade"
+    },
+    {
+      "date": "2024-03-15",
+      "episode": "Audacious Solutions",
+      "role": "child welfare advocates",
+      "name": "Sixto Cancel"
+    },
+    {
+      "date": "2024-03-15",
+      "episode": "Audacious Solutions",
+      "role": "ocean monitoring expert",
+      "name": "Tony Long"
+    },
+    {
+      "date": "2024-02-09",
+      "episode": "Doppelgangers",
+      "role": "author",
+      "name": "Naomi Klein"
+    },
+    {
+      "date": "2024-02-09",
+      "episode": "Doppelgangers",
+      "role": "aerospace engineer",
+      "name": "Karen Willcox"
+    },
+    {
+      "date": "2024-02-02",
+      "episode": "What Leadership Looks Like",
+      "role": "executive coach",
+      "name": "Patrice Gordon"
+    },
+    {
+      "date": "2024-02-02",
+      "episode": "What Leadership Looks Like",
+      "role": "organizational psychologist",
+      "name": "Tomas Chamorro-Premuzic"
+    },
+    {
+      "date": "2024-02-02",
+      "episode": "What Leadership Looks Like",
+      "role": "former First Minister of",
+      "name": "Scotland Nicola Sturgeon"
+    },
+    {
+      "date": "2024-02-02",
+      "episode": "What Leadership Looks Like",
+      "role": "educator",
+      "name": "Shabana Basij-Rasikh"
+    },
+    {
+      "date": "2024-01-19",
+      "episode": "Take Care",
+      "role": "attorney",
+      "name": "Diana Adams"
+    },
+    {
+      "date": "2024-01-19",
+      "episode": "Take Care",
+      "role": "inclusion advocate",
+      "name": "Sara Jones"
+    },
+    {
+      "date": "2024-01-19",
+      "episode": "Take Care",
+      "role": "comedian",
+      "name": "Bill Bernat"
+    },
+    {
+      "date": "2024-01-12",
+      "episode": "Flip the Script",
+      "role": "time management expert",
+      "name": "Laura Vanderkam"
+    },
+    {
+      "date": "2024-01-12",
+      "episode": "Flip the Script",
+      "role": "environmental data scientist",
+      "name": "Hannah Ritchie"
+    },
+    {
+      "date": "2024-01-12",
+      "episode": "Flip the Script",
+      "role": "writer",
+      "name": "Emily Esfahani Smith"
+    },
+    {
+      "date": "2024-01-05",
+      "episode": "Stay Resolved",
+      "role": "neuroscientists",
+      "name": "Wendy Suzuki"
+    },
+    {
+      "date": "2024-01-05",
+      "episode": "Stay Resolved",
+      "role": "behavioral scientist",
+      "name": "Wendy De La Rosa"
+    }
+  ],
+  "mention_counts": {
+    "sandeep jauhar": 2,
+    "jeannie suk gersen": 2,
+    "hui-wen sato": 2,
+    "eric topol": 1,
+    "cm ralph": 1,
+    "brewster kayle": 1,
+    "dina zielinksi": 1,
+    "chris fisher": 1,
+    "sarah lake": 2,
+    "deb chachra": 2,
+    "michele gelfand": 2,
+    "jeff speck": 3,
+    "ignacio delgadillo": 2,
+    "tom gruber": 1,
+    "ethan kross": 2,
+    "alex rosenthal": 1,
+    "john wixted": 1,
+    "francesca hogi": 1,
+    "philip johns": 2,
+    "avi loeb": 2,
+    "laurel braitman": 2,
+    "alex carter": 1,
+    "magdalena hoeller": 1,
+    "anna malaika tubbs": 1,
+    "jonathan haidt": 1,
+    "maximilian milovidov": 1,
+    "catherine price": 2,
+    "david suh": 2,
+    "dolly chugh": 2,
+    "elise hu": 2,
+    "anil ananthaswamy": 2,
+    "aqeela sherrills": 1,
+    "abu sarah": 1,
+    "pau aleikum garcia": 2,
+    "amy kurzweil": 2,
+    "chance coughenour": 2,
+    "matt pitcher": 1,
+    "anindya kundu": 1,
+    "jennifer wallace": 1,
+    "bill burnett": 1,
+    "greg gage": 3,
+    "frances chance": 3,
+    "keely muscatell": 3,
+    "karen bakker": 3,
+    "robert green": 1,
+    "matt wilson": 2,
+    "jamil zaki": 2,
+    "yifat susskind": 2,
+    "rhaina cohen": 2,
+    "stephanie yates-anyabwile": 2,
+    "bella depaulo": 2,
+    "alvin wang graylin": 1,
+    "john ruwitch": 1,
+    "chris anderson": 1,
+    "scarlet keys": 2,
+    "rebecca kleinberger": 2,
+    "snow raven": 2,
+    "adam aleksic": 1,
+    "bradley tusk": 1,
+    "jennifer pahlka": 1,
+    "anna piperal": 1,
+    "dana gunders": 2,
+    "jasmine crowe-houston": 2,
+    "anthony myint": 2,
+    "jiaying zhao": 2,
+    "hilke schellmann": 1,
+    "reggie watts": 2,
+    "sonia vallabh": 2,
+    "kristine mcdivitt tompkins": 2,
+    "lisa damour": 1,
+    "kelly corrigan": 2,
+    "allison gilbert": 2,
+    "shane campbell-staton": 2,
+    "garry cooper": 2,
+    "anika goss": 2,
+    "alysa mccall": 2,
+    "katherine kuchenbecker": 1,
+    "anna maria coclite": 2,
+    "lee thomas": 1,
+    "kathryn schulz": 1,
+    "doree shafrir": 1,
+    "ashton applewhite": 1,
+    "riley moynes": 1,
+    "machine dazzle": 2,
+    "aparna mehta": 2,
+    "amanda mull": 2,
+    "cameron russell": 2,
+    "agnieszka pilat": 1,
+    "franziska trautmann": 1,
+    "mike posner": 1,
+    "dean lomax": 2,
+    "saad bhamla": 2,
+    "gowri shankar": 2,
+    "pico iyer": 3,
+    "sarah edmondson": 1,
+    "lehua kamalu": 1,
+    "shonda rhimes": 1,
+    "abby wambach": 2,
+    "sian leah beilock": 2,
+    "kate fagan": 2,
+    "sarah lewis": 2,
+    "hajer sharief": 2,
+    "amy edmondson": 2,
+    "pete stavros": 2,
+    "katie paterson": 2,
+    "irena arslanova": 1,
+    "robert franz": 1,
+    "philip zimbardo": 1,
+    "ty tashiro": 3,
+    "liana finck": 3,
+    "melissa dahl": 3,
+    "erin chen": 3,
+    "cell atlas aviv regev": 1,
+    "brad ringeisen": 1,
+    "aaron morris": 1,
+    "kat naud": 2,
+    "amy baxter": 2,
+    "cammie wolf rice": 2,
+    "gregory heyworth": 1,
+    "ralph chami": 1,
+    "noah wilson-rich": 1,
+    "carin bondar": 1,
+    "marlene zuk": 1,
+    "julia sweeney": 1,
+    "joseph mcgill jr": 2,
+    "anne madden": 1,
+    "lera boroditsky": 1,
+    "yeyoon kim": 1,
+    "bart weetjens": 1,
+    "nita farahany": 2,
+    "conor russomanno": 2,
+    "kate faulkner": 2,
+    "ariana curtis": 1,
+    "alexis charpentier": 1,
+    "george whitesides": 1,
+    "ramona pierson": 1,
+    "peter mcindoe": 1,
+    "paul bloom": 1,
+    "maya shankar": 1,
+    "nour rawafi": 1,
+    "tammy ma": 1,
+    "rebecca collyer": 1,
+    "david baron": 1,
+    "jill heinerth": 1,
+    "katrina spade": 1,
+    "asmeret asefaw berhe": 1,
+    "nizar ibrahim": 1,
+    "anne morriss": 1,
+    "juliet schor": 1,
+    "azim shariff": 1,
+    "margaret levi": 1,
+    "catie cuan": 1,
+    "hugh herr": 1,
+    "jennifer doudna": 1,
+    "yuko munakata": 1,
+    "andy dunn": 1,
+    "yejin choi": 1,
+    "jennifer vail": 1,
+    "education david moinina sengeh": 1,
+    "elan gale": 1,
+    "lilly singh": 1,
+    "nadya tolokonnikova": 1,
+    "sarah jones": 1,
+    "becky kennedy": 1,
+    "alua arthur": 1,
+    "disguise jonna mendez": 1,
+    "holly herndon": 1,
+    "lauren pharr parks": 1,
+    "mary roach": 1,
+    "megan parker": 1,
+    "sarah stoner": 1,
+    "kate stone": 1,
+    "tiffani ashley bell": 1,
+    "emily pilloton-lam": 1,
+    "jack corbett": 1,
+    "sam kass": 1,
+    "jim whitaker": 1,
+    "whitaker allen": 1,
+    "isha datar": 1,
+    "sam van aken": 1,
+    "scott galloway": 1,
+    "louise mabulo": 1,
+    "derenda schubert": 1,
+    "anne helen petersen": 1,
+    "elizabeth johnson": 2,
+    "sylvia earle": 1,
+    "catherine mohr": 1,
+    "marah hardt": 1,
+    "anne curzan": 1,
+    "dannagal young": 1,
+    "mark forsyth": 1,
+    "gay gordon-byrne": 1,
+    "andrew dent": 1,
+    "jamie beard": 1,
+    "ermias kebreab": 1,
+    "sasha luccioni": 1,
+    "elsa dominish": 1,
+    "moriba jah": 1,
+    "bob inglis": 1,
+    "adam grant": 1,
+    "shari davis": 1,
+    "eli pariser": 1,
+    "jake orlowitz": 1,
+    "jimmy wales": 1,
+    "matthew mazzotta": 1,
+    "yenny seo": 1,
+    "parmy olson": 1,
+    "mike seymour": 1,
+    "alison killing": 1,
+    "vybarr cregan-reid": 1,
+    "laine nooney": 1,
+    "keith diaz": 1,
+    "john francis": 1,
+    "sheena meade": 1,
+    "sixto cancel": 1,
+    "tony long": 1,
+    "naomi klein": 1,
+    "karen willcox": 1,
+    "patrice gordon": 1,
+    "tomas chamorro-premuzic": 1,
+    "scotland nicola sturgeon": 1,
+    "shabana basij-rasikh": 1,
+    "diana adams": 1,
+    "sara jones": 1,
+    "bill bernat": 1,
+    "laura vanderkam": 1,
+    "hannah ritchie": 1,
+    "emily esfahani smith": 1,
+    "wendy suzuki": 1,
+    "wendy de la rosa": 1
+  },
+  "unmatched_episodes": [
+    {
+      "date": "2026-04-17",
+      "title": "Using ancient philosophy to cope with your modern problems",
+      "desc_snippet": "Philosopher Meghan Sullivan says during tough times, ancient wisdom can serve as a guide. From politics to religion to AI, she poses big questions to help you find out what the good life means today. TED Radio Hour+ subscribers now get access to bonus episodes, with more ideas from TED speakers and "
+    },
+    {
+      "date": "2026-03-18",
+      "title": "The TED talk that put writer Pico Iyer in \u201cMarty Supreme\u201d",
+      "desc_snippet": "\u201cMarty Supreme\u201d stars Timoth\u00e9e Chalamet as a young, brash table tennis player in the 1950s trying to hustle his way to a world championship. One of the characters standing in Marty\u2019s way is played by frequent guest, Pico Iyer, a TED speaker and travel writer who\u2019d never acted before. In this bonus e"
+    },
+    {
+      "date": "2025-12-10",
+      "title": "Remembering a maestro through 'New World Symphony'",
+      "desc_snippet": "Before his passing, conductor Robert Franz guided us through the first movement of Dvor\u00e1k's \"New World Symphony\" using his four essential tools for listening\u2014rhythm, melody, texture and visuals. As the year comes to a close, Manoush Zomorodi shares one of her favorite TED Radio Hour+ episodes. Rober"
+    },
+    {
+      "date": "2025-12-05",
+      "title": "Finding your bliss",
+      "desc_snippet": "It's been a long, complicated year. This hour, TED speakers share ideas to help you get grounded, back on track, and even edge toward something like bliss. TED Radio Hour+ subscribers now get access to bonus episodes, with more ideas from TED speakers and a behind the scenes look with our producers."
+    },
+    {
+      "date": "2025-11-28",
+      "title": "Decoding nature\u2019s hidden patterns",
+      "desc_snippet": "We can\u2019t protect what we don\u2019t understand. From decoding wolf howls to making sense of millions of citizen-science sightings, we explore the tools helping researchers understand the wild in new ways. TED Radio Hour+ subscribers now get access to bonus episodes, with more ideas from TED speakers and "
+    },
+    {
+      "date": "2025-11-21",
+      "title": "How to repair your most important relationships",
+      "desc_snippet": "It's never too late to make things right\u2014even when cracks form within our relationships with our families, our environment...or the inevitable. This hour, TED speakers offer healing solutions. TED Radio Hour+ subscribers now get access to bonus episodes, with more ideas from TED speakers and a behin"
+    },
+    {
+      "date": "2025-11-07",
+      "title": "The price of creativity",
+      "desc_snippet": "The words \"content creator\" may make you roll your eyes. But in part 1 of our series, Kickstarter co-founder Yancey Strickler explains how the creator economy is changing work, art and what we value. TED Radio Hour+ subscribers now get access to bonus episodes, with more ideas from TED speakers and "
+    },
+    {
+      "date": "2025-10-17",
+      "title": "The art of choosing what to do",
+      "desc_snippet": "The way we spend our hours defines our lives. This hour, TED speakers explore how we make choices about time, meaning and attention in a world of infinite options. TED Radio Hour+ subscribers now get access to bonus episodes, with more ideas from TED speakers and a behind the scenes look with our pr"
+    },
+    {
+      "date": "2025-10-15",
+      "title": "Head of TED, Chris Anderson, on TED\u2019s new chapter",
+      "desc_snippet": "Based on the simple premise, \"Ideas worth spreading,\" Chris Anderson spent the last 25 years turning the non-profit TED organization into a globally recognized media powerhouse. Now he's ready to announce a new chapter for TED, along with a new steward and visionary: Sal Khan. See pcm.adswizz.com fo"
+    },
+    {
+      "date": "2025-10-10",
+      "title": "Future You",
+      "desc_snippet": "Who will you be in 10 years? In 20 years? Envisioning how you will evolve is very hard. This hour, TED speakers share ideas on how to better plan for the future, while allowing for the unexpected. Original broadcast date: June 16, 2023 TED Radio Hour+ subscribers now get access to bonus episodes, wi"
+    },
+    {
+      "date": "2025-09-26",
+      "title": "What this musician\u2019s identity crisis teaches us about navigating change",
+      "desc_snippet": "Since childhood, Joshua Roman's life revolved around the cello. But when long COVID forced him to set his cello aside, he had to rethink his approach to life, faith and music. TED Radio Hour+ subscribers now get access to bonus episodes, with more ideas from TED speakers and a behind the scenes look"
+    },
+    {
+      "date": "2025-09-12",
+      "title": "The lab behind Waymo and Google Glass that wants to reshape your life",
+      "desc_snippet": "The moonshot factory X is home to some of Silicon Valley's boldest inventions. CEO Astro Teller reveals how the secretive lab tests crazy ideas that can change the world... even when they fail. TED Radio Hour+ subscribers now get access to bonus episodes, with more ideas from TED speakers and a behi"
+    },
+    {
+      "date": "2025-08-29",
+      "title": "Are the kids alright? Part 1",
+      "desc_snippet": "Being a kid\u2014or raising one\u2014has never been tougher. From AI in classrooms to social media pressures to economic stress, kids are navigating a minefield. In this two-part series, host Manoush Zomorodi explores what today\u2019s young people are up against and what they need most from adults. This episode i"
+    },
+    {
+      "date": "2025-07-25",
+      "title": "Prophets of Technology: The Biotech Visionaries",
+      "desc_snippet": "As AI infiltrates every aspect of our lives, who are some of the people behind this huge inflection point? In this special three-part series, you'll hear from the people predicting and shaping our tech future. Host Manoush Zomorodi reports on the latest and revisits her favorite conversations with t"
+    },
+    {
+      "date": "2025-07-18",
+      "title": "Congress has voted to eliminate government funding for public media",
+      "desc_snippet": "Act now to ensure public media remains free and accessible to all. Your donation will help this essential American service survive and thrive. Visit donate.npr.org now. See pcm.adswizz.com for information about our collection and use of personal data for sponsorship and to manage your podcast sponso"
+    },
+    {
+      "date": "2025-07-18",
+      "title": "Prophets of Technology: Bot Believer vs. Bot Skeptic",
+      "desc_snippet": "As AI infiltrates every aspect of our lives, who are some of the people behind this huge inflection point? In this special three-part series, you'll hear from the people predicting and shaping our tech future. Host Manoush Zomorodi reports on the latest and revisits her favorite conversations with t"
+    },
+    {
+      "date": "2025-07-11",
+      "title": "Prophets of Technology: The OG influencers",
+      "desc_snippet": "As AI infiltrates every aspect of our lives, who are some of the people behind this huge inflection point? In this special three-part series, you'll hear from the people predicting and shaping our tech future. Host Manoush Zomorodi reports on the latest and revisits her favorite conversations with t"
+    },
+    {
+      "date": "2025-05-30",
+      "title": "How AI is using your data to influence you",
+      "desc_snippet": "Your data is used to manipulate you\u2014and AI makes it easier than ever before. But is that so bad? Sandra Matz explains the state of psychological targeting today and how you can protect your privacy. TED Radio Hour+ subscribers now get access to bonus episodes, with more ideas from TED speakers and a"
+    },
+    {
+      "date": "2025-05-09",
+      "title": "The day the dinosaurs died",
+      "desc_snippet": "What happened in the days, even hours, after an asteroid set off the fifth extinction? A New Jersey quarry, and site of a new museum founded by paleontologist Ken Lacovara, sheds light on the mystery. Original broadcast date: August 16, 2024 See pcm.adswizz.com for information about our collection a"
+    },
+    {
+      "date": "2025-04-11",
+      "title": "Addiction, motherhood, and Jesus with writer Anne Lamott",
+      "desc_snippet": "Writer Anne Lamott has garnered a cult following with her shockingly honest prose on love, death, faith, writing and more. This hour, her wisdom from a career that has spanned 20 books and 40 years. Original broadcast date: April 5, 2024. TED Radio Hour+ subscribers now get access to bonus episodes,"
+    },
+    {
+      "date": "2024-12-25",
+      "title": "New year, new habits: How to start writing with author Kelly Corrigan",
+      "desc_snippet": "Writing can help you process thoughts, preserve memories, chronicle the stories of you and your loved ones. But that's only if you can get past the blank page. In this bonus episode, best-selling memoirist Kelly Corrigan offers advice for putting pen to paper. Corrigan has written four New York Time"
+    },
+    {
+      "date": "2024-12-20",
+      "title": "What one founder's past says about AI's future",
+      "desc_snippet": "To understand AI, you need to hear Mustafa Suleyman's story. From youth hotline founder to DeepMind creator and Microsoft AI chief, his journey explains AI's evolution and his plans for its future. TED Radio Hour+ subscribers now get access to bonus episodes, with more ideas from TED speakers and a "
+    },
+    {
+      "date": "2024-12-18",
+      "title": "New year, new habits: Fixing time management mistakes in 2025",
+      "desc_snippet": "A new year is a fresh opportunity to take control of our time, but a lot of hacks don't actually help us prioritize and focus. In this special bonus episode, time management expert Laura Vanderkam shares her best strategies for making decisions with more intention\u2014so you have time for the things tha"
+    },
+    {
+      "date": "2024-11-29",
+      "title": "Living Longer ... And Better",
+      "desc_snippet": "In some pockets of the world, people have a higher chance of living longer. So how do they do it? This hour, TED speaker Dan Buettner takes us to Blue Zones to learn how to live a long, happy life. Original broadcast date: December 22, 2023. TED Radio Hour+ subscribers now get access to bonus episod"
+    },
+    {
+      "date": "2024-08-16",
+      "title": "The day the dinosaurs died",
+      "desc_snippet": "What happened in the days, even hours, after an asteroid set off the fifth extinction? A New Jersey quarry, and site of a new museum founded by paleontologist Ken Lacovara, sheds light on the mystery. Correction: An earlier version of this story incorrectly stated that Mantua Township, NJ helped to "
+    },
+    {
+      "date": "2024-08-14",
+      "title": "Short Wave: Big Bang Revisited",
+      "desc_snippet": "We've got a special episode for you today from our friends at Short Wave. We all think about the Big Bang as the moment when our universe\u2014everything in existence\u2014began right? Turns out, it's not quite that simple. Today when scientists talk about the Big Bang, they mean a period of time, closer to a"
+    },
+    {
+      "date": "2024-08-02",
+      "title": "How our relationships are changing in the age of 'artificial intimacy'",
+      "desc_snippet": "Early adopters are flocking to AI bots for therapy, friendship, even love. How will these relationships impact us? MIT sociologist Sherry Turkle delves into her new research on \"artificial intimacy.\" Later in the episode, host Manoush Zomorodi speaks with Somnium Space founder Artur Sychov. Note: A "
+    },
+    {
+      "date": "2024-07-09",
+      "title": "Body Electric: If a bot relationship FEELS real, should we care that it's not?",
+      "desc_snippet": "Thanks to advances in AI, chatbots can act as personalized therapists, companions, and romantic partners. The apps offering these services have been downloaded millions of times. If these relationships relieve stress and make us feel better, does it matter that they're not \"real\"? On this episode fr"
+    },
+    {
+      "date": "2024-06-11",
+      "title": "Body Electric: Type, tap, scroll, BREATHE! How our tech use impacts our breath",
+      "desc_snippet": "Do you have \"screen apnea\"? Our special series Body Electric continues with former Microsoft executive Linda Stone who coined the term. Around 2007, Linda noticed she had an unhealthy habit while answering emails: she held her breath. On this episode, she tells host Manoush Zomorodi how she tested h"
+    },
+    {
+      "date": "2024-05-28",
+      "title": "Body Electric: Your earbuds and you\u2014what all that listening is doing to us",
+      "desc_snippet": "Our special series, Body Electric, is back! This time, host Manoush Zomorodi does a deep dive into our headphone habits... because many of us wear them for hours at a time, and all that listening is taking a toll on our hearing. Manoush speaks with exposure scientist Rick Neitzel, who has partnered "
+    },
+    {
+      "date": "2024-04-05",
+      "title": "Addiction, Motherhood, and Jesus with writer Anne Lamott",
+      "desc_snippet": "Writer Anne Lamott has garnered a cult following with her shockingly honest prose on love, death, faith, writing and more. This hour, her wisdom from a career that has spanned 20 books and 40 years. TED Radio Hour+ subscribers now get access to bonus episodes, with more ideas from TED speakers and a"
+    },
+    {
+      "date": "2024-03-01",
+      "title": "Memory And The Brain",
+      "desc_snippet": "Original broadcast date: December 23, 2022. Our brains are magnificently complex - and highly fallible. This hour, neuroscientist and novelist Lisa Genova explains how to keep our brains healthy and what to do when something goes wrong. TED Radio Hour+ subscribers now get access to bonus episodes, w"
+    },
+    {
+      "date": "2024-01-10",
+      "title": "Ten Percent Happier with Dan Harris: How to Start A Meditation Practice",
+      "desc_snippet": "In the interest of New Year's resolutions, we're bringing you this bonus episode from our friends at the Ten Percent Happier podcast. Host Dan Harris speaks with meditation expert Jon Kabat-Zinn about starting a practice and being more mindful in our everyday lives. See pcm.adswizz.com for informati"
+    }
+  ],
+  "methodology": {
+    "show": "TED Radio Hour (NPR)",
+    "source_feed": "https://feeds.npr.org/510298/podcast.xml",
+    "date_range_filter": "2024-01-01 to feed end",
+    "total_episodes_in_window": 134
+  }
+}

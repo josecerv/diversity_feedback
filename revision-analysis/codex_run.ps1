@@ -117,16 +117,24 @@ ExtraArgs:    $($ExtraArgs -join ' ')
 codex CLI:    $($codexCmd.Source)
 "@ | Out-File -FilePath $SessionLogPath -Encoding utf8
 
-# 3. Build codex args. --output-last-message captures the final assistant
-#    message into our deliverable file; stdout/stderr (Codex's progress
-#    stream) goes to the session log via Tee-Object below.
+# 3. Build codex args.
+#    NOTE: do NOT route --output-last-message at the deliverable path. If the
+#    brief instructs Codex to write to the deliverable via apply_patch (the
+#    usual pattern), Codex writes the full content first, then exits, and
+#    --output-last-message clobbers the file with just the short summary
+#    message. Instead, route --output-last-message to a sidecar `.last_message`
+#    file and rely on Codex's own apply_patch to populate the deliverable.
+$lastMessagePath = "$DeliverablePath.last_message"
+if (Test-Path -LiteralPath $lastMessagePath) {
+    Remove-Item -LiteralPath $lastMessagePath -Force
+}
 $codexArgs = @(
     'exec',
     '--sandbox', $Sandbox,
     '--cd', $WorkingDir,
     '--skip-git-repo-check',
     '--color', 'never',
-    '--output-last-message', $DeliverablePath
+    '--output-last-message', $lastMessagePath
 ) + $ExtraArgs
 
 Append-Log "---- codex argv ----"

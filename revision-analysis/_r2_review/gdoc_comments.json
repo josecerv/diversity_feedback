@@ -1,0 +1,1052 @@
+[
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Sophia Pink",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjXbq7P9aHdXqeI4s0kqfbN_eUD7oLCJcBrc74WoKqb3YJB9TI38=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "We have tightened the scope of our theoretical claims and articulated more explicit boundary conditions for when our effect should and should not generalize, in response to Reviewer 2. We now distinguish two pathways through which descriptive feedback can shift selection decisions: an external motivation to respond without prejudice, sustained by anti‑discrimination law, the observability of selection decisions, and broader stakeholder pressures that operate beyond any single firm’s stated DEI commitments; and an internal motivation to respond without prejudice, rooted in selectors’ personally held egalitarian self‑image, which should be less malleable to changes in organizational climate. We expect our effect to generalize where selections are observable and selectors hold at least some egalitarian commitments, and to attenuate in fully private or anonymous selection contexts and in organizational settings that explicitly discourage egalitarian norms. We now flag organizationa…"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB68O9VB0",
+    "createdTime": "2026-05-13T15:11:51.226Z",
+    "modifiedTime": "2026-05-13T15:11:51.226Z",
+    "htmlContent": "This also wasn&#39;t a primary request, so maybe we move this to the end and make it shorter?",
+    "content": "This also wasn't a primary request, so maybe we move this to the end and make it shorter?",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.dhb8jny6y7mh"
+  },
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Sophia Pink",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjXbq7P9aHdXqeI4s0kqfbN_eUD7oLCJcBrc74WoKqb3YJB9TI38=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "We have clarified our theoretical account of why descriptive feedback can change behavior in this domain even without a paired explicit goal. Consistent with the broader logic of the feedback literature, feedback regulates behavior only when past performance can be evaluated against a standard. We now make explicit that this standard need not be supplied by an explicit goal when an implicit injunctive norm is already entrenched, as we argue is the case for race and gender, where anti‑discrimination law, social and reputational pressures, organizational policy, and selectors’ personally held egalitarian commitments jointly sustain a norm against prejudiced selection."
+    },
+    "kind": "drive#comment",
+    "id": "AAAB68O9VBY",
+    "createdTime": "2026-05-13T15:11:19.319Z",
+    "modifiedTime": "2026-05-13T15:12:05.643Z",
+    "htmlContent": "I don&#39;t think this was one of George&#39;s main requests, so maybe we remove this or shorter it + move it to the end?",
+    "content": "I don't think this was one of George's main requests, so maybe we remove this or shorter it + move it to the end?",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.wctifpf7q5wo"
+  },
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Sophia Pink",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjXbq7P9aHdXqeI4s0kqfbN_eUD7oLCJcBrc74WoKqb3YJB9TI38=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "Second, to address the alternative that comparison attributes are already selected at appropriate levels initially, we restrict to participants whose initial selections contained zero of the focal attribute and report a new pooled analysis across Studies 2, 3A, 3B, 4A, and 4B (see response letter Table R1). Because we cannot observe each participant’s private view of the “appropriate” level for a given attribute, zero is a useful but imperfect floor that lets us hold a common starting point across focal and comparison attributes. If feedback merely corrected under‑selection relative to private benchmarks, it should move participants for both race, gender and comparison attributes in this subset. Instead, race and gender feedback increases subsequent selection of the focal attribute (+21.28 pp, p &lt; .001, N = 1,222), whereas comparison‑attribute feedback does not reliably do so (+6.83 pp, p = .21, N = 429); the Wald‑test difference is +14.46 pp (p = .016). We treat this analy…"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB68O9VBU",
+    "createdTime": "2026-05-13T15:10:10.554Z",
+    "modifiedTime": "2026-05-13T15:10:10.554Z",
+    "htmlContent": "I <b>think</b> this description can be a lot shorter, and then the main response can go into details. But I won&#39;t cut it yet in case I&quot;m wrong!",
+    "content": "I *think* this description can be a lot shorter, and then the main response can go into details. But I won't cut it yet in case I\"m wrong!",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.wk6p4g1rs4jm"
+  },
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Sophia Pink",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjXbq7P9aHdXqeI4s0kqfbN_eUD7oLCJcBrc74WoKqb3YJB9TI38=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "We have addressed your two empirical requests. \nFirst, the new Study 1 importance post‑test (N = 300) confirms that differences in perceived attribute importance cannot explain why only gender feedback moved subsequent selections: two of the three comparison attributes were rated significantly more important than gender, and the third did not differ. \nSecond, to address the alternative that comparison attributes are already selected at appropriate levels initially, we restrict to participants whose initial selections contained zero of the focal attribute and report a new pooled analysis across Studies 2, 3A, 3B, 4A, and 4B (see response letter Table R1). Because we cannot observe each participant’s private view of the “appropriate” level for a given attribute, zero is a useful but imperfect floor that lets us hold a common starting point across focal and comparison attributes. If feedback merely corrected under‑selection relative to private benchmarks, it should move particip…"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB68O9VBQ",
+    "createdTime": "2026-05-13T15:09:33.260Z",
+    "modifiedTime": "2026-05-13T15:09:33.260Z",
+    "htmlContent": "Maybe start with these, since these were George&#39;s main requests?",
+    "content": "Maybe start with these, since these were George's main requests?",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.a1ezkffhmajp"
+  },
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Sophia Pink",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjXbq7P9aHdXqeI4s0kqfbN_eUD7oLCJcBrc74WoKqb3YJB9TI38=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "We argue this holds for race and gender but not for the comparison attributes we test (see Introduction, p. X, and General Discussion, p. X)."
+    },
+    "kind": "drive#comment",
+    "id": "AAAB68O9U_I",
+    "createdTime": "2026-05-13T15:05:15.754Z",
+    "modifiedTime": "2026-05-13T15:05:15.754Z",
+    "htmlContent": "Is this a change we&#39;re making to the paper, or are we saying we already did this in the prior draft? I think we want to show that we responded to this point beyond just a footnote in the discussion of Study 4.",
+    "content": "Is this a change we're making to the paper, or are we saying we already did this in the prior draft? I think we want to show that we responded to this point beyond just a footnote in the discussion of Study 4.",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.8m5qhuxmuzaz"
+  },
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Sophia Pink",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjXbq7P9aHdXqeI4s0kqfbN_eUD7oLCJcBrc74WoKqb3YJB9TI38=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "Here is a summary of the most notable changes we have made in this revision:"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB68O9U8s",
+    "createdTime": "2026-05-13T14:58:32.192Z",
+    "modifiedTime": "2026-05-13T14:58:32.192Z",
+    "htmlContent": "I&#39;ll defer to Katy/Aneesh since they have done more revisions, but this feels like a very long summary for a minor revision. If others agree that we should shorten the cover letter, let me know and i can help cut it down. But I could be wrong here.",
+    "content": "I'll defer to Katy/Aneesh since they have done more revisions, but this feels like a very long summary for a minor revision. If others agree that we should shorten the cover letter, let me know and i can help cut it down. But I could be wrong here.",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.sut3af7hdnlt"
+  },
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Jose Cervantez",
+      "kind": "drive#user",
+      "me": true,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "X"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6aEFq60",
+    "createdTime": "2026-05-13T14:11:04.359Z",
+    "modifiedTime": "2026-05-13T14:11:13.333Z",
+    "htmlContent": "updated cover letter to the response letter",
+    "content": "updated cover letter to the response letter",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.g414akpbqzws"
+  },
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Jose Cervantez",
+      "kind": "drive#user",
+      "me": true,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "Reviewer 1 has asked for some updating of references and a bit of clarification in your writing.\nRESPONSE: We have addressed both points. The Introduction and General Discussion now draw on more contemporary work in the feedback, goal‑setting, and social‑norms literatures (e.g., Locke &amp; Latham, 2019; Itzchakov &amp; Latham, 2018; Chen, Latham, &amp; Piccolo, 2020; Schultz, Nolan, &amp; Cialdini, 2018; Devine &amp; Ash, 2022; Andor, Gerster, &amp; Peters, 2020; Henry, Ferraro, &amp; Kontoleon, 2019; Mertens &amp; Schultz, 2021), alongside the foundational citations we retain. We have also expanded the Introduction’s theoretical framing (pp. X‑X) to clarify why descriptive feedback can shift selection decisions about women and underrepresented minorities even without a paired explicit goal: in this setting, we argue, feedback makes prior behavior salient against an implicit injunctive norm against prejudiced selection. We address Reviewer 1’s specific suggestions in detail below."
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6aEFq6w",
+    "createdTime": "2026-05-13T14:10:29.864Z",
+    "modifiedTime": "2026-05-13T14:10:29.864Z",
+    "htmlContent": "updated",
+    "content": "updated",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.yvhmmn8z6qxv"
+  },
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Jose Cervantez",
+      "kind": "drive#user",
+      "me": true,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "Reviewer 3 has asked for a modification of some of the intro that won’t make this paper seem so “timestamped”. In addition, he/she has some questions about the theoretical positioning.  I think that the paper will be stronger if the authors address some of the “tension” the reviewer identifies with a study that provides more clarity, but I won’t make it a requirement. On the other hand, they should provide a more nuanced discussion of the issues the reviewer describes.\nRESPONSE: We have addressed these points in the Introduction (pp. X) and General Discussion (pp. X). To avoid making the paper read as if it were written in a pre‑2024 period, we now acknowledge the recent U.S. retreat from explicit DEI rhetoric while also documenting countervailing patterns that keep the paper’s central question relevant: expanded international transparency requirements, continued U.S. public and stakeholder support for corporate DEI, and firm‑level rebranding of diversity work toward …"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6aEFq6s",
+    "createdTime": "2026-05-13T14:10:23.144Z",
+    "modifiedTime": "2026-05-13T14:10:23.144Z",
+    "htmlContent": "updated",
+    "content": "updated",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.toxhnmx8wo0u"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6YhRAwA",
+        "createdTime": "2026-05-12T19:28:26.670Z",
+        "modifiedTime": "2026-05-12T19:28:26.670Z",
+        "htmlContent": "",
+        "content": "",
+        "deleted": false,
+        "action": "resolve"
+      }
+    ],
+    "author": {
+      "displayName": "Aneesh Rai",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocJ4E0Dshotov5O3LaZ-bQFT-gaXc1XusZCfMTn95amydpqBsj0=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "Thoughts?"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6Z8-tqY",
+    "createdTime": "2026-05-12T19:05:12.578Z",
+    "modifiedTime": "2026-05-12T19:28:26.670Z",
+    "htmlContent": "Trying option 1 and then pivoting to option 2 if that fails sounds good to me!",
+    "content": "Trying option 1 and then pivoting to option 2 if that fails sounds good to me!",
+    "deleted": false,
+    "resolved": true,
+    "anchor": "kix.u05xumuvo38c"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB69X7V0M",
+        "createdTime": "2026-05-13T13:58:17.662Z",
+        "modifiedTime": "2026-05-13T13:58:17.662Z",
+        "htmlContent": "",
+        "content": "",
+        "deleted": false,
+        "action": "resolve"
+      }
+    ],
+    "author": {
+      "displayName": "Aneesh Rai",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocJ4E0Dshotov5O3LaZ-bQFT-gaXc1XusZCfMTn95amydpqBsj0=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "behavior"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6Z8-tp8",
+    "createdTime": "2026-05-12T19:02:15.240Z",
+    "modifiedTime": "2026-05-13T13:58:17.662Z",
+    "htmlContent": "do we note these as future research directions in the GD already? If so, I&#39;d reiterate that. If not, I wonder if we should?",
+    "content": "do we note these as future research directions in the GD already? If so, I'd reiterate that. If not, I wonder if we should?",
+    "deleted": false,
+    "resolved": true,
+    "anchor": "kix.1cqh6srs2t6h"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB69X7V0Q",
+        "createdTime": "2026-05-13T13:58:18.693Z",
+        "modifiedTime": "2026-05-13T13:58:18.693Z",
+        "htmlContent": "",
+        "content": "",
+        "deleted": false,
+        "action": "resolve"
+      }
+    ],
+    "author": {
+      "displayName": "Aneesh Rai",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocJ4E0Dshotov5O3LaZ-bQFT-gaXc1XusZCfMTn95amydpqBsj0=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "We"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6Z8-tpI",
+    "createdTime": "2026-05-12T18:58:44.206Z",
+    "modifiedTime": "2026-05-13T13:58:18.693Z",
+    "htmlContent": "Assuming this might get updated once we finesse the R2 response, so I am happy to take a look once that&#39;s done!",
+    "content": "Assuming this might get updated once we finesse the R2 response, so I am happy to take a look once that's done!",
+    "deleted": false,
+    "resolved": true,
+    "anchor": "kix.gvzm7eapf4pm"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6YhRAxE",
+        "createdTime": "2026-05-12T19:29:17.354Z",
+        "modifiedTime": "2026-05-12T19:29:17.354Z",
+        "htmlContent": "",
+        "content": "",
+        "deleted": false,
+        "action": "resolve"
+      }
+    ],
+    "author": {
+      "displayName": "Aneesh Rai",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocJ4E0Dshotov5O3LaZ-bQFT-gaXc1XusZCfMTn95amydpqBsj0=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "anti-discrimination laws, employee and customer scrutiny, and broader reputational concerns"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6Z741Qg",
+    "createdTime": "2026-05-12T18:48:25.495Z",
+    "modifiedTime": "2026-05-12T19:29:17.354Z",
+    "htmlContent": "should we add cites for each of these?",
+    "content": "should we add cites for each of these?",
+    "deleted": false,
+    "resolved": true,
+    "anchor": "kix.1jb5mp4apb9g"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6ZvszCc",
+        "createdTime": "2026-05-13T10:59:22.359Z",
+        "modifiedTime": "2026-05-13T10:59:22.359Z",
+        "htmlContent": "that&#39;s good point. I&#39;ve added this to the last paragraph now.",
+        "content": "that's good point. I've added this to the last paragraph now.",
+        "deleted": false
+      }
+    ],
+    "author": {
+      "displayName": "Aneesh Rai",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocJ4E0Dshotov5O3LaZ-bQFT-gaXc1XusZCfMTn95amydpqBsj0=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "while clarifying the contexts in which this work remains both important and necessary."
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6Z741O0",
+    "createdTime": "2026-05-12T18:40:52.507Z",
+    "modifiedTime": "2026-05-13T10:59:22.359Z",
+    "htmlContent": "I actually think explaining this in the response letter is important rather than just saying we do so in the MS. I think this is the key part of the reviewer&#39;s comment which we need to answer (beyond just explaining the political landscape more):<br><br>&quot;they should find a way to reinforce the reasons why their question and intervention remain important.&quot; -&gt; we need a good answer for this!",
+    "content": "I actually think explaining this in the response letter is important rather than just saying we do so in the MS. I think this is the key part of the reviewer's comment which we need to answer (beyond just explaining the political landscape more):\n\n\"they should find a way to reinforce the reasons why their question and intervention remain important.\" -> we need a good answer for this!",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.9h9w3ky089gs"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6ZvszCQ",
+        "createdTime": "2026-05-13T10:53:00.510Z",
+        "modifiedTime": "2026-05-13T10:53:00.510Z",
+        "htmlContent": "yeah that&#39;s really helpful, i&#39;ll switch to that outline",
+        "content": "yeah that's really helpful, i'll switch to that outline",
+        "deleted": false
+      }
+    ],
+    "author": {
+      "displayName": "Aneesh Rai",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocJ4E0Dshotov5O3LaZ-bQFT-gaXc1XusZCfMTn95amydpqBsj0=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "Together"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6Z741Os",
+    "createdTime": "2026-05-12T18:38:53.573Z",
+    "modifiedTime": "2026-05-13T10:53:00.510Z",
+    "htmlContent": "Hmm, I don&#39;t think this point naturally follows from the previous paragraph. I wonder if it makes more sense as a third point? I.e., (1) internationally, DEI support is high, (2) domestically, DEI support hasn&#39;t dropped off a cliff among the public and shareholders, (3) domestically within corporations, many companies have quietly rebranded rather than abandoning DEI altogether.<br><br>Currently we have (1) and (2), so I&#39;m suggesting reframing this as a point (3) rather than as &quot;DUE to (1) and (2), we can explain this rebranding phenomenon&quot; which I don&#39;t fully agree with<br><br>Not to mention we don&#39;t need to &quot;explain&quot; why companies are rebranding, right? It&#39;s more that making the observation they are doing so is helpful for us?",
+    "content": "Hmm, I don't think this point naturally follows from the previous paragraph. I wonder if it makes more sense as a third point? I.e., (1) internationally, DEI support is high, (2) domestically, DEI support hasn't dropped off a cliff among the public and shareholders, (3) domestically within corporations, many companies have quietly rebranded rather than abandoning DEI altogether.\n\nCurrently we have (1) and (2), so I'm suggesting reframing this as a point (3) rather than as \"DUE to (1) and (2), we can explain this rebranding phenomenon\" which I don't fully agree with\n\nNot to mention we don't need to \"explain\" why companies are rebranding, right? It's more that making the observation they are doing so is helpful for us?",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.7w8fcyi5xveh"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6Z74Q1I",
+        "createdTime": "2026-05-12T17:43:26.364Z",
+        "modifiedTime": "2026-05-12T17:43:26.364Z",
+        "htmlContent": "Sure!",
+        "content": "Sure!",
+        "deleted": false
+      }
+    ],
+    "author": {
+      "displayName": "Aneesh Rai",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocJ4E0Dshotov5O3LaZ-bQFT-gaXc1XusZCfMTn95amydpqBsj0=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "organizational commitments to DEI"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6X00eYo",
+    "createdTime": "2026-05-12T16:46:16.934Z",
+    "modifiedTime": "2026-05-12T17:43:26.364Z",
+    "htmlContent": "Given R2&#39;s comments I wonder if we just omit this piece from this response to avoid coming off as internally contradictory to George?",
+    "content": "Given R2's comments I wonder if we just omit this piece from this response to avoid coming off as internally contradictory to George?",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.ygzpnkjgvowi"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6Z72GZY",
+        "createdTime": "2026-05-12T17:39:46.093Z",
+        "modifiedTime": "2026-05-12T17:39:46.093Z",
+        "htmlContent": "that&#39;s helpful feedback! I&#39;ll redraft this!",
+        "content": "that's helpful feedback! I'll redraft this!",
+        "deleted": false
+      },
+      {
+        "author": {
+          "displayName": "Aneesh Rai",
+          "kind": "drive#user",
+          "me": false,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocJ4E0Dshotov5O3LaZ-bQFT-gaXc1XusZCfMTn95amydpqBsj0=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6Z741Og",
+        "createdTime": "2026-05-12T18:35:37.540Z",
+        "modifiedTime": "2026-05-12T18:36:29.078Z",
+        "htmlContent": "Jose, I could be wrong, but I think McKenzie has a project about DEI initiatives getting relabeled - pretty sure it&#39;s a paper under review, if he was willing to share it might have additional sources/citations that could be useful for us here. Might also be worth running just this response by him if he was willing to take a look? I don&#39;t think it&#39;s strictly necessary, but suspect he might have good feedback (and has thought deeply about this if I&#39;m correct in recalling this paper of his) and since he is a coauthor of yours it might be easy to solicit feedback :)",
+        "content": "Jose, I could be wrong, but I think McKenzie has a project about DEI initiatives getting relabeled - pretty sure it's a paper under review, if he was willing to share it might have additional sources/citations that could be useful for us here. Might also be worth running just this response by him if he was willing to take a look? I don't think it's strictly necessary, but suspect he might have good feedback (and has thought deeply about this if I'm correct in recalling this paper of his) and since he is a coauthor of yours it might be easy to solicit feedback :)",
+        "deleted": false
+      }
+    ],
+    "author": {
+      "displayName": "Katherine Milkman",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjVrF6CGH87435f6lsJlQMvb5Flhi7skctXRBxWPYZVGGO26N3Pu=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "RESPONSE: Thank you for this comment. We have updated the Introduction (pp. X) and the Discussion to situate the paper more explicitly in the current socio-political landscape."
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6X5bb9A",
+    "createdTime": "2026-05-12T15:19:03.131Z",
+    "modifiedTime": "2026-05-12T18:36:29.078Z",
+    "htmlContent": "Jose, this reads to me as incredibly defensive and a bit inaccurate.  Clearly there has been a tidal shift in interest in enacting new DEI policies in the US (due to fear of backlash from Trump).  I think rather than claiming &quot;this is just rebranding; everything is fine&quot; you need to more openly acknowledge that there is less appetite for new DEI initiatives in the US than their has been.  I think you can point to the fact that despite the retreat domestically though support continues abroad and public sentiment hasn&#39;t shifted, which is why MANY (but not all) firms have simply rebranded.  Basically, I think the way you&#39;ve framed this is not quite right, but I think you have the right content (just the wrong packaging).  I hope that feedback makes sense.  I will let you take a crack at rewriting and am happy to comment again on this one.",
+    "content": "Jose, this reads to me as incredibly defensive and a bit inaccurate.  Clearly there has been a tidal shift in interest in enacting new DEI policies in the US (due to fear of backlash from Trump).  I think rather than claiming \"this is just rebranding; everything is fine\" you need to more openly acknowledge that there is less appetite for new DEI initiatives in the US than their has been.  I think you can point to the fact that despite the retreat domestically though support continues abroad and public sentiment hasn't shifted, which is why MANY (but not all) firms have simply rebranded.  Basically, I think the way you've framed this is not quite right, but I think you have the right content (just the wrong packaging).  I hope that feedback makes sense.  I will let you take a crack at rewriting and am happy to comment again on this one.",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.h5ejth37lxc3"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6Z72GZw",
+        "createdTime": "2026-05-12T17:40:02.714Z",
+        "modifiedTime": "2026-05-12T17:40:02.714Z",
+        "htmlContent": "",
+        "content": "",
+        "deleted": false,
+        "action": "resolve"
+      }
+    ],
+    "author": {
+      "displayName": "Katherine Milkman",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjVrF6CGH87435f6lsJlQMvb5Flhi7skctXRBxWPYZVGGO26N3Pu=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "without shifting their policies meaningfully"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6X5bb7E",
+    "createdTime": "2026-05-12T15:15:13.034Z",
+    "modifiedTime": "2026-05-12T17:40:02.714Z",
+    "htmlContent": "if true?",
+    "content": "if true?",
+    "deleted": false,
+    "resolved": true,
+    "anchor": "kix.u8p7vb1bhxq2"
+  },
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Linda Chang",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjWxZktb6_YDwyaq6fG7B4QvhJf_cSzQaTIfBpjXOB7a46scrlo=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "immensely"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6HGs8Gg",
+    "createdTime": "2026-05-12T04:55:42.222Z",
+    "modifiedTime": "2026-05-12T04:55:42.222Z",
+    "htmlContent": "Linda paused here on 5/11",
+    "content": "Linda paused here on 5/11",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.y5hoy78izhin"
+  },
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Linda Chang",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjWxZktb6_YDwyaq6fG7B4QvhJf_cSzQaTIfBpjXOB7a46scrlo=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "downstream audiences"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6HGs8GM",
+    "createdTime": "2026-05-12T04:47:21.801Z",
+    "modifiedTime": "2026-05-12T04:47:21.801Z",
+    "htmlContent": "outside stakeholders?",
+    "content": "outside stakeholders?",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.vehwgh90umrk"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6HJcfTA",
+        "createdTime": "2026-05-12T13:26:02.095Z",
+        "modifiedTime": "2026-05-12T13:26:02.095Z",
+        "htmlContent": "",
+        "content": "",
+        "deleted": false,
+        "action": "resolve"
+      }
+    ],
+    "author": {
+      "displayName": "Linda Chang",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjWxZktb6_YDwyaq6fG7B4QvhJf_cSzQaTIfBpjXOB7a46scrlo=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "We"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6HGs8GA",
+    "createdTime": "2026-05-12T04:43:57.103Z",
+    "modifiedTime": "2026-05-12T13:26:02.095Z",
+    "htmlContent": "This sentence is so hard to read. Can you break this up a bit?",
+    "content": "This sentence is so hard to read. Can you break this up a bit?",
+    "deleted": false,
+    "resolved": true,
+    "anchor": "kix.4j0g78hs4bqu"
+  },
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Jose Cervantez",
+      "kind": "drive#user",
+      "me": true,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "deliberate"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB75M8aNU",
+    "createdTime": "2026-05-12T02:21:51.253Z",
+    "modifiedTime": "2026-05-12T02:21:51.253Z",
+    "htmlContent": "I wanted to use the word appropriate again here, but avoided the word echo",
+    "content": "I wanted to use the word appropriate again here, but avoided the word echo",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.z2e0jwud6ogx"
+  },
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Jose Cervantez",
+      "kind": "drive#user",
+      "me": true,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "RESPONSE: Thank you for raising this alternative. We agree it is worth testing directly, and we report a follow-up analysis below (Table R1). We have also added a footnote to the Discussion of Study 4 (p. X) that summarizes this evidence and makes the underlying theoretical claim more explicit in the manuscript.\nIn our studies, we make no assumptions about the normative or “appropriate” level for any attribute in the absence of explicit goals or prescriptions. We expect that a reputational or image concern is activated only after participants receive descriptive feedback, and only for race and gender. This fits the theoretical framing already in the paper: descriptive feedback shifts behavior on a given dimension only when that dimension carries an implicit injunctive norm that the feedback calls into question. We argue this holds for race and gender but not for the comparison attributes we test (see Introduction, p. X, and General Discussion, p. X).\nThat said, we can hold the star…"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB75M8aNQ",
+    "createdTime": "2026-05-12T02:20:54.972Z",
+    "modifiedTime": "2026-05-12T02:20:54.972Z",
+    "htmlContent": "updated",
+    "content": "updated",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.pdr0lix0sior"
+  },
+  {
+    "replies": [],
+    "author": {
+      "displayName": "Jose Cervantez",
+      "kind": "drive#user",
+      "me": true,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "Table R1. Effect of Feedback on the Final Selection, Among Participants Whose Initial Selection Contained Zero of the Focal Attribute."
+    },
+    "kind": "drive#comment",
+    "id": "AAAB75M8aNM",
+    "createdTime": "2026-05-12T02:20:37.327Z",
+    "modifiedTime": "2026-05-12T02:20:37.327Z",
+    "htmlContent": "I spoke with Katy and we discussed using zero as a threshold to measure appropriate (or inappropriate levels) of representation. <br><br>I tried to be very transparent here by including all of the cells and studies, but I recognize it does reveal the limitations of this analysis (super underpowered). But I&#39;d be curious what everyone thinks. Using zero is also a very conservative measure",
+    "content": "I spoke with Katy and we discussed using zero as a threshold to measure appropriate (or inappropriate levels) of representation. \n\nI tried to be very transparent here by including all of the cells and studies, but I recognize it does reveal the limitations of this analysis (super underpowered). But I'd be curious what everyone thinks. Using zero is also a very conservative measure",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.f7hea3gbzpws"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6HJcfS4",
+        "createdTime": "2026-05-12T13:24:30.569Z",
+        "modifiedTime": "2026-05-12T13:24:30.569Z",
+        "htmlContent": "",
+        "content": "",
+        "deleted": false,
+        "action": "resolve"
+      }
+    ],
+    "author": {
+      "displayName": "Jose Cervantez",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKW8y37NAxONxIOfJ-EbHiOY05J300urddPz3DGUxOhT1q_BQ=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "On the request, I liked Study 4b and think that it does a good job of showing that feedback about gender is different than feedback about other important dimensions.  In addition, your studies show that gender/race feedback lead subjects to adjust their portfolios about the base rate.  That said, I’m still left wondering whether your findings are showing what you say or it is just that people use these other measures appropriately in their initial selections.  I’d like you to at least discuss this possibility, and perhaps there is additional analysis that you can do to address this."
+    },
+    "kind": "drive#comment",
+    "id": "AAAB6Ghw4Ok",
+    "createdTime": "2026-05-11T19:47:25.127Z",
+    "modifiedTime": "2026-05-12T13:24:30.569Z",
+    "htmlContent": "run a survey asking appropriate imagine a group of people pick a group of 7 biopic films<br><br>how appropriate would it be <br><br>0% (likert scale)",
+    "content": "run a survey asking appropriate imagine a group of people pick a group of 7 biopic films\n\nhow appropriate would it be \n\n0% (likert scale)",
+    "deleted": false,
+    "resolved": true,
+    "anchor": "kix.pwdwv8ffb5dm"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6Z74Q1w",
+        "createdTime": "2026-05-12T17:43:39.848Z",
+        "modifiedTime": "2026-05-12T17:43:39.848Z",
+        "htmlContent": "",
+        "content": "",
+        "deleted": false,
+        "action": "resolve"
+      }
+    ],
+    "author": {
+      "displayName": "Katherine Milkman",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjVrF6CGH87435f6lsJlQMvb5Flhi7skctXRBxWPYZVGGO26N3Pu=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "First"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB5_3Lyw0",
+    "createdTime": "2026-05-09T23:18:23.830Z",
+    "modifiedTime": "2026-05-12T17:43:39.848Z",
+    "htmlContent": "katy paused here on 5/9",
+    "content": "katy paused here on 5/9",
+    "deleted": false,
+    "resolved": true,
+    "anchor": "kix.yaxlgl6q5rgl"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6GvG0Ac",
+        "createdTime": "2026-05-11T22:48:28.745Z",
+        "modifiedTime": "2026-05-11T22:48:28.745Z",
+        "htmlContent": "",
+        "content": "",
+        "deleted": false,
+        "action": "resolve"
+      }
+    ],
+    "author": {
+      "displayName": "Katherine Milkman",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjVrF6CGH87435f6lsJlQMvb5Flhi7skctXRBxWPYZVGGO26N3Pu=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "run a follow-up analysis"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB7N72L7s",
+    "createdTime": "2026-05-09T19:22:37.633Z",
+    "modifiedTime": "2026-05-11T22:48:28.745Z",
+    "htmlContent": "I don&#39;t think the follow up analyses make the point you think they are making. Let&#39;s talk about what analyses would. And then we should plan to put them in the paper, not just the response letter.",
+    "content": "I don't think the follow up analyses make the point you think they are making. Let's talk about what analyses would. And then we should plan to put them in the paper, not just the response letter.",
+    "deleted": false,
+    "resolved": true,
+    "anchor": "kix.mbfxoxuddj7u"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6GvG0AY",
+        "createdTime": "2026-05-11T22:48:24.495Z",
+        "modifiedTime": "2026-05-11T22:48:24.495Z",
+        "htmlContent": "",
+        "content": "",
+        "deleted": false,
+        "action": "resolve"
+      }
+    ],
+    "author": {
+      "displayName": "Katherine Milkman",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjVrF6CGH87435f6lsJlQMvb5Flhi7skctXRBxWPYZVGGO26N3Pu=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "To operationalize “appropriate use,” we use each attribute’s base rate in the candidate pool."
+    },
+    "kind": "drive#comment",
+    "id": "AAAB7N72L7o",
+    "createdTime": "2026-05-09T19:21:49.715Z",
+    "modifiedTime": "2026-05-11T22:48:24.495Z",
+    "htmlContent": "But you don&#39;t really do this because then &quot;above&quot; that level would also be inappropriate?  The categories are arbitrary so it&#39;s not clear which direction is &quot;appropriate&quot;.  I don&#39;t think this analysis makes sense?  Let&#39;s discuss (and in general, it would be great to talk about things like this before you do a bunch of time-consuming analyses!)",
+    "content": "But you don't really do this because then \"above\" that level would also be inappropriate?  The categories are arbitrary so it's not clear which direction is \"appropriate\".  I don't think this analysis makes sense?  Let's discuss (and in general, it would be great to talk about things like this before you do a bunch of time-consuming analyses!)",
+    "deleted": false,
+    "resolved": true,
+    "anchor": "kix.sv72zrquu9mo"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": false,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKW8y37NAxONxIOfJ-EbHiOY05J300urddPz3DGUxOhT1q_BQ=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB75LJpy8",
+        "createdTime": "2026-05-12T01:09:18.605Z",
+        "modifiedTime": "2026-05-12T01:09:18.605Z",
+        "htmlContent": "",
+        "content": "",
+        "deleted": false,
+        "action": "resolve"
+      }
+    ],
+    "author": {
+      "displayName": "Katherine Milkman",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjVrF6CGH87435f6lsJlQMvb5Flhi7skctXRBxWPYZVGGO26N3Pu=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "At/Above-Pool Subgroup"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB5fghMMU",
+    "createdTime": "2026-05-09T19:20:15.335Z",
+    "modifiedTime": "2026-05-12T01:09:18.605Z",
+    "htmlContent": "I am not following this category!",
+    "content": "I am not following this category!",
+    "deleted": false,
+    "resolved": true,
+    "anchor": "kix.qu6tz3pyt2n2"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6GvG0AU",
+        "createdTime": "2026-05-11T22:48:22.714Z",
+        "modifiedTime": "2026-05-11T22:48:22.714Z",
+        "htmlContent": "",
+        "content": "",
+        "deleted": false,
+        "action": "resolve"
+      }
+    ],
+    "author": {
+      "displayName": "Katherine Milkman",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjVrF6CGH87435f6lsJlQMvb5Flhi7skctXRBxWPYZVGGO26N3Pu=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "or above"
+    },
+    "kind": "drive#comment",
+    "id": "AAAB5fghMMI",
+    "createdTime": "2026-05-09T19:17:19.353Z",
+    "modifiedTime": "2026-05-11T22:48:22.714Z",
+    "htmlContent": "This isn&#39;t true.  If they selected ABOVE the base rate, the feedback should move the gap in the reverse direction?",
+    "content": "This isn't true.  If they selected ABOVE the base rate, the feedback should move the gap in the reverse direction?",
+    "deleted": false,
+    "resolved": true,
+    "anchor": "kix.doh2oi51ou5d"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Katherine Milkman",
+          "kind": "drive#user",
+          "me": false,
+          "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjVrF6CGH87435f6lsJlQMvb5Flhi7skctXRBxWPYZVGGO26N3Pu=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6Gufmos",
+        "createdTime": "2026-05-11T20:09:01.063Z",
+        "modifiedTime": "2026-05-11T20:09:01.063Z",
+        "htmlContent": "GENDER:<br>Male: X%<br>Female: Y% &lt;&lt; (underrepresented base rate &amp;&amp; TARGET GROUP)<br>Other: Z%<br>AGE:<br>20-40s: X%  &lt;&lt; (underrepresented base rate &amp;&amp; TARGET GROUP)<br>50s-70s: Y% <br>Other: Z%<br>OCCUPATION:<br>University-affiliate: X%  &lt;&lt; (underrepresented base rate &amp;&amp; TARGET GROUP)<br>Journalist: Z%<br>Other: Y%<br>LOCATION:<br>West Coast: X%  &lt;&lt; (underrepresented base rate &amp;&amp; TARGET GROUP)<br>East Coast: Y%<br>Other: Z%",
+        "content": "GENDER:\nMale: X%\nFemale: Y% << (underrepresented base rate && TARGET GROUP)\nOther: Z%\nAGE:\n20-40s: X%  << (underrepresented base rate && TARGET GROUP)\n50s-70s: Y% \nOther: Z%\nOCCUPATION:\nUniversity-affiliate: X%  << (underrepresented base rate && TARGET GROUP)\nJournalist: Z%\nOther: Y%\nLOCATION:\nWest Coast: X%  << (underrepresented base rate && TARGET GROUP)\nEast Coast: Y%\nOther: Z%",
+        "deleted": false
+      },
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6Xfk8r4",
+        "createdTime": "2026-05-12T23:25:35.534Z",
+        "modifiedTime": "2026-05-12T23:25:35.534Z",
+        "htmlContent": "",
+        "content": "",
+        "deleted": false,
+        "action": "resolve"
+      }
+    ],
+    "author": {
+      "displayName": "Katherine Milkman",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjVrF6CGH87435f6lsJlQMvb5Flhi7skctXRBxWPYZVGGO26N3Pu=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "Katy flagged that it’s very likely these categories will not be seen as equally important because of how narrow these categories seem and sound. Katy suggested a second option to run that just broadens out the categories (i.e., were under 50 years old → age). I think this feels much more likely to work, so I wanted to propose running option 1 first and if it fails, then just quickly run option 2."
+    },
+    "kind": "drive#comment",
+    "id": "AAAB5fghML0",
+    "createdTime": "2026-05-09T19:15:17.031Z",
+    "modifiedTime": "2026-05-12T23:25:35.534Z",
+    "htmlContent": "I think the thing is that if we run #2, we probably have to redo the NPR study anyway so it better matches it.  The real issue is: what are dichotomous predictors that will work?  OR we could do something a bit different on NPR.  We could give categories of feedback like:<br>GENDER:<br>Male: X%<br>Female: Y%<br>Non-binary: Z%<br>AGE:<br>20s: X%<br>30s: Y%<br>40s: Z%<br>...<br>And then with that new design, I think we could get people to say the categories are equally important.  It will not be clear to &quot;compare&quot; the effectiveness of the feedback in quite the same way.  But we could save that for later studies and just use Study 1 to establish a big shift in gender of selectees without big shifts in the avg. age/location/job titles of selectees or something?",
+    "content": "I think the thing is that if we run #2, we probably have to redo the NPR study anyway so it better matches it.  The real issue is: what are dichotomous predictors that will work?  OR we could do something a bit different on NPR.  We could give categories of feedback like:\nGENDER:\nMale: X%\nFemale: Y%\nNon-binary: Z%\nAGE:\n20s: X%\n30s: Y%\n40s: Z%\n...\nAnd then with that new design, I think we could get people to say the categories are equally important.  It will not be clear to \"compare\" the effectiveness of the feedback in quite the same way.  But we could save that for later studies and just use Study 1 to establish a big shift in gender of selectees without big shifts in the avg. age/location/job titles of selectees or something?",
+    "deleted": false,
+    "resolved": true,
+    "anchor": "kix.9ipotl62aozz"
+  },
+  {
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6Z72GXw",
+        "createdTime": "2026-05-12T17:37:57.999Z",
+        "modifiedTime": "2026-05-12T17:38:16.599Z",
+        "htmlContent": "So I have a summary below that outlines our responses main points. Is it worth having a second (more brief summary) up here, too? I wanted to avoid redundancy, but happy to draft something if you think it&#39;s weird not to also include a little summary up here, too!",
+        "content": "So I have a summary below that outlines our responses main points. Is it worth having a second (more brief summary) up here, too? I wanted to avoid redundancy, but happy to draft something if you think it's weird not to also include a little summary up here, too!",
+        "deleted": false
+      },
+      {
+        "author": {
+          "displayName": "Aneesh Rai",
+          "kind": "drive#user",
+          "me": false,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocJ4E0Dshotov5O3LaZ-bQFT-gaXc1XusZCfMTn95amydpqBsj0=s50-c-k-no"
+        },
+        "kind": "drive#reply",
+        "id": "AAAB6Z8-tow",
+        "createdTime": "2026-05-12T18:56:17.541Z",
+        "modifiedTime": "2026-05-12T18:56:17.541Z",
+        "htmlContent": "Katy can chime in if I am wrong, but my understanding (and my modus operandi) is to always have the first page of the response letter be the cover letter, which is what we did when submitting for second-round review. <br><br>So I would have the opening &quot;thank you for letting us resubmit&quot; para, followed by &quot;here&#39;s a summary of our key changes - (1) X, (2) Y, (3) Z&quot;, followed by &quot;In the remainder of this letter, we respond to each point made blah blah blah&quot;<br><br>Critically, that second piece (&quot;summary of key changes&quot;) will definitely be shorter this time around, but I do think overall we want the first page to look just like our first R&amp;R cover letter (just shorter since fewer comments)!<br><br>In terms of redundancy, there shouldn&#39;t be too much, because the cover letter describes changes at a higher level than what is listed in the responses to George (might be a bit of repetition but it won&#39;t be identical so I would not worry about that)",
+        "content": "Katy can chime in if I am wrong, but my understanding (and my modus operandi) is to always have the first page of the response letter be the cover letter, which is what we did when submitting for second-round review. \n\nSo I would have the opening \"thank you for letting us resubmit\" para, followed by \"here's a summary of our key changes - (1) X, (2) Y, (3) Z\", followed by \"In the remainder of this letter, we respond to each point made blah blah blah\"\n\nCritically, that second piece (\"summary of key changes\") will definitely be shorter this time around, but I do think overall we want the first page to look just like our first R&R cover letter (just shorter since fewer comments)!\n\nIn terms of redundancy, there shouldn't be too much, because the cover letter describes changes at a higher level than what is listed in the responses to George (might be a bit of repetition but it won't be identical so I would not worry about that)",
+        "deleted": false
+      }
+    ],
+    "author": {
+      "displayName": "Katherine Milkman",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjVrF6CGH87435f6lsJlQMvb5Flhi7skctXRBxWPYZVGGO26N3Pu=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "Dear Dr. Wu,\nWe thank you for handling our revised manuscript and for the two reviewers’ continued engagement with the paper. We appreciate the opportunity to address your remaining requests as well as the small points raised by Reviewers 1 and 2, and we have worked to strengthen the paper further in response.\nBelow we reproduce your letter and each of the reviews in their entirety, and we respond to every point made. We have provided normal text from the review team and our responses appear in bolded font for ease of differentiation."
+    },
+    "kind": "drive#comment",
+    "id": "AAAB5fghMHQ",
+    "createdTime": "2026-05-09T18:51:46.056Z",
+    "modifiedTime": "2026-05-12T18:56:17.541Z",
+    "htmlContent": "I assume this is a placeholder for a proper opening with a summary of key changes made, the title of the manuscript, etc.? You may want to go ahead and draft the full opening when time allows!",
+    "content": "I assume this is a placeholder for a proper opening with a summary of key changes made, the title of the manuscript, etc.? You may want to go ahead and draft the full opening when time allows!",
+    "deleted": false,
+    "resolved": false,
+    "anchor": "kix.vg9ona5mo288"
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "date": "2026-05-08",
+    "episode": "How to mend a broken heart",
+    "role": "cardiologist",
+    "name": "Sandeep Jauhar"
+  },
+  {
+    "date": "2026-05-08",
+    "episode": "How to mend a broken heart",
+    "role": "law professor",
+    "name": "Jeannie Suk Gersen"
+  },
+  {
+    "date": "2026-05-08",
+    "episode": "How to mend a broken heart",
+    "role": "pediatric nurse",
+    "name": "Hui-wen Sato"
+  },
+  {
+    "date": "2026-05-01",
+    "episode": "How to be a \"Super Ager\" (it's not your genes)",
+    "role": "Physician",
+    "name": "Eric Topol"
+  },
+  {
+    "date": "2026-04-24",
+    "episode": "Can we preserve knowledge \u2026 forever?",
+    "role": "game designer",
+    "name": "CM Ralph"
+  },
+  {
+    "date": "2026-04-24",
+    "episode": "Can we preserve knowledge \u2026 forever?",
+    "role": "digital librarian",
+    "name": "Brewster Kayle"
+  },
+  {
+    "date": "2026-04-24",
+    "episode": "Can we preserve knowledge \u2026 forever?",
+    "role": "molecular biologist",
+    "name": "Dina Zielinksi"
+  },
+  {
+    "date": "2026-04-24",
+    "episode": "Can we preserve knowledge \u2026 forever?",
+    "role": "archeologist",
+    "name": "Chris Fisher"
+  },
+  {
+    "date": "2026-04-10",
+    "episode": "The hidden forces shaping your choices",
+    "role": "food systems expert",
+    "name": "Sarah Lake"
+  },
+  {
+    "date": "2026-04-10",
+    "episode": "The hidden forces shaping your choices",
+    "role": "infrastructure engineer",
+    "name": "Deb Chachra"
+  },
+  {
+    "date": "2026-04-10",
+    "episode": "The hidden forces shaping your choices",
+    "role": "cross-cultural psychologist",
+    "name": "Michele Gelfand"
+  },
+  {
+    "date": "2026-04-10",
+    "episode": "The hidden forces shaping your choices",
+    "role": "urban planner",
+    "name": "Jeff Speck"
+  },
+  {
+    "date": "2026-04-10",
+    "episode": "The hidden forces shaping your choices",
+    "role": "Tempe resident",
+    "name": "Ignacio Delgadillo"
+  },
+  {
+    "date": "2026-04-03",
+    "episode": "Could AI help us, not replace us?",
+    "role": "Siri co-creator",
+    "name": "Tom Gruber"
+  },
+  {
+    "date": "2026-03-27",
+    "episode": "A neuroscientist's guide to managing our emotions",
+    "role": "neuroscientist",
+    "name": "Ethan Kross"
+  },
+  {
+    "date": "2026-03-20",
+    "episode": "How does your brain perceive the world?",
+    "role": "the editorial director of TED-Ed animations",
+    "name": "Alex Rosenthal"
+  },
+  {
+    "date": "2026-03-20",
+    "episode": "How does your brain perceive the world?",
+    "role": "psychologist",
+    "name": "John Wixted"
+  },
+  {
+    "date": "2026-03-20",
+    "episode": "How does your brain perceive the world?",
+    "role": "love coach",
+    "name": "Francesca Hogi"
+  },
+  {
+    "date": "2026-03-13",
+    "episode": "Curious stories of coexistence",
+    "role": "evolutionary biologist",
+    "name": "Philip Johns"
+  },
+  {
+    "date": "2026-03-13",
+    "episode": "Curious stories of coexistence",
+    "role": "astrophysicist",
+    "name": "Avi Loeb"
+  },
+  {
+    "date": "2026-03-13",
+    "episode": "Curious stories of coexistence",
+    "role": "author",
+    "name": "Laurel Braitman"
+  },
+  {
+    "date": "2026-03-06",
+    "episode": "Getting what you want: A guide to negotiating",
+    "role": "law professor",
+    "name": "Alex Carter"
+  },
+  {
+    "date": "2026-03-06",
+    "episode": "Getting what you want: A guide to negotiating",
+    "role": "linguist",
+    "name": "Magdalena Hoeller"
+  },
+  {
+    "date": "2026-02-27",
+    "episode": "Three mothers who shaped American history",
+    "role": "author",
+    "name": "Anna Malaika Tubbs"
+  },
+  {
+    "date": "2026-02-20",
+    "episode": "Did social media break a generation \u2014 or just change it?",
+    "role": "social psychologist",
+    "name": "Jonathan Haidt"
+  },
+  {
+    "date": "2026-02-20",
+    "episode": "Did social media break a generation \u2014 or just change it?",
+    "role": "youth online safety activist",
+    "name": "Maximilian Milovidov"
+  },
+  {
+    "date": "2026-02-20",
+    "episode": "Did social media break a generation \u2014 or just change it?",
+    "role": "author",
+    "name": "Catherine Price"
+  },
+  {
+    "date": "2026-02-13",
+    "episode": "How you see yourself",
+    "role": "portrait photographer",
+    "name": "David Suh"
+  },
+  {
+    "date": "2026-02-13",
+    "episode": "How you see yourself",
+    "role": "social psychologist",
+    "name": "Dolly Chugh"
+  },
+  {
+    "date": "2026-02-13",
+    "episode": "How you see yourself",
+    "role": "journalist",
+    "name": "Elise Hu"
+  },
+  {
+    "date": "2026-02-13",
+    "episode": "How you see yourself",
+    "role": "science writer",
+    "name": "Anil Ananthaswamy"
+  },
+  {
+    "date": "2026-02-06",
+    "episode": "How to talk about peace",
+    "role": "peace activists",
+    "name": "Aqeela Sherrills"
+  },
+  {
+    "date": "2026-02-06",
+    "episode": "How to talk about peace",
+    "role": "Aziz",
+    "name": "Abu Sarah"
+  },
+  {
+    "date": "2026-01-30",
+    "episode": "The future of our memories",
+    "role": "technologist",
+    "name": "Pau Aleikum Garcia"
+  },
+  {
+    "date": "2026-01-30",
+    "episode": "The future of our memories",
+    "role": "cartoonist",
+    "name": "Amy Kurzweil"
+  },
+  {
+    "date": "2026-01-30",
+    "episode": "The future of our memories",
+    "role": "digital archaeologist",
+    "name": "Chance Coughenour"
+  },
+  {
+    "date": "2026-01-23",
+    "episode": "What can you control in this chaotic world?",
+    "role": "financial advisor",
+    "name": "Matt Pitcher"
+  },
+  {
+    "date": "2026-01-23",
+    "episode": "What can you control in this chaotic world?",
+    "role": "sociologist",
+    "name": "Anindya Kundu"
+  },
+  {
+    "date": "2026-01-23",
+    "episode": "What can you control in this chaotic world?",
+    "role": "journalist",
+    "name": "Jennifer Wallace"
+  },
+  {
+    "date": "2026-01-23",
+    "episode": "What can you control in this chaotic world?",
+    "role": "design thinking professor",
+    "name": "Bill Burnett"
+  },
+  {
+    "date": "2026-01-16",
+    "episode": "What we \u2014 and AI \u2014 can learn from nature's intelligence",
+    "role": "neuroscientist",
+    "name": "Greg Gage"
+  },
+  {
+    "date": "2026-01-16",
+    "episode": "What we \u2014 and AI \u2014 can learn from nature's intelligence",
+    "role": "computational neuroscientist",
+    "name": "Frances Chance"
+  },
+  {
+    "date": "2026-01-16",
+    "episode": "What we \u2014 and AI \u2014 can learn from nature's intelligence",
+    "role": "social psychoneuroimmunologist",
+    "name": "Keely Muscatell"
+  },
+  {
+    "date": "2026-01-16",
+    "episode": "What we \u2014 and AI \u2014 can learn from nature's intelligence",
+    "role": "environmental researcher",
+    "name": "Karen Bakker"
+  },
+  {
+    "date": "2026-01-09",
+    "episode": "The secrets in your baby's genes",
+    "role": "researcher",
+    "name": "Robert Green"
+  }
+]

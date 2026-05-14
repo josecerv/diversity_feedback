@@ -1,0 +1,272 @@
+[
+  {
+    "date": "2026-01-02",
+    "episode": "Navigating uncertainty",
+    "role": "former medical clown",
+    "name": "Matt Wilson"
+  },
+  {
+    "date": "2026-01-02",
+    "episode": "Navigating uncertainty",
+    "role": "psychologist",
+    "name": "Jamil Zaki"
+  },
+  {
+    "date": "2026-01-02",
+    "episode": "Navigating uncertainty",
+    "role": "human rights activist",
+    "name": "Yifat Susskind"
+  },
+  {
+    "date": "2025-12-26",
+    "episode": "Who counts as a significant other?",
+    "role": "journalist",
+    "name": "Rhaina Cohen"
+  },
+  {
+    "date": "2025-12-26",
+    "episode": "Who counts as a significant other?",
+    "role": "family therapist",
+    "name": "Stephanie Yates-Anyabwile"
+  },
+  {
+    "date": "2025-12-26",
+    "episode": "Who counts as a significant other?",
+    "role": "social psychologist",
+    "name": "Bella DePaulo"
+  },
+  {
+    "date": "2025-12-19",
+    "episode": "Who is really shaping the future of AI?",
+    "role": "tech entrepreneur",
+    "name": "Alvin Wang Graylin"
+  },
+  {
+    "date": "2025-12-19",
+    "episode": "Who is really shaping the future of AI?",
+    "role": "NPR tech reporter",
+    "name": "John Ruwitch"
+  },
+  {
+    "date": "2025-12-19",
+    "episode": "Who is really shaping the future of AI?",
+    "role": "OpenAI CEO Sam Altman in conversation with TED's",
+    "name": "Chris Anderson"
+  },
+  {
+    "date": "2025-12-12",
+    "episode": "Soundtracks of our lives",
+    "role": "professor of songwriting",
+    "name": "Scarlet Keys"
+  },
+  {
+    "date": "2025-12-12",
+    "episode": "Soundtracks of our lives",
+    "role": "voice expert",
+    "name": "Rebecca Kleinberger"
+  },
+  {
+    "date": "2025-12-12",
+    "episode": "Soundtracks of our lives",
+    "role": "musician",
+    "name": "Snow Raven"
+  },
+  {
+    "date": "2025-11-14",
+    "episode": "How the creator economy is making you talk like the internet",
+    "role": "linguist",
+    "name": "Adam Aleksic"
+  },
+  {
+    "date": "2025-10-31",
+    "episode": "Move fast...and fix democracy?",
+    "role": "political consultant",
+    "name": "Bradley Tusk"
+  },
+  {
+    "date": "2025-10-31",
+    "episode": "Move fast...and fix democracy?",
+    "role": "political advisor",
+    "name": "Jennifer Pahlka"
+  },
+  {
+    "date": "2025-10-31",
+    "episode": "Move fast...and fix democracy?",
+    "role": "e-governance expert",
+    "name": "Anna Piperal"
+  },
+  {
+    "date": "2025-10-24",
+    "episode": "The great food rescue",
+    "role": "food waste expert",
+    "name": "Dana Gunders"
+  },
+  {
+    "date": "2025-10-24",
+    "episode": "The great food rescue",
+    "role": "social entrepreneur",
+    "name": "Jasmine Crowe-Houston"
+  },
+  {
+    "date": "2025-10-24",
+    "episode": "The great food rescue",
+    "role": "sustainability activist",
+    "name": "Anthony Myint"
+  },
+  {
+    "date": "2025-10-24",
+    "episode": "The great food rescue",
+    "role": "behavioral scientist",
+    "name": "Jiaying Zhao"
+  },
+  {
+    "date": "2025-10-03",
+    "episode": "How companies use AI to choose who gets hired and fired",
+    "role": "Journalist",
+    "name": "Hilke Schellmann"
+  },
+  {
+    "date": "2025-09-19",
+    "episode": "Approaches to life: Improvise, pivot or plan",
+    "role": "musician",
+    "name": "Reggie Watts"
+  },
+  {
+    "date": "2025-09-19",
+    "episode": "Approaches to life: Improvise, pivot or plan",
+    "role": "biomedical researcher",
+    "name": "Sonia Vallabh"
+  },
+  {
+    "date": "2025-09-19",
+    "episode": "Approaches to life: Improvise, pivot or plan",
+    "role": "conservationist",
+    "name": "Kristine McDivitt Tompkins"
+  },
+  {
+    "date": "2025-09-05",
+    "episode": "Are the kids alright? Part 2",
+    "role": "psychologist",
+    "name": "Lisa Damour"
+  },
+  {
+    "date": "2025-08-22",
+    "episode": "A guide to being brave in relationships",
+    "role": "podcaster",
+    "name": "Kelly Corrigan"
+  },
+  {
+    "date": "2025-08-22",
+    "episode": "A guide to being brave in relationships",
+    "role": "journalist",
+    "name": "Allison Gilbert"
+  },
+  {
+    "date": "2025-08-15",
+    "episode": "How deserted places find a second life",
+    "role": "evolutionary biologist",
+    "name": "Shane Campbell-Staton"
+  },
+  {
+    "date": "2025-08-15",
+    "episode": "How deserted places find a second life",
+    "role": "entrepreneur",
+    "name": "Garry Cooper"
+  },
+  {
+    "date": "2025-08-15",
+    "episode": "How deserted places find a second life",
+    "role": "urban renewal expert",
+    "name": "Anika Goss"
+  },
+  {
+    "date": "2025-08-15",
+    "episode": "How deserted places find a second life",
+    "role": "conservationist",
+    "name": "Alysa McCall"
+  },
+  {
+    "date": "2025-08-08",
+    "episode": "The skin we're in",
+    "role": "mechanical engineer",
+    "name": "Katherine Kuchenbecker"
+  },
+  {
+    "date": "2025-08-08",
+    "episode": "The skin we're in",
+    "role": "materials scientist",
+    "name": "Anna Maria Coclite"
+  },
+  {
+    "date": "2025-08-08",
+    "episode": "The skin we're in",
+    "role": "TV broadcaster",
+    "name": "Lee Thomas"
+  },
+  {
+    "date": "2025-08-08",
+    "episode": "The skin we're in",
+    "role": "author",
+    "name": "Kathryn Schulz"
+  },
+  {
+    "date": "2025-08-01",
+    "episode": "How to find joy and success as a late bloomer",
+    "role": "writer",
+    "name": "Doree Shafrir"
+  },
+  {
+    "date": "2025-08-01",
+    "episode": "How to find joy and success as a late bloomer",
+    "role": "anti-ageism activist",
+    "name": "Ashton Applewhite"
+  },
+  {
+    "date": "2025-08-01",
+    "episode": "How to find joy and success as a late bloomer",
+    "role": "retired educator",
+    "name": "Riley Moynes"
+  },
+  {
+    "date": "2025-07-04",
+    "episode": "The state of fashion",
+    "role": "designer",
+    "name": "Machine Dazzle"
+  },
+  {
+    "date": "2025-07-04",
+    "episode": "The state of fashion",
+    "role": "supply chain expert",
+    "name": "Aparna Mehta"
+  },
+  {
+    "date": "2025-07-04",
+    "episode": "The state of fashion",
+    "role": "journalist",
+    "name": "Amanda Mull"
+  },
+  {
+    "date": "2025-07-04",
+    "episode": "The state of fashion",
+    "role": "supermodel",
+    "name": "Cameron Russell"
+  },
+  {
+    "date": "2025-06-27",
+    "episode": "How taking a second look can change your everything",
+    "role": "artists",
+    "name": "Agnieszka Pilat"
+  },
+  {
+    "date": "2025-06-27",
+    "episode": "How taking a second look can change your everything",
+    "role": "chemical engineer",
+    "name": "Franziska Trautmann"
+  },
+  {
+    "date": "2025-06-27",
+    "episode": "How taking a second look can change your everything",
+    "role": "musician",
+    "name": "Mike Posner"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "n_total": 134,
+  "show": "TED Radio Hour (NPR)",
+  "date_range": "2025-01-03 to 2026-05-08",
+  "gender_distribution": {
+    "M": 57,
+    "F": 76,
+    "NB": 1
+  },
+  "age_distribution": {
+    "50+": 57,
+    "unknown": 13,
+    "20-49": 64
+  },
+  "affiliation_distribution": {
+    "Medical": 6,
+    "University": 39,
+    "Author-independent": 17,
+    "NGO": 18,
+    "Industry": 27,
+    "Other": 10,
+    "Journalist": 13,
+    "Government": 4
+  },
+  "region_distribution": {
+    "East Coast": 45,
+    "West Coast": 29,
+    "unknown": 4,
+    "International": 30,
+    "Mountain West": 4,
+    "Midwest": 10,
+    "South": 12
+  },
+  "key_shares": {
+    "pct_women_of_codeable": 56.7,
+    "pct_ages_20_49_of_codeable": 52.9,
+    "pct_university_affiliated_of_codeable": 29.1,
+    "pct_midwest_south_of_us_based": 22.0,
+    "pct_west_coast_of_us_based": 29.0
+  }
+}
