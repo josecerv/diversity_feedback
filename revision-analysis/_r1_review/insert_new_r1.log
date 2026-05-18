@@ -1,0 +1,19 @@
+Block to delete: RESPONSE opener at 11467, Notes ends at 16178, next para starts at 16178
+
+=== Stage A: spanning delete of old block (1 request(s)) ===
+OK
+
+=== Stage B: insert new prose + Table R1 caption (1 request(s)) ===
+OK
+
+=== Stage C: insert empty 3-col x 8-row table (1 request(s)) ===
+OK
+
+=== Stage D: populate table cells (23 request(s)) ===
+OK
+
+=== Stage E: insert Notes paragraph after table (1 request(s)) ===
+OK
+
+All stages complete.
+Open the Gdoc to verify; revert via version history if anything is off.

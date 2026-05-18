@@ -1,0 +1,25 @@
+Spanning delete: [14107, 17287]
+
+=== Stage A: span-delete p4 + caption + table + Notes (1 request(s)) ===
+OK
+
+=== Stage B: insert paragraph 4 + caption (1 request(s)) ===
+OK
+
+=== Stage C: insert empty 15x3 table (1 request(s)) ===
+OK
+Table inserted at index 15184
+
+=== Stage D: populate 37 cells (37 request(s)) ===
+OK
+
+=== Stage E: 5 vertical merges (5 request(s)) ===
+OK
+
+=== Stage F: insert Notes paragraph (1 request(s)) ===
+OK
+
+=== Stage G: polish (13 style ops) (13 request(s)) ===
+OK
+
+Done.

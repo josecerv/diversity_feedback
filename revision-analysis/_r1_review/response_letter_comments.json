@@ -2,6 +2,26 @@
   {
     "replies": [],
     "author": {
+      "displayName": "Jose Cervantez",
+      "kind": "drive#user",
+      "me": false,
+      "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKW8y37NAxONxIOfJ-EbHiOY05J300urddPz3DGUxOhT1q_BQ=s50-c-k-no"
+    },
+    "quotedFileContent": {
+      "mimeType": "text/html",
+      "value": "On the request, I liked Study 4b and think that it does a good job of showing that feedback about gender is different than feedback about other important dimensions.  In addition, your studies show that gender/race feedback lead subjects to adjust their portfolios about the base rate.  That said, I’m still left wondering whether your findings are showing what you say or it is just that people use these other measures appropriately in their initial selections.  I’d like you to at least discuss this possibility, and perhaps there is additional analysis that you can do to address this."
+    },
+    "id": "AAAB6Ghw4Ok",
+    "createdTime": "2026-05-11T19:47:25.127Z",
+    "modifiedTime": "2026-05-11T19:47:25.127Z",
+    "htmlContent": "run a survey asking appropriate imagine a group of people pick a group of 7 biopic films<br><br>how appropriate would it be <br><br>0% (likert scale)",
+    "content": "run a survey asking appropriate imagine a group of people pick a group of 7 biopic films\n\nhow appropriate would it be \n\n0% (likert scale)",
+    "resolved": false,
+    "anchor": "kix.pwdwv8ffb5dm"
+  },
+  {
+    "replies": [],
+    "author": {
       "displayName": "Katherine Milkman",
       "kind": "drive#user",
       "me": false,
@@ -20,7 +40,20 @@
     "anchor": "kix.yaxlgl6q5rgl"
   },
   {
-    "replies": [],
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "id": "AAAB6GvG0Ac",
+        "createdTime": "2026-05-11T22:48:28.745Z",
+        "htmlContent": "",
+        "content": ""
+      }
+    ],
     "author": {
       "displayName": "Katherine Milkman",
       "kind": "drive#user",
@@ -33,14 +66,27 @@
     },
     "id": "AAAB7N72L7s",
     "createdTime": "2026-05-09T19:22:37.633Z",
-    "modifiedTime": "2026-05-09T19:22:37.633Z",
+    "modifiedTime": "2026-05-11T22:48:28.745Z",
     "htmlContent": "I don&#39;t think the follow up analyses make the point you think they are making. Let&#39;s talk about what analyses would. And then we should plan to put them in the paper, not just the response letter.",
     "content": "I don't think the follow up analyses make the point you think they are making. Let's talk about what analyses would. And then we should plan to put them in the paper, not just the response letter.",
-    "resolved": false,
+    "resolved": true,
     "anchor": "kix.mbfxoxuddj7u"
   },
   {
-    "replies": [],
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "id": "AAAB6GvG0AY",
+        "createdTime": "2026-05-11T22:48:24.495Z",
+        "htmlContent": "",
+        "content": ""
+      }
+    ],
     "author": {
       "displayName": "Katherine Milkman",
       "kind": "drive#user",
@@ -53,14 +99,27 @@
     },
     "id": "AAAB7N72L7o",
     "createdTime": "2026-05-09T19:21:49.715Z",
-    "modifiedTime": "2026-05-09T19:21:49.715Z",
+    "modifiedTime": "2026-05-11T22:48:24.495Z",
     "htmlContent": "But you don&#39;t really do this because then &quot;above&quot; that level would also be inappropriate?  The categories are arbitrary so it&#39;s not clear which direction is &quot;appropriate&quot;.  I don&#39;t think this analysis makes sense?  Let&#39;s discuss (and in general, it would be great to talk about things like this before you do a bunch of time-consuming analyses!)",
     "content": "But you don't really do this because then \"above\" that level would also be inappropriate?  The categories are arbitrary so it's not clear which direction is \"appropriate\".  I don't think this analysis makes sense?  Let's discuss (and in general, it would be great to talk about things like this before you do a bunch of time-consuming analyses!)",
-    "resolved": false,
+    "resolved": true,
     "anchor": "kix.sv72zrquu9mo"
   },
   {
-    "replies": [],
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": false,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKW8y37NAxONxIOfJ-EbHiOY05J300urddPz3DGUxOhT1q_BQ=s50-c-k-no"
+        },
+        "id": "AAAB75LJpy8",
+        "createdTime": "2026-05-12T01:09:18.605Z",
+        "htmlContent": "",
+        "content": ""
+      }
+    ],
     "author": {
       "displayName": "Katherine Milkman",
       "kind": "drive#user",
@@ -73,14 +132,27 @@
     },
     "id": "AAAB5fghMMU",
     "createdTime": "2026-05-09T19:20:15.335Z",
-    "modifiedTime": "2026-05-09T19:20:15.335Z",
+    "modifiedTime": "2026-05-12T01:09:18.605Z",
     "htmlContent": "I am not following this category!",
     "content": "I am not following this category!",
-    "resolved": false,
+    "resolved": true,
     "anchor": "kix.qu6tz3pyt2n2"
   },
   {
-    "replies": [],
+    "replies": [
+      {
+        "author": {
+          "displayName": "Jose Cervantez",
+          "kind": "drive#user",
+          "me": true,
+          "photoLink": "//lh3.googleusercontent.com/a/ACg8ocKYg3-uyMoJ3-XwhzCP47sp_VyP0vla51qmM7GzBT-4DhMwJw=s50-c-k-no"
+        },
+        "id": "AAAB6GvG0AU",
+        "createdTime": "2026-05-11T22:48:22.714Z",
+        "htmlContent": "",
+        "content": ""
+      }
+    ],
     "author": {
       "displayName": "Katherine Milkman",
       "kind": "drive#user",
@@ -93,14 +165,27 @@
     },
     "id": "AAAB5fghMMI",
     "createdTime": "2026-05-09T19:17:19.353Z",
-    "modifiedTime": "2026-05-09T19:17:19.353Z",
+    "modifiedTime": "2026-05-11T22:48:22.714Z",
     "htmlContent": "This isn&#39;t true.  If they selected ABOVE the base rate, the feedback should move the gap in the reverse direction?",
     "content": "This isn't true.  If they selected ABOVE the base rate, the feedback should move the gap in the reverse direction?",
-    "resolved": false,
+    "resolved": true,
     "anchor": "kix.doh2oi51ou5d"
   },
   {
-    "replies": [],
+    "replies": [
+      {
+        "author": {
+          "displayName": "Katherine Milkman",
+          "kind": "drive#user",
+          "me": false,
+          "photoLink": "//lh3.googleusercontent.com/a-/ALV-UjVrF6CGH87435f6lsJlQMvb5Flhi7skctXRBxWPYZVGGO26N3Pu=s50-c-k-no"
+        },
+        "id": "AAAB6Gufmos",
+        "createdTime": "2026-05-11T20:09:01.063Z",
+        "htmlContent": "GENDER:<br>Male: X%<br>Female: Y% &lt;&lt; (underrepresented base rate &amp;&amp; TARGET GROUP)<br>Other: Z%<br>AGE:<br>20-40s: X%  &lt;&lt; (underrepresented base rate &amp;&amp; TARGET GROUP)<br>50s-70s: Y% <br>Other: Z%<br>OCCUPATION:<br>University-affiliate: X%  &lt;&lt; (underrepresented base rate &amp;&amp; TARGET GROUP)<br>Journalist: Z%<br>Other: Y%<br>LOCATION:<br>West Coast: X%  &lt;&lt; (underrepresented base rate &amp;&amp; TARGET GROUP)<br>East Coast: Y%<br>Other: Z%",
+        "content": "GENDER:\nMale: X%\nFemale: Y% << (underrepresented base rate && TARGET GROUP)\nOther: Z%\nAGE:\n20-40s: X%  << (underrepresented base rate && TARGET GROUP)\n50s-70s: Y% \nOther: Z%\nOCCUPATION:\nUniversity-affiliate: X%  << (underrepresented base rate && TARGET GROUP)\nJournalist: Z%\nOther: Y%\nLOCATION:\nWest Coast: X%  << (underrepresented base rate && TARGET GROUP)\nEast Coast: Y%\nOther: Z%"
+      }
+    ],
     "author": {
       "displayName": "Katherine Milkman",
       "kind": "drive#user",
@@ -113,7 +198,7 @@
     },
     "id": "AAAB5fghML0",
     "createdTime": "2026-05-09T19:15:17.031Z",
-    "modifiedTime": "2026-05-09T19:15:17.031Z",
+    "modifiedTime": "2026-05-11T20:09:01.063Z",
     "htmlContent": "I think the thing is that if we run #2, we probably have to redo the NPR study anyway so it better matches it.  The real issue is: what are dichotomous predictors that will work?  OR we could do something a bit different on NPR.  We could give categories of feedback like:<br>GENDER:<br>Male: X%<br>Female: Y%<br>Non-binary: Z%<br>AGE:<br>20s: X%<br>30s: Y%<br>40s: Z%<br>...<br>And then with that new design, I think we could get people to say the categories are equally important.  It will not be clear to &quot;compare&quot; the effectiveness of the feedback in quite the same way.  But we could save that for later studies and just use Study 1 to establish a big shift in gender of selectees without big shifts in the avg. age/location/job titles of selectees or something?",
     "content": "I think the thing is that if we run #2, we probably have to redo the NPR study anyway so it better matches it.  The real issue is: what are dichotomous predictors that will work?  OR we could do something a bit different on NPR.  We could give categories of feedback like:\nGENDER:\nMale: X%\nFemale: Y%\nNon-binary: Z%\nAGE:\n20s: X%\n30s: Y%\n40s: Z%\n...\nAnd then with that new design, I think we could get people to say the categories are equally important.  It will not be clear to \"compare\" the effectiveness of the feedback in quite the same way.  But we could save that for later studies and just use Study 1 to establish a big shift in gender of selectees without big shifts in the avg. age/location/job titles of selectees or something?",
     "resolved": false,

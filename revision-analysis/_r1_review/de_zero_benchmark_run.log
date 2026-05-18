@@ -1,0 +1,287 @@
+
+--- Study 2 : Gender (TARGET) ---
+  N=302 (initial=0: 63, initial>=1: 239)  pool=20.0%
+  Overall  feedback -> pick :         +13.25 pp  SE 5.172  p=0.0109  CI [3.07, 23.42]
+  Zero-init (base==0) :              +32.66 pp  SE 11.033  p=0.0044  CI [10.60, 54.72]
+  Positive-init (base>=1) :          +8.13 pp  SE 5.860  p=0.1666  CI [-3.41, 19.67]
+
+--- Study 2 : Featured an Entertainer ---
+  N=302 (initial=0: 66, initial>=1: 236)  pool=44.0%
+  Overall  feedback -> pick :         +5.58 pp  SE 8.698  p=0.5218  CI [-11.54, 22.69]
+  Zero-init (base==0) :              +21.30 pp  SE 10.763  p=0.0522  CI [-0.21, 42.80]
+  Positive-init (base>=1) :          -5.28 pp  SE 11.981  p=0.6600  CI [-28.88, 18.33]
+
+--- Study 2 : Over 500 Pages ---
+  N=302 (initial=0: 144, initial>=1: 158)  pool=28.0%
+  Overall  feedback -> pick :         +1.29 pp  SE 5.402  p=0.8120  CI [-9.34, 11.92]
+  Zero-init (base==0) :              -1.79 pp  SE 9.254  p=0.8470  CI [-20.08, 16.50]
+  Positive-init (base>=1) :          +3.32 pp  SE 6.857  p=0.6285  CI [-10.22, 16.87]
+
+--- Study 2 : Written in Past 25 Years ---
+  N=302 (initial=0: 0, initial>=1: 302)  pool=76.0%
+  Overall  feedback -> pick :         +4.57 pp  SE 6.769  p=0.5000  CI [-8.75, 17.89]
+  Zero-init (base==0) :              <insufficient cell size: n=0>
+  Positive-init (base>=1) :          +4.57 pp  SE 6.769  p=0.5000  CI [-8.75, 17.89]
+
+--- Study 3A : Race (TARGET) ---
+  N=1000 (initial=0: 247, initial>=1: 753)  pool=16.0%
+  Overall  feedback -> pick :         +9.38 pp  SE 2.627  p=0.0004  CI [4.22, 14.53]
+  Zero-init (base==0) :              +9.77 pp  SE 5.977  p=0.1035  CI [-2.00, 21.54]
+  Positive-init (base>=1) :          +8.89 pp  SE 2.857  p=0.0019  CI [3.28, 14.50]
+
+--- Study 3A : High Budget ---
+  N=1000 (initial=0: 40, initial>=1: 960)  pool=40.0%
+  Overall  feedback -> pick :         -0.23 pp  SE 4.056  p=0.9538  CI [-8.19, 7.72]
+  Zero-init (base==0) :              +33.33 pp  SE 20.283  p=0.1085  CI [-7.73, 74.39]
+  Positive-init (base>=1) :          -1.53 pp  SE 4.142  p=0.7114  CI [-9.66, 6.60]
+
+--- Study 3A : Long Duration ---
+  N=1000 (initial=0: 1, initial>=1: 999)  pool=76.0%
+  Overall  feedback -> pick :         -6.72 pp  SE 3.643  p=0.0652  CI [-13.87, 0.42]
+  Zero-init (base==0) :              <insufficient cell size: n=1>
+  Positive-init (base>=1) :          -6.64 pp  SE 3.642  p=0.0686  CI [-13.79, 0.51]
+
+--- Study 3A : Recent Release ---
+  N=1000 (initial=0: 1, initial>=1: 999)  pool=68.0%
+  Overall  feedback -> pick :         +6.54 pp  SE 4.342  p=0.1322  CI [-1.98, 15.06]
+  Zero-init (base==0) :              <insufficient cell size: n=1>
+  Positive-init (base>=1) :          +6.61 pp  SE 4.342  p=0.1285  CI [-1.91, 15.13]
+
+--- Study 3B : Gender (TARGET) ---
+  N=1000 (initial=0: 336, initial>=1: 664)  pool=24.0%
+  Overall  feedback -> pick :         +20.56 pp  SE 2.839  p=0.0000  CI [14.99, 26.13]
+  Zero-init (base==0) :              +31.57 pp  SE 4.905  p=0.0000  CI [21.93, 41.22]
+  Positive-init (base>=1) :          +14.60 pp  SE 3.452  p=0.0000  CI [7.82, 21.38]
+
+--- Study 3B : High Budget ---
+  N=1000 (initial=0: 61, initial>=1: 939)  pool=32.0%
+  Overall  feedback -> pick :         +1.98 pp  SE 3.918  p=0.6130  CI [-5.71, 9.67]
+  Zero-init (base==0) :              -9.52 pp  SE 16.507  p=0.5662  CI [-42.55, 23.51]
+  Positive-init (base>=1) :          +3.03 pp  SE 3.979  p=0.4465  CI [-4.78, 10.84]
+
+--- Study 3B : Political Leader ---
+  N=1000 (initial=0: 52, initial>=1: 948)  pool=40.0%
+  Overall  feedback -> pick :         -5.08 pp  SE 3.575  p=0.1558  CI [-12.09, 1.94]
+  Zero-init (base==0) :              +9.77 pp  SE 16.495  p=0.5561  CI [-23.36, 42.91]
+  Positive-init (base>=1) :          -5.88 pp  SE 3.672  p=0.1099  CI [-13.08, 1.33]
+
+--- Study 3B : Recent Release ---
+  N=1000 (initial=0: 2, initial>=1: 998)  pool=52.0%
+  Overall  feedback -> pick :         -0.29 pp  SE 6.244  p=0.9628  CI [-12.54, 11.96]
+  Zero-init (base==0) :              <insufficient cell size: n=2>
+  Positive-init (base>=1) :          -0.38 pp  SE 6.244  p=0.9512  CI [-12.64, 11.87]
+
+--- Study 4A : Race (TARGET) ---
+  N=1000 (initial=0: 358, initial>=1: 642)  pool=32.0%
+  Overall  feedback -> pick :         +13.40 pp  SE 2.991  p=0.0000  CI [7.53, 19.27]
+  Zero-init (base==0) :              +18.37 pp  SE 4.726  p=0.0001  CI [9.07, 27.66]
+  Positive-init (base>=1) :          +10.33 pp  SE 3.828  p=0.0071  CI [2.81, 17.85]
+
+--- Study 4A : Wrote Books in 500-Most-Common List ---
+  N=1000 (initial=0: 1, initial>=1: 999)  pool=60.0%
+  Overall  feedback -> pick :         +0.68 pp  SE 3.434  p=0.8424  CI [-6.06, 7.42]
+  Zero-init (base==0) :              <insufficient cell size: n=1>
+  Positive-init (base>=1) :          +0.82 pp  SE 3.440  p=0.8119  CI [-5.93, 7.57]
+
+--- Study 4A : Wrote Classic Works (50+ Years Old) ---
+  N=1000 (initial=0: 9, initial>=1: 991)  pool=52.0%
+  Overall  feedback -> pick :         +7.44 pp  SE 3.798  p=0.0505  CI [-0.02, 14.89]
+  Zero-init (base==0) :              <insufficient cell size: n=9>
+  Positive-init (base>=1) :          +7.32 pp  SE 3.823  p=0.0560  CI [-0.19, 14.82]
+
+--- Study 4A : Wrote Poetry ---
+  N=1000 (initial=0: 5, initial>=1: 995)  pool=52.0%
+  Overall  feedback -> pick :         +6.38 pp  SE 3.642  p=0.0802  CI [-0.77, 13.53]
+  Zero-init (base==0) :              <insufficient cell size: n=5>
+  Positive-init (base>=1) :          +6.61 pp  SE 3.649  p=0.0705  CI [-0.55, 13.77]
+
+--- Study 4B : Gender (TARGET) ---
+  N=1000 (initial=0: 218, initial>=1: 782)  pool=24.0%
+  Overall  feedback -> pick :         +11.94 pp  SE 3.009  p=0.0001  CI [6.04, 17.85]
+  Zero-init (base==0) :              +20.01 pp  SE 6.426  p=0.0021  CI [7.35, 32.68]
+  Positive-init (base>=1) :          +9.67 pp  SE 3.409  p=0.0047  CI [2.98, 16.36]
+
+--- Study 4B : In Continuous Print 50+ Years ---
+  N=1000 (initial=0: 1, initial>=1: 999)  pool=68.0%
+  Overall  feedback -> pick :         +2.06 pp  SE 3.724  p=0.5812  CI [-5.25, 9.36]
+  Zero-init (base==0) :              <insufficient cell size: n=1>
+  Positive-init (base>=1) :          +2.15 pp  SE 3.723  p=0.5643  CI [-5.16, 9.45]
+
+--- Study 4B : Sold 30M+ Copies ---
+  N=1000 (initial=0: 29, initial>=1: 971)  pool=32.0%
+  Overall  feedback -> pick :         +1.21 pp  SE 4.040  p=0.7639  CI [-6.71, 9.14]
+  Zero-init (base==0) :              +27.54 pp  SE 25.427  p=0.2884  CI [-24.64, 79.71]
+  Positive-init (base>=1) :          +0.43 pp  SE 4.110  p=0.9174  CI [-7.64, 8.49]
+
+--- Study 4B : Spanning Multiple Genres ---
+  N=1000 (initial=0: 17, initial>=1: 983)  pool=44.0%
+  Overall  feedback -> pick :         -8.22 pp  SE 4.304  p=0.0565  CI [-16.66, 0.23]
+  Zero-init (base==0) :              <insufficient cell size: n=17>
+  Positive-init (base>=1) :          -7.93 pp  SE 4.357  p=0.0692  CI [-16.48, 0.63]
+
+
+===========================================================
+Zero-benchmark analysis: per-cell results
+===========================================================
+    study                           attribute is_target n_total n_zero n_pos
+  Study 2                     Gender (TARGET)      TRUE     302     63   239
+  Study 2             Featured an Entertainer     FALSE     302     66   236
+  Study 2                      Over 500 Pages     FALSE     302    144   158
+  Study 2            Written in Past 25 Years     FALSE     302      0   302
+ Study 3A                       Race (TARGET)      TRUE    1000    247   753
+ Study 3A                         High Budget     FALSE    1000     40   960
+ Study 3A                       Long Duration     FALSE    1000      1   999
+ Study 3A                      Recent Release     FALSE    1000      1   999
+ Study 3B                     Gender (TARGET)      TRUE    1000    336   664
+ Study 3B                         High Budget     FALSE    1000     61   939
+ Study 3B                    Political Leader     FALSE    1000     52   948
+ Study 3B                      Recent Release     FALSE    1000      2   998
+ Study 4A                       Race (TARGET)      TRUE    1000    358   642
+ Study 4A Wrote Books in 500-Most-Common List     FALSE    1000      1   999
+ Study 4A Wrote Classic Works (50+ Years Old)     FALSE    1000      9   991
+ Study 4A                        Wrote Poetry     FALSE    1000      5   995
+ Study 4B                     Gender (TARGET)      TRUE    1000    218   782
+ Study 4B       In Continuous Print 50+ Years     FALSE    1000      1   999
+ Study 4B                    Sold 30M+ Copies     FALSE    1000     29   971
+ Study 4B            Spanning Multiple Genres     FALSE    1000     17   983
+ pool_rate pct_zero all_est_pp all_se_pp        all_p all_ci_lo_pp all_ci_hi_pp
+      0.20     20.9      13.25     5.172 1.092826e-02         3.07        23.42
+      0.44     21.9       5.58     8.698 5.217527e-01       -11.54        22.69
+      0.28     47.7       1.29     5.402 8.119838e-01        -9.34        11.92
+      0.76      0.0       4.57     6.769 4.999845e-01        -8.75        17.89
+      0.16     24.7       9.38     2.627 3.734156e-04         4.22        14.53
+      0.40      4.0      -0.23     4.056 9.538343e-01        -8.19         7.72
+      0.76      0.1      -6.72     3.643 6.516302e-02       -13.87         0.42
+      0.68      0.1       6.54     4.342 1.322120e-01        -1.98        15.06
+      0.24     33.6      20.56     2.839 8.895494e-13        14.99        26.13
+      0.32      6.1       1.98     3.918 6.129572e-01        -5.71         9.67
+      0.40      5.2      -5.08     3.575 1.558454e-01       -12.09         1.94
+      0.52      0.2      -0.29     6.244 9.628235e-01       -12.54        11.96
+      0.32     35.8      13.40     2.991 8.304197e-06         7.53        19.27
+      0.60      0.1       0.68     3.434 8.424410e-01        -6.06         7.42
+      0.52      0.9       7.44     3.798 5.050086e-02        -0.02        14.89
+      0.52      0.5       6.38     3.642 8.021874e-02        -0.77        13.53
+      0.24     21.8      11.94     3.009 7.750779e-05         6.04        17.85
+      0.68      0.1       2.06     3.724 5.811672e-01        -5.25         9.36
+      0.32      2.9       1.21     4.040 7.639248e-01        -6.71         9.14
+      0.44      1.7      -8.22     4.304 5.650407e-02       -16.66         0.23
+ zero_est_pp zero_se_pp       zero_p zero_ci_lo_pp zero_ci_hi_pp pos_est_pp
+       32.66     11.033 4.371848e-03         10.60         54.72       8.13
+       21.30     10.763 5.215964e-02         -0.21         42.80      -5.28
+       -1.79      9.254 8.470323e-01        -20.08         16.50       3.32
+          NA         NA           NA            NA            NA       4.57
+        9.77      5.977 1.034715e-01         -2.00         21.54       8.89
+       33.33     20.283 1.085421e-01         -7.73         74.39      -1.53
+          NA         NA           NA            NA            NA      -6.64
+          NA         NA           NA            NA            NA       6.61
+       31.57      4.905 4.240535e-10         21.93         41.22      14.60
+       -9.52     16.507 5.661558e-01        -42.55         23.51       3.03
+        9.77     16.495 5.561329e-01        -23.36         42.91      -5.88
+          NA         NA           NA            NA            NA      -0.38
+       18.37      4.726 1.214313e-04          9.07         27.66      10.33
+          NA         NA           NA            NA            NA       0.82
+          NA         NA           NA            NA            NA       7.32
+          NA         NA           NA            NA            NA       6.61
+       20.01      6.426 2.093693e-03          7.35         32.68       9.67
+          NA         NA           NA            NA            NA       2.15
+       27.54     25.427 2.884021e-01        -24.64         79.71       0.43
+          NA         NA           NA            NA            NA      -7.93
+ pos_se_pp        pos_p pos_ci_lo_pp pos_ci_hi_pp
+     5.860 1.666305e-01        -3.41        19.67
+    11.981 6.599849e-01       -28.88        18.33
+     6.857 6.285152e-01       -10.22        16.87
+     6.769 4.999845e-01        -8.75        17.89
+     2.857 1.927537e-03         3.28        14.50
+     4.142 7.114130e-01        -9.66         6.60
+     3.642 6.859442e-02       -13.79         0.51
+     4.342 1.284630e-01        -1.91        15.13
+     3.452 2.689395e-05         7.82        21.38
+     3.979 4.465466e-01        -4.78        10.84
+     3.672 1.098806e-01       -13.08         1.33
+     6.244 9.512052e-01       -12.64        11.87
+     3.828 7.146143e-03         2.81        17.85
+     3.440 8.119437e-01        -5.93         7.57
+     3.823 5.596422e-02        -0.19        14.82
+     3.649 7.053896e-02        -0.55        13.77
+     3.409 4.664000e-03         2.98        16.36
+     3.723 5.642587e-01        -5.16         9.45
+     4.110 9.173840e-01        -7.64         8.49
+     4.357 6.922937e-02       -16.48         0.63
+
+
+===========================================================
+Random-effects pool (REML), percentage points
+===========================================================
+                      group  k pooled    se  ci_lo  ci_hi      p   i2
+          Target -- overall  5 13.717 2.112  9.579 17.856 0.0000 55.1
+      Target -- initial = 0  5 21.579 4.222 13.305 29.854 0.0000 58.0
+     Target -- initial >= 1  5 10.487 1.602  7.348 13.626 0.0000  0.0
+      Comparison -- overall 15  0.787 1.356 -1.871  3.445 0.5617 32.9
+  Comparison -- initial = 0  6  9.894 6.684 -3.208 22.995 0.1388 21.5
+ Comparison -- initial >= 1 15  0.606 1.425 -2.187  3.398 0.6707 35.8
+
+
+===========================================================
+Fixed-effects pooled regressions (cell FE; participant-clustered SE)
+===========================================================
+
+--- Fixed-effects pool: TARGET (race/gender) (N = 4302 obs across 5 cells, 4302 participants) ---
+  A. feedback (main, cell FE):           +13.78 pp  SE 1.382  p=3.692e-23  CI [11.07, 16.49]
+  B. feedback @ initial>=1:               +10.63 pp  SE 1.622  p=6.358e-11  CI [7.45, 13.81]
+     feedback x zero_initial (interact): +11.00 pp  SE 3.087  p=0.0003696  CI [4.95, 17.06]
+  C. feedback within initial=0 only:     +21.28 pp  SE 2.610  p=8.545e-16  CI [16.16, 26.40]    (N=1222, cells=5)
+
+--- Fixed-effects pool: COMPARISON (other attributes) (N = 12906 obs across 15 cells, 4302 participants) ---
+  A. feedback (main, cell FE):           +0.84 pp  SE 1.082  p=0.4393  CI [-1.28, 2.96]
+  B. feedback @ initial>=1:               +0.70 pp  SE 1.106  p=0.527  CI [-1.47, 2.87]
+     feedback x zero_initial (interact): +4.41 pp  SE 5.646  p=0.4344  CI [-6.65, 15.48]
+  C. feedback within initial=0 only:     +6.83 pp  SE 5.484  p=0.214  CI [-3.95, 17.61]    (N=429, cells=14)
+
+
+===========================================================
+Contrast at initial = 0 :  target vs comparison
+===========================================================
+Stacked sample at initial=0: 1651 obs over 19 cells, 1485 participants
+  Target cells:     1222 obs across 5 cells
+  Comparison cells: 429 obs across 14 cells
+  Comparison effect at initial=0:                 +6.83 pp   SE 5.421   p=0.2082      CI [-3.81, +17.46]
+  Target - Comparison contrast:                  +14.46 pp   SE 5.993   p=0.01595     CI [+2.70, +26.21]
+  Target effect at initial=0:                    +21.28 pp   SE 2.620   p=8.832e-16   CI [+16.15, +26.42]
+
+
+===========================================================
+Compact per-cell table (cells with n_initial=0 >= 20)
+===========================================================
+    study               attribute n_zero zero_est_pp zero_se_pp       zero_p
+  Study 2         Gender (TARGET)     63       32.66     11.033 4.371848e-03
+ Study 3A           Race (TARGET)    247        9.77      5.977 1.034715e-01
+ Study 3B         Gender (TARGET)    336       31.57      4.905 4.240535e-10
+ Study 4A           Race (TARGET)    358       18.37      4.726 1.214313e-04
+ Study 4B         Gender (TARGET)    218       20.01      6.426 2.093693e-03
+  Study 2 Featured an Entertainer     66       21.30     10.763 5.215964e-02
+  Study 2          Over 500 Pages    144       -1.79      9.254 8.470323e-01
+ Study 3A             High Budget     40       33.33     20.283 1.085421e-01
+ Study 3B             High Budget     61       -9.52     16.507 5.661558e-01
+ Study 3B        Political Leader     52        9.77     16.495 5.561329e-01
+ Study 4B        Sold 30M+ Copies     29       27.54     25.427 2.884021e-01
+ zero_ci_lo_pp zero_ci_hi_pp all_est_pp        all_p n_total       Type
+         10.60         54.72      13.25 1.092826e-02     302     Target
+         -2.00         21.54       9.38 3.734156e-04    1000     Target
+         21.93         41.22      20.56 8.895494e-13    1000     Target
+          9.07         27.66      13.40 8.304197e-06    1000     Target
+          7.35         32.68      11.94 7.750779e-05    1000     Target
+         -0.21         42.80       5.58 5.217527e-01     302 Comparison
+        -20.08         16.50       1.29 8.119838e-01     302 Comparison
+         -7.73         74.39      -0.23 9.538343e-01    1000 Comparison
+        -42.55         23.51       1.98 6.129572e-01    1000 Comparison
+        -23.36         42.91      -5.08 1.558454e-01    1000 Comparison
+        -24.64         79.71       1.21 7.639248e-01    1000 Comparison
+
+
+===========================================================
+Saved:
+  revision-analysis/_r1_review/de_zero_benchmark_results.csv     (per-cell)
+  revision-analysis/_r1_review/de_zero_benchmark_re_pools.csv    (REML pools)
+  revision-analysis/_r1_review/de_zero_benchmark_long.csv        (long format)
+  revision-analysis/_r1_review/de_zero_benchmark_display.csv     (compact table)
+===========================================================

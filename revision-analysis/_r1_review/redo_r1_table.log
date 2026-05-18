@@ -1,0 +1,22 @@
+Spanning delete: [14061, 17174]
+
+=== Stage A: spanning delete (p4 + caption + table + notes) (1 request(s)) ===
+OK
+
+=== Stage B: insert new paragraph 4 + caption (1 request(s)) ===
+OK
+
+=== Stage C: insert empty 10x4 table (1 request(s)) ===
+OK
+Table inserted at index 15270
+
+=== Stage D: populate 34 cells (34 request(s)) ===
+OK
+
+=== Stage E: merge 5 cell groups (5 request(s)) ===
+OK
+
+=== Stage F: insert Notes paragraph (1 request(s)) ===
+OK
+
+Done. Refresh the Gdoc to verify.
