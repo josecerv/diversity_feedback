@@ -1,0 +1,100 @@
+
+##############################################################################
+# OPTION 1 - NARROW / VERB-PHRASE CATEGORIES (DIRECT STUDY 1 REPLICATION)
+##############################################################################
+N (Finished + IP Address + non-NA importance): 302
+
+Per-cell N:
+  'were women.': 76
+  'were under 50 years old.': 75
+  'were based on the West Coast of the United States.': 75
+  'worked at a university.': 76
+
+  GENDER TARGET ('were women.'): M = 3.64, SD = 1.76, n = 76
+
+--- Welch's t-tests (gender target vs each comparison) ---
+                                        comparison  M_gender  SD_gender  M_comp  SD_comp  diff (gender - comp)  Welch_t      df  p_welch  p_welch_holm  p_welch_fdr  cohens_d sig
+                          were under 50 years old.     3.645      1.757   4.440    1.726                -0.795   -2.806 148.997    0.006         0.001        0.009    -0.457  **
+were based on the West Coast of the United States.     3.645      1.757   3.373    1.746                 0.271    0.952 148.992    0.343         0.001        0.343     0.155    
+                           worked at a university.     3.645      1.757   4.671    1.603                -1.026   -3.762 148.766    0.000         0.001        0.001    -0.610 ***
+
+--- Two-sided TOST (strict equivalence within +/-0.4d) ---
+                                        comparison  TOST_strict_p (eq +/-0.4d)  STRICT_EQUIV?
+                          were under 50 years old.                      0.6359          False
+were based on the West Coast of the United States.                      0.0672          False
+                           worked at a university.                      0.9016          False
+
+--- George's-direction TOST (comparison NOT meaningfully less important than gender) ---
+                                        comparison  George_TOST_p (comp NOT meaningfully lower)  George_PASS?
+                          were under 50 years old.                                       0.0000          True
+were based on the West Coast of the United States.                                       0.0672         False
+                           worked at a university.                                       0.0000          True
+
+--- R1 protocol TOST (gender NOT meaningfully less important than comparison) ---
+                                        comparison  Rmd_TOST_p (gender NOT meaningfully lower)  Rmd_PASS?
+                          were under 50 years old.                                      0.6359      False
+were based on the West Coast of the United States.                                      0.0004       True
+                           worked at a university.                                      0.9016      False
+
+##############################################################################
+# OPTION 2 - BROADENED CATEGORIES
+##############################################################################
+N (Finished + IP Address + non-NA importance): 300
+
+Per-cell N:
+  'gender': 76
+  'age': 74
+  'geographic location': 74
+  'employment type': 76
+
+  GENDER TARGET ('gender'): M = 2.29, SD = 1.94, n = 76
+
+--- Welch's t-tests (gender target vs each comparison) ---
+         comparison  M_gender  SD_gender  M_comp  SD_comp  diff (gender - comp)  Welch_t      df  p_welch  p_welch_holm  p_welch_fdr  cohens_d sig
+                age     2.289      1.938   3.770    1.651                -1.481   -5.042 145.465    0.000         0.000        0.000    -0.822 ***
+geographic location     2.289      1.938   4.297    1.834                -2.008   -6.519 147.881    0.000         0.000        0.000    -1.064 ***
+    employment type     2.289      1.938   5.539    1.483                -3.250  -11.612 140.401    0.000         0.000        0.000    -1.884 ***
+
+--- Two-sided TOST (strict equivalence within +/-0.4d) ---
+         comparison  TOST_strict_p (eq +/-0.4d)  STRICT_EQUIV?
+                age                      0.9947          False
+geographic location                      1.0000          False
+    employment type                      1.0000          False
+
+--- George's-direction TOST (comparison NOT meaningfully less important than gender) ---
+         comparison  George_TOST_p (comp NOT meaningfully lower)  George_PASS?
+                age                                       0.0000          True
+geographic location                                       0.0000          True
+    employment type                                       0.0000          True
+
+--- R1 protocol TOST (gender NOT meaningfully less important than comparison) ---
+         comparison  Rmd_TOST_p (gender NOT meaningfully lower)  Rmd_PASS?
+                age                                      0.9947      False
+geographic location                                      1.0000      False
+    employment type                                      1.0000      False
+
+##############################################################################
+# VERDICT SUMMARY (per-comparison)
+##############################################################################
+
+[option1] Option 1 - narrow / verb-phrase categories (direct Study 1 replication)
+  Comparison                                         | strict-equiv | George (comp NOT lower) | Welch
+  were under 50 years old.                           |    no        |       PASS              | d=-0.46, p=0.006 (**)
+  were based on the West Coast of the United States. |    no        |       FAIL              | d=+0.15, p=0.343 (ns)
+  worked at a university.                            |    no        |       PASS              | d=-0.61, p=0.000 (***)
+
+  STRICT equivalence (each comparison within +/-0.4d of gender): 0/3 pass
+  GEORGE'S CRITERION (no comparison meaningfully less important than gender): 2/3 pass
+
+[option2] Option 2 - broadened categories
+  Comparison                                         | strict-equiv | George (comp NOT lower) | Welch
+  age                                                |    no        |       PASS              | d=-0.82, p=0.000 (***)
+  geographic location                                |    no        |       PASS              | d=-1.06, p=0.000 (***)
+  employment type                                    |    no        |       PASS              | d=-1.88, p=0.000 (***)
+
+  STRICT equivalence (each comparison within +/-0.4d of gender): 0/3 pass
+  GEORGE'S CRITERION (no comparison meaningfully less important than gender): 3/3 pass
+
+Wrote C:\Users\jcerv\Jose\diversity_feedback\revision-analysis\_r2_review\r2_pretest_results_option1.csv
+
+Wrote C:\Users\jcerv\Jose\diversity_feedback\revision-analysis\_r2_review\r2_pretest_results_option2.csv

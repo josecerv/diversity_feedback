@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "<string>", line 10, in <module>
+  File "C:\Users\jcerv\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u03b1' in position 439: character maps to <undefined>
+=== STUDY 4 SECTION (lines 96-133) ===
+L96: Study 4
+L97: 
+L98: In Study 4, we tested the mechanism we theorize underlies the relationship between descriptive feedback and subsequent selection decisions: motivation to respond without prejudice. 
+L99: We also attempted to rule out the possibility that the “comparison” attributes summarized in descriptive feedback (alongside feedback about the race or gender of past selectees) in our prior studies may have been perceived as less important to participants than the race and gender of candidates. In Study 4B, we selected comparison attributes after pre-testing them for importance, and we ensured that all were rated at least as important as gender or race. See Appendix Study S4 for a complete description of our pre-testing procedure and results.
+L100: We examined the effect of feedback about the race of past selectees in Study 4A and feedback about the gender of past selectees in Study 4B. 
+L101: Study 4A
+L102: 
+L103: Methods
+L104: Participants. As pre-registered (https://aspredicted.org/XGG_21R), we recruited 1,000 participants on Amazon’s Cloudresearch to complete a 3-minute survey for $0.75 (47.6% men, 51.5% women; Mage = 42.53; 75.75% White, 9.21% Black, 4.75% Hispanic, 8.83% Asian). 
+L105: Procedure. Participants imagined being  tasked with creating a reading list for their local library. They were presented with a 25 (real) authors, each shown with a small photograph and a brief description listing the author’s name (e.g., James Baldwin, Isabel Allende), most notable work (e.g., Go Tell It on the Mountain, The House of the Spirits), and a count of their total published works (e.g., “authored 6 books and several short stories and poems”; “authored 6 books”). Eight of the 25 authors (32%) were racial minorities.
+L106: Participants selected an initial portfolio of six authors and were randomly assigned to one of two conditions: (1) the no race feedback condition or (2) the race feedback condition. In the no race feedback condition, participants received summary statistics about the percentage of selected authors who (1) were born in the 1800s, (2) wrote more than 10 books, and/or (3) wrote poetry. In the race feedback condition, participants always received feedback about the percentage of authors they had selected who were racial minorities, alongside one or two randomly drawn pieces of feedback from the list above.
+L107: After receiving feedback, participants selected a seventh and final author to recommend for their local library’s summer fiction reading list from the original author candidate set, where their prior selections were highlighted. Finally, participants were asked questions to assess their internal and external motivation to respond without prejudice. See Materials Section: Study 4A for full study materials. 

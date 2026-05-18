@@ -1,0 +1,18 @@
+=== build_r2_tracked_drafts.py ===
+OK inputs present
+OK anchors present in manuscript_gdoc_text.txt
+OK draft prose passes voice constraints (no em/en dashes, no 'latent')
+Copied source: C:\Users\jcerv\Jose\diversity_feedback\revision-analysis\_r2_review\manuscript_gdoc_export.docx -> C:\Users\jcerv\Jose\diversity_feedback\revision-analysis\_r2_review\Manuscript_R2_drafts_TRACKED.docx
+OK Draft 1 (Intro FIT citations refreshed)
+OK Draft 1 (Intro applied-literature sentence appended)
+OK Draft 2 (Intro implicit-injunctive-norm paragraph inserted)
+OK Draft 3 (GD foundational citations refreshed)
+OK Draft 4 (GD two-pathway paragraph inserted, with Draft 5B sentence)
+OK Draft 5A (Study 4 Discussion political-ideology hedge appended)
+OK Draft 6 (Study 1 Discussion NPR-importance paragraph inserted)
+OK Draft 7 (9 References inserted alphabetically)
+Saved: C:\Users\jcerv\Jose\diversity_feedback\revision-analysis\_r2_review\Manuscript_R2_drafts_TRACKED.docx
+OK output: C:\Users\jcerv\Jose\diversity_feedback\revision-analysis\_r2_review\Manuscript_R2_drafts_TRACKED.docx (734893 bytes)
+OK w:ins count (author=Claude (R2 draft)): 16
+OK w:del count total: 2
+=== BUILD OK ===

@@ -1,0 +1,7 @@
+## Drafted prose
+
+Corporate diversity rhetoric and programming can expand, contract, or be relabeled as public debate and organizational risk calculations shift, even as many members of the public continue to view diversity efforts in business as important (Levi & Fried, 2024; Bentley University & Gallup, 2025). That volatility makes it especially important to understand interventions that do not require organizations to announce explicit diversity goals: when firms are hesitant to state such goals, purely descriptive feedback about who has previously been spotlighted, hired, or promoted may still make consequential selection patterns visible. Some organizations, including NPR, Salesforce, and the BBC, have adopted this approach in the hope that feedback about prior selections will prompt decision makers to select more diverse candidates, but it remains an open empirical question whether descriptive feedback alone can change subsequent selection decisions.
+
+## Rationale
+
+This version removes the pre-2024 claim that companies are making sustained investments while still motivating the research question as durable under changing corporate rhetoric. It preserves the original movement from motivation, to the real-world feedback practice, to the empirical question, and it avoids reusing the legal, international transparency, and durable-forces framing developed in the following paragraph. The citations emphasize contemporary rhetoric and public support rather than older business-case claims.

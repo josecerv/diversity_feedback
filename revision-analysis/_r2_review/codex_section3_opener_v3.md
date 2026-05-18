@@ -1,0 +1,7 @@
+## Draft
+
+Increasing the representation of women and racial minorities in workplaces, leadership, and other high-visibility roles remains a salient concern for organizations and the publics they serve (Devine & Ash, 2022; Bentley University & Gallup, 2025), even as some organizations have expanded and others have scaled back their public commitments to DEI (Levi & Fried, 2024; Heaton, 2025; Elias & Palmer, 2025). At several organizations (e.g., NPR, Salesforce, the BBC), decision makers have for years received regular feedback on the demographics of those they previously chose to spotlight, hire, or promote, in the hope that such feedback will spur more inclusive subsequent selections. Whether purely descriptive feedback of this kind can be an effective intervention remains an open empirical question.
+
+## Rationale
+
+The draft fixes the v2 bug by replacing the response frame with a standing-practice frame: decision makers “have for years received” feedback, so the practice is not presented as caused by recent fluctuations in DEI rhetoric. It keeps the v2 citation set exactly as directed and retains the arc from ongoing diversity concern to descriptive-feedback practice to the open empirical question. It preserves the paper’s implicit injunctive norms framing by avoiding alternative labels and by leaving mechanism development for the following paragraph, as the brief instructs. The draft also avoids callbacks, subtitle labels, and em or en dashes.

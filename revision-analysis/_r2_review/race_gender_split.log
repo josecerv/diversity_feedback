@@ -1,0 +1,42 @@
+
+========================================
+Per-cell zero-initial estimates (target only)
+========================================
+    study tgt_kind n_zero zero_est_pp zero_se_pp       zero_p
+  Study 2   Gender     63       32.66     11.033 4.371848e-03
+ Study 3A     Race    247        9.77      5.977 1.034715e-01
+ Study 3B   Gender    336       31.57      4.905 4.240535e-10
+ Study 4A     Race    358       18.37      4.726 1.214313e-04
+ Study 4B   Gender    218       20.01      6.426 2.093693e-03
+
+=== REML pools (separate race vs gender) ===
+                    group k pooled    se  ci_lo  ci_hi     p   i2
+   Race only -- initial=0 2 14.848 4.229  6.560 23.137 4e-04 21.5
+ Gender only -- initial=0 3 27.683 4.398 19.063 36.304 0e+00 22.7
+
+=== FE regression with cell FE + cluster-robust SE (target zero-initial) ===
+Target rows at initial=0: N=1222 obs, 5 cells, 1222 participants
+(In target-only data each participant has exactly one row, so cluster-robust = HC1.)
+  All target (race+gender):                +21.28 pp  SE 2.610  p=8.545e-16  CI [16.16, 26.40]  (N=1222, cells=5, pid=1222)
+  Race only:                               +14.86 pp  SE 3.700  p=6.679e-05  CI [7.59, 22.12]  (N=605, cells=2, pid=605)
+  Gender only:                             +27.59 pp  SE 3.666  p=1.869e-13  CI [20.39, 34.80]  (N=617, cells=3, pid=617)
+
+=== Same split, dropping Study 4A ===
+  All target (race+gender), no 4A:         +22.50 pp  SE 3.133  p=1.51e-12  CI [16.35, 28.64]  (N=864, cells=4, pid=864)
+  Race only, no 4A:                        +9.77 pp  SE 5.953  p=0.1021  CI [-1.96, 21.49]  (N=247, cells=1, pid=247)
+  Gender only, no 4A:                      +27.59 pp  SE 3.666  p=1.869e-13  CI [20.39, 34.80]  (N=617, cells=3, pid=617)
+
+=== Clustering diagnostics (long-format data) ===
+Target-only long data, rows per participant:
+
+   1 
+4302 
+Comparison-only long data, rows per participant:
+
+   3 
+4302 
+
+At initial=0 (stacked target+comparison): rows per participant
+
+   1    2    3    4 
+1337  132   14    2 

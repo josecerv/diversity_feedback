@@ -1,0 +1,89 @@
+Total footnotes in doc: 17
+============================================================
+
+--- Footnote kix.fn3 ---
+As discussed by Angrist and Pischke (2009) and Gomila (2021), OLS regressions are unbiased, and often preferable to logistic regressions thanks to their interpretability when estimating causal effects in experiments with binary outcomes, which is why we pre-registered employing them as our primary analysis strategy across all studies in this manuscript. However, all of our reported findings are meaningfully unchanged if we reanalyze our data using logistic regressions (see Appendix Tables S1-S6 for replications of all primary findings with logistic regressions).
+
+
+--- Footnote kix.fn4 ---
+Following Cohen (2015), we z-scored each item before averaging to standardize their distributions, ensuring that each item contributed equally to the composite score. This approach accounts for any potential differences in item variances and facilitates meaningful aggregation of the items.
+
+
+--- Footnote kix.fn5 ---
+A Sobel test confirmed that the reduction in effect size was statistically significant (z = 16.81, s.e. = 0.014, p < 0.001).
+
+
+--- Footnote kix.fn6 ---
+A1,000-sample bootstrapped sensitivity analysis concluded that this effect is robust to sizable deviations from the Sequential Ignorability Assumption, as the indirect effect of internal motivation to respond without prejudice is negative and non-zero for any ρ > 0.46.
+
+
+--- Footnote kix.fn7 ---
+A Sobel test confirmed that the reduction in effect size was statistically significant (z = 7.58, s.e. = 0.016, p < 0.001).
+
+
+--- Footnote kix.fn8 ---
+A 1,000-sample bootstrapped sensitivity analysis concluded that this effect is robust to sizable deviations from the Sequential Ignorability Assumption, as the indirect effect of internal motivation to respond without prejudice is negative and non-zero for any ρ > 0.24.
+
+
+--- Footnote kix.fn9 ---
+We could not re-analyze data from Study 1 for this purpose because participants in Study 1 did not make initial selections – they were instead assigned hypothetical prior selections.
+
+
+--- Footnote kix.fn10 ---
+Data from Study 4A allowed us to determine that whether participants are randomly assigned to receive two vs. three pieces of descriptive feedback about their initial selectees has no effect on the rate at which women are chosen as a participant’s final selectee, so we did not manipulate the number of additional pieces of descriptive feedback in this study.
+
+
+--- Footnote kix.fn11 ---
+Although our pre-registration specified that this model would include an indicator for the women underrepresented condition (women underrepresented = 1, women overrepresented = 0), for ease of interpretation we flipped this indicator to encode the women overrepresented condition as 1 and the women underrepresented condition as 0. This change does not alter the fundamental results of our model (i.e., the magnitude of effects, significance levels, and interaction patterns), as all of these outcomes are mathematically equivalent regardless of which condition serves as the reference category.
+
+
+--- Footnote kix.fn12 ---
+To test whether treatment effects were equal in magnitude between the two candidate pools, we estimated separate OLS regression models predicting whether the final panelist selected was a woman, and in each model our primary predictor was an indicator for assignment to the gender feedback condition. The first model used only data from the women underrepresented condition (see Table 5, Model 1) and the second model used only data from the women overrepresented condition (see Table 5, Model 3). We then conducted a Wald test of H0: B_gender feedback (Model 1) + B_gender feedback (Model 3) = 0 to determine whether the treatment effects were equal in magnitude across the women overrepresented and women underrepresented conditions of our experiment from Study 5.
+
+
+--- Footnote kix.fn13 ---
+Studies 1 and 5 were excluded from this benchmarking analysis. In Study 1, participants did not make initial selections; they received feedback on hypothetical prior choices, making a quota rule inapplicable. In Study 5, our 2x2 design manipulated the initial candidate pool’s composition (varying whether women were underrepresented vs. overrepresented in the pool); because only half of the data from this study would be suitable for inclusion in this analysis, we have omitted Study 5 from this benchmarking exercise.
+
+
+--- Footnote kix.9j8gzrt64o3i ---
+According to Harrison & List (2004, p. 1014), a framed field experiment is “one that uses participants from the specific population of interest (a nonstandard subject pool) and incorporates field context into the commodity, task, or information participants use, making the setting more realistic than a conventional lab experiment.”
+
+
+--- Footnote kix.pe6y7w68dzy9 ---
+We only recruited participants who were U.S. based, had a minimum 90% approval rate, and at least 1,000 prior survey completions. In all future online panel studies reported in this manuscript, we imposed these same requirements.
+
+
+--- Footnote kix.fuhxta3rz80s ---
+We also stimulus sampled what descriptive feedback participants received about their past sources: Participants were either told that 10% (or 20%) of past experts were women, that 30% (or 50%) were under 50 years old, that 10% (or 70%) were based on the West Coast, and that 50% (or 10%) worked at a university. The effect of gender feedback did not differ significantly across stimulus sets (p = .220), and there was no main effect of stimulus set (p = .190).
+
+
+--- Footnote kix.14zh6hj3hqb9 ---
+After data collection, we followed this procedure and chose one participant’s curated list of seven films to advertise on Facebook; the participant whose films were selected received a $5 bonus.
+
+
+--- Footnote kix.o1ve013zueys ---
+This message was designed to parallel real-world organizational communications, which typically signal that diversity is valued but don’t typically issue direct commands about whom to select.
+
+
+--- Footnote kix.sbd52qc7gtyl ---
+To address the possibility that comparison-attribute feedback has weaker effects simply because participants are already using these attributes appropriately in their initial selections, we conducted a cross-study analysis pooling Studies 2, 3A, 3B, and 4B and restricting attention to participants whose initial selections contained zero of a given attribute. Among this conservative subset, where appropriate prior use cannot account for any non-response to feedback, race or gender feedback raised the likelihood of selecting a woman or racial by 22.50 percentage points (Woman: +27.59 pp; Racial Minority: +9.77; p < .001, N = 864)., whereas comparison-attribute feedback shifted subsequent selections by only +7.25 percentage points (p = .19, N = 414); a Wald test confirms the difference between the two pooled coefficients is significant (p = .016). Full per-cell results are reported in Appendix Section S[X].
+
+============================================================
+Footnote references in body:
+  fn=kix.pe6y7w68dzy9 at body idx 24173 | anchor para: 'Participants. As pre-registered (https://osf.io/vazsm/), we recruited 1,000 participants through Prolific to complete a 3-minute survey for $0.75 (55.4% women; 43.7% men; 0.9% non-binary; Mage = 43.80'
+  fn=kix.fuhxta3rz80s at body idx 25392 | anchor para: 'Participants were then randomly assigned to one of two conditions: (1) the no gender feedback condition or (2) the gender feedback condition. In the no gender feedback condition, participants received'
+  fn=kix.9j8gzrt64o3i at body idx 29921 | anchor para: '\tIn Study 2, we conducted a framed field experiment (Harrison & List, 2004) to extend our key findings to an in-person, real choice environment in which participants were not aware they were under stu'
+  fn=kix.fn3 at body idx 32809 | anchor para: 'Initial selections featured women protagonists 25.2% of the time, with a slight imbalance across conditions (23.0% control vs. 27.3% treatment, p = .050). Following our pre-registration, we ran an OLS'
+  fn=kix.14zh6hj3hqb9 at body idx 35714 | anchor para: 'Participants selected a portfolio of seven films for the Facebook campaign and  were incentivized for the quality of their decisions. Specifically, we (truthfully) told participants: “To provide extra'
+  fn=kix.o1ve013zueys at body idx 42989 | anchor para: 'However, to further rule out a “demand effect” explanation for our findings, we conducted two supplemental experiments (Studies S2A and S2B, detailed in pages 7-11 in the Appendix). In both studies, w'
+  fn=kix.fn4 at body idx 47557 | anchor para: 'Internal motivation to respond without prejudice. To assess internal motives (e.g., image concerns) in the final author selection, we adapted four items from Plant and Devine’s (1998) internal motivat'
+  fn=kix.fn5 at body idx 49896 | anchor para: 'Mediation. Following our pre-registration, we tested each proposed mediator independently using a 10,000-sample bootstrapped mediation model and a Sobel test. The 95% bias-corrected CI for the size of'
+  fn=kix.fn6 at body idx 50084 | anchor para: 'Mediation. Following our pre-registration, we tested each proposed mediator independently using a 10,000-sample bootstrapped mediation model and a Sobel test. The 95% bias-corrected CI for the size of'
+  fn=kix.fn7 at body idx 50504 | anchor para: 'Mediation. Following our pre-registration, we tested each proposed mediator independently using a 10,000-sample bootstrapped mediation model and a Sobel test. The 95% bias-corrected CI for the size of'
+  fn=kix.fn8 at body idx 50652 | anchor para: 'Mediation. Following our pre-registration, we tested each proposed mediator independently using a 10,000-sample bootstrapped mediation model and a Sobel test. The 95% bias-corrected CI for the size of'
+  fn=kix.fn9 at body idx 62733 | anchor para: 'In Table 4, Models 1-5, we present five regression models re-analyzing data from Studies 2, 3A, 3B, 4A, and 4B, in which we added two new predictors: (1) the proportion of racial minorities or women ('
+  fn=kix.fn10 at body idx 67623 | anchor para: 'Procedure. Following a similar procedure to Studies 2–4 participants imagined  planning a major international business conference and selecting a panel of six business leaders (from a list of 25 real '
+  fn=kix.fn11 at body idx 71726 | anchor para: 'Our primary pre-registered analysis pooled data across all conditions in a single OLS regression with robust standard errors to predict whether the seventh and final panelist a participant selected wa'
+  fn=kix.fn12 at body idx 73350 | anchor para: 'Finally, we confirmed that not only did the effect of the gender feedback treatment flip across conditions, it was also unequal in magnitude across the women overrepresented and women underrepresented'
+  fn=kix.fn13 at body idx 77320 | anchor para: '\tUsing data from our previous studies (Studies 2, 3A, 3B, 4A, and 4B), we conducted simulations to estimate how a quota requiring at least one woman (or alternatively, one racial minority) in the fina'
+  fn=kix.sbd52qc7gtyl at body idx 83134 | anchor para: '        \tAcross seven pre-registered experiments, including a framed field study in a real organization, we investigate the impact of providing descriptive feedback about the gender and racial diversi'
