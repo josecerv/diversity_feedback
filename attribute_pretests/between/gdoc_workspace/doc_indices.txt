@@ -1,0 +1,204 @@
+SECTION [?->1]
+P [1->34] (NORMAL_TEXT) 'NPR Attribute-Importance Pretest\n'
+P [34->530] (NORMAL_TEXT) 'In Study 1, we sought to rule out the possibility that the unique effect of descriptive feedback about the gender of pas'
+P [530->538] (NORMAL_TEXT) 'Methods\n'
+P [538->799] (NORMAL_TEXT) 'Participants. As pre-registered (https://aspredicted.org/xa7u94.pdf), we recruited 300 participants on Prolific (U.S.-ba'
+P [799->1579] (NORMAL_TEXT) 'Procedure. Participants were told to imagine they worked as producers at NPR and were responsible for identifying and bo'
+P [1579->1587] (NORMAL_TEXT) 'Results\n'
+P [1587->2562] (NORMAL_TEXT) 'Following our pre-registration, we conducted three t-tests comparing the importance of rating in the Gender condition (r'
+P [2562->2573] (NORMAL_TEXT) 'Discussion\n'
+P [2573->3004] (NORMAL_TEXT) 'Together, these results suggest that gender is not viewed as a uniquely important feature of NPR experts; two of the thr'
+P [3004->3006] (NORMAL_TEXT) '\n'
+P [3006->3036] (NORMAL_TEXT) 'Pooled Zero-Baseline Analysis\n'
+P [3036->3911] (NORMAL_TEXT) 'A reader might worry that descriptive feedback about race or gender has larger effects on subsequent selections than des'
+P [3911->3919] (NORMAL_TEXT) 'Methods\n'
+P [3919->4339] (NORMAL_TEXT) 'We pooled participant-level data from Studies 2, 3A, 3B, and 4B. Study 4A is excluded because every comparison attribute'
+P [4339->5245] (NORMAL_TEXT) 'Within each (study, attribute) cell, we restricted the sample to participants whose initial selection portfolio containe'
+P [5245->5670] (NORMAL_TEXT) 'We then pooled cell-level estimates using inverse-variance weighting, separately for "target" cells (those in which the '
+P [5670->5678] (NORMAL_TEXT) 'Results\n'
+P [5678->6526] (NORMAL_TEXT) 'Within the zero-initial subset, random assignment to receive descriptive feedback about race or gender significantly inc'
+P [6526->6631] (NORMAL_TEXT) 'Table B1. Per-Cell Linear Probability Model Estimates from the Cross-Study Pooled Zero-Baseline Analysis\n'
+TABLE [6631->7582] rows=12
+  Row 0 [6632->6708]
+    Cell 0 [6633->6640]
+      P [6634->6640] (NORMAL_TEXT) 'Study\n'
+    Cell 1 [6640->6657]
+      P [6641->6657] (NORMAL_TEXT) 'Focal Attribute\n'
+    Cell 2 [6657->6663]
+      P [6658->6663] (NORMAL_TEXT) 'Type\n'
+    Cell 3 [6663->6678]
+      P [6664->6678] (NORMAL_TEXT) 'N (zero-init)\n'
+    Cell 4 [6678->6691]
+      P [6679->6691] (NORMAL_TEXT) 'Effect (pp)\n'
+    Cell 5 [6691->6700]
+      P [6692->6700] (NORMAL_TEXT) 'SE (pp)\n'
+    Cell 6 [6700->6708]
+      P [6701->6708] (NORMAL_TEXT) '95% CI\n'
+  Row 1 [6708->6785]
+    Cell 0 [6709->6718]
+      P [6710->6718] (NORMAL_TEXT) 'Study 2\n'
+    Cell 1 [6718->6738]
+      P [6719->6738] (NORMAL_TEXT) 'Female protagonist\n'
+    Cell 2 [6738->6746]
+      P [6739->6746] (NORMAL_TEXT) 'Target\n'
+    Cell 3 [6746->6750]
+      P [6747->6750] (NORMAL_TEXT) '63\n'
+    Cell 4 [6750->6760]
+      P [6751->6760] (NORMAL_TEXT) '+32.66**\n'
+    Cell 5 [6760->6767]
+      P [6761->6767] (NORMAL_TEXT) '11.03\n'
+    Cell 6 [6767->6785]
+      P [6768->6785] (NORMAL_TEXT) '[+10.60, +54.72]\n'
+  Row 2 [6785->6868]
+    Cell 0 [6786->6796]
+      P [6787->6796] (NORMAL_TEXT) 'Study 3A\n'
+    Cell 1 [6796->6825]
+      P [6797->6825] (NORMAL_TEXT) 'Racial-minority protagonist\n'
+    Cell 2 [6825->6833]
+      P [6826->6833] (NORMAL_TEXT) 'Target\n'
+    Cell 3 [6833->6838]
+      P [6834->6838] (NORMAL_TEXT) '247\n'
+    Cell 4 [6838->6845]
+      P [6839->6845] (NORMAL_TEXT) '+9.77\n'
+    Cell 5 [6845->6851]
+      P [6846->6851] (NORMAL_TEXT) '5.98\n'
+    Cell 6 [6851->6868]
+      P [6852->6868] (NORMAL_TEXT) '[−2.00, +21.54]\n'
+  Row 3 [6868->6946]
+    Cell 0 [6869->6879]
+      P [6870->6879] (NORMAL_TEXT) 'Study 3B\n'
+    Cell 1 [6879->6898]
+      P [6880->6898] (NORMAL_TEXT) 'Woman protagonist\n'
+    Cell 2 [6898->6906]
+      P [6899->6906] (NORMAL_TEXT) 'Target\n'
+    Cell 3 [6906->6911]
+      P [6907->6911] (NORMAL_TEXT) '336\n'
+    Cell 4 [6911->6922]
+      P [6912->6922] (NORMAL_TEXT) '+31.57***\n'
+    Cell 5 [6922->6928]
+      P [6923->6928] (NORMAL_TEXT) '4.91\n'
+    Cell 6 [6928->6946]
+      P [6929->6946] (NORMAL_TEXT) '[+21.93, +41.22]\n'
+  Row 4 [6946->7017]
+    Cell 0 [6947->6957]
+      P [6948->6957] (NORMAL_TEXT) 'Study 4B\n'
+    Cell 1 [6957->6971]
+      P [6958->6971] (NORMAL_TEXT) 'Woman author\n'
+    Cell 2 [6971->6979]
+      P [6972->6979] (NORMAL_TEXT) 'Target\n'
+    Cell 3 [6979->6984]
+      P [6980->6984] (NORMAL_TEXT) '218\n'
+    Cell 4 [6984->6994]
+      P [6985->6994] (NORMAL_TEXT) '+20.01**\n'
+    Cell 5 [6994->7000]
+      P [6995->7000] (NORMAL_TEXT) '6.43\n'
+    Cell 6 [7000->7017]
+      P [7001->7017] (NORMAL_TEXT) '[+7.35, +32.68]\n'
+  Row 5 [7017->7101]
+    Cell 0 [7018->7027]
+      P [7019->7027] (NORMAL_TEXT) 'Study 2\n'
+    Cell 1 [7027->7052]
+      P [7028->7052] (NORMAL_TEXT) 'Featured an entertainer\n'
+    Cell 2 [7052->7064]
+      P [7053->7064] (NORMAL_TEXT) 'Comparison\n'
+    Cell 3 [7064->7068]
+      P [7065->7068] (NORMAL_TEXT) '66\n'
+    Cell 4 [7068->7077]
+      P [7069->7077] (NORMAL_TEXT) '+21.30+\n'
+    Cell 5 [7077->7084]
+      P [7078->7084] (NORMAL_TEXT) '10.76\n'
+    Cell 6 [7084->7101]
+      P [7085->7101] (NORMAL_TEXT) '[−0.21, +42.80]\n'
+  Row 6 [7101->7175]
+    Cell 0 [7102->7111]
+      P [7103->7111] (NORMAL_TEXT) 'Study 2\n'
+    Cell 1 [7111->7127]
+      P [7112->7127] (NORMAL_TEXT) 'Over 500 pages\n'
+    Cell 2 [7127->7139]
+      P [7128->7139] (NORMAL_TEXT) 'Comparison\n'
+    Cell 3 [7139->7144]
+      P [7140->7144] (NORMAL_TEXT) '144\n'
+    Cell 4 [7144->7151]
+      P [7145->7151] (NORMAL_TEXT) '−1.79\n'
+    Cell 5 [7151->7157]
+      P [7152->7157] (NORMAL_TEXT) '9.25\n'
+    Cell 6 [7157->7175]
+      P [7158->7175] (NORMAL_TEXT) '[−20.08, +16.50]\n'
+  Row 7 [7175->7247]
+    Cell 0 [7176->7186]
+      P [7177->7186] (NORMAL_TEXT) 'Study 3A\n'
+    Cell 1 [7186->7199]
+      P [7187->7199] (NORMAL_TEXT) 'High budget\n'
+    Cell 2 [7199->7211]
+      P [7200->7211] (NORMAL_TEXT) 'Comparison\n'
+    Cell 3 [7211->7215]
+      P [7212->7215] (NORMAL_TEXT) '40\n'
+    Cell 4 [7215->7223]
+      P [7216->7223] (NORMAL_TEXT) '+33.33\n'
+    Cell 5 [7223->7230]
+      P [7224->7230] (NORMAL_TEXT) '20.28\n'
+    Cell 6 [7230->7247]
+      P [7231->7247] (NORMAL_TEXT) '[−7.73, +74.39]\n'
+  Row 8 [7247->7319]
+    Cell 0 [7248->7258]
+      P [7249->7258] (NORMAL_TEXT) 'Study 3B\n'
+    Cell 1 [7258->7271]
+      P [7259->7271] (NORMAL_TEXT) 'High budget\n'
+    Cell 2 [7271->7283]
+      P [7272->7283] (NORMAL_TEXT) 'Comparison\n'
+    Cell 3 [7283->7287]
+      P [7284->7287] (NORMAL_TEXT) '61\n'
+    Cell 4 [7287->7294]
+      P [7288->7294] (NORMAL_TEXT) '−9.52\n'
+    Cell 5 [7294->7301]
+      P [7295->7301] (NORMAL_TEXT) '16.51\n'
+    Cell 6 [7301->7319]
+      P [7302->7319] (NORMAL_TEXT) '[−42.55, +23.51]\n'
+  Row 9 [7319->7408]
+    Cell 0 [7320->7330]
+      P [7321->7330] (NORMAL_TEXT) 'Study 3B\n'
+    Cell 1 [7330->7360]
+      P [7331->7360] (NORMAL_TEXT) 'Political-leader protagonist\n'
+    Cell 2 [7360->7372]
+      P [7361->7372] (NORMAL_TEXT) 'Comparison\n'
+    Cell 3 [7372->7376]
+      P [7373->7376] (NORMAL_TEXT) '52\n'
+    Cell 4 [7376->7383]
+      P [7377->7383] (NORMAL_TEXT) '+9.77\n'
+    Cell 5 [7383->7390]
+      P [7384->7390] (NORMAL_TEXT) '16.50\n'
+    Cell 6 [7390->7408]
+      P [7391->7408] (NORMAL_TEXT) '[−23.36, +42.91]\n'
+  Row 10 [7408->7486]
+    Cell 0 [7409->7419]
+      P [7410->7419] (NORMAL_TEXT) 'Study 4B\n'
+    Cell 1 [7419->7437]
+      P [7420->7437] (NORMAL_TEXT) 'Sold 30M+ copies\n'
+    Cell 2 [7437->7449]
+      P [7438->7449] (NORMAL_TEXT) 'Comparison\n'
+    Cell 3 [7449->7453]
+      P [7450->7453] (NORMAL_TEXT) '29\n'
+    Cell 4 [7453->7461]
+      P [7454->7461] (NORMAL_TEXT) '+27.54\n'
+    Cell 5 [7461->7468]
+      P [7462->7468] (NORMAL_TEXT) '25.43\n'
+    Cell 6 [7468->7486]
+      P [7469->7486] (NORMAL_TEXT) '[−24.64, +79.71]\n'
+  Row 11 [7486->7581]
+    Cell 0 [7487->7533]
+      P [7488->7533] (NORMAL_TEXT) 'Pooled target vs. comparison contrast (Wald)\n'
+    Cell 1 [7533->7548]
+      P [7534->7548] (NORMAL_TEXT) 'Δ = +15.25 pp\n'
+    Cell 2 [7548->7550]
+      P [7549->7550] (NORMAL_TEXT) '\n'
+    Cell 3 [7550->7552]
+      P [7551->7552] (NORMAL_TEXT) '\n'
+    Cell 4 [7552->7562]
+      P [7553->7562] (NORMAL_TEXT) 'p = .016\n'
+    Cell 5 [7562->7564]
+      P [7563->7564] (NORMAL_TEXT) '\n'
+    Cell 6 [7564->7581]
+      P [7565->7581] (NORMAL_TEXT) '[+2.87, +27.63]\n'
+P [7582->8698] (NORMAL_TEXT) 'Notes. Each row reports the estimated effect of random assignment to receive descriptive feedback about the focal attrib'
+P [8698->8709] (NORMAL_TEXT) 'Discussion\n'
+P [8709->9570] (NORMAL_TEXT) 'This rule-out matters because the most plausible alternative explanation for the differential effect of race/gender feed'

@@ -1,0 +1,291 @@
+---
+title: "Study 1 NPR Attribute-Importance Pretest (Between-Subjects)"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
+    code_folding: hide
+  pdf_document:
+    toc: false
+geometry: margin=0.5in
+header-includes:
+  - \usepackage{float}
+  - \usepackage{setspace}
+  - \setstretch{0.9}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE,
+                      fig.width = 10, fig.height = 6)
+
+library(tidyverse)
+library(qualtRics)
+library(kableExtra)
+library(ggthemes)
+library(broom)
+library(effsize)
+library(TOSTER)   # one-sided equivalence tests (TOST)
+
+theme_set(theme_economist())
+```
+
+# Design
+
+Between-subjects attribute-importance pretest for Study 1 (NPR producer
+context). Each participant is randomly assigned to rate the importance of
+**one** expert attribute on a 1–7 scale. Randomization happens in Qualtrics
+via the `attribute` embedded-data field (BlockRandomizer, even presentation),
+so per-participant data has one row with one `attribute` value and one
+`importance` rating.
+
+**Target vs comparison attributes (4 conditions):**
+
+- `were women.` (target)
+- `were under 50 years old.` (comparison)
+- `were based on the West Coast of the United States.` (comparison)
+- `worked at a university.` (comparison)
+
+**Purpose:** rebut the DE's concern that Study 1's comparison attributes
+would be rated "a lot less important than gender." If importance ratings
+are statistically equivalent (or not significantly lower), the existing
+Study 1 design is defensible. If one or more comparisons are clearly less
+important, Study 1 should be rerun or reframed.
+
+# Data Collection
+
+```{r api-setup}
+qualtrics_api_credentials(api_key = Sys.getenv("QUALTRICS_API_KEY"),
+                          base_url = "yul1.qualtrics.com",
+                          install = FALSE,
+                          overwrite = TRUE)
+
+survey_id <- "SV_3fuYYYXyNyTDCbs"
+
+cat("Fetching survey data from Qualtrics...\n")
+raw_data <- fetch_survey(survey_id, force_request = TRUE)
+cat("Successfully fetched", nrow(raw_data), "responses\n")
+```
+
+# Data Preparation
+
+```{r data-prep}
+complete_data <- raw_data %>%
+  filter(Finished == TRUE | Finished == "True" | Finished == 1) %>%
+  filter(Status == "IP Address" | Status == 0)
+
+cat("Complete responses:", nrow(complete_data), "\n")
+
+# Clean scale — handle text-anchored values on the 1/7 endpoints.
+clean_scale <- function(x) {
+  x <- as.character(x)
+  x <- case_when(
+    grepl("Not at all important", x, ignore.case = TRUE) ~ "1",
+    grepl("Very important", x, ignore.case = TRUE) ~ "7",
+    TRUE ~ x
+  )
+  return(as.numeric(x))
+}
+
+# Locate the importance column. The single MC question has DataExportTag
+# "importance", so qualtRics renders it as a column containing a number 1–7.
+importance_cols <- names(complete_data)[grepl("^importance$|importance_", names(complete_data), ignore.case = TRUE)]
+if (length(importance_cols) == 0) {
+  importance_cols <- names(complete_data)[grepl("percentage", names(complete_data), ignore.case = TRUE)]
+}
+importance_col <- importance_cols[1]
+cat("Using importance column:", importance_col, "\n")
+
+complete_data[[importance_col]] <- clean_scale(complete_data[[importance_col]])
+
+clean_data <- complete_data %>%
+  filter(!is.na(.data[[importance_col]])) %>%
+  rename(importance = !!importance_col) %>%
+  mutate(attribute = str_trim(attribute))
+
+cat("\nFinal sample size after cleaning:", nrow(clean_data), "\n")
+cat("Unique attributes observed:", paste(sort(unique(clean_data$attribute)), collapse = " | "), "\n")
+cat("N per attribute:\n")
+print(clean_data %>% count(attribute) %>% arrange(desc(n)))
+```
+
+# Descriptive Statistics
+
+```{r descriptives}
+desc_stats <- clean_data %>%
+  group_by(attribute) %>%
+  summarise(
+    n = n(),
+    mean = mean(importance, na.rm = TRUE),
+    sd = sd(importance, na.rm = TRUE),
+    se = sd / sqrt(n),
+    median = median(importance, na.rm = TRUE),
+    ci_lower = mean - 1.96 * se,
+    ci_upper = mean + 1.96 * se,
+    .groups = "drop"
+  ) %>%
+  arrange(desc(mean))
+
+kable(desc_stats %>% select(attribute, n, mean, sd, se, median, ci_lower, ci_upper),
+      digits = 2,
+      col.names = c("Attribute", "N", "Mean", "SD", "SE", "Median", "CI low", "CI high"),
+      caption = "Descriptive Statistics for Attribute Importance Ratings") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+ggplot(desc_stats, aes(x = reorder(attribute, mean), y = mean)) +
+  geom_point(size = 3) +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0.2) +
+  geom_hline(yintercept = 4, linetype = "dashed", alpha = 0.5) +
+  coord_flip() +
+  scale_y_continuous(limits = c(1, 7), breaks = 1:7) +
+  labs(x = "Attribute",
+       y = "Mean Importance Rating (1–7)",
+       title = "Importance Ratings with 95% Confidence Intervals",
+       subtitle = "Dashed line = scale midpoint") +
+  theme_minimal()
+```
+
+# Independent-Samples T-Tests: Women vs. Each Comparison
+
+```{r welch-t}
+women_attr <- "were women."
+women_importance <- clean_data %>% filter(attribute == women_attr) %>% pull(importance)
+other_attrs <- setdiff(unique(clean_data$attribute), women_attr)
+
+t_rows <- lapply(other_attrs, function(attr) {
+  attr_importance <- clean_data %>% filter(attribute == attr) %>% pull(importance)
+  t_res <- t.test(women_importance, attr_importance, var.equal = FALSE)
+  d_res <- cohen.d(women_importance, attr_importance)
+  tibble(
+    comparison   = paste("women vs", attr),
+    women_mean   = mean(women_importance, na.rm = TRUE),
+    women_sd     = sd(women_importance, na.rm = TRUE),
+    women_n      = length(women_importance),
+    other_mean   = mean(attr_importance, na.rm = TRUE),
+    other_sd     = sd(attr_importance, na.rm = TRUE),
+    other_n      = length(attr_importance),
+    mean_diff    = mean(women_importance, na.rm = TRUE) - mean(attr_importance, na.rm = TRUE),
+    t_stat       = t_res$statistic,
+    df           = t_res$parameter,
+    p_value      = t_res$p.value,
+    ci_lower     = t_res$conf.int[1],
+    ci_upper     = t_res$conf.int[2],
+    cohens_d     = d_res$estimate,
+    d_magnitude  = d_res$magnitude
+  )
+})
+
+all_results <- bind_rows(t_rows) %>%
+  mutate(
+    p_bonferroni = p.adjust(p_value, method = "bonferroni"),
+    p_holm       = p.adjust(p_value, method = "holm"),
+    p_fdr        = p.adjust(p_value, method = "fdr"),
+    sig_stars    = case_when(
+      p_value < 0.001 ~ "***",
+      p_value < 0.01  ~ "**",
+      p_value < 0.05  ~ "*",
+      TRUE            ~ ""
+    )
+  )
+
+display <- all_results %>%
+  transmute(
+    Comparison    = str_remove(comparison, "women vs "),
+    `Women M`     = round(women_mean, 2),
+    `Women SD`    = round(women_sd, 2),
+    `Women N`     = women_n,
+    `Other M`     = round(other_mean, 2),
+    `Other SD`    = round(other_sd, 2),
+    `Other N`     = other_n,
+    Diff          = round(mean_diff, 2),
+    t             = round(t_stat, 2),
+    df            = round(df, 1),
+    p             = round(p_value, 3),
+    `p (Holm)`    = round(p_holm, 3),
+    `p (FDR)`     = round(p_fdr, 3),
+    `Cohen's d`   = round(cohens_d, 2),
+    Magnitude     = d_magnitude,
+    Sig           = sig_stars
+  )
+
+kable(display,
+      caption = "Welch's t-tests: Women vs. Each Comparison Attribute (Study 1 NPR Pretest)") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+# One-Sided Equivalence Tests (TOST)
+
+We want to demonstrate that comparison attributes are *not significantly
+less* important than "women." The R1 letter's 4B paragraph used one-sided
+equivalence tests with p < .05 to support this claim. We use the same
+convention here, with an equivalence bound of Cohen's *d* = −0.4 (a small
+effect), consistent with the S3 write-up. Reject the null → comparison is
+not meaningfully less important.
+
+```{r tost}
+tost_bound_d <- -0.4  # one-sided bound (women rated less than this much higher)
+
+tost_rows <- lapply(other_attrs, function(attr) {
+  attr_importance <- clean_data %>% filter(attribute == attr) %>% pull(importance)
+  sd_pooled <- sqrt(((length(women_importance) - 1) * var(women_importance) +
+                      (length(attr_importance) - 1) * var(attr_importance)) /
+                     (length(women_importance) + length(attr_importance) - 2))
+  low_eqbound_raw  <- tost_bound_d * sd_pooled
+  result <- TOSTER::tsum_TOST(
+    m1 = mean(women_importance), sd1 = sd(women_importance), n1 = length(women_importance),
+    m2 = mean(attr_importance),  sd2 = sd(attr_importance),  n2 = length(attr_importance),
+    low_eqbound = low_eqbound_raw,
+    high_eqbound = Inf,
+    eqbound_type = "raw",
+    alpha = 0.05
+  )
+  # TOSTER returns the `TOST` p-values in `result$TOST$p.value`; for one-sided
+  # (only lower bound), the relevant p is the one for the lower bound rejection.
+  tost_p <- result$TOST$p.value[1]
+  tibble(
+    comparison     = paste("women vs", attr),
+    eqbound_d      = tost_bound_d,
+    eqbound_raw    = round(low_eqbound_raw, 3),
+    tost_p         = tost_p,
+    equivalent_at_05 = tost_p < 0.05
+  )
+})
+
+tost_df <- bind_rows(tost_rows)
+kable(tost_df %>% mutate(tost_p = round(tost_p, 4)),
+      caption = "One-sided equivalence test: comparison attribute is NOT significantly less important than women (reject when p < .05).") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+# Summary
+
+```{r summary, results = "asis"}
+cat("### Key findings\n\n")
+cat(sprintf("- **N per attribute:** %s\n",
+            paste(sprintf("%s = %d", desc_stats$attribute, desc_stats$n), collapse = "; ")))
+cat(sprintf("- **Women importance:** M = %.2f, SD = %.2f (n = %d)\n",
+            mean(women_importance), sd(women_importance), length(women_importance)))
+cat("\n")
+
+for (i in seq_len(nrow(all_results))) {
+  row <- all_results[i, ]
+  eq  <- tost_df %>% filter(comparison == row$comparison)
+  attr_label <- str_remove(row$comparison, "women vs ")
+  direction <- if (row$mean_diff > 0) "HIGHER" else "LOWER"
+  cat(sprintf(
+    "- **%s** (M = %.2f, SD = %.2f, n = %d): women rated %s by %.2f points; Welch's t(%.1f) = %.2f, p = %.3f, d = %.2f. Equivalence test (lower-bound d = -0.4): p = %.3f %s\n",
+    attr_label, row$other_mean, row$other_sd, row$other_n,
+    direction, abs(row$mean_diff),
+    row$df, row$t_stat, row$p_value, row$cohens_d,
+    eq$tost_p[1],
+    if (eq$equivalent_at_05[1]) "→ comparison is NOT significantly less important than women" else "→ cannot rule out meaningful lower importance"
+  ))
+}
+```
+
+# Session info
+
+```{r session}
+sessionInfo()
+```

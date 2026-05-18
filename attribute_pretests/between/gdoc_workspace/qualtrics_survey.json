@@ -1,0 +1,1103 @@
+{
+  "meta": {
+    "httpStatus": "200 - OK",
+    "requestId": "858f6047-a490-47c2-b5a5-39534cf11fa3"
+  },
+  "result": {
+    "QuestionCount": "16",
+    "SurveyOptions": {
+      "BackButton": "false",
+      "SaveAndContinue": "true",
+      "SurveyProtection": "PublicSurvey",
+      "BallotBoxStuffingPrevention": "false",
+      "NoIndex": "Yes",
+      "SecureResponseFiles": "true",
+      "SurveyExpiration": "None",
+      "SurveyTermination": "Redirect",
+      "Header": "",
+      "Footer": "",
+      "ProgressBarDisplay": "None",
+      "PartialData": "+1 week",
+      "ValidationMessage": null,
+      "PreviousButton": " \u2190 ",
+      "NextButton": " \u2192 ",
+      "SurveyTitle": "Qualtrics Survey | Qualtrics Experience Management",
+      "SkinLibrary": "wharton",
+      "SkinType": "templated",
+      "Skin": {
+        "brandingId": null,
+        "templateId": "*2014",
+        "overrides": {
+          "answerText": {
+            "size": "15px"
+          },
+          "colors": {
+            "secondary": "#000000",
+            "primary": "#000000"
+          }
+        }
+      },
+      "NewScoring": 1,
+      "SurveyMetaDescription": "The most powerful, simple and trusted way to gather experience data. Start your journey to experience management and try a free account today.",
+      "EOSMessage": null,
+      "ShowExportTags": "false",
+      "CollectGeoLocation": "false",
+      "PasswordProtection": "No",
+      "AnonymizeResponse": "No",
+      "RefererCheck": "No",
+      "BallotBoxStuffingPreventionBehavior": null,
+      "BallotBoxStuffingPreventionMessage": null,
+      "BallotBoxStuffingPreventionMessageLibrary": null,
+      "BallotBoxStuffingPreventionURL": null,
+      "RecaptchaV3": "false",
+      "ConfirmStart": false,
+      "AutoConfirmStart": false,
+      "RelevantID": "false",
+      "RelevantIDLockoutPeriod": "+30 days",
+      "UseCustomSurveyLinkCompletedMessage": null,
+      "SurveyLinkCompletedMessage": null,
+      "SurveyLinkCompletedMessageLibrary": null,
+      "ResponseSummary": "No",
+      "EOSMessageLibrary": null,
+      "EOSRedirectURL": "https://app.prolific.com/submissions/complete?cc=CH10TEUU",
+      "EmailThankYou": "false",
+      "ThankYouEmailMessageLibrary": null,
+      "ThankYouEmailMessage": null,
+      "ValidateMessage": "false",
+      "ValidationMessageLibrary": null,
+      "InactiveSurvey": null,
+      "PartialDeletion": null,
+      "PartialDataCloseAfter": "LastActivity",
+      "InactiveMessageLibrary": null,
+      "InactiveMessage": null,
+      "AvailableLanguages": {
+        "EN": []
+      },
+      "SurveyName": "NPR pretests (between subjects - preg)",
+      "SurveyLanguage": "EN",
+      "ActiveResponseSet": "RS_3Dw0cRY8sPdPESq",
+      "SurveyStartDate": null,
+      "SurveyExpirationDate": null,
+      "SurveyCreationDate": "2026-05-14T16:16:31Z"
+    },
+    "SurveyID": "SV_aeIi4xABcJiz1vU",
+    "SurveyName": "NPR pretests (between subjects - preg)",
+    "SurveyStatus": "Active",
+    "LastModified": "2026-05-14T16:38:46Z",
+    "BrandID": "wharton",
+    "OwnerID": "UR_51kqMTaUzYIYveC",
+    "LastAccessed": null,
+    "CreatorID": "UR_51kqMTaUzYIYveC",
+    "LastActivated": "2026-05-14T16:17:00Z",
+    "Questions": {
+      "QID1": {
+        "QuestionText": "Click to write the question text",
+        "DataExportTag": "Q1",
+        "QuestionType": "MC",
+        "Selector": "SAVR",
+        "SubSelector": "TX",
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        },
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "Click to write the question text",
+        "Choices": {
+          "1": {
+            "Display": "Click to write Choice 1"
+          },
+          "2": {
+            "Display": "Click to write Choice 2"
+          },
+          "3": {
+            "Display": "Click to write Choice 3"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "Type": "None"
+          }
+        },
+        "Language": [],
+        "NextChoiceId": 4,
+        "NextAnswerId": 1,
+        "QuestionID": "QID1",
+        "QuestionText_Unsafe": "Click to write the question text"
+      },
+      "QID10": {
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "Choices": {
+          "1": {
+            "Display": "Woman"
+          },
+          "2": {
+            "Display": "Man"
+          },
+          "3": {
+            "Display": "Non-binary"
+          },
+          "4": {
+            "Display": "Another gender not listed here:",
+            "TextEntry": "true"
+          }
+        },
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "DataExportTag": "gender",
+        "DataVisibility": {
+          "Hidden": false,
+          "Private": false
+        },
+        "DefaultChoices": false,
+        "GradingData": [],
+        "Language": [],
+        "NextAnswerId": 1,
+        "NextChoiceId": 5,
+        "QuestionDescription": "What is your gender?",
+        "QuestionID": "QID10",
+        "QuestionText": "What is your gender?",
+        "QuestionText_Unsafe": "What is your gender?",
+        "QuestionType": "MC",
+        "RecodeValues": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
+        "Selector": "SAVR",
+        "SubSelector": "TX",
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "ON",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        }
+      },
+      "QID11": {
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "Choices": {
+          "1": {
+            "Display": "American Indian or Alaskan Native"
+          },
+          "2": {
+            "Display": "Asian / Pacific Islander"
+          },
+          "3": {
+            "Display": "Black or African American"
+          },
+          "4": {
+            "Display": "Hispanic / Latinx"
+          },
+          "5": {
+            "Display": "White / Caucasian"
+          }
+        },
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "DataExportTag": "race",
+        "DataVisibility": {
+          "Hidden": false,
+          "Private": false
+        },
+        "Language": [],
+        "NextAnswerId": 1,
+        "NextChoiceId": 6,
+        "QuestionDescription": "Which race or ethnicity best describes you?",
+        "QuestionID": "QID11",
+        "QuestionText": "Which race or ethnicity best describes you?",
+        "QuestionText_Unsafe": "Which race or ethnicity best describes you?",
+        "QuestionType": "MC",
+        "RecodeValues": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "Selector": "SAVR",
+        "SubSelector": "TX",
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "ON",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        }
+      },
+      "QID12": {
+        "Configuration": {
+          "InputHeight": 65,
+          "InputWidth": 299,
+          "QuestionDescriptionOption": "UseText"
+        },
+        "DataExportTag": "end",
+        "DataVisibility": {
+          "Hidden": false,
+          "Private": false
+        },
+        "DefaultChoices": false,
+        "GradingData": [],
+        "Language": [],
+        "NextAnswerId": 1,
+        "NextChoiceId": 4,
+        "QuestionDescription": "Thank you for taking the survey. Please feel free to leave any comments or feedback!",
+        "QuestionID": "QID12",
+        "QuestionText": "Thank you for taking the survey. Please feel free to leave any comments or feedback!",
+        "QuestionText_Unsafe": "Thank you for taking the survey. Please feel free to leave any comments or feedback!",
+        "QuestionType": "TE",
+        "SearchSource": {
+          "AllowFreeResponse": "false"
+        },
+        "Selector": "ML",
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "Type": "None"
+          }
+        }
+      },
+      "QID13": {
+        "QuestionText": "Imagine you work as a producer at National Public Radio (NPR). As part of your role, you are responsible for identifying and booking expert sources to interview for various news segments and stories.<br>",
+        "DefaultChoices": false,
+        "DataExportTag": "Q13",
+        "QuestionType": "DB",
+        "Selector": "TB",
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        },
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "Imagine you work as a producer at National Public Radio (NPR). As part of your role, you are resp...",
+        "ChoiceOrder": [],
+        "Validation": {
+          "Settings": {
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": [],
+        "NextChoiceId": 4,
+        "NextAnswerId": 1,
+        "QuestionID": "QID13",
+        "QuestionText_Unsafe": "Imagine you work as a producer at National Public Radio (NPR). As part of your role, you are responsible for identifying and booking expert sources to interview for various news segments and stories.<br>"
+      },
+      "QID14": {
+        "QuestionText": "<span style=\"color:#999999;\">Imagine you work as a producer at National Public Radio (NPR). As part of your role, you are responsible for identifying and booking expert sources to interview for various news segments and stories.</span><br>\n<br>\nNow, imagine you are being asked to select expert sources for an upcoming NPR news segment. The segment focuses on the future of work in America and how artificial intelligence is reshaping employment across different industries.",
+        "DefaultChoices": false,
+        "DataExportTag": "Q14",
+        "QuestionType": "DB",
+        "Selector": "TB",
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        },
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "Imagine you work as a producer at National Public Radio (NPR). As part of your role, you are resp...",
+        "ChoiceOrder": [],
+        "Validation": {
+          "Settings": {
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": [],
+        "NextChoiceId": 4,
+        "NextAnswerId": 1,
+        "QuestionID": "QID14",
+        "QuestionText_Unsafe": "<span style=\"color:#999999;\">Imagine you work as a producer at National Public Radio (NPR). As part of your role, you are responsible for identifying and booking expert sources to interview for various news segments and stories.</span><br>\n<br>\nNow, imagine you are being asked to select expert sources for an upcoming NPR news segment. The segment focuses on the future of work in America and how artificial intelligence is reshaping employment across different industries."
+      },
+      "QID15": {
+        "QuestionText": "<span style=\"color:#999999;\">Imagine you work as a producer at National Public Radio (NPR). As part of your role, you are responsible for identifying and booking expert sources to interview for various news segments and stories.\n<br><br>Now, imagine you are being asked to select expert sources for an upcoming NPR news segment. The segment focuses on the future of work in America and how artificial intelligence is reshaping employment across different industries.<br></span><br>\nWhen making your selections for this news segment, how important would it be for you to consider the expert attribute listed below?<br>",
+        "DefaultChoices": false,
+        "DataExportTag": "Q15",
+        "QuestionType": "DB",
+        "Selector": "TB",
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        },
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "Imagine you work as a producer at National Public Radio (NPR). As part of your role, you are resp...",
+        "ChoiceOrder": [],
+        "Validation": {
+          "Settings": {
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": [],
+        "NextChoiceId": 4,
+        "NextAnswerId": 1,
+        "QuestionID": "QID15",
+        "QuestionText_Unsafe": "<span style=\"color:#999999;\">Imagine you work as a producer at National Public Radio (NPR). As part of your role, you are responsible for identifying and booking expert sources to interview for various news segments and stories.\n<br><br>Now, imagine you are being asked to select expert sources for an upcoming NPR news segment. The segment focuses on the future of work in America and how artificial intelligence is reshaping employment across different industries.<br></span><br>\nWhen making your selections for this news segment, how important would it be for you to consider the expert attribute listed below?<br>"
+      },
+      "QID16": {
+        "QuestionText": "Please rate the importance of considering the following when making selections for this news segment on a scale from 1 to 7 (Not at all important - Very important).<br>\n<br>\nThe percentage of experts who&nbsp;${e://Field/attribute}",
+        "DefaultChoices": false,
+        "DataExportTag": "importance",
+        "QuestionID": "QID16",
+        "QuestionType": "MC",
+        "Selector": "SAHR",
+        "SubSelector": "TX",
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        },
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText",
+          "TextPosition": "inline",
+          "LabelPosition": "BELOW"
+        },
+        "QuestionDescription": "Please rate the importance of considering the following when making selections for this news segm...",
+        "Choices": {
+          "1": {
+            "Display": "1</br>Not at all important"
+          },
+          "2": {
+            "Display": "2"
+          },
+          "3": {
+            "Display": "3"
+          },
+          "4": {
+            "Display": "4"
+          },
+          "6": {
+            "Display": "5"
+          },
+          "7": {
+            "Display": "6"
+          },
+          "8": {
+            "Display": "7</br> Very important"
+          }
+        },
+        "ChoiceOrder": [
+          1,
+          2,
+          3,
+          4,
+          "6",
+          "7",
+          "8"
+        ],
+        "Randomization": {
+          "Advanced": null,
+          "TotalRandSubset": "",
+          "Type": "None"
+        },
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": [],
+        "NextChoiceId": 9,
+        "NextAnswerId": 8,
+        "QuestionText_Unsafe": "Please rate the importance of considering the following when making selections for this news segment on a scale from 1 to 7 (Not at all important - Very important).<br>\n<br>\nThe percentage of experts who&nbsp;${e://Field/attribute}"
+      },
+      "QID2": {
+        "Configuration": {
+          "Align": "left",
+          "QuestionDescriptionOption": "UseText",
+          "Theme": "light"
+        },
+        "DataExportTag": "captcha",
+        "DefaultChoices": false,
+        "GradingData": [],
+        "Language": [],
+        "NextAnswerId": 1,
+        "NextChoiceId": 4,
+        "QuestionDescription": "Please check the box below to proceed.",
+        "QuestionID": "QID2",
+        "QuestionText": "Please check the box below to proceed.",
+        "QuestionText_Unsafe": "Please check the box below to proceed.",
+        "QuestionType": "Captcha",
+        "Selector": "V2"
+      },
+      "QID3": {
+        "AnswerOrder": [
+          "1",
+          "2"
+        ],
+        "Answers": {
+          "1": {
+            "Display": "Yes"
+          },
+          "2": {
+            "Display": "No"
+          }
+        },
+        "ChoiceDataExportTags": false,
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "Choices": {
+          "1": {
+            "Display": "Have you ever been bitten by an insect?"
+          },
+          "2": {
+            "Display": "Have you ever been to Mexico?"
+          },
+          "3": {
+            "Display": "Have you ever been to the Moon?"
+          },
+          "4": {
+            "Display": "Have you ever drank water?"
+          },
+          "5": {
+            "Display": "Have you ever suffered a fatal heart attack?"
+          },
+          "6": {
+            "Display": "Are you human?"
+          }
+        },
+        "Configuration": {
+          "ChoiceColumnWidth": 25,
+          "MobileFirst": true,
+          "QuestionDescriptionOption": "UseText",
+          "RepeatHeaders": "none",
+          "TextPosition": "inline",
+          "WhiteSpace": "OFF"
+        },
+        "DataExportTag": "ec_1",
+        "DataVisibility": {
+          "Hidden": false,
+          "Private": false
+        },
+        "DefaultChoices": false,
+        "GradingData": [],
+        "Language": [],
+        "NextAnswerId": 4,
+        "NextChoiceId": 7,
+        "QuestionDescription": "Please respond truthfully to the items below.",
+        "QuestionID": "QID3",
+        "QuestionText": "Please respond truthfully to the items below.",
+        "QuestionText_Unsafe": "Please respond truthfully to the items below.",
+        "QuestionType": "Matrix",
+        "Randomization": {
+          "Advanced": null,
+          "TotalRandSubset": "",
+          "Type": "All"
+        },
+        "Selector": "Likert",
+        "SubSelector": "SingleAnswer",
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "ON",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        }
+      },
+      "QID4": {
+        "Configuration": {
+          "InputHeight": 29,
+          "InputWidth": 170,
+          "QuestionDescriptionOption": "UseText"
+        },
+        "DataExportTag": "ec_2",
+        "DataVisibility": {
+          "Hidden": false,
+          "Private": false
+        },
+        "DefaultChoices": false,
+        "GradingData": [],
+        "Language": [],
+        "NextAnswerId": 1,
+        "NextChoiceId": 4,
+        "QuestionDescription": "Please ignore the question below and instead type in \"one one\" (exactly as shown) as your respons...",
+        "QuestionID": "QID4",
+        "QuestionText": "Please ignore the question below and instead type in \"one one\" (exactly as shown) as your response to proceed:<br><br>What is 13 + 39?<br>",
+        "QuestionText_Unsafe": "Please ignore the question below and instead type in \"one one\" (exactly as shown) as your response to proceed:<br><br>What is 13 + 39?<br>",
+        "QuestionType": "TE",
+        "SearchSource": {
+          "AllowFreeResponse": "false"
+        },
+        "Selector": "SL",
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "ON",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        }
+      },
+      "QID5": {
+        "ChoiceOrder": [],
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "DataExportTag": "consent",
+        "DataVisibility": {
+          "Hidden": false,
+          "Private": false
+        },
+        "DefaultChoices": false,
+        "GradingData": [],
+        "Language": [],
+        "NextAnswerId": 1,
+        "NextChoiceId": 4,
+        "QuestionDescription": "Informed Consent You are being asked to complete a survey as part of a research study about human...",
+        "QuestionID": "QID5",
+        "QuestionText": "<div style=\"text-align: center;\"><b>Informed Consent</b></div>\n<br>\nYou are being asked to complete a survey as part of a research study about human behavior and decision-making. Your participation in this study is entirely voluntary. If you elect to participate, you will be asked about personal attitudes. You will then be asked to answer a series of survey questions. Additional information will be provided to you during your study participation.<br>\n<br>\nThis survey should take about 2 minutes. You can withdraw from the study at any time. If you decide to withdraw from the survey, your data will be destroyed. We will not share or store any data beyond the use of this research project.<br>\n<br>\nWe will make every effort to keep all the information you tell us during the study strictly confidential, except as required by law. Worker IDs will be collected strictly on the basis of compensation. Your name and other identifying information will never be connected with the responses you provide so no one will ever be able to identify you in any publications that will result from this research.Deidentified data will be kept in the Wharton Behavioral Lab research data repository. If you have questions, concerns, or complaints regarding your confidentiality or if you have any questions about your rights as a research participant, you should e-mail the researcher at josecerv@wharton.upenn.edu. If a member of the research team cannot be reached or you want to talk to someone other than those working on the study, you may contact the Office of Regulatory Affairs with any questions, concerns, or complaints at the University of Pennsylvania by calling (215) 898-2614.<br>\n<br>\nIf you agree to participate, please click the arrow to continue. Otherwise, you may close the browser or navigate away from the page.",
+        "QuestionText_Unsafe": "<div style=\"text-align: center;\"><b>Informed Consent</b></div>\n<br>\nYou are being asked to complete a survey as part of a research study about human behavior and decision-making. Your participation in this study is entirely voluntary. If you elect to participate, you will be asked about personal attitudes. You will then be asked to answer a series of survey questions. Additional information will be provided to you during your study participation.<br>\n<br>\nThis survey should take about 2 minutes. You can withdraw from the study at any time. If you decide to withdraw from the survey, your data will be destroyed. We will not share or store any data beyond the use of this research project.<br>\n<br>\nWe will make every effort to keep all the information you tell us during the study strictly confidential, except as required by law. Worker IDs will be collected strictly on the basis of compensation. Your name and other identifying information will never be connected with the responses you provide so no one will ever be able to identify you in any publications that will result from this research.Deidentified data will be kept in the Wharton Behavioral Lab research data repository. If you have questions, concerns, or complaints regarding your confidentiality or if you have any questions about your rights as a research participant, you should e-mail the researcher at josecerv@wharton.upenn.edu. If a member of the research team cannot be reached or you want to talk to someone other than those working on the study, you may contact the Office of Regulatory Affairs with any questions, concerns, or complaints at the University of Pennsylvania by calling (215) 898-2614.<br>\n<br>\nIf you agree to participate, please click the arrow to continue. Otherwise, you may close the browser or navigate away from the page.",
+        "QuestionType": "DB",
+        "Selector": "TB",
+        "Validation": {
+          "Settings": {
+            "Type": "None"
+          }
+        }
+      },
+      "QID6": {
+        "ChoiceOrder": [],
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "DataExportTag": "vignette",
+        "DataVisibility": {
+          "Hidden": false,
+          "Private": false
+        },
+        "DefaultChoices": false,
+        "GradingData": [],
+        "Language": [],
+        "NextAnswerId": 1,
+        "NextChoiceId": 4,
+        "QuestionDescription": "We are launching a campaign on campus to promote popular and inspirational biographies to broaden...",
+        "QuestionID": "QID6",
+        "QuestionJS": false,
+        "QuestionText": "<p dir=\"ltr\">We are launching a campaign on campus to promote popular and inspirational biographies to broaden students' perspectives. By delving into the lives of these individuals, we hope to provide students with unique insights into the challenges, strategies, and mindsets that led to success in various fields.</p>",
+        "QuestionText_Unsafe": "<p dir=\"ltr\">We are launching a campaign on campus to promote popular and inspirational biographies to broaden students' perspectives. By delving into the lives of these individuals, we hope to provide students with unique insights into the challenges, strategies, and mindsets that led to success in various fields.</p>",
+        "QuestionType": "DB",
+        "Selector": "TB",
+        "Validation": {
+          "Settings": {
+            "Type": "None"
+          }
+        }
+      },
+      "QID7": {
+        "ChoiceOrder": [],
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "DataExportTag": "vignette2",
+        "DataVisibility": {
+          "Hidden": false,
+          "Private": false
+        },
+        "DefaultChoices": false,
+        "GradingData": [],
+        "Language": [],
+        "NextAnswerId": 1,
+        "NextChoiceId": 4,
+        "QuestionDescription": "We are launching a campaign on campus to promote popular and inspirational biographies to broaden...",
+        "QuestionID": "QID7",
+        "QuestionJS": false,
+        "QuestionText": "<p dir=\"ltr\"><span style=\"color:#95a5a6;\">We are launching a campaign on campus to promote popular and inspirational biographies to broaden students' perspectives. By delving into the lives of these individuals, we hope to provide students with unique insights into the challenges, strategies, and mindsets that led to success in various fields.</span></p>\n\n<p dir=\"ltr\">&nbsp;</p>\n\n<p dir=\"ltr\">This campaign aims to foster a culture of learning and aspiration, and encourage students to envision and pursue their own paths to success.</p>",
+        "QuestionText_Unsafe": "<p dir=\"ltr\"><span style=\"color:#95a5a6;\">We are launching a campaign on campus to promote popular and inspirational biographies to broaden students' perspectives. By delving into the lives of these individuals, we hope to provide students with unique insights into the challenges, strategies, and mindsets that led to success in various fields.</span></p>\n\n<p dir=\"ltr\">&nbsp;</p>\n\n<p dir=\"ltr\">This campaign aims to foster a culture of learning and aspiration, and encourage students to envision and pursue their own paths to success.</p>",
+        "QuestionType": "DB",
+        "Selector": "TB",
+        "Validation": {
+          "Settings": {
+            "Type": "None"
+          }
+        }
+      },
+      "QID8": {
+        "ChoiceOrder": [],
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "DataExportTag": "vignette3",
+        "DataVisibility": {
+          "Hidden": false,
+          "Private": false
+        },
+        "DefaultChoices": false,
+        "GradingData": [],
+        "Language": [],
+        "NextAnswerId": 1,
+        "NextChoiceId": 4,
+        "QuestionDescription": "\u00a0 We are launching a campaign on campus to promote popular and inspirational biographies to broad...",
+        "QuestionID": "QID8",
+        "QuestionJS": false,
+        "QuestionText": "<p dir=\"ltr\">&nbsp;</p>\n<span style=\"color:#95a5a6;\">We are launching a campaign on campus to promote popular and inspirational biographies to broaden students' perspectives. By delving into the lives of these individuals, we hope to provide students with unique insights into the challenges, strategies, and mindsets that led to success in various fields.<br>\n<br>\nThis campaign aims to foster a culture of learning and aspiration, and encourage students to envision and pursue their own paths to success.</span><p dir=\"ltr\">&nbsp;</p>\n\n<p dir=\"ltr\"></p>On the next page, you will see a set of 25 biographies. We will ask you to select a subset of these biographies that you believe would be of broad interest to students and are therefore ideal to feature in our campaign.<p dir=\"ltr\"></p>",
+        "QuestionText_Unsafe": "<p dir=\"ltr\">&nbsp;</p>\n<span style=\"color:#95a5a6;\">We are launching a campaign on campus to promote popular and inspirational biographies to broaden students' perspectives. By delving into the lives of these individuals, we hope to provide students with unique insights into the challenges, strategies, and mindsets that led to success in various fields.<br>\n<br>\nThis campaign aims to foster a culture of learning and aspiration, and encourage students to envision and pursue their own paths to success.</span><p dir=\"ltr\">&nbsp;</p>\n\n<p dir=\"ltr\"></p>On the next page, you will see a set of 25 biographies. We will ask you to select a subset of these biographies that you believe would be of broad interest to students and are therefore ideal to feature in our campaign.<p dir=\"ltr\"></p>",
+        "QuestionType": "DB",
+        "Selector": "TB",
+        "Validation": {
+          "Settings": {
+            "Type": "None"
+          }
+        }
+      },
+      "QID9": {
+        "ChoiceOrder": [],
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "DataExportTag": "Q23",
+        "DataVisibility": {
+          "Hidden": false,
+          "Private": false
+        },
+        "DefaultChoices": false,
+        "GradingData": [],
+        "Language": [],
+        "NextAnswerId": 1,
+        "NextChoiceId": 4,
+        "QuestionDescription": "Thank you for your responses. We just have a few more questions.",
+        "QuestionID": "QID9",
+        "QuestionText": "Thank you for your responses. We just have a few more questions.<br>",
+        "QuestionText_Unsafe": "Thank you for your responses. We just have a few more questions.<br>",
+        "QuestionType": "DB",
+        "Selector": "TB",
+        "Validation": {
+          "Settings": {
+            "Type": "None"
+          }
+        }
+      }
+    },
+    "Blocks": {
+      "BL_cD6wpN6voUO383A": {
+        "Type": "Default",
+        "Description": "attention-checks",
+        "ID": "BL_cD6wpN6voUO383A",
+        "BlockElements": [
+          {
+            "Type": "Question",
+            "QuestionID": "QID2"
+          },
+          {
+            "Type": "Page Break"
+          },
+          {
+            "Type": "Question",
+            "QuestionID": "QID3"
+          },
+          {
+            "Type": "Page Break"
+          },
+          {
+            "Type": "Question",
+            "QuestionID": "QID4"
+          }
+        ],
+        "Options": {
+          "BlockLocking": "false",
+          "RandomizeQuestions": "false",
+          "BlockVisibility": "Collapsed"
+        }
+      },
+      "BL_bgBsJ6SkBmecKbA": {
+        "Type": "Trash",
+        "Description": "Trash / Unused Questions",
+        "ID": "BL_bgBsJ6SkBmecKbA",
+        "BlockElements": [
+          {
+            "Type": "Question",
+            "QuestionID": "QID1"
+          },
+          {
+            "Type": "Question",
+            "QuestionID": "QID6"
+          },
+          {
+            "Type": "Question",
+            "QuestionID": "QID7"
+          },
+          {
+            "Type": "Question",
+            "QuestionID": "QID8"
+          }
+        ]
+      },
+      "BL_5j3BhsYCXIpDlUa": {
+        "Type": "Standard",
+        "SubType": "",
+        "Description": "consent",
+        "ID": "BL_5j3BhsYCXIpDlUa",
+        "BlockElements": [
+          {
+            "Type": "Question",
+            "QuestionID": "QID5"
+          }
+        ],
+        "Options": {
+          "BlockLocking": "false",
+          "RandomizeQuestions": "false",
+          "BlockVisibility": "Expanded"
+        }
+      },
+      "BL_bOOQXk5GkLGzheS": {
+        "Type": "Standard",
+        "SubType": "",
+        "Description": "vignette",
+        "ID": "BL_bOOQXk5GkLGzheS",
+        "BlockElements": [
+          {
+            "Type": "Question",
+            "QuestionID": "QID13"
+          },
+          {
+            "Type": "Page Break"
+          },
+          {
+            "Type": "Question",
+            "QuestionID": "QID14"
+          },
+          {
+            "Type": "Page Break"
+          },
+          {
+            "Type": "Question",
+            "QuestionID": "QID15"
+          },
+          {
+            "Type": "Question",
+            "QuestionID": "QID16"
+          }
+        ],
+        "Options": {
+          "BlockLocking": "false",
+          "RandomizeQuestions": "false",
+          "BlockVisibility": "Expanded"
+        }
+      },
+      "BL_39SQyqx1Ncrsg0S": {
+        "Type": "Standard",
+        "SubType": "",
+        "Description": "closing",
+        "ID": "BL_39SQyqx1Ncrsg0S",
+        "BlockElements": [
+          {
+            "Type": "Question",
+            "QuestionID": "QID9"
+          },
+          {
+            "Type": "Question",
+            "QuestionID": "QID10"
+          },
+          {
+            "Type": "Question",
+            "QuestionID": "QID11"
+          },
+          {
+            "Type": "Page Break"
+          },
+          {
+            "Type": "Question",
+            "QuestionID": "QID12"
+          }
+        ],
+        "Options": {
+          "BlockLocking": "false",
+          "RandomizeQuestions": "false",
+          "BlockVisibility": "Expanded"
+        }
+      }
+    },
+    "ResponseSets": {
+      "RS_3Dw0cRY8sPdPESq": null
+    },
+    "SurveyFlow": {
+      "Type": "Root",
+      "FlowID": "FL_1",
+      "Flow": [
+        {
+          "Type": "EmbeddedData",
+          "FlowID": "FL_7",
+          "EmbeddedData": [
+            {
+              "Description": "workerId",
+              "Type": "Recipient",
+              "Field": "workerId",
+              "VariableType": "String",
+              "DataVisibility": [],
+              "AnalyzeText": false
+            },
+            {
+              "Description": "attribute",
+              "Type": "Recipient",
+              "Field": "attribute",
+              "VariableType": "String",
+              "DataVisibility": [],
+              "AnalyzeText": false
+            },
+            {
+              "Description": "PROLIFIC_PID",
+              "Type": "Recipient",
+              "Field": "PROLIFIC_PID",
+              "VariableType": "String",
+              "DataVisibility": [],
+              "AnalyzeText": false
+            }
+          ]
+        },
+        {
+          "Type": "Block",
+          "ID": "BL_cD6wpN6voUO383A",
+          "FlowID": "FL_2",
+          "Autofill": []
+        },
+        {
+          "Type": "Branch",
+          "FlowID": "FL_11",
+          "Description": "New Branch",
+          "BranchLogic": {
+            "0": {
+              "0": {
+                "LogicType": "Question",
+                "QuestionID": "QID3",
+                "QuestionIsInLoop": "no",
+                "ChoiceLocator": "q://QID3/SelectableChoice/4/2",
+                "Operator": "Selected",
+                "QuestionIDFromLocator": "QID3",
+                "LeftOperand": "q://QID3/SelectableChoice/4/2",
+                "Type": "Expression",
+                "Description": "<span class=\"ConjDesc\">If</span> <span class=\"QuestionDesc\">Please respond truthfully to the items below.</span> <span class=\"LeftOpDesc\">Have you ever drank water? - No</span> <span class=\"OpDesc\">Is Selected</span> "
+              },
+              "1": {
+                "LogicType": "Question",
+                "QuestionID": "QID3",
+                "QuestionIsInLoop": "no",
+                "ChoiceLocator": "q://QID3/SelectableChoice/3/1",
+                "Operator": "Selected",
+                "QuestionIDFromLocator": "QID3",
+                "LeftOperand": "q://QID3/SelectableChoice/3/1",
+                "Type": "Expression",
+                "Description": "<span class=\"ConjDesc\">And</span> <span class=\"QuestionDesc\">Please respond truthfully to the items below.</span> <span class=\"LeftOpDesc\">Have you ever been to the Moon? - Yes</span> <span class=\"OpDesc\">Is Selected</span> ",
+                "Conjuction": "And"
+              },
+              "2": {
+                "LogicType": "Question",
+                "QuestionID": "QID3",
+                "QuestionIsInLoop": "no",
+                "ChoiceLocator": "q://QID3/SelectableChoice/5/1",
+                "Operator": "Selected",
+                "QuestionIDFromLocator": "QID3",
+                "LeftOperand": "q://QID3/SelectableChoice/5/1",
+                "Type": "Expression",
+                "Description": "<span class=\"ConjDesc\">And</span> <span class=\"QuestionDesc\">Please respond truthfully to the items below.</span> <span class=\"LeftOpDesc\">Have you ever suffered a fatal heart attack? - Yes</span> <span class=\"OpDesc\">Is Selected</span> ",
+                "Conjuction": "And"
+              },
+              "3": {
+                "LogicType": "Question",
+                "QuestionID": "QID3",
+                "QuestionIsInLoop": "no",
+                "ChoiceLocator": "q://QID3/SelectableChoice/6/2",
+                "Operator": "Selected",
+                "QuestionIDFromLocator": "QID3",
+                "LeftOperand": "q://QID3/SelectableChoice/6/2",
+                "Type": "Expression",
+                "Description": "<span class=\"ConjDesc\">And</span> <span class=\"QuestionDesc\">Please respond truthfully to the items below.</span> <span class=\"LeftOpDesc\">Are you human? - No</span> <span class=\"OpDesc\">Is Selected</span> ",
+                "Conjuction": "And"
+              },
+              "Type": "If"
+            },
+            "1": {
+              "0": {
+                "LogicType": "Question",
+                "QuestionID": "QID4",
+                "QuestionIsInLoop": "no",
+                "ChoiceLocator": "q://QID4/ChoiceTextEntryValue",
+                "Operator": "NotEqualTo",
+                "QuestionIDFromLocator": "QID4",
+                "LeftOperand": "q://QID4/ChoiceTextEntryValue",
+                "RightOperand": "one one",
+                "IgnoreCase": 1,
+                "Type": "Expression",
+                "Description": "<span class=\"ConjDesc\">If</span> <span class=\"QuestionDesc\">Please ignore the question below and instead type in \"one one\" (exactly as shown) as your respons...</span> <span class=\"LeftOpDesc\">Text Response</span> <span class=\"OpDesc\">Is Not Equal to</span> <span class=\"RightOpDesc\"> one one </span>"
+              },
+              "1": {
+                "LogicType": "Question",
+                "QuestionID": "QID4",
+                "QuestionIsInLoop": "no",
+                "ChoiceLocator": "q://QID4/ChoiceTextEntryValue",
+                "Operator": "NotEqualTo",
+                "QuestionIDFromLocator": "QID4",
+                "LeftOperand": "q://QID4/ChoiceTextEntryValue",
+                "RightOperand": "\"one one\"",
+                "IgnoreCase": 1,
+                "Type": "Expression",
+                "Description": "<span class=\"ConjDesc\">And</span> <span class=\"QuestionDesc\">Please ignore the question below and instead type in \"one one\" (exactly as shown) as your respons...</span> <span class=\"LeftOpDesc\">Text Response</span> <span class=\"OpDesc\">Is Not Equal to</span> <span class=\"RightOpDesc\"> \"one one\" </span>",
+                "Conjuction": "And"
+              },
+              "Type": "ElseIf"
+            },
+            "Type": "BooleanExpression"
+          },
+          "Flow": [
+            {
+              "Type": "EndSurvey",
+              "FlowID": "FL_12",
+              "EndingType": "Advanced",
+              "Options": {
+                "Advanced": "true",
+                "SurveyTermination": "Redirect",
+                "EOSRedirectURL": "https://app.prolific.com/submissions/complete?cc=C18RHXEV"
+              }
+            }
+          ]
+        },
+        {
+          "Type": "Standard",
+          "ID": "BL_5j3BhsYCXIpDlUa",
+          "FlowID": "FL_3",
+          "Autofill": []
+        },
+        {
+          "Type": "BlockRandomizer",
+          "FlowID": "FL_16",
+          "SubSet": "1",
+          "EvenPresentation": true,
+          "Flow": [
+            {
+              "Type": "EmbeddedData",
+              "FlowID": "FL_17",
+              "EmbeddedData": [
+                {
+                  "Description": "attribute",
+                  "Type": "Custom",
+                  "Field": "attribute",
+                  "VariableType": "String",
+                  "DataVisibility": [],
+                  "AnalyzeText": false,
+                  "Value": "were women."
+                }
+              ]
+            },
+            {
+              "Type": "EmbeddedData",
+              "FlowID": "FL_18",
+              "EmbeddedData": [
+                {
+                  "Description": "attribute",
+                  "Type": "Custom",
+                  "Field": "attribute",
+                  "VariableType": "String",
+                  "DataVisibility": [],
+                  "AnalyzeText": false,
+                  "Value": "were under 50 years old."
+                }
+              ]
+            },
+            {
+              "Type": "EmbeddedData",
+              "FlowID": "FL_26",
+              "EmbeddedData": [
+                {
+                  "Description": "attribute",
+                  "Type": "Custom",
+                  "Field": "attribute",
+                  "VariableType": "String",
+                  "DataVisibility": [],
+                  "AnalyzeText": false,
+                  "Value": "were based on the West Coast of the United States."
+                }
+              ]
+            },
+            {
+              "Type": "EmbeddedData",
+              "FlowID": "FL_27",
+              "EmbeddedData": [
+                {
+                  "Description": "attribute",
+                  "Type": "Custom",
+                  "Field": "attribute",
+                  "VariableType": "String",
+                  "DataVisibility": [],
+                  "AnalyzeText": false,
+                  "Value": "worked at a university."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Type": "Standard",
+          "ID": "BL_bOOQXk5GkLGzheS",
+          "FlowID": "FL_4",
+          "Autofill": []
+        },
+        {
+          "Type": "Standard",
+          "ID": "BL_39SQyqx1Ncrsg0S",
+          "FlowID": "FL_5",
+          "Autofill": []
+        },
+        {
+          "Type": "EndSurvey",
+          "FlowID": "FL_13",
+          "EndingType": "Advanced",
+          "Options": {
+            "Advanced": "true",
+            "SurveyTermination": "Redirect",
+            "EOSMessageLibrary": "UR_51kqMTaUzYIYveC",
+            "EOSMessage": "MS_5iqzg8dBrPbKXBA",
+            "EOSRedirectURL": "https://app.prolific.com/submissions/complete?cc=CH10TEUU"
+          }
+        }
+      ],
+      "Properties": {
+        "Count": 39
+      }
+    },
+    "Scoring": {
+      "ScoringCategories": [],
+      "ScoringCategoryGroups": [],
+      "ScoringSummaryCategory": null,
+      "ScoringSummaryAfterQuestions": 0,
+      "ScoringSummaryAfterSurvey": 0,
+      "DefaultScoringCategory": null,
+      "AutoScoringCategory": null
+    },
+    "ProjectInfo": {
+      "SurveyID": "SV_aeIi4xABcJiz1vU",
+      "ProjectCategory": "CORE",
+      "ProjectType": null,
+      "CompositionType": null,
+      "ContentBundle": null
+    },
+    "BrandBaseURL": "https://wharton.qualtrics.com"
+  }
+}
